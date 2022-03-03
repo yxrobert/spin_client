@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head> 
+<meta charset="utf-8"> 
+<title>{{ the_title }}</title> 
+</head>
+<body>
+ 
+<table width="1800" border="1">
+<tr>
+<td colspan="2" style="background-color:#FFA500;">
+<h1>{{ the_title }}</h1>
+</td>
+</tr>
+ 
+<tr>
+<td style="background-color:#eeeeee;height:650px;width:400px;">
+    spinResponse</td>
+<td style="background-color:#FFD700;width:100px;">
+
+<form name="itemForm" id="itemForm">
+    <form action="">
+        Server   <select name="Server">
+        <option value="local">local</option>
+        <option value="pktest">pktest</option>
+        <option value="pkcp">pkcp</option>
+        <option value="pkjy">pkjy</option>
+        <option value="pkzxj">pkzxj</option>
+        <option value="pkyq">pkyq</option>
+        </select>
+        </form>
+
+    <!-- Server: <input type="text" name="server"><br> -->
+    Account   <input type="text" name="account" id="account"><br>
+    ThemeID   <input type="text" name="theme_id" id="theme_id"><br>
+
+    <b>Token</b>
+    <h1>{{ the_toekn }}</h1></br></br>
+
+    Spin   <input type="text" name="conten", id="spin">
+    <input type="button" onclick='doSpin()' value="Spin"><br>
+
+    Spin_to_base <input type="button" onclick='doSpinToBase()' value="Send"><br>
+    Spin_to_next_stage <input type="button" onclick='doSpinToNext()' value="Send"><br>
+
+    Send_gm   <input type="text" name="conten", id="gm">
+    <input type="button" onclick='doSendGM()' value="Send"><br>
+
+    Send_cmd   <input type="text" name="conten", id="cmd">
+    <input type="button" onclick='doSendCmd()' value="Send"><br>
+
+    <script>
+        var util = {
+            serializeObject: function(form) {
+                var formEL = $(form);
+                var o = {};
+                var a = formEL.serializeArray();
+                $.each(a, function() {
+                    if(o[this.name]) {
+                        if(!o[this.name].push) {
+                            o[this.name] = [o[this.name]];
+                        }
+                        o[this.name].push(this.value || '');
+                    } else {
+                        o[this.name] = this.value || '';
+                    }
+                });
+                return o;
+            },
+        
+            fillFormData: function(form, obj, isStatus) {
+                var formEL = $(form);
+                $.each(obj, function(index, item) {
+                formEL.find("[name=" + index + "]").val(item);
+                });
+            },
+            empty: function(data) {
+                if(null == data || "" == data) return true;
+                else return false;
+            }
+        };
+
+        function doSendCmd(){
+            if (checkInput() == false) {
+                return
+            }
+            
+            f = document.getElementById("itemForm")
+            f.method = "POST";
+            f.action = "/send_cmd";
+            var formData = {
+                account: "myusername",
+                theme_id: "mypassword"};
+
+            util.fillFormData(f, formData);
+            alert(111);
+
+
+            f.submit();
+
+            // with (document.getElementById("itemForm")) {
+            //     method = "POST";
+            //     action = "/send_cmd";
+
+            //     var formData = {
+			// 		account: "myusername",
+			// 		theme_id: "mypassword"
+			// 	};
+
+            //     util.fillFormData(this, formData)
+            //     // alert(aa);
+            //     // document.getElementById("account").val("1111")
+            //     submit();
+            // }
+        }
+
+        function checkInput() {
+            acc = document.getElementById("account").value;     
+            if (acc == "") {
+                alert("account is Null");
+                return false;
+            }
+
+            themeID = document.getElementById("theme_id").value;
+            if (acc == "") {
+                alert("themeID is Null");
+                return false;
+            }
+
+            return true;
+        }
+
+        </script>
+</form>
+</td>
+</tr>
+ 
+<tr>
+<td colspan="2" style="background-color:#FFA500;text-align:center;">
+版权 © runoob.com</td>
+</tr>
+</table>
+ 
+</body>
+</html>

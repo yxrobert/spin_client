@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<h2>{{ the_title }}</h2>
+
+<form method='POST' action='/spin'>
+<table>
+<p>Use this form to submit a search request:</p>
+<tr><td>Account:</td><td><input name='account' type='TEXT' width='30'></td></tr>
+<tr><td>Token:</td><td><input name='token' type='TEXT' value=''></td></tr>
+</table>
+<p>When you're ready, click this button:</p>
+<p><input value='Login' type='SUBMIT'></p>
+</form>
+
+{% endblock %}
