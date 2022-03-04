@@ -86,6 +86,10 @@ class RobotBase:
         req = make_activity_user_data_req(self.player_id, self.token)
         self.send_packet(req)  
 
+    def req_activity_play(self):
+        req = make_activity_play_req(self.player_id, self.token)
+        self.send_packet(req)  
+
     def on_response(self, packet):
         if packet.Error != None:
             self.log(packet.Error)

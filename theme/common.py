@@ -33,13 +33,14 @@ def default_theme_callback(packet):
 
 def run(player):
     # player.req_activity_list()
-    player.req_activity_user_data()
+    # player.req_activity_user_data()
+    player.req_activity_play()
 
     # player.select_bet(40000)
 
     # player.send_cmd(cheat_12)
     # player.spin_to_next_stage()
     # player.spin_to_base()
-    player.spin()
+    # player.spin()
     # player.pick(1)
     pass
