@@ -14,6 +14,8 @@ import conf
 # run func
 tab_theme_robot = {
     10050 : [theme.BingoMooRobot, theme.bingomoo.run],
+    10051 : [theme.BingoMooRobot, theme.bingomoo.run_mege],
+
     10070 : [theme.PiggyRobot, theme.piggybank.run],
     10080 : [theme.GorillaRobot, theme.gorilla.run],
     }

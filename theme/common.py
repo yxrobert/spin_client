@@ -32,9 +32,9 @@ def default_theme_callback(packet):
     pass
 
 def run(player):
-    # player.req_activity_list()
+    player.req_activity_list()
     # player.req_activity_user_data()
-    player.req_activity_play()
+    # player.req_activity_play()
 
     # player.select_bet(40000)
 

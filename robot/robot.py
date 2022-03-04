@@ -175,6 +175,7 @@ class SpinRobot(RobotBase):
         pass
 
     def spin_to_base(self):
+        self.spin()
         while self.themeData.get_stage() != pb.Slot.Stage.BASE:
             self.spin()
             time.sleep(self.interval)

@@ -13,11 +13,13 @@ class ThemeData:
     def update_from_theme(self, packet):
         self.status = packet
 
-
     def update_from_play(self, packet):
         self.status.CurrentStage = packet.Spin.CurrentStage
         self.status.NextStage = packet.Spin.NextStage
-        self.status.LastBet = packet.Spin.TotalBet
+        for bet in packet.Spin.UserBets:
+            if bet == packet.Spin.TotalBet:
+                self.status.LastBet = packet.Spin.TotalBet
+                break
 
     def get_stage(self):
         return self.status.NextStage
