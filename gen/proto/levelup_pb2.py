@@ -19,7 +19,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'Z\004.;pb',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\rlevelup.proto\x12\x02pb\"8\n\x0cLevelUpAward\x12\x11\n\tawardCoin\x18\x01 \x01(\x04\x12\x15\n\rawardVipPoint\x18\x02 \x01(\rB\x06Z\x04.;pbb\x06proto3'
+  serialized_pb=b'\n\rlevelup.proto\x12\x02pb\"Q\n\x0cLevelUpAward\x12\x11\n\tawardCoin\x18\x01 \x01(\x04\x12\x15\n\rawardVipPoint\x18\x02 \x01(\r\x12\x17\n\x0f\x61wardBoosterBuf\x18\x03 \x01(\rB\x06Z\x04.;pbb\x06proto3'
 )
 
 
@@ -47,6 +47,13 @@ _LEVELUPAWARD = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='awardBoosterBuf', full_name='pb.LevelUpAward.awardBoosterBuf', index=2,
+      number=3, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -60,7 +67,7 @@ _LEVELUPAWARD = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=21,
-  serialized_end=77,
+  serialized_end=102,
 )
 
 DESCRIPTOR.message_types_by_name['LevelUpAward'] = _LEVELUPAWARD

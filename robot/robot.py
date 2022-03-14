@@ -82,8 +82,8 @@ class RobotBase:
         req = make_activity_list_req(self.player_id, self.token)
         self.send_packet(req)  
 
-    def req_activity_user_data(self):
-        req = make_activity_user_data_req(self.player_id, self.token)
+    def req_activity_user_data(self, _id):
+        req = make_activity_user_data_req(self.player_id, self.token, _id)
         self.send_packet(req)  
 
     def req_activity_play(self):

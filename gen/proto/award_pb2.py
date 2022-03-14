@@ -19,7 +19,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'Z\004.;pb',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x0b\x61ward.proto\x12\x02pb\"\xb4\x0b\n\tAwardInfo\x12%\n\x04Type\x18\x01 \x01(\x0e\x32\x17.pb.AwardInfo.AwardType\x12\x10\n\x08SUB_TYPE\x18\x02 \x01(\t\x12\x0e\n\x06\x41mount\x18\x03 \x01(\x04\"\xa7\x01\n\tAwardType\x12\x0f\n\x0bUNSPECIFIED\x10\x00\x12\t\n\x05\x43OINS\x10\x01\x12\n\n\x06TICKET\x10\x02\x12\x0e\n\nCOLLECTION\x10\x03\x12\x08\n\x04\x42UFF\x10\x05\x12\x0c\n\x08POWER_UP\x10\x06\x12\t\n\x05STATE\x10\x07\x12\t\n\x05TIMES\x10\x08\x12\x07\n\x03GEM\x10\t\x12\n\n\x06POINTS\x10\n\x12\x08\n\x04ITEM\x10\x0b\x12\x08\n\x04HERO\x10\x0c\x12\x0b\n\x07HERO_XP\x10\r\"\xcc\x07\n\x08\x41wardSRC\x12\x13\n\x0fUNSPECIFIED_SRC\x10\x00\x12\x0b\n\x07SRC_LUR\x10\x01\x12\x13\n\x0fSRC_LOBBY_BONUS\x10\x02\x12\x13\n\x0fSRC_DAILY_BONUS\x10\x03\x12\x12\n\x0eSRC_SHOP_BONUS\x10\x04\x12\x18\n\x14SRC_SHOP_TIMED_BONUS\x10\x05\x12\x12\n\x0eSRC_BET_TICKET\x10\x06\x12\x0f\n\x0bSRC_TOURNEY\x10\x07\x12\x15\n\x11SRC_HONEY_DO_TASK\x10\x08\x12\x18\n\x14SRC_HONEY_DO_MISSION\x10\t\x12\x1a\n\x16SRC_HONEY_DO_RETENTION\x10\n\x12\x15\n\x11SRC_SHOP_PURCHASE\x10\x0b\x12\x12\n\x0eSRC_LUR_TICKET\x10\x0c\x12\x13\n\x0fSRC_LEADERBOARD\x10\r\x12\x13\n\x0fSRC_BACK_OFFICE\x10\x0e\x12\x0c\n\x08SRC_SPIN\x10\x0f\x12\x1a\n\x16SRC_Player_Update_Info\x10\x10\x12\r\n\tSRC_DEBUG\x10\x11\x12\x0e\n\nSRC_FRIEND\x10\x12\x12\x12\n\x0eSRC_FUNKY_TOWN\x10\x13\x12\x17\n\x13SRC_NEW_PLAYER_ECON\x10\x14\x12\r\n\tSRC_QUEST\x10\x15\x12\x17\n\x13SRC_LOBBYWHEEL_FREE\x10\x16\x12\x16\n\x12SRC_LOBBYWHEEL_PAY\x10\x17\x12\x19\n\x15SRC_DAILY_BONUS_SEVEN\x10\x18\x12\x1a\n\x16SRC_DAILY_BONUS_THIRTY\x10\x19\x12\x19\n\x15SRC_DAILY_BONUS_TOTAL\x10\x1a\x12\x13\n\x0fSRC_DAILY_LOGIN\x10\x1b\x12\x0e\n\nSRC_SYSTEM\x10\x1c\x12\x0c\n\x08SRC_MAIL\x10\x1d\x12\x14\n\x10SRC_DailyMission\x10\x1e\x12\x17\n\x13SRC_LOBBYPOKER_FREE\x10\x1f\x12\x16\n\x12SRC_LOBBYPOKER_PAY\x10 \x12\x12\n\x0eSRC_LOBBYPOKER\x10!\x12\x12\n\x0eSRC_LOBBYWHEEL\x10\"\x12\x0c\n\x08SRC_HERO\x10#\x12\x15\n\x11SRC_HERO_LEVEL_UP\x10$\x12\x14\n\x10SRC_NOVICE_GUIDE\x10%\x12\x13\n\x0fSRC_HERO_ACTIVE\x10&\x12\x18\n\x14SRC_HERO_SKILL_AWARD\x10\'\x12\x19\n\x15SRC_HERO2_SKILL_AWARD\x10(\x12\x0f\n\x0bSRC_FB_BIND\x10)\x12\r\n\tSRC_PIGGY\x10*\x12\x1b\n\x17SRC_SHOP_PIGGY_PURCHASE\x10+\x12\x13\n\x0fSRC_ACT_JOURNEY\x10,\"\xe4\x01\n\x0b\x41wardSubSRC\x12\x17\n\x13SUB_UNSPECIFIED_SRC\x10\x00\x12\x1f\n\x1bSUB_SRC_DailyMission_Normal\x10\x01\x12\x1e\n\x1aSUB_SRC_DailyMission_Super\x10\x02\x12\x1e\n\x1aSUB_SRC_DailyMission_Point\x10\x03\x12\x15\n\x11SUB_SRC_Hero_Shop\x10\x04\x12!\n\x1dSUB_SRC_Hero_Skill_Award_Coin\x10\x05\x12!\n\x1dSUB_SRC_Hero_Skill_Award_Dice\x10\x06\"[\n\x05\x41ward\x12#\n\x03SRC\x18\x01 \x01(\x0e\x32\x16.pb.AwardInfo.AwardSRC\x12\x0f\n\x07SUB_SRC\x18\x02 \x01(\r\x12\x1c\n\x05Pairs\x18\x03 \x03(\x0b\x32\r.pb.AwardInfoB\x06Z\x04.;pbb\x06proto3'
+  serialized_pb=b'\n\x0b\x61ward.proto\x12\x02pb\"\x8e\r\n\tAwardInfo\x12%\n\x04Type\x18\x01 \x01(\x0e\x32\x17.pb.AwardInfo.AwardType\x12\x10\n\x08SUB_TYPE\x18\x02 \x01(\t\x12\x0e\n\x06\x41mount\x18\x03 \x01(\x04\"\xb4\x01\n\tAwardType\x12\x0f\n\x0bUNSPECIFIED\x10\x00\x12\t\n\x05\x43OINS\x10\x01\x12\n\n\x06TICKET\x10\x02\x12\x0e\n\nCOLLECTION\x10\x03\x12\x08\n\x04\x42UFF\x10\x05\x12\x0c\n\x08POWER_UP\x10\x06\x12\t\n\x05STATE\x10\x07\x12\t\n\x05TIMES\x10\x08\x12\x07\n\x03GEM\x10\t\x12\n\n\x06POINTS\x10\n\x12\x08\n\x04ITEM\x10\x0b\x12\x08\n\x04HERO\x10\x0c\x12\x0b\n\x07HERO_XP\x10\r\x12\x0b\n\x07\x42OOSTER\x10\x0e\"\x93\x08\n\x08\x41wardSRC\x12\x13\n\x0fUNSPECIFIED_SRC\x10\x00\x12\x0b\n\x07SRC_LUR\x10\x01\x12\x13\n\x0fSRC_LOBBY_BONUS\x10\x02\x12\x13\n\x0fSRC_DAILY_BONUS\x10\x03\x12\x12\n\x0eSRC_SHOP_BONUS\x10\x04\x12\x18\n\x14SRC_SHOP_TIMED_BONUS\x10\x05\x12\x12\n\x0eSRC_BET_TICKET\x10\x06\x12\x0f\n\x0bSRC_TOURNEY\x10\x07\x12\x15\n\x11SRC_HONEY_DO_TASK\x10\x08\x12\x18\n\x14SRC_HONEY_DO_MISSION\x10\t\x12\x1a\n\x16SRC_HONEY_DO_RETENTION\x10\n\x12\x15\n\x11SRC_SHOP_PURCHASE\x10\x0b\x12\x12\n\x0eSRC_LUR_TICKET\x10\x0c\x12\x13\n\x0fSRC_LEADERBOARD\x10\r\x12\x13\n\x0fSRC_BACK_OFFICE\x10\x0e\x12\x0c\n\x08SRC_SPIN\x10\x0f\x12\x1a\n\x16SRC_Player_Update_Info\x10\x10\x12\r\n\tSRC_DEBUG\x10\x11\x12\x0e\n\nSRC_FRIEND\x10\x12\x12\x12\n\x0eSRC_FUNKY_TOWN\x10\x13\x12\x17\n\x13SRC_NEW_PLAYER_ECON\x10\x14\x12\r\n\tSRC_QUEST\x10\x15\x12\x17\n\x13SRC_LOBBYWHEEL_FREE\x10\x16\x12\x16\n\x12SRC_LOBBYWHEEL_PAY\x10\x17\x12\x19\n\x15SRC_DAILY_BONUS_SEVEN\x10\x18\x12\x1a\n\x16SRC_DAILY_BONUS_THIRTY\x10\x19\x12\x19\n\x15SRC_DAILY_BONUS_TOTAL\x10\x1a\x12\x13\n\x0fSRC_DAILY_LOGIN\x10\x1b\x12\x0e\n\nSRC_SYSTEM\x10\x1c\x12\x0c\n\x08SRC_MAIL\x10\x1d\x12\x14\n\x10SRC_DailyMission\x10\x1e\x12\x17\n\x13SRC_LOBBYPOKER_FREE\x10\x1f\x12\x16\n\x12SRC_LOBBYPOKER_PAY\x10 \x12\x12\n\x0eSRC_LOBBYPOKER\x10!\x12\x12\n\x0eSRC_LOBBYWHEEL\x10\"\x12\x0c\n\x08SRC_HERO\x10#\x12\x15\n\x11SRC_HERO_LEVEL_UP\x10$\x12\x14\n\x10SRC_NOVICE_GUIDE\x10%\x12\x13\n\x0fSRC_HERO_ACTIVE\x10&\x12\x18\n\x14SRC_HERO_SKILL_AWARD\x10\'\x12\x19\n\x15SRC_HERO2_SKILL_AWARD\x10(\x12\x0f\n\x0bSRC_FB_BIND\x10)\x12\r\n\tSRC_PIGGY\x10*\x12\x1b\n\x17SRC_SHOP_PIGGY_PURCHASE\x10+\x12\x13\n\x0fSRC_ACT_JOURNEY\x10,\x12\x0f\n\x0bSRC_BOOSTER\x10-\x12\x1b\n\x17SRC_BOOSTER_LUCKY_SEVEN\x10.\x12\x17\n\x13SRC_SHOP_Royal_seal\x10/\"\xea\x02\n\x0b\x41wardSubSRC\x12\x17\n\x13SUB_UNSPECIFIED_SRC\x10\x00\x12\x1f\n\x1bSUB_SRC_DailyMission_Normal\x10\x01\x12\x1e\n\x1aSUB_SRC_DailyMission_Super\x10\x02\x12\x1e\n\x1aSUB_SRC_DailyMission_Point\x10\x03\x12\x15\n\x11SUB_SRC_Hero_Shop\x10\x04\x12!\n\x1dSUB_SRC_Hero_Skill_Award_Coin\x10\x05\x12!\n\x1dSUB_SRC_Hero_Skill_Award_Dice\x10\x06\x12\x1f\n\x1bSUB_SRC_BOOSTER_LEVEL_BLAST\x10\x07\x12\x1e\n\x1aSUB_SRC_BOOSTER_WHEEL_BOOM\x10\x08\x12\x1f\n\x1bSUB_SRC_BOOSTER_LUCKY_SEVEN\x10\t\x12\"\n\x1eSUB_SRC_BOOSTER_ONE_HOUR_BLITZ\x10\n\"[\n\x05\x41ward\x12#\n\x03SRC\x18\x01 \x01(\x0e\x32\x16.pb.AwardInfo.AwardSRC\x12\x0f\n\x07SUB_SRC\x18\x02 \x01(\r\x12\x1c\n\x05Pairs\x18\x03 \x03(\x0b\x32\r.pb.AwardInfoB\x06Z\x04.;pbb\x06proto3'
 )
 
 
@@ -96,11 +96,16 @@ _AWARDINFO_AWARDTYPE = _descriptor.EnumDescriptor(
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='BOOSTER', index=13, number=14,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
   ],
   containing_type=None,
   serialized_options=None,
   serialized_start=107,
-  serialized_end=274,
+  serialized_end=287,
 )
 _sym_db.RegisterEnumDescriptor(_AWARDINFO_AWARDTYPE)
 
@@ -336,11 +341,26 @@ _AWARDINFO_AWARDSRC = _descriptor.EnumDescriptor(
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='SRC_BOOSTER', index=45, number=45,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='SRC_BOOSTER_LUCKY_SEVEN', index=46, number=46,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='SRC_SHOP_Royal_seal', index=47, number=47,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=277,
-  serialized_end=1249,
+  serialized_start=290,
+  serialized_end=1333,
 )
 _sym_db.RegisterEnumDescriptor(_AWARDINFO_AWARDSRC)
 
@@ -386,11 +406,31 @@ _AWARDINFO_AWARDSUBSRC = _descriptor.EnumDescriptor(
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='SUB_SRC_BOOSTER_LEVEL_BLAST', index=7, number=7,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='SUB_SRC_BOOSTER_WHEEL_BOOM', index=8, number=8,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='SUB_SRC_BOOSTER_LUCKY_SEVEN', index=9, number=9,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='SUB_SRC_BOOSTER_ONE_HOUR_BLITZ', index=10, number=10,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=1252,
-  serialized_end=1480,
+  serialized_start=1336,
+  serialized_end=1698,
 )
 _sym_db.RegisterEnumDescriptor(_AWARDINFO_AWARDSUBSRC)
 
@@ -440,7 +480,7 @@ _AWARDINFO = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=20,
-  serialized_end=1480,
+  serialized_end=1698,
 )
 
 
@@ -485,8 +525,8 @@ _AWARD = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1482,
-  serialized_end=1573,
+  serialized_start=1700,
+  serialized_end=1791,
 )
 
 _AWARDINFO.fields_by_name['Type'].enum_type = _AWARDINFO_AWARDTYPE

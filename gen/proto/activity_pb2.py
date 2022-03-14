@@ -12,6 +12,7 @@ from google.protobuf import symbol_database as _symbol_database
 _sym_db = _symbol_database.Default()
 
 
+import award_pb2 as award__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
@@ -20,8 +21,9 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'Z\004.;pb',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x0e\x61\x63tivity.proto\x12\x02pb\"\xa5\x01\n\x0e\x41\x63tivityHeader\x12\x0b\n\x03UID\x18\x01 \x01(\x04\x12\r\n\x05\x45ntry\x18\x02 \x01(\x05\x12\x11\n\tStartTime\x18\x03 \x01(\x03\x12\x0f\n\x07\x45ndTime\x18\x04 \x01(\x03\x12\x12\n\nLimitLevel\x18\x05 \x03(\x05\x12\x10\n\x08LimitVip\x18\x06 \x03(\x05\x12\r\n\x05Image\x18\x07 \x01(\x05\x12\x0f\n\x07Payment\x18\x08 \x01(\x05\x12\r\n\x05Index\x18\t \x01(\x05\"]\n\x0c\x41\x63tivityData\x12\"\n\x06Header\x18\x01 \x01(\x0b\x32\x12.pb.ActivityHeader\x12\"\n\x07Journey\x18\x02 \x01(\x0b\x32\x0f.pb.JourneyDataH\x00\x42\x05\n\x03one\"?\n\x0bJourneyBuff\x12!\n\x04Type\x18\x01 \x01(\x0e\x32\x13.pb.JourneyBuffType\x12\r\n\x05Value\x18\x02 \x01(\x05\"r\n\x0bJourneyData\x12\x0f\n\x07PathIdx\x18\x01 \x01(\x05\x12\x10\n\x08Position\x18\x02 \x01(\x05\x12\x10\n\x08LastRoll\x18\x03 \x01(\x05\x12\x0f\n\x07\x44iceNum\x18\x04 \x01(\x05\x12\x1d\n\x04\x42uff\x18\x05 \x03(\x0b\x32\x0f.pb.JourneyBuff\"\xc6\x05\n\x08\x41\x63tivity\x1a\x8d\x02\n\x03Req\x12-\n\x04List\x18\x01 \x01(\x0b\x32\x1d.pb.Activity.Req.ActivityListH\x00\x12\x35\n\x08UserData\x18\x02 \x01(\x0b\x32!.pb.Activity.Req.ActivityUserDataH\x00\x12-\n\x04Play\x18\x03 \x01(\x0b\x32\x1d.pb.Activity.Req.ActivityPlayH\x00\x1a\x1c\n\x0c\x41\x63tivityList\x12\x0c\n\x04Type\x18\x01 \x01(\x05\x1a\x1f\n\x10\x41\x63tivityUserData\x12\x0b\n\x03UID\x18\x01 \x01(\x04\x1a+\n\x0c\x41\x63tivityPlay\x12\x0b\n\x03UID\x18\x01 \x01(\x04\x12\x0e\n\x06InputX\x18\x02 \x01(\x05\x42\x05\n\x03one\x1a\xa9\x03\n\x03Rsp\x12-\n\x04List\x18\x01 \x01(\x0b\x32\x1d.pb.Activity.Rsp.ActivityListH\x00\x12\x35\n\x08UserData\x18\x02 \x01(\x0b\x32!.pb.Activity.Rsp.ActivityUserDataH\x00\x12-\n\x04Play\x18\x03 \x01(\x0b\x32\x1d.pb.Activity.Rsp.ActivityPlayH\x00\x1a\x32\n\x0c\x41\x63tivityList\x12\"\n\x08\x44\x61taList\x18\x01 \x03(\x0b\x32\x10.pb.ActivityData\x1a\x62\n\x10\x41\x63tivityUserData\x12\x0b\n\x03UID\x18\x01 \x01(\x04\x12\x1e\n\x04\x64\x61ta\x18\x02 \x01(\x0b\x32\x10.pb.ActivityData\x12!\n\x06Status\x18\x03 \x01(\x0e\x32\x11.pb.ActivityStats\x1an\n\x0c\x41\x63tivityPlay\x12\x0b\n\x03UID\x18\x01 \x01(\x04\x12\x0e\n\x06InputX\x18\x02 \x01(\x05\x12!\n\x06Status\x18\x03 \x01(\x0e\x32\x11.pb.ActivityStats\x12\x1e\n\x04\x64\x61ta\x18\x04 \x01(\x0b\x32\x10.pb.ActivityDataB\x05\n\x03one*x\n\rActivityStats\x12\x19\n\x15\x41\x63tivityStats_INVALID\x10\x00\x12\x19\n\x15\x41\x63tivityStats_NOTOPEN\x10\x01\x12\x16\n\x12\x41\x63tivityStats_OPEN\x10\x02\x12\x19\n\x15\x41\x63tivityStats_TIMEOUT\x10\x03*!\n\x0fJourneyBuffType\x12\x0e\n\nPathReward\x10\x00\x42\x06Z\x04.;pbb\x06proto3'
-)
+  serialized_pb=b'\n\x0e\x61\x63tivity.proto\x12\x02pb\x1a\x0b\x61ward.proto\"\xc5\x01\n\x0e\x41\x63tivityHeader\x12\x0b\n\x03UID\x18\x01 \x01(\x04\x12\x1e\n\x04Type\x18\x02 \x01(\x0e\x32\x10.pb.ActivityType\x12\r\n\x05\x45ntry\x18\x03 \x01(\x05\x12\x11\n\tStartTime\x18\x04 \x01(\x03\x12\x0f\n\x07\x45ndTime\x18\x05 \x01(\x03\x12\x12\n\nLimitLevel\x18\x06 \x03(\x05\x12\x10\n\x08LimitVip\x18\x07 \x03(\x05\x12\r\n\x05Image\x18\x08 \x01(\x05\x12\x0f\n\x07Payment\x18\t \x01(\x05\x12\r\n\x05Index\x18\n \x01(\x05\"]\n\x0c\x41\x63tivityData\x12\"\n\x06Header\x18\x01 \x01(\x0b\x32\x12.pb.ActivityHeader\x12\"\n\x07Journey\x18\x02 \x01(\x0b\x32\x0f.pb.JourneyDataH\x00\x42\x05\n\x03one\"]\n\x11\x41\x63tivityEventDrop\x12\'\n\x04Type\x18\x01 \x01(\x0e\x32\x19.pb.ActivityEventDropType\x12\r\n\x05Value\x18\x02 \x01(\x05\x12\x10\n\x08\x41\x64\x64Value\x18\x03 \x01(\x05\"?\n\x0bJourneyBuff\x12!\n\x04Type\x18\x01 \x01(\x0e\x32\x13.pb.JourneyBuffType\x12\r\n\x05Value\x18\x02 \x01(\x05\"*\n\tPathAward\x12\x1d\n\x06\x41wards\x18\x01 \x03(\x0b\x32\r.pb.AwardInfo\"\xce\x01\n\x0bJourneyData\x12\x0f\n\x07\x44iceNum\x18\x01 \x01(\x05\x12\x10\n\x08Progress\x18\x02 \x01(\x05\x12\x0f\n\x07PathIdx\x18\x03 \x01(\x05\x12\x10\n\x08Position\x18\x04 \x01(\x05\x12\x10\n\x08LastRoll\x18\x05 \x01(\x05\x12\x13\n\x0bLastPathIdx\x18\x06 \x01(\x05\x12\x14\n\x0cLastPosition\x18\x07 \x01(\x05\x12\x1d\n\x04\x42uff\x18\x08 \x03(\x0b\x32\x0f.pb.JourneyBuff\x12\x1d\n\x06\x41wards\x18\t \x03(\x0b\x32\r.pb.PathAward\"\xc6\x05\n\x08\x41\x63tivity\x1a\x8d\x02\n\x03Req\x12-\n\x04List\x18\x01 \x01(\x0b\x32\x1d.pb.Activity.Req.ActivityListH\x00\x12\x35\n\x08UserData\x18\x02 \x01(\x0b\x32!.pb.Activity.Req.ActivityUserDataH\x00\x12-\n\x04Play\x18\x03 \x01(\x0b\x32\x1d.pb.Activity.Req.ActivityPlayH\x00\x1a\x1c\n\x0c\x41\x63tivityList\x12\x0c\n\x04Type\x18\x01 \x01(\x05\x1a\x1f\n\x10\x41\x63tivityUserData\x12\x0b\n\x03UID\x18\x01 \x01(\x04\x1a+\n\x0c\x41\x63tivityPlay\x12\x0b\n\x03UID\x18\x01 \x01(\x04\x12\x0e\n\x06InputX\x18\x02 \x01(\x05\x42\x05\n\x03one\x1a\xa9\x03\n\x03Rsp\x12-\n\x04List\x18\x01 \x01(\x0b\x32\x1d.pb.Activity.Rsp.ActivityListH\x00\x12\x35\n\x08UserData\x18\x02 \x01(\x0b\x32!.pb.Activity.Rsp.ActivityUserDataH\x00\x12-\n\x04Play\x18\x03 \x01(\x0b\x32\x1d.pb.Activity.Rsp.ActivityPlayH\x00\x1a\x32\n\x0c\x41\x63tivityList\x12\"\n\x08\x44\x61taList\x18\x01 \x03(\x0b\x32\x10.pb.ActivityData\x1a\x62\n\x10\x41\x63tivityUserData\x12\x0b\n\x03UID\x18\x01 \x01(\x04\x12\x1e\n\x04\x64\x61ta\x18\x02 \x01(\x0b\x32\x10.pb.ActivityData\x12!\n\x06Status\x18\x03 \x01(\x0e\x32\x11.pb.ActivityStats\x1an\n\x0c\x41\x63tivityPlay\x12\x0b\n\x03UID\x18\x01 \x01(\x04\x12\x0e\n\x06InputX\x18\x02 \x01(\x05\x12!\n\x06Status\x18\x03 \x01(\x0e\x32\x11.pb.ActivityStats\x12\x1e\n\x04\x64\x61ta\x18\x04 \x01(\x0b\x32\x10.pb.ActivityDataB\x05\n\x03one*x\n\rActivityStats\x12\x19\n\x15\x41\x63tivityStats_INVALID\x10\x00\x12\x19\n\x15\x41\x63tivityStats_NOTOPEN\x10\x01\x12\x16\n\x12\x41\x63tivityStats_OPEN\x10\x02\x12\x19\n\x15\x41\x63tivityStats_TIMEOUT\x10\x03*(\n\x0c\x41\x63tivityType\x12\x18\n\x14\x41\x63tivityType_Journey\x10\x00*;\n\x15\x41\x63tivityEventDropType\x12\"\n\x1e\x41\x63tivityEventDropType_Progress\x10\x00*I\n\x10JourneyPointType\x12\x0b\n\x07JPEmpty\x10\x00\x12\n\n\x06JPCoin\x10\x01\x12\x0e\n\nJPTreasure\x10\x02\x12\x0c\n\x08JPPortal\x10\x03*!\n\x0fJourneyBuffType\x12\x0e\n\nPathReward\x10\x00*O\n\rJourneyReward\x12\n\n\x06JRCoin\x10\x00\x12\x0e\n\nJRTreasure\x10\x01\x12\x0e\n\nJRPathCoin\x10\x02\x12\x12\n\x0eJRPathTreasure\x10\x03\x42\x06Z\x04.;pbb\x06proto3'
+  ,
+  dependencies=[award__pb2.DESCRIPTOR,])
 
 _ACTIVITYSTATS = _descriptor.EnumDescriptor(
   name='ActivityStats',
@@ -53,12 +55,90 @@ _ACTIVITYSTATS = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=1179,
-  serialized_end=1299,
+  serialized_start=1456,
+  serialized_end=1576,
 )
 _sym_db.RegisterEnumDescriptor(_ACTIVITYSTATS)
 
 ActivityStats = enum_type_wrapper.EnumTypeWrapper(_ACTIVITYSTATS)
+_ACTIVITYTYPE = _descriptor.EnumDescriptor(
+  name='ActivityType',
+  full_name='pb.ActivityType',
+  filename=None,
+  file=DESCRIPTOR,
+  create_key=_descriptor._internal_create_key,
+  values=[
+    _descriptor.EnumValueDescriptor(
+      name='ActivityType_Journey', index=0, number=0,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+  ],
+  containing_type=None,
+  serialized_options=None,
+  serialized_start=1578,
+  serialized_end=1618,
+)
+_sym_db.RegisterEnumDescriptor(_ACTIVITYTYPE)
+
+ActivityType = enum_type_wrapper.EnumTypeWrapper(_ACTIVITYTYPE)
+_ACTIVITYEVENTDROPTYPE = _descriptor.EnumDescriptor(
+  name='ActivityEventDropType',
+  full_name='pb.ActivityEventDropType',
+  filename=None,
+  file=DESCRIPTOR,
+  create_key=_descriptor._internal_create_key,
+  values=[
+    _descriptor.EnumValueDescriptor(
+      name='ActivityEventDropType_Progress', index=0, number=0,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+  ],
+  containing_type=None,
+  serialized_options=None,
+  serialized_start=1620,
+  serialized_end=1679,
+)
+_sym_db.RegisterEnumDescriptor(_ACTIVITYEVENTDROPTYPE)
+
+ActivityEventDropType = enum_type_wrapper.EnumTypeWrapper(_ACTIVITYEVENTDROPTYPE)
+_JOURNEYPOINTTYPE = _descriptor.EnumDescriptor(
+  name='JourneyPointType',
+  full_name='pb.JourneyPointType',
+  filename=None,
+  file=DESCRIPTOR,
+  create_key=_descriptor._internal_create_key,
+  values=[
+    _descriptor.EnumValueDescriptor(
+      name='JPEmpty', index=0, number=0,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='JPCoin', index=1, number=1,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='JPTreasure', index=2, number=2,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='JPPortal', index=3, number=3,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+  ],
+  containing_type=None,
+  serialized_options=None,
+  serialized_start=1681,
+  serialized_end=1754,
+)
+_sym_db.RegisterEnumDescriptor(_JOURNEYPOINTTYPE)
+
+JourneyPointType = enum_type_wrapper.EnumTypeWrapper(_JOURNEYPOINTTYPE)
 _JOURNEYBUFFTYPE = _descriptor.EnumDescriptor(
   name='JourneyBuffType',
   full_name='pb.JourneyBuffType',
@@ -74,17 +154,63 @@ _JOURNEYBUFFTYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=1301,
-  serialized_end=1334,
+  serialized_start=1756,
+  serialized_end=1789,
 )
 _sym_db.RegisterEnumDescriptor(_JOURNEYBUFFTYPE)
 
 JourneyBuffType = enum_type_wrapper.EnumTypeWrapper(_JOURNEYBUFFTYPE)
+_JOURNEYREWARD = _descriptor.EnumDescriptor(
+  name='JourneyReward',
+  full_name='pb.JourneyReward',
+  filename=None,
+  file=DESCRIPTOR,
+  create_key=_descriptor._internal_create_key,
+  values=[
+    _descriptor.EnumValueDescriptor(
+      name='JRCoin', index=0, number=0,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='JRTreasure', index=1, number=1,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='JRPathCoin', index=2, number=2,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='JRPathTreasure', index=3, number=3,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+  ],
+  containing_type=None,
+  serialized_options=None,
+  serialized_start=1791,
+  serialized_end=1870,
+)
+_sym_db.RegisterEnumDescriptor(_JOURNEYREWARD)
+
+JourneyReward = enum_type_wrapper.EnumTypeWrapper(_JOURNEYREWARD)
 ActivityStats_INVALID = 0
 ActivityStats_NOTOPEN = 1
 ActivityStats_OPEN = 2
 ActivityStats_TIMEOUT = 3
+ActivityType_Journey = 0
+ActivityEventDropType_Progress = 0
+JPEmpty = 0
+JPCoin = 1
+JPTreasure = 2
+JPPortal = 3
 PathReward = 0
+JRCoin = 0
+JRTreasure = 1
+JRPathCoin = 2
+JRPathTreasure = 3
 
 
 
@@ -104,57 +230,64 @@ _ACTIVITYHEADER = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='Entry', full_name='pb.ActivityHeader.Entry', index=1,
-      number=2, type=5, cpp_type=1, label=1,
+      name='Type', full_name='pb.ActivityHeader.Type', index=1,
+      number=2, type=14, cpp_type=8, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='StartTime', full_name='pb.ActivityHeader.StartTime', index=2,
-      number=3, type=3, cpp_type=2, label=1,
+      name='Entry', full_name='pb.ActivityHeader.Entry', index=2,
+      number=3, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='EndTime', full_name='pb.ActivityHeader.EndTime', index=3,
+      name='StartTime', full_name='pb.ActivityHeader.StartTime', index=3,
       number=4, type=3, cpp_type=2, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='LimitLevel', full_name='pb.ActivityHeader.LimitLevel', index=4,
-      number=5, type=5, cpp_type=1, label=3,
-      has_default_value=False, default_value=[],
+      name='EndTime', full_name='pb.ActivityHeader.EndTime', index=4,
+      number=5, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='LimitVip', full_name='pb.ActivityHeader.LimitVip', index=5,
+      name='LimitLevel', full_name='pb.ActivityHeader.LimitLevel', index=5,
       number=6, type=5, cpp_type=1, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='Image', full_name='pb.ActivityHeader.Image', index=6,
-      number=7, type=5, cpp_type=1, label=1,
-      has_default_value=False, default_value=0,
+      name='LimitVip', full_name='pb.ActivityHeader.LimitVip', index=6,
+      number=7, type=5, cpp_type=1, label=3,
+      has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='Payment', full_name='pb.ActivityHeader.Payment', index=7,
+      name='Image', full_name='pb.ActivityHeader.Image', index=7,
       number=8, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='Index', full_name='pb.ActivityHeader.Index', index=8,
+      name='Payment', full_name='pb.ActivityHeader.Payment', index=8,
       number=9, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='Index', full_name='pb.ActivityHeader.Index', index=9,
+      number=10, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -171,8 +304,8 @@ _ACTIVITYHEADER = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=23,
-  serialized_end=188,
+  serialized_start=36,
+  serialized_end=233,
 )
 
 
@@ -215,8 +348,54 @@ _ACTIVITYDATA = _descriptor.Descriptor(
       create_key=_descriptor._internal_create_key,
     fields=[]),
   ],
-  serialized_start=190,
-  serialized_end=283,
+  serialized_start=235,
+  serialized_end=328,
+)
+
+
+_ACTIVITYEVENTDROP = _descriptor.Descriptor(
+  name='ActivityEventDrop',
+  full_name='pb.ActivityEventDrop',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='Type', full_name='pb.ActivityEventDrop.Type', index=0,
+      number=1, type=14, cpp_type=8, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='Value', full_name='pb.ActivityEventDrop.Value', index=1,
+      number=2, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='AddValue', full_name='pb.ActivityEventDrop.AddValue', index=2,
+      number=3, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=330,
+  serialized_end=423,
 )
 
 
@@ -254,50 +433,22 @@ _JOURNEYBUFF = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=285,
-  serialized_end=348,
+  serialized_start=425,
+  serialized_end=488,
 )
 
 
-_JOURNEYDATA = _descriptor.Descriptor(
-  name='JourneyData',
-  full_name='pb.JourneyData',
+_PATHAWARD = _descriptor.Descriptor(
+  name='PathAward',
+  full_name='pb.PathAward',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='PathIdx', full_name='pb.JourneyData.PathIdx', index=0,
-      number=1, type=5, cpp_type=1, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='Position', full_name='pb.JourneyData.Position', index=1,
-      number=2, type=5, cpp_type=1, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='LastRoll', full_name='pb.JourneyData.LastRoll', index=2,
-      number=3, type=5, cpp_type=1, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='DiceNum', full_name='pb.JourneyData.DiceNum', index=3,
-      number=4, type=5, cpp_type=1, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='Buff', full_name='pb.JourneyData.Buff', index=4,
-      number=5, type=11, cpp_type=10, label=3,
+      name='Awards', full_name='pb.PathAward.Awards', index=0,
+      number=1, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -314,8 +465,96 @@ _JOURNEYDATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=350,
-  serialized_end=464,
+  serialized_start=490,
+  serialized_end=532,
+)
+
+
+_JOURNEYDATA = _descriptor.Descriptor(
+  name='JourneyData',
+  full_name='pb.JourneyData',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='DiceNum', full_name='pb.JourneyData.DiceNum', index=0,
+      number=1, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='Progress', full_name='pb.JourneyData.Progress', index=1,
+      number=2, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='PathIdx', full_name='pb.JourneyData.PathIdx', index=2,
+      number=3, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='Position', full_name='pb.JourneyData.Position', index=3,
+      number=4, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='LastRoll', full_name='pb.JourneyData.LastRoll', index=4,
+      number=5, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='LastPathIdx', full_name='pb.JourneyData.LastPathIdx', index=5,
+      number=6, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='LastPosition', full_name='pb.JourneyData.LastPosition', index=6,
+      number=7, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='Buff', full_name='pb.JourneyData.Buff', index=7,
+      number=8, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='Awards', full_name='pb.JourneyData.Awards', index=8,
+      number=9, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=535,
+  serialized_end=741,
 )
 
 
@@ -346,8 +585,8 @@ _ACTIVITY_REQ_ACTIVITYLIST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=636,
-  serialized_end=664,
+  serialized_start=913,
+  serialized_end=941,
 )
 
 _ACTIVITY_REQ_ACTIVITYUSERDATA = _descriptor.Descriptor(
@@ -377,8 +616,8 @@ _ACTIVITY_REQ_ACTIVITYUSERDATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=666,
-  serialized_end=697,
+  serialized_start=943,
+  serialized_end=974,
 )
 
 _ACTIVITY_REQ_ACTIVITYPLAY = _descriptor.Descriptor(
@@ -415,8 +654,8 @@ _ACTIVITY_REQ_ACTIVITYPLAY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=699,
-  serialized_end=742,
+  serialized_start=976,
+  serialized_end=1019,
 )
 
 _ACTIVITY_REQ = _descriptor.Descriptor(
@@ -465,8 +704,8 @@ _ACTIVITY_REQ = _descriptor.Descriptor(
       create_key=_descriptor._internal_create_key,
     fields=[]),
   ],
-  serialized_start=480,
-  serialized_end=749,
+  serialized_start=757,
+  serialized_end=1026,
 )
 
 _ACTIVITY_RSP_ACTIVITYLIST = _descriptor.Descriptor(
@@ -496,8 +735,8 @@ _ACTIVITY_RSP_ACTIVITYLIST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=908,
-  serialized_end=958,
+  serialized_start=1185,
+  serialized_end=1235,
 )
 
 _ACTIVITY_RSP_ACTIVITYUSERDATA = _descriptor.Descriptor(
@@ -541,8 +780,8 @@ _ACTIVITY_RSP_ACTIVITYUSERDATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=960,
-  serialized_end=1058,
+  serialized_start=1237,
+  serialized_end=1335,
 )
 
 _ACTIVITY_RSP_ACTIVITYPLAY = _descriptor.Descriptor(
@@ -593,8 +832,8 @@ _ACTIVITY_RSP_ACTIVITYPLAY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1060,
-  serialized_end=1170,
+  serialized_start=1337,
+  serialized_end=1447,
 )
 
 _ACTIVITY_RSP = _descriptor.Descriptor(
@@ -643,8 +882,8 @@ _ACTIVITY_RSP = _descriptor.Descriptor(
       create_key=_descriptor._internal_create_key,
     fields=[]),
   ],
-  serialized_start=752,
-  serialized_end=1177,
+  serialized_start=1029,
+  serialized_end=1454,
 )
 
 _ACTIVITY = _descriptor.Descriptor(
@@ -667,17 +906,21 @@ _ACTIVITY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=467,
-  serialized_end=1177,
+  serialized_start=744,
+  serialized_end=1454,
 )
 
+_ACTIVITYHEADER.fields_by_name['Type'].enum_type = _ACTIVITYTYPE
 _ACTIVITYDATA.fields_by_name['Header'].message_type = _ACTIVITYHEADER
 _ACTIVITYDATA.fields_by_name['Journey'].message_type = _JOURNEYDATA
 _ACTIVITYDATA.oneofs_by_name['one'].fields.append(
   _ACTIVITYDATA.fields_by_name['Journey'])
 _ACTIVITYDATA.fields_by_name['Journey'].containing_oneof = _ACTIVITYDATA.oneofs_by_name['one']
+_ACTIVITYEVENTDROP.fields_by_name['Type'].enum_type = _ACTIVITYEVENTDROPTYPE
 _JOURNEYBUFF.fields_by_name['Type'].enum_type = _JOURNEYBUFFTYPE
+_PATHAWARD.fields_by_name['Awards'].message_type = award__pb2._AWARDINFO
 _JOURNEYDATA.fields_by_name['Buff'].message_type = _JOURNEYBUFF
+_JOURNEYDATA.fields_by_name['Awards'].message_type = _PATHAWARD
 _ACTIVITY_REQ_ACTIVITYLIST.containing_type = _ACTIVITY_REQ
 _ACTIVITY_REQ_ACTIVITYUSERDATA.containing_type = _ACTIVITY_REQ
 _ACTIVITY_REQ_ACTIVITYPLAY.containing_type = _ACTIVITY_REQ
@@ -717,11 +960,17 @@ _ACTIVITY_RSP.oneofs_by_name['one'].fields.append(
 _ACTIVITY_RSP.fields_by_name['Play'].containing_oneof = _ACTIVITY_RSP.oneofs_by_name['one']
 DESCRIPTOR.message_types_by_name['ActivityHeader'] = _ACTIVITYHEADER
 DESCRIPTOR.message_types_by_name['ActivityData'] = _ACTIVITYDATA
+DESCRIPTOR.message_types_by_name['ActivityEventDrop'] = _ACTIVITYEVENTDROP
 DESCRIPTOR.message_types_by_name['JourneyBuff'] = _JOURNEYBUFF
+DESCRIPTOR.message_types_by_name['PathAward'] = _PATHAWARD
 DESCRIPTOR.message_types_by_name['JourneyData'] = _JOURNEYDATA
 DESCRIPTOR.message_types_by_name['Activity'] = _ACTIVITY
 DESCRIPTOR.enum_types_by_name['ActivityStats'] = _ACTIVITYSTATS
+DESCRIPTOR.enum_types_by_name['ActivityType'] = _ACTIVITYTYPE
+DESCRIPTOR.enum_types_by_name['ActivityEventDropType'] = _ACTIVITYEVENTDROPTYPE
+DESCRIPTOR.enum_types_by_name['JourneyPointType'] = _JOURNEYPOINTTYPE
 DESCRIPTOR.enum_types_by_name['JourneyBuffType'] = _JOURNEYBUFFTYPE
+DESCRIPTOR.enum_types_by_name['JourneyReward'] = _JOURNEYREWARD
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 ActivityHeader = _reflection.GeneratedProtocolMessageType('ActivityHeader', (_message.Message,), {
@@ -738,12 +987,26 @@ ActivityData = _reflection.GeneratedProtocolMessageType('ActivityData', (_messag
   })
 _sym_db.RegisterMessage(ActivityData)
 
+ActivityEventDrop = _reflection.GeneratedProtocolMessageType('ActivityEventDrop', (_message.Message,), {
+  'DESCRIPTOR' : _ACTIVITYEVENTDROP,
+  '__module__' : 'activity_pb2'
+  # @@protoc_insertion_point(class_scope:pb.ActivityEventDrop)
+  })
+_sym_db.RegisterMessage(ActivityEventDrop)
+
 JourneyBuff = _reflection.GeneratedProtocolMessageType('JourneyBuff', (_message.Message,), {
   'DESCRIPTOR' : _JOURNEYBUFF,
   '__module__' : 'activity_pb2'
   # @@protoc_insertion_point(class_scope:pb.JourneyBuff)
   })
 _sym_db.RegisterMessage(JourneyBuff)
+
+PathAward = _reflection.GeneratedProtocolMessageType('PathAward', (_message.Message,), {
+  'DESCRIPTOR' : _PATHAWARD,
+  '__module__' : 'activity_pb2'
+  # @@protoc_insertion_point(class_scope:pb.PathAward)
+  })
+_sym_db.RegisterMessage(PathAward)
 
 JourneyData = _reflection.GeneratedProtocolMessageType('JourneyData', (_message.Message,), {
   'DESCRIPTOR' : _JOURNEYDATA,

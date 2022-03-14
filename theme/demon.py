@@ -4,15 +4,20 @@
 import msg
 from robot import SpinRobot
 
-class GorillaRobot(SpinRobot):
+demon_theme_id = 10130
+
+class DemonRobot(SpinRobot):
     def __init__(self, name, theme_id):
-        SpinRobot.__init__(self, name, theme_id)
+        SpinRobot.__init__(self, name, demon_theme_id)
 
     def theme_status_callback(self, packet):
         pass
 
     def play_status_callback(self, packet):
+        # self.log(packet.Spin.SymbolList)
         pass
+
+    
 
 
 def run(player):
@@ -21,13 +26,17 @@ def run(player):
     # player.send_cmd(cheat_12)
     # player.spin_to_next_stage()
     # player.spin_to_base()
+    # player.send_cmd(cheat_6)
+    player.send_cmd(demon_panelgroup)
     player.spin()
     # player.pick(1)
-    player.send_cmd(grorilla_panelgroup)
+    # player.send_cmd(demon_panelgroup)
     pass
 
 # grorilla_3sc = "panels 1_5_7_9_9_9_9_9_1_9_9_9_9_9_9_9_1_9_9_9"
-grorilla_panelgroup = "panelgroup 1_5_7_9_9_9_9_9_1_9_9_9_9_9_9_9_1_9_9_9|1_5_7_9_9_9_9_9_1_9_9_9_9_9_9_9_1_9_9_9"
+demon_panelgroup = "panelgroup 1_1_1_2_2_2_3_3_3_3_3_3_3_3_3|1_1_1_2_2_2_3_3_3_3_3_3_3_3_3"
+cheat_6 = "math:6"
+
 
 # def run_gm(player):
 #     player.send_cmd(theme.cheat_6)

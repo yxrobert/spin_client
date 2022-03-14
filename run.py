@@ -18,6 +18,8 @@ tab_theme_robot = {
 
     10070 : [theme.PiggyRobot, theme.piggybank.run],
     10080 : [theme.GorillaRobot, theme.gorilla.run],
+
+    10130 : [theme.DemonRobot, theme.demon.run],
     }
 
 def create_theme_robot(theme_id):

@@ -106,9 +106,9 @@ def make_activity_list_req(player_id, token):
     request.Activity.List.Type = 1
     return req
 
-def make_activity_user_data_req(player_id, token):
+def make_activity_user_data_req(player_id, token, _id):
     req, request = make_multi_req(player_id, token)
-    request.Activity.UserData.UID = 0
+    request.Activity.UserData.UID = _id
     return req
 
 def make_activity_play_req(player_id, token):

@@ -4,3 +4,4 @@ from gorilla import *
 from bingomoo import *
 from theme import *
 from train import *
+from demon import *
