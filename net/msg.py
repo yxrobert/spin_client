@@ -8,6 +8,13 @@ from sys import maxint
 def gen_sid():
     return random.randint(0, maxint/10000000000)
     
+def mak_regist_req(name):
+    req = pb.BunchRequest()
+    req.SID = gen_sid()
+    req.Login.NativeChannel.Name = name
+    req.Login.NativeChannel.Timezone = "+8"
+    return req
+
 def make_login_req(name):
     req = pb.BunchRequest()
     req.SID = gen_sid()
