@@ -104,6 +104,8 @@ class RobotBase:
                 self.on_theme_status(r.ThemeStatus)
             elif r.HasField("Play"):
                 self.on_play(r.Play)
+            elif r.HasField("Activity"):
+                self.on_activity(r.Activity)
     
     def process_err(self, err):
         if str(err).find("token-match") > 0:
@@ -124,6 +126,9 @@ class RobotBase:
 
     def on_theme_status(self, packet):
         pass
+
+    def on_activity(self, packet):
+        self.log(packet)
 
 
     

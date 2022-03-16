@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'Z\004.;pb',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x15lobbyluckypoker.proto\x12\x02pb\"\xf4\x02\n\nLobbyPoker\x1a\xb1\x01\n\x03Req\x12&\n\x04Info\x18\x01 \x01(\x0b\x32\x16.pb.LobbyPokerInfotReqH\x00\x12\'\n\x05Start\x18\x02 \x01(\x0b\x32\x16.pb.LobbyPokerStartReqH\x00\x12%\n\x04Open\x18\x03 \x01(\x0b\x32\x15.pb.LobbyPokerOpenReqH\x00\x12+\n\x07\x43ollect\x18\x04 \x01(\x0b\x32\x18.pb.LobbyPokerCollectReqH\x00\x42\x05\n\x03one\x1a\xb1\x01\n\x03Rsp\x12&\n\x04Info\x18\x01 \x01(\x0b\x32\x16.pb.LobbyPokerInfotRspH\x00\x12\'\n\x05Start\x18\x02 \x01(\x0b\x32\x16.pb.LobbyPokerStartRspH\x00\x12%\n\x04Open\x18\x03 \x01(\x0b\x32\x15.pb.LobbyPokerOpenRspH\x00\x12+\n\x07\x43ollect\x18\x04 \x01(\x0b\x32\x18.pb.LobbyPokerCollectRspH\x00\x42\x05\n\x03one\"\x14\n\x12LobbyPokerInfotReq\"L\n\x12LobbyPokerInfotRsp\x12#\n\x03SRC\x18\x01 \x01(\x0e\x32\x16.pb.LobbyLuckyPokerSRC\x12\x11\n\tLeftTimes\x18\x02 \x01(\r\"9\n\x12LobbyPokerStartReq\x12#\n\x03SRC\x18\x01 \x01(\x0e\x32\x16.pb.LobbyLuckyPokerSRC\"\xbd\x01\n\x12LobbyPokerStartRsp\x12\x1f\n\x06Pokers\x18\x01 \x01(\x0b\x32\x0f.pb.PlayerPoker\x12#\n\x03SRC\x18\x02 \x01(\x0e\x32\x16.pb.LobbyLuckyPokerSRC\x12*\n\tPokerType\x18\x03 \x01(\x0e\x32\x17.pb.LobbyLuckyPokerType\x12\x0e\n\x06VipMod\x18\x07 \x01(\x01\x12\x11\n\tLeftTimes\x18\x08 \x01(\r\x12\x12\n\nMultiplier\x18\t \x01(\r\"\x13\n\x11LobbyPokerOpenReq\"\xbc\x01\n\x11LobbyPokerOpenRsp\x12\x1f\n\x06Pokers\x18\x01 \x01(\x0b\x32\x0f.pb.PlayerPoker\x12#\n\x03SRC\x18\x02 \x01(\x0e\x32\x16.pb.LobbyLuckyPokerSRC\x12*\n\tPokerType\x18\x03 \x01(\x0e\x32\x17.pb.LobbyLuckyPokerType\x12\x0e\n\x06VipMod\x18\x07 \x01(\x01\x12\x11\n\tLeftTimes\x18\x08 \x01(\r\x12\x12\n\nMultiplier\x18\t \x01(\r\"\x16\n\x14LobbyPokerCollectReq\"g\n\x14LobbyPokerCollectRsp\x12#\n\x03SRC\x18\x02 \x01(\x0e\x32\x16.pb.LobbyLuckyPokerSRC\x12*\n\tPokerType\x18\x03 \x01(\x0e\x32\x17.pb.LobbyLuckyPokerType\"\xcc\x01\n\x0bPlayerPoker\x12\x19\n\x06Pokers\x18\x02 \x03(\x0b\x32\t.pb.Poker\x12%\n\x0fJackpotProgress\x18\x03 \x03(\x0b\x32\x0c.pb.Progress\x12!\n\tFreeAward\x18\x04 \x01(\x0b\x32\x0e.pb.PokerAward\x12 \n\x08PayAward\x18\x05 \x01(\x0b\x32\x0e.pb.PokerAward\x12\x1d\n\x03Pay\x18\x06 \x01(\x0b\x32\x10.pb.PokerPayData\x12\x17\n\x0fPayCanAwardCoin\x18\x07 \x01(\x04\"I\n\x05Poker\x12\x0e\n\x06\x43\x61rdID\x18\x01 \x01(\r\x12\x0e\n\x06\x44\x65\x63ors\x18\x02 \x01(\r\x12\x11\n\tJackpotID\x18\x03 \x01(\r\x12\r\n\x05State\x18\x04 \x01(\r\">\n\x08Progress\x12\x11\n\tJackpotID\x18\x01 \x01(\r\x12\x10\n\x08Progress\x18\x02 \x01(\r\x12\r\n\x05State\x18\x03 \x01(\r\"=\n\nPokerAward\x12\x0c\n\x04\x42\x61se\x18\x01 \x01(\x04\x12!\n\x07Jackpot\x18\x02 \x03(\x0b\x32\x10.pb.JackpotAward\"/\n\x0cJackpotAward\x12\x11\n\tJackpotID\x18\x01 \x01(\r\x12\x0c\n\x04\x63oin\x18\x02 \x01(\x04\"3\n\x0cPokerPayData\x12\x10\n\x08PayCount\x18\x01 \x01(\r\x12\x11\n\tProductId\x18\x02 \x01(\t*=\n\x12LobbyLuckyPokerSRC\x12\x13\n\x0fSRC_LOBBY_POKER\x10\x00\x12\x12\n\x0eSRC_MAIL_POKER\x10\x01*2\n\x13LobbyLuckyPokerType\x12\r\n\tTYPE_FREE\x10\x00\x12\x0c\n\x08TYPE_PAY\x10\x01\x42\x06Z\x04.;pbb\x06proto3'
+  serialized_pb=b'\n\x15lobbyluckypoker.proto\x12\x02pb\"\xf4\x02\n\nLobbyPoker\x1a\xb1\x01\n\x03Req\x12&\n\x04Info\x18\x01 \x01(\x0b\x32\x16.pb.LobbyPokerInfotReqH\x00\x12\'\n\x05Start\x18\x02 \x01(\x0b\x32\x16.pb.LobbyPokerStartReqH\x00\x12%\n\x04Open\x18\x03 \x01(\x0b\x32\x15.pb.LobbyPokerOpenReqH\x00\x12+\n\x07\x43ollect\x18\x04 \x01(\x0b\x32\x18.pb.LobbyPokerCollectReqH\x00\x42\x05\n\x03one\x1a\xb1\x01\n\x03Rsp\x12&\n\x04Info\x18\x01 \x01(\x0b\x32\x16.pb.LobbyPokerInfotRspH\x00\x12\'\n\x05Start\x18\x02 \x01(\x0b\x32\x16.pb.LobbyPokerStartRspH\x00\x12%\n\x04Open\x18\x03 \x01(\x0b\x32\x15.pb.LobbyPokerOpenRspH\x00\x12+\n\x07\x43ollect\x18\x04 \x01(\x0b\x32\x18.pb.LobbyPokerCollectRspH\x00\x42\x05\n\x03one\"\x14\n\x12LobbyPokerInfotReq\"L\n\x12LobbyPokerInfotRsp\x12#\n\x03SRC\x18\x01 \x01(\x0e\x32\x16.pb.LobbyLuckyPokerSRC\x12\x11\n\tLeftTimes\x18\x02 \x01(\r\"9\n\x12LobbyPokerStartReq\x12#\n\x03SRC\x18\x01 \x01(\x0e\x32\x16.pb.LobbyLuckyPokerSRC\"\xbd\x01\n\x12LobbyPokerStartRsp\x12\x1f\n\x06Pokers\x18\x01 \x01(\x0b\x32\x0f.pb.PlayerPoker\x12#\n\x03SRC\x18\x02 \x01(\x0e\x32\x16.pb.LobbyLuckyPokerSRC\x12*\n\tPokerType\x18\x03 \x01(\x0e\x32\x17.pb.LobbyLuckyPokerType\x12\x0e\n\x06VipMod\x18\x07 \x01(\x01\x12\x11\n\tLeftTimes\x18\x08 \x01(\r\x12\x12\n\nMultiplier\x18\t \x01(\r\" \n\x11LobbyPokerOpenReq\x12\x0b\n\x03pos\x18\x01 \x01(\r\"\xbc\x01\n\x11LobbyPokerOpenRsp\x12\x1f\n\x06Pokers\x18\x01 \x01(\x0b\x32\x0f.pb.PlayerPoker\x12#\n\x03SRC\x18\x02 \x01(\x0e\x32\x16.pb.LobbyLuckyPokerSRC\x12*\n\tPokerType\x18\x03 \x01(\x0e\x32\x17.pb.LobbyLuckyPokerType\x12\x0e\n\x06VipMod\x18\x07 \x01(\x01\x12\x11\n\tLeftTimes\x18\x08 \x01(\r\x12\x12\n\nMultiplier\x18\t \x01(\r\"\x16\n\x14LobbyPokerCollectReq\"g\n\x14LobbyPokerCollectRsp\x12#\n\x03SRC\x18\x02 \x01(\x0e\x32\x16.pb.LobbyLuckyPokerSRC\x12*\n\tPokerType\x18\x03 \x01(\x0e\x32\x17.pb.LobbyLuckyPokerType\"\xcc\x01\n\x0bPlayerPoker\x12\x19\n\x06Pokers\x18\x02 \x03(\x0b\x32\t.pb.Poker\x12%\n\x0fJackpotProgress\x18\x03 \x03(\x0b\x32\x0c.pb.Progress\x12!\n\tFreeAward\x18\x04 \x01(\x0b\x32\x0e.pb.PokerAward\x12 \n\x08PayAward\x18\x05 \x01(\x0b\x32\x0e.pb.PokerAward\x12\x1d\n\x03Pay\x18\x06 \x01(\x0b\x32\x10.pb.PokerPayData\x12\x17\n\x0fPayCanAwardCoin\x18\x07 \x01(\x04\"V\n\x05Poker\x12\x0e\n\x06\x43\x61rdID\x18\x01 \x01(\r\x12\x0e\n\x06\x44\x65\x63ors\x18\x02 \x01(\r\x12\x11\n\tJackpotID\x18\x03 \x01(\r\x12\r\n\x05State\x18\x04 \x01(\r\x12\x0b\n\x03pos\x18\x05 \x01(\r\">\n\x08Progress\x12\x11\n\tJackpotID\x18\x01 \x01(\r\x12\x10\n\x08Progress\x18\x02 \x01(\r\x12\r\n\x05State\x18\x03 \x01(\r\"=\n\nPokerAward\x12\x0c\n\x04\x42\x61se\x18\x01 \x01(\x04\x12!\n\x07Jackpot\x18\x02 \x03(\x0b\x32\x10.pb.JackpotAward\"/\n\x0cJackpotAward\x12\x11\n\tJackpotID\x18\x01 \x01(\r\x12\x0c\n\x04\x63oin\x18\x02 \x01(\x04\"3\n\x0cPokerPayData\x12\x10\n\x08PayCount\x18\x01 \x01(\r\x12\x11\n\tProductId\x18\x02 \x01(\t*X\n\x12LobbyLuckyPokerSRC\x12\x13\n\x0fSRC_LOBBY_POKER\x10\x00\x12\x12\n\x0eSRC_MAIL_POKER\x10\x01\x12\x19\n\x15SRC_ROYAL_PASSL_POKER\x10\x02*2\n\x13LobbyLuckyPokerType\x12\r\n\tTYPE_FREE\x10\x00\x12\x0c\n\x08TYPE_PAY\x10\x01\x42\x06Z\x04.;pbb\x06proto3'
 )
 
 _LOBBYLUCKYPOKERSRC = _descriptor.EnumDescriptor(
@@ -40,11 +40,16 @@ _LOBBYLUCKYPOKERSRC = _descriptor.EnumDescriptor(
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='SRC_ROYAL_PASSL_POKER', index=2, number=2,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=1607,
-  serialized_end=1668,
+  serialized_start=1633,
+  serialized_end=1721,
 )
 _sym_db.RegisterEnumDescriptor(_LOBBYLUCKYPOKERSRC)
 
@@ -69,14 +74,15 @@ _LOBBYLUCKYPOKERTYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=1670,
-  serialized_end=1720,
+  serialized_start=1723,
+  serialized_end=1773,
 )
 _sym_db.RegisterEnumDescriptor(_LOBBYLUCKYPOKERTYPE)
 
 LobbyLuckyPokerType = enum_type_wrapper.EnumTypeWrapper(_LOBBYLUCKYPOKERTYPE)
 SRC_LOBBY_POKER = 0
 SRC_MAIL_POKER = 1
+SRC_ROYAL_PASSL_POKER = 2
 TYPE_FREE = 0
 TYPE_PAY = 1
 
@@ -392,6 +398,13 @@ _LOBBYPOKEROPENREQ = _descriptor.Descriptor(
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
+    _descriptor.FieldDescriptor(
+      name='pos', full_name='pb.LobbyPokerOpenReq.pos', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -405,7 +418,7 @@ _LOBBYPOKEROPENREQ = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=755,
-  serialized_end=774,
+  serialized_end=787,
 )
 
 
@@ -471,8 +484,8 @@ _LOBBYPOKEROPENRSP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=777,
-  serialized_end=965,
+  serialized_start=790,
+  serialized_end=978,
 )
 
 
@@ -496,8 +509,8 @@ _LOBBYPOKERCOLLECTREQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=967,
-  serialized_end=989,
+  serialized_start=980,
+  serialized_end=1002,
 )
 
 
@@ -535,8 +548,8 @@ _LOBBYPOKERCOLLECTRSP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=991,
-  serialized_end=1094,
+  serialized_start=1004,
+  serialized_end=1107,
 )
 
 
@@ -602,8 +615,8 @@ _PLAYERPOKER = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1097,
-  serialized_end=1301,
+  serialized_start=1110,
+  serialized_end=1314,
 )
 
 
@@ -643,6 +656,13 @@ _POKER = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='pos', full_name='pb.Poker.pos', index=4,
+      number=5, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -655,8 +675,8 @@ _POKER = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1303,
-  serialized_end=1376,
+  serialized_start=1316,
+  serialized_end=1402,
 )
 
 
@@ -701,8 +721,8 @@ _PROGRESS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1378,
-  serialized_end=1440,
+  serialized_start=1404,
+  serialized_end=1466,
 )
 
 
@@ -740,8 +760,8 @@ _POKERAWARD = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1442,
-  serialized_end=1503,
+  serialized_start=1468,
+  serialized_end=1529,
 )
 
 
@@ -779,8 +799,8 @@ _JACKPOTAWARD = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1505,
-  serialized_end=1552,
+  serialized_start=1531,
+  serialized_end=1578,
 )
 
 
@@ -818,8 +838,8 @@ _POKERPAYDATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1554,
-  serialized_end=1605,
+  serialized_start=1580,
+  serialized_end=1631,
 )
 
 _LOBBYPOKER_REQ.fields_by_name['Info'].message_type = _LOBBYPOKERINFOTREQ

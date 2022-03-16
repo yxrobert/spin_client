@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'Z\004.;pb',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x0b\x62onus.proto\x12\x02pb\x1a\x0b\x61ward.proto\"\x8f\x01\n\x08ReqBonus\x12&\n\x06Source\x18\x01 \x01(\x0e\x32\x16.pb.AwardInfo.AwardSRC\x12\'\n\x06\x41\x63tion\x18\x02 \x01(\x0e\x32\x17.pb.ReqBonus.ActionEnum\"2\n\nActionEnum\x12\x0f\n\x0bUNSPECIFIED\x10\x00\x12\t\n\x05\x43heck\x10\x01\x12\x08\n\x04\x43\x61sh\x10\x02\"\x8c\x01\n\x05\x42onus\x12&\n\x06Source\x18\x01 \x01(\x0e\x32\x16.pb.AwardInfo.AwardSRC\x12\x0b\n\x03Hit\x18\x02 \x01(\x08\x12\x12\n\nAwardCount\x18\x03 \x01(\r\x12\x0c\n\x04Time\x18\x04 \x01(\x03\x12\x1d\n\x05\x41ward\x18\x05 \x03(\x0b\x32\x0e.pb.BonusAward\x12\r\n\x05\x45xtra\x18\n \x01(\t\"$\n\x08RspBonus\x12\x18\n\x05\x42onus\x18\x01 \x01(\x0b\x32\t.pb.Bonus\"*\n\nBonusAward\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0e\n\x06\x61mount\x18\x02 \x01(\x04\x42\x06Z\x04.;pbb\x06proto3'
+  serialized_pb=b'\n\x0b\x62onus.proto\x12\x02pb\x1a\x0b\x61ward.proto\"\x8f\x01\n\x08ReqBonus\x12&\n\x06Source\x18\x01 \x01(\x0e\x32\x16.pb.AwardInfo.AwardSRC\x12\'\n\x06\x41\x63tion\x18\x02 \x01(\x0e\x32\x17.pb.ReqBonus.ActionEnum\"2\n\nActionEnum\x12\x0f\n\x0bUNSPECIFIED\x10\x00\x12\t\n\x05\x43heck\x10\x01\x12\x08\n\x04\x43\x61sh\x10\x02\"\xe6\x01\n\x05\x42onus\x12&\n\x06Source\x18\x01 \x01(\x0e\x32\x16.pb.AwardInfo.AwardSRC\x12\x0b\n\x03Hit\x18\x02 \x01(\x08\x12\x12\n\nAwardCount\x18\x03 \x01(\r\x12\x0c\n\x04Time\x18\x04 \x01(\x03\x12\x1d\n\x05\x41ward\x18\x05 \x03(\x0b\x32\x0e.pb.BonusAward\x12\r\n\x05\x45xtra\x18\n \x01(\t\x12$\n\x06\x41\x63tion\x18\x0b \x01(\x0e\x32\x14.pb.Bonus.ActionEnum\"2\n\nActionEnum\x12\x0f\n\x0bUNSPECIFIED\x10\x00\x12\t\n\x05\x43heck\x10\x01\x12\x08\n\x04\x43\x61sh\x10\x02\"$\n\x08RspBonus\x12\x18\n\x05\x42onus\x18\x01 \x01(\x0b\x32\t.pb.Bonus\"*\n\nBonusAward\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0e\n\x06\x61mount\x18\x02 \x01(\x04\x42\x06Z\x04.;pbb\x06proto3'
   ,
   dependencies=[award__pb2.DESCRIPTOR,])
 
@@ -55,6 +55,36 @@ _REQBONUS_ACTIONENUM = _descriptor.EnumDescriptor(
   serialized_end=176,
 )
 _sym_db.RegisterEnumDescriptor(_REQBONUS_ACTIONENUM)
+
+_BONUS_ACTIONENUM = _descriptor.EnumDescriptor(
+  name='ActionEnum',
+  full_name='pb.Bonus.ActionEnum',
+  filename=None,
+  file=DESCRIPTOR,
+  create_key=_descriptor._internal_create_key,
+  values=[
+    _descriptor.EnumValueDescriptor(
+      name='UNSPECIFIED', index=0, number=0,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='Check', index=1, number=1,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='Cash', index=2, number=2,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+  ],
+  containing_type=None,
+  serialized_options=None,
+  serialized_start=126,
+  serialized_end=176,
+)
+_sym_db.RegisterEnumDescriptor(_BONUS_ACTIONENUM)
 
 
 _REQBONUS = _descriptor.Descriptor(
@@ -147,11 +177,19 @@ _BONUS = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='Action', full_name='pb.Bonus.Action', index=6,
+      number=11, type=14, cpp_type=8, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
   nested_types=[],
   enum_types=[
+    _BONUS_ACTIONENUM,
   ],
   serialized_options=None,
   is_extendable=False,
@@ -160,7 +198,7 @@ _BONUS = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=179,
-  serialized_end=319,
+  serialized_end=409,
 )
 
 
@@ -191,8 +229,8 @@ _RSPBONUS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=321,
-  serialized_end=357,
+  serialized_start=411,
+  serialized_end=447,
 )
 
 
@@ -230,8 +268,8 @@ _BONUSAWARD = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=359,
-  serialized_end=401,
+  serialized_start=449,
+  serialized_end=491,
 )
 
 _REQBONUS.fields_by_name['Source'].enum_type = award__pb2._AWARDINFO_AWARDSRC
@@ -239,6 +277,8 @@ _REQBONUS.fields_by_name['Action'].enum_type = _REQBONUS_ACTIONENUM
 _REQBONUS_ACTIONENUM.containing_type = _REQBONUS
 _BONUS.fields_by_name['Source'].enum_type = award__pb2._AWARDINFO_AWARDSRC
 _BONUS.fields_by_name['Award'].message_type = _BONUSAWARD
+_BONUS.fields_by_name['Action'].enum_type = _BONUS_ACTIONENUM
+_BONUS_ACTIONENUM.containing_type = _BONUS
 _RSPBONUS.fields_by_name['Bonus'].message_type = _BONUS
 DESCRIPTOR.message_types_by_name['ReqBonus'] = _REQBONUS
 DESCRIPTOR.message_types_by_name['Bonus'] = _BONUS
