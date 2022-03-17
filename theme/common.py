@@ -33,8 +33,9 @@ def default_theme_callback(packet):
 
 def run(player):
     player.req_activity_list()
+    player.req_activity_user_data(3)
     player.req_activity_user_data(1)
-    # player.req_activity_play()
+    player.req_activity_play(1)
 
     # player.select_bet(40000)
 

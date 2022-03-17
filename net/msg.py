@@ -113,14 +113,14 @@ def make_activity_list_req(player_id, token):
     request.Activity.List.Type = 1
     return req
 
-def make_activity_user_data_req(player_id, token, _id):
+def make_activity_user_data_req(player_id, token, uid):
     req, request = make_multi_req(player_id, token)
-    request.Activity.UserData.UID = _id
+    request.Activity.UserData.UID = uid
     return req
 
-def make_activity_play_req(player_id, token):
+def make_activity_play_req(player_id, token, uid):
     req, request = make_multi_req(player_id, token)
-    request.Activity.Play.UID = 0
+    request.Activity.Play.UID = uid
     request.Activity.Play.InputX = 0
     return req
 

@@ -82,12 +82,12 @@ class RobotBase:
         req = make_activity_list_req(self.player_id, self.token)
         self.send_packet(req)  
 
-    def req_activity_user_data(self, _id):
-        req = make_activity_user_data_req(self.player_id, self.token, _id)
+    def req_activity_user_data(self, uid):
+        req = make_activity_user_data_req(self.player_id, self.token, uid)
         self.send_packet(req)  
 
-    def req_activity_play(self):
-        req = make_activity_play_req(self.player_id, self.token)
+    def req_activity_play(self, uid):
+        req = make_activity_play_req(self.player_id, self.token, uid)
         self.send_packet(req)  
 
     def on_response(self, packet):
@@ -108,7 +108,7 @@ class RobotBase:
                 self.on_activity(r.Activity)
     
     def process_err(self, err):
-        if str(err).find("token-match") > 0:
+        if str(err).find("token-match") > 0 or str(err).find("bad-auth") > 0:
             self.req_login()
 
     def on_login(self, packet):
