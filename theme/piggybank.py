@@ -22,7 +22,7 @@ piggy_supper = "eval FeatureProgress_9"
 piggy_stepper = "panels 18_14_14_19_14_14_20_14_14_21_14_14_22_14_14|23_2_23_23_2_23_23_2_23"
 
 def run(player):
-    # player.send_cmd(add_money)
+    player.send_cmd(add_money)
     player.spin()
     # player.spin_to_next_stage()
     # player.spin_to_base()

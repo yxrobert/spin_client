@@ -5,3 +5,5 @@ from bingomoo import *
 from theme import *
 from train import *
 from demon import *
+from vegas import *
+from fortune import *

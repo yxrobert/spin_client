@@ -61,7 +61,7 @@ def make_pick_req(player_id, token, theme_id, bet, x, y = -1):
     request.Play.Operation = pb.PlayRequest.OperationType.PICK
     request.Play.ThemeID = theme_id
     request.Play.TotalBet = bet
-    request.Play.PickID = 0
+    request.Play.PickID = x
     request.Play.PickPos = 0
     request.Play.PickInfo = ""
 

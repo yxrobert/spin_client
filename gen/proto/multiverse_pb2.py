@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'Z\004.;pb',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x10multiverse.proto\x12\x02pb\"\x07\n\x05Quest\"\xaf\x01\n\x0eMultiverseData\x12\r\n\x05\x45ntry\x18\x01 \x01(\x05\x12\r\n\x05Level\x18\x02 \x01(\x05\x12\x12\n\nChapterIdx\x18\x03 \x01(\x05\x12\x0e\n\x06MapIdx\x18\x04 \x01(\x05\x12\x0f\n\x07NodeIdx\x18\x05 \x01(\x05\x12,\n\nNodeStatus\x18\x06 \x01(\x0e\x32\x18.pb.MultiverseNodeStatus\x12\x1c\n\tQuestList\x18\x07 \x03(\x0b\x32\t.pb.Quest*5\n\x14MultiverseNodeStatus\x12\r\n\tInHanding\x10\x00\x12\x0e\n\nInAwarding\x10\x01\x42\x06Z\x04.;pbb\x06proto3'
+  serialized_pb=b'\n\x10multiverse.proto\x12\x02pb\"\x07\n\x05Quest\"\xaf\x01\n\x0eMultiverseData\x12\r\n\x05\x45ntry\x18\x01 \x01(\x05\x12\r\n\x05Level\x18\x02 \x01(\x05\x12\x12\n\nChapterIdx\x18\x03 \x01(\x05\x12\x0e\n\x06MapIdx\x18\x04 \x01(\x05\x12\x0f\n\x07NodeIdx\x18\x05 \x01(\x05\x12,\n\nNodeStatus\x18\x06 \x01(\x0e\x32\x18.pb.MultiverseNodeStatus\x12\x1c\n\tQuestList\x18\x07 \x03(\x0b\x32\t.pb.Quest*C\n\x14MultiverseNodeStatus\x12\x0c\n\x08\x43hoosing\x10\x00\x12\r\n\tInHanding\x10\x01\x12\x0e\n\nInAwarding\x10\x02*;\n\x14MultiverseDifficulty\x12\n\n\x06Normal\x10\x00\x12\r\n\tNightmare\x10\x01\x12\x08\n\x04Hell\x10\x02\x42\x06Z\x04.;pbb\x06proto3'
 )
 
 _MULTIVERSENODESTATUS = _descriptor.EnumDescriptor(
@@ -31,12 +31,17 @@ _MULTIVERSENODESTATUS = _descriptor.EnumDescriptor(
   create_key=_descriptor._internal_create_key,
   values=[
     _descriptor.EnumValueDescriptor(
-      name='InHanding', index=0, number=0,
+      name='Choosing', index=0, number=0,
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
-      name='InAwarding', index=1, number=1,
+      name='InHanding', index=1, number=1,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='InAwarding', index=2, number=2,
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
@@ -44,13 +49,48 @@ _MULTIVERSENODESTATUS = _descriptor.EnumDescriptor(
   containing_type=None,
   serialized_options=None,
   serialized_start=211,
-  serialized_end=264,
+  serialized_end=278,
 )
 _sym_db.RegisterEnumDescriptor(_MULTIVERSENODESTATUS)
 
 MultiverseNodeStatus = enum_type_wrapper.EnumTypeWrapper(_MULTIVERSENODESTATUS)
-InHanding = 0
-InAwarding = 1
+_MULTIVERSEDIFFICULTY = _descriptor.EnumDescriptor(
+  name='MultiverseDifficulty',
+  full_name='pb.MultiverseDifficulty',
+  filename=None,
+  file=DESCRIPTOR,
+  create_key=_descriptor._internal_create_key,
+  values=[
+    _descriptor.EnumValueDescriptor(
+      name='Normal', index=0, number=0,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='Nightmare', index=1, number=1,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='Hell', index=2, number=2,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+  ],
+  containing_type=None,
+  serialized_options=None,
+  serialized_start=280,
+  serialized_end=339,
+)
+_sym_db.RegisterEnumDescriptor(_MULTIVERSEDIFFICULTY)
+
+MultiverseDifficulty = enum_type_wrapper.EnumTypeWrapper(_MULTIVERSEDIFFICULTY)
+Choosing = 0
+InHanding = 1
+InAwarding = 2
+Normal = 0
+Nightmare = 1
+Hell = 2
 
 
 
@@ -157,6 +197,7 @@ _MULTIVERSEDATA.fields_by_name['QuestList'].message_type = _QUEST
 DESCRIPTOR.message_types_by_name['Quest'] = _QUEST
 DESCRIPTOR.message_types_by_name['MultiverseData'] = _MULTIVERSEDATA
 DESCRIPTOR.enum_types_by_name['MultiverseNodeStatus'] = _MULTIVERSENODESTATUS
+DESCRIPTOR.enum_types_by_name['MultiverseDifficulty'] = _MULTIVERSEDIFFICULTY
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 Quest = _reflection.GeneratedProtocolMessageType('Quest', (_message.Message,), {

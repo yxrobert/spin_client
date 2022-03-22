@@ -106,6 +106,8 @@ class RobotBase:
                 self.on_play(r.Play)
             elif r.HasField("Activity"):
                 self.on_activity(r.Activity)
+                self.log(packet.Multi.Awards)
+                self.log(packet.Multi.ActivityEventDropList)
     
     def process_err(self, err):
         if str(err).find("token-match") > 0 or str(err).find("bad-auth") > 0:
@@ -208,6 +210,9 @@ class SpinRobot(RobotBase):
 
     def gm_clear(self):
         self.send_gm("clear")
+
+    def log_spin_wins(self, spin_packet):
+        self.log(msg.log_wins(spin_packet))
 
 
 

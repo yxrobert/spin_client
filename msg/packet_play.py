@@ -3,6 +3,17 @@
 
 import gen.proto as pb
 
+def log_wins(packet):
+    log_packet = pb.SpinResponse()
+    log_packet.PanelWins = packet.PanelWins
+    log_packet.FeatureWins = packet.FeatureWins
+    log_packet.SpinWins = packet.SpinWins
+    log_packet.PCWins = packet.PCWins
+    log_packet.PlayCycleWins.TriggerWins = packet.PlayCycleWins.TriggerWins
+    log_packet.PlayCycleWins.TotalWins = packet.PlayCycleWins.TotalWins
+
+    return log_packet
+
 def log_spin(packet):
     log_packet = pb.PlayResponse()
 

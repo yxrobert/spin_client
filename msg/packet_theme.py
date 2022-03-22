@@ -13,12 +13,13 @@ def log_theme_status(packet):
         log_packet.Respin.RemainTimes = packet.Respin.RemainTimes
         log_packet.Respin.TotalTimes = packet.Respin.TotalTimes
         log_packet.Respin.TriggerWin = packet.Respin.TriggerWin
+        log_packet.Respin.TotalWinAmount = packet.Respin.TotalWinAmount
 
     if packet.HasField("Freespin"):
         log_packet.Freespin.RemainTimes = packet.Freespin.RemainTimes
         log_packet.Freespin.TotalTimes = packet.Freespin.TotalTimes
         log_packet.Freespin.TriggerWin = packet.Freespin.TriggerWin
-
+        log_packet.Freespin.TotalWinAmount = packet.Freespin.TotalWinAmount
     return log_packet
 
 def log_theme_jpvision(packet):
@@ -61,7 +62,8 @@ def log_bingomoo_theme(packet):
     # log_packet.bingoMoo.Data.ClearField("BingoPanelArr")
     
     print(log_packet)
-    
+
+
 
 def main():
     pass

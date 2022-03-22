@@ -21,6 +21,8 @@ tab_theme_robot = {
 
     10130 : [theme.DemonRobot, theme.demon.run],
     10090 : [theme.TrainRobot, theme.train.run],
+    10020 : [theme.VegasRobot, theme.vegas.run],
+    10040 : [theme.FortuneRobot, theme.fortune.run],
     }
 
 def create_theme_robot(theme_id):
