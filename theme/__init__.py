@@ -7,3 +7,4 @@ from train import *
 from demon import *
 from vegas import *
 from fortune import *
+from genie import *

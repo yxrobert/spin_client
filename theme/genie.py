@@ -4,11 +4,11 @@
 import msg
 from robot import SpinRobot
 
-fortune_theme_id = 10040
+genie_theme_id = 10030
 
-class FortuneRobot(SpinRobot):
+class GenieRobot(SpinRobot):
     def __init__(self, name, theme_id):
-        SpinRobot.__init__(self, name, fortune_theme_id)
+        SpinRobot.__init__(self, name, genie_theme_id)
 
     def theme_status_callback(self, packet):
         pass
@@ -18,33 +18,24 @@ class FortuneRobot(SpinRobot):
         pass
 
 def run(player):
-    # player.send_cmd(add_money)
     # player.select_bet(40000)
 
     # player.send_cmd(cheat_12)
     # player.spin_to_next_stage()
 
-    # player.send_cmd(cheat_6)
-    # player.send_cmd(test_gm)
 
-    # player.send_gm(enter_pick)
-    # player.spin()
+    # player.send_cmd(free_cmd)
+    player.spin()
     # player.pick(0)
 
-    # player.send_gm(enter_pick)
     # player.spin()
-    # player.pick(1)
-
     # player.spin_to_base()
-    player.spin()
-    # player.spin_times(3)
 
-  
+    # player.pick(1)
     # player.send_cmd(demon_panelgroup)
     pass
 
-add_money = "add coin 9999999"
-enter_pick = "2_200|4;"
+free_cmd = "gm:2_200|4"
 test_gm = "gm:2_200|2;1_100|2_3_7"
 cheat_6 = "cheat 6"
 # test_gm = "gm:2_200|2;"
