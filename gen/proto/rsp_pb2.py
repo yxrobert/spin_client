@@ -50,7 +50,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'Z\004.;pb',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\trsp.proto\x12\x02pb\x1a\x12\x61uthenticate.proto\x1a\x0b\x61ward.proto\x1a\x0b\x62onus.proto\x1a\nbuff.proto\x1a\x10\x66riendship.proto\x1a\x12login_reward.proto\x1a\rmailbox.proto\x1a\rmission.proto\x1a\x0cplayer.proto\x1a\x11post_office.proto\x1a\x0frsp_error.proto\x1a\nshop.proto\x1a\x0bslots.proto\x1a\x13slots_jackpot.proto\x1a\x11slots_theme.proto\x1a\rtourney.proto\x1a\rversion.proto\x1a\x0bquest.proto\x1a\x10lobbywheel.proto\x1a\x10\x64\x61ilybonus.proto\x1a\tvip.proto\x1a\x12\x64\x61ilymission.proto\x1a\x15lobbyluckypoker.proto\x1a\x11noviceguide.proto\x1a\nhero.proto\x1a\rlevelup.proto\x1a\x08\x66\x62.proto\x1a\x0bpiggy.proto\x1a\x0e\x61\x63tivity.proto\x1a\x15lobbyluckyseven.proto\x1a\x0froyalpass.proto\"\x8a\x02\n\rBunchResponse\x12\x1b\n\x05\x45rror\x18\x01 \x01(\x0b\x32\x0c.pb.RspError\x12\x1d\n\x05Login\x18\x02 \x01(\x0b\x32\x0c.pb.RespAuthH\x00\x12\x1f\n\x06Public\x18\x03 \x01(\x0b\x32\r.pb.RspPublicH\x00\x12\x1d\n\x05Multi\x18\x05 \x01(\x0b\x32\x0c.pb.RspMultiH\x00\x12\x18\n\x0fServerLocalTime\x18\xe9\x07 \x01(\t\x12\x18\n\x0fPlayerLocalTime\x18\xea\x07 \x01(\t\x12\x13\n\nServerTime\x18\xeb\x07 \x01(\x03\x12\x13\n\nPlayerTime\x18\xec\x07 \x01(\x03\x12\x18\n\x0fServerBirthTime\x18\xed\x07 \x01(\tB\x05\n\x03one\"\xb2\n\n\x08Response\x12\x0c\n\x04Step\x18\x01 \x01(\r\x12\x11\n\tRequestID\x18\x02 \x01(\r\x12 \n\x06Player\x18\xf0. \x01(\x0b\x32\r.pb.RspPlayerH\x00\x12!\n\x04Play\x18\xb8\x17 \x01(\x0b\x32\x10.pb.PlayResponseH\x00\x12/\n\x07Jackpot\x18\xb9\x17 \x01(\x0b\x32\x1b.pb.JackpotSyncing.ResponseH\x00\x12#\n\tThemeList\x18\xd0\x0f \x01(\x0b\x32\r.pb.ThemeListH\x00\x12\'\n\x0bThemeStatus\x18\xa0\x1f \x01(\x0b\x32\x0f.pb.ThemeStatusH\x00\x12)\n\x0cThemeRestore\x18\xa2\x1f \x01(\x0b\x32\x10.pb.ThemeRestoreH\x00\x12\'\n\x0bLastSpinRsp\x18\xa1\x1f \x01(\x0b\x32\x0f.pb.LastSpinRspH\x00\x12#\n\x07Tourney\x18\xa8\x46 \x01(\x0b\x32\x0f.pb.RespTourneyH\x00\x12\x1e\n\x05\x42onus\x18\x90N \x01(\x0b\x32\x0c.pb.RspBonusH\x00\x12*\n\x0bLoginReward\x18\x91N \x01(\x0b\x32\x12.pb.RspLoginRewardH\x00\x12#\n\x07HoneyDo\x18\xf8U \x01(\x0b\x32\x0f.pb.HoneyDo.RspH\x00\x12$\n\x07Mailbox\x18\xe0] \x01(\x0b\x32\x10.pb.Mailbox.RespH\x00\x12\x1e\n\x04Shop\x18\xc8\x65 \x01(\x0b\x32\r.pb.Shop.RespH\x00\x12\x1e\n\x04\x42uff\x18\xb0m \x01(\x0b\x32\r.pb.Buff.RespH\x00\x12*\n\nFriendship\x18\x98u \x01(\x0b\x32\x13.pb.Friendship.RespH\x00\x12*\n\nPostOffice\x18\x80} \x01(\x0b\x32\x13.pb.PostOffice.RespH\x00\x12!\n\x05Quest\x18\xe8\x84\x01 \x01(\x0b\x32\x0e.pb.Quests.RspH\x00\x12+\n\x0bNoviceGuide\x18\xcc\x85\x01 \x01(\x0b\x32\x12.pb.NoviceGuideRspH\x00\x12\x36\n\x12NoviceGuideSaveRsp\x18\xcd\x85\x01 \x01(\x0b\x32\x16.pb.NoviceGuideSaveRspH\x00\x12&\n\x08\x41\x63tivity\x18\xd6\x85\x01 \x01(\x0b\x32\x10.pb.Activity.RspH\x00\x12)\n\nLobbyWheel\x18\xd0\x8c\x01 \x01(\x0b\x32\x11.pb.LobbyWheelRspH\x00\x12*\n\nDailyBonus\x18\xd1\x8c\x01 \x01(\x0b\x32\x12.pb.DailyBonus.RspH\x00\x12\x1f\n\x03Vip\x18\xd2\x8c\x01 \x01(\x0b\x32\x0e.pb.Vip.VipRspH\x00\x12.\n\x0c\x44\x61ilyMission\x18\xd3\x8c\x01 \x01(\x0b\x32\x14.pb.DailyMission.RspH\x00\x12*\n\nLobbyPoker\x18\xd4\x8c\x01 \x01(\x0b\x32\x12.pb.LobbyPoker.RspH\x00\x12\x1e\n\x04Hero\x18\xd5\x8c\x01 \x01(\x0b\x32\x0c.pb.Hero.RspH\x00\x12\x1c\n\x02\x46\x42\x18\xd6\x8c\x01 \x01(\x0b\x32\x0c.pb.FB.FBRspH\x00\x12%\n\x05Piggy\x18\xd7\x8c\x01 \x01(\x0b\x32\x12.pb.Piggy.PiggyRspH\x00\x12$\n\x06\x46\x42\x42ind\x18\xd8\x8c\x01 \x01(\x0b\x32\x10.pb.FB.FBBindRspH\x00\x12<\n\x0eLobbLuckySeven\x18\xd9\x8c\x01 \x01(\x0b\x32 .pb.LobbLuckySeven.LuckySevenRspH\x00\x12(\n\tRoyalPass\x18\xda\x8c\x01 \x01(\x0b\x32\x11.pb.RoyalPass.RspH\x00\x12\x0c\n\x03SID\x18\xe9\x07 \x01(\r\x12\r\n\x04SSID\x18\xea\x07 \x01(\x03\x42\x05\n\x03one\"\xe9\x01\n\tRspPublic\x12&\n\x04Util\x18\xe8\x07 \x01(\x0b\x32\x15.pb.RspPublic.RspUtilH\x00\x1a\x44\n\x04Pong\x12\x15\n\rNanoTimestamp\x18\x01 \x01(\x03\x12\x11\n\tTimestamp\x18\x02 \x01(\x05\x12\x12\n\nNanoSecond\x18\x03 \x01(\x05\x1ag\n\x07RspUtil\x12#\n\x04Ping\x18\xe9\x07 \x01(\x0b\x32\x12.pb.RspPublic.PongH\x00\x12\x0f\n\x04\x45\x63ho\x18\xea\x07 \x01(\tH\x00\x12\x1f\n\x07Version\x18\xeb\x07 \x01(\x0b\x32\x0b.pb.VersionH\x00\x42\x05\n\x03oneB\x05\n\x03one\"\xde\x04\n\x08RspMulti\x12\x1f\n\tResponses\x18\x01 \x03(\x0b\x32\x0c.pb.Response\x12\x19\n\x06\x41wards\x18\x02 \x03(\x0b\x32\t.pb.Award\x12\x1e\n\x05State\x18\x03 \x01(\x0b\x32\x0f.pb.Player.Mode\x12$\n\x07\x41\x63\x63ount\x18\x04 \x01(\x0b\x32\x13.pb.Player.Currency\x12\"\n\x05Times\x18\x05 \x01(\x0b\x32\x13.pb.Player.TimesBag\x12$\n\x08\x42oosters\x18\x06 \x03(\x0b\x32\x12.pb.Player.Booster\x12-\n\x13HoneyDoUpdatedTasks\x18\x0b \x03(\x0b\x32\x10.pb.HoneyDo.Task\x12*\n\x0cQuestUpdated\x18\x0c \x03(\x0b\x32\x14.pb.Quests.QuestInfo\x12\x35\n\x0eMissionUpdated\x18\r \x03(\x0b\x32\x1d.pb.DailyMission.MissionTasks\x12\'\n\x0bHeroUpdated\x18\x0e \x01(\x0b\x32\x12.pb.Hero.HeroSkill\x12&\n\x0fHeroInfoUpdated\x18\x0f \x01(\x0b\x32\r.pb.Hero.Hero\x12(\n\x0elevelUpUpdated\x18\x10 \x01(\x0b\x32\x10.pb.LevelUpAward\x12\'\n\x0cpiggyUpdated\x18\x11 \x01(\x0b\x32\x11.pb.Piggy.Updated\x12/\n\x15\x41\x63tivityEventDropList\x18\x12 \x03(\x0b\x32\x10.pb.ActivityDrop\x12\x0f\n\x06\x45vents\x18\xc8\x01 \x03(\t\x12\x0e\n\x05Tasks\x18\xc9\x01 \x03(\t\"6\n\x08RspQuest\x12\x11\n\x06Newbie\x18\xa1\x1f \x01(\rH\x00\x12\x10\n\x05\x44\x61ily\x18\xa2\x1f \x01(\rH\x00\x42\x05\n\x03oneB\x06Z\x04.;pbb\x06proto3'
+  serialized_pb=b'\n\trsp.proto\x12\x02pb\x1a\x12\x61uthenticate.proto\x1a\x0b\x61ward.proto\x1a\x0b\x62onus.proto\x1a\nbuff.proto\x1a\x10\x66riendship.proto\x1a\x12login_reward.proto\x1a\rmailbox.proto\x1a\rmission.proto\x1a\x0cplayer.proto\x1a\x11post_office.proto\x1a\x0frsp_error.proto\x1a\nshop.proto\x1a\x0bslots.proto\x1a\x13slots_jackpot.proto\x1a\x11slots_theme.proto\x1a\rtourney.proto\x1a\rversion.proto\x1a\x0bquest.proto\x1a\x10lobbywheel.proto\x1a\x10\x64\x61ilybonus.proto\x1a\tvip.proto\x1a\x12\x64\x61ilymission.proto\x1a\x15lobbyluckypoker.proto\x1a\x11noviceguide.proto\x1a\nhero.proto\x1a\rlevelup.proto\x1a\x08\x66\x62.proto\x1a\x0bpiggy.proto\x1a\x0e\x61\x63tivity.proto\x1a\x15lobbyluckyseven.proto\x1a\x0froyalpass.proto\"\xa1\x02\n\rBunchResponse\x12\x1b\n\x05\x45rror\x18\x01 \x01(\x0b\x32\x0c.pb.RspError\x12\x1d\n\x05Login\x18\x02 \x01(\x0b\x32\x0c.pb.RespAuthH\x00\x12\x1f\n\x06Public\x18\x03 \x01(\x0b\x32\r.pb.RspPublicH\x00\x12\x1d\n\x05Multi\x18\x05 \x01(\x0b\x32\x0c.pb.RspMultiH\x00\x12\x15\n\x0cMidnightZero\x18\xe8\x07 \x01(\r\x12\x18\n\x0fServerLocalTime\x18\xe9\x07 \x01(\t\x12\x18\n\x0fPlayerLocalTime\x18\xea\x07 \x01(\t\x12\x13\n\nServerTime\x18\xeb\x07 \x01(\x03\x12\x13\n\nPlayerTime\x18\xec\x07 \x01(\x03\x12\x18\n\x0fServerBirthTime\x18\xed\x07 \x01(\tB\x05\n\x03one\"\xb2\n\n\x08Response\x12\x0c\n\x04Step\x18\x01 \x01(\r\x12\x11\n\tRequestID\x18\x02 \x01(\r\x12 \n\x06Player\x18\xf0. \x01(\x0b\x32\r.pb.RspPlayerH\x00\x12!\n\x04Play\x18\xb8\x17 \x01(\x0b\x32\x10.pb.PlayResponseH\x00\x12/\n\x07Jackpot\x18\xb9\x17 \x01(\x0b\x32\x1b.pb.JackpotSyncing.ResponseH\x00\x12#\n\tThemeList\x18\xd0\x0f \x01(\x0b\x32\r.pb.ThemeListH\x00\x12\'\n\x0bThemeStatus\x18\xa0\x1f \x01(\x0b\x32\x0f.pb.ThemeStatusH\x00\x12)\n\x0cThemeRestore\x18\xa2\x1f \x01(\x0b\x32\x10.pb.ThemeRestoreH\x00\x12\'\n\x0bLastSpinRsp\x18\xa1\x1f \x01(\x0b\x32\x0f.pb.LastSpinRspH\x00\x12#\n\x07Tourney\x18\xa8\x46 \x01(\x0b\x32\x0f.pb.RespTourneyH\x00\x12\x1e\n\x05\x42onus\x18\x90N \x01(\x0b\x32\x0c.pb.RspBonusH\x00\x12*\n\x0bLoginReward\x18\x91N \x01(\x0b\x32\x12.pb.RspLoginRewardH\x00\x12#\n\x07HoneyDo\x18\xf8U \x01(\x0b\x32\x0f.pb.HoneyDo.RspH\x00\x12$\n\x07Mailbox\x18\xe0] \x01(\x0b\x32\x10.pb.Mailbox.RespH\x00\x12\x1e\n\x04Shop\x18\xc8\x65 \x01(\x0b\x32\r.pb.Shop.RespH\x00\x12\x1e\n\x04\x42uff\x18\xb0m \x01(\x0b\x32\r.pb.Buff.RespH\x00\x12*\n\nFriendship\x18\x98u \x01(\x0b\x32\x13.pb.Friendship.RespH\x00\x12*\n\nPostOffice\x18\x80} \x01(\x0b\x32\x13.pb.PostOffice.RespH\x00\x12!\n\x05Quest\x18\xe8\x84\x01 \x01(\x0b\x32\x0e.pb.Quests.RspH\x00\x12+\n\x0bNoviceGuide\x18\xcc\x85\x01 \x01(\x0b\x32\x12.pb.NoviceGuideRspH\x00\x12\x36\n\x12NoviceGuideSaveRsp\x18\xcd\x85\x01 \x01(\x0b\x32\x16.pb.NoviceGuideSaveRspH\x00\x12&\n\x08\x41\x63tivity\x18\xd6\x85\x01 \x01(\x0b\x32\x10.pb.Activity.RspH\x00\x12)\n\nLobbyWheel\x18\xd0\x8c\x01 \x01(\x0b\x32\x11.pb.LobbyWheelRspH\x00\x12*\n\nDailyBonus\x18\xd1\x8c\x01 \x01(\x0b\x32\x12.pb.DailyBonus.RspH\x00\x12\x1f\n\x03Vip\x18\xd2\x8c\x01 \x01(\x0b\x32\x0e.pb.Vip.VipRspH\x00\x12.\n\x0c\x44\x61ilyMission\x18\xd3\x8c\x01 \x01(\x0b\x32\x14.pb.DailyMission.RspH\x00\x12*\n\nLobbyPoker\x18\xd4\x8c\x01 \x01(\x0b\x32\x12.pb.LobbyPoker.RspH\x00\x12\x1e\n\x04Hero\x18\xd5\x8c\x01 \x01(\x0b\x32\x0c.pb.Hero.RspH\x00\x12\x1c\n\x02\x46\x42\x18\xd6\x8c\x01 \x01(\x0b\x32\x0c.pb.FB.FBRspH\x00\x12%\n\x05Piggy\x18\xd7\x8c\x01 \x01(\x0b\x32\x12.pb.Piggy.PiggyRspH\x00\x12$\n\x06\x46\x42\x42ind\x18\xd8\x8c\x01 \x01(\x0b\x32\x10.pb.FB.FBBindRspH\x00\x12<\n\x0eLobbLuckySeven\x18\xd9\x8c\x01 \x01(\x0b\x32 .pb.LobbLuckySeven.LuckySevenRspH\x00\x12(\n\tRoyalPass\x18\xda\x8c\x01 \x01(\x0b\x32\x11.pb.RoyalPass.RspH\x00\x12\x0c\n\x03SID\x18\xe9\x07 \x01(\r\x12\r\n\x04SSID\x18\xea\x07 \x01(\x03\x42\x05\n\x03one\"\xe9\x01\n\tRspPublic\x12&\n\x04Util\x18\xe8\x07 \x01(\x0b\x32\x15.pb.RspPublic.RspUtilH\x00\x1a\x44\n\x04Pong\x12\x15\n\rNanoTimestamp\x18\x01 \x01(\x03\x12\x11\n\tTimestamp\x18\x02 \x01(\x05\x12\x12\n\nNanoSecond\x18\x03 \x01(\x05\x1ag\n\x07RspUtil\x12#\n\x04Ping\x18\xe9\x07 \x01(\x0b\x32\x12.pb.RspPublic.PongH\x00\x12\x0f\n\x04\x45\x63ho\x18\xea\x07 \x01(\tH\x00\x12\x1f\n\x07Version\x18\xeb\x07 \x01(\x0b\x32\x0b.pb.VersionH\x00\x42\x05\n\x03oneB\x05\n\x03one\"\xde\x04\n\x08RspMulti\x12\x1f\n\tResponses\x18\x01 \x03(\x0b\x32\x0c.pb.Response\x12\x19\n\x06\x41wards\x18\x02 \x03(\x0b\x32\t.pb.Award\x12\x1e\n\x05State\x18\x03 \x01(\x0b\x32\x0f.pb.Player.Mode\x12$\n\x07\x41\x63\x63ount\x18\x04 \x01(\x0b\x32\x13.pb.Player.Currency\x12\"\n\x05Times\x18\x05 \x01(\x0b\x32\x13.pb.Player.TimesBag\x12$\n\x08\x42oosters\x18\x06 \x03(\x0b\x32\x12.pb.Player.Booster\x12-\n\x13HoneyDoUpdatedTasks\x18\x0b \x03(\x0b\x32\x10.pb.HoneyDo.Task\x12*\n\x0cQuestUpdated\x18\x0c \x03(\x0b\x32\x14.pb.Quests.QuestInfo\x12\x35\n\x0eMissionUpdated\x18\r \x03(\x0b\x32\x1d.pb.DailyMission.MissionTasks\x12\'\n\x0bHeroUpdated\x18\x0e \x01(\x0b\x32\x12.pb.Hero.HeroSkill\x12&\n\x0fHeroInfoUpdated\x18\x0f \x01(\x0b\x32\r.pb.Hero.Hero\x12(\n\x0elevelUpUpdated\x18\x10 \x01(\x0b\x32\x10.pb.LevelUpAward\x12\'\n\x0cpiggyUpdated\x18\x11 \x01(\x0b\x32\x11.pb.Piggy.Updated\x12/\n\x15\x41\x63tivityEventDropList\x18\x12 \x03(\x0b\x32\x10.pb.ActivityDrop\x12\x0f\n\x06\x45vents\x18\xc8\x01 \x03(\t\x12\x0e\n\x05Tasks\x18\xc9\x01 \x03(\t\"6\n\x08RspQuest\x12\x11\n\x06Newbie\x18\xa1\x1f \x01(\rH\x00\x12\x10\n\x05\x44\x61ily\x18\xa2\x1f \x01(\rH\x00\x42\x05\n\x03oneB\x06Z\x04.;pbb\x06proto3'
   ,
   dependencies=[authenticate__pb2.DESCRIPTOR,award__pb2.DESCRIPTOR,bonus__pb2.DESCRIPTOR,buff__pb2.DESCRIPTOR,friendship__pb2.DESCRIPTOR,login__reward__pb2.DESCRIPTOR,mailbox__pb2.DESCRIPTOR,mission__pb2.DESCRIPTOR,player__pb2.DESCRIPTOR,post__office__pb2.DESCRIPTOR,rsp__error__pb2.DESCRIPTOR,shop__pb2.DESCRIPTOR,slots__pb2.DESCRIPTOR,slots__jackpot__pb2.DESCRIPTOR,slots__theme__pb2.DESCRIPTOR,tourney__pb2.DESCRIPTOR,version__pb2.DESCRIPTOR,quest__pb2.DESCRIPTOR,lobbywheel__pb2.DESCRIPTOR,dailybonus__pb2.DESCRIPTOR,vip__pb2.DESCRIPTOR,dailymission__pb2.DESCRIPTOR,lobbyluckypoker__pb2.DESCRIPTOR,noviceguide__pb2.DESCRIPTOR,hero__pb2.DESCRIPTOR,levelup__pb2.DESCRIPTOR,fb__pb2.DESCRIPTOR,piggy__pb2.DESCRIPTOR,activity__pb2.DESCRIPTOR,lobbyluckyseven__pb2.DESCRIPTOR,royalpass__pb2.DESCRIPTOR,])
 
@@ -94,35 +94,42 @@ _BUNCHRESPONSE = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='ServerLocalTime', full_name='pb.BunchResponse.ServerLocalTime', index=4,
+      name='MidnightZero', full_name='pb.BunchResponse.MidnightZero', index=4,
+      number=1000, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='ServerLocalTime', full_name='pb.BunchResponse.ServerLocalTime', index=5,
       number=1001, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='PlayerLocalTime', full_name='pb.BunchResponse.PlayerLocalTime', index=5,
+      name='PlayerLocalTime', full_name='pb.BunchResponse.PlayerLocalTime', index=6,
       number=1002, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='ServerTime', full_name='pb.BunchResponse.ServerTime', index=6,
+      name='ServerTime', full_name='pb.BunchResponse.ServerTime', index=7,
       number=1003, type=3, cpp_type=2, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='PlayerTime', full_name='pb.BunchResponse.PlayerTime', index=7,
+      name='PlayerTime', full_name='pb.BunchResponse.PlayerTime', index=8,
       number=1004, type=3, cpp_type=2, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='ServerBirthTime', full_name='pb.BunchResponse.ServerBirthTime', index=8,
+      name='ServerBirthTime', full_name='pb.BunchResponse.ServerBirthTime', index=9,
       number=1005, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -146,7 +153,7 @@ _BUNCHRESPONSE = _descriptor.Descriptor(
     fields=[]),
   ],
   serialized_start=517,
-  serialized_end=783,
+  serialized_end=806,
 )
 
 
@@ -420,8 +427,8 @@ _RESPONSE = _descriptor.Descriptor(
       create_key=_descriptor._internal_create_key,
     fields=[]),
   ],
-  serialized_start=786,
-  serialized_end=2116,
+  serialized_start=809,
+  serialized_end=2139,
 )
 
 
@@ -466,8 +473,8 @@ _RSPPUBLIC_PONG = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2172,
-  serialized_end=2240,
+  serialized_start=2195,
+  serialized_end=2263,
 )
 
 _RSPPUBLIC_RSPUTIL = _descriptor.Descriptor(
@@ -516,8 +523,8 @@ _RSPPUBLIC_RSPUTIL = _descriptor.Descriptor(
       create_key=_descriptor._internal_create_key,
     fields=[]),
   ],
-  serialized_start=2242,
-  serialized_end=2345,
+  serialized_start=2265,
+  serialized_end=2368,
 )
 
 _RSPPUBLIC = _descriptor.Descriptor(
@@ -552,8 +559,8 @@ _RSPPUBLIC = _descriptor.Descriptor(
       create_key=_descriptor._internal_create_key,
     fields=[]),
   ],
-  serialized_start=2119,
-  serialized_end=2352,
+  serialized_start=2142,
+  serialized_end=2375,
 )
 
 
@@ -689,8 +696,8 @@ _RSPMULTI = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2355,
-  serialized_end=2961,
+  serialized_start=2378,
+  serialized_end=2984,
 )
 
 
@@ -733,8 +740,8 @@ _RSPQUEST = _descriptor.Descriptor(
       create_key=_descriptor._internal_create_key,
     fields=[]),
   ],
-  serialized_start=2963,
-  serialized_end=3017,
+  serialized_start=2986,
+  serialized_end=3040,
 )
 
 _BUNCHRESPONSE.fields_by_name['Error'].message_type = rsp__error__pb2._RSPERROR

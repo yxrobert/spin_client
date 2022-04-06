@@ -121,7 +121,7 @@ def make_activity_user_data_req(player_id, token, uid):
 def make_activity_play_req(player_id, token, uid):
     req, request = make_multi_req(player_id, token)
     request.Activity.Play.UID = uid
-    request.Activity.Play.InputX = 0
+    request.Activity.Play.Input.InputX = 0
     return req
 
 

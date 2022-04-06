@@ -12,6 +12,7 @@ from google.protobuf import symbol_database as _symbol_database
 _sym_db = _symbol_database.Default()
 
 
+import shop_pb2 as shop__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
@@ -20,8 +21,9 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'Z\004.;pb',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x10lobbywheel.proto\x12\x02pb\"\xe2\x01\n\nLobbyWheel\x12 \n\x05Wheel\x18\x01 \x01(\x0b\x32\x11.pb.LobbyWheelRsp\x1a\xb1\x01\n\x03Req\x12&\n\x04Info\x18\x01 \x01(\x0b\x32\x16.pb.LobbyWheelInfotReqH\x00\x12\'\n\x05Start\x18\x02 \x01(\x0b\x32\x16.pb.LobbyWheelStartReqH\x00\x12%\n\x04Spin\x18\x03 \x01(\x0b\x32\x15.pb.LobbyWheelSpinReqH\x00\x12+\n\x07\x43ollect\x18\x04 \x01(\x0b\x32\x18.pb.LobbyWheelCollectReqH\x00\x42\x05\n\x03one\"\x14\n\x12LobbyWheelInfotReq\"4\n\x12LobbyWheelStartReq\x12\x1e\n\x03SRC\x18\x01 \x01(\x0e\x32\x11.pb.LobbyWheelSRC\"\x1f\n\x11LobbyWheelSpinReq\x12\n\n\x02id\x18\x01 \x01(\t\"\"\n\x14LobbyWheelCollectReq\x12\n\n\x02id\x18\x01 \x01(\t\"\xd3\x01\n\rLobbyWheelRsp\x12\n\n\x02id\x18\x01 \x01(\t\x12!\n\x05grids\x18\x02 \x03(\x0b\x32\x12.pb.LobbyWheelGrid\x12\x0e\n\x06vipBuf\x18\x03 \x01(\x01\x12\x12\n\nboosterBuf\x18\x04 \x01(\r\x12\x1e\n\x03pay\x18\x05 \x01(\x0b\x32\x11.pb.LobbyWheelPay\x12\r\n\x05state\x18\x06 \x01(\r\x12\x13\n\x0bhandlerType\x18\x07 \x01(\x05\x12\x1e\n\x03SRC\x18\x08 \x01(\x0e\x32\x11.pb.LobbyWheelSRC\x12\x0b\n\x03Vip\x18\t \x01(\r\"T\n\x0eLobbyWheelGrid\x12\r\n\x05index\x18\x01 \x01(\r\x12\x10\n\x08\x62\x61seCoin\x18\x02 \x01(\x04\x12\x12\n\nisBackGrid\x18\x03 \x01(\x08\x12\r\n\x05isHit\x18\x04 \x01(\x08\"4\n\rLobbyWheelPay\x12\x10\n\x08payCount\x18\x01 \x01(\r\x12\x11\n\tproductId\x18\x02 \x01(\t*@\n\rLobbyWheelSRC\x12\r\n\tLOBBY_SRC\x10\x00\x12\x0c\n\x08MAIL_SRC\x10\x01\x12\x12\n\x0eROYAL_PASS_SRC\x10\x02*c\n\x15LobbyWheelHandlerType\x12\x10\n\x0cHANDLER_INFO\x10\x00\x12\x11\n\rHANDLER_START\x10\x01\x12\x10\n\x0cHANDLER_SPIN\x10\x02\x12\x13\n\x0fHANDLER_COLLECT\x10\x03\x42\x06Z\x04.;pbb\x06proto3'
-)
+  serialized_pb=b'\n\x10lobbywheel.proto\x12\x02pb\x1a\nshop.proto\"\xe2\x01\n\nLobbyWheel\x12 \n\x05Wheel\x18\x01 \x01(\x0b\x32\x11.pb.LobbyWheelRsp\x1a\xb1\x01\n\x03Req\x12&\n\x04Info\x18\x01 \x01(\x0b\x32\x16.pb.LobbyWheelInfotReqH\x00\x12\'\n\x05Start\x18\x02 \x01(\x0b\x32\x16.pb.LobbyWheelStartReqH\x00\x12%\n\x04Spin\x18\x03 \x01(\x0b\x32\x15.pb.LobbyWheelSpinReqH\x00\x12+\n\x07\x43ollect\x18\x04 \x01(\x0b\x32\x18.pb.LobbyWheelCollectReqH\x00\x42\x05\n\x03one\"\x14\n\x12LobbyWheelInfotReq\"4\n\x12LobbyWheelStartReq\x12\x1e\n\x03SRC\x18\x01 \x01(\x0e\x32\x11.pb.LobbyWheelSRC\"\x1f\n\x11LobbyWheelSpinReq\x12\n\n\x02id\x18\x01 \x01(\t\"\"\n\x14LobbyWheelCollectReq\x12\n\n\x02id\x18\x01 \x01(\t\"\xfa\x01\n\rLobbyWheelRsp\x12\n\n\x02id\x18\x01 \x01(\t\x12!\n\x05grids\x18\x02 \x03(\x0b\x32\x12.pb.LobbyWheelGrid\x12\x0e\n\x06vipBuf\x18\x03 \x01(\x01\x12\x12\n\nboosterBuf\x18\x04 \x01(\r\x12\x1e\n\x03pay\x18\x05 \x01(\x0b\x32\x11.pb.LobbyWheelPay\x12\r\n\x05state\x18\x06 \x01(\r\x12\x13\n\x0bhandlerType\x18\x07 \x01(\x05\x12\x1e\n\x03SRC\x18\x08 \x01(\x0e\x32\x11.pb.LobbyWheelSRC\x12\x0b\n\x03Vip\x18\t \x01(\r\x12%\n\tRoyalSeal\x18\n \x01(\x0b\x32\x12.pb.Shop.RoyalSeal\"T\n\x0eLobbyWheelGrid\x12\r\n\x05index\x18\x01 \x01(\r\x12\x10\n\x08\x62\x61seCoin\x18\x02 \x01(\x04\x12\x12\n\nisBackGrid\x18\x03 \x01(\x08\x12\r\n\x05isHit\x18\x04 \x01(\x08\"4\n\rLobbyWheelPay\x12\x10\n\x08payCount\x18\x01 \x01(\r\x12\x11\n\tproductId\x18\x02 \x01(\t*@\n\rLobbyWheelSRC\x12\r\n\tLOBBY_SRC\x10\x00\x12\x0c\n\x08MAIL_SRC\x10\x01\x12\x12\n\x0eROYAL_PASS_SRC\x10\x02*c\n\x15LobbyWheelHandlerType\x12\x10\n\x0cHANDLER_INFO\x10\x00\x12\x11\n\rHANDLER_START\x10\x01\x12\x10\n\x0cHANDLER_SPIN\x10\x02\x12\x13\n\x0fHANDLER_COLLECT\x10\x03\x42\x06Z\x04.;pbb\x06proto3'
+  ,
+  dependencies=[shop__pb2.DESCRIPTOR,])
 
 _LOBBYWHEELSRC = _descriptor.EnumDescriptor(
   name='LobbyWheelSRC',
@@ -48,8 +50,8 @@ _LOBBYWHEELSRC = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=752,
-  serialized_end=816,
+  serialized_start=803,
+  serialized_end=867,
 )
 _sym_db.RegisterEnumDescriptor(_LOBBYWHEELSRC)
 
@@ -84,8 +86,8 @@ _LOBBYWHEELHANDLERTYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=818,
-  serialized_end=917,
+  serialized_start=869,
+  serialized_end=968,
 )
 _sym_db.RegisterEnumDescriptor(_LOBBYWHEELHANDLERTYPE)
 
@@ -153,8 +155,8 @@ _LOBBYWHEEL_REQ = _descriptor.Descriptor(
       create_key=_descriptor._internal_create_key,
     fields=[]),
   ],
-  serialized_start=74,
-  serialized_end=251,
+  serialized_start=86,
+  serialized_end=263,
 )
 
 _LOBBYWHEEL = _descriptor.Descriptor(
@@ -184,8 +186,8 @@ _LOBBYWHEEL = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=25,
-  serialized_end=251,
+  serialized_start=37,
+  serialized_end=263,
 )
 
 
@@ -209,8 +211,8 @@ _LOBBYWHEELINFOTREQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=253,
-  serialized_end=273,
+  serialized_start=265,
+  serialized_end=285,
 )
 
 
@@ -241,8 +243,8 @@ _LOBBYWHEELSTARTREQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=275,
-  serialized_end=327,
+  serialized_start=287,
+  serialized_end=339,
 )
 
 
@@ -273,8 +275,8 @@ _LOBBYWHEELSPINREQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=329,
-  serialized_end=360,
+  serialized_start=341,
+  serialized_end=372,
 )
 
 
@@ -305,8 +307,8 @@ _LOBBYWHEELCOLLECTREQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=362,
-  serialized_end=396,
+  serialized_start=374,
+  serialized_end=408,
 )
 
 
@@ -381,6 +383,13 @@ _LOBBYWHEELRSP = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='RoyalSeal', full_name='pb.LobbyWheelRsp.RoyalSeal', index=9,
+      number=10, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -393,8 +402,8 @@ _LOBBYWHEELRSP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=399,
-  serialized_end=610,
+  serialized_start=411,
+  serialized_end=661,
 )
 
 
@@ -446,8 +455,8 @@ _LOBBYWHEELGRID = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=612,
-  serialized_end=696,
+  serialized_start=663,
+  serialized_end=747,
 )
 
 
@@ -485,8 +494,8 @@ _LOBBYWHEELPAY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=698,
-  serialized_end=750,
+  serialized_start=749,
+  serialized_end=801,
 )
 
 _LOBBYWHEEL_REQ.fields_by_name['Info'].message_type = _LOBBYWHEELINFOTREQ
@@ -511,6 +520,7 @@ _LOBBYWHEELSTARTREQ.fields_by_name['SRC'].enum_type = _LOBBYWHEELSRC
 _LOBBYWHEELRSP.fields_by_name['grids'].message_type = _LOBBYWHEELGRID
 _LOBBYWHEELRSP.fields_by_name['pay'].message_type = _LOBBYWHEELPAY
 _LOBBYWHEELRSP.fields_by_name['SRC'].enum_type = _LOBBYWHEELSRC
+_LOBBYWHEELRSP.fields_by_name['RoyalSeal'].message_type = shop__pb2._SHOP_ROYALSEAL
 DESCRIPTOR.message_types_by_name['LobbyWheel'] = _LOBBYWHEEL
 DESCRIPTOR.message_types_by_name['LobbyWheelInfotReq'] = _LOBBYWHEELINFOTREQ
 DESCRIPTOR.message_types_by_name['LobbyWheelStartReq'] = _LOBBYWHEELSTARTREQ

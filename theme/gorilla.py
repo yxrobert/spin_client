@@ -12,20 +12,25 @@ class GorillaRobot(SpinRobot):
         pass
 
     def play_status_callback(self, packet):
+        self.log_spin_wins(packet.Spin)
         pass
 
 
 def run(player):
     # player.select_bet(40000)
 
-    # player.send_cmd(cheat_12)
+    player.send_cmd(free)
     # player.spin_to_next_stage()
+    # player.spin()
+    # player.pick(0)
     # player.spin_to_base()
-    player.spin()
+    # player.spin()
     # player.pick(1)
     # player.send_cmd(grorilla_panelgroup)
     pass
 
+free = "gm:cmd:randpanels {*:4-13}_{-|:1}1_5_*_*_1_5_*_*_1_5_*_*_*_5_*_*_*_5_*_*"
+glcoin = "glcoin 99999"
 # grorilla_3sc = "panels 1_5_7_9_9_9_9_9_1_9_9_9_9_9_9_9_1_9_9_9"
 grorilla_panelgroup = "panelgroup 1_5_7_9_9_9_9_9_1_9_9_9_9_9_9_9_1_9_9_9|1_5_7_9_9_9_9_9_1_9_9_9_9_9_9_9_1_9_9_9"
 

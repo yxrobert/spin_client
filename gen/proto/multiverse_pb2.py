@@ -12,6 +12,8 @@ from google.protobuf import symbol_database as _symbol_database
 _sym_db = _symbol_database.Default()
 
 
+import activityevent_pb2 as activityevent__pb2
+import award_pb2 as award__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
@@ -20,8 +22,9 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'Z\004.;pb',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x10multiverse.proto\x12\x02pb\"\x07\n\x05Quest\"\xaf\x01\n\x0eMultiverseData\x12\r\n\x05\x45ntry\x18\x01 \x01(\x05\x12\r\n\x05Level\x18\x02 \x01(\x05\x12\x12\n\nChapterIdx\x18\x03 \x01(\x05\x12\x0e\n\x06MapIdx\x18\x04 \x01(\x05\x12\x0f\n\x07NodeIdx\x18\x05 \x01(\x05\x12,\n\nNodeStatus\x18\x06 \x01(\x0e\x32\x18.pb.MultiverseNodeStatus\x12\x1c\n\tQuestList\x18\x07 \x03(\x0b\x32\t.pb.Quest*C\n\x14MultiverseNodeStatus\x12\x0c\n\x08\x43hoosing\x10\x00\x12\r\n\tInHanding\x10\x01\x12\x0e\n\nInAwarding\x10\x02*;\n\x14MultiverseDifficulty\x12\n\n\x06Normal\x10\x00\x12\r\n\tNightmare\x10\x01\x12\x08\n\x04Hell\x10\x02\x42\x06Z\x04.;pbb\x06proto3'
-)
+  serialized_pb=b'\n\x10multiverse.proto\x12\x02pb\x1a\x13\x61\x63tivityevent.proto\x1a\x0b\x61ward.proto\"[\n\x0eMultiverseBuff\x12$\n\x04Type\x18\x01 \x01(\x0e\x32\x16.pb.MultiverseBuffType\x12\r\n\x05Value\x18\x02 \x01(\x05\x12\x14\n\x0c\x45ndTimeStamp\x18\x03 \x01(\x03\"\xad\x02\n\x0eMultiverseData\x12\r\n\x05\x45ntry\x18\x01 \x01(\x05\x12\r\n\x05Level\x18\x02 \x01(\x05\x12\x12\n\nChapterIdx\x18\x03 \x01(\x05\x12\x0f\n\x07NodeIdx\x18\x04 \x01(\x05\x12,\n\nNodeStatus\x18\x05 \x01(\x0e\x32\x18.pb.MultiverseNodeStatus\x12$\n\tQuestList\x18\x06 \x03(\x0b\x32\x11.pb.ActivityEvent\x12!\n\nNodeAwards\x18\x07 \x03(\x0b\x32\r.pb.AwardInfo\x12(\n\nReelReward\x18\x08 \x01(\x0b\x32\x14.pb.MultiverseReward\x12 \n\x04\x42uff\x18\t \x03(\x0b\x32\x12.pb.MultiverseBuff\x12\x15\n\rChapterThemes\x18\n \x03(\x05\"\xa4\x02\n\x10MultiverseReward\x12.\n\x08Jackpots\x18\x01 \x03(\x0b\x32\x1c.pb.MultiverseReward.Section\x12(\n\x05Reels\x18\x02 \x03(\x0b\x32\x19.pb.MultiverseReward.Reel\x1a\x41\n\x07Section\x12\'\n\x04Type\x18\x01 \x01(\x0e\x32\x19.pb.MultiverseReward.Type\x12\r\n\x05Value\x18\x02 \x01(\x05\x1a\x36\n\x04Reel\x12.\n\x08Sections\x18\x01 \x03(\x0b\x32\x1c.pb.MultiverseReward.Section\";\n\x04Type\x12\t\n\x05Minor\x10\x00\x12\t\n\x05Major\x10\x01\x12\t\n\x05Grand\x10\x02\x12\t\n\x05Money\x10\n\x12\x07\n\x03Key\x10\x0b*C\n\x14MultiverseNodeStatus\x12\x0c\n\x08\x43hoosing\x10\x00\x12\r\n\tInHanding\x10\x01\x12\x0e\n\nInAwarding\x10\x02*;\n\x14MultiverseDifficulty\x12\n\n\x06Normal\x10\x00\x12\r\n\tNightmare\x10\x01\x12\x08\n\x04Hell\x10\x02*&\n\x12MultiverseBuffType\x12\x10\n\x0cMBT_Progress\x10\x00\x42\x06Z\x04.;pbb\x06proto3'
+  ,
+  dependencies=[activityevent__pb2.DESCRIPTOR,award__pb2.DESCRIPTOR,])
 
 _MULTIVERSENODESTATUS = _descriptor.EnumDescriptor(
   name='MultiverseNodeStatus',
@@ -48,8 +51,8 @@ _MULTIVERSENODESTATUS = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=211,
-  serialized_end=278,
+  serialized_start=750,
+  serialized_end=817,
 )
 _sym_db.RegisterEnumDescriptor(_MULTIVERSENODESTATUS)
 
@@ -79,29 +82,112 @@ _MULTIVERSEDIFFICULTY = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=280,
-  serialized_end=339,
+  serialized_start=819,
+  serialized_end=878,
 )
 _sym_db.RegisterEnumDescriptor(_MULTIVERSEDIFFICULTY)
 
 MultiverseDifficulty = enum_type_wrapper.EnumTypeWrapper(_MULTIVERSEDIFFICULTY)
+_MULTIVERSEBUFFTYPE = _descriptor.EnumDescriptor(
+  name='MultiverseBuffType',
+  full_name='pb.MultiverseBuffType',
+  filename=None,
+  file=DESCRIPTOR,
+  create_key=_descriptor._internal_create_key,
+  values=[
+    _descriptor.EnumValueDescriptor(
+      name='MBT_Progress', index=0, number=0,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+  ],
+  containing_type=None,
+  serialized_options=None,
+  serialized_start=880,
+  serialized_end=918,
+)
+_sym_db.RegisterEnumDescriptor(_MULTIVERSEBUFFTYPE)
+
+MultiverseBuffType = enum_type_wrapper.EnumTypeWrapper(_MULTIVERSEBUFFTYPE)
 Choosing = 0
 InHanding = 1
 InAwarding = 2
 Normal = 0
 Nightmare = 1
 Hell = 2
+MBT_Progress = 0
 
 
+_MULTIVERSEREWARD_TYPE = _descriptor.EnumDescriptor(
+  name='Type',
+  full_name='pb.MultiverseReward.Type',
+  filename=None,
+  file=DESCRIPTOR,
+  create_key=_descriptor._internal_create_key,
+  values=[
+    _descriptor.EnumValueDescriptor(
+      name='Minor', index=0, number=0,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='Major', index=1, number=1,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='Grand', index=2, number=2,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='Money', index=3, number=10,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='Key', index=4, number=11,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+  ],
+  containing_type=None,
+  serialized_options=None,
+  serialized_start=689,
+  serialized_end=748,
+)
+_sym_db.RegisterEnumDescriptor(_MULTIVERSEREWARD_TYPE)
 
-_QUEST = _descriptor.Descriptor(
-  name='Quest',
-  full_name='pb.Quest',
+
+_MULTIVERSEBUFF = _descriptor.Descriptor(
+  name='MultiverseBuff',
+  full_name='pb.MultiverseBuff',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
+    _descriptor.FieldDescriptor(
+      name='Type', full_name='pb.MultiverseBuff.Type', index=0,
+      number=1, type=14, cpp_type=8, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='Value', full_name='pb.MultiverseBuff.Value', index=1,
+      number=2, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='EndTimeStamp', full_name='pb.MultiverseBuff.EndTimeStamp', index=2,
+      number=3, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -114,8 +200,8 @@ _QUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=24,
-  serialized_end=31,
+  serialized_start=58,
+  serialized_end=149,
 )
 
 
@@ -149,29 +235,50 @@ _MULTIVERSEDATA = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='MapIdx', full_name='pb.MultiverseData.MapIdx', index=3,
+      name='NodeIdx', full_name='pb.MultiverseData.NodeIdx', index=3,
       number=4, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='NodeIdx', full_name='pb.MultiverseData.NodeIdx', index=4,
-      number=5, type=5, cpp_type=1, label=1,
+      name='NodeStatus', full_name='pb.MultiverseData.NodeStatus', index=4,
+      number=5, type=14, cpp_type=8, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='NodeStatus', full_name='pb.MultiverseData.NodeStatus', index=5,
-      number=6, type=14, cpp_type=8, label=1,
-      has_default_value=False, default_value=0,
+      name='QuestList', full_name='pb.MultiverseData.QuestList', index=5,
+      number=6, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='QuestList', full_name='pb.MultiverseData.QuestList', index=6,
+      name='NodeAwards', full_name='pb.MultiverseData.NodeAwards', index=6,
       number=7, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='ReelReward', full_name='pb.MultiverseData.ReelReward', index=7,
+      number=8, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='Buff', full_name='pb.MultiverseData.Buff', index=8,
+      number=9, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='ChapterThemes', full_name='pb.MultiverseData.ChapterThemes', index=9,
+      number=10, type=5, cpp_type=1, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -188,24 +295,146 @@ _MULTIVERSEDATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=34,
-  serialized_end=209,
+  serialized_start=152,
+  serialized_end=453,
 )
 
+
+_MULTIVERSEREWARD_SECTION = _descriptor.Descriptor(
+  name='Section',
+  full_name='pb.MultiverseReward.Section',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='Type', full_name='pb.MultiverseReward.Section.Type', index=0,
+      number=1, type=14, cpp_type=8, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='Value', full_name='pb.MultiverseReward.Section.Value', index=1,
+      number=2, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=566,
+  serialized_end=631,
+)
+
+_MULTIVERSEREWARD_REEL = _descriptor.Descriptor(
+  name='Reel',
+  full_name='pb.MultiverseReward.Reel',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='Sections', full_name='pb.MultiverseReward.Reel.Sections', index=0,
+      number=1, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=633,
+  serialized_end=687,
+)
+
+_MULTIVERSEREWARD = _descriptor.Descriptor(
+  name='MultiverseReward',
+  full_name='pb.MultiverseReward',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='Jackpots', full_name='pb.MultiverseReward.Jackpots', index=0,
+      number=1, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='Reels', full_name='pb.MultiverseReward.Reels', index=1,
+      number=2, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[_MULTIVERSEREWARD_SECTION, _MULTIVERSEREWARD_REEL, ],
+  enum_types=[
+    _MULTIVERSEREWARD_TYPE,
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=456,
+  serialized_end=748,
+)
+
+_MULTIVERSEBUFF.fields_by_name['Type'].enum_type = _MULTIVERSEBUFFTYPE
 _MULTIVERSEDATA.fields_by_name['NodeStatus'].enum_type = _MULTIVERSENODESTATUS
-_MULTIVERSEDATA.fields_by_name['QuestList'].message_type = _QUEST
-DESCRIPTOR.message_types_by_name['Quest'] = _QUEST
+_MULTIVERSEDATA.fields_by_name['QuestList'].message_type = activityevent__pb2._ACTIVITYEVENT
+_MULTIVERSEDATA.fields_by_name['NodeAwards'].message_type = award__pb2._AWARDINFO
+_MULTIVERSEDATA.fields_by_name['ReelReward'].message_type = _MULTIVERSEREWARD
+_MULTIVERSEDATA.fields_by_name['Buff'].message_type = _MULTIVERSEBUFF
+_MULTIVERSEREWARD_SECTION.fields_by_name['Type'].enum_type = _MULTIVERSEREWARD_TYPE
+_MULTIVERSEREWARD_SECTION.containing_type = _MULTIVERSEREWARD
+_MULTIVERSEREWARD_REEL.fields_by_name['Sections'].message_type = _MULTIVERSEREWARD_SECTION
+_MULTIVERSEREWARD_REEL.containing_type = _MULTIVERSEREWARD
+_MULTIVERSEREWARD.fields_by_name['Jackpots'].message_type = _MULTIVERSEREWARD_SECTION
+_MULTIVERSEREWARD.fields_by_name['Reels'].message_type = _MULTIVERSEREWARD_REEL
+_MULTIVERSEREWARD_TYPE.containing_type = _MULTIVERSEREWARD
+DESCRIPTOR.message_types_by_name['MultiverseBuff'] = _MULTIVERSEBUFF
 DESCRIPTOR.message_types_by_name['MultiverseData'] = _MULTIVERSEDATA
+DESCRIPTOR.message_types_by_name['MultiverseReward'] = _MULTIVERSEREWARD
 DESCRIPTOR.enum_types_by_name['MultiverseNodeStatus'] = _MULTIVERSENODESTATUS
 DESCRIPTOR.enum_types_by_name['MultiverseDifficulty'] = _MULTIVERSEDIFFICULTY
+DESCRIPTOR.enum_types_by_name['MultiverseBuffType'] = _MULTIVERSEBUFFTYPE
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
-Quest = _reflection.GeneratedProtocolMessageType('Quest', (_message.Message,), {
-  'DESCRIPTOR' : _QUEST,
+MultiverseBuff = _reflection.GeneratedProtocolMessageType('MultiverseBuff', (_message.Message,), {
+  'DESCRIPTOR' : _MULTIVERSEBUFF,
   '__module__' : 'multiverse_pb2'
-  # @@protoc_insertion_point(class_scope:pb.Quest)
+  # @@protoc_insertion_point(class_scope:pb.MultiverseBuff)
   })
-_sym_db.RegisterMessage(Quest)
+_sym_db.RegisterMessage(MultiverseBuff)
 
 MultiverseData = _reflection.GeneratedProtocolMessageType('MultiverseData', (_message.Message,), {
   'DESCRIPTOR' : _MULTIVERSEDATA,
@@ -213,6 +442,29 @@ MultiverseData = _reflection.GeneratedProtocolMessageType('MultiverseData', (_me
   # @@protoc_insertion_point(class_scope:pb.MultiverseData)
   })
 _sym_db.RegisterMessage(MultiverseData)
+
+MultiverseReward = _reflection.GeneratedProtocolMessageType('MultiverseReward', (_message.Message,), {
+
+  'Section' : _reflection.GeneratedProtocolMessageType('Section', (_message.Message,), {
+    'DESCRIPTOR' : _MULTIVERSEREWARD_SECTION,
+    '__module__' : 'multiverse_pb2'
+    # @@protoc_insertion_point(class_scope:pb.MultiverseReward.Section)
+    })
+  ,
+
+  'Reel' : _reflection.GeneratedProtocolMessageType('Reel', (_message.Message,), {
+    'DESCRIPTOR' : _MULTIVERSEREWARD_REEL,
+    '__module__' : 'multiverse_pb2'
+    # @@protoc_insertion_point(class_scope:pb.MultiverseReward.Reel)
+    })
+  ,
+  'DESCRIPTOR' : _MULTIVERSEREWARD,
+  '__module__' : 'multiverse_pb2'
+  # @@protoc_insertion_point(class_scope:pb.MultiverseReward)
+  })
+_sym_db.RegisterMessage(MultiverseReward)
+_sym_db.RegisterMessage(MultiverseReward.Section)
+_sym_db.RegisterMessage(MultiverseReward.Reel)
 
 
 DESCRIPTOR._options = None

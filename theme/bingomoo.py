@@ -40,14 +40,15 @@ def log_bingomoo(packet):
     log_packet.Spin.bingoMoo.AverageBets = packet.Spin.bingoMoo.AverageBets
     log_packet.Spin.bingoMoo.TriggerBet = packet.Spin.bingoMoo.TriggerBet
 
-    for i in packet.Spin.bingoMoo.BingoPanelArr:
-        i.ClearField("BingoPanel")
-        log_packet.Spin.bingoMoo.BingoPanelArr.append(i)
+    # for i in packet.Spin.bingoMoo.BingoPanelArr:
+    #     i.ClearField("BingoPanel")
+    #     log_packet.Spin.bingoMoo.BingoPanelArr.append(i)
 
     return log_packet
 
 
 bingomoo_free = "0_0|2_3_15"
+bingomoo_free_cmd = "gm:0_0|2_3_15"
 bingomoo_mega = "eval FeatureProgress_11"
 bingomoo_supper = "eval FeatureProgress_17"
 
@@ -60,14 +61,16 @@ def run_mege(player):
 
 
     # gm
-    player.select_bet(20000)
-    player.spin_to_base()
-    player.spin()
-    player.send_gm(bingomoo_free)
-    player.send_cmd(bingomoo_mega)
-
-    # player.spin()
+    # player.select_bet(20000)
     # player.spin_to_base()
+    # player.spin()
+
+    # player.send_cmd(bingomoo_mega)
+    # player.send_cmd(bingomoo_supper)
+    player.send_gm(bingomoo_free)
+    # player.spin()
+
+    player.spin_to_base()
     pass
 
 def run(player):

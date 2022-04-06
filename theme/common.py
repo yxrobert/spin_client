@@ -32,11 +32,13 @@ def default_theme_callback(packet):
     pass
 
 def run(player):
-    # player.req_activity_list()
-    # player.req_activity_user_data(3)
+    player.req_activity_list()
+    player.req_activity_user_data(5)
     # player.req_activity_user_data(1)
-    player.send_cmd(dice_cmd)
-    player.req_activity_play(1)
+    # player.send_cmd(dice_cmd)
+    player.req_activity_play(5)
+    # player.send_cmd(journey)
+
 
     # player.select_bet(40000)
 
@@ -47,4 +49,5 @@ def run(player):
     # player.pick(1)
     pass
 
+journey = "journey 1,1"
 dice_cmd = "add dice 999999"
