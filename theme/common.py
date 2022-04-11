@@ -11,7 +11,7 @@ add_money = "add coin 9999999"
 
 class DefaultRobot(SpinRobot):
     def __init__(self, name, theme_id):
-        SpinRobot.__init__(self, name, theme_id)
+        SpinRobot.__init__(self, name, 10040)
 
     def theme_status_callback(self, packet):
         pass
@@ -32,11 +32,19 @@ def default_theme_callback(packet):
     pass
 
 def run(player):
-    player.req_activity_list()
-    player.req_activity_user_data(5)
-    # player.req_activity_user_data(1)
+    # player.send_cmd(add_money)
+    player.send_cmd(coin_cmd)
+    player.send_cmd(gmnow)
+    # player.req_activity_list()
+
+    # player.req_activity_user_data(3)
+    # player.req_activity_user_data(4)
+    # player.req_activity_user_data(5)
+    # player.req_activity_user_data(6)
+    player.req_activity_user_data(1)
     # player.send_cmd(dice_cmd)
-    player.req_activity_play(5)
+    # player.send_cmd(journey)
+    player.req_activity_play(1)
     # player.send_cmd(journey)
 
 
@@ -49,5 +57,9 @@ def run(player):
     # player.pick(1)
     pass
 
-journey = "journey 1,1"
+gmnow = "now"
+journey = "journey 0,100"
 dice_cmd = "add dice 999999"
+coin_cmd = "add coin 999999"
+dice_cmd = "add dice 999999"
+mock_time="st:2022-04-09 14:02:00"

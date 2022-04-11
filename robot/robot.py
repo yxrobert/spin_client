@@ -92,8 +92,9 @@ class RobotBase:
 
     def on_response(self, packet):
         if packet.Error != None:
-            self.log(packet.Error)
+            self.log("--------Got Error--------[" + str(packet.Error) + "]")
             self.process_err(packet.Error)
+            
 
         if packet.HasField("Login"):
             self.on_login(packet)

@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'Z\004.;pb',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x0b\x62ingo.proto\x12\x02pb\x1a\x0b\x61ward.proto\"\xf3\x04\n\x05\x42ingo\x1a\xce\x01\n\x04\x44\x61ta\x12\x11\n\tBingoBall\x18\x01 \x01(\x05\x12\x10\n\x08StageIdx\x18\x02 \x01(\x05\x12\x10\n\x08\x42oardIdx\x18\x03 \x01(\x05\x12\x10\n\x08Progress\x18\x04 \x01(\x05\x12!\n\x08\x43urBoard\x18\x05 \x01(\x0b\x32\x0f.pb.Bingo.Board\x12)\n\x0bStageReward\x18\x06 \x03(\x0b\x32\x14.pb.Bingo.StageAward\x12/\n\x0eProgressReward\x18\x07 \x03(\x0b\x32\x17.pb.Bingo.ProgressAward\x1a\x66\n\x05\x42oard\x12\x1f\n\x07\x43urCard\x18\x01 \x01(\x0b\x32\x0e.pb.Bingo.Card\x12\'\n\x0cPopBallQueue\x18\x02 \x03(\x0b\x32\x11.pb.Bingo.PopBall\x12\x13\n\x0bLeftBallNum\x18\x03 \x01(\x05\x1a\x44\n\x07PopBall\x12\r\n\x05Value\x18\x01 \x01(\x05\x12\x13\n\x0b\x41\x64\x64Progress\x18\x02 \x01(\x05\x12\x15\n\rAfterProgress\x18\x03 \x01(\x05\x1a\x8d\x01\n\x04\x43\x61rd\x12 \n\x04Rows\x18\x01 \x03(\x0b\x32\x12.pb.Bingo.Card.Row\x1a\x63\n\x03Row\x12\r\n\x05Items\x18\x01 \x03(\x05\x1aM\n\x04Item\x12\r\n\x05Value\x18\x01 \x01(\x05\x12\x11\n\tIsPainted\x18\x02 \x01(\x08\x12\x11\n\tHasReward\x18\x03 \x01(\x08\x12\x10\n\x08IsPicked\x18\x04 \x01(\x08\x1a+\n\nStageAward\x12\x1d\n\x06\x41wards\x18\x01 \x03(\x0b\x32\r.pb.AwardInfo\x1a.\n\rProgressAward\x12\x1d\n\x06\x41wards\x18\x01 \x03(\x0b\x32\r.pb.AwardInfoB\x06Z\x04.;pbb\x06proto3'
+  serialized_pb=b'\n\x0b\x62ingo.proto\x12\x02pb\x1a\x0b\x61ward.proto\"\xb7\x05\n\x05\x42ingo\x1a\xc9\x01\n\x04\x44\x61ta\x12\x11\n\tBingoBall\x18\x01 \x01(\x05\x12\x10\n\x08StageIdx\x18\x02 \x01(\x05\x12\x10\n\x08\x42oardIdx\x18\x03 \x01(\x05\x12\x10\n\x08Progress\x18\x04 \x01(\x05\x12!\n\x08\x43urBoard\x18\x05 \x01(\x0b\x32\x0f.pb.Bingo.Board\x12)\n\x0bStageReward\x18\x06 \x03(\x0b\x32\x14.pb.Bingo.StageAward\x12*\n\x0eProgressReward\x18\x07 \x03(\x0b\x32\x12.pb.Bingo.Progress\x1a\x66\n\x05\x42oard\x12\x1f\n\x07\x43urCard\x18\x01 \x01(\x0b\x32\x0e.pb.Bingo.Card\x12\'\n\x0cPopBallQueue\x18\x02 \x03(\x0b\x32\x11.pb.Bingo.PopBall\x12\x13\n\x0bLeftBallNum\x18\x03 \x01(\x05\x1aj\n\x07PopBall\x12\r\n\x05Value\x18\x01 \x01(\x05\x12\x13\n\x0b\x41\x64\x64Progress\x18\x02 \x01(\x05\x12\x15\n\rAfterProgress\x18\x03 \x01(\x05\x12\x10\n\x08IsHitBox\x18\x04 \x01(\x08\x12\x12\n\nIsCardDone\x18\x05 \x01(\x08\x1a\xa6\x01\n\x04\x43\x61rd\x12 \n\x04Rows\x18\x01 \x03(\x0b\x32\x12.pb.Bingo.Card.Row\x1a|\n\x03Row\x12&\n\x05Items\x18\x01 \x03(\x0b\x32\x17.pb.Bingo.Card.Row.Item\x1aM\n\x04Item\x12\r\n\x05Value\x18\x01 \x01(\x05\x12\x11\n\tIsPainted\x18\x02 \x01(\x08\x12\x11\n\tHasReward\x18\x03 \x01(\x08\x12\x10\n\x08IsPicked\x18\x04 \x01(\x08\x1a+\n\nStageAward\x12\x1d\n\x06\x41wards\x18\x01 \x03(\x0b\x32\r.pb.AwardInfo\x1a\x38\n\x08Progress\x12\r\n\x05Value\x18\x01 \x01(\x05\x12\x1d\n\x06\x41wards\x18\x02 \x03(\x0b\x32\r.pb.AwardInfoB\x06Z\x04.;pbb\x06proto3'
   ,
   dependencies=[award__pb2.DESCRIPTOR,])
 
@@ -97,7 +97,7 @@ _BINGO_DATA = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=43,
-  serialized_end=249,
+  serialized_end=244,
 )
 
 _BINGO_BOARD = _descriptor.Descriptor(
@@ -141,8 +141,8 @@ _BINGO_BOARD = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=251,
-  serialized_end=353,
+  serialized_start=246,
+  serialized_end=348,
 )
 
 _BINGO_POPBALL = _descriptor.Descriptor(
@@ -174,6 +174,20 @@ _BINGO_POPBALL = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='IsHitBox', full_name='pb.Bingo.PopBall.IsHitBox', index=3,
+      number=4, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='IsCardDone', full_name='pb.Bingo.PopBall.IsCardDone', index=4,
+      number=5, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -186,8 +200,8 @@ _BINGO_POPBALL = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=355,
-  serialized_end=423,
+  serialized_start=350,
+  serialized_end=456,
 )
 
 _BINGO_CARD_ROW_ITEM = _descriptor.Descriptor(
@@ -238,8 +252,8 @@ _BINGO_CARD_ROW_ITEM = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=490,
-  serialized_end=567,
+  serialized_start=548,
+  serialized_end=625,
 )
 
 _BINGO_CARD_ROW = _descriptor.Descriptor(
@@ -252,7 +266,7 @@ _BINGO_CARD_ROW = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='Items', full_name='pb.Bingo.Card.Row.Items', index=0,
-      number=1, type=5, cpp_type=1, label=3,
+      number=1, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -269,8 +283,8 @@ _BINGO_CARD_ROW = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=468,
-  serialized_end=567,
+  serialized_start=501,
+  serialized_end=625,
 )
 
 _BINGO_CARD = _descriptor.Descriptor(
@@ -300,8 +314,8 @@ _BINGO_CARD = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=426,
-  serialized_end=567,
+  serialized_start=459,
+  serialized_end=625,
 )
 
 _BINGO_STAGEAWARD = _descriptor.Descriptor(
@@ -331,21 +345,28 @@ _BINGO_STAGEAWARD = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=569,
-  serialized_end=612,
+  serialized_start=627,
+  serialized_end=670,
 )
 
-_BINGO_PROGRESSAWARD = _descriptor.Descriptor(
-  name='ProgressAward',
-  full_name='pb.Bingo.ProgressAward',
+_BINGO_PROGRESS = _descriptor.Descriptor(
+  name='Progress',
+  full_name='pb.Bingo.Progress',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='Awards', full_name='pb.Bingo.ProgressAward.Awards', index=0,
-      number=1, type=11, cpp_type=10, label=3,
+      name='Value', full_name='pb.Bingo.Progress.Value', index=0,
+      number=1, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='Awards', full_name='pb.Bingo.Progress.Awards', index=1,
+      number=2, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -362,8 +383,8 @@ _BINGO_PROGRESSAWARD = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=614,
-  serialized_end=660,
+  serialized_start=672,
+  serialized_end=728,
 )
 
 _BINGO = _descriptor.Descriptor(
@@ -377,7 +398,7 @@ _BINGO = _descriptor.Descriptor(
   ],
   extensions=[
   ],
-  nested_types=[_BINGO_DATA, _BINGO_BOARD, _BINGO_POPBALL, _BINGO_CARD, _BINGO_STAGEAWARD, _BINGO_PROGRESSAWARD, ],
+  nested_types=[_BINGO_DATA, _BINGO_BOARD, _BINGO_POPBALL, _BINGO_CARD, _BINGO_STAGEAWARD, _BINGO_PROGRESS, ],
   enum_types=[
   ],
   serialized_options=None,
@@ -387,25 +408,26 @@ _BINGO = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=33,
-  serialized_end=660,
+  serialized_end=728,
 )
 
 _BINGO_DATA.fields_by_name['CurBoard'].message_type = _BINGO_BOARD
 _BINGO_DATA.fields_by_name['StageReward'].message_type = _BINGO_STAGEAWARD
-_BINGO_DATA.fields_by_name['ProgressReward'].message_type = _BINGO_PROGRESSAWARD
+_BINGO_DATA.fields_by_name['ProgressReward'].message_type = _BINGO_PROGRESS
 _BINGO_DATA.containing_type = _BINGO
 _BINGO_BOARD.fields_by_name['CurCard'].message_type = _BINGO_CARD
 _BINGO_BOARD.fields_by_name['PopBallQueue'].message_type = _BINGO_POPBALL
 _BINGO_BOARD.containing_type = _BINGO
 _BINGO_POPBALL.containing_type = _BINGO
 _BINGO_CARD_ROW_ITEM.containing_type = _BINGO_CARD_ROW
+_BINGO_CARD_ROW.fields_by_name['Items'].message_type = _BINGO_CARD_ROW_ITEM
 _BINGO_CARD_ROW.containing_type = _BINGO_CARD
 _BINGO_CARD.fields_by_name['Rows'].message_type = _BINGO_CARD_ROW
 _BINGO_CARD.containing_type = _BINGO
 _BINGO_STAGEAWARD.fields_by_name['Awards'].message_type = award__pb2._AWARDINFO
 _BINGO_STAGEAWARD.containing_type = _BINGO
-_BINGO_PROGRESSAWARD.fields_by_name['Awards'].message_type = award__pb2._AWARDINFO
-_BINGO_PROGRESSAWARD.containing_type = _BINGO
+_BINGO_PROGRESS.fields_by_name['Awards'].message_type = award__pb2._AWARDINFO
+_BINGO_PROGRESS.containing_type = _BINGO
 DESCRIPTOR.message_types_by_name['Bingo'] = _BINGO
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
@@ -460,10 +482,10 @@ Bingo = _reflection.GeneratedProtocolMessageType('Bingo', (_message.Message,), {
     })
   ,
 
-  'ProgressAward' : _reflection.GeneratedProtocolMessageType('ProgressAward', (_message.Message,), {
-    'DESCRIPTOR' : _BINGO_PROGRESSAWARD,
+  'Progress' : _reflection.GeneratedProtocolMessageType('Progress', (_message.Message,), {
+    'DESCRIPTOR' : _BINGO_PROGRESS,
     '__module__' : 'bingo_pb2'
-    # @@protoc_insertion_point(class_scope:pb.Bingo.ProgressAward)
+    # @@protoc_insertion_point(class_scope:pb.Bingo.Progress)
     })
   ,
   'DESCRIPTOR' : _BINGO,
@@ -478,7 +500,7 @@ _sym_db.RegisterMessage(Bingo.Card)
 _sym_db.RegisterMessage(Bingo.Card.Row)
 _sym_db.RegisterMessage(Bingo.Card.Row.Item)
 _sym_db.RegisterMessage(Bingo.StageAward)
-_sym_db.RegisterMessage(Bingo.ProgressAward)
+_sym_db.RegisterMessage(Bingo.Progress)
 
 
 DESCRIPTOR._options = None

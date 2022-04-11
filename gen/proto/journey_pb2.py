@@ -21,7 +21,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'Z\004.;pb',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\rjourney.proto\x12\x02pb\x1a\x0b\x61ward.proto\"?\n\x0bJourneyBuff\x12!\n\x04Type\x18\x01 \x01(\x0e\x32\x13.pb.JourneyBuffType\x12\r\n\x05Value\x18\x02 \x01(\x05\"*\n\tPathAward\x12\x1d\n\x06\x41wards\x18\x01 \x03(\x0b\x32\r.pb.AwardInfo\"\xce\x01\n\x0bJourneyData\x12\x0f\n\x07\x44iceNum\x18\x01 \x01(\x05\x12\x10\n\x08Progress\x18\x02 \x01(\x05\x12\x0f\n\x07PathIdx\x18\x03 \x01(\x05\x12\x10\n\x08Position\x18\x04 \x01(\x05\x12\x10\n\x08LastRoll\x18\x05 \x01(\x05\x12\x13\n\x0bLastPathIdx\x18\x06 \x01(\x05\x12\x14\n\x0cLastPosition\x18\x07 \x01(\x05\x12\x1d\n\x04\x42uff\x18\x08 \x03(\x0b\x32\x0f.pb.JourneyBuff\x12\x1d\n\x06\x41wards\x18\t \x03(\x0b\x32\r.pb.PathAward*I\n\x10JourneyPointType\x12\x0b\n\x07JPEmpty\x10\x00\x12\n\n\x06JPCoin\x10\x01\x12\x0e\n\nJPTreasure\x10\x02\x12\x0c\n\x08JPPortal\x10\x03*!\n\x0fJourneyBuffType\x12\x0e\n\nPathReward\x10\x00*O\n\rJourneyReward\x12\n\n\x06JRCoin\x10\x00\x12\x0e\n\nJRTreasure\x10\x01\x12\x0e\n\nJRPathCoin\x10\x02\x12\x12\n\x0eJRPathTreasure\x10\x03\x42\x06Z\x04.;pbb\x06proto3'
+  serialized_pb=b'\n\rjourney.proto\x12\x02pb\x1a\x0b\x61ward.proto\"?\n\x0bJourneyBuff\x12!\n\x04Type\x18\x01 \x01(\x0e\x32\x13.pb.JourneyBuffType\x12\r\n\x05Value\x18\x02 \x01(\x05\"*\n\tPathAward\x12\x1d\n\x06\x41wards\x18\x01 \x03(\x0b\x32\r.pb.AwardInfo\"\xe1\x01\n\x0bJourneyData\x12\x0f\n\x07\x44iceNum\x18\x01 \x01(\x05\x12\x10\n\x08Progress\x18\x02 \x01(\x05\x12\x0f\n\x07PathIdx\x18\x03 \x01(\x05\x12\x10\n\x08Position\x18\x04 \x01(\x05\x12\x10\n\x08LastRoll\x18\x05 \x01(\x05\x12\x13\n\x0bLastPathIdx\x18\x06 \x01(\x05\x12\x14\n\x0cLastPosition\x18\x07 \x01(\x05\x12\x1d\n\x04\x42uff\x18\x08 \x03(\x0b\x32\x0f.pb.JourneyBuff\x12\x1d\n\x06\x41wards\x18\t \x03(\x0b\x32\r.pb.PathAward\x12\x11\n\tIsAddDice\x18\n \x01(\x08*I\n\x10JourneyPointType\x12\x0b\n\x07JPEmpty\x10\x00\x12\n\n\x06JPCoin\x10\x01\x12\x0e\n\nJPTreasure\x10\x02\x12\x0c\n\x08JPPortal\x10\x03*!\n\x0fJourneyBuffType\x12\x0e\n\nPathReward\x10\x00*O\n\rJourneyReward\x12\n\n\x06JRCoin\x10\x00\x12\x0e\n\nJRTreasure\x10\x01\x12\x0e\n\nJRPathCoin\x10\x02\x12\x12\n\x0eJRPathTreasure\x10\x03\x42\x06Z\x04.;pbb\x06proto3'
   ,
   dependencies=[award__pb2.DESCRIPTOR,])
 
@@ -55,8 +55,8 @@ _JOURNEYPOINTTYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=352,
-  serialized_end=425,
+  serialized_start=371,
+  serialized_end=444,
 )
 _sym_db.RegisterEnumDescriptor(_JOURNEYPOINTTYPE)
 
@@ -76,8 +76,8 @@ _JOURNEYBUFFTYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=427,
-  serialized_end=460,
+  serialized_start=446,
+  serialized_end=479,
 )
 _sym_db.RegisterEnumDescriptor(_JOURNEYBUFFTYPE)
 
@@ -112,8 +112,8 @@ _JOURNEYREWARD = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=462,
-  serialized_end=541,
+  serialized_start=481,
+  serialized_end=560,
 )
 _sym_db.RegisterEnumDescriptor(_JOURNEYREWARD)
 
@@ -272,6 +272,13 @@ _JOURNEYDATA = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='IsAddDice', full_name='pb.JourneyData.IsAddDice', index=9,
+      number=10, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -285,7 +292,7 @@ _JOURNEYDATA = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=144,
-  serialized_end=350,
+  serialized_end=369,
 )
 
 _JOURNEYBUFF.fields_by_name['Type'].enum_type = _JOURNEYBUFFTYPE
