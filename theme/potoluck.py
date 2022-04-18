@@ -26,13 +26,19 @@ def run(player):
     # player.send_cmd(cheat_6)
     # player.send_cmd(test_gm)
 
-    # player.send_cmd(cheat_56)
+    # player.send_cmd(cheat_free)
+    player.send_cmd(p_cmd)
     player.spin()
     # player.spin_to_base()
 
     # player.pick(1)
     # player.send_cmd(demon_panelgroup)
     pass
+
+
+cheat_free = "math:55"
+p_cmd = "panel 11,11,1,1,1,12,12,12,12,12,12,12,12,12,12,2,2,2,2,2,3,3,3,3,3"
+
 
 glcoin = "glcoin 99999"
 free_cmd = "panel 1,1,2,8,0,0,0,0,0,0,0,0,1,1,1,1,9,9,9,4"

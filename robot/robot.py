@@ -92,10 +92,9 @@ class RobotBase:
 
     def on_response(self, packet):
         if packet.Error != None:
-            self.log("--------Got Error--------[" + str(packet.Error) + "]")
+            # self.log("--------Got Error--------[" + str(packet.Error) + "]")
             self.process_err(packet.Error)
             
-
         if packet.HasField("Login"):
             self.on_login(packet)
             return
@@ -109,6 +108,9 @@ class RobotBase:
                 self.on_activity(r.Activity)
                 self.log(packet.Multi.Awards)
                 self.log(packet.Multi.ActivityEventDropList)
+        
+        self.log("Awards", packet.Multi.Awards)
+
     
     def process_err(self, err):
         if str(err).find("token-match") > 0 or str(err).find("bad-auth") > 0:

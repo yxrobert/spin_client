@@ -11,6 +11,7 @@ class Sender:
     server_addr = "127.0.0.1:9000"
     server_gateway_url = "/gateway"
     server_debug_url = "/debug"
+    server_time_fake2 = "/timeFake2"
     header = {'user-agent':'BestHTTP/2 v2.5.2'}
     interval = 0.2
 
@@ -48,6 +49,11 @@ class Sender:
         rsp = make_multi_rsp(data)
         return rsp
 
+    @classmethod
+    def send_timefake(cls, data):
+        conn = httplib.HTTPConnection(cls.server_addr)
+        conn.request('POST', cls.server_time_fake2, data, cls.header)
+        return conn.getresponse()
 
 def main():
     pass

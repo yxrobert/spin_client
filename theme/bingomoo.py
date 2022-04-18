@@ -22,8 +22,10 @@ class BingoMooRobot(SpinRobot):
         # log_packet.bingoMoo.Data.ClearField("FeatureBingoPanel")
         # log_packet.bingoMoo.Data.ClearField("BingoPanelArr")
         # print(packet.LastResponses)
-        self.log(msg.log_theme_lastrsp(packet))
-        self.log(log_packet)
+
+        # self.log(msg.log_theme_lastrsp(packet))
+        # self.log(log_packet)
+
         # self.log(log_bingomoo(packet))
 
     def play_status_callback(self, packet):
@@ -52,10 +54,13 @@ bingomoo_free_cmd = "gm:0_0|2_3_15"
 bingomoo_mega = "eval FeatureProgress_11"
 bingomoo_supper = "eval FeatureProgress_17"
 
+chain = "chain"
+
 def run_mege(player):
+    # player.send_cmd(chain)
     # average bet
     # player.select_bet(200000)
-    # player.spin()
+    player.spin()
     # player.select_bet(20000)
     # player.spin_times(1)
 
@@ -67,10 +72,11 @@ def run_mege(player):
 
     # player.send_cmd(bingomoo_mega)
     # player.send_cmd(bingomoo_supper)
-    player.send_gm(bingomoo_free)
+    # player.send_gm(bingomoo_free)
     # player.spin()
+    # player.spin_to_next_stage()
 
-    player.spin_to_base()
+    # player.spin_to_base()
     pass
 
 def run(player):
