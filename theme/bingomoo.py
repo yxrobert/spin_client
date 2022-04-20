@@ -82,8 +82,8 @@ def run_mege(player):
 def run(player):
     player.select_bet(20000)
     # player.spin()
-    # player.spin_to_next_stage()
-    player.spin_to_base()
+    player.spin_to_next_stage()
+    # player.spin_to_base()
 
     # player.send_gm(bingomoo_free)
     # player.send_cmd(bingomoo_supper)
