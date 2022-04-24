@@ -46,19 +46,19 @@ def fakeTIme():
     Sender.send_timefake("11111")
 
 def run(player):
-    player.send_cmd(add_money)
-    player.send_cmd(free_me)
+    # player.send_cmd(add_money)
+    # player.send_cmd(free_me)
     
     # player.send_cmd(coin_cmd)
     # player.send_cmd(level_cmd)
-    player.send_cmd(dice_cmd)
+    # player.send_cmd(dice_cmd)
     # player.send_cmd(bingoball_cmd)
     # player.send_cmd(gmnow)
     player.req_activity_list()
 
-    act_id = 1
+    act_id = 17
     # player.req_activity_user_data(act_id)
-    player.req_activity_play(act_id)
+    # player.req_activity_play(act_id)
 
     # player.send_cmd(dice_cmd)
     # player.send_cmd(journey)

@@ -106,9 +106,10 @@ class RobotBase:
                 self.on_play(r.Play)
             elif r.HasField("Activity"):
                 self.on_activity(r.Activity)
+                pass
         
         self.log("Awards", packet.Multi.Awards)
-        self.log(packet.Multi.ActivityEventDropList)
+        self.log("ActivityEventDropList", packet.Multi.ActivityEventDropList)
 
     
     def process_err(self, err):
