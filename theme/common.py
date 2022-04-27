@@ -54,11 +54,13 @@ def run(player):
     # player.send_cmd(dice_cmd)
     # player.send_cmd(bingoball_cmd)
     # player.send_cmd(gmnow)
-    player.req_activity_list()
+    # player.send_cmd(journey_roll)
+    
+    # player.req_activity_list()
 
-    act_id = 17
+    act_id = 1
     # player.req_activity_user_data(act_id)
-    # player.req_activity_play(act_id)
+    player.req_activity_play(act_id)
 
     # player.send_cmd(dice_cmd)
     # player.send_cmd(journey)
@@ -77,6 +79,7 @@ def run(player):
 free_me = "freeme"
 gmnow = "now"
 journey = "journey 0,100"
+journey_roll = "jroll 50"
 dice_cmd = "add dice 999999"
 level_cmd = "add level 100"
 coin_cmd = "add coin 999999"

@@ -19,7 +19,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'Z\004.;pb',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x13slots_jackpot.proto\x12\x02pb\"u\n\x07Jackpot\x12\x0b\n\x03\x42\x65t\x18\x01 \x01(\x04\x12\r\n\x05Level\x18\x02 \x01(\x05\x12\x0f\n\x07Startup\x18\x03 \x01(\x04\x12\x13\n\x0bProgressive\x18\x04 \x01(\x04\x12\r\n\x05Start\x18\x05 \x01(\x03\x12\x0b\n\x03\x45nd\x18\x06 \x01(\x03\x12\x0c\n\x04\x44\x65sc\x18\x07 \x01(\t\"u\n\x0eJackpotSyncing\x1a\'\n\x07Request\x12\x0f\n\x07ThemeID\x18\x01 \x01(\x05\x12\x0b\n\x03\x42\x65t\x18\x02 \x01(\x04\x1a:\n\x08Response\x12\x0f\n\x07ThemeID\x18\x01 \x01(\x05\x12\x1d\n\x08Jackpots\x18\x65 \x03(\x0b\x32\x0b.pb.Jackpot\"-\n\x0cJPVisionData\x12\x0b\n\x03\x42\x65t\x18\x01 \x01(\x04\x12\x10\n\x08JPLevels\x18\x02 \x03(\x05\x42\x06Z\x04.;pbb\x06proto3'
+  serialized_pb=b'\n\x13slots_jackpot.proto\x12\x02pb\"v\n\x07Jackpot\x12\r\n\x05Level\x18\x02 \x01(\x05\x12\x0f\n\x07Startup\x18\x03 \x01(\x04\x12\x13\n\x0bProgressive\x18\x04 \x01(\x04\x12\r\n\x05Start\x18\x05 \x01(\x03\x12\x0b\n\x03\x45nd\x18\x06 \x01(\x03\x12\x0c\n\x04\x44\x65sc\x18\x07 \x01(\t\x12\x0c\n\x04Rate\x18\x08 \x01(\x04\"u\n\x0eJackpotSyncing\x1a\'\n\x07Request\x12\x0f\n\x07ThemeID\x18\x01 \x01(\x05\x12\x0b\n\x03Now\x18\x02 \x01(\x03\x1a:\n\x08Response\x12\x0f\n\x07ThemeID\x18\x01 \x01(\x05\x12\x1d\n\x08Jackpots\x18\x65 \x03(\x0b\x32\x0b.pb.JackpotB\x06Z\x04.;pbb\x06proto3'
 )
 
 
@@ -34,51 +34,51 @@ _JACKPOT = _descriptor.Descriptor(
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='Bet', full_name='pb.Jackpot.Bet', index=0,
-      number=1, type=4, cpp_type=4, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='Level', full_name='pb.Jackpot.Level', index=1,
+      name='Level', full_name='pb.Jackpot.Level', index=0,
       number=2, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='Startup', full_name='pb.Jackpot.Startup', index=2,
+      name='Startup', full_name='pb.Jackpot.Startup', index=1,
       number=3, type=4, cpp_type=4, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='Progressive', full_name='pb.Jackpot.Progressive', index=3,
+      name='Progressive', full_name='pb.Jackpot.Progressive', index=2,
       number=4, type=4, cpp_type=4, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='Start', full_name='pb.Jackpot.Start', index=4,
+      name='Start', full_name='pb.Jackpot.Start', index=3,
       number=5, type=3, cpp_type=2, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='End', full_name='pb.Jackpot.End', index=5,
+      name='End', full_name='pb.Jackpot.End', index=4,
       number=6, type=3, cpp_type=2, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='Desc', full_name='pb.Jackpot.Desc', index=6,
+      name='Desc', full_name='pb.Jackpot.Desc', index=5,
       number=7, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='Rate', full_name='pb.Jackpot.Rate', index=6,
+      number=8, type=4, cpp_type=4, label=1,
+      has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
@@ -95,7 +95,7 @@ _JACKPOT = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=27,
-  serialized_end=144,
+  serialized_end=145,
 )
 
 
@@ -115,8 +115,8 @@ _JACKPOTSYNCING_REQUEST = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='Bet', full_name='pb.JackpotSyncing.Request.Bet', index=1,
-      number=2, type=4, cpp_type=4, label=1,
+      name='Now', full_name='pb.JackpotSyncing.Request.Now', index=1,
+      number=2, type=3, cpp_type=2, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -133,8 +133,8 @@ _JACKPOTSYNCING_REQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=164,
-  serialized_end=203,
+  serialized_start=165,
+  serialized_end=204,
 )
 
 _JACKPOTSYNCING_RESPONSE = _descriptor.Descriptor(
@@ -171,8 +171,8 @@ _JACKPOTSYNCING_RESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=205,
-  serialized_end=263,
+  serialized_start=206,
+  serialized_end=264,
 )
 
 _JACKPOTSYNCING = _descriptor.Descriptor(
@@ -195,47 +195,8 @@ _JACKPOTSYNCING = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=146,
-  serialized_end=263,
-)
-
-
-_JPVISIONDATA = _descriptor.Descriptor(
-  name='JPVisionData',
-  full_name='pb.JPVisionData',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  create_key=_descriptor._internal_create_key,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='Bet', full_name='pb.JPVisionData.Bet', index=0,
-      number=1, type=4, cpp_type=4, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='JPLevels', full_name='pb.JPVisionData.JPLevels', index=1,
-      number=2, type=5, cpp_type=1, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=265,
-  serialized_end=310,
+  serialized_start=147,
+  serialized_end=264,
 )
 
 _JACKPOTSYNCING_REQUEST.containing_type = _JACKPOTSYNCING
@@ -243,7 +204,6 @@ _JACKPOTSYNCING_RESPONSE.fields_by_name['Jackpots'].message_type = _JACKPOT
 _JACKPOTSYNCING_RESPONSE.containing_type = _JACKPOTSYNCING
 DESCRIPTOR.message_types_by_name['Jackpot'] = _JACKPOT
 DESCRIPTOR.message_types_by_name['JackpotSyncing'] = _JACKPOTSYNCING
-DESCRIPTOR.message_types_by_name['JPVisionData'] = _JPVISIONDATA
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 Jackpot = _reflection.GeneratedProtocolMessageType('Jackpot', (_message.Message,), {
@@ -275,13 +235,6 @@ JackpotSyncing = _reflection.GeneratedProtocolMessageType('JackpotSyncing', (_me
 _sym_db.RegisterMessage(JackpotSyncing)
 _sym_db.RegisterMessage(JackpotSyncing.Request)
 _sym_db.RegisterMessage(JackpotSyncing.Response)
-
-JPVisionData = _reflection.GeneratedProtocolMessageType('JPVisionData', (_message.Message,), {
-  'DESCRIPTOR' : _JPVISIONDATA,
-  '__module__' : 'slots_jackpot_pb2'
-  # @@protoc_insertion_point(class_scope:pb.JPVisionData)
-  })
-_sym_db.RegisterMessage(JPVisionData)
 
 
 DESCRIPTOR._options = None

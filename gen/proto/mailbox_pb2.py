@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'Z\004.;pb',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\rmailbox.proto\x12\x02pb\x1a\x0b\x61ward.proto\"\xdd\r\n\x07Mailbox\x1a\xa7\x02\n\x03Req\x12+\n\x08GetMails\x18\x01 \x01(\x0b\x32\x17.pb.Mailbox.ReqGetMailsH\x00\x12+\n\x08GetItems\x18\x02 \x01(\x0b\x32\x17.pb.Mailbox.ReqGetItemsH\x00\x12\x33\n\x0cSetProcessed\x18\x03 \x01(\x0b\x32\x1b.pb.Mailbox.ReqSetProcessedH\x00\x12\x35\n\rGetFBSendList\x18\x04 \x01(\x0b\x32\x1c.pb.Mailbox.ReqGetFBSendListH\x00\x12)\n\x07SendFBF\x18\x05 \x01(\x0b\x32\x16.pb.Mailbox.ReqSendFBFH\x00\x12(\n\x04Info\x18\x06 \x01(\x0b\x32\x18.pb.Mailbox.ReqMailsInfoH\x00\x42\x05\n\x03one\x1a\xff\x01\n\x04Resp\x12,\n\x08GetItems\x18\x01 \x01(\x0b\x32\x18.pb.Mailbox.RespGetItemsH\x00\x12\x34\n\x0cSetProcessed\x18\x02 \x01(\x0b\x32\x1c.pb.Mailbox.RespSetProcessedH\x00\x12\x36\n\rGetFBSendList\x18\x03 \x01(\x0b\x32\x1d.pb.Mailbox.RespGetFBSendListH\x00\x12*\n\x07SendFBF\x18\x04 \x01(\x0b\x32\x17.pb.Mailbox.RespSendFBFH\x00\x12(\n\x04Info\x18\x05 \x01(\x0b\x32\x18.pb.Mailbox.RspMailsInfoH\x00\x42\x05\n\x03one\x1a=\n\x0bReqGetItems\x12\x10\n\x08OriginTS\x18\x01 \x01(\x07\x12\r\n\x05\x43ount\x18\x02 \x01(\r\x12\r\n\x05State\x18\x03 \x01(\r\x1a+\n\x0bReqGetMails\x12\r\n\x05limit\x18\x01 \x01(\x03\x12\r\n\x05index\x18\x02 \x01(\x03\x1a>\n\x0cRespGetItems\x12\x1f\n\x05Items\x18\x01 \x03(\x0b\x32\x10.pb.Mailbox.Mail\x12\r\n\x05State\x18\x02 \x01(\r\x1a\x1e\n\x0fReqSetProcessed\x12\x0b\n\x03IDS\x18\x01 \x03(\t\x1a&\n\x10RespSetProcessed\x12\x12\n\nSuccessIDS\x18\x01 \x03(\t\x1a\x12\n\x10ReqGetFBSendList\x1a!\n\x11RespGetFBSendList\x12\x0c\n\x04UIDS\x18\x01 \x03(\t\x1a\"\n\nReqSendFBF\x12\x14\n\x0cReceiverUIDS\x18\x01 \x03(\t\x1a#\n\x0bRespSendFBF\x12\x14\n\x0cSuccSendUIDS\x18\x01 \x03(\t\x1a\x0e\n\x0cReqMailsInfo\x1aQ\n\x0cRspMailsInfo\x12\r\n\x05Total\x18\x01 \x01(\r\x12\x32\n\x0eMainClassCount\x18\x02 \x03(\x0b\x32\x1a.pb.Mailbox.MainClassCount\x1a\x32\n\x0eMainClassCount\x12\x11\n\tMailClass\x18\x01 \x01(\r\x12\r\n\x05\x43ount\x18\x02 \x01(\r\x1a,\n\nTimeStamps\x12\x0e\n\x06\x43reate\x18\x01 \x01(\x03\x12\x0e\n\x06\x45xpire\x18\x02 \x01(\x03\x1a\xd1\x01\n\x04Mail\x12\n\n\x02ID\x18\x01 \x01(\t\x12\x0e\n\x06Sender\x18\x02 \x01(\x04\x12\x10\n\x08Receiver\x18\x03 \x01(\x04\x12#\n\x03TSS\x18\x04 \x01(\x0b\x32\x16.pb.Mailbox.TimeStamps\x12\x0e\n\x06Source\x18\x05 \x01(\r\x12\x11\n\tMailClass\x18\x06 \x01(\r\x12\x14\n\x0cMailSubClass\x18\x07 \x01(\r\x12\x13\n\x0bSourceClass\x18\x08 \x03(\r\x12\x18\n\x05\x41ward\x18\t \x01(\x0b\x32\t.pb.Award\x12\x0e\n\x06Origin\x18\n \x01(\t\x1a\xc5\x01\n\x04\x42ody\x12\x11\n\tMailClass\x18\x01 \x01(\r\x12\x14\n\x0cMailSubClass\x18\x02 \x01(\r\x12\x13\n\x0bSourceClass\x18\x03 \x03(\r\x12\x0c\n\x04\x42ody\x18\x04 \x01(\t\x12#\n\x03TSS\x18\x05 \x01(\x0b\x32\x16.pb.Mailbox.TimeStamps\x12\x10\n\x08Priority\x18\x06 \x01(\r\x12\x0e\n\x06Source\x18\x07 \x01(\r\x12*\n\nAttachment\x18\x08 \x01(\x0b\x32\x16.pb.Mailbox.Attachment\x1aj\n\nAttachment\x12-\n\x0cNumberValues\x18\x01 \x03(\x0b\x32\x17.pb.Mailbox.NumberValue\x12-\n\x0cStringValues\x18\x02 \x03(\x0b\x32\x17.pb.Mailbox.StringValue\x1a\x13\n\x11NotifyMailChanged\x1a\'\n\x0bNumberValue\x12\x0b\n\x03Key\x18\x01 \x01(\t\x12\x0b\n\x03Val\x18\x02 \x01(\x03\x1a\'\n\x0bStringValue\x12\x0b\n\x03Key\x18\x01 \x01(\t\x12\x0b\n\x03Val\x18\x02 \x01(\tB\x06Z\x04.;pbb\x06proto3'
+  serialized_pb=b'\n\rmailbox.proto\x12\x02pb\x1a\x0b\x61ward.proto\"\xec\r\n\x07Mailbox\x1a\xa7\x02\n\x03Req\x12+\n\x08GetMails\x18\x01 \x01(\x0b\x32\x17.pb.Mailbox.ReqGetMailsH\x00\x12+\n\x08GetItems\x18\x02 \x01(\x0b\x32\x17.pb.Mailbox.ReqGetItemsH\x00\x12\x33\n\x0cSetProcessed\x18\x03 \x01(\x0b\x32\x1b.pb.Mailbox.ReqSetProcessedH\x00\x12\x35\n\rGetFBSendList\x18\x04 \x01(\x0b\x32\x1c.pb.Mailbox.ReqGetFBSendListH\x00\x12)\n\x07SendFBF\x18\x05 \x01(\x0b\x32\x16.pb.Mailbox.ReqSendFBFH\x00\x12(\n\x04Info\x18\x06 \x01(\x0b\x32\x18.pb.Mailbox.ReqMailsInfoH\x00\x42\x05\n\x03one\x1a\xff\x01\n\x04Resp\x12,\n\x08GetItems\x18\x01 \x01(\x0b\x32\x18.pb.Mailbox.RespGetItemsH\x00\x12\x34\n\x0cSetProcessed\x18\x02 \x01(\x0b\x32\x1c.pb.Mailbox.RespSetProcessedH\x00\x12\x36\n\rGetFBSendList\x18\x03 \x01(\x0b\x32\x1d.pb.Mailbox.RespGetFBSendListH\x00\x12*\n\x07SendFBF\x18\x04 \x01(\x0b\x32\x17.pb.Mailbox.RespSendFBFH\x00\x12(\n\x04Info\x18\x05 \x01(\x0b\x32\x18.pb.Mailbox.RspMailsInfoH\x00\x42\x05\n\x03one\x1a=\n\x0bReqGetItems\x12\x10\n\x08OriginTS\x18\x01 \x01(\x07\x12\r\n\x05\x43ount\x18\x02 \x01(\r\x12\r\n\x05State\x18\x03 \x01(\r\x1a+\n\x0bReqGetMails\x12\r\n\x05limit\x18\x01 \x01(\x03\x12\r\n\x05index\x18\x02 \x01(\x03\x1a>\n\x0cRespGetItems\x12\x1f\n\x05Items\x18\x01 \x03(\x0b\x32\x10.pb.Mailbox.Mail\x12\r\n\x05State\x18\x02 \x01(\r\x1a\x1e\n\x0fReqSetProcessed\x12\x0b\n\x03IDS\x18\x01 \x03(\t\x1a&\n\x10RespSetProcessed\x12\x12\n\nSuccessIDS\x18\x01 \x03(\t\x1a\x12\n\x10ReqGetFBSendList\x1a!\n\x11RespGetFBSendList\x12\x0c\n\x04UIDS\x18\x01 \x03(\t\x1a\"\n\nReqSendFBF\x12\x14\n\x0cReceiverUIDS\x18\x01 \x03(\t\x1a#\n\x0bRespSendFBF\x12\x14\n\x0cSuccSendUIDS\x18\x01 \x03(\t\x1a\x0e\n\x0cReqMailsInfo\x1aQ\n\x0cRspMailsInfo\x12\r\n\x05Total\x18\x01 \x01(\r\x12\x32\n\x0eMainClassCount\x18\x02 \x03(\x0b\x32\x1a.pb.Mailbox.MainClassCount\x1a\x32\n\x0eMainClassCount\x12\x11\n\tMailClass\x18\x01 \x01(\r\x12\r\n\x05\x43ount\x18\x02 \x01(\r\x1a,\n\nTimeStamps\x12\x0e\n\x06\x43reate\x18\x01 \x01(\x03\x12\x0e\n\x06\x45xpire\x18\x02 \x01(\x03\x1a\xe0\x01\n\x04Mail\x12\n\n\x02ID\x18\x01 \x01(\t\x12\x0e\n\x06Sender\x18\x02 \x01(\x04\x12\x10\n\x08Receiver\x18\x03 \x01(\x04\x12#\n\x03TSS\x18\x04 \x01(\x0b\x32\x16.pb.Mailbox.TimeStamps\x12\x0e\n\x06Source\x18\x05 \x01(\r\x12\x11\n\tMailClass\x18\x06 \x01(\r\x12\x14\n\x0cMailSubClass\x18\x07 \x01(\r\x12\x13\n\x0bSourceClass\x18\x08 \x03(\r\x12\x18\n\x05\x41ward\x18\t \x01(\x0b\x32\t.pb.Award\x12\x0e\n\x06Origin\x18\n \x01(\t\x12\r\n\x05\x45ntry\x18\x0b \x01(\x05\x1a\xc5\x01\n\x04\x42ody\x12\x11\n\tMailClass\x18\x01 \x01(\r\x12\x14\n\x0cMailSubClass\x18\x02 \x01(\r\x12\x13\n\x0bSourceClass\x18\x03 \x03(\r\x12\x0c\n\x04\x42ody\x18\x04 \x01(\t\x12#\n\x03TSS\x18\x05 \x01(\x0b\x32\x16.pb.Mailbox.TimeStamps\x12\x10\n\x08Priority\x18\x06 \x01(\r\x12\x0e\n\x06Source\x18\x07 \x01(\r\x12*\n\nAttachment\x18\x08 \x01(\x0b\x32\x16.pb.Mailbox.Attachment\x1aj\n\nAttachment\x12-\n\x0cNumberValues\x18\x01 \x03(\x0b\x32\x17.pb.Mailbox.NumberValue\x12-\n\x0cStringValues\x18\x02 \x03(\x0b\x32\x17.pb.Mailbox.StringValue\x1a\x13\n\x11NotifyMailChanged\x1a\'\n\x0bNumberValue\x12\x0b\n\x03Key\x18\x01 \x01(\t\x12\x0b\n\x03Val\x18\x02 \x01(\x03\x1a\'\n\x0bStringValue\x12\x0b\n\x03Key\x18\x01 \x01(\t\x12\x0b\n\x03Val\x18\x02 \x01(\tB\x06Z\x04.;pbb\x06proto3'
   ,
   dependencies=[award__pb2.DESCRIPTOR,])
 
@@ -678,6 +678,13 @@ _MAILBOX_MAIL = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='Entry', full_name='pb.Mailbox.Mail.Entry', index=10,
+      number=11, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -691,7 +698,7 @@ _MAILBOX_MAIL = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=1172,
-  serialized_end=1381,
+  serialized_end=1396,
 )
 
 _MAILBOX_BODY = _descriptor.Descriptor(
@@ -770,8 +777,8 @@ _MAILBOX_BODY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1384,
-  serialized_end=1581,
+  serialized_start=1399,
+  serialized_end=1596,
 )
 
 _MAILBOX_ATTACHMENT = _descriptor.Descriptor(
@@ -808,8 +815,8 @@ _MAILBOX_ATTACHMENT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1583,
-  serialized_end=1689,
+  serialized_start=1598,
+  serialized_end=1704,
 )
 
 _MAILBOX_NOTIFYMAILCHANGED = _descriptor.Descriptor(
@@ -832,8 +839,8 @@ _MAILBOX_NOTIFYMAILCHANGED = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1691,
-  serialized_end=1710,
+  serialized_start=1706,
+  serialized_end=1725,
 )
 
 _MAILBOX_NUMBERVALUE = _descriptor.Descriptor(
@@ -870,8 +877,8 @@ _MAILBOX_NUMBERVALUE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1712,
-  serialized_end=1751,
+  serialized_start=1727,
+  serialized_end=1766,
 )
 
 _MAILBOX_STRINGVALUE = _descriptor.Descriptor(
@@ -908,8 +915,8 @@ _MAILBOX_STRINGVALUE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1753,
-  serialized_end=1792,
+  serialized_start=1768,
+  serialized_end=1807,
 )
 
 _MAILBOX = _descriptor.Descriptor(
@@ -933,7 +940,7 @@ _MAILBOX = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=35,
-  serialized_end=1792,
+  serialized_end=1807,
 )
 
 _MAILBOX_REQ.fields_by_name['GetMails'].message_type = _MAILBOX_REQGETMAILS

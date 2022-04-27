@@ -19,7 +19,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'Z\004.;pb',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x16slots_coordinate.proto\x12\x02pb\"{\n\nCoordinate\x12\x0e\n\x06Symbol\x18\x01 \x01(\x05\x12\t\n\x01X\x18\x02 \x01(\r\x12\t\n\x01Y\x18\x03 \x01(\r\x12\x11\n\tWatermark\x18\x04 \x01(\x05\x12\x16\n\x0eTransformation\x18\x05 \x01(\x05\x12\r\n\x05Prize\x18\x06 \x01(\t\x12\r\n\x05Value\x18\x07 \x01(\x04\"0\n\x0f\x43oordinateArray\x12\x1d\n\x05\x41rray\x18\x01 \x03(\x0b\x32\x0e.pb.Coordinate\"D\n\x08\x42\x65tPanel\x12\x0b\n\x03\x42\x65t\x18\x01 \x01(\x04\x12\x1d\n\x05\x43\x65lls\x18\x02 \x03(\x0b\x32\x0e.pb.Coordinate\x12\x0c\n\x04Step\x18\x03 \x01(\r\"(\n\tBetPanels\x12\x1b\n\x05Units\x18\x01 \x03(\x0b\x32\x0c.pb.BetPanel\"$\n\x0c\x43oordinateXY\x12\t\n\x01X\x18\x01 \x01(\x05\x12\t\n\x01Y\x18\x02 \x01(\x05\"\x18\n\x0b\x43oordinateX\x12\t\n\x01X\x18\x01 \x01(\x05\x42\x06Z\x04.;pbb\x06proto3'
+  serialized_pb=b'\n\x16slots_coordinate.proto\x12\x02pb\"{\n\nCoordinate\x12\x0e\n\x06Symbol\x18\x01 \x01(\x05\x12\t\n\x01X\x18\x02 \x01(\r\x12\t\n\x01Y\x18\x03 \x01(\r\x12\x11\n\tWatermark\x18\x04 \x01(\x05\x12\x16\n\x0eTransformation\x18\x05 \x01(\x05\x12\r\n\x05Prize\x18\x06 \x01(\t\x12\r\n\x05Value\x18\x07 \x01(\x04\"0\n\x0f\x43oordinateArray\x12\x1d\n\x05\x41rray\x18\x01 \x03(\x0b\x32\x0e.pb.Coordinate\"$\n\x0c\x43oordinateXY\x12\t\n\x01X\x18\x01 \x01(\x05\x12\t\n\x01Y\x18\x02 \x01(\x05\"\x18\n\x0b\x43oordinateX\x12\t\n\x01X\x18\x01 \x01(\x05\x42\x06Z\x04.;pbb\x06proto3'
 )
 
 
@@ -131,84 +131,6 @@ _COORDINATEARRAY = _descriptor.Descriptor(
 )
 
 
-_BETPANEL = _descriptor.Descriptor(
-  name='BetPanel',
-  full_name='pb.BetPanel',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  create_key=_descriptor._internal_create_key,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='Bet', full_name='pb.BetPanel.Bet', index=0,
-      number=1, type=4, cpp_type=4, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='Cells', full_name='pb.BetPanel.Cells', index=1,
-      number=2, type=11, cpp_type=10, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='Step', full_name='pb.BetPanel.Step', index=2,
-      number=3, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=205,
-  serialized_end=273,
-)
-
-
-_BETPANELS = _descriptor.Descriptor(
-  name='BetPanels',
-  full_name='pb.BetPanels',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  create_key=_descriptor._internal_create_key,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='Units', full_name='pb.BetPanels.Units', index=0,
-      number=1, type=11, cpp_type=10, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=275,
-  serialized_end=315,
-)
-
-
 _COORDINATEXY = _descriptor.Descriptor(
   name='CoordinateXY',
   full_name='pb.CoordinateXY',
@@ -243,8 +165,8 @@ _COORDINATEXY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=317,
-  serialized_end=353,
+  serialized_start=205,
+  serialized_end=241,
 )
 
 
@@ -275,17 +197,13 @@ _COORDINATEX = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=355,
-  serialized_end=379,
+  serialized_start=243,
+  serialized_end=267,
 )
 
 _COORDINATEARRAY.fields_by_name['Array'].message_type = _COORDINATE
-_BETPANEL.fields_by_name['Cells'].message_type = _COORDINATE
-_BETPANELS.fields_by_name['Units'].message_type = _BETPANEL
 DESCRIPTOR.message_types_by_name['Coordinate'] = _COORDINATE
 DESCRIPTOR.message_types_by_name['CoordinateArray'] = _COORDINATEARRAY
-DESCRIPTOR.message_types_by_name['BetPanel'] = _BETPANEL
-DESCRIPTOR.message_types_by_name['BetPanels'] = _BETPANELS
 DESCRIPTOR.message_types_by_name['CoordinateXY'] = _COORDINATEXY
 DESCRIPTOR.message_types_by_name['CoordinateX'] = _COORDINATEX
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
@@ -303,20 +221,6 @@ CoordinateArray = _reflection.GeneratedProtocolMessageType('CoordinateArray', (_
   # @@protoc_insertion_point(class_scope:pb.CoordinateArray)
   })
 _sym_db.RegisterMessage(CoordinateArray)
-
-BetPanel = _reflection.GeneratedProtocolMessageType('BetPanel', (_message.Message,), {
-  'DESCRIPTOR' : _BETPANEL,
-  '__module__' : 'slots_coordinate_pb2'
-  # @@protoc_insertion_point(class_scope:pb.BetPanel)
-  })
-_sym_db.RegisterMessage(BetPanel)
-
-BetPanels = _reflection.GeneratedProtocolMessageType('BetPanels', (_message.Message,), {
-  'DESCRIPTOR' : _BETPANELS,
-  '__module__' : 'slots_coordinate_pb2'
-  # @@protoc_insertion_point(class_scope:pb.BetPanels)
-  })
-_sym_db.RegisterMessage(BetPanels)
 
 CoordinateXY = _reflection.GeneratedProtocolMessageType('CoordinateXY', (_message.Message,), {
   'DESCRIPTOR' : _COORDINATEXY,

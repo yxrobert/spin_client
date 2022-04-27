@@ -25,10 +25,11 @@ def run(player):
 
 
     # player.send_cmd(free_cmd)
-    player.spin()
+    # player.send_cmd(test_gm2)
+    # player.spin()
     # player.pick(0)
 
-    # player.spin()
+    player.spin()
     # player.spin_to_base()
 
     # player.pick(1)
@@ -38,6 +39,7 @@ def run(player):
 free_cmd = "gm:2_200|4"
 test_gm = "gm:2_200|2;1_100|2_3_7"
 cheat_6 = "cheat 6"
+test_gm2 = "gm:0_0|2_6_11>0_0|2_15_11;0_4|2_1_2;0_4|2_1_3;0_4|2_1_4"
 # test_gm = "gm:2_200|2;"
 # grorilla_3sc = "panels 1_5_7_9_9_9_9_9_1_9_9_9_9_9_9_9_1_9_9_9"
 # demon_panelgroup = "panelgroup 1_1_1_2_2_2_3_3_3_3_3_3_3_3_3|1_1_1_2_2_2_3_3_3_3_3_3_3_3_3"

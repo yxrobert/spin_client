@@ -27,7 +27,7 @@ def run(player):
 
     # player.send_cmd(panels_yq)
     # player.send_cmd(gm_enter)
-    player.spin_times(30)
+    player.spin_times(1)
     # player.spin_to_base()
     # player.spin_to_next_stage()
 
