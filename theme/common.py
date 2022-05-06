@@ -8,7 +8,7 @@ from net import Sender
 
 cheat_6 = "cheat 6"
 cheat_12 = "cheat 12"
-add_money = "add coin 9999999"
+add_money = "add coin 99999999999"
 
 class DefaultRobot(SpinRobot):
     def __init__(self, name, theme_id):
@@ -46,7 +46,7 @@ def fakeTIme():
     Sender.send_timefake("11111")
 
 def run(player):
-    # player.send_cmd(add_money)
+    player.send_cmd(add_money)
     # player.send_cmd(free_me)
     
     # player.send_cmd(coin_cmd)
@@ -60,6 +60,8 @@ def run(player):
 
     act_id = 1
     # player.req_activity_user_data(act_id)
+    # for i in range(0, 10):
+        # player.req_activity_play(act_id)
     player.req_activity_play(act_id)
 
     # player.send_cmd(dice_cmd)

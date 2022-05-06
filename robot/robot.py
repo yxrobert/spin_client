@@ -56,6 +56,11 @@ class RobotBase:
         req = make_pick_req(self.player_id, self.token, theme_id, bet, x, y)
         self.send_packet(req)
 
+    def req_game(self, theme_id, bet, x, y):
+        self.log("req_game")
+        req = make_game_req(self.player_id, self.token, theme_id, bet, x, y)
+        self.send_packet(req)
+
     def req_theme_status(self, theme_id):
         self.log("req_theme_status")
         req = make_theme_status_req(self.player_id, self.token, theme_id)
@@ -159,6 +164,14 @@ class SpinRobot(RobotBase):
 
     def pick(self, x=-1, y=-1):
         self.req_pick(self.theme_id, self.themeData.get_play_bet(), x, y)
+
+    def game(self, x=-1, y=-1):
+        self.req_game(self.theme_id, self.themeData.get_play_bet(), x, y)
+    
+    def serials_game(self, arr):
+        print(arr)
+        for i in range(0, len(arr)):
+            self.req_game(self.theme_id, self.themeData.get_play_bet(), arr[i], -1)
     
     def enter_theme(self):
         self.req_theme_status(self.theme_id)

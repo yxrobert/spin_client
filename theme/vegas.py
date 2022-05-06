@@ -26,14 +26,17 @@ def run(player):
     # player.send_cmd(cheat_6)
     # player.send_cmd(test_gm)
 
-    player.send_cmd(free_cmd)
-    player.spin()
+    # player.send_cmd(gm_bonus_jp)
+    # player.send_cmd(free_cmd)
+    # player.spin()
     player.spin_to_base()
 
     # player.pick(1)
     # player.send_cmd(demon_panelgroup)
     pass
 
+gm_bonus_jp = "0_0|0_3_9>0_1|2_4_1_14;0_1|2_1_4_10>5_500|2_1_1_14>5_500|2_2_1_14>5_500|2_3_1_14>5_500|2_4_1_14"
+gm_jp = "gm:0_0|0_3_9>0_1|2_4_3_13;0_1|2_1_4_10"
 free_cmd = "panel 1,1,2,8,0,0,0,0,0,0,0,0,1,1,1,1,9,9,9,4"
 test_gm = "gm:2_200|2;1_100|2_3_7"
 cheat_6 = "cheat 6"

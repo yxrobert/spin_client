@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'Z\004.;pb',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x18slots_feature_game.proto\x12\x02pb*\xb7\x02\n\x0b\x46\x65\x61tureGame\x12\x0f\n\x0bUNSPECIFIED\x10\x00\x12\x0e\n\nWHEEL_COIN\x10\x01\x12\t\n\x05WHEEL\x10\x02\x12\x13\n\x0fHOLD_AND_RESPIN\x10\x03\x12\x18\n\x14SAME_OPTIONS_TRIGGER\x10\x04\x12\x0b\n\x07SECTION\x10\x05\x12\x0b\n\x07JACKPOT\x10\x06\x12\r\n\tFREE_GAME\x10\x07\x12\x0f\n\x0bMULTI_WHEEL\x10\x08\x12\x16\n\x12\x42\x65tPanelSettlement\x10\t\x12\x11\n\rPickerJackpot\x10\n\x12\x13\n\x0f\x43OLLECTION_GAME\x10\x0b\x12\x16\n\x12\x43OLLECTION_PATTERN\x10\x0c\x12\x12\n\x0eOPTIONS_PICKER\x10\r\x12\x13\n\x0fSECTION_SYMBOLS\x10\x0e\x12\x12\n\x0eLOCKED_JACKPOT\x10\x0f\x42\x06Z\x04.;pbb\x06proto3'
+  serialized_pb=b'\n\x18slots_feature_game.proto\x12\x02pb*\xcb\x02\n\x0b\x46\x65\x61tureGame\x12\x0f\n\x0bUNSPECIFIED\x10\x00\x12\x0e\n\nWHEEL_COIN\x10\x01\x12\t\n\x05WHEEL\x10\x02\x12\x13\n\x0fHOLD_AND_RESPIN\x10\x03\x12\x18\n\x14SAME_OPTIONS_TRIGGER\x10\x04\x12\x0b\n\x07SECTION\x10\x05\x12\x0b\n\x07JACKPOT\x10\x06\x12\r\n\tFREE_GAME\x10\x07\x12\x0f\n\x0bMULTI_WHEEL\x10\x08\x12\x16\n\x12\x42\x65tPanelSettlement\x10\t\x12\x11\n\rPickerJackpot\x10\n\x12\x13\n\x0f\x43OLLECTION_GAME\x10\x0b\x12\x16\n\x12\x43OLLECTION_PATTERN\x10\x0c\x12\x12\n\x0eOPTIONS_PICKER\x10\r\x12\x13\n\x0fSECTION_SYMBOLS\x10\x0e\x12\x12\n\x0eLOCKED_JACKPOT\x10\x0f\x12\x12\n\x0e\x46ROZEN_JACKPOT\x10\x10\x42\x06Z\x04.;pbb\x06proto3'
 )
 
 _FEATUREGAME = _descriptor.EnumDescriptor(
@@ -110,11 +110,16 @@ _FEATUREGAME = _descriptor.EnumDescriptor(
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='FROZEN_JACKPOT', index=16, number=16,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
   ],
   containing_type=None,
   serialized_options=None,
   serialized_start=33,
-  serialized_end=344,
+  serialized_end=364,
 )
 _sym_db.RegisterEnumDescriptor(_FEATUREGAME)
 
@@ -135,6 +140,7 @@ COLLECTION_PATTERN = 12
 OPTIONS_PICKER = 13
 SECTION_SYMBOLS = 14
 LOCKED_JACKPOT = 15
+FROZEN_JACKPOT = 16
 
 
 DESCRIPTOR.enum_types_by_name['FeatureGame'] = _FEATUREGAME

@@ -11,6 +11,7 @@ from google.protobuf import symbol_database as _symbol_database
 _sym_db = _symbol_database.Default()
 
 
+import post_purchase_protection_pb2 as post__purchase__protection__pb2
 import slots_coordinate_pb2 as slots__coordinate__pb2
 import slots_jackpot_pb2 as slots__jackpot__pb2
 import slots_stage_pb2 as slots__stage__pb2
@@ -24,9 +25,9 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'Z\004.;pb',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x0bslots.proto\x12\x02pb\x1a\x16slots_coordinate.proto\x1a\x13slots_jackpot.proto\x1a\x11slots_stage.proto\x1a\x10slots_util.proto\x1a\x13slots_feature.proto\"\x12\n\x10ThemeListRequest\"\xd0\x02\n\x0bPlayRequest\x12\x30\n\tOperation\x18\x01 \x01(\x0e\x32\x1d.pb.PlayRequest.OperationType\x12\x0f\n\x07ThemeID\x18\x02 \x01(\x05\x12\x10\n\x08TotalBet\x18\x03 \x01(\x04\x12\x0e\n\x06PickID\x18\x04 \x01(\r\x12\x0f\n\x07PickIDs\x18\x0e \x03(\r\x12\x0f\n\x07PickPos\x18\x05 \x01(\r\x12\x10\n\x08PickInfo\x18\x06 \x01(\t\x12#\n\x06\x63oords\x18\xe8\x07 \x01(\x0b\x32\x10.pb.CoordinateXYH\x00\x12!\n\x05index\x18\xe9\x07 \x01(\x0b\x32\x0f.pb.CoordinateXH\x00\"S\n\rOperationType\x12\x0f\n\x0bUNSPECIFIED\x10\x00\x12\x08\n\x04SPIN\x10\x01\x12\x08\n\x04PICK\x10\x02\x12\x08\n\x04GAME\x10\x03\x12\x13\n\x0f\x41\x63kStageTransit\x10\x04\x42\x0b\n\tGameInput\"~\n\x0cPlayResponse\x12!\n\x04Spin\x18\xe8\x07 \x01(\x0b\x32\x10.pb.SpinResponseH\x00\x12!\n\x04Pick\x18\xd0\x0f \x01(\x0b\x32\x10.pb.PickResponseH\x00\x12!\n\x04Game\x18\xb8\x17 \x01(\x0b\x32\x10.pb.GameResponseH\x00\x42\x05\n\x03One\" \n\x02KV\x12\x0b\n\x03Key\x18\x01 \x01(\t\x12\r\n\x05Value\x18\x02 \x01(\t\"y\n\nStopWindow\x12\x0b\n\x03Tag\x18\x01 \x01(\t\x12\x1e\n\nSymbolList\x18\x02 \x03(\x0b\x32\n.pb.Column\x12!\n\nSymbolWins\x18\x03 \x03(\x0b\x32\r.pb.SymbolWin\x12\x1b\n\x07Rewards\x18\x04 \x03(\x0b\x32\n.pb.Reward\"A\n\x07Restore\"6\n\x07Pattern\x12\x0f\n\x0bUNSPECIFIED\x10\x00\x12\x0b\n\x07Unified\x10\x01\x12\r\n\tMultiStep\x10\x02\"\xca\x0b\n\x0cSpinResponse\x12\x10\n\x08PlayerID\x18\x01 \x01(\x10\x12$\n\x0c\x43urrentStage\x18\x02 \x01(\x0e\x32\x0e.pb.Slot.Stage\x12!\n\tNextStage\x18\x03 \x01(\x0e\x32\x0e.pb.Slot.Stage\x12\x15\n\rBaseSpinTimes\x18\x04 \x01(\x04\x12#\n\x0bParentStage\x18\x05 \x01(\x0e\x32\x0e.pb.Slot.Stage\x12\x10\n\x08TotalBet\x18\x0b \x01(\x04\x12\x13\n\nAverageBet\x18\xf3\x07 \x01(\x04\x12\x0f\n\x07UnitBet\x18\x0c \x01(\x04\x12\x15\n\rBetMultiplier\x18\r \x01(\x04\x12\x16\n\x0eScatterUnitBet\x18\x0e \x01(\x04\x12\x1c\n\x14ScatterBetMultiplier\x18\x0f \x01(\x04\x12\x11\n\tPanelWins\x18\x15 \x01(\x04\x12\x13\n\x0b\x46\x65\x61tureWins\x18\x16 \x01(\x04\x12\x10\n\x08SpinWins\x18\x17 \x01(\x04\x12\x0e\n\x06PCWins\x18\x18 \x01(\x04\x12$\n\rPlayCycleWins\x18\x19 \x01(\x0b\x32\r.pb.PlayCycle\x12\x14\n\x0cSpinWinsRate\x18\x1f \x01(\x02\x12\x12\n\nPCWinsRate\x18  \x01(\x02\x12\x13\n\x0bTriggerWins\x18! \x01(\x04\x12\x13\n\x0bSessionWins\x18\" \x01(\x04\x12\x17\n\x0fSessionWinsRate\x18# \x01(\x02\x12\x1b\n\x07Rewards\x18\x64 \x03(\x0b\x32\n.pb.Reward\x12!\n\x08LineWins\x18\x65 \x03(\x0b\x32\x0f.pb.LineWinInfo\x12#\n\tMultiWays\x18\x66 \x03(\x0b\x32\x10.pb.MultiWayInfo\x12!\n\nSymbolWins\x18g \x03(\x0b\x32\r.pb.SymbolWin\x12\x1e\n\x08Jackpots\x18\xc9\x01 \x03(\x0b\x32\x0b.pb.Jackpot\x12!\n\x06Picker\x18\xca\x01 \x01(\x0b\x32\x10.pb.PickerStatus\x12\x18\n\x05\x45xtra\x18\xab\x02 \x03(\x0b\x32\x08.pb.Data\x12\x1f\n\nSymbolList\x18\xac\x02 \x03(\x0b\x32\n.pb.Column\x12 \n\x0bPanelBackup\x18\xae\x02 \x03(\x0b\x32\n.pb.Column\x12$\n\x0bStopWindows\x18\xaf\x02 \x03(\x0b\x32\x0e.pb.StopWindow\x12\x10\n\x07ThemeID\x18\xe9\x07 \x01(\x04\x12\x12\n\tSubjectID\x18\xf1\x07 \x01(\x04\x12\x11\n\x08UserBets\x18\xea\x07 \x03(\x04\x12\x14\n\x0b\x45ligibleBet\x18\xeb\x07 \x01(\x04\x12&\n\tleftTimes\x18\xec\x07 \x01(\x0b\x32\x12.pb.StageLeftTimes\x12\'\n\treelExtra\x18\xee\x07 \x01(\x0b\x32\x13.pb.RespinReelExtra\x12\x1a\n\tPlaneInfo\x18\xef\x07 \x03(\x0b\x32\x06.pb.KV\x12$\n\x06Panels\x18\xf0\x07 \x03(\x0b\x32\x13.pb.CoordinateArray\x12!\n\tStageClue\x18\xf2\x07 \x01(\x0b\x32\r.pb.StageClue\x12,\n\x0eRestorePattern\x18\xf4\x07 \x01(\x0e\x32\x13.pb.Restore.Pattern\x12-\n\ncollection\x18\xd0\x0f \x01(\x0b\x32\x16.pb.CollectionResponseH\x00\x12)\n\x08\x62ingoMoo\x18\xd1\x0f \x01(\x0b\x32\x14.pb.BingoMooResponseH\x00\x12\'\n\x07\x66ortune\x18\xd2\x0f \x01(\x0b\x32\x13.pb.FortuneResponseH\x00\x12)\n\tpiggyBank\x18\xd3\x0f \x01(\x0b\x32\x13.pb.PiggyBankStatusH\x00\x12%\n\x07gorilla\x18\xd4\x0f \x01(\x0b\x32\x11.pb.GorillaStatusH\x00\x12\'\n\x0b\x66ortuneGame\x18\xb8\x17 \x01(\x0b\x32\x0f.pb.FortuneGameH\x01\x12&\n\tChallenge\x18\xc1\xb8\x02 \x01(\x0b\x32\x11.pb.SlotChallengeB\x0c\n\nMoreStatusB\x0c\n\nGameStatus\"\x1e\n\rSlotChallenge\x12\r\n\x05names\x18\x01 \x03(\t\"N\n\x0bLastSpinRsp\x12(\n\x0eLastSpinRspArr\x18\x01 \x03(\x0b\x32\x10.pb.SpinResponse\x12\x15\n\rLastBackupBet\x18\x02 \x01(\x04\"\xe2\x03\n\x0cPickResponse\x12\x1f\n\x06Reward\x18\x01 \x01(\x0b\x32\x0f.pb.BonusReward\x12\x17\n\x05\x45xtra\x18\x02 \x03(\x0b\x32\x08.pb.Data\x12$\n\x0c\x43urrentStage\x18\x03 \x01(\x0e\x32\x0e.pb.Slot.Stage\x12!\n\tNextStage\x18\x06 \x01(\x0e\x32\x0e.pb.Slot.Stage\x12\x10\n\x08PickWins\x18h \x01(\x04\x12\x14\n\x0cPickWinsRate\x18i \x01(\x02\x12\x0e\n\x06PCWins\x18j \x01(\x04\x12\x12\n\nPCWinsRate\x18k \x01(\x02\x12\x13\n\x0bSessionWins\x18l \x01(\x04\x12\x17\n\x0fSessionWinsRate\x18m \x01(\x02\x12\x37\n\x0b\x43lientAware\x18\xac\x02 \x03(\x0b\x32!.pb.PickResponse.ClientAwareEntry\x12$\n\x0bStopWindows\x18\xad\x02 \x03(\x0b\x32\x0e.pb.StopWindow\x12\x1a\n\tPlaneInfo\x18\xae\x02 \x03(\x0b\x32\x06.pb.KV\x12&\n\tChallenge\x18\xc1\xb8\x02 \x01(\x0b\x32\x11.pb.SlotChallenge\x1a\x32\n\x10\x43lientAwareEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\"\xd4\x03\n\x0cGameResponse\x12\x10\n\x08PlayerID\x18\x01 \x01(\x10\x12$\n\x0c\x43urrentStage\x18\x02 \x01(\x0e\x32\x0e.pb.Slot.Stage\x12!\n\tNextStage\x18\x03 \x01(\x0e\x32\x0e.pb.Slot.Stage\x12\x1b\n\x07Rewards\x18\x04 \x03(\x0b\x32\n.pb.Reward\x12\x0c\n\x04Wins\x18\x05 \x01(\x04\x12\x10\n\x08TotalBet\x18\x06 \x01(\x04\x12\x1f\n\x0bPanelBackup\x18\x07 \x03(\x0b\x32\n.pb.Column\x12\x1d\n\x08Jackpots\x18\x08 \x03(\x0b\x32\x0b.pb.Jackpot\x12 \n\x08\x46reeSpin\x18\t \x01(\x0b\x32\x0e.pb.FreeStatus\x12\x1e\n\x06ReSpin\x18\n \x01(\x0b\x32\x0e.pb.FreeStatus\x12 \n\x06Picker\x18\x0b \x01(\x0b\x32\x10.pb.PickerStatus\x12\'\n\x0b\x66ortuneGame\x18\xe8\x07 \x01(\x0b\x32\x0f.pb.FortuneGameH\x00\x12)\n\x0bgorillaShop\x18\xe9\x07 \x01(\x0b\x32\x11.pb.GorillaStatusH\x00\x12&\n\tChallenge\x18\xc1\xb8\x02 \x01(\x0b\x32\x11.pb.SlotChallengeB\x0c\n\nGameStatus\"%\n\x12ThemeStatusRequest\x12\x0f\n\x07ThemeID\x18\x01 \x01(\x05\"&\n\x13ThemeRestoreRequest\x12\x0f\n\x07ThemeID\x18\x01 \x01(\x05\"*\n\x17LastSpinResponseRequest\x12\x0f\n\x07ThemeID\x18\x01 \x01(\x05\"3\n\tPlayCycle\x12\x13\n\x0bTriggerWins\x18\x01 \x01(\x04\x12\x11\n\tTotalWins\x18\x02 \x01(\x04\"J\n\tWinsPlate\x12\x1d\n\x05Stage\x18\x01 \x01(\x0e\x32\x0e.pb.Slot.Stage\x12\x0c\n\x04Wins\x18\x02 \x01(\x04\x12\x10\n\x08TotalBet\x18\x03 \x01(\x04\"o\n\tStageClue\x12 \n\x08\x46reespin\x18\x01 \x01(\x0b\x32\x0e.pb.FreeStatus\x12\x1e\n\x06Respin\x18\x02 \x01(\x0b\x32\x0e.pb.FreeStatus\x12 \n\x06Picker\x18\x03 \x01(\x0b\x32\x10.pb.PickerStatus\"\x8d\x01\n\x0cThemeRestore\x12\x36\n\tResponses\x18\x01 \x03(\x0b\x32#.pb.ThemeRestore.TaggedPlayResponse\x1a\x45\n\x12TaggedPlayResponse\x12\x0b\n\x03Tag\x18\x01 \x01(\t\x12\"\n\x08Response\x18\x02 \x01(\x0b\x32\x10.pb.PlayResponse\"\\\n\x12\x46\x65\x61tureLockingItem\x12\x0c\n\x04Name\x18\x01 \x01(\t\x12\x13\n\x0b\x42\x65tRequired\x18\x02 \x01(\x04\x12\x11\n\tGroupName\x18\x03 \x01(\t\x12\x10\n\x08GroupNum\x18\x04 \x01(\x05\"7\n\x0e\x46\x65\x61tureLocking\x12%\n\x05Items\x18\x01 \x03(\x0b\x32\x16.pb.FeatureLockingItem\"\x86\t\n\x0bThemeStatus\x12$\n\x0c\x43urrentStage\x18\x01 \x01(\x0e\x32\x0e.pb.Slot.Stage\x12!\n\tNextStage\x18\x02 \x01(\x0e\x32\x0e.pb.Slot.Stage\x12\x0c\n\x04\x42\x65ts\x18\x03 \x03(\x04\x12 \n\x08\x46reespin\x18\x0b \x01(\x0b\x32\x0e.pb.FreeStatus\x12\x1e\n\x06Respin\x18\x0c \x01(\x0b\x32\x0e.pb.FreeStatus\x12\x1d\n\x05\x42onus\x18\x0f \x01(\x0b\x32\x0e.pb.FreeStatus\x12 \n\x06Picker\x18\r \x01(\x0b\x32\x10.pb.PickerStatus\x12\x1d\n\x05Gamer\x18\x0e \x01(\x0b\x32\x0e.pb.GameStatus\x12\x1d\n\x08Jackpots\x18\x15 \x03(\x0b\x32\x0b.pb.Jackpot\x12%\n\x08SavedPos\x18\x16 \x01(\x0b\x32\x13.pb.CoordinateArray\x12\x12\n\nMultiplier\x18\x1f \x01(\x04\x12\x15\n\rBaseSpinTimes\x18  \x01(\x04\x12\x0f\n\x07LastBet\x18! \x01(\x04\x12&\n\rLastResponses\x18\x64 \x01(\x0b\x32\x0f.pb.LastSpinRsp\x12\x17\n\x05\x45xtra\x18\x65 \x03(\x0b\x32\x08.pb.Data\x12\x30\n\x13StageSaveSymbolList\x18\x66 \x03(\x0b\x32\x13.pb.CoordinateArray\x12\'\n\x0ePanelBackupArr\x18g \x03(\x0b\x32\x0f.pb.PanelBackup\x12\x31\n\tPlainInfo\x18h \x03(\x0b\x32\x1e.pb.ThemeStatus.PlainInfoEntry\x12#\n\x06Panels\x18i \x03(\x0b\x32\x13.pb.CoordinateArray\x12\x19\n\tPlaneInfo\x18j \x03(\x0b\x32\x06.pb.KV\x12 \n\tPlayCycle\x18l \x01(\x0b\x32\r.pb.PlayCycle\x12-\n\x07Restore\x18m \x03(\x0b\x32\x1c.pb.ThemeStatus.RestoreEntry\x12 \n\tWinsChain\x18n \x03(\x0b\x32\r.pb.WinsPlate\x12*\n\x0e\x46\x65\x61tureLocking\x18o \x01(\x0b\x32\x12.pb.FeatureLocking\x12\x0f\n\x07UnitBet\x18p \x01(\x04\x12+\n\ncollection\x18\xe8\x07 \x01(\x0b\x32\x14.pb.CollectionStatusH\x00\x12\'\n\x08\x62ingoMoo\x18\xe9\x07 \x01(\x0b\x32\x12.pb.BingoMooStatusH\x00\x12%\n\x07\x66ortune\x18\xea\x07 \x01(\x0b\x32\x11.pb.FortuneStatusH\x00\x12)\n\tpiggyBank\x18\xeb\x07 \x01(\x0b\x32\x13.pb.PiggyBankStatusH\x00\x12%\n\x07gorilla\x18\xec\x07 \x01(\x0b\x32\x11.pb.GorillaStatusH\x00\x1a\x30\n\x0ePlainInfoEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\x1a.\n\x0cRestoreEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\x0c:\x02\x38\x01\x42\x0c\n\nMoreStatus\"\xd7\x02\n\nFreeStatus\x12\x13\n\x0bRemainTimes\x18\x01 \x01(\r\x12\x12\n\nTotalTimes\x18\x02 \x01(\r\x12\x16\n\x0eTotalWinAmount\x18\x03 \x01(\x04\x12\x17\n\x0fTriggerTotalBet\x18\x04 \x01(\x04\x12%\n\x11TriggerSymbolList\x18\x05 \x03(\x0b\x32\n.pb.Column\x12$\n\x0cTriggerStage\x18\x06 \x01(\x0e\x32\x0e.pb.Slot.Stage\x12\x12\n\nTriggerWin\x18\x07 \x01(\x04\x12\x15\n\rRespinReelIds\x18\x08 \x03(\r\x12#\n\x0fSymbolListExtra\x18\t \x03(\x0b\x32\n.pb.Symbol\x12\x14\n\x0cRespinReelId\x18\n \x01(\r\x12\x10\n\x08IsChange\x18\x0b \x01(\r\x12*\n\rStatusSymbols\x18\x0c \x01(\x0b\x32\x13.pb.CoordinateArray\"\xfd\x01\n\x12\x43ollectionResponse\x12\x13\n\x0bRemainTimes\x18\x01 \x01(\r\x12\x12\n\nTotalTimes\x18\x02 \x01(\r\x12\x15\n\rCurPatternIdx\x18\x03 \x01(\r\x12\x10\n\x08Progress\x18\x04 \x01(\r\x12\x13\n\x0bMaxProgress\x18\x05 \x01(\r\x12\x13\n\x0b\x41verageBets\x18\x06 \x01(\x04\x12\x16\n\x0e\x43ollectionWins\x18\x07 \x01(\x04\x12*\n\rStatusSymbols\x18\x08 \x01(\x0b\x32\x13.pb.CoordinateArray\x12\x0e\n\x06MinBet\x18\t \x01(\x04\x12\x17\n\x0fTriggerTotalBet\x18\x0b \x01(\x04\"^\n\x10\x43ollectionStatus\x12$\n\x04\x44\x61ta\x18\x01 \x01(\x0b\x32\x16.pb.CollectionResponse\x12\x11\n\tTotalBets\x18\x02 \x01(\x04\x12\x11\n\tSpinTimes\x18\x03 \x01(\r\"y\n\x0fRespinReelExtra\x12\x15\n\rRespinReelIds\x18\x01 \x03(\r\x12#\n\x0fSymbolListExtra\x18\x02 \x03(\x0b\x32\n.pb.Symbol\x12\x14\n\x0cRespinReelId\x18\x03 \x01(\r\x12\x14\n\x0cIsReelChange\x18\x04 \x01(\x08\"\xbd\x01\n\x0eStageLeftTimes\x12\x17\n\x0fleftReSpinTimes\x18\x01 \x01(\x05\x12\x19\n\x11leftFreeSpinTimes\x18\x02 \x01(\x05\x12\x1f\n\x17leftCollectionSpinTimes\x18\x03 \x01(\x05\x12\x18\n\x10totalReSpinTimes\x18\x04 \x01(\x05\x12\x1a\n\x12totalFreeSpinTimes\x18\x05 \x01(\x05\x12 \n\x18totalCollectionSpinTimes\x18\x06 \x01(\x05\",\n\x0bPanelBackup\x12\x1d\n\tPanelData\x18\x01 \x03(\x0b\x32\n.pb.Column\"\xa1\x01\n\x08\x45ventCal\x12\x16\n\x0e\x63ollectScatter\x18\x01 \x01(\r\x12\x1b\n\x13\x63ollectRespinSymbol\x18\x02 \x01(\r\x12\x1c\n\x14\x63ollectJackpotSymbol\x18\x03 \x01(\r\x12\x12\n\nhit5OfKind\x18\x04 \x01(\r\x12\x17\n\x0ftriggerFreeSpin\x18\x05 \x01(\r\x12\x15\n\rtriggerReSpin\x18\x06 \x01(\r\"\\\n\x10PanelWeightGraph\x12\r\n\x05Wheel\x18\x01 \x01(\x04\x12\x0c\n\x04Hard\x18\x02 \x01(\x04\x12\x0c\n\x04Hell\x18\x03 \x01(\x04\x12\r\n\x05Prize\x18\x04 \x01(\x04\x12\x0e\n\x06Normal\x18\x05 \x01(\x04\"4\n\x0e\x42ingoMooStatus\x12\"\n\x04\x44\x61ta\x18\x01 \x01(\x0b\x32\x14.pb.BingoMooResponse\"\xaa\x02\n\x10\x42ingoMooResponse\x12(\n\x07\x43urType\x18\x01 \x01(\x0e\x32\x17.pb.BingoMooFeatureType\x12\x13\n\x0b\x41verageBets\x18\x02 \x01(\x04\x12\x13\n\x0b\x46\x65\x61tureWins\x18\x03 \x01(\x04\x12)\n\rBingoPanelArr\x18\x04 \x03(\x0b\x32\x12.pb.BingoPanelWrap\x12%\n\x11\x46\x65\x61tureBingoPanel\x18\x05 \x03(\x0b\x32\n.pb.Column\x12\x1b\n\x07Rewards\x18\x06 \x03(\x0b\x32\n.pb.Reward\x12\x1b\n\x05Wheel\x18\x07 \x03(\x0b\x32\x0c.pb.JPSymbol\x12\x10\n\x08Progress\x18\x08 \x01(\r\x12\x10\n\x08\x42\x65tLimit\x18\t \x01(\x04\x12\x12\n\nTriggerBet\x18\n \x01(\x04\"2\n\rFortuneStatus\x12!\n\x04\x44\x61ta\x18\x01 \x01(\x0b\x32\x13.pb.FortuneResponse\"\\\n\x0f\x46ortuneResponse\x12\x10\n\x08Progress\x18\x01 \x01(\r\x12\x13\n\x0bMaxProgress\x18\x02 \x01(\r\x12\r\n\x05Level\x18\x03 \x01(\r\x12\x13\n\x0bSymbolCount\x18\x04 \x01(\r\"\xea\x02\n\x0fPiggyBankStatus\x12\x0f\n\x07\x43urType\x18\x01 \x01(\r\x12\x10\n\x08Progress\x18\x02 \x01(\r\x12\x10\n\x08\x42\x65tLimit\x18\x03 \x01(\x04\x12\x13\n\x0b\x41verageBets\x18\x04 \x01(\x04\x12(\n\x0bStepperData\x18\x05 \x03(\x0b\x32\x13.pb.StepperProgress\x12\x13\n\x0bStepperWins\x18\x06 \x01(\x04\x12\x39\n\x08\x46reeData\x18\x07 \x01(\x0b\x32\'.pb.PiggyBankStatus.PiggyBankFreeBackup\x1a\x92\x01\n\x13PiggyBankFreeBackup\x12%\n\x11TriggerSymbolList\x18\x01 \x03(\x0b\x32\n.pb.Column\x12)\n\x15\x46reeTriggerSymbolList\x18\x02 \x03(\x0b\x32\n.pb.Column\x12\x17\n\x0f\x46reeAmountTimes\x18\x03 \x01(\r\x12\x10\n\x08\x46reeType\x18\x04 \x01(\r\"\xe0\x01\n\rGorillaStatus\x12\r\n\x05\x43oins\x18\x01 \x01(\r\x12\x10\n\x08\x46\x65\x61tureN\x18\x02 \x01(\r\x12!\n\x08ShopData\x18\x03 \x01(\x0b\x32\x0f.pb.GorillaShop\x12\x10\n\x08\x43ollectN\x18\x04 \x01(\r\x12\x13\n\x0b\x43ollectCoin\x18\x05 \x01(\r\x12+\n\x0bTriggerFrom\x18\x06 \x01(\x0e\x32\x16.pb.GorillaStatus.From\x12\x13\n\x0bLastSpinBet\x18\x07 \x01(\x04\"\"\n\x04\x46rom\x12\x0c\n\x08\x46romSpin\x10\x00\x12\x0c\n\x08\x46romShop\x10\x01\x42\x06Z\x04.;pbb\x06proto3'
+  serialized_pb=b'\n\x0bslots.proto\x12\x02pb\x1a\x1epost_purchase_protection.proto\x1a\x16slots_coordinate.proto\x1a\x13slots_jackpot.proto\x1a\x11slots_stage.proto\x1a\x10slots_util.proto\x1a\x13slots_feature.proto\"\x12\n\x10ThemeListRequest\"\xd0\x02\n\x0bPlayRequest\x12\x30\n\tOperation\x18\x01 \x01(\x0e\x32\x1d.pb.PlayRequest.OperationType\x12\x0f\n\x07ThemeID\x18\x02 \x01(\x05\x12\x10\n\x08TotalBet\x18\x03 \x01(\x04\x12\x0e\n\x06PickID\x18\x04 \x01(\r\x12\x0f\n\x07PickIDs\x18\x0e \x03(\r\x12\x0f\n\x07PickPos\x18\x05 \x01(\r\x12\x10\n\x08PickInfo\x18\x06 \x01(\t\x12#\n\x06\x63oords\x18\xe8\x07 \x01(\x0b\x32\x10.pb.CoordinateXYH\x00\x12!\n\x05index\x18\xe9\x07 \x01(\x0b\x32\x0f.pb.CoordinateXH\x00\"S\n\rOperationType\x12\x0f\n\x0bUNSPECIFIED\x10\x00\x12\x08\n\x04SPIN\x10\x01\x12\x08\n\x04PICK\x10\x02\x12\x08\n\x04GAME\x10\x03\x12\x13\n\x0f\x41\x63kStageTransit\x10\x04\x42\x0b\n\tGameInput\"~\n\x0cPlayResponse\x12!\n\x04Spin\x18\xe8\x07 \x01(\x0b\x32\x10.pb.SpinResponseH\x00\x12!\n\x04Pick\x18\xd0\x0f \x01(\x0b\x32\x10.pb.PickResponseH\x00\x12!\n\x04Game\x18\xb8\x17 \x01(\x0b\x32\x10.pb.GameResponseH\x00\x42\x05\n\x03One\" \n\x02KV\x12\x0b\n\x03Key\x18\x01 \x01(\t\x12\r\n\x05Value\x18\x02 \x01(\t\"y\n\nStopWindow\x12\x0b\n\x03Tag\x18\x01 \x01(\t\x12\x1e\n\nSymbolList\x18\x02 \x03(\x0b\x32\n.pb.Column\x12!\n\nSymbolWins\x18\x03 \x03(\x0b\x32\r.pb.SymbolWin\x12\x1b\n\x07Rewards\x18\x04 \x03(\x0b\x32\n.pb.Reward\"A\n\x07Restore\"6\n\x07Pattern\x12\x0f\n\x0bUNSPECIFIED\x10\x00\x12\x0b\n\x07Unified\x10\x01\x12\r\n\tMultiStep\x10\x02\"\xca\x0b\n\x0cSpinResponse\x12\x10\n\x08PlayerID\x18\x01 \x01(\x10\x12$\n\x0c\x43urrentStage\x18\x02 \x01(\x0e\x32\x0e.pb.Slot.Stage\x12!\n\tNextStage\x18\x03 \x01(\x0e\x32\x0e.pb.Slot.Stage\x12\x15\n\rBaseSpinTimes\x18\x04 \x01(\x04\x12#\n\x0bParentStage\x18\x05 \x01(\x0e\x32\x0e.pb.Slot.Stage\x12\x10\n\x08TotalBet\x18\x0b \x01(\x04\x12\x13\n\nAverageBet\x18\xf3\x07 \x01(\x04\x12\x0f\n\x07UnitBet\x18\x0c \x01(\x04\x12\x15\n\rBetMultiplier\x18\r \x01(\x04\x12\x16\n\x0eScatterUnitBet\x18\x0e \x01(\x04\x12\x1c\n\x14ScatterBetMultiplier\x18\x0f \x01(\x04\x12\x11\n\tPanelWins\x18\x15 \x01(\x04\x12\x13\n\x0b\x46\x65\x61tureWins\x18\x16 \x01(\x04\x12\x10\n\x08SpinWins\x18\x17 \x01(\x04\x12\x0e\n\x06PCWins\x18\x18 \x01(\x04\x12$\n\rPlayCycleWins\x18\x19 \x01(\x0b\x32\r.pb.PlayCycle\x12\x14\n\x0cSpinWinsRate\x18\x1f \x01(\x02\x12\x12\n\nPCWinsRate\x18  \x01(\x02\x12\x13\n\x0bTriggerWins\x18! \x01(\x04\x12\x13\n\x0bSessionWins\x18\" \x01(\x04\x12\x17\n\x0fSessionWinsRate\x18# \x01(\x02\x12\x1b\n\x07Rewards\x18\x64 \x03(\x0b\x32\n.pb.Reward\x12!\n\x08LineWins\x18\x65 \x03(\x0b\x32\x0f.pb.LineWinInfo\x12#\n\tMultiWays\x18\x66 \x03(\x0b\x32\x10.pb.MultiWayInfo\x12!\n\nSymbolWins\x18g \x03(\x0b\x32\r.pb.SymbolWin\x12\x1e\n\x08Jackpots\x18\xc9\x01 \x03(\x0b\x32\x0b.pb.Jackpot\x12!\n\x06Picker\x18\xca\x01 \x01(\x0b\x32\x10.pb.PickerStatus\x12\x18\n\x05\x45xtra\x18\xab\x02 \x03(\x0b\x32\x08.pb.Data\x12\x1f\n\nSymbolList\x18\xac\x02 \x03(\x0b\x32\n.pb.Column\x12 \n\x0bPanelBackup\x18\xae\x02 \x03(\x0b\x32\n.pb.Column\x12$\n\x0bStopWindows\x18\xaf\x02 \x03(\x0b\x32\x0e.pb.StopWindow\x12\x10\n\x07ThemeID\x18\xe9\x07 \x01(\x04\x12\x12\n\tSubjectID\x18\xf1\x07 \x01(\x04\x12\x11\n\x08UserBets\x18\xea\x07 \x03(\x04\x12\x14\n\x0b\x45ligibleBet\x18\xeb\x07 \x01(\x04\x12&\n\tleftTimes\x18\xec\x07 \x01(\x0b\x32\x12.pb.StageLeftTimes\x12\'\n\treelExtra\x18\xee\x07 \x01(\x0b\x32\x13.pb.RespinReelExtra\x12\x1a\n\tPlaneInfo\x18\xef\x07 \x03(\x0b\x32\x06.pb.KV\x12$\n\x06Panels\x18\xf0\x07 \x03(\x0b\x32\x13.pb.CoordinateArray\x12!\n\tStageClue\x18\xf2\x07 \x01(\x0b\x32\r.pb.StageClue\x12,\n\x0eRestorePattern\x18\xf4\x07 \x01(\x0e\x32\x13.pb.Restore.Pattern\x12-\n\ncollection\x18\xd0\x0f \x01(\x0b\x32\x16.pb.CollectionResponseH\x00\x12)\n\x08\x62ingoMoo\x18\xd1\x0f \x01(\x0b\x32\x14.pb.BingoMooResponseH\x00\x12\'\n\x07\x66ortune\x18\xd2\x0f \x01(\x0b\x32\x13.pb.FortuneResponseH\x00\x12)\n\tpiggyBank\x18\xd3\x0f \x01(\x0b\x32\x13.pb.PiggyBankStatusH\x00\x12%\n\x07gorilla\x18\xd4\x0f \x01(\x0b\x32\x11.pb.GorillaStatusH\x00\x12\'\n\x0b\x66ortuneGame\x18\xb8\x17 \x01(\x0b\x32\x0f.pb.FortuneGameH\x01\x12&\n\tChallenge\x18\xc1\xb8\x02 \x01(\x0b\x32\x11.pb.SlotChallengeB\x0c\n\nMoreStatusB\x0c\n\nGameStatus\"\x1e\n\rSlotChallenge\x12\r\n\x05names\x18\x01 \x03(\t\"N\n\x0bLastSpinRsp\x12(\n\x0eLastSpinRspArr\x18\x01 \x03(\x0b\x32\x10.pb.SpinResponse\x12\x15\n\rLastBackupBet\x18\x02 \x01(\x04\"\xe2\x03\n\x0cPickResponse\x12\x1f\n\x06Reward\x18\x01 \x01(\x0b\x32\x0f.pb.BonusReward\x12\x17\n\x05\x45xtra\x18\x02 \x03(\x0b\x32\x08.pb.Data\x12$\n\x0c\x43urrentStage\x18\x03 \x01(\x0e\x32\x0e.pb.Slot.Stage\x12!\n\tNextStage\x18\x06 \x01(\x0e\x32\x0e.pb.Slot.Stage\x12\x10\n\x08PickWins\x18h \x01(\x04\x12\x14\n\x0cPickWinsRate\x18i \x01(\x02\x12\x0e\n\x06PCWins\x18j \x01(\x04\x12\x12\n\nPCWinsRate\x18k \x01(\x02\x12\x13\n\x0bSessionWins\x18l \x01(\x04\x12\x17\n\x0fSessionWinsRate\x18m \x01(\x02\x12\x37\n\x0b\x43lientAware\x18\xac\x02 \x03(\x0b\x32!.pb.PickResponse.ClientAwareEntry\x12$\n\x0bStopWindows\x18\xad\x02 \x03(\x0b\x32\x0e.pb.StopWindow\x12\x1a\n\tPlaneInfo\x18\xae\x02 \x03(\x0b\x32\x06.pb.KV\x12&\n\tChallenge\x18\xc1\xb8\x02 \x01(\x0b\x32\x11.pb.SlotChallenge\x1a\x32\n\x10\x43lientAwareEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\"\xd4\x03\n\x0cGameResponse\x12\x10\n\x08PlayerID\x18\x01 \x01(\x10\x12$\n\x0c\x43urrentStage\x18\x02 \x01(\x0e\x32\x0e.pb.Slot.Stage\x12!\n\tNextStage\x18\x03 \x01(\x0e\x32\x0e.pb.Slot.Stage\x12\x1b\n\x07Rewards\x18\x04 \x03(\x0b\x32\n.pb.Reward\x12\x0c\n\x04Wins\x18\x05 \x01(\x04\x12\x10\n\x08TotalBet\x18\x06 \x01(\x04\x12\x1f\n\x0bPanelBackup\x18\x07 \x03(\x0b\x32\n.pb.Column\x12\x1d\n\x08Jackpots\x18\x08 \x03(\x0b\x32\x0b.pb.Jackpot\x12 \n\x08\x46reeSpin\x18\t \x01(\x0b\x32\x0e.pb.FreeStatus\x12\x1e\n\x06ReSpin\x18\n \x01(\x0b\x32\x0e.pb.FreeStatus\x12 \n\x06Picker\x18\x0b \x01(\x0b\x32\x10.pb.PickerStatus\x12\'\n\x0b\x66ortuneGame\x18\xe8\x07 \x01(\x0b\x32\x0f.pb.FortuneGameH\x00\x12)\n\x0bgorillaShop\x18\xe9\x07 \x01(\x0b\x32\x11.pb.GorillaStatusH\x00\x12&\n\tChallenge\x18\xc1\xb8\x02 \x01(\x0b\x32\x11.pb.SlotChallengeB\x0c\n\nGameStatus\"%\n\x12ThemeStatusRequest\x12\x0f\n\x07ThemeID\x18\x01 \x01(\x05\"&\n\x13ThemeRestoreRequest\x12\x0f\n\x07ThemeID\x18\x01 \x01(\x05\"*\n\x17LastSpinResponseRequest\x12\x0f\n\x07ThemeID\x18\x01 \x01(\x05\"3\n\tPlayCycle\x12\x13\n\x0bTriggerWins\x18\x01 \x01(\x04\x12\x11\n\tTotalWins\x18\x02 \x01(\x04\"J\n\tWinsPlate\x12\x1d\n\x05Stage\x18\x01 \x01(\x0e\x32\x0e.pb.Slot.Stage\x12\x0c\n\x04Wins\x18\x02 \x01(\x04\x12\x10\n\x08TotalBet\x18\x03 \x01(\x04\"o\n\tStageClue\x12 \n\x08\x46reespin\x18\x01 \x01(\x0b\x32\x0e.pb.FreeStatus\x12\x1e\n\x06Respin\x18\x02 \x01(\x0b\x32\x0e.pb.FreeStatus\x12 \n\x06Picker\x18\x03 \x01(\x0b\x32\x10.pb.PickerStatus\"\x8d\x01\n\x0cThemeRestore\x12\x36\n\tResponses\x18\x01 \x03(\x0b\x32#.pb.ThemeRestore.TaggedPlayResponse\x1a\x45\n\x12TaggedPlayResponse\x12\x0b\n\x03Tag\x18\x01 \x01(\t\x12\"\n\x08Response\x18\x02 \x01(\x0b\x32\x10.pb.PlayResponse\"\\\n\x12\x46\x65\x61tureLockingItem\x12\x0c\n\x04Name\x18\x01 \x01(\t\x12\x13\n\x0b\x42\x65tRequired\x18\x02 \x01(\x04\x12\x11\n\tGroupName\x18\x03 \x01(\t\x12\x10\n\x08GroupNum\x18\x04 \x01(\x05\"7\n\x0e\x46\x65\x61tureLocking\x12%\n\x05Items\x18\x01 \x03(\x0b\x32\x16.pb.FeatureLockingItem\"\xbc\t\n\x0bThemeStatus\x12$\n\x0c\x43urrentStage\x18\x01 \x01(\x0e\x32\x0e.pb.Slot.Stage\x12!\n\tNextStage\x18\x02 \x01(\x0e\x32\x0e.pb.Slot.Stage\x12\x0c\n\x04\x42\x65ts\x18\x03 \x03(\x04\x12 \n\x08\x46reespin\x18\x0b \x01(\x0b\x32\x0e.pb.FreeStatus\x12\x1e\n\x06Respin\x18\x0c \x01(\x0b\x32\x0e.pb.FreeStatus\x12\x1d\n\x05\x42onus\x18\x0f \x01(\x0b\x32\x0e.pb.FreeStatus\x12 \n\x06Picker\x18\r \x01(\x0b\x32\x10.pb.PickerStatus\x12\x1d\n\x05Gamer\x18\x0e \x01(\x0b\x32\x0e.pb.GameStatus\x12\x1d\n\x08Jackpots\x18\x15 \x03(\x0b\x32\x0b.pb.Jackpot\x12%\n\x08SavedPos\x18\x16 \x01(\x0b\x32\x13.pb.CoordinateArray\x12\x12\n\nMultiplier\x18\x1f \x01(\x04\x12\x15\n\rBaseSpinTimes\x18  \x01(\x04\x12\x0f\n\x07LastBet\x18! \x01(\x04\x12&\n\rLastResponses\x18\x64 \x01(\x0b\x32\x0f.pb.LastSpinRsp\x12\x17\n\x05\x45xtra\x18\x65 \x03(\x0b\x32\x08.pb.Data\x12\x30\n\x13StageSaveSymbolList\x18\x66 \x03(\x0b\x32\x13.pb.CoordinateArray\x12\'\n\x0ePanelBackupArr\x18g \x03(\x0b\x32\x0f.pb.PanelBackup\x12\x31\n\tPlainInfo\x18h \x03(\x0b\x32\x1e.pb.ThemeStatus.PlainInfoEntry\x12#\n\x06Panels\x18i \x03(\x0b\x32\x13.pb.CoordinateArray\x12\x19\n\tPlaneInfo\x18j \x03(\x0b\x32\x06.pb.KV\x12 \n\tPlayCycle\x18l \x01(\x0b\x32\r.pb.PlayCycle\x12-\n\x07Restore\x18m \x03(\x0b\x32\x1c.pb.ThemeStatus.RestoreEntry\x12 \n\tWinsChain\x18n \x03(\x0b\x32\r.pb.WinsPlate\x12*\n\x0e\x46\x65\x61tureLocking\x18o \x01(\x0b\x32\x12.pb.FeatureLocking\x12\x0f\n\x07UnitBet\x18p \x01(\x04\x12\x34\n\x13PostPurchaseProtect\x18q \x01(\x0b\x32\x17.pb.PostPurchaseProtect\x12+\n\ncollection\x18\xe8\x07 \x01(\x0b\x32\x14.pb.CollectionStatusH\x00\x12\'\n\x08\x62ingoMoo\x18\xe9\x07 \x01(\x0b\x32\x12.pb.BingoMooStatusH\x00\x12%\n\x07\x66ortune\x18\xea\x07 \x01(\x0b\x32\x11.pb.FortuneStatusH\x00\x12)\n\tpiggyBank\x18\xeb\x07 \x01(\x0b\x32\x13.pb.PiggyBankStatusH\x00\x12%\n\x07gorilla\x18\xec\x07 \x01(\x0b\x32\x11.pb.GorillaStatusH\x00\x1a\x30\n\x0ePlainInfoEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\x1a.\n\x0cRestoreEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\x0c:\x02\x38\x01\x42\x0c\n\nMoreStatus\"\xd7\x02\n\nFreeStatus\x12\x13\n\x0bRemainTimes\x18\x01 \x01(\r\x12\x12\n\nTotalTimes\x18\x02 \x01(\r\x12\x16\n\x0eTotalWinAmount\x18\x03 \x01(\x04\x12\x17\n\x0fTriggerTotalBet\x18\x04 \x01(\x04\x12%\n\x11TriggerSymbolList\x18\x05 \x03(\x0b\x32\n.pb.Column\x12$\n\x0cTriggerStage\x18\x06 \x01(\x0e\x32\x0e.pb.Slot.Stage\x12\x12\n\nTriggerWin\x18\x07 \x01(\x04\x12\x15\n\rRespinReelIds\x18\x08 \x03(\r\x12#\n\x0fSymbolListExtra\x18\t \x03(\x0b\x32\n.pb.Symbol\x12\x14\n\x0cRespinReelId\x18\n \x01(\r\x12\x10\n\x08IsChange\x18\x0b \x01(\r\x12*\n\rStatusSymbols\x18\x0c \x01(\x0b\x32\x13.pb.CoordinateArray\"\xfd\x01\n\x12\x43ollectionResponse\x12\x13\n\x0bRemainTimes\x18\x01 \x01(\r\x12\x12\n\nTotalTimes\x18\x02 \x01(\r\x12\x15\n\rCurPatternIdx\x18\x03 \x01(\r\x12\x10\n\x08Progress\x18\x04 \x01(\r\x12\x13\n\x0bMaxProgress\x18\x05 \x01(\r\x12\x13\n\x0b\x41verageBets\x18\x06 \x01(\x04\x12\x16\n\x0e\x43ollectionWins\x18\x07 \x01(\x04\x12*\n\rStatusSymbols\x18\x08 \x01(\x0b\x32\x13.pb.CoordinateArray\x12\x0e\n\x06MinBet\x18\t \x01(\x04\x12\x17\n\x0fTriggerTotalBet\x18\x0b \x01(\x04\"^\n\x10\x43ollectionStatus\x12$\n\x04\x44\x61ta\x18\x01 \x01(\x0b\x32\x16.pb.CollectionResponse\x12\x11\n\tTotalBets\x18\x02 \x01(\x04\x12\x11\n\tSpinTimes\x18\x03 \x01(\r\"y\n\x0fRespinReelExtra\x12\x15\n\rRespinReelIds\x18\x01 \x03(\r\x12#\n\x0fSymbolListExtra\x18\x02 \x03(\x0b\x32\n.pb.Symbol\x12\x14\n\x0cRespinReelId\x18\x03 \x01(\r\x12\x14\n\x0cIsReelChange\x18\x04 \x01(\x08\"\xbd\x01\n\x0eStageLeftTimes\x12\x17\n\x0fleftReSpinTimes\x18\x01 \x01(\x05\x12\x19\n\x11leftFreeSpinTimes\x18\x02 \x01(\x05\x12\x1f\n\x17leftCollectionSpinTimes\x18\x03 \x01(\x05\x12\x18\n\x10totalReSpinTimes\x18\x04 \x01(\x05\x12\x1a\n\x12totalFreeSpinTimes\x18\x05 \x01(\x05\x12 \n\x18totalCollectionSpinTimes\x18\x06 \x01(\x05\",\n\x0bPanelBackup\x12\x1d\n\tPanelData\x18\x01 \x03(\x0b\x32\n.pb.Column\"\xa1\x01\n\x08\x45ventCal\x12\x16\n\x0e\x63ollectScatter\x18\x01 \x01(\r\x12\x1b\n\x13\x63ollectRespinSymbol\x18\x02 \x01(\r\x12\x1c\n\x14\x63ollectJackpotSymbol\x18\x03 \x01(\r\x12\x12\n\nhit5OfKind\x18\x04 \x01(\r\x12\x17\n\x0ftriggerFreeSpin\x18\x05 \x01(\r\x12\x15\n\rtriggerReSpin\x18\x06 \x01(\r\"\\\n\x10PanelWeightGraph\x12\r\n\x05Wheel\x18\x01 \x01(\x04\x12\x0c\n\x04Hard\x18\x02 \x01(\x04\x12\x0c\n\x04Hell\x18\x03 \x01(\x04\x12\r\n\x05Prize\x18\x04 \x01(\x04\x12\x0e\n\x06Normal\x18\x05 \x01(\x04\"4\n\x0e\x42ingoMooStatus\x12\"\n\x04\x44\x61ta\x18\x01 \x01(\x0b\x32\x14.pb.BingoMooResponse\"\xaa\x02\n\x10\x42ingoMooResponse\x12(\n\x07\x43urType\x18\x01 \x01(\x0e\x32\x17.pb.BingoMooFeatureType\x12\x13\n\x0b\x41verageBets\x18\x02 \x01(\x04\x12\x13\n\x0b\x46\x65\x61tureWins\x18\x03 \x01(\x04\x12)\n\rBingoPanelArr\x18\x04 \x03(\x0b\x32\x12.pb.BingoPanelWrap\x12%\n\x11\x46\x65\x61tureBingoPanel\x18\x05 \x03(\x0b\x32\n.pb.Column\x12\x1b\n\x07Rewards\x18\x06 \x03(\x0b\x32\n.pb.Reward\x12\x1b\n\x05Wheel\x18\x07 \x03(\x0b\x32\x0c.pb.JPSymbol\x12\x10\n\x08Progress\x18\x08 \x01(\r\x12\x10\n\x08\x42\x65tLimit\x18\t \x01(\x04\x12\x12\n\nTriggerBet\x18\n \x01(\x04\"2\n\rFortuneStatus\x12!\n\x04\x44\x61ta\x18\x01 \x01(\x0b\x32\x13.pb.FortuneResponse\"\\\n\x0f\x46ortuneResponse\x12\x10\n\x08Progress\x18\x01 \x01(\r\x12\x13\n\x0bMaxProgress\x18\x02 \x01(\r\x12\r\n\x05Level\x18\x03 \x01(\r\x12\x13\n\x0bSymbolCount\x18\x04 \x01(\r\"\xea\x02\n\x0fPiggyBankStatus\x12\x0f\n\x07\x43urType\x18\x01 \x01(\r\x12\x10\n\x08Progress\x18\x02 \x01(\r\x12\x10\n\x08\x42\x65tLimit\x18\x03 \x01(\x04\x12\x13\n\x0b\x41verageBets\x18\x04 \x01(\x04\x12(\n\x0bStepperData\x18\x05 \x03(\x0b\x32\x13.pb.StepperProgress\x12\x13\n\x0bStepperWins\x18\x06 \x01(\x04\x12\x39\n\x08\x46reeData\x18\x07 \x01(\x0b\x32\'.pb.PiggyBankStatus.PiggyBankFreeBackup\x1a\x92\x01\n\x13PiggyBankFreeBackup\x12%\n\x11TriggerSymbolList\x18\x01 \x03(\x0b\x32\n.pb.Column\x12)\n\x15\x46reeTriggerSymbolList\x18\x02 \x03(\x0b\x32\n.pb.Column\x12\x17\n\x0f\x46reeAmountTimes\x18\x03 \x01(\r\x12\x10\n\x08\x46reeType\x18\x04 \x01(\r\"\xe0\x01\n\rGorillaStatus\x12\r\n\x05\x43oins\x18\x01 \x01(\r\x12\x10\n\x08\x46\x65\x61tureN\x18\x02 \x01(\r\x12!\n\x08ShopData\x18\x03 \x01(\x0b\x32\x0f.pb.GorillaShop\x12\x10\n\x08\x43ollectN\x18\x04 \x01(\r\x12\x13\n\x0b\x43ollectCoin\x18\x05 \x01(\r\x12+\n\x0bTriggerFrom\x18\x06 \x01(\x0e\x32\x16.pb.GorillaStatus.From\x12\x13\n\x0bLastSpinBet\x18\x07 \x01(\x04\"\"\n\x04\x46rom\x12\x0c\n\x08\x46romSpin\x10\x00\x12\x0c\n\x08\x46romShop\x10\x01\x42\x06Z\x04.;pbb\x06proto3'
   ,
-  dependencies=[slots__coordinate__pb2.DESCRIPTOR,slots__jackpot__pb2.DESCRIPTOR,slots__stage__pb2.DESCRIPTOR,slots__util__pb2.DESCRIPTOR,slots__feature__pb2.DESCRIPTOR,])
+  dependencies=[post__purchase__protection__pb2.DESCRIPTOR,slots__coordinate__pb2.DESCRIPTOR,slots__jackpot__pb2.DESCRIPTOR,slots__stage__pb2.DESCRIPTOR,slots__util__pb2.DESCRIPTOR,slots__feature__pb2.DESCRIPTOR,])
 
 
 
@@ -65,8 +66,8 @@ _PLAYREQUEST_OPERATIONTYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=383,
-  serialized_end=466,
+  serialized_start=415,
+  serialized_end=498,
 )
 _sym_db.RegisterEnumDescriptor(_PLAYREQUEST_OPERATIONTYPE)
 
@@ -95,8 +96,8 @@ _RESTORE_PATTERN = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=777,
-  serialized_end=831,
+  serialized_start=809,
+  serialized_end=863,
 )
 _sym_db.RegisterEnumDescriptor(_RESTORE_PATTERN)
 
@@ -120,8 +121,8 @@ _GORILLASTATUS_FROM = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=7581,
-  serialized_end=7615,
+  serialized_start=7667,
+  serialized_end=7701,
 )
 _sym_db.RegisterEnumDescriptor(_GORILLASTATUS_FROM)
 
@@ -146,8 +147,8 @@ _THEMELISTREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=122,
-  serialized_end=140,
+  serialized_start=154,
+  serialized_end=172,
 )
 
 
@@ -240,8 +241,8 @@ _PLAYREQUEST = _descriptor.Descriptor(
       create_key=_descriptor._internal_create_key,
     fields=[]),
   ],
-  serialized_start=143,
-  serialized_end=479,
+  serialized_start=175,
+  serialized_end=511,
 )
 
 
@@ -291,8 +292,8 @@ _PLAYRESPONSE = _descriptor.Descriptor(
       create_key=_descriptor._internal_create_key,
     fields=[]),
   ],
-  serialized_start=481,
-  serialized_end=607,
+  serialized_start=513,
+  serialized_end=639,
 )
 
 
@@ -330,8 +331,8 @@ _KV = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=609,
-  serialized_end=641,
+  serialized_start=641,
+  serialized_end=673,
 )
 
 
@@ -383,8 +384,8 @@ _STOPWINDOW = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=643,
-  serialized_end=764,
+  serialized_start=675,
+  serialized_end=796,
 )
 
 
@@ -409,8 +410,8 @@ _RESTORE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=766,
-  serialized_end=831,
+  serialized_start=798,
+  serialized_end=863,
 )
 
 
@@ -780,8 +781,8 @@ _SPINRESPONSE = _descriptor.Descriptor(
       create_key=_descriptor._internal_create_key,
     fields=[]),
   ],
-  serialized_start=834,
-  serialized_end=2316,
+  serialized_start=866,
+  serialized_end=2348,
 )
 
 
@@ -812,8 +813,8 @@ _SLOTCHALLENGE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2318,
-  serialized_end=2348,
+  serialized_start=2350,
+  serialized_end=2380,
 )
 
 
@@ -851,8 +852,8 @@ _LASTSPINRSP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2350,
-  serialized_end=2428,
+  serialized_start=2382,
+  serialized_end=2460,
 )
 
 
@@ -890,8 +891,8 @@ _PICKRESPONSE_CLIENTAWAREENTRY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2863,
-  serialized_end=2913,
+  serialized_start=2895,
+  serialized_end=2945,
 )
 
 _PICKRESPONSE = _descriptor.Descriptor(
@@ -1012,8 +1013,8 @@ _PICKRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2431,
-  serialized_end=2913,
+  serialized_start=2463,
+  serialized_end=2945,
 )
 
 
@@ -1140,8 +1141,8 @@ _GAMERESPONSE = _descriptor.Descriptor(
       create_key=_descriptor._internal_create_key,
     fields=[]),
   ],
-  serialized_start=2916,
-  serialized_end=3384,
+  serialized_start=2948,
+  serialized_end=3416,
 )
 
 
@@ -1172,8 +1173,8 @@ _THEMESTATUSREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3386,
-  serialized_end=3423,
+  serialized_start=3418,
+  serialized_end=3455,
 )
 
 
@@ -1204,8 +1205,8 @@ _THEMERESTOREREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3425,
-  serialized_end=3463,
+  serialized_start=3457,
+  serialized_end=3495,
 )
 
 
@@ -1236,8 +1237,8 @@ _LASTSPINRESPONSEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3465,
-  serialized_end=3507,
+  serialized_start=3497,
+  serialized_end=3539,
 )
 
 
@@ -1275,8 +1276,8 @@ _PLAYCYCLE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3509,
-  serialized_end=3560,
+  serialized_start=3541,
+  serialized_end=3592,
 )
 
 
@@ -1321,8 +1322,8 @@ _WINSPLATE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3562,
-  serialized_end=3636,
+  serialized_start=3594,
+  serialized_end=3668,
 )
 
 
@@ -1367,8 +1368,8 @@ _STAGECLUE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3638,
-  serialized_end=3749,
+  serialized_start=3670,
+  serialized_end=3781,
 )
 
 
@@ -1406,8 +1407,8 @@ _THEMERESTORE_TAGGEDPLAYRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3824,
-  serialized_end=3893,
+  serialized_start=3856,
+  serialized_end=3925,
 )
 
 _THEMERESTORE = _descriptor.Descriptor(
@@ -1437,8 +1438,8 @@ _THEMERESTORE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3752,
-  serialized_end=3893,
+  serialized_start=3784,
+  serialized_end=3925,
 )
 
 
@@ -1490,8 +1491,8 @@ _FEATURELOCKINGITEM = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3895,
-  serialized_end=3987,
+  serialized_start=3927,
+  serialized_end=4019,
 )
 
 
@@ -1522,8 +1523,8 @@ _FEATURELOCKING = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3989,
-  serialized_end=4044,
+  serialized_start=4021,
+  serialized_end=4076,
 )
 
 
@@ -1561,8 +1562,8 @@ _THEMESTATUS_PLAININFOENTRY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5095,
-  serialized_end=5143,
+  serialized_start=5181,
+  serialized_end=5229,
 )
 
 _THEMESTATUS_RESTOREENTRY = _descriptor.Descriptor(
@@ -1599,8 +1600,8 @@ _THEMESTATUS_RESTOREENTRY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5145,
-  serialized_end=5191,
+  serialized_start=5231,
+  serialized_end=5277,
 )
 
 _THEMESTATUS = _descriptor.Descriptor(
@@ -1787,35 +1788,42 @@ _THEMESTATUS = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='collection', full_name='pb.ThemeStatus.collection', index=25,
+      name='PostPurchaseProtect', full_name='pb.ThemeStatus.PostPurchaseProtect', index=25,
+      number=113, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='collection', full_name='pb.ThemeStatus.collection', index=26,
       number=1000, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='bingoMoo', full_name='pb.ThemeStatus.bingoMoo', index=26,
+      name='bingoMoo', full_name='pb.ThemeStatus.bingoMoo', index=27,
       number=1001, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='fortune', full_name='pb.ThemeStatus.fortune', index=27,
+      name='fortune', full_name='pb.ThemeStatus.fortune', index=28,
       number=1002, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='piggyBank', full_name='pb.ThemeStatus.piggyBank', index=28,
+      name='piggyBank', full_name='pb.ThemeStatus.piggyBank', index=29,
       number=1003, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='gorilla', full_name='pb.ThemeStatus.gorilla', index=29,
+      name='gorilla', full_name='pb.ThemeStatus.gorilla', index=30,
       number=1004, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
@@ -1838,8 +1846,8 @@ _THEMESTATUS = _descriptor.Descriptor(
       create_key=_descriptor._internal_create_key,
     fields=[]),
   ],
-  serialized_start=4047,
-  serialized_end=5205,
+  serialized_start=4079,
+  serialized_end=5291,
 )
 
 
@@ -1947,8 +1955,8 @@ _FREESTATUS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5208,
-  serialized_end=5551,
+  serialized_start=5294,
+  serialized_end=5637,
 )
 
 
@@ -2042,8 +2050,8 @@ _COLLECTIONRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5554,
-  serialized_end=5807,
+  serialized_start=5640,
+  serialized_end=5893,
 )
 
 
@@ -2088,8 +2096,8 @@ _COLLECTIONSTATUS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5809,
-  serialized_end=5903,
+  serialized_start=5895,
+  serialized_end=5989,
 )
 
 
@@ -2141,8 +2149,8 @@ _RESPINREELEXTRA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5905,
-  serialized_end=6026,
+  serialized_start=5991,
+  serialized_end=6112,
 )
 
 
@@ -2208,8 +2216,8 @@ _STAGELEFTTIMES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6029,
-  serialized_end=6218,
+  serialized_start=6115,
+  serialized_end=6304,
 )
 
 
@@ -2240,8 +2248,8 @@ _PANELBACKUP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6220,
-  serialized_end=6264,
+  serialized_start=6306,
+  serialized_end=6350,
 )
 
 
@@ -2307,8 +2315,8 @@ _EVENTCAL = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6267,
-  serialized_end=6428,
+  serialized_start=6353,
+  serialized_end=6514,
 )
 
 
@@ -2367,8 +2375,8 @@ _PANELWEIGHTGRAPH = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6430,
-  serialized_end=6522,
+  serialized_start=6516,
+  serialized_end=6608,
 )
 
 
@@ -2399,8 +2407,8 @@ _BINGOMOOSTATUS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6524,
-  serialized_end=6576,
+  serialized_start=6610,
+  serialized_end=6662,
 )
 
 
@@ -2494,8 +2502,8 @@ _BINGOMOORESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6579,
-  serialized_end=6877,
+  serialized_start=6665,
+  serialized_end=6963,
 )
 
 
@@ -2526,8 +2534,8 @@ _FORTUNESTATUS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6879,
-  serialized_end=6929,
+  serialized_start=6965,
+  serialized_end=7015,
 )
 
 
@@ -2579,8 +2587,8 @@ _FORTUNERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6931,
-  serialized_end=7023,
+  serialized_start=7017,
+  serialized_end=7109,
 )
 
 
@@ -2632,8 +2640,8 @@ _PIGGYBANKSTATUS_PIGGYBANKFREEBACKUP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=7242,
-  serialized_end=7388,
+  serialized_start=7328,
+  serialized_end=7474,
 )
 
 _PIGGYBANKSTATUS = _descriptor.Descriptor(
@@ -2705,8 +2713,8 @@ _PIGGYBANKSTATUS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=7026,
-  serialized_end=7388,
+  serialized_start=7112,
+  serialized_end=7474,
 )
 
 
@@ -2780,8 +2788,8 @@ _GORILLASTATUS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=7391,
-  serialized_end=7615,
+  serialized_start=7477,
+  serialized_end=7701,
 )
 
 _PLAYREQUEST.fields_by_name['Operation'].enum_type = _PLAYREQUEST_OPERATIONTYPE
@@ -2912,6 +2920,7 @@ _THEMESTATUS.fields_by_name['PlayCycle'].message_type = _PLAYCYCLE
 _THEMESTATUS.fields_by_name['Restore'].message_type = _THEMESTATUS_RESTOREENTRY
 _THEMESTATUS.fields_by_name['WinsChain'].message_type = _WINSPLATE
 _THEMESTATUS.fields_by_name['FeatureLocking'].message_type = _FEATURELOCKING
+_THEMESTATUS.fields_by_name['PostPurchaseProtect'].message_type = post__purchase__protection__pb2._POSTPURCHASEPROTECT
 _THEMESTATUS.fields_by_name['collection'].message_type = _COLLECTIONSTATUS
 _THEMESTATUS.fields_by_name['bingoMoo'].message_type = _BINGOMOOSTATUS
 _THEMESTATUS.fields_by_name['fortune'].message_type = _FORTUNESTATUS

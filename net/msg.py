@@ -73,6 +73,20 @@ def make_pick_req(player_id, token, theme_id, bet, x, y = -1):
 
     return req
 
+def make_game_req(player_id, token, theme_id, bet, x, y = -1):
+    req, request = make_multi_req(player_id, token)
+
+    request.Play.Operation = pb.PlayRequest.OperationType.GAME
+    request.Play.ThemeID = theme_id
+    request.Play.TotalBet = bet
+    request.Play.PickID = x
+    request.Play.PickPos = 0
+    request.Play.PickInfo = ""
+
+    request.Play.index.X = x
+
+    return req
+
 def make_multi_rsp(data):
     rsp = pb.BunchResponse()
     rsp.ParseFromString(data)

@@ -23,6 +23,7 @@ piggy_supper = "eval FeatureProgress_9"
 
 piggy_stepper = "panels 18_14_14_19_14_14_20_14_14_21_14_14_22_14_14|23_2_23_23_2_23_23_2_23"
 pg_yue = "panels 18_18_18_19_19_19_20_20_20_21_21_21_22_22_22"
+pg_yq = "panel 7,8,8,7,7,9,6,6,6,6,6,6,6,6,6"
 
 
 def run(player):
@@ -32,7 +33,7 @@ def run(player):
 
     # player.send_gm(piggy_free)
     # player.send_cmd(piggy_supper)
-    # player.send_cmd(pg_yue)
+    player.send_cmd(pg_yq)
 
     # player.send_cmd(theme.cheat_6)
     # player.send_cmd(piggy_stepper)

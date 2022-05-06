@@ -26,23 +26,31 @@ def run(player):
 
     # player.send_cmd(add_money)
     # player.send_cmd(test_gm)
+    # player.send_cmd("freeme")
 
     # player.send_gm(add_money)
     # player.spin()
-    player.pick(0)
+    # player.pick(0)
 
+
+    # player.send_gm(jackpot)
     # player.send_gm(enter_pick)
     # player.spin()
     # player.pick(0)
+    # player.serials_game(jp_arr)
 
-    # player.spin_to_base()
-    player.spin()
+    player.spin_to_base()
+    # player.spin()
     # player.spin_times(3)
 
   
     # player.send_cmd(demon_panelgroup)
     pass
 
+jp_arr = [0,1,2,3,4,5,6,7,8]
+# jp_arr = [9]
+
+jackpot = "gm:0_0|0_0_0;7_1000|1;7_1000|4_1_3_2_4_4_2_1_1_3_2_3"
 add_money = "add coin 9999999"
 enter_pick = "2_200|4;"
 test_gm = "gm:2_200|2;1_100|2_3_7"

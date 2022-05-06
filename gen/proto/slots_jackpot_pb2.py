@@ -19,10 +19,40 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'Z\004.;pb',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x13slots_jackpot.proto\x12\x02pb\"v\n\x07Jackpot\x12\r\n\x05Level\x18\x02 \x01(\x05\x12\x0f\n\x07Startup\x18\x03 \x01(\x04\x12\x13\n\x0bProgressive\x18\x04 \x01(\x04\x12\r\n\x05Start\x18\x05 \x01(\x03\x12\x0b\n\x03\x45nd\x18\x06 \x01(\x03\x12\x0c\n\x04\x44\x65sc\x18\x07 \x01(\t\x12\x0c\n\x04Rate\x18\x08 \x01(\x04\"u\n\x0eJackpotSyncing\x1a\'\n\x07Request\x12\x0f\n\x07ThemeID\x18\x01 \x01(\x05\x12\x0b\n\x03Now\x18\x02 \x01(\x03\x1a:\n\x08Response\x12\x0f\n\x07ThemeID\x18\x01 \x01(\x05\x12\x1d\n\x08Jackpots\x18\x65 \x03(\x0b\x32\x0b.pb.JackpotB\x06Z\x04.;pbb\x06proto3'
+  serialized_pb=b'\n\x13slots_jackpot.proto\x12\x02pb\"v\n\x07Jackpot\x12\r\n\x05Level\x18\x02 \x01(\x05\x12\x0f\n\x07Startup\x18\x03 \x01(\x04\x12\x13\n\x0bProgressive\x18\x04 \x01(\x04\x12\r\n\x05Start\x18\x05 \x01(\x03\x12\x0b\n\x03\x45nd\x18\x06 \x01(\x03\x12\x0c\n\x04\x44\x65sc\x18\x07 \x01(\t\x12\x0c\n\x04Rate\x18\x08 \x01(\x04\"\xf4\x01\n\x0eJackpotSyncing\x1a\x45\n\x07Request\x12\x0f\n\x07ThemeID\x18\x01 \x01(\x05\x12)\n\x04\x46lag\x18\x02 \x01(\x0e\x32\x1b.pb.JackpotSyncing.EnumFlag\x1a\x65\n\x08Response\x12\x0f\n\x07ThemeID\x18\x01 \x01(\x05\x12)\n\x04\x46lag\x18\x02 \x01(\x0e\x32\x1b.pb.JackpotSyncing.EnumFlag\x12\x1d\n\x08Jackpots\x18\x65 \x03(\x0b\x32\x0b.pb.Jackpot\"4\n\x08\x45numFlag\x12\x0f\n\x0bUnspecified\x10\x00\x12\t\n\x05\x45nter\x10\x01\x12\x0c\n\x08\x43ontinue\x10\x02\x42\x06Z\x04.;pbb\x06proto3'
 )
 
 
+
+_JACKPOTSYNCING_ENUMFLAG = _descriptor.EnumDescriptor(
+  name='EnumFlag',
+  full_name='pb.JackpotSyncing.EnumFlag',
+  filename=None,
+  file=DESCRIPTOR,
+  create_key=_descriptor._internal_create_key,
+  values=[
+    _descriptor.EnumValueDescriptor(
+      name='Unspecified', index=0, number=0,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='Enter', index=1, number=1,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='Continue', index=2, number=2,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+  ],
+  containing_type=None,
+  serialized_options=None,
+  serialized_start=340,
+  serialized_end=392,
+)
+_sym_db.RegisterEnumDescriptor(_JACKPOTSYNCING_ENUMFLAG)
 
 
 _JACKPOT = _descriptor.Descriptor(
@@ -115,8 +145,8 @@ _JACKPOTSYNCING_REQUEST = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='Now', full_name='pb.JackpotSyncing.Request.Now', index=1,
-      number=2, type=3, cpp_type=2, label=1,
+      name='Flag', full_name='pb.JackpotSyncing.Request.Flag', index=1,
+      number=2, type=14, cpp_type=8, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -133,8 +163,8 @@ _JACKPOTSYNCING_REQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=165,
-  serialized_end=204,
+  serialized_start=166,
+  serialized_end=235,
 )
 
 _JACKPOTSYNCING_RESPONSE = _descriptor.Descriptor(
@@ -153,7 +183,14 @@ _JACKPOTSYNCING_RESPONSE = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='Jackpots', full_name='pb.JackpotSyncing.Response.Jackpots', index=1,
+      name='Flag', full_name='pb.JackpotSyncing.Response.Flag', index=1,
+      number=2, type=14, cpp_type=8, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='Jackpots', full_name='pb.JackpotSyncing.Response.Jackpots', index=2,
       number=101, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
@@ -171,8 +208,8 @@ _JACKPOTSYNCING_RESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=206,
-  serialized_end=264,
+  serialized_start=237,
+  serialized_end=338,
 )
 
 _JACKPOTSYNCING = _descriptor.Descriptor(
@@ -188,6 +225,7 @@ _JACKPOTSYNCING = _descriptor.Descriptor(
   ],
   nested_types=[_JACKPOTSYNCING_REQUEST, _JACKPOTSYNCING_RESPONSE, ],
   enum_types=[
+    _JACKPOTSYNCING_ENUMFLAG,
   ],
   serialized_options=None,
   is_extendable=False,
@@ -195,13 +233,16 @@ _JACKPOTSYNCING = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=147,
-  serialized_end=264,
+  serialized_start=148,
+  serialized_end=392,
 )
 
+_JACKPOTSYNCING_REQUEST.fields_by_name['Flag'].enum_type = _JACKPOTSYNCING_ENUMFLAG
 _JACKPOTSYNCING_REQUEST.containing_type = _JACKPOTSYNCING
+_JACKPOTSYNCING_RESPONSE.fields_by_name['Flag'].enum_type = _JACKPOTSYNCING_ENUMFLAG
 _JACKPOTSYNCING_RESPONSE.fields_by_name['Jackpots'].message_type = _JACKPOT
 _JACKPOTSYNCING_RESPONSE.containing_type = _JACKPOTSYNCING
+_JACKPOTSYNCING_ENUMFLAG.containing_type = _JACKPOTSYNCING
 DESCRIPTOR.message_types_by_name['Jackpot'] = _JACKPOT
 DESCRIPTOR.message_types_by_name['JackpotSyncing'] = _JACKPOTSYNCING
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)

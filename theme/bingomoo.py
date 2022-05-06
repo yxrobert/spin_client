@@ -60,7 +60,7 @@ def run_mege(player):
     # player.send_cmd(chain)
     # average bet
     # player.select_bet(200000)
-    player.spin()
+    # player.spin()
     # player.select_bet(20000)
     # player.spin_times(1)
 
@@ -70,19 +70,20 @@ def run_mege(player):
     # player.spin_to_base()
     # player.spin()
 
+    # player.send_cmd("freeme")
+    player.send_gm(bingomoo_free)
     # player.send_cmd(bingomoo_mega)
-    # player.send_cmd(bingomoo_supper)
-    # player.send_gm(bingomoo_free)
-    # player.spin()
+    player.send_cmd(bingomoo_supper)
+    player.spin()
     # player.spin_to_next_stage()
 
     # player.spin_to_base()
     pass
 
 def run(player):
-    player.select_bet(20000)
-    # player.spin()
-    player.spin_to_next_stage()
+    # player.select_bet(20000)
+    player.spin()
+    # player.spin_to_next_stage()
     # player.spin_to_base()
 
     # player.send_gm(bingomoo_free)
