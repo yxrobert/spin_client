@@ -19,7 +19,7 @@ class TrainRobot(SpinRobot):
         pass
 
 def run(player):
-    player.select_bet(2000000)
+    player.select_bet(160000000000)
 
     # player.send_cmd(cheat_12)
     # player.spin_to_next_stage()

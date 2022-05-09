@@ -46,23 +46,24 @@ def fakeTIme():
     Sender.send_timefake("11111")
 
 def run(player):
-    player.send_cmd(add_money)
+    # player.send_cmd(add_money)
     # player.send_cmd(free_me)
     
     # player.send_cmd(coin_cmd)
     # player.send_cmd(level_cmd)
+    # player.send_cmd(lv10_cmd)
     # player.send_cmd(dice_cmd)
     # player.send_cmd(bingoball_cmd)
     # player.send_cmd(gmnow)
     # player.send_cmd(journey_roll)
     
-    # player.req_activity_list()
+    player.req_activity_list()
 
     act_id = 1
     # player.req_activity_user_data(act_id)
     # for i in range(0, 10):
         # player.req_activity_play(act_id)
-    player.req_activity_play(act_id)
+    # player.req_activity_play(act_id)
 
     # player.send_cmd(dice_cmd)
     # player.send_cmd(journey)
@@ -84,6 +85,7 @@ journey = "journey 0,100"
 journey_roll = "jroll 50"
 dice_cmd = "add dice 999999"
 level_cmd = "add level 100"
+lv10_cmd = "add level 10"
 coin_cmd = "add coin 999999"
 bingoball_cmd = "add bingoBall 999999"
 mock_time="st:2022-04-09 14:02:00"

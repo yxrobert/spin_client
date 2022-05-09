@@ -53,6 +53,7 @@ bingomoo_free = "0_0|2_3_15"
 bingomoo_free_cmd = "gm:0_0|2_3_15"
 bingomoo_mega = "eval FeatureProgress_11"
 bingomoo_supper = "eval FeatureProgress_17"
+bm_cmd="gm:cmd:bmf 11:0_0|0_3_15"
 
 chain = "chain"
 
@@ -71,13 +72,15 @@ def run_mege(player):
     # player.spin()
 
     # player.send_cmd("freeme")
-    player.send_gm(bingomoo_free)
+    # player.send_gm(bingomoo_free)
     # player.send_cmd(bingomoo_mega)
-    player.send_cmd(bingomoo_supper)
-    player.spin()
+    # player.send_cmd(bingomoo_supper)
+
+    player.send_cmd(bm_cmd)
+    # player.spin()
     # player.spin_to_next_stage()
 
-    # player.spin_to_base()
+    player.spin_to_base()
     pass
 
 def run(player):
