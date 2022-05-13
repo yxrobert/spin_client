@@ -10,3 +10,4 @@ from fortune import *
 from genie import *
 from potoluck import *
 from hook import *
+from cardgathering import *

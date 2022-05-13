@@ -93,7 +93,11 @@ class RobotBase:
 
     def req_activity_play(self, uid):
         req = make_activity_play_req(self.player_id, self.token, uid)
-        self.send_packet(req)  
+        self.send_packet(req)
+
+    def req_cardgathering_data(self, season):
+        req = make_cardgathering_data_req(self.player_id, self.token, season)
+        self.send_packet(req)
 
     def on_response(self, packet):
         if packet.Error != None:

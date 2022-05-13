@@ -139,6 +139,12 @@ def make_activity_play_req(player_id, token, uid):
     return req
 
 
+def make_cardgathering_data_req(player_id, token, season):
+    req, request = make_multi_req(player_id, token)
+    request.CardGathering.UserData.Season = season
+    return req
+
+
 def main():
     req = make_play_req()
     print(req)

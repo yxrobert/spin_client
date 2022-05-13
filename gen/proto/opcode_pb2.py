@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'Z\004.;pb',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x0copcode.proto\x12\x02pb*\xe7\x01\n\x06OpCode\x12\x0f\n\x0bOpResult_OK\x10\x00\x12\x10\n\x0cOpResult_Err\x10\x01\x12\x1e\n\x1aOpResult_Request_Param_Err\x10\x02\x12\x1b\n\x17OpResult_NotEnough_Coin\x10\x14\x12\x1b\n\x17OpResult_NotEnough_Dice\x10\x15\x12 \n\x1cOpResult_NotEnough_BingoBall\x10\x16\x12\x1f\n\x1bOpResult_Activity_Not_Exist\x10\x64\x12\x1d\n\x19OpResult_Activity_Req_Err\x10\x65\x42\x06Z\x04.;pbb\x06proto3'
+  serialized_pb=b'\n\x0copcode.proto\x12\x02pb\"7\n\x08OpResult\x12\x1a\n\x06OpCode\x18\x01 \x01(\x0e\x32\n.pb.OpCode\x12\x0f\n\x07\x43ontent\x18\x02 \x01(\t*\xe7\x01\n\x06OpCode\x12\x0f\n\x0bOpResult_OK\x10\x00\x12\x10\n\x0cOpResult_Err\x10\x01\x12\x1e\n\x1aOpResult_Request_Param_Err\x10\x02\x12\x1b\n\x17OpResult_NotEnough_Coin\x10\x14\x12\x1b\n\x17OpResult_NotEnough_Dice\x10\x15\x12 \n\x1cOpResult_NotEnough_BingoBall\x10\x16\x12\x1f\n\x1bOpResult_Activity_Not_Exist\x10\x64\x12\x1d\n\x19OpResult_Activity_Req_Err\x10\x65\x42\x06Z\x04.;pbb\x06proto3'
 )
 
 _OPCODE = _descriptor.EnumDescriptor(
@@ -73,8 +73,8 @@ _OPCODE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=21,
-  serialized_end=252,
+  serialized_start=78,
+  serialized_end=309,
 )
 _sym_db.RegisterEnumDescriptor(_OPCODE)
 
@@ -89,8 +89,56 @@ OpResult_Activity_Not_Exist = 100
 OpResult_Activity_Req_Err = 101
 
 
+
+_OPRESULT = _descriptor.Descriptor(
+  name='OpResult',
+  full_name='pb.OpResult',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='OpCode', full_name='pb.OpResult.OpCode', index=0,
+      number=1, type=14, cpp_type=8, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='Content', full_name='pb.OpResult.Content', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=20,
+  serialized_end=75,
+)
+
+_OPRESULT.fields_by_name['OpCode'].enum_type = _OPCODE
+DESCRIPTOR.message_types_by_name['OpResult'] = _OPRESULT
 DESCRIPTOR.enum_types_by_name['OpCode'] = _OPCODE
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
+
+OpResult = _reflection.GeneratedProtocolMessageType('OpResult', (_message.Message,), {
+  'DESCRIPTOR' : _OPRESULT,
+  '__module__' : 'opcode_pb2'
+  # @@protoc_insertion_point(class_scope:pb.OpResult)
+  })
+_sym_db.RegisterMessage(OpResult)
 
 
 DESCRIPTOR._options = None

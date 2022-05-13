@@ -11,7 +11,6 @@ from google.protobuf import symbol_database as _symbol_database
 _sym_db = _symbol_database.Default()
 
 
-import award_pb2 as award__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
@@ -20,41 +19,10 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'Z\004.;pb',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x12login_reward.proto\x12\x02pb\x1a\x0b\x61ward.proto\"\x84\x01\n\x0eReqLoginReward\x12\x0c\n\x04\x44\x61te\x18\x01 \x01(\t\x12-\n\x06\x41\x63tion\x18\x02 \x01(\x0e\x32\x1d.pb.ReqLoginReward.ActionEnum\"5\n\nActionEnum\x12\x0f\n\x0bUNSPECIFIED\x10\x00\x12\t\n\x05\x43heck\x10\x01\x12\x0b\n\x07\x43ollect\x10\x02\"Q\n\x0bLoginReward\x12&\n\x06Source\x18\x01 \x01(\x0e\x32\x16.pb.AwardInfo.AwardSRC\x12\x0b\n\x03Hit\x18\x02 \x01(\x08\x12\r\n\x05\x45xtra\x18\n \x01(\t\"1\n\x0eRspLoginReward\x12\x1f\n\x06Reward\x18\x01 \x01(\x0b\x32\x0f.pb.LoginRewardB\x06Z\x04.;pbb\x06proto3'
-  ,
-  dependencies=[award__pb2.DESCRIPTOR,])
-
-
-
-_REQLOGINREWARD_ACTIONENUM = _descriptor.EnumDescriptor(
-  name='ActionEnum',
-  full_name='pb.ReqLoginReward.ActionEnum',
-  filename=None,
-  file=DESCRIPTOR,
-  create_key=_descriptor._internal_create_key,
-  values=[
-    _descriptor.EnumValueDescriptor(
-      name='UNSPECIFIED', index=0, number=0,
-      serialized_options=None,
-      type=None,
-      create_key=_descriptor._internal_create_key),
-    _descriptor.EnumValueDescriptor(
-      name='Check', index=1, number=1,
-      serialized_options=None,
-      type=None,
-      create_key=_descriptor._internal_create_key),
-    _descriptor.EnumValueDescriptor(
-      name='Collect', index=2, number=2,
-      serialized_options=None,
-      type=None,
-      create_key=_descriptor._internal_create_key),
-  ],
-  containing_type=None,
-  serialized_options=None,
-  serialized_start=119,
-  serialized_end=172,
+  serialized_pb=b'\n\x12login_reward.proto\x12\x02pb\"F\n\x0eReqLoginReward\x12-\n\rCliVerUpAward\x18\x01 \x01(\x0b\x32\x14.pb.CliVerUpAwardReqH\x00\x42\x05\n\x03one\"F\n\x0eRspLoginReward\x12-\n\rCliVerUpAward\x18\x01 \x01(\x0b\x32\x14.pb.CliVerUpAwardRspH\x00\x42\x05\n\x03one\"\x12\n\x10\x43liVerUpAwardReq\"\x12\n\x10\x43liVerUpAwardRspB\x06Z\x04.;pbb\x06proto3'
 )
-_sym_db.RegisterEnumDescriptor(_REQLOGINREWARD_ACTIONENUM)
+
+
 
 
 _REQLOGINREWARD = _descriptor.Descriptor(
@@ -66,93 +34,7 @@ _REQLOGINREWARD = _descriptor.Descriptor(
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='Date', full_name='pb.ReqLoginReward.Date', index=0,
-      number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='Action', full_name='pb.ReqLoginReward.Action', index=1,
-      number=2, type=14, cpp_type=8, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-    _REQLOGINREWARD_ACTIONENUM,
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=40,
-  serialized_end=172,
-)
-
-
-_LOGINREWARD = _descriptor.Descriptor(
-  name='LoginReward',
-  full_name='pb.LoginReward',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  create_key=_descriptor._internal_create_key,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='Source', full_name='pb.LoginReward.Source', index=0,
-      number=1, type=14, cpp_type=8, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='Hit', full_name='pb.LoginReward.Hit', index=1,
-      number=2, type=8, cpp_type=7, label=1,
-      has_default_value=False, default_value=False,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='Extra', full_name='pb.LoginReward.Extra', index=2,
-      number=10, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=174,
-  serialized_end=255,
-)
-
-
-_RSPLOGINREWARD = _descriptor.Descriptor(
-  name='RspLoginReward',
-  full_name='pb.RspLoginReward',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  create_key=_descriptor._internal_create_key,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='Reward', full_name='pb.RspLoginReward.Reward', index=0,
+      name='CliVerUpAward', full_name='pb.ReqLoginReward.CliVerUpAward', index=0,
       number=1, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
@@ -169,18 +51,115 @@ _RSPLOGINREWARD = _descriptor.Descriptor(
   syntax='proto3',
   extension_ranges=[],
   oneofs=[
+    _descriptor.OneofDescriptor(
+      name='one', full_name='pb.ReqLoginReward.one',
+      index=0, containing_type=None,
+      create_key=_descriptor._internal_create_key,
+    fields=[]),
   ],
-  serialized_start=257,
-  serialized_end=306,
+  serialized_start=26,
+  serialized_end=96,
 )
 
-_REQLOGINREWARD.fields_by_name['Action'].enum_type = _REQLOGINREWARD_ACTIONENUM
-_REQLOGINREWARD_ACTIONENUM.containing_type = _REQLOGINREWARD
-_LOGINREWARD.fields_by_name['Source'].enum_type = award__pb2._AWARDINFO_AWARDSRC
-_RSPLOGINREWARD.fields_by_name['Reward'].message_type = _LOGINREWARD
+
+_RSPLOGINREWARD = _descriptor.Descriptor(
+  name='RspLoginReward',
+  full_name='pb.RspLoginReward',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='CliVerUpAward', full_name='pb.RspLoginReward.CliVerUpAward', index=0,
+      number=1, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+    _descriptor.OneofDescriptor(
+      name='one', full_name='pb.RspLoginReward.one',
+      index=0, containing_type=None,
+      create_key=_descriptor._internal_create_key,
+    fields=[]),
+  ],
+  serialized_start=98,
+  serialized_end=168,
+)
+
+
+_CLIVERUPAWARDREQ = _descriptor.Descriptor(
+  name='CliVerUpAwardReq',
+  full_name='pb.CliVerUpAwardReq',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=170,
+  serialized_end=188,
+)
+
+
+_CLIVERUPAWARDRSP = _descriptor.Descriptor(
+  name='CliVerUpAwardRsp',
+  full_name='pb.CliVerUpAwardRsp',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=190,
+  serialized_end=208,
+)
+
+_REQLOGINREWARD.fields_by_name['CliVerUpAward'].message_type = _CLIVERUPAWARDREQ
+_REQLOGINREWARD.oneofs_by_name['one'].fields.append(
+  _REQLOGINREWARD.fields_by_name['CliVerUpAward'])
+_REQLOGINREWARD.fields_by_name['CliVerUpAward'].containing_oneof = _REQLOGINREWARD.oneofs_by_name['one']
+_RSPLOGINREWARD.fields_by_name['CliVerUpAward'].message_type = _CLIVERUPAWARDRSP
+_RSPLOGINREWARD.oneofs_by_name['one'].fields.append(
+  _RSPLOGINREWARD.fields_by_name['CliVerUpAward'])
+_RSPLOGINREWARD.fields_by_name['CliVerUpAward'].containing_oneof = _RSPLOGINREWARD.oneofs_by_name['one']
 DESCRIPTOR.message_types_by_name['ReqLoginReward'] = _REQLOGINREWARD
-DESCRIPTOR.message_types_by_name['LoginReward'] = _LOGINREWARD
 DESCRIPTOR.message_types_by_name['RspLoginReward'] = _RSPLOGINREWARD
+DESCRIPTOR.message_types_by_name['CliVerUpAwardReq'] = _CLIVERUPAWARDREQ
+DESCRIPTOR.message_types_by_name['CliVerUpAwardRsp'] = _CLIVERUPAWARDRSP
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 ReqLoginReward = _reflection.GeneratedProtocolMessageType('ReqLoginReward', (_message.Message,), {
@@ -190,19 +169,26 @@ ReqLoginReward = _reflection.GeneratedProtocolMessageType('ReqLoginReward', (_me
   })
 _sym_db.RegisterMessage(ReqLoginReward)
 
-LoginReward = _reflection.GeneratedProtocolMessageType('LoginReward', (_message.Message,), {
-  'DESCRIPTOR' : _LOGINREWARD,
-  '__module__' : 'login_reward_pb2'
-  # @@protoc_insertion_point(class_scope:pb.LoginReward)
-  })
-_sym_db.RegisterMessage(LoginReward)
-
 RspLoginReward = _reflection.GeneratedProtocolMessageType('RspLoginReward', (_message.Message,), {
   'DESCRIPTOR' : _RSPLOGINREWARD,
   '__module__' : 'login_reward_pb2'
   # @@protoc_insertion_point(class_scope:pb.RspLoginReward)
   })
 _sym_db.RegisterMessage(RspLoginReward)
+
+CliVerUpAwardReq = _reflection.GeneratedProtocolMessageType('CliVerUpAwardReq', (_message.Message,), {
+  'DESCRIPTOR' : _CLIVERUPAWARDREQ,
+  '__module__' : 'login_reward_pb2'
+  # @@protoc_insertion_point(class_scope:pb.CliVerUpAwardReq)
+  })
+_sym_db.RegisterMessage(CliVerUpAwardReq)
+
+CliVerUpAwardRsp = _reflection.GeneratedProtocolMessageType('CliVerUpAwardRsp', (_message.Message,), {
+  'DESCRIPTOR' : _CLIVERUPAWARDRSP,
+  '__module__' : 'login_reward_pb2'
+  # @@protoc_insertion_point(class_scope:pb.CliVerUpAwardRsp)
+  })
+_sym_db.RegisterMessage(CliVerUpAwardRsp)
 
 
 DESCRIPTOR._options = None
