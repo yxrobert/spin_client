@@ -115,6 +115,8 @@ class RobotBase:
                 self.on_play(r.Play)
             elif r.HasField("Activity"):
                 self.on_activity(r.Activity)
+            elif r.HasField("CardGathering"):
+                self.on_cardgathering(r.CardGathering)
                 pass
         
         self.log("Awards", packet.Multi.Awards)
@@ -142,6 +144,9 @@ class RobotBase:
         pass
 
     def on_activity(self, packet):
+        self.log(packet)
+
+    def on_cardgathering(self, packet):
         self.log(packet)
 
 
