@@ -103,11 +103,11 @@ class RobotBase:
         req = make_cardgathering_exchange_req(self.player_id, self.token, src, dest)
         self.send_packet(req)
 
-    def req_cardgathering_break(self, src, level, card_list):
+    def req_cardgathering_break(self, level, card_list):
         req = make_cardgathering_break_req(self.player_id, self.token, level, card_list)
         self.send_packet(req)
 
-    def req_cardgathering_reset(self, src):
+    def req_cardgathering_reset(self):
         req = make_cardgathering_reset_req(self.player_id, self.token)
         self.send_packet(req)
 

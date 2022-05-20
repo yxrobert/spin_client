@@ -155,7 +155,11 @@ def make_cardgathering_exchange_req(player_id, token, src, dest):
 def make_cardgathering_break_req(player_id, token, level, card_list):
     req, request = make_multi_req(player_id, token)
     request.CardGathering.BreakCard.Level = level
-    request.CardGathering.BreakCard.CostCards = card_list
+    request.CardGathering.BreakCard.CostCards.extend(card_list)
+    
+    # for c in card_list:
+    #     card = request.CardGathering.BreakCard.CostCards.add()
+    #     card = c
     return req
 
 

@@ -46,6 +46,7 @@ def fakeTIme():
     Sender.send_timefake("11111")
 
 def run(player):
+    # player.send_cmd(gem_cmd)
     # player.send_cmd(add_money)
     # player.send_cmd(free_me)
     
@@ -86,6 +87,7 @@ journey_roll = "jroll 50"
 dice_cmd = "add dice 999999"
 level_cmd = "add level 100"
 lv10_cmd = "add level 10"
-coin_cmd = "add coin 999999"
+coin_cmd = "add coin 99999999"
+gem_cmd = "add gem 99999999"
 bingoball_cmd = "add bingoBall 999999"
 mock_time="st:2022-04-09 14:02:00"
