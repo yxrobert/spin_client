@@ -18,7 +18,7 @@ class FortuneRobot(SpinRobot):
         pass
 
 def run(player):
-    # player.send_cmd(add_money)
+    player.send_cmd(add_money)
     # player.select_bet(40000)
 
     # player.send_cmd(cheat_12)
@@ -34,12 +34,13 @@ def run(player):
 
 
     # player.send_gm(jackpot)
+    # player.send_gm("freeme")
     # player.send_gm(enter_pick)
-    # player.spin()
-    # player.pick(0)
+    player.spin()
+    # player.pick(1)
     # player.serials_game(jp_arr)
 
-    player.spin_to_base()
+    # player.spin_to_base()
     # player.spin()
     # player.spin_times(3)
 

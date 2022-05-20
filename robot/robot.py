@@ -99,6 +99,18 @@ class RobotBase:
         req = make_cardgathering_data_req(self.player_id, self.token, season)
         self.send_packet(req)
 
+    def req_cardgathering_exchange(self, src, dest):
+        req = make_cardgathering_exchange_req(self.player_id, self.token, src, dest)
+        self.send_packet(req)
+
+    def req_cardgathering_break(self, src, level, card_list):
+        req = make_cardgathering_break_req(self.player_id, self.token, level, card_list)
+        self.send_packet(req)
+
+    def req_cardgathering_reset(self, src):
+        req = make_cardgathering_reset_req(self.player_id, self.token)
+        self.send_packet(req)
+
     def on_response(self, packet):
         if packet.Error != None:
             # self.log("--------Got Error--------[" + str(packet.Error) + "]")

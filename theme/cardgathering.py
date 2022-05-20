@@ -29,10 +29,13 @@ class CardGathering(SpinRobot):
             # userData.CardList = packet.UserData.Data.CardList
             # self.log(userData)
             
-            self.log(packet.UserData.Data.CardDeckList)
-            self.log(packet.UserData.Data.CardList)
-            self.log(packet.UserData.Data.UserData)
-            # self.log(packet.UserData.Data.CardLogList)
+            # self.log(packet.UserData.Data.CardDeckList)
+            # self.log(packet.UserData.Data.CardList)
+            # self.log(packet.UserData.Data.UserData)
+
+            # packet.UserData.Data.CardLogList = pb.CardGathering.Data.CardLogList.add()
+
+            self.log(packet.UserData.Data)
 
 
 

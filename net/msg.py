@@ -145,6 +145,27 @@ def make_cardgathering_data_req(player_id, token, season):
     return req
 
 
+def make_cardgathering_exchange_req(player_id, token, src, dest):
+    req, request = make_multi_req(player_id, token)
+    request.CardGathering.ExchangeCard.Src = src
+    request.CardGathering.ExchangeCard.Dest = dest
+    return req
+
+
+def make_cardgathering_break_req(player_id, token, level, card_list):
+    req, request = make_multi_req(player_id, token)
+    request.CardGathering.BreakCard.Level = level
+    request.CardGathering.BreakCard.CostCards = card_list
+    return req
+
+
+def make_cardgathering_reset_req(player_id, token):
+    req, request = make_multi_req(player_id, token)
+    request.CardGathering.ResetBreaking.Type = 0
+    return req
+
+
+
 def main():
     req = make_play_req()
     print(req)

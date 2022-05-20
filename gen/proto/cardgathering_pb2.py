@@ -22,7 +22,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'Z\004.;pb',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x13\x63\x61rdgathering.proto\x12\x02pb\x1a\x0b\x61ward.proto\x1a\x0copcode.proto\"\xb3\t\n\rCardGathering\x1a\x30\n\x08UserData\x12\r\n\x05Score\x18\x01 \x01(\x05\x12\x15\n\rCardBreakTime\x18\x02 \x01(\x03\x1a=\n\x08\x43\x61rdDeck\x12\r\n\x05\x45ntry\x18\x01 \x01(\x05\x12\"\n\x06Status\x18\x02 \x01(\x0e\x32\x12.pb.CardDeckStatus\x1av\n\x08\x43\x61rdData\x12\r\n\x05\x45ntry\x18\x01 \x01(\x05\x12\x0b\n\x03Num\x18\x02 \x01(\x05\x12\x11\n\tStartTime\x18\x03 \x01(\x03\x12\x0f\n\x07\x45ndTime\x18\x04 \x01(\x03\x12\x1b\n\x13RemainExchangeTimes\x18\x05 \x01(\x05\x12\r\n\x05IsNew\x18\x06 \x01(\x08\x1a|\n\x07\x43\x61rdLog\x12\r\n\x05\x45ntry\x18\x01 \x01(\x05\x12\x12\n\nObtainTime\x18\x02 \x01(\x03\x12#\n\x03Src\x18\x03 \x01(\x0e\x32\x16.pb.AwardInfo.AwardSRC\x12)\n\x06SubSrc\x18\x04 \x01(\x0e\x32\x19.pb.AwardInfo.AwardSubSRC\x1a\xd4\x01\n\x04\x44\x61ta\x12\x0e\n\x06Season\x18\x01 \x01(\x05\x12,\n\x08UserData\x18\x02 \x01(\x0b\x32\x1a.pb.CardGathering.UserData\x12\x30\n\x0c\x43\x61rdDeckList\x18\x03 \x03(\x0b\x32\x1a.pb.CardGathering.CardDeck\x12,\n\x08\x43\x61rdList\x18\x04 \x03(\x0b\x32\x1a.pb.CardGathering.CardData\x12.\n\x0b\x43\x61rdLogList\x18\x05 \x03(\x0b\x32\x19.pb.CardGathering.CardLog\x1a\x8d\x02\n\x03Req\x12.\n\x08UserData\x18\x01 \x01(\x0b\x32\x1a.pb.CardGathering.Req.DataH\x00\x12\x33\n\tBreakCard\x18\x02 \x01(\x0b\x32\x1e.pb.CardGathering.Req.BreakingH\x00\x12\x34\n\rResetBreaking\x18\x03 \x01(\x0b\x32\x1b.pb.CardGathering.Req.ResetH\x00\x12/\n\tGameWheel\x18\x04 \x01(\x0b\x32\x1a.pb.CardGathering.Req.GameH\x00\x1a\x16\n\x04\x44\x61ta\x12\x0e\n\x06Season\x18\x01 \x01(\x05\x1a\n\n\x08\x42reaking\x1a\x07\n\x05Reset\x1a\x06\n\x04GameB\x05\n\x03one\x1a\xd3\x02\n\x03Rsp\x12\x1e\n\x08OpResult\x18\x64 \x01(\x0b\x32\x0c.pb.OpResult\x12.\n\x08UserData\x18\x01 \x01(\x0b\x32\x1a.pb.CardGathering.Rsp.DataH\x00\x12\x33\n\tBreakCard\x18\x02 \x01(\x0b\x32\x1e.pb.CardGathering.Rsp.BreakingH\x00\x12\x34\n\rResetBreaking\x18\x03 \x01(\x0b\x32\x1b.pb.CardGathering.Rsp.ResetH\x00\x12/\n\tGameWheel\x18\x04 \x01(\x0b\x32\x1a.pb.CardGathering.Rsp.GameH\x00\x1a<\n\x04\x44\x61ta\x12\x0e\n\x06Season\x18\x01 \x01(\x05\x12$\n\x04\x44\x61ta\x18\x02 \x01(\x0b\x32\x16.pb.CardGathering.Data\x1a\n\n\x08\x42reaking\x1a\x07\n\x05Reset\x1a\x06\n\x04GameB\x05\n\x03one\"&\n\x06\x44\x42\x42son\x12\x0e\n\x06\x46ilter\x18\x01 \x01(\x0c\x12\x0c\n\x04\x44\x61ta\x18\x02 \x01(\x0c*.\n\x0e\x43\x61rdDeckStatus\x12\x0e\n\nUnFinished\x10\x00\x12\x0c\n\x08\x46inished\x10\x01\x42\x06Z\x04.;pbb\x06proto3'
+  serialized_pb=b'\n\x13\x63\x61rdgathering.proto\x12\x02pb\x1a\x0b\x61ward.proto\x1a\x0copcode.proto\"\x87\r\n\rCardGathering\x1a\x30\n\x08UserData\x12\r\n\x05Score\x18\x01 \x01(\x05\x12\x15\n\rCardBreakTime\x18\x02 \x01(\x03\x1a=\n\x08\x43\x61rdDeck\x12\r\n\x05\x45ntry\x18\x01 \x01(\x05\x12\"\n\x06Status\x18\x02 \x01(\x0e\x32\x12.pb.CardDeckStatus\x1av\n\x08\x43\x61rdData\x12\r\n\x05\x45ntry\x18\x01 \x01(\x05\x12\x0b\n\x03Num\x18\x02 \x01(\x05\x12\x11\n\tStartTime\x18\x03 \x01(\x03\x12\x0f\n\x07\x45ndTime\x18\x04 \x01(\x03\x12\x1b\n\x13RemainExchangeTimes\x18\x05 \x01(\x05\x12\r\n\x05IsNew\x18\x06 \x01(\x08\x1a|\n\x07\x43\x61rdLog\x12\r\n\x05\x45ntry\x18\x01 \x01(\x05\x12\x12\n\nObtainTime\x18\x02 \x01(\x03\x12#\n\x03Src\x18\x03 \x01(\x0e\x32\x16.pb.AwardInfo.AwardSRC\x12)\n\x06SubSrc\x18\x04 \x01(\x0e\x32\x19.pb.AwardInfo.AwardSubSRC\x1a\xd4\x01\n\x04\x44\x61ta\x12\x0e\n\x06Season\x18\x01 \x01(\x05\x12,\n\x08UserData\x18\x02 \x01(\x0b\x32\x1a.pb.CardGathering.UserData\x12\x30\n\x0c\x43\x61rdDeckList\x18\x03 \x03(\x0b\x32\x1a.pb.CardGathering.CardDeck\x12,\n\x08\x43\x61rdList\x18\x04 \x03(\x0b\x32\x1a.pb.CardGathering.CardData\x12.\n\x0b\x43\x61rdLogList\x18\x05 \x03(\x0b\x32\x19.pb.CardGathering.CardLog\x1a\x9c\x03\n\x03Req\x12.\n\x08UserData\x18\x01 \x01(\x0b\x32\x1a.pb.CardGathering.Req.DataH\x00\x12\x36\n\x0c\x45xchangeCard\x18\x02 \x01(\x0b\x32\x1e.pb.CardGathering.Req.ExchangeH\x00\x12\x33\n\tBreakCard\x18\x03 \x01(\x0b\x32\x1e.pb.CardGathering.Req.BreakingH\x00\x12\x34\n\rResetBreaking\x18\x04 \x01(\x0b\x32\x1b.pb.CardGathering.Req.ResetH\x00\x12/\n\tGameWheel\x18\x05 \x01(\x0b\x32\x1a.pb.CardGathering.Req.GameH\x00\x1a\x16\n\x04\x44\x61ta\x12\x0e\n\x06Season\x18\x01 \x01(\x05\x1a%\n\x08\x45xchange\x12\x0b\n\x03Src\x18\x01 \x01(\x05\x12\x0c\n\x04\x44\x65st\x18\x02 \x01(\x05\x1a,\n\x08\x42reaking\x12\r\n\x05Level\x18\x01 \x01(\x05\x12\x11\n\tCostCards\x18\x02 \x03(\x05\x1a\x15\n\x05Reset\x12\x0c\n\x04Type\x18\x01 \x01(\x05\x1a\x06\n\x04GameB\x05\n\x03one\x1a\xec\x04\n\x03Rsp\x12\x1e\n\x08OpResult\x18\x64 \x01(\x0b\x32\x0c.pb.OpResult\x12.\n\x08UserData\x18\x01 \x01(\x0b\x32\x1a.pb.CardGathering.Rsp.DataH\x00\x12\x36\n\x0c\x45xchangeCard\x18\x02 \x01(\x0b\x32\x1e.pb.CardGathering.Rsp.ExchangeH\x00\x12\x33\n\tBreakCard\x18\x03 \x01(\x0b\x32\x1e.pb.CardGathering.Rsp.BreakingH\x00\x12\x34\n\rResetBreaking\x18\x04 \x01(\x0b\x32\x1b.pb.CardGathering.Rsp.ResetH\x00\x12/\n\tGameWheel\x18\x05 \x01(\x0b\x32\x1a.pb.CardGathering.Rsp.GameH\x00\x1a<\n\x04\x44\x61ta\x12\x0e\n\x06Season\x18\x01 \x01(\x05\x12$\n\x04\x44\x61ta\x18\x02 \x01(\x0b\x32\x16.pb.CardGathering.Data\x1aS\n\x08\x45xchange\x12\x0b\n\x03Src\x18\x01 \x01(\x05\x12\x0c\n\x04\x44\x65st\x18\x02 \x01(\x05\x12,\n\x08UserData\x18\x03 \x01(\x0b\x32\x1a.pb.CardGathering.Rsp.Data\x1aZ\n\x08\x42reaking\x12\r\n\x05Level\x18\x01 \x01(\x05\x12\x11\n\tCostCards\x18\x02 \x03(\x05\x12,\n\x08UserData\x18\x03 \x01(\x0b\x32\x1a.pb.CardGathering.Rsp.Data\x1a\x43\n\x05Reset\x12\x0c\n\x04Type\x18\x01 \x01(\x05\x12,\n\x08UserData\x18\x02 \x01(\x0b\x32\x1a.pb.CardGathering.Rsp.Data\x1a\x06\n\x04GameB\x05\n\x03one\"*\n\x08\x43\x61rdType\x12\n\n\x06Normal\x10\x00\x12\x08\n\x04Gold\x10\x01\x12\x08\n\x04Wild\x10\x02\"&\n\x06\x44\x42\x42son\x12\x0e\n\x06\x46ilter\x18\x01 \x01(\x0c\x12\x0c\n\x04\x44\x61ta\x18\x02 \x01(\x0c*.\n\x0e\x43\x61rdDeckStatus\x12\x0e\n\nUnFinished\x10\x00\x12\x0c\n\x08\x46inished\x10\x01\x42\x06Z\x04.;pbb\x06proto3'
   ,
   dependencies=[award__pb2.DESCRIPTOR,opcode__pb2.DESCRIPTOR,])
 
@@ -46,8 +46,8 @@ _CARDDECKSTATUS = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=1300,
-  serialized_end=1346,
+  serialized_start=1768,
+  serialized_end=1814,
 )
 _sym_db.RegisterEnumDescriptor(_CARDDECKSTATUS)
 
@@ -55,6 +55,36 @@ CardDeckStatus = enum_type_wrapper.EnumTypeWrapper(_CARDDECKSTATUS)
 UnFinished = 0
 Finished = 1
 
+
+_CARDGATHERING_CARDTYPE = _descriptor.EnumDescriptor(
+  name='CardType',
+  full_name='pb.CardGathering.CardType',
+  filename=None,
+  file=DESCRIPTOR,
+  create_key=_descriptor._internal_create_key,
+  values=[
+    _descriptor.EnumValueDescriptor(
+      name='Normal', index=0, number=0,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='Gold', index=1, number=1,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='Wild', index=2, number=2,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+  ],
+  containing_type=None,
+  serialized_options=None,
+  serialized_start=1684,
+  serialized_end=1726,
+)
+_sym_db.RegisterEnumDescriptor(_CARDGATHERING_CARDTYPE)
 
 
 _CARDGATHERING_USERDATA = _descriptor.Descriptor(
@@ -341,14 +371,28 @@ _CARDGATHERING_REQ_DATA = _descriptor.Descriptor(
   serialized_end=454,
 )
 
-_CARDGATHERING_REQ_BREAKING = _descriptor.Descriptor(
-  name='Breaking',
-  full_name='pb.CardGathering.Req.Breaking',
+_CARDGATHERING_REQ_EXCHANGE = _descriptor.Descriptor(
+  name='Exchange',
+  full_name='pb.CardGathering.Req.Exchange',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
+    _descriptor.FieldDescriptor(
+      name='Src', full_name='pb.CardGathering.Req.Exchange.Src', index=0,
+      number=1, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='Dest', full_name='pb.CardGathering.Req.Exchange.Dest', index=1,
+      number=2, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -361,8 +405,46 @@ _CARDGATHERING_REQ_BREAKING = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=882,
-  serialized_end=892,
+  serialized_start=938,
+  serialized_end=975,
+)
+
+_CARDGATHERING_REQ_BREAKING = _descriptor.Descriptor(
+  name='Breaking',
+  full_name='pb.CardGathering.Req.Breaking',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='Level', full_name='pb.CardGathering.Req.Breaking.Level', index=0,
+      number=1, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='CostCards', full_name='pb.CardGathering.Req.Breaking.CostCards', index=1,
+      number=2, type=5, cpp_type=1, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=977,
+  serialized_end=1021,
 )
 
 _CARDGATHERING_REQ_RESET = _descriptor.Descriptor(
@@ -373,6 +455,13 @@ _CARDGATHERING_REQ_RESET = _descriptor.Descriptor(
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
+    _descriptor.FieldDescriptor(
+      name='Type', full_name='pb.CardGathering.Req.Reset.Type', index=0,
+      number=1, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -385,8 +474,8 @@ _CARDGATHERING_REQ_RESET = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=894,
-  serialized_end=901,
+  serialized_start=1023,
+  serialized_end=1044,
 )
 
 _CARDGATHERING_REQ_GAME = _descriptor.Descriptor(
@@ -409,8 +498,8 @@ _CARDGATHERING_REQ_GAME = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=903,
-  serialized_end=909,
+  serialized_start=1046,
+  serialized_end=1052,
 )
 
 _CARDGATHERING_REQ = _descriptor.Descriptor(
@@ -429,22 +518,29 @@ _CARDGATHERING_REQ = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='BreakCard', full_name='pb.CardGathering.Req.BreakCard', index=1,
+      name='ExchangeCard', full_name='pb.CardGathering.Req.ExchangeCard', index=1,
       number=2, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='ResetBreaking', full_name='pb.CardGathering.Req.ResetBreaking', index=2,
+      name='BreakCard', full_name='pb.CardGathering.Req.BreakCard', index=2,
       number=3, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='GameWheel', full_name='pb.CardGathering.Req.GameWheel', index=3,
+      name='ResetBreaking', full_name='pb.CardGathering.Req.ResetBreaking', index=3,
       number=4, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='GameWheel', full_name='pb.CardGathering.Req.GameWheel', index=4,
+      number=5, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -452,7 +548,7 @@ _CARDGATHERING_REQ = _descriptor.Descriptor(
   ],
   extensions=[
   ],
-  nested_types=[_CARDGATHERING_REQ_DATA, _CARDGATHERING_REQ_BREAKING, _CARDGATHERING_REQ_RESET, _CARDGATHERING_REQ_GAME, ],
+  nested_types=[_CARDGATHERING_REQ_DATA, _CARDGATHERING_REQ_EXCHANGE, _CARDGATHERING_REQ_BREAKING, _CARDGATHERING_REQ_RESET, _CARDGATHERING_REQ_GAME, ],
   enum_types=[
   ],
   serialized_options=None,
@@ -467,7 +563,7 @@ _CARDGATHERING_REQ = _descriptor.Descriptor(
     fields=[]),
   ],
   serialized_start=647,
-  serialized_end=916,
+  serialized_end=1059,
 )
 
 _CARDGATHERING_RSP_DATA = _descriptor.Descriptor(
@@ -504,8 +600,53 @@ _CARDGATHERING_RSP_DATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1162,
-  serialized_end=1222,
+  serialized_start=1361,
+  serialized_end=1421,
+)
+
+_CARDGATHERING_RSP_EXCHANGE = _descriptor.Descriptor(
+  name='Exchange',
+  full_name='pb.CardGathering.Rsp.Exchange',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='Src', full_name='pb.CardGathering.Rsp.Exchange.Src', index=0,
+      number=1, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='Dest', full_name='pb.CardGathering.Rsp.Exchange.Dest', index=1,
+      number=2, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='UserData', full_name='pb.CardGathering.Rsp.Exchange.UserData', index=2,
+      number=3, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=1423,
+  serialized_end=1506,
 )
 
 _CARDGATHERING_RSP_BREAKING = _descriptor.Descriptor(
@@ -516,6 +657,27 @@ _CARDGATHERING_RSP_BREAKING = _descriptor.Descriptor(
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
+    _descriptor.FieldDescriptor(
+      name='Level', full_name='pb.CardGathering.Rsp.Breaking.Level', index=0,
+      number=1, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='CostCards', full_name='pb.CardGathering.Rsp.Breaking.CostCards', index=1,
+      number=2, type=5, cpp_type=1, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='UserData', full_name='pb.CardGathering.Rsp.Breaking.UserData', index=2,
+      number=3, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -528,8 +690,8 @@ _CARDGATHERING_RSP_BREAKING = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=882,
-  serialized_end=892,
+  serialized_start=1508,
+  serialized_end=1598,
 )
 
 _CARDGATHERING_RSP_RESET = _descriptor.Descriptor(
@@ -540,6 +702,20 @@ _CARDGATHERING_RSP_RESET = _descriptor.Descriptor(
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
+    _descriptor.FieldDescriptor(
+      name='Type', full_name='pb.CardGathering.Rsp.Reset.Type', index=0,
+      number=1, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='UserData', full_name='pb.CardGathering.Rsp.Reset.UserData', index=1,
+      number=2, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -552,8 +728,8 @@ _CARDGATHERING_RSP_RESET = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=894,
-  serialized_end=901,
+  serialized_start=1600,
+  serialized_end=1667,
 )
 
 _CARDGATHERING_RSP_GAME = _descriptor.Descriptor(
@@ -576,8 +752,8 @@ _CARDGATHERING_RSP_GAME = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=903,
-  serialized_end=909,
+  serialized_start=1046,
+  serialized_end=1052,
 )
 
 _CARDGATHERING_RSP = _descriptor.Descriptor(
@@ -603,22 +779,29 @@ _CARDGATHERING_RSP = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='BreakCard', full_name='pb.CardGathering.Rsp.BreakCard', index=2,
+      name='ExchangeCard', full_name='pb.CardGathering.Rsp.ExchangeCard', index=2,
       number=2, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='ResetBreaking', full_name='pb.CardGathering.Rsp.ResetBreaking', index=3,
+      name='BreakCard', full_name='pb.CardGathering.Rsp.BreakCard', index=3,
       number=3, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='GameWheel', full_name='pb.CardGathering.Rsp.GameWheel', index=4,
+      name='ResetBreaking', full_name='pb.CardGathering.Rsp.ResetBreaking', index=4,
       number=4, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='GameWheel', full_name='pb.CardGathering.Rsp.GameWheel', index=5,
+      number=5, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -626,7 +809,7 @@ _CARDGATHERING_RSP = _descriptor.Descriptor(
   ],
   extensions=[
   ],
-  nested_types=[_CARDGATHERING_RSP_DATA, _CARDGATHERING_RSP_BREAKING, _CARDGATHERING_RSP_RESET, _CARDGATHERING_RSP_GAME, ],
+  nested_types=[_CARDGATHERING_RSP_DATA, _CARDGATHERING_RSP_EXCHANGE, _CARDGATHERING_RSP_BREAKING, _CARDGATHERING_RSP_RESET, _CARDGATHERING_RSP_GAME, ],
   enum_types=[
   ],
   serialized_options=None,
@@ -640,8 +823,8 @@ _CARDGATHERING_RSP = _descriptor.Descriptor(
       create_key=_descriptor._internal_create_key,
     fields=[]),
   ],
-  serialized_start=919,
-  serialized_end=1258,
+  serialized_start=1062,
+  serialized_end=1682,
 )
 
 _CARDGATHERING = _descriptor.Descriptor(
@@ -657,6 +840,7 @@ _CARDGATHERING = _descriptor.Descriptor(
   ],
   nested_types=[_CARDGATHERING_USERDATA, _CARDGATHERING_CARDDECK, _CARDGATHERING_CARDDATA, _CARDGATHERING_CARDLOG, _CARDGATHERING_DATA, _CARDGATHERING_REQ, _CARDGATHERING_RSP, ],
   enum_types=[
+    _CARDGATHERING_CARDTYPE,
   ],
   serialized_options=None,
   is_extendable=False,
@@ -665,7 +849,7 @@ _CARDGATHERING = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=55,
-  serialized_end=1258,
+  serialized_end=1726,
 )
 
 
@@ -703,8 +887,8 @@ _DBBSON = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1260,
-  serialized_end=1298,
+  serialized_start=1728,
+  serialized_end=1766,
 )
 
 _CARDGATHERING_USERDATA.containing_type = _CARDGATHERING
@@ -720,10 +904,12 @@ _CARDGATHERING_DATA.fields_by_name['CardList'].message_type = _CARDGATHERING_CAR
 _CARDGATHERING_DATA.fields_by_name['CardLogList'].message_type = _CARDGATHERING_CARDLOG
 _CARDGATHERING_DATA.containing_type = _CARDGATHERING
 _CARDGATHERING_REQ_DATA.containing_type = _CARDGATHERING_REQ
+_CARDGATHERING_REQ_EXCHANGE.containing_type = _CARDGATHERING_REQ
 _CARDGATHERING_REQ_BREAKING.containing_type = _CARDGATHERING_REQ
 _CARDGATHERING_REQ_RESET.containing_type = _CARDGATHERING_REQ
 _CARDGATHERING_REQ_GAME.containing_type = _CARDGATHERING_REQ
 _CARDGATHERING_REQ.fields_by_name['UserData'].message_type = _CARDGATHERING_REQ_DATA
+_CARDGATHERING_REQ.fields_by_name['ExchangeCard'].message_type = _CARDGATHERING_REQ_EXCHANGE
 _CARDGATHERING_REQ.fields_by_name['BreakCard'].message_type = _CARDGATHERING_REQ_BREAKING
 _CARDGATHERING_REQ.fields_by_name['ResetBreaking'].message_type = _CARDGATHERING_REQ_RESET
 _CARDGATHERING_REQ.fields_by_name['GameWheel'].message_type = _CARDGATHERING_REQ_GAME
@@ -731,6 +917,9 @@ _CARDGATHERING_REQ.containing_type = _CARDGATHERING
 _CARDGATHERING_REQ.oneofs_by_name['one'].fields.append(
   _CARDGATHERING_REQ.fields_by_name['UserData'])
 _CARDGATHERING_REQ.fields_by_name['UserData'].containing_oneof = _CARDGATHERING_REQ.oneofs_by_name['one']
+_CARDGATHERING_REQ.oneofs_by_name['one'].fields.append(
+  _CARDGATHERING_REQ.fields_by_name['ExchangeCard'])
+_CARDGATHERING_REQ.fields_by_name['ExchangeCard'].containing_oneof = _CARDGATHERING_REQ.oneofs_by_name['one']
 _CARDGATHERING_REQ.oneofs_by_name['one'].fields.append(
   _CARDGATHERING_REQ.fields_by_name['BreakCard'])
 _CARDGATHERING_REQ.fields_by_name['BreakCard'].containing_oneof = _CARDGATHERING_REQ.oneofs_by_name['one']
@@ -742,11 +931,16 @@ _CARDGATHERING_REQ.oneofs_by_name['one'].fields.append(
 _CARDGATHERING_REQ.fields_by_name['GameWheel'].containing_oneof = _CARDGATHERING_REQ.oneofs_by_name['one']
 _CARDGATHERING_RSP_DATA.fields_by_name['Data'].message_type = _CARDGATHERING_DATA
 _CARDGATHERING_RSP_DATA.containing_type = _CARDGATHERING_RSP
+_CARDGATHERING_RSP_EXCHANGE.fields_by_name['UserData'].message_type = _CARDGATHERING_RSP_DATA
+_CARDGATHERING_RSP_EXCHANGE.containing_type = _CARDGATHERING_RSP
+_CARDGATHERING_RSP_BREAKING.fields_by_name['UserData'].message_type = _CARDGATHERING_RSP_DATA
 _CARDGATHERING_RSP_BREAKING.containing_type = _CARDGATHERING_RSP
+_CARDGATHERING_RSP_RESET.fields_by_name['UserData'].message_type = _CARDGATHERING_RSP_DATA
 _CARDGATHERING_RSP_RESET.containing_type = _CARDGATHERING_RSP
 _CARDGATHERING_RSP_GAME.containing_type = _CARDGATHERING_RSP
 _CARDGATHERING_RSP.fields_by_name['OpResult'].message_type = opcode__pb2._OPRESULT
 _CARDGATHERING_RSP.fields_by_name['UserData'].message_type = _CARDGATHERING_RSP_DATA
+_CARDGATHERING_RSP.fields_by_name['ExchangeCard'].message_type = _CARDGATHERING_RSP_EXCHANGE
 _CARDGATHERING_RSP.fields_by_name['BreakCard'].message_type = _CARDGATHERING_RSP_BREAKING
 _CARDGATHERING_RSP.fields_by_name['ResetBreaking'].message_type = _CARDGATHERING_RSP_RESET
 _CARDGATHERING_RSP.fields_by_name['GameWheel'].message_type = _CARDGATHERING_RSP_GAME
@@ -754,6 +948,9 @@ _CARDGATHERING_RSP.containing_type = _CARDGATHERING
 _CARDGATHERING_RSP.oneofs_by_name['one'].fields.append(
   _CARDGATHERING_RSP.fields_by_name['UserData'])
 _CARDGATHERING_RSP.fields_by_name['UserData'].containing_oneof = _CARDGATHERING_RSP.oneofs_by_name['one']
+_CARDGATHERING_RSP.oneofs_by_name['one'].fields.append(
+  _CARDGATHERING_RSP.fields_by_name['ExchangeCard'])
+_CARDGATHERING_RSP.fields_by_name['ExchangeCard'].containing_oneof = _CARDGATHERING_RSP.oneofs_by_name['one']
 _CARDGATHERING_RSP.oneofs_by_name['one'].fields.append(
   _CARDGATHERING_RSP.fields_by_name['BreakCard'])
 _CARDGATHERING_RSP.fields_by_name['BreakCard'].containing_oneof = _CARDGATHERING_RSP.oneofs_by_name['one']
@@ -763,6 +960,7 @@ _CARDGATHERING_RSP.fields_by_name['ResetBreaking'].containing_oneof = _CARDGATHE
 _CARDGATHERING_RSP.oneofs_by_name['one'].fields.append(
   _CARDGATHERING_RSP.fields_by_name['GameWheel'])
 _CARDGATHERING_RSP.fields_by_name['GameWheel'].containing_oneof = _CARDGATHERING_RSP.oneofs_by_name['one']
+_CARDGATHERING_CARDTYPE.containing_type = _CARDGATHERING
 DESCRIPTOR.message_types_by_name['CardGathering'] = _CARDGATHERING
 DESCRIPTOR.message_types_by_name['DBBson'] = _DBBSON
 DESCRIPTOR.enum_types_by_name['CardDeckStatus'] = _CARDDECKSTATUS
@@ -814,6 +1012,13 @@ CardGathering = _reflection.GeneratedProtocolMessageType('CardGathering', (_mess
       })
     ,
 
+    'Exchange' : _reflection.GeneratedProtocolMessageType('Exchange', (_message.Message,), {
+      'DESCRIPTOR' : _CARDGATHERING_REQ_EXCHANGE,
+      '__module__' : 'cardgathering_pb2'
+      # @@protoc_insertion_point(class_scope:pb.CardGathering.Req.Exchange)
+      })
+    ,
+
     'Breaking' : _reflection.GeneratedProtocolMessageType('Breaking', (_message.Message,), {
       'DESCRIPTOR' : _CARDGATHERING_REQ_BREAKING,
       '__module__' : 'cardgathering_pb2'
@@ -846,6 +1051,13 @@ CardGathering = _reflection.GeneratedProtocolMessageType('CardGathering', (_mess
       'DESCRIPTOR' : _CARDGATHERING_RSP_DATA,
       '__module__' : 'cardgathering_pb2'
       # @@protoc_insertion_point(class_scope:pb.CardGathering.Rsp.Data)
+      })
+    ,
+
+    'Exchange' : _reflection.GeneratedProtocolMessageType('Exchange', (_message.Message,), {
+      'DESCRIPTOR' : _CARDGATHERING_RSP_EXCHANGE,
+      '__module__' : 'cardgathering_pb2'
+      # @@protoc_insertion_point(class_scope:pb.CardGathering.Rsp.Exchange)
       })
     ,
 
@@ -886,11 +1098,13 @@ _sym_db.RegisterMessage(CardGathering.CardLog)
 _sym_db.RegisterMessage(CardGathering.Data)
 _sym_db.RegisterMessage(CardGathering.Req)
 _sym_db.RegisterMessage(CardGathering.Req.Data)
+_sym_db.RegisterMessage(CardGathering.Req.Exchange)
 _sym_db.RegisterMessage(CardGathering.Req.Breaking)
 _sym_db.RegisterMessage(CardGathering.Req.Reset)
 _sym_db.RegisterMessage(CardGathering.Req.Game)
 _sym_db.RegisterMessage(CardGathering.Rsp)
 _sym_db.RegisterMessage(CardGathering.Rsp.Data)
+_sym_db.RegisterMessage(CardGathering.Rsp.Exchange)
 _sym_db.RegisterMessage(CardGathering.Rsp.Breaking)
 _sym_db.RegisterMessage(CardGathering.Rsp.Reset)
 _sym_db.RegisterMessage(CardGathering.Rsp.Game)

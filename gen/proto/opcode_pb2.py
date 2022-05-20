@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'Z\004.;pb',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x0copcode.proto\x12\x02pb\"7\n\x08OpResult\x12\x1a\n\x06OpCode\x18\x01 \x01(\x0e\x32\n.pb.OpCode\x12\x0f\n\x07\x43ontent\x18\x02 \x01(\t*\xe7\x01\n\x06OpCode\x12\x0f\n\x0bOpResult_OK\x10\x00\x12\x10\n\x0cOpResult_Err\x10\x01\x12\x1e\n\x1aOpResult_Request_Param_Err\x10\x02\x12\x1b\n\x17OpResult_NotEnough_Coin\x10\x14\x12\x1b\n\x17OpResult_NotEnough_Dice\x10\x15\x12 \n\x1cOpResult_NotEnough_BingoBall\x10\x16\x12\x1f\n\x1bOpResult_Activity_Not_Exist\x10\x64\x12\x1d\n\x19OpResult_Activity_Req_Err\x10\x65\x42\x06Z\x04.;pbb\x06proto3'
+  serialized_pb=b'\n\x0copcode.proto\x12\x02pb\"7\n\x08OpResult\x12\x1a\n\x06OpCode\x18\x01 \x01(\x0e\x32\n.pb.OpCode\x12\x0f\n\x07\x43ontent\x18\x02 \x01(\t*\x94\x03\n\x06OpCode\x12\x0f\n\x0bOpResult_OK\x10\x00\x12\x10\n\x0cOpResult_Err\x10\x01\x12\x1e\n\x1aOpResult_Request_Param_Err\x10\x02\x12\x16\n\x12OpResult_InvalidID\x10\x03\x12\x19\n\x15OpResult_Repeated_Req\x10\x04\x12\x1b\n\x17OpResult_NotEnough_Coin\x10\x14\x12\x1b\n\x17OpResult_NotEnough_Dice\x10\x15\x12 \n\x1cOpResult_NotEnough_BingoBall\x10\x16\x12\x1a\n\x16OpResult_NotEnough_Gem\x10\x17\x12\x1b\n\x17OpResult_NotEnough_Time\x10\x18\x12\x1f\n\x1bOpResult_Activity_Not_Exist\x10\x64\x12\x1d\n\x19OpResult_Activity_Req_Err\x10\x65\x12\x1c\n\x17OpResult_Card_Not_Exist\x10\xc8\x01\x12!\n\x1cOpResult_ExchangeCard_Failed\x10\xc9\x01\x42\x06Z\x04.;pbb\x06proto3'
 )
 
 _OPCODE = _descriptor.EnumDescriptor(
@@ -46,27 +46,57 @@ _OPCODE = _descriptor.EnumDescriptor(
       type=None,
       create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
-      name='OpResult_NotEnough_Coin', index=3, number=20,
+      name='OpResult_InvalidID', index=3, number=3,
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
-      name='OpResult_NotEnough_Dice', index=4, number=21,
+      name='OpResult_Repeated_Req', index=4, number=4,
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
-      name='OpResult_NotEnough_BingoBall', index=5, number=22,
+      name='OpResult_NotEnough_Coin', index=5, number=20,
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
-      name='OpResult_Activity_Not_Exist', index=6, number=100,
+      name='OpResult_NotEnough_Dice', index=6, number=21,
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
-      name='OpResult_Activity_Req_Err', index=7, number=101,
+      name='OpResult_NotEnough_BingoBall', index=7, number=22,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='OpResult_NotEnough_Gem', index=8, number=23,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='OpResult_NotEnough_Time', index=9, number=24,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='OpResult_Activity_Not_Exist', index=10, number=100,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='OpResult_Activity_Req_Err', index=11, number=101,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='OpResult_Card_Not_Exist', index=12, number=200,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='OpResult_ExchangeCard_Failed', index=13, number=201,
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
@@ -74,7 +104,7 @@ _OPCODE = _descriptor.EnumDescriptor(
   containing_type=None,
   serialized_options=None,
   serialized_start=78,
-  serialized_end=309,
+  serialized_end=482,
 )
 _sym_db.RegisterEnumDescriptor(_OPCODE)
 
@@ -82,11 +112,17 @@ OpCode = enum_type_wrapper.EnumTypeWrapper(_OPCODE)
 OpResult_OK = 0
 OpResult_Err = 1
 OpResult_Request_Param_Err = 2
+OpResult_InvalidID = 3
+OpResult_Repeated_Req = 4
 OpResult_NotEnough_Coin = 20
 OpResult_NotEnough_Dice = 21
 OpResult_NotEnough_BingoBall = 22
+OpResult_NotEnough_Gem = 23
+OpResult_NotEnough_Time = 24
 OpResult_Activity_Not_Exist = 100
 OpResult_Activity_Req_Err = 101
+OpResult_Card_Not_Exist = 200
+OpResult_ExchangeCard_Failed = 201
 
 
 

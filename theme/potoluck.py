@@ -27,7 +27,7 @@ def run(player):
     # player.send_cmd(test_gm)
 
     # player.send_cmd(cheat_free)
-    player.send_cmd(p_cmd)
+    player.send_cmd(cheat_58)
     player.spin()
     # player.spin_to_base()
 
