@@ -19,7 +19,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'Z\004.;pb',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x0bquest.proto\x12\x02pb\"\xee\x06\n\x06Quests\x1a\xdc\x01\n\x03Req\x12)\n\x04List\x18\n \x01(\x0b\x32\x19.pb.Quests.Req.Quest.ListH\x00\x12+\n\x05\x43heck\x18\x0b \x01(\x0b\x32\x1a.pb.Quests.Req.Quest.CheckH\x00\x12/\n\x07\x43ollect\x18\x0c \x01(\x0b\x32\x1c.pb.Quests.Req.Quest.CollectH\x00\x1a\x45\n\x05Quest\x1a\x06\n\x04List\x1a\x18\n\x05\x43heck\x12\x0f\n\x07QuestId\x18\x01 \x01(\r\x1a\x1a\n\x07\x43ollect\x12\x0f\n\x07QuestId\x18\x01 \x01(\rB\x05\n\x03one\x1a\xf8\x02\n\x03Rsp\x12&\n\x06\x43ommon\x18\n \x01(\x0b\x32\x14.pb.Quests.Rsp.ErrorH\x00\x12)\n\x04List\x18\x14 \x01(\x0b\x32\x19.pb.Quests.Rsp.Quest.ListH\x00\x12+\n\x05\x43heck\x18\x1e \x01(\x0b\x32\x1a.pb.Quests.Rsp.Quest.CheckH\x00\x12/\n\x07\x43ollect\x18( \x01(\x0b\x32\x1c.pb.Quests.Rsp.Quest.CollectH\x00\x1a\'\n\x05\x45rror\x12\x0e\n\x06\x43lient\x18\x01 \x01(\t\x12\x0e\n\x06Server\x18\x02 \x01(\t\x1a\x8f\x01\n\x05Quest\x1a,\n\x04List\x12$\n\x06Quests\x18\x01 \x03(\x0b\x32\x14.pb.Quests.QuestInfo\x1a,\n\x05\x43heck\x12#\n\x05Quest\x18\x01 \x01(\x0b\x32\x14.pb.Quests.QuestInfo\x1a*\n\x07\x43ollect\x12\x1f\n\x05\x41ward\x18\x01 \x01(\x0b\x32\x10.pb.Quests.AwardB\x05\n\x03one\x1a\x80\x01\n\tQuestInfo\x12\x0f\n\x07QuestId\x18\x01 \x01(\r\x12\x0f\n\x07ThemeId\x18\x02 \x01(\r\x12 \n\x06\x45vents\x18\x03 \x03(\x0b\x32\x10.pb.Quests.Event\x12\r\n\x05\x41ward\x18\x04 \x01(\x08\x12\x11\n\tAwardCoin\x18\x05 \x01(\x04\x12\r\n\x05Round\x18\x06 \x01(\r\x1a_\n\x05\x45vent\x12\x0f\n\x07\x45ventId\x18\x01 \x01(\t\x12\r\n\x05Index\x18\x02 \x01(\r\x12\x13\n\x0bTargetValue\x18\x03 \x01(\x04\x12\x11\n\tCurrValue\x18\x04 \x01(\x04\x12\x0e\n\x06\x46inish\x18\x05 \x01(\x08\x1a&\n\x05\x41ward\x12\x0f\n\x07QuestId\x18\x01 \x01(\r\x12\x0c\n\x04\x43oin\x18\x02 \x01(\x04\x42\x06Z\x04.;pbb\x06proto3'
+  serialized_pb=b'\n\x0bquest.proto\x12\x02pb\"\xb2\x08\n\x06Quests\x1a\x8f\x02\n\x03Req\x12)\n\x04List\x18\n \x01(\x0b\x32\x19.pb.Quests.Req.Quest.ListH\x00\x12+\n\x05\x43heck\x18\x0b \x01(\x0b\x32\x1a.pb.Quests.Req.Quest.CheckH\x00\x12/\n\x07\x43ollect\x18\x0c \x01(\x0b\x32\x1c.pb.Quests.Req.Quest.CollectH\x00\x12)\n\x04Info\x18\r \x01(\x0b\x32\x19.pb.Quests.Req.Quest.InfoH\x00\x1aM\n\x05Quest\x1a\x06\n\x04List\x1a\x18\n\x05\x43heck\x12\x0f\n\x07QuestId\x18\x01 \x01(\r\x1a\x1a\n\x07\x43ollect\x12\x0f\n\x07QuestId\x18\x01 \x01(\r\x1a\x06\n\x04InfoB\x05\n\x03one\x1a\x89\x04\n\x03Rsp\x12&\n\x06\x43ommon\x18\n \x01(\x0b\x32\x14.pb.Quests.Rsp.ErrorH\x00\x12)\n\x04List\x18\x14 \x01(\x0b\x32\x19.pb.Quests.Rsp.Quest.ListH\x00\x12+\n\x05\x43heck\x18\x1e \x01(\x0b\x32\x1a.pb.Quests.Rsp.Quest.CheckH\x00\x12/\n\x07\x43ollect\x18( \x01(\x0b\x32\x1c.pb.Quests.Rsp.Quest.CollectH\x00\x12)\n\x04Info\x18\x32 \x01(\x0b\x32\x19.pb.Quests.Rsp.Quest.InfoH\x00\x1a\'\n\x05\x45rror\x12\x0e\n\x06\x43lient\x18\x01 \x01(\t\x12\x0e\n\x06Server\x18\x02 \x01(\t\x1a\xf5\x01\n\x05Quest\x1a@\n\x04List\x12$\n\x06Quests\x18\x01 \x03(\x0b\x32\x14.pb.Quests.QuestInfo\x12\x12\n\nactivityID\x18\x02 \x01(\x04\x1a@\n\x05\x43heck\x12#\n\x05Quest\x18\x01 \x01(\x0b\x32\x14.pb.Quests.QuestInfo\x12\x12\n\nactivityID\x18\x02 \x01(\x04\x1a*\n\x07\x43ollect\x12\x1f\n\x05\x41ward\x18\x01 \x01(\x0b\x32\x10.pb.Quests.Award\x1a<\n\x04Info\x12\x0e\n\x06isOpen\x18\x01 \x01(\x08\x12\x12\n\nactivityID\x18\x02 \x01(\x04\x12\x10\n\x08hasAward\x18\x03 \x01(\x08\x42\x05\n\x03one\x1a\x80\x01\n\tQuestInfo\x12\x0f\n\x07QuestId\x18\x01 \x01(\r\x12\x0f\n\x07ThemeId\x18\x02 \x01(\r\x12 \n\x06\x45vents\x18\x03 \x03(\x0b\x32\x10.pb.Quests.Event\x12\r\n\x05\x41ward\x18\x04 \x01(\x08\x12\x11\n\tAwardCoin\x18\x05 \x01(\x04\x12\r\n\x05Round\x18\x06 \x01(\r\x1a_\n\x05\x45vent\x12\x0f\n\x07\x45ventId\x18\x01 \x01(\t\x12\r\n\x05Index\x18\x02 \x01(\r\x12\x13\n\x0bTargetValue\x18\x03 \x01(\x04\x12\x11\n\tCurrValue\x18\x04 \x01(\x04\x12\x0e\n\x06\x46inish\x18\x05 \x01(\x08\x1a&\n\x05\x41ward\x12\x0f\n\x07QuestId\x18\x01 \x01(\r\x12\x0c\n\x04\x43oin\x18\x02 \x01(\x04\x42\x06Z\x04.;pbb\x06proto3'
 )
 
 
@@ -76,8 +76,8 @@ _QUESTS_REQ_QUEST_CHECK = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=192,
-  serialized_end=216,
+  serialized_start=235,
+  serialized_end=259,
 )
 
 _QUESTS_REQ_QUEST_COLLECT = _descriptor.Descriptor(
@@ -107,8 +107,32 @@ _QUESTS_REQ_QUEST_COLLECT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=218,
-  serialized_end=244,
+  serialized_start=261,
+  serialized_end=287,
+)
+
+_QUESTS_REQ_QUEST_INFO = _descriptor.Descriptor(
+  name='Info',
+  full_name='pb.Quests.Req.Quest.Info',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=175,
+  serialized_end=181,
 )
 
 _QUESTS_REQ_QUEST = _descriptor.Descriptor(
@@ -122,7 +146,7 @@ _QUESTS_REQ_QUEST = _descriptor.Descriptor(
   ],
   extensions=[
   ],
-  nested_types=[_QUESTS_REQ_QUEST_LIST, _QUESTS_REQ_QUEST_CHECK, _QUESTS_REQ_QUEST_COLLECT, ],
+  nested_types=[_QUESTS_REQ_QUEST_LIST, _QUESTS_REQ_QUEST_CHECK, _QUESTS_REQ_QUEST_COLLECT, _QUESTS_REQ_QUEST_INFO, ],
   enum_types=[
   ],
   serialized_options=None,
@@ -131,8 +155,8 @@ _QUESTS_REQ_QUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=175,
-  serialized_end=244,
+  serialized_start=218,
+  serialized_end=295,
 )
 
 _QUESTS_REQ = _descriptor.Descriptor(
@@ -164,6 +188,13 @@ _QUESTS_REQ = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='Info', full_name='pb.Quests.Req.Info', index=3,
+      number=13, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -182,7 +213,7 @@ _QUESTS_REQ = _descriptor.Descriptor(
     fields=[]),
   ],
   serialized_start=31,
-  serialized_end=251,
+  serialized_end=302,
 )
 
 _QUESTS_RSP_ERROR = _descriptor.Descriptor(
@@ -219,8 +250,8 @@ _QUESTS_RSP_ERROR = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=438,
-  serialized_end=477,
+  serialized_start=532,
+  serialized_end=571,
 )
 
 _QUESTS_RSP_QUEST_LIST = _descriptor.Descriptor(
@@ -238,6 +269,13 @@ _QUESTS_RSP_QUEST_LIST = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='activityID', full_name='pb.Quests.Rsp.Quest.List.activityID', index=1,
+      number=2, type=4, cpp_type=4, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -250,8 +288,8 @@ _QUESTS_RSP_QUEST_LIST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=489,
-  serialized_end=533,
+  serialized_start=583,
+  serialized_end=647,
 )
 
 _QUESTS_RSP_QUEST_CHECK = _descriptor.Descriptor(
@@ -269,6 +307,13 @@ _QUESTS_RSP_QUEST_CHECK = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='activityID', full_name='pb.Quests.Rsp.Quest.Check.activityID', index=1,
+      number=2, type=4, cpp_type=4, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -281,8 +326,8 @@ _QUESTS_RSP_QUEST_CHECK = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=535,
-  serialized_end=579,
+  serialized_start=649,
+  serialized_end=713,
 )
 
 _QUESTS_RSP_QUEST_COLLECT = _descriptor.Descriptor(
@@ -312,8 +357,53 @@ _QUESTS_RSP_QUEST_COLLECT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=581,
-  serialized_end=623,
+  serialized_start=715,
+  serialized_end=757,
+)
+
+_QUESTS_RSP_QUEST_INFO = _descriptor.Descriptor(
+  name='Info',
+  full_name='pb.Quests.Rsp.Quest.Info',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='isOpen', full_name='pb.Quests.Rsp.Quest.Info.isOpen', index=0,
+      number=1, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='activityID', full_name='pb.Quests.Rsp.Quest.Info.activityID', index=1,
+      number=2, type=4, cpp_type=4, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='hasAward', full_name='pb.Quests.Rsp.Quest.Info.hasAward', index=2,
+      number=3, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=759,
+  serialized_end=819,
 )
 
 _QUESTS_RSP_QUEST = _descriptor.Descriptor(
@@ -327,7 +417,7 @@ _QUESTS_RSP_QUEST = _descriptor.Descriptor(
   ],
   extensions=[
   ],
-  nested_types=[_QUESTS_RSP_QUEST_LIST, _QUESTS_RSP_QUEST_CHECK, _QUESTS_RSP_QUEST_COLLECT, ],
+  nested_types=[_QUESTS_RSP_QUEST_LIST, _QUESTS_RSP_QUEST_CHECK, _QUESTS_RSP_QUEST_COLLECT, _QUESTS_RSP_QUEST_INFO, ],
   enum_types=[
   ],
   serialized_options=None,
@@ -336,8 +426,8 @@ _QUESTS_RSP_QUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=480,
-  serialized_end=623,
+  serialized_start=574,
+  serialized_end=819,
 )
 
 _QUESTS_RSP = _descriptor.Descriptor(
@@ -376,6 +466,13 @@ _QUESTS_RSP = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='Info', full_name='pb.Quests.Rsp.Info', index=4,
+      number=50, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -393,8 +490,8 @@ _QUESTS_RSP = _descriptor.Descriptor(
       create_key=_descriptor._internal_create_key,
     fields=[]),
   ],
-  serialized_start=254,
-  serialized_end=630,
+  serialized_start=305,
+  serialized_end=826,
 )
 
 _QUESTS_QUESTINFO = _descriptor.Descriptor(
@@ -459,8 +556,8 @@ _QUESTS_QUESTINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=633,
-  serialized_end=761,
+  serialized_start=829,
+  serialized_end=957,
 )
 
 _QUESTS_EVENT = _descriptor.Descriptor(
@@ -518,8 +615,8 @@ _QUESTS_EVENT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=763,
-  serialized_end=858,
+  serialized_start=959,
+  serialized_end=1054,
 )
 
 _QUESTS_AWARD = _descriptor.Descriptor(
@@ -556,8 +653,8 @@ _QUESTS_AWARD = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=860,
-  serialized_end=898,
+  serialized_start=1056,
+  serialized_end=1094,
 )
 
 _QUESTS = _descriptor.Descriptor(
@@ -581,16 +678,18 @@ _QUESTS = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=20,
-  serialized_end=898,
+  serialized_end=1094,
 )
 
 _QUESTS_REQ_QUEST_LIST.containing_type = _QUESTS_REQ_QUEST
 _QUESTS_REQ_QUEST_CHECK.containing_type = _QUESTS_REQ_QUEST
 _QUESTS_REQ_QUEST_COLLECT.containing_type = _QUESTS_REQ_QUEST
+_QUESTS_REQ_QUEST_INFO.containing_type = _QUESTS_REQ_QUEST
 _QUESTS_REQ_QUEST.containing_type = _QUESTS_REQ
 _QUESTS_REQ.fields_by_name['List'].message_type = _QUESTS_REQ_QUEST_LIST
 _QUESTS_REQ.fields_by_name['Check'].message_type = _QUESTS_REQ_QUEST_CHECK
 _QUESTS_REQ.fields_by_name['Collect'].message_type = _QUESTS_REQ_QUEST_COLLECT
+_QUESTS_REQ.fields_by_name['Info'].message_type = _QUESTS_REQ_QUEST_INFO
 _QUESTS_REQ.containing_type = _QUESTS
 _QUESTS_REQ.oneofs_by_name['one'].fields.append(
   _QUESTS_REQ.fields_by_name['List'])
@@ -601,6 +700,9 @@ _QUESTS_REQ.fields_by_name['Check'].containing_oneof = _QUESTS_REQ.oneofs_by_nam
 _QUESTS_REQ.oneofs_by_name['one'].fields.append(
   _QUESTS_REQ.fields_by_name['Collect'])
 _QUESTS_REQ.fields_by_name['Collect'].containing_oneof = _QUESTS_REQ.oneofs_by_name['one']
+_QUESTS_REQ.oneofs_by_name['one'].fields.append(
+  _QUESTS_REQ.fields_by_name['Info'])
+_QUESTS_REQ.fields_by_name['Info'].containing_oneof = _QUESTS_REQ.oneofs_by_name['one']
 _QUESTS_RSP_ERROR.containing_type = _QUESTS_RSP
 _QUESTS_RSP_QUEST_LIST.fields_by_name['Quests'].message_type = _QUESTS_QUESTINFO
 _QUESTS_RSP_QUEST_LIST.containing_type = _QUESTS_RSP_QUEST
@@ -608,11 +710,13 @@ _QUESTS_RSP_QUEST_CHECK.fields_by_name['Quest'].message_type = _QUESTS_QUESTINFO
 _QUESTS_RSP_QUEST_CHECK.containing_type = _QUESTS_RSP_QUEST
 _QUESTS_RSP_QUEST_COLLECT.fields_by_name['Award'].message_type = _QUESTS_AWARD
 _QUESTS_RSP_QUEST_COLLECT.containing_type = _QUESTS_RSP_QUEST
+_QUESTS_RSP_QUEST_INFO.containing_type = _QUESTS_RSP_QUEST
 _QUESTS_RSP_QUEST.containing_type = _QUESTS_RSP
 _QUESTS_RSP.fields_by_name['Common'].message_type = _QUESTS_RSP_ERROR
 _QUESTS_RSP.fields_by_name['List'].message_type = _QUESTS_RSP_QUEST_LIST
 _QUESTS_RSP.fields_by_name['Check'].message_type = _QUESTS_RSP_QUEST_CHECK
 _QUESTS_RSP.fields_by_name['Collect'].message_type = _QUESTS_RSP_QUEST_COLLECT
+_QUESTS_RSP.fields_by_name['Info'].message_type = _QUESTS_RSP_QUEST_INFO
 _QUESTS_RSP.containing_type = _QUESTS
 _QUESTS_RSP.oneofs_by_name['one'].fields.append(
   _QUESTS_RSP.fields_by_name['Common'])
@@ -626,6 +730,9 @@ _QUESTS_RSP.fields_by_name['Check'].containing_oneof = _QUESTS_RSP.oneofs_by_nam
 _QUESTS_RSP.oneofs_by_name['one'].fields.append(
   _QUESTS_RSP.fields_by_name['Collect'])
 _QUESTS_RSP.fields_by_name['Collect'].containing_oneof = _QUESTS_RSP.oneofs_by_name['one']
+_QUESTS_RSP.oneofs_by_name['one'].fields.append(
+  _QUESTS_RSP.fields_by_name['Info'])
+_QUESTS_RSP.fields_by_name['Info'].containing_oneof = _QUESTS_RSP.oneofs_by_name['one']
 _QUESTS_QUESTINFO.fields_by_name['Events'].message_type = _QUESTS_EVENT
 _QUESTS_QUESTINFO.containing_type = _QUESTS
 _QUESTS_EVENT.containing_type = _QUESTS
@@ -657,6 +764,13 @@ Quests = _reflection.GeneratedProtocolMessageType('Quests', (_message.Message,),
         'DESCRIPTOR' : _QUESTS_REQ_QUEST_COLLECT,
         '__module__' : 'quest_pb2'
         # @@protoc_insertion_point(class_scope:pb.Quests.Req.Quest.Collect)
+        })
+      ,
+
+      'Info' : _reflection.GeneratedProtocolMessageType('Info', (_message.Message,), {
+        'DESCRIPTOR' : _QUESTS_REQ_QUEST_INFO,
+        '__module__' : 'quest_pb2'
+        # @@protoc_insertion_point(class_scope:pb.Quests.Req.Quest.Info)
         })
       ,
       'DESCRIPTOR' : _QUESTS_REQ_QUEST,
@@ -701,6 +815,13 @@ Quests = _reflection.GeneratedProtocolMessageType('Quests', (_message.Message,),
         # @@protoc_insertion_point(class_scope:pb.Quests.Rsp.Quest.Collect)
         })
       ,
+
+      'Info' : _reflection.GeneratedProtocolMessageType('Info', (_message.Message,), {
+        'DESCRIPTOR' : _QUESTS_RSP_QUEST_INFO,
+        '__module__' : 'quest_pb2'
+        # @@protoc_insertion_point(class_scope:pb.Quests.Rsp.Quest.Info)
+        })
+      ,
       'DESCRIPTOR' : _QUESTS_RSP_QUEST,
       '__module__' : 'quest_pb2'
       # @@protoc_insertion_point(class_scope:pb.Quests.Rsp.Quest)
@@ -742,12 +863,14 @@ _sym_db.RegisterMessage(Quests.Req.Quest)
 _sym_db.RegisterMessage(Quests.Req.Quest.List)
 _sym_db.RegisterMessage(Quests.Req.Quest.Check)
 _sym_db.RegisterMessage(Quests.Req.Quest.Collect)
+_sym_db.RegisterMessage(Quests.Req.Quest.Info)
 _sym_db.RegisterMessage(Quests.Rsp)
 _sym_db.RegisterMessage(Quests.Rsp.Error)
 _sym_db.RegisterMessage(Quests.Rsp.Quest)
 _sym_db.RegisterMessage(Quests.Rsp.Quest.List)
 _sym_db.RegisterMessage(Quests.Rsp.Quest.Check)
 _sym_db.RegisterMessage(Quests.Rsp.Quest.Collect)
+_sym_db.RegisterMessage(Quests.Rsp.Quest.Info)
 _sym_db.RegisterMessage(Quests.QuestInfo)
 _sym_db.RegisterMessage(Quests.Event)
 _sym_db.RegisterMessage(Quests.Award)

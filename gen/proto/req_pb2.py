@@ -39,7 +39,6 @@ import piggy_pb2 as piggy__pb2
 import activity_pb2 as activity__pb2
 import lobbyluckyseven_pb2 as lobbyluckyseven__pb2
 import royalpass_pb2 as royalpass__pb2
-import cardgathering_pb2 as cardgathering__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
@@ -48,9 +47,9 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'Z\004.;pb',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\treq.proto\x12\x02pb\x1a\x12\x61uthenticate.proto\x1a\x0b\x62onus.proto\x1a\nbuff.proto\x1a\x10\x66riendship.proto\x1a\x12login_reward.proto\x1a\rmailbox.proto\x1a\x0emaintain.proto\x1a\rmission.proto\x1a\x0cplayer.proto\x1a\x11post_office.proto\x1a\nshop.proto\x1a\x0bslots.proto\x1a\x11slots_debug.proto\x1a\x13slots_jackpot.proto\x1a\rtourney.proto\x1a\x0bquest.proto\x1a\x10lobbywheel.proto\x1a\x10\x64\x61ilybonus.proto\x1a\tvip.proto\x1a\x12\x64\x61ilymission.proto\x1a\x15lobbyluckypoker.proto\x1a\x11noviceguide.proto\x1a\nhero.proto\x1a\x08\x66\x62.proto\x1a\x0bpiggy.proto\x1a\x0e\x61\x63tivity.proto\x1a\x15lobbyluckyseven.proto\x1a\x0froyalpass.proto\x1a\x13\x63\x61rdgathering.proto\"\xc9\x01\n\x0c\x42unchRequest\x12\x0b\n\x03SID\x18\x01 \x01(\r\x12\x1d\n\x05Login\x18\x02 \x01(\x0b\x32\x0c.pb.ReqLoginH\x00\x12\x1f\n\x06Public\x18\x03 \x01(\x0b\x32\r.pb.ReqPublicH\x00\x12\x1d\n\x05Multi\x18\x05 \x01(\x0b\x32\x0c.pb.ReqMultiH\x00\x12\x1d\n\x05\x44\x65\x62ug\x18\x07 \x01(\x0b\x32\x0c.pb.DebugSetH\x00\x12\'\n\x08Maintain\x18\x08 \x01(\x0b\x32\x13.pb.MaintainRequestH\x00\x42\x05\n\x03one\"\x89\x02\n\x08ReqLogin\x12,\n\rNativeChannel\x18\x01 \x01(\x0b\x32\x13.pb.ReqLogin.NativeH\x00\x12.\n\x0e\x46unPlusChannel\x18\x02 \x01(\x0b\x32\x14.pb.ReqLogin.FunPlusH\x00\x1aI\n\x06Native\x12\x0c\n\x04Name\x18\x01 \x01(\t\x12\x10\n\x08Timezone\x18\x02 \x01(\t\x12\x0f\n\x07\x63ountry\x18\x03 \x01(\t\x12\x0e\n\x06\x63liVer\x18\x04 \x01(\t\x1aM\n\x07\x46unPlus\x12\x0f\n\x07Session\x18\x01 \x01(\t\x12\x10\n\x08Timezone\x18\x02 \x01(\t\x12\x0f\n\x07\x63ountry\x18\x03 \x01(\t\x12\x0e\n\x06\x63liVer\x18\x04 \x01(\tB\x05\n\x03one\"\xe2\n\n\x07Request\x12\x0c\n\x04Step\x18\x01 \x01(\r\x12\x11\n\tRequestID\x18\x02 \x01(\r\x12 \n\x06Player\x18\xf0. \x01(\x0b\x32\r.pb.ReqPlayerH\x00\x12 \n\x04Play\x18\xb8\x17 \x01(\x0b\x32\x0f.pb.PlayRequestH\x00\x12.\n\x07Jackpot\x18\xb9\x17 \x01(\x0b\x32\x1a.pb.JackpotSyncing.RequestH\x00\x12*\n\tThemeList\x18\xd0\x0f \x01(\x0b\x32\x14.pb.ThemeListRequestH\x00\x12.\n\x0bThemeStatus\x18\xa0\x1f \x01(\x0b\x32\x16.pb.ThemeStatusRequestH\x00\x12\x30\n\x0cThemeRestore\x18\xa2\x1f \x01(\x0b\x32\x17.pb.ThemeRestoreRequestH\x00\x12\x38\n\x10LastSpinResponse\x18\xa1\x1f \x01(\x0b\x32\x1b.pb.LastSpinResponseRequestH\x00\x12\"\n\x07Tourney\x18\xa8\x46 \x01(\x0b\x32\x0e.pb.ReqTourneyH\x00\x12\x1e\n\x05\x42onus\x18\x90N \x01(\x0b\x32\x0c.pb.ReqBonusH\x00\x12*\n\x0bLoginReward\x18\x91N \x01(\x0b\x32\x12.pb.ReqLoginRewardH\x00\x12#\n\x07HoneyDo\x18\xf8U \x01(\x0b\x32\x0f.pb.HoneyDo.ReqH\x00\x12#\n\x07Mailbox\x18\xe0] \x01(\x0b\x32\x0f.pb.Mailbox.ReqH\x00\x12\x1d\n\x04Shop\x18\xc8\x65 \x01(\x0b\x32\x0c.pb.Shop.ReqH\x00\x12\x1d\n\x04\x42uff\x18\xb0m \x01(\x0b\x32\x0c.pb.Buff.ReqH\x00\x12)\n\nFriendship\x18\x98u \x01(\x0b\x32\x12.pb.Friendship.ReqH\x00\x12)\n\nPostOffice\x18\x80} \x01(\x0b\x32\x12.pb.PostOffice.ReqH\x00\x12!\n\x05Quest\x18\xe8\x84\x01 \x01(\x0b\x32\x0e.pb.Quests.ReqH\x00\x12+\n\x0bNoviceGuide\x18\xcc\x85\x01 \x01(\x0b\x32\x12.pb.NoviceGuideReqH\x00\x12\x33\n\x0fNoviceGuideSave\x18\xcd\x85\x01 \x01(\x0b\x32\x16.pb.NoviceGuideSaveReqH\x00\x12&\n\x08\x41\x63tivity\x18\xd6\x85\x01 \x01(\x0b\x32\x10.pb.Activity.ReqH\x00\x12\x30\n\rCardGathering\x18\xe0\x85\x01 \x01(\x0b\x32\x15.pb.CardGathering.ReqH\x00\x12*\n\nLobbyWheel\x18\xd0\x8c\x01 \x01(\x0b\x32\x12.pb.LobbyWheel.ReqH\x00\x12*\n\nDailyBonus\x18\xd1\x8c\x01 \x01(\x0b\x32\x12.pb.DailyBonus.ReqH\x00\x12\x1f\n\x03Vip\x18\xd2\x8c\x01 \x01(\x0b\x32\x0e.pb.Vip.VipReqH\x00\x12.\n\x0c\x44\x61ilyMission\x18\xd3\x8c\x01 \x01(\x0b\x32\x14.pb.DailyMission.ReqH\x00\x12*\n\nLobbyPoker\x18\xd4\x8c\x01 \x01(\x0b\x32\x12.pb.LobbyPoker.ReqH\x00\x12\x1e\n\x04Hero\x18\xd5\x8c\x01 \x01(\x0b\x32\x0c.pb.Hero.ReqH\x00\x12\x1c\n\x02\x46\x42\x18\xd6\x8c\x01 \x01(\x0b\x32\x0c.pb.FB.FBReqH\x00\x12%\n\x05Piggy\x18\xd7\x8c\x01 \x01(\x0b\x32\x12.pb.Piggy.PiggyReqH\x00\x12$\n\x06\x46\x42\x42ind\x18\xd8\x8c\x01 \x01(\x0b\x32\x10.pb.FB.FBBindReqH\x00\x12<\n\x0eLobbLuckySeven\x18\xd9\x8c\x01 \x01(\x0b\x32 .pb.LobbLuckySeven.LuckySevenReqH\x00\x12(\n\tRoyalPass\x18\xda\x8c\x01 \x01(\x0b\x32\x11.pb.RoyalPass.ReqH\x00\x42\x05\n\x03one\"\x82\x01\n\tReqPublic\x12&\n\x04Util\x18\xe8\x07 \x01(\x0b\x32\x15.pb.ReqPublic.ReqUtilH\x00\x1a\x46\n\x07ReqUtil\x12\x0f\n\x04Ping\x18\xe9\x07 \x01(\x08H\x00\x12\x0f\n\x04\x45\x63ho\x18\xea\x07 \x01(\tH\x00\x12\x12\n\x07Version\x18\xeb\x07 \x01(\x08H\x00\x42\x05\n\x03oneB\x05\n\x03one\"D\n\x08ReqMulti\x12\x19\n\x04\x41uth\x18\x01 \x01(\x0b\x32\x0b.pb.ReqAuth\x12\x1d\n\x08Requests\x18\x02 \x03(\x0b\x32\x0b.pb.Request\"6\n\x08ReqQuest\x12\x11\n\x06Newbie\x18\xa1\x1f \x01(\rH\x00\x12\x10\n\x05\x44\x61ily\x18\xa2\x1f \x01(\rH\x00\x42\x05\n\x03oneB\x06Z\x04.;pbb\x06proto3'
+  serialized_pb=b'\n\treq.proto\x12\x02pb\x1a\x12\x61uthenticate.proto\x1a\x0b\x62onus.proto\x1a\nbuff.proto\x1a\x10\x66riendship.proto\x1a\x12login_reward.proto\x1a\rmailbox.proto\x1a\x0emaintain.proto\x1a\rmission.proto\x1a\x0cplayer.proto\x1a\x11post_office.proto\x1a\nshop.proto\x1a\x0bslots.proto\x1a\x11slots_debug.proto\x1a\x13slots_jackpot.proto\x1a\rtourney.proto\x1a\x0bquest.proto\x1a\x10lobbywheel.proto\x1a\x10\x64\x61ilybonus.proto\x1a\tvip.proto\x1a\x12\x64\x61ilymission.proto\x1a\x15lobbyluckypoker.proto\x1a\x11noviceguide.proto\x1a\nhero.proto\x1a\x08\x66\x62.proto\x1a\x0bpiggy.proto\x1a\x0e\x61\x63tivity.proto\x1a\x15lobbyluckyseven.proto\x1a\x0froyalpass.proto\"\xc9\x01\n\x0c\x42unchRequest\x12\x0b\n\x03SID\x18\x01 \x01(\r\x12\x1d\n\x05Login\x18\x02 \x01(\x0b\x32\x0c.pb.ReqLoginH\x00\x12\x1f\n\x06Public\x18\x03 \x01(\x0b\x32\r.pb.ReqPublicH\x00\x12\x1d\n\x05Multi\x18\x05 \x01(\x0b\x32\x0c.pb.ReqMultiH\x00\x12\x1d\n\x05\x44\x65\x62ug\x18\x07 \x01(\x0b\x32\x0c.pb.DebugSetH\x00\x12\'\n\x08Maintain\x18\x08 \x01(\x0b\x32\x13.pb.MaintainRequestH\x00\x42\x05\n\x03one\"\x89\x02\n\x08ReqLogin\x12,\n\rNativeChannel\x18\x01 \x01(\x0b\x32\x13.pb.ReqLogin.NativeH\x00\x12.\n\x0e\x46unPlusChannel\x18\x02 \x01(\x0b\x32\x14.pb.ReqLogin.FunPlusH\x00\x1aI\n\x06Native\x12\x0c\n\x04Name\x18\x01 \x01(\t\x12\x10\n\x08Timezone\x18\x02 \x01(\t\x12\x0f\n\x07\x63ountry\x18\x03 \x01(\t\x12\x0e\n\x06\x63liVer\x18\x04 \x01(\t\x1aM\n\x07\x46unPlus\x12\x0f\n\x07Session\x18\x01 \x01(\t\x12\x10\n\x08Timezone\x18\x02 \x01(\t\x12\x0f\n\x07\x63ountry\x18\x03 \x01(\t\x12\x0e\n\x06\x63liVer\x18\x04 \x01(\tB\x05\n\x03one\"\xb0\n\n\x07Request\x12\x0c\n\x04Step\x18\x01 \x01(\r\x12\x11\n\tRequestID\x18\x02 \x01(\r\x12 \n\x06Player\x18\xf0. \x01(\x0b\x32\r.pb.ReqPlayerH\x00\x12 \n\x04Play\x18\xb8\x17 \x01(\x0b\x32\x0f.pb.PlayRequestH\x00\x12.\n\x07Jackpot\x18\xb9\x17 \x01(\x0b\x32\x1a.pb.JackpotSyncing.RequestH\x00\x12*\n\tThemeList\x18\xd0\x0f \x01(\x0b\x32\x14.pb.ThemeListRequestH\x00\x12.\n\x0bThemeStatus\x18\xa0\x1f \x01(\x0b\x32\x16.pb.ThemeStatusRequestH\x00\x12\x30\n\x0cThemeRestore\x18\xa2\x1f \x01(\x0b\x32\x17.pb.ThemeRestoreRequestH\x00\x12\x38\n\x10LastSpinResponse\x18\xa1\x1f \x01(\x0b\x32\x1b.pb.LastSpinResponseRequestH\x00\x12\"\n\x07Tourney\x18\xa8\x46 \x01(\x0b\x32\x0e.pb.ReqTourneyH\x00\x12\x1e\n\x05\x42onus\x18\x90N \x01(\x0b\x32\x0c.pb.ReqBonusH\x00\x12*\n\x0bLoginReward\x18\x91N \x01(\x0b\x32\x12.pb.ReqLoginRewardH\x00\x12#\n\x07HoneyDo\x18\xf8U \x01(\x0b\x32\x0f.pb.HoneyDo.ReqH\x00\x12#\n\x07Mailbox\x18\xe0] \x01(\x0b\x32\x0f.pb.Mailbox.ReqH\x00\x12\x1d\n\x04Shop\x18\xc8\x65 \x01(\x0b\x32\x0c.pb.Shop.ReqH\x00\x12\x1d\n\x04\x42uff\x18\xb0m \x01(\x0b\x32\x0c.pb.Buff.ReqH\x00\x12)\n\nFriendship\x18\x98u \x01(\x0b\x32\x12.pb.Friendship.ReqH\x00\x12)\n\nPostOffice\x18\x80} \x01(\x0b\x32\x12.pb.PostOffice.ReqH\x00\x12!\n\x05Quest\x18\xe8\x84\x01 \x01(\x0b\x32\x0e.pb.Quests.ReqH\x00\x12+\n\x0bNoviceGuide\x18\xcc\x85\x01 \x01(\x0b\x32\x12.pb.NoviceGuideReqH\x00\x12\x33\n\x0fNoviceGuideSave\x18\xcd\x85\x01 \x01(\x0b\x32\x16.pb.NoviceGuideSaveReqH\x00\x12&\n\x08\x41\x63tivity\x18\xd6\x85\x01 \x01(\x0b\x32\x10.pb.Activity.ReqH\x00\x12*\n\nLobbyWheel\x18\xd0\x8c\x01 \x01(\x0b\x32\x12.pb.LobbyWheel.ReqH\x00\x12*\n\nDailyBonus\x18\xd1\x8c\x01 \x01(\x0b\x32\x12.pb.DailyBonus.ReqH\x00\x12\x1f\n\x03Vip\x18\xd2\x8c\x01 \x01(\x0b\x32\x0e.pb.Vip.VipReqH\x00\x12.\n\x0c\x44\x61ilyMission\x18\xd3\x8c\x01 \x01(\x0b\x32\x14.pb.DailyMission.ReqH\x00\x12*\n\nLobbyPoker\x18\xd4\x8c\x01 \x01(\x0b\x32\x12.pb.LobbyPoker.ReqH\x00\x12\x1e\n\x04Hero\x18\xd5\x8c\x01 \x01(\x0b\x32\x0c.pb.Hero.ReqH\x00\x12\x1c\n\x02\x46\x42\x18\xd6\x8c\x01 \x01(\x0b\x32\x0c.pb.FB.FBReqH\x00\x12%\n\x05Piggy\x18\xd7\x8c\x01 \x01(\x0b\x32\x12.pb.Piggy.PiggyReqH\x00\x12$\n\x06\x46\x42\x42ind\x18\xd8\x8c\x01 \x01(\x0b\x32\x10.pb.FB.FBBindReqH\x00\x12<\n\x0eLobbLuckySeven\x18\xd9\x8c\x01 \x01(\x0b\x32 .pb.LobbLuckySeven.LuckySevenReqH\x00\x12(\n\tRoyalPass\x18\xda\x8c\x01 \x01(\x0b\x32\x11.pb.RoyalPass.ReqH\x00\x42\x05\n\x03one\"\x82\x01\n\tReqPublic\x12&\n\x04Util\x18\xe8\x07 \x01(\x0b\x32\x15.pb.ReqPublic.ReqUtilH\x00\x1a\x46\n\x07ReqUtil\x12\x0f\n\x04Ping\x18\xe9\x07 \x01(\x08H\x00\x12\x0f\n\x04\x45\x63ho\x18\xea\x07 \x01(\tH\x00\x12\x12\n\x07Version\x18\xeb\x07 \x01(\x08H\x00\x42\x05\n\x03oneB\x05\n\x03one\"D\n\x08ReqMulti\x12\x19\n\x04\x41uth\x18\x01 \x01(\x0b\x32\x0b.pb.ReqAuth\x12\x1d\n\x08Requests\x18\x02 \x03(\x0b\x32\x0b.pb.Request\"6\n\x08ReqQuest\x12\x11\n\x06Newbie\x18\xa1\x1f \x01(\rH\x00\x12\x10\n\x05\x44\x61ily\x18\xa2\x1f \x01(\rH\x00\x42\x05\n\x03oneB\x06Z\x04.;pbb\x06proto3'
   ,
-  dependencies=[authenticate__pb2.DESCRIPTOR,bonus__pb2.DESCRIPTOR,buff__pb2.DESCRIPTOR,friendship__pb2.DESCRIPTOR,login__reward__pb2.DESCRIPTOR,mailbox__pb2.DESCRIPTOR,maintain__pb2.DESCRIPTOR,mission__pb2.DESCRIPTOR,player__pb2.DESCRIPTOR,post__office__pb2.DESCRIPTOR,shop__pb2.DESCRIPTOR,slots__pb2.DESCRIPTOR,slots__debug__pb2.DESCRIPTOR,slots__jackpot__pb2.DESCRIPTOR,tourney__pb2.DESCRIPTOR,quest__pb2.DESCRIPTOR,lobbywheel__pb2.DESCRIPTOR,dailybonus__pb2.DESCRIPTOR,vip__pb2.DESCRIPTOR,dailymission__pb2.DESCRIPTOR,lobbyluckypoker__pb2.DESCRIPTOR,noviceguide__pb2.DESCRIPTOR,hero__pb2.DESCRIPTOR,fb__pb2.DESCRIPTOR,piggy__pb2.DESCRIPTOR,activity__pb2.DESCRIPTOR,lobbyluckyseven__pb2.DESCRIPTOR,royalpass__pb2.DESCRIPTOR,cardgathering__pb2.DESCRIPTOR,])
+  dependencies=[authenticate__pb2.DESCRIPTOR,bonus__pb2.DESCRIPTOR,buff__pb2.DESCRIPTOR,friendship__pb2.DESCRIPTOR,login__reward__pb2.DESCRIPTOR,mailbox__pb2.DESCRIPTOR,maintain__pb2.DESCRIPTOR,mission__pb2.DESCRIPTOR,player__pb2.DESCRIPTOR,post__office__pb2.DESCRIPTOR,shop__pb2.DESCRIPTOR,slots__pb2.DESCRIPTOR,slots__debug__pb2.DESCRIPTOR,slots__jackpot__pb2.DESCRIPTOR,tourney__pb2.DESCRIPTOR,quest__pb2.DESCRIPTOR,lobbywheel__pb2.DESCRIPTOR,dailybonus__pb2.DESCRIPTOR,vip__pb2.DESCRIPTOR,dailymission__pb2.DESCRIPTOR,lobbyluckypoker__pb2.DESCRIPTOR,noviceguide__pb2.DESCRIPTOR,hero__pb2.DESCRIPTOR,fb__pb2.DESCRIPTOR,piggy__pb2.DESCRIPTOR,activity__pb2.DESCRIPTOR,lobbyluckyseven__pb2.DESCRIPTOR,royalpass__pb2.DESCRIPTOR,])
 
 
 
@@ -122,8 +121,8 @@ _BUNCHREQUEST = _descriptor.Descriptor(
       create_key=_descriptor._internal_create_key,
     fields=[]),
   ],
-  serialized_start=494,
-  serialized_end=695,
+  serialized_start=473,
+  serialized_end=674,
 )
 
 
@@ -175,8 +174,8 @@ _REQLOGIN_NATIVE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=804,
-  serialized_end=877,
+  serialized_start=783,
+  serialized_end=856,
 )
 
 _REQLOGIN_FUNPLUS = _descriptor.Descriptor(
@@ -227,8 +226,8 @@ _REQLOGIN_FUNPLUS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=879,
-  serialized_end=956,
+  serialized_start=858,
+  serialized_end=935,
 )
 
 _REQLOGIN = _descriptor.Descriptor(
@@ -270,8 +269,8 @@ _REQLOGIN = _descriptor.Descriptor(
       create_key=_descriptor._internal_create_key,
     fields=[]),
   ],
-  serialized_start=698,
-  serialized_end=963,
+  serialized_start=677,
+  serialized_end=942,
 )
 
 
@@ -438,84 +437,77 @@ _REQUEST = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='CardGathering', full_name='pb.Request.CardGathering', index=22,
-      number=17120, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='LobbyWheel', full_name='pb.Request.LobbyWheel', index=23,
+      name='LobbyWheel', full_name='pb.Request.LobbyWheel', index=22,
       number=18000, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='DailyBonus', full_name='pb.Request.DailyBonus', index=24,
+      name='DailyBonus', full_name='pb.Request.DailyBonus', index=23,
       number=18001, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='Vip', full_name='pb.Request.Vip', index=25,
+      name='Vip', full_name='pb.Request.Vip', index=24,
       number=18002, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='DailyMission', full_name='pb.Request.DailyMission', index=26,
+      name='DailyMission', full_name='pb.Request.DailyMission', index=25,
       number=18003, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='LobbyPoker', full_name='pb.Request.LobbyPoker', index=27,
+      name='LobbyPoker', full_name='pb.Request.LobbyPoker', index=26,
       number=18004, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='Hero', full_name='pb.Request.Hero', index=28,
+      name='Hero', full_name='pb.Request.Hero', index=27,
       number=18005, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='FB', full_name='pb.Request.FB', index=29,
+      name='FB', full_name='pb.Request.FB', index=28,
       number=18006, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='Piggy', full_name='pb.Request.Piggy', index=30,
+      name='Piggy', full_name='pb.Request.Piggy', index=29,
       number=18007, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='FBBind', full_name='pb.Request.FBBind', index=31,
+      name='FBBind', full_name='pb.Request.FBBind', index=30,
       number=18008, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='LobbLuckySeven', full_name='pb.Request.LobbLuckySeven', index=32,
+      name='LobbLuckySeven', full_name='pb.Request.LobbLuckySeven', index=31,
       number=18009, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='RoyalPass', full_name='pb.Request.RoyalPass', index=33,
+      name='RoyalPass', full_name='pb.Request.RoyalPass', index=32,
       number=18010, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
@@ -538,8 +530,8 @@ _REQUEST = _descriptor.Descriptor(
       create_key=_descriptor._internal_create_key,
     fields=[]),
   ],
-  serialized_start=966,
-  serialized_end=2344,
+  serialized_start=945,
+  serialized_end=2273,
 )
 
 
@@ -589,8 +581,8 @@ _REQPUBLIC_REQUTIL = _descriptor.Descriptor(
       create_key=_descriptor._internal_create_key,
     fields=[]),
   ],
-  serialized_start=2400,
-  serialized_end=2470,
+  serialized_start=2329,
+  serialized_end=2399,
 )
 
 _REQPUBLIC = _descriptor.Descriptor(
@@ -625,8 +617,8 @@ _REQPUBLIC = _descriptor.Descriptor(
       create_key=_descriptor._internal_create_key,
     fields=[]),
   ],
-  serialized_start=2347,
-  serialized_end=2477,
+  serialized_start=2276,
+  serialized_end=2406,
 )
 
 
@@ -664,8 +656,8 @@ _REQMULTI = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2479,
-  serialized_end=2547,
+  serialized_start=2408,
+  serialized_end=2476,
 )
 
 
@@ -708,8 +700,8 @@ _REQQUEST = _descriptor.Descriptor(
       create_key=_descriptor._internal_create_key,
     fields=[]),
   ],
-  serialized_start=2549,
-  serialized_end=2603,
+  serialized_start=2478,
+  serialized_end=2532,
 )
 
 _BUNCHREQUEST.fields_by_name['Login'].message_type = _REQLOGIN
@@ -762,7 +754,6 @@ _REQUEST.fields_by_name['Quest'].message_type = quest__pb2._QUESTS_REQ
 _REQUEST.fields_by_name['NoviceGuide'].message_type = noviceguide__pb2._NOVICEGUIDEREQ
 _REQUEST.fields_by_name['NoviceGuideSave'].message_type = noviceguide__pb2._NOVICEGUIDESAVEREQ
 _REQUEST.fields_by_name['Activity'].message_type = activity__pb2._ACTIVITY_REQ
-_REQUEST.fields_by_name['CardGathering'].message_type = cardgathering__pb2._CARDGATHERING_REQ
 _REQUEST.fields_by_name['LobbyWheel'].message_type = lobbywheel__pb2._LOBBYWHEEL_REQ
 _REQUEST.fields_by_name['DailyBonus'].message_type = dailybonus__pb2._DAILYBONUS_REQ
 _REQUEST.fields_by_name['Vip'].message_type = vip__pb2._VIP_VIPREQ
@@ -834,9 +825,6 @@ _REQUEST.fields_by_name['NoviceGuideSave'].containing_oneof = _REQUEST.oneofs_by
 _REQUEST.oneofs_by_name['one'].fields.append(
   _REQUEST.fields_by_name['Activity'])
 _REQUEST.fields_by_name['Activity'].containing_oneof = _REQUEST.oneofs_by_name['one']
-_REQUEST.oneofs_by_name['one'].fields.append(
-  _REQUEST.fields_by_name['CardGathering'])
-_REQUEST.fields_by_name['CardGathering'].containing_oneof = _REQUEST.oneofs_by_name['one']
 _REQUEST.oneofs_by_name['one'].fields.append(
   _REQUEST.fields_by_name['LobbyWheel'])
 _REQUEST.fields_by_name['LobbyWheel'].containing_oneof = _REQUEST.oneofs_by_name['one']

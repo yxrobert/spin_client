@@ -139,34 +139,31 @@ def make_activity_play_req(player_id, token, uid):
     return req
 
 
-def make_cardgathering_data_req(player_id, token, season):
-    req, request = make_multi_req(player_id, token)
-    request.CardGathering.UserData.Season = season
-    return req
+# def make_cardgathering_data_req(player_id, token, season):
+#     req, request = make_multi_req(player_id, token)
+#     request.CardGathering.UserData.Season = season
+#     return req
 
 
-def make_cardgathering_exchange_req(player_id, token, src, dest):
-    req, request = make_multi_req(player_id, token)
-    request.CardGathering.ExchangeCard.Src = src
-    request.CardGathering.ExchangeCard.Dest = dest
-    return req
+# def make_cardgathering_exchange_req(player_id, token, src, dest):
+#     req, request = make_multi_req(player_id, token)
+#     request.CardGathering.ExchangeCard.Src = src
+#     request.CardGathering.ExchangeCard.Dest = dest
+#     return req
 
 
-def make_cardgathering_break_req(player_id, token, level, card_list):
-    req, request = make_multi_req(player_id, token)
-    request.CardGathering.BreakCard.Level = level
-    request.CardGathering.BreakCard.CostCards.extend(card_list)
+# def make_cardgathering_break_req(player_id, token, level, card_list):
+#     req, request = make_multi_req(player_id, token)
+#     request.CardGathering.BreakCard.Level = level
+#     request.CardGathering.BreakCard.CostCards.extend(card_list)
     
-    # for c in card_list:
-    #     card = request.CardGathering.BreakCard.CostCards.add()
-    #     card = c
-    return req
+#     return req
 
 
-def make_cardgathering_reset_req(player_id, token):
-    req, request = make_multi_req(player_id, token)
-    request.CardGathering.ResetBreaking.Type = 0
-    return req
+# def make_cardgathering_reset_req(player_id, token):
+#     req, request = make_multi_req(player_id, token)
+#     request.CardGathering.ResetBreaking.Type = 0
+#     return req
 
 
 
