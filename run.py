@@ -40,7 +40,9 @@ def create_theme_robot(theme_id):
 
 
 def run(theme_id):
-    Sender.set_server_addr(conf.get_svr_url())
+    url = conf.get_svr_url()
+    print(url)
+    Sender.set_server_addr(url)
     player, run_func = create_theme_robot(theme_id)
 
     # load conf

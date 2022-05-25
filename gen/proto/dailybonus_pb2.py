@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'Z\004.;pb',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x10\x64\x61ilybonus.proto\x12\x02pb\"\xad\x01\n\nDailyBonus\x1a}\n\x03Req\x12#\n\x08SignList\x18\x01 \x01(\x0b\x32\x0f.pb.SignListReqH\x00\x12!\n\x07\x43heckIn\x18\x02 \x01(\x0b\x32\x0e.pb.CheckInReqH\x00\x12\'\n\nTotalAward\x18\x03 \x01(\x0b\x32\x11.pb.TotalAwardReqH\x00\x42\x05\n\x03one\x1a \n\x03Rsp\x12\x19\n\x04Sign\x18\x01 \x01(\x0b\x32\x0b.pb.SignRsp\"\'\n\x0bSignListReq\x12\x18\n\x03SRC\x18\x01 \x01(\x0e\x32\x0b.pb.SignSRC\"\x0c\n\nCheckInReq\" \n\rTotalAwardReq\x12\x0f\n\x07\x41wardId\x18\x02 \x01(\r\"\xe5\x01\n\x07SignRsp\x12\x10\n\x08SignType\x18\x01 \x01(\t\x12\x14\n\x0cLastSignTime\x18\x02 \x01(\x03\x12\x13\n\x0b\x43\x61nSignTime\x18\x03 \x01(\x03\x12\x12\n\nLastSignID\x18\x04 \x01(\r\x12\x1d\n\x06\x41wards\x18\x05 \x03(\x0b\x32\r.pb.SignAward\x12\x11\n\tTotalSign\x18\x06 \x01(\r\x12&\n\x0fTotalSignAwards\x18\x07 \x03(\x0b\x32\r.pb.SignAward\x12\x15\n\rTotalAwardIDs\x18\x08 \x03(\r\x12\x18\n\x03SRC\x18\t \x01(\x0e\x32\x0b.pb.SignSRC\"=\n\tSignAward\x12\x0e\n\x06SignID\x18\x01 \x01(\r\x12 \n\x05\x41ward\x18\x02 \x03(\x0b\x32\x11.pb.SignAwardInfo\"-\n\rSignAwardInfo\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x0e\n\x06\x61mount\x18\x03 \x01(\x04*0\n\x07SignSRC\x12\x12\n\x0eSIGN_LOBBY_SRC\x10\x00\x12\x11\n\rSIGN_LIST_SRC\x10\x01\x42\x06Z\x04.;pbb\x06proto3'
+  serialized_pb=b'\n\x10\x64\x61ilybonus.proto\x12\x02pb\"\xad\x01\n\nDailyBonus\x1a}\n\x03Req\x12#\n\x08SignList\x18\x01 \x01(\x0b\x32\x0f.pb.SignListReqH\x00\x12!\n\x07\x43heckIn\x18\x02 \x01(\x0b\x32\x0e.pb.CheckInReqH\x00\x12\'\n\nTotalAward\x18\x03 \x01(\x0b\x32\x11.pb.TotalAwardReqH\x00\x42\x05\n\x03one\x1a \n\x03Rsp\x12\x19\n\x04Sign\x18\x01 \x01(\x0b\x32\x0b.pb.SignRsp\"\'\n\x0bSignListReq\x12\x18\n\x03SRC\x18\x01 \x01(\x0e\x32\x0b.pb.SignSRC\"\x0c\n\nCheckInReq\" \n\rTotalAwardReq\x12\x0f\n\x07\x41wardId\x18\x02 \x01(\r\"\xfa\x01\n\x07SignRsp\x12\x10\n\x08SignType\x18\x01 \x01(\t\x12\x14\n\x0cLastSignTime\x18\x02 \x01(\x03\x12\x13\n\x0b\x43\x61nSignTime\x18\x03 \x01(\x03\x12\x12\n\nLastSignID\x18\x04 \x01(\r\x12\x1d\n\x06\x41wards\x18\x05 \x03(\x0b\x32\r.pb.SignAward\x12\x11\n\tTotalSign\x18\x06 \x01(\r\x12&\n\x0fTotalSignAwards\x18\x07 \x03(\x0b\x32\r.pb.SignAward\x12\x15\n\rTotalAwardIDs\x18\x08 \x03(\r\x12\x18\n\x03SRC\x18\t \x01(\x0e\x32\x0b.pb.SignSRC\x12\x13\n\x0breissueHero\x18\n \x01(\x08\"=\n\tSignAward\x12\x0e\n\x06SignID\x18\x01 \x01(\r\x12 \n\x05\x41ward\x18\x02 \x03(\x0b\x32\x11.pb.SignAwardInfo\"-\n\rSignAwardInfo\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x0e\n\x06\x61mount\x18\x03 \x01(\x04*0\n\x07SignSRC\x12\x12\n\x0eSIGN_LOBBY_SRC\x10\x00\x12\x11\n\rSIGN_LIST_SRC\x10\x01\x42\x06Z\x04.;pbb\x06proto3'
 )
 
 _SIGNSRC = _descriptor.EnumDescriptor(
@@ -43,8 +43,8 @@ _SIGNSRC = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=631,
-  serialized_end=679,
+  serialized_start=652,
+  serialized_end=700,
 )
 _sym_db.RegisterEnumDescriptor(_SIGNSRC)
 
@@ -320,6 +320,13 @@ _SIGNRSP = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='reissueHero', full_name='pb.SignRsp.reissueHero', index=9,
+      number=10, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -333,7 +340,7 @@ _SIGNRSP = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=290,
-  serialized_end=519,
+  serialized_end=540,
 )
 
 
@@ -371,8 +378,8 @@ _SIGNAWARD = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=521,
-  serialized_end=582,
+  serialized_start=542,
+  serialized_end=603,
 )
 
 
@@ -410,8 +417,8 @@ _SIGNAWARDINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=584,
-  serialized_end=629,
+  serialized_start=605,
+  serialized_end=650,
 )
 
 _DAILYBONUS_REQ.fields_by_name['SignList'].message_type = _SIGNLISTREQ

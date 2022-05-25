@@ -57,14 +57,15 @@ def run(player):
     # player.send_cmd(bingoball_cmd)
     # player.send_cmd(gmnow)
     # player.send_cmd(journey_roll)
+    player.send_cmd(journey)
     
-    player.req_activity_list()
+    # player.req_activity_list()
 
     act_id = 1
     # player.req_activity_user_data(act_id)
     # for i in range(0, 10):
         # player.req_activity_play(act_id)
-    # player.req_activity_play(act_id)
+    player.req_activity_play(act_id)
 
     # player.send_cmd(dice_cmd)
     # player.send_cmd(journey)
