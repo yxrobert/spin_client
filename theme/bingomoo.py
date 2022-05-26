@@ -76,11 +76,12 @@ def run_mege(player):
     # player.send_cmd(bingomoo_mega)
     # player.send_cmd(bingomoo_supper)
 
-    player.send_cmd(bm_cmd)
+    # player.send_cmd(bm_cmd)
     # player.spin()
-    # player.spin_to_next_stage()
+    # player.spin_times(20)
+    player.spin_to_next_stage()
 
-    player.spin_to_base()
+    # player.spin_to_base()
     pass
 
 def run(player):
