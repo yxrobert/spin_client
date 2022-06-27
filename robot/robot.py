@@ -111,6 +111,11 @@ class RobotBase:
         req = make_cardgathering_reset_req(self.player_id, self.token)
         self.send_packet(req)
 
+
+    def req_hero_active(self, id, name):
+        req = make_hero_active_req(self.player_id, self.token, id, name)
+        self.send_packet(req)
+
     def on_response(self, packet):
         if packet.Error != None:
             # self.log("--------Got Error--------[" + str(packet.Error) + "]")
@@ -156,6 +161,18 @@ class RobotBase:
         pass
 
     def on_activity(self, packet):
+        if packet.HasField("List"):
+            self.log(packet.List)
+        elif packet.HasField("UserData"):
+            self.on_act_userdata(packet.UserData)
+        elif packet.HasField("Play"):
+            self.on_act_play(packet.Play)
+        pass
+
+    def on_act_play(self, packet):
+        self.log(packet)
+
+    def on_act_userdata(self, packet):
         self.log(packet)
 
     def on_cardgathering(self, packet):

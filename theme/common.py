@@ -20,15 +20,12 @@ class DefaultRobot(SpinRobot):
     def play_status_callback(self, packet):
         pass
 
-    # def on_activity(self, packet):
-    #     # self.log(111111)
-    #     # if packet.HasField("Play"):
-    #     #     self.log(packet.Play.data.Bingo)
-    #         # if packet.Play.data.HasField("Bingo"):
-    #         #     d = packet.Play.data.Bingo
-    #         #     self.log(111111)
-    #         #     self.log(p)
-    #     pass
+    def on_act_play(self, packet):
+        pass
+
+    def on_act_userdata(self, packet):
+        msg.log_act_bigo(self, packet)
+
 
 
 def default_spin_callback(packet):
@@ -46,6 +43,7 @@ def fakeTIme():
     Sender.send_timefake("11111")
 
 def run(player):
+    # player.send_cmd(candy_cmd)
     # player.send_cmd(gem_cmd)
     # player.send_cmd(add_money)
     # player.send_cmd(free_me)
@@ -53,18 +51,20 @@ def run(player):
     # player.send_cmd(coin_cmd)
     # player.send_cmd(level_cmd)
     # player.send_cmd(lv10_cmd)
-    player.send_cmd(dice_cmd)
+    # player.send_cmd(dice_cmd)
     # player.send_cmd(bingoball_cmd)
     # player.send_cmd(gmnow)
     # player.send_cmd(journey_roll)
     # player.send_cmd(journey)
     
-    player.req_activity_list()
+    # player.req_activity_list()
 
-    act_id = 1
+    act_id = 8
+    # act_id = 23
     player.req_activity_user_data(act_id)
-    # for i in range(0, 10):
+    for i in range(0, 30):
         # player.req_activity_play(act_id)
+        pass
     # player.req_activity_play(act_id)
 
     # player.send_cmd(dice_cmd)
@@ -90,5 +90,6 @@ level_cmd = "add level 100"
 lv10_cmd = "add level 10"
 coin_cmd = "add coin 99999999"
 gem_cmd = "add gem 99999999"
+candy_cmd = "add candy 99999999"
 bingoball_cmd = "add bingoBall 999999"
 mock_time="st:2022-04-09 14:02:00"

@@ -83,7 +83,11 @@ def make_game_req(player_id, token, theme_id, bet, x, y = -1):
     request.Play.PickPos = 0
     request.Play.PickInfo = ""
 
-    request.Play.index.X = x
+    if y != -1:
+        request.Play.coords.X = x
+        request.Play.coords.Y = y
+    else:
+        request.Play.index.X = x
 
     return req
 
@@ -136,6 +140,12 @@ def make_activity_play_req(player_id, token, uid):
     req, request = make_multi_req(player_id, token)
     request.Activity.Play.UID = uid
     request.Activity.Play.Input.InputX = 0
+    return req
+
+def make_hero_active_req(player_id, token, hero_id, name):
+    req, request = make_multi_req(player_id, token)
+    request.Hero.HeroActive.heroID = hero_id
+    request.Hero.HeroActive.itemName = name
     return req
 
 

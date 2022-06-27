@@ -11,3 +11,4 @@ from genie import *
 from potoluck import *
 from hook import *
 from cardgathering import *
+from functions import *

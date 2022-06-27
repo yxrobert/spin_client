@@ -29,6 +29,7 @@ tab_theme_robot = {
 
 
     1 : [theme.CardGathering, theme.cardgathering.run],
+    2 : [theme.FuncRobot, theme.functions.run],
     }
 
 def create_theme_robot(theme_id):

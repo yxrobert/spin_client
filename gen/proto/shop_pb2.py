@@ -19,7 +19,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'Z\004.;pb',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\nshop.proto\x12\x02pb\"\xa7\x0e\n\x04Shop\x1a\xbe\x01\n\x03Req\x12.\n\x0bProductList\x18\x01 \x01(\x0b\x32\x17.pb.Shop.ReqProductListH\x00\x12&\n\x07NewBill\x18\x02 \x01(\x0b\x32\x13.pb.Shop.ReqNewBillH\x00\x12.\n\x0b\x43onfirmBill\x18\x03 \x01(\x0b\x32\x17.pb.Shop.ReqConfirmBillH\x00\x12(\n\x08\x45xchange\x18\x04 \x01(\x0b\x32\x14.pb.Shop.ReqExchangeH\x00\x42\x05\n\x03one\x1a\xc3\x01\n\x04Resp\x12/\n\x0bProductList\x18\x01 \x01(\x0b\x32\x18.pb.Shop.RespProductListH\x00\x12\'\n\x07NewBill\x18\x02 \x01(\x0b\x32\x14.pb.Shop.RespNewBillH\x00\x12/\n\x0b\x43onfirmBill\x18\x03 \x01(\x0b\x32\x18.pb.Shop.RespConfirmBillH\x00\x12)\n\x08\x45xchange\x18\x04 \x01(\x0b\x32\x15.pb.Shop.RespExchangeH\x00\x42\x05\n\x03one\x1a\x1f\n\nReqNewBill\x12\x11\n\tProductID\x18\x01 \x01(\t\x1a\x46\n\x0bRespNewBill\x12\x12\n\nPurchaseID\x18\x01 \x01(\t\x12#\n\x06Result\x18\x02 \x01(\x0e\x32\x13.pb.Shop.ShopResult\x1a$\n\x0eReqConfirmBill\x12\x12\n\nPurchaseID\x18\x01 \x01(\t\x1a\x90\x01\n\x0fRespConfirmBill\x12#\n\x06Result\x18\x01 \x01(\x0e\x32\x13.pb.Shop.ShopResult\x12%\n\tRoyalSeal\x18\x03 \x01(\x0b\x32\x12.pb.Shop.RoyalSeal\x12\x0b\n\x03GID\x18\x07 \x01(\t\x12\x0b\n\x03\x41ID\x18\x08 \x01(\t\x12\x17\n\x0fProductMainType\x18\t \x01(\t\x1aI\n\x0eReqProductList\x12*\n\nSituations\x18\x01 \x01(\x0e\x32\x16.pb.Shop.PaySituations\x12\x0b\n\x03SRC\x18\x02 \x01(\r\x1ai\n\x0fRespProductList\x12\"\n\x08Products\x18\x01 \x03(\x0b\x32\x10.pb.Shop.Product\x12\x0b\n\x03SRC\x18\x02 \x01(\r\x12%\n\tRoyalSeal\x18\x03 \x01(\x0b\x32\x12.pb.Shop.RoyalSeal\x1a?\n\tRoyalSeal\x12\x10\n\x08Progress\x18\x01 \x01(\r\x12\x0c\n\x04\x43oin\x18\x02 \x01(\x04\x12\x12\n\nFinishTime\x18\x03 \x01(\x03\x1a\x86\x03\n\x07Product\x12\n\n\x02ID\x18\x01 \x01(\t\x12\x0f\n\x07PayType\x18\x02 \x01(\t\x12\x10\n\x08PayCount\x18\x03 \x01(\r\x12&\n\x06reward\x18\x04 \x03(\x0b\x32\x16.pb.Shop.ProductReward\x12\x12\n\nFinishTime\x18\x05 \x01(\x04\x12\x17\n\x0fNextRefreshTime\x18\x06 \x01(\x04\x12\x0b\n\x03GID\x18\x07 \x01(\t\x12\x0b\n\x03\x41ID\x18\x08 \x01(\t\x12\x17\n\x0fProductMainType\x18\t \x01(\t\x12\x13\n\x0bProductType\x18\n \x01(\t\x12\x18\n\x10\x66irstPayMultiple\x18\x0b \x01(\r\x12\x19\n\x11promotionMultiple\x18\x0c \x01(\r\x12\x15\n\rcoinPromotion\x18\r \x01(\r\x12\x18\n\x10OriginalPayCount\x18\x0e \x01(\r\x12\r\n\x05IsBuy\x18\x0f \x01(\x08\x12\x15\n\rExpectedPrice\x18\x10 \x01(\r\x12\x10\n\x08\x46irstPay\x18\x11 \x01(\r\x12\x11\n\troyalSeal\x18\x12 \x01(\x08\x1a,\n\rProductReward\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05\x63ount\x18\x02 \x01(\x04\x1a-\n\x0bReqExchange\x12\x11\n\tProductID\x18\x01 \x01(\t\x12\x0b\n\x03SRC\x18\x02 \x01(\r\x1a@\n\x0cRespExchange\x12#\n\x06Result\x18\x01 \x01(\x0e\x32\x13.pb.Shop.ShopResult\x12\x0b\n\x03SRC\x18\x02 \x01(\r\"e\n\nShopResult\x12\x06\n\x02OK\x10\x00\x12\x11\n\rErrNotFoundID\x10\x01\x12\x12\n\x0e\x45rrNotPurchase\x10\x02\x12\x16\n\x12\x45rrRepeatedConfirm\x10\x03\x12\x10\n\x0c\x45rrNotEnough\x10\x65\"\xef\x01\n\rPaySituations\x12\x07\n\x03\x41ll\x10\x00\x12\x08\n\x04Shop\x10\x01\x12\x08\n\x04Slot\x10\x02\x12\x0b\n\x07Tourney\x10\x03\x12\t\n\x05Wheel\x10\x04\x12\t\n\x05Lobby\x10\x05\x12\t\n\x05Poker\x10\x06\x12\x18\n\x14HeroSystemItemActive\x10\x07\x12\x14\n\x10HeroSystemItemXp\x10\x08\x12\t\n\x05Piggy\x10\t\x12\x13\n\x0fRoyalPassUnlock\x10\n\x12\x12\n\x0eRoyalPassLevel\x10\x0b\x12\x11\n\rEndlessRiches\x10\x0c\x12\x11\n\rLegendJourney\x10\r\x12\t\n\x05Other\x10\x63\x42\x06Z\x04.;pbb\x06proto3'
+  serialized_pb=b'\n\nshop.proto\x12\x02pb\"\xff\x0f\n\x04Shop\x1a\xfe\x01\n\x03Req\x12.\n\x0bProductList\x18\x01 \x01(\x0b\x32\x17.pb.Shop.ReqProductListH\x00\x12&\n\x07NewBill\x18\x02 \x01(\x0b\x32\x13.pb.Shop.ReqNewBillH\x00\x12.\n\x0b\x43onfirmBill\x18\x03 \x01(\x0b\x32\x17.pb.Shop.ReqConfirmBillH\x00\x12(\n\x08\x45xchange\x18\x04 \x01(\x0b\x32\x14.pb.Shop.ReqExchangeH\x00\x12>\n\x13NeedConfirmBillList\x18\x05 \x01(\x0b\x32\x1f.pb.Shop.ReqNeedConfirmBillListH\x00\x42\x05\n\x03one\x1a\x83\x02\n\x04Resp\x12/\n\x0bProductList\x18\x01 \x01(\x0b\x32\x18.pb.Shop.RespProductListH\x00\x12\'\n\x07NewBill\x18\x02 \x01(\x0b\x32\x14.pb.Shop.RespNewBillH\x00\x12/\n\x0b\x43onfirmBill\x18\x03 \x01(\x0b\x32\x18.pb.Shop.RespConfirmBillH\x00\x12)\n\x08\x45xchange\x18\x04 \x01(\x0b\x32\x15.pb.Shop.RespExchangeH\x00\x12>\n\x13NeedConfirmBillList\x18\x05 \x01(\x0b\x32\x1f.pb.Shop.ResNeedConfirmBillListH\x00\x42\x05\n\x03one\x1a\x1f\n\nReqNewBill\x12\x11\n\tProductID\x18\x01 \x01(\t\x1a\x46\n\x0bRespNewBill\x12\x12\n\nPurchaseID\x18\x01 \x01(\t\x12#\n\x06Result\x18\x02 \x01(\x0e\x32\x13.pb.Shop.ShopResult\x1a$\n\x0eReqConfirmBill\x12\x12\n\nPurchaseID\x18\x01 \x01(\t\x1a\x90\x01\n\x0fRespConfirmBill\x12#\n\x06Result\x18\x01 \x01(\x0e\x32\x13.pb.Shop.ShopResult\x12%\n\tRoyalSeal\x18\x03 \x01(\x0b\x32\x12.pb.Shop.RoyalSeal\x12\x0b\n\x03GID\x18\x07 \x01(\t\x12\x0b\n\x03\x41ID\x18\x08 \x01(\t\x12\x17\n\x0fProductMainType\x18\t \x01(\t\x1aI\n\x0eReqProductList\x12*\n\nSituations\x18\x01 \x01(\x0e\x32\x16.pb.Shop.PaySituations\x12\x0b\n\x03SRC\x18\x02 \x01(\r\x1ai\n\x0fRespProductList\x12\"\n\x08Products\x18\x01 \x03(\x0b\x32\x10.pb.Shop.Product\x12\x0b\n\x03SRC\x18\x02 \x01(\r\x12%\n\tRoyalSeal\x18\x03 \x01(\x0b\x32\x12.pb.Shop.RoyalSeal\x1a?\n\tRoyalSeal\x12\x10\n\x08Progress\x18\x01 \x01(\r\x12\x0c\n\x04\x43oin\x18\x02 \x01(\x04\x12\x12\n\nFinishTime\x18\x03 \x01(\x03\x1a\x86\x03\n\x07Product\x12\n\n\x02ID\x18\x01 \x01(\t\x12\x0f\n\x07PayType\x18\x02 \x01(\t\x12\x10\n\x08PayCount\x18\x03 \x01(\r\x12&\n\x06reward\x18\x04 \x03(\x0b\x32\x16.pb.Shop.ProductReward\x12\x12\n\nFinishTime\x18\x05 \x01(\x04\x12\x17\n\x0fNextRefreshTime\x18\x06 \x01(\x04\x12\x0b\n\x03GID\x18\x07 \x01(\t\x12\x0b\n\x03\x41ID\x18\x08 \x01(\t\x12\x17\n\x0fProductMainType\x18\t \x01(\t\x12\x13\n\x0bProductType\x18\n \x01(\t\x12\x18\n\x10\x66irstPayMultiple\x18\x0b \x01(\r\x12\x19\n\x11promotionMultiple\x18\x0c \x01(\r\x12\x15\n\rcoinPromotion\x18\r \x01(\r\x12\x18\n\x10OriginalPayCount\x18\x0e \x01(\r\x12\r\n\x05IsBuy\x18\x0f \x01(\x08\x12\x15\n\rExpectedPrice\x18\x10 \x01(\r\x12\x10\n\x08\x46irstPay\x18\x11 \x01(\r\x12\x11\n\troyalSeal\x18\x12 \x01(\x08\x1a,\n\rProductReward\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05\x63ount\x18\x02 \x01(\x04\x1a-\n\x0bReqExchange\x12\x11\n\tProductID\x18\x01 \x01(\t\x12\x0b\n\x03SRC\x18\x02 \x01(\r\x1a@\n\x0cRespExchange\x12#\n\x06Result\x18\x01 \x01(\x0e\x32\x13.pb.Shop.ShopResult\x12\x0b\n\x03SRC\x18\x02 \x01(\r\x1a\x18\n\x16ReqNeedConfirmBillList\x1a-\n\x16ResNeedConfirmBillList\x12\x13\n\x0bPurchaseIDs\x18\x01 \x03(\t\"e\n\nShopResult\x12\x06\n\x02OK\x10\x00\x12\x11\n\rErrNotFoundID\x10\x01\x12\x12\n\x0e\x45rrNotPurchase\x10\x02\x12\x16\n\x12\x45rrRepeatedConfirm\x10\x03\x12\x10\n\x0c\x45rrNotEnough\x10\x65\"\xfe\x01\n\rPaySituations\x12\x07\n\x03\x41ll\x10\x00\x12\x08\n\x04Shop\x10\x01\x12\x08\n\x04Slot\x10\x02\x12\x0b\n\x07Tourney\x10\x03\x12\t\n\x05Wheel\x10\x04\x12\t\n\x05Lobby\x10\x05\x12\t\n\x05Poker\x10\x06\x12\x18\n\x14HeroSystemItemActive\x10\x07\x12\x14\n\x10HeroSystemItemXp\x10\x08\x12\t\n\x05Piggy\x10\t\x12\x13\n\x0fRoyalPassUnlock\x10\n\x12\x12\n\x0eRoyalPassLevel\x10\x0b\x12\x11\n\rEndlessRiches\x10\x0c\x12\x11\n\rLegendJourney\x10\r\x12\r\n\tBingoGame\x10\x0e\x12\t\n\x05Other\x10\x63\x42\x06Z\x04.;pbb\x06proto3'
 )
 
 
@@ -59,8 +59,8 @@ _SHOP_SHOPRESULT = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=1507,
-  serialized_end=1608,
+  serialized_start=1708,
+  serialized_end=1809,
 )
 _sym_db.RegisterEnumDescriptor(_SHOP_SHOPRESULT)
 
@@ -142,15 +142,20 @@ _SHOP_PAYSITUATIONS = _descriptor.EnumDescriptor(
       type=None,
       create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
-      name='Other', index=14, number=99,
+      name='BingoGame', index=14, number=14,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='Other', index=15, number=99,
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=1611,
-  serialized_end=1850,
+  serialized_start=1812,
+  serialized_end=2066,
 )
 _sym_db.RegisterEnumDescriptor(_SHOP_PAYSITUATIONS)
 
@@ -191,6 +196,13 @@ _SHOP_REQ = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='NeedConfirmBillList', full_name='pb.Shop.Req.NeedConfirmBillList', index=4,
+      number=5, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -209,7 +221,7 @@ _SHOP_REQ = _descriptor.Descriptor(
     fields=[]),
   ],
   serialized_start=28,
-  serialized_end=218,
+  serialized_end=282,
 )
 
 _SHOP_RESP = _descriptor.Descriptor(
@@ -248,6 +260,13 @@ _SHOP_RESP = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='NeedConfirmBillList', full_name='pb.Shop.Resp.NeedConfirmBillList', index=4,
+      number=5, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -265,8 +284,8 @@ _SHOP_RESP = _descriptor.Descriptor(
       create_key=_descriptor._internal_create_key,
     fields=[]),
   ],
-  serialized_start=221,
-  serialized_end=416,
+  serialized_start=285,
+  serialized_end=544,
 )
 
 _SHOP_REQNEWBILL = _descriptor.Descriptor(
@@ -296,8 +315,8 @@ _SHOP_REQNEWBILL = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=418,
-  serialized_end=449,
+  serialized_start=546,
+  serialized_end=577,
 )
 
 _SHOP_RESPNEWBILL = _descriptor.Descriptor(
@@ -334,8 +353,8 @@ _SHOP_RESPNEWBILL = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=451,
-  serialized_end=521,
+  serialized_start=579,
+  serialized_end=649,
 )
 
 _SHOP_REQCONFIRMBILL = _descriptor.Descriptor(
@@ -365,8 +384,8 @@ _SHOP_REQCONFIRMBILL = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=523,
-  serialized_end=559,
+  serialized_start=651,
+  serialized_end=687,
 )
 
 _SHOP_RESPCONFIRMBILL = _descriptor.Descriptor(
@@ -424,8 +443,8 @@ _SHOP_RESPCONFIRMBILL = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=562,
-  serialized_end=706,
+  serialized_start=690,
+  serialized_end=834,
 )
 
 _SHOP_REQPRODUCTLIST = _descriptor.Descriptor(
@@ -462,8 +481,8 @@ _SHOP_REQPRODUCTLIST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=708,
-  serialized_end=781,
+  serialized_start=836,
+  serialized_end=909,
 )
 
 _SHOP_RESPPRODUCTLIST = _descriptor.Descriptor(
@@ -507,8 +526,8 @@ _SHOP_RESPPRODUCTLIST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=783,
-  serialized_end=888,
+  serialized_start=911,
+  serialized_end=1016,
 )
 
 _SHOP_ROYALSEAL = _descriptor.Descriptor(
@@ -552,8 +571,8 @@ _SHOP_ROYALSEAL = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=890,
-  serialized_end=953,
+  serialized_start=1018,
+  serialized_end=1081,
 )
 
 _SHOP_PRODUCT = _descriptor.Descriptor(
@@ -702,8 +721,8 @@ _SHOP_PRODUCT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=956,
-  serialized_end=1346,
+  serialized_start=1084,
+  serialized_end=1474,
 )
 
 _SHOP_PRODUCTREWARD = _descriptor.Descriptor(
@@ -740,8 +759,8 @@ _SHOP_PRODUCTREWARD = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1348,
-  serialized_end=1392,
+  serialized_start=1476,
+  serialized_end=1520,
 )
 
 _SHOP_REQEXCHANGE = _descriptor.Descriptor(
@@ -778,8 +797,8 @@ _SHOP_REQEXCHANGE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1394,
-  serialized_end=1439,
+  serialized_start=1522,
+  serialized_end=1567,
 )
 
 _SHOP_RESPEXCHANGE = _descriptor.Descriptor(
@@ -816,8 +835,63 @@ _SHOP_RESPEXCHANGE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1441,
-  serialized_end=1505,
+  serialized_start=1569,
+  serialized_end=1633,
+)
+
+_SHOP_REQNEEDCONFIRMBILLLIST = _descriptor.Descriptor(
+  name='ReqNeedConfirmBillList',
+  full_name='pb.Shop.ReqNeedConfirmBillList',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=1635,
+  serialized_end=1659,
+)
+
+_SHOP_RESNEEDCONFIRMBILLLIST = _descriptor.Descriptor(
+  name='ResNeedConfirmBillList',
+  full_name='pb.Shop.ResNeedConfirmBillList',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='PurchaseIDs', full_name='pb.Shop.ResNeedConfirmBillList.PurchaseIDs', index=0,
+      number=1, type=9, cpp_type=9, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=1661,
+  serialized_end=1706,
 )
 
 _SHOP = _descriptor.Descriptor(
@@ -831,7 +905,7 @@ _SHOP = _descriptor.Descriptor(
   ],
   extensions=[
   ],
-  nested_types=[_SHOP_REQ, _SHOP_RESP, _SHOP_REQNEWBILL, _SHOP_RESPNEWBILL, _SHOP_REQCONFIRMBILL, _SHOP_RESPCONFIRMBILL, _SHOP_REQPRODUCTLIST, _SHOP_RESPPRODUCTLIST, _SHOP_ROYALSEAL, _SHOP_PRODUCT, _SHOP_PRODUCTREWARD, _SHOP_REQEXCHANGE, _SHOP_RESPEXCHANGE, ],
+  nested_types=[_SHOP_REQ, _SHOP_RESP, _SHOP_REQNEWBILL, _SHOP_RESPNEWBILL, _SHOP_REQCONFIRMBILL, _SHOP_RESPCONFIRMBILL, _SHOP_REQPRODUCTLIST, _SHOP_RESPPRODUCTLIST, _SHOP_ROYALSEAL, _SHOP_PRODUCT, _SHOP_PRODUCTREWARD, _SHOP_REQEXCHANGE, _SHOP_RESPEXCHANGE, _SHOP_REQNEEDCONFIRMBILLLIST, _SHOP_RESNEEDCONFIRMBILLLIST, ],
   enum_types=[
     _SHOP_SHOPRESULT,
     _SHOP_PAYSITUATIONS,
@@ -843,13 +917,14 @@ _SHOP = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=19,
-  serialized_end=1850,
+  serialized_end=2066,
 )
 
 _SHOP_REQ.fields_by_name['ProductList'].message_type = _SHOP_REQPRODUCTLIST
 _SHOP_REQ.fields_by_name['NewBill'].message_type = _SHOP_REQNEWBILL
 _SHOP_REQ.fields_by_name['ConfirmBill'].message_type = _SHOP_REQCONFIRMBILL
 _SHOP_REQ.fields_by_name['Exchange'].message_type = _SHOP_REQEXCHANGE
+_SHOP_REQ.fields_by_name['NeedConfirmBillList'].message_type = _SHOP_REQNEEDCONFIRMBILLLIST
 _SHOP_REQ.containing_type = _SHOP
 _SHOP_REQ.oneofs_by_name['one'].fields.append(
   _SHOP_REQ.fields_by_name['ProductList'])
@@ -863,10 +938,14 @@ _SHOP_REQ.fields_by_name['ConfirmBill'].containing_oneof = _SHOP_REQ.oneofs_by_n
 _SHOP_REQ.oneofs_by_name['one'].fields.append(
   _SHOP_REQ.fields_by_name['Exchange'])
 _SHOP_REQ.fields_by_name['Exchange'].containing_oneof = _SHOP_REQ.oneofs_by_name['one']
+_SHOP_REQ.oneofs_by_name['one'].fields.append(
+  _SHOP_REQ.fields_by_name['NeedConfirmBillList'])
+_SHOP_REQ.fields_by_name['NeedConfirmBillList'].containing_oneof = _SHOP_REQ.oneofs_by_name['one']
 _SHOP_RESP.fields_by_name['ProductList'].message_type = _SHOP_RESPPRODUCTLIST
 _SHOP_RESP.fields_by_name['NewBill'].message_type = _SHOP_RESPNEWBILL
 _SHOP_RESP.fields_by_name['ConfirmBill'].message_type = _SHOP_RESPCONFIRMBILL
 _SHOP_RESP.fields_by_name['Exchange'].message_type = _SHOP_RESPEXCHANGE
+_SHOP_RESP.fields_by_name['NeedConfirmBillList'].message_type = _SHOP_RESNEEDCONFIRMBILLLIST
 _SHOP_RESP.containing_type = _SHOP
 _SHOP_RESP.oneofs_by_name['one'].fields.append(
   _SHOP_RESP.fields_by_name['ProductList'])
@@ -880,6 +959,9 @@ _SHOP_RESP.fields_by_name['ConfirmBill'].containing_oneof = _SHOP_RESP.oneofs_by
 _SHOP_RESP.oneofs_by_name['one'].fields.append(
   _SHOP_RESP.fields_by_name['Exchange'])
 _SHOP_RESP.fields_by_name['Exchange'].containing_oneof = _SHOP_RESP.oneofs_by_name['one']
+_SHOP_RESP.oneofs_by_name['one'].fields.append(
+  _SHOP_RESP.fields_by_name['NeedConfirmBillList'])
+_SHOP_RESP.fields_by_name['NeedConfirmBillList'].containing_oneof = _SHOP_RESP.oneofs_by_name['one']
 _SHOP_REQNEWBILL.containing_type = _SHOP
 _SHOP_RESPNEWBILL.fields_by_name['Result'].enum_type = _SHOP_SHOPRESULT
 _SHOP_RESPNEWBILL.containing_type = _SHOP
@@ -899,6 +981,8 @@ _SHOP_PRODUCTREWARD.containing_type = _SHOP
 _SHOP_REQEXCHANGE.containing_type = _SHOP
 _SHOP_RESPEXCHANGE.fields_by_name['Result'].enum_type = _SHOP_SHOPRESULT
 _SHOP_RESPEXCHANGE.containing_type = _SHOP
+_SHOP_REQNEEDCONFIRMBILLLIST.containing_type = _SHOP
+_SHOP_RESNEEDCONFIRMBILLLIST.containing_type = _SHOP
 _SHOP_SHOPRESULT.containing_type = _SHOP
 _SHOP_PAYSITUATIONS.containing_type = _SHOP
 DESCRIPTOR.message_types_by_name['Shop'] = _SHOP
@@ -996,6 +1080,20 @@ Shop = _reflection.GeneratedProtocolMessageType('Shop', (_message.Message,), {
     # @@protoc_insertion_point(class_scope:pb.Shop.RespExchange)
     })
   ,
+
+  'ReqNeedConfirmBillList' : _reflection.GeneratedProtocolMessageType('ReqNeedConfirmBillList', (_message.Message,), {
+    'DESCRIPTOR' : _SHOP_REQNEEDCONFIRMBILLLIST,
+    '__module__' : 'shop_pb2'
+    # @@protoc_insertion_point(class_scope:pb.Shop.ReqNeedConfirmBillList)
+    })
+  ,
+
+  'ResNeedConfirmBillList' : _reflection.GeneratedProtocolMessageType('ResNeedConfirmBillList', (_message.Message,), {
+    'DESCRIPTOR' : _SHOP_RESNEEDCONFIRMBILLLIST,
+    '__module__' : 'shop_pb2'
+    # @@protoc_insertion_point(class_scope:pb.Shop.ResNeedConfirmBillList)
+    })
+  ,
   'DESCRIPTOR' : _SHOP,
   '__module__' : 'shop_pb2'
   # @@protoc_insertion_point(class_scope:pb.Shop)
@@ -1014,6 +1112,8 @@ _sym_db.RegisterMessage(Shop.Product)
 _sym_db.RegisterMessage(Shop.ProductReward)
 _sym_db.RegisterMessage(Shop.ReqExchange)
 _sym_db.RegisterMessage(Shop.RespExchange)
+_sym_db.RegisterMessage(Shop.ReqNeedConfirmBillList)
+_sym_db.RegisterMessage(Shop.ResNeedConfirmBillList)
 
 
 DESCRIPTOR._options = None

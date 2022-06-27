@@ -6,3 +6,4 @@ from slots_stage_pb2 import *
 from slots_debug_pb2 import *
 from slots_util_pb2 import *
 from noviceguide_pb2 import *
+from bingo_pb2 import *
