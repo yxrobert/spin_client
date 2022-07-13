@@ -26,6 +26,8 @@ class DefaultRobot(SpinRobot):
     def on_act_userdata(self, packet):
         msg.log_act_bigo(self, packet)
 
+    def on_act_play(self, packet):
+        msg.log_act_bigo(self, packet)
 
 
 def default_spin_callback(packet):
@@ -57,14 +59,14 @@ def run(player):
     # player.send_cmd(journey_roll)
     # player.send_cmd(journey)
     
-    # player.req_activity_list()
+    player.req_activity_list()
 
     act_id = 8
     # act_id = 23
     player.req_activity_user_data(act_id)
-    for i in range(0, 30):
+    # for i in range(0, 30):
         # player.req_activity_play(act_id)
-        pass
+        # pass
     # player.req_activity_play(act_id)
 
     # player.send_cmd(dice_cmd)

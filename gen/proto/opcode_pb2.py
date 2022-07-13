@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'Z\004.;pb',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x0copcode.proto\x12\x02pb\"7\n\x08OpResult\x12\x1a\n\x06OpCode\x18\x01 \x01(\x0e\x32\n.pb.OpCode\x12\x0f\n\x07\x43ontent\x18\x02 \x01(\t*\x83\x02\n\x06OpCode\x12\x0f\n\x0bOpResult_OK\x10\x00\x12\x10\n\x0cOpResult_Err\x10\x01\x12\x1e\n\x1aOpResult_Request_Param_Err\x10\x02\x12\x1a\n\x16OpResult_Data_Outdated\x10\x03\x12\x1b\n\x17OpResult_NotEnough_Coin\x10\x14\x12\x1b\n\x17OpResult_NotEnough_Dice\x10\x15\x12 \n\x1cOpResult_NotEnough_BingoBall\x10\x16\x12\x1f\n\x1bOpResult_Activity_Not_Exist\x10\x64\x12\x1d\n\x19OpResult_Activity_Req_Err\x10\x65\x42\x06Z\x04.;pbb\x06proto3'
+  serialized_pb=b'\n\x0copcode.proto\x12\x02pb\"7\n\x08OpResult\x12\x1a\n\x06OpCode\x18\x01 \x01(\x0e\x32\n.pb.OpCode\x12\x0f\n\x07\x43ontent\x18\x02 \x01(\t*\xfd\x01\n\x06OpCode\x12\x0f\n\x0bOpResult_OK\x10\x00\x12\x10\n\x0cOpResult_Err\x10\x01\x12\x1e\n\x1aOpResult_Request_Param_Err\x10\x02\x12\x14\n\x10OpResult_Timeout\x10\x03\x12\x1b\n\x17OpResult_NotEnough_Coin\x10\x14\x12\x1b\n\x17OpResult_NotEnough_Dice\x10\x15\x12 \n\x1cOpResult_NotEnough_BingoBall\x10\x16\x12\x1f\n\x1bOpResult_Activity_Not_Exist\x10\x64\x12\x1d\n\x19OpResult_Activity_Req_Err\x10\x65\x42\x06Z\x04.;pbb\x06proto3'
 )
 
 _OPCODE = _descriptor.EnumDescriptor(
@@ -46,7 +46,7 @@ _OPCODE = _descriptor.EnumDescriptor(
       type=None,
       create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
-      name='OpResult_Data_Outdated', index=3, number=3,
+      name='OpResult_Timeout', index=3, number=3,
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
@@ -79,7 +79,7 @@ _OPCODE = _descriptor.EnumDescriptor(
   containing_type=None,
   serialized_options=None,
   serialized_start=78,
-  serialized_end=337,
+  serialized_end=331,
 )
 _sym_db.RegisterEnumDescriptor(_OPCODE)
 
@@ -87,7 +87,7 @@ OpCode = enum_type_wrapper.EnumTypeWrapper(_OPCODE)
 OpResult_OK = 0
 OpResult_Err = 1
 OpResult_Request_Param_Err = 2
-OpResult_Data_Outdated = 3
+OpResult_Timeout = 3
 OpResult_NotEnough_Coin = 20
 OpResult_NotEnough_Dice = 21
 OpResult_NotEnough_BingoBall = 22

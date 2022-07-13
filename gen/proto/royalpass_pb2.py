@@ -19,7 +19,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'Z\004.;pb',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x0froyalpass.proto\x12\x02pb\"\xca\x13\n\tRoyalPass\x1a\xed\x02\n\x03Req\x12%\n\x04Info\x18\x01 \x01(\x0b\x32\x15.pb.RoyalPass.InfoReqH\x00\x12\x39\n\x0eSyncStaticData\x18\x02 \x01(\x0b\x32\x1f.pb.RoyalPass.SyncStaticDataReqH\x00\x12%\n\x04List\x18\x03 \x01(\x0b\x32\x15.pb.RoyalPass.ListReqH\x00\x12+\n\x07\x43ollect\x18\x04 \x01(\x0b\x32\x18.pb.RoyalPass.CollectReqH\x00\x12\x37\n\rCollectOneKey\x18\x05 \x01(\x0b\x32\x1e.pb.RoyalPass.CollectOneKeyReqH\x00\x12\x37\n\rPassWheelList\x18\x06 \x01(\x0b\x32\x1e.pb.RoyalPass.PassWheelListReqH\x00\x12\x37\n\rPassWheelSpin\x18\x07 \x01(\x0b\x32\x1e.pb.RoyalPass.PassWheelSpinReqH\x00\x42\x05\n\x03one\x1a\xed\x02\n\x03Rsp\x12%\n\x04Info\x18\x01 \x01(\x0b\x32\x15.pb.RoyalPass.InfoRspH\x00\x12\x39\n\x0eSyncStaticData\x18\x02 \x01(\x0b\x32\x1f.pb.RoyalPass.SyncStaticDataRspH\x00\x12%\n\x04List\x18\x03 \x01(\x0b\x32\x15.pb.RoyalPass.ListRspH\x00\x12+\n\x07\x43ollect\x18\x04 \x01(\x0b\x32\x18.pb.RoyalPass.CollectRspH\x00\x12\x37\n\rCollectOneKey\x18\x05 \x01(\x0b\x32\x1e.pb.RoyalPass.CollectOneKeyRspH\x00\x12\x37\n\rPassWheelList\x18\x06 \x01(\x0b\x32\x1e.pb.RoyalPass.PassWheelListRspH\x00\x12\x37\n\rPassWheelSpin\x18\x07 \x01(\x0b\x32\x1e.pb.RoyalPass.PassWheelSpinRspH\x00\x42\x05\n\x03one\x1a\t\n\x07InfoReq\x1aP\n\x07InfoRsp\x12\r\n\x05\x63ount\x18\x01 \x01(\r\x12\x12\n\nwheelTimes\x18\x02 \x01(\r\x12\x11\n\tstartTime\x18\x07 \x01(\x03\x12\x0f\n\x07\x65ndTime\x18\x08 \x01(\x03\x1a\x13\n\x11SyncStaticDataReq\x1ah\n\x11SyncStaticDataRsp\x12)\n\tFreeGrids\x18\x04 \x03(\x0b\x32\x16.pb.RoyalPass.PassGrid\x12(\n\x08PayGrids\x18\x05 \x03(\x0b\x32\x16.pb.RoyalPass.PassGrid\x1a\t\n\x07ListReq\x1a\xe8\x01\n\x07ListRsp\x12\r\n\x05point\x18\x01 \x01(\r\x12\x10\n\x08maxPoint\x18\x02 \x01(\r\x12\r\n\x05level\x18\x03 \x01(\r\x12.\n\tFreeGrids\x18\x04 \x03(\x0b\x32\x1b.pb.RoyalPass.PassGridState\x12-\n\x08PayGrids\x18\x05 \x03(\x0b\x32\x1b.pb.RoyalPass.PassGridState\x12*\n\tPassWheel\x18\x06 \x01(\x0b\x32\x17.pb.RoyalPass.PassWheel\x12\x11\n\tstartTime\x18\x07 \x01(\x03\x12\x0f\n\x07\x65ndTime\x18\x08 \x01(\x03\x1a\x45\n\nCollectReq\x12\r\n\x05level\x18\x01 \x01(\r\x12(\n\x08gridType\x18\x02 \x01(\x0e\x32\x16.pb.RoyalPass.GridType\x1a<\n\nCollectRsp\x12.\n\tgridState\x18\x01 \x01(\x0b\x32\x1b.pb.RoyalPass.PassGridState\x1a\x12\n\x10\x43ollectOneKeyReq\x1aq\n\x10\x43ollectOneKeyRsp\x12.\n\tFreeGrids\x18\x04 \x03(\x0b\x32\x1b.pb.RoyalPass.PassGridState\x12-\n\x08PayGrids\x18\x05 \x03(\x0b\x32\x1b.pb.RoyalPass.PassGridState\x1a\x12\n\x10PassWheelListReq\x1aT\n\x10PassWheelListRsp\x12\x13\n\x0b\x63\x61nUseTimes\x18\x01 \x01(\r\x12+\n\x06\x41wards\x18\x05 \x03(\x0b\x32\x1b.pb.RoyalPass.PassGridAward\x1a\x12\n\x10PassWheelSpinReq\x1a\"\n\x10PassWheelSpinRsp\x12\x0e\n\x06hitPos\x18\x01 \x01(\r\x1a;\n\tPassAward\x12\t\n\x01n\x18\x02 \x01(\t\x12\t\n\x01\x63\x18\x03 \x01(\x04\x12\x0b\n\x03min\x18\x04 \x01(\r\x12\x0b\n\x03max\x18\x05 \x01(\r\x1a\x83\x01\n\rPassGridAward\x12)\n\x04Type\x18\x01 \x01(\x0e\x32\x1b.pb.RoyalPass.PassAwardType\x12*\n\tPassAward\x18\x02 \x03(\x0b\x32\x17.pb.RoyalPass.PassAward\x12\x0c\n\x04skin\x18\x06 \x01(\r\x12\r\n\x05value\x18\x07 \x01(\x01\x1a]\n\x08PassGrid\x12\r\n\x05level\x18\x01 \x01(\r\x12\x11\n\tneedPoint\x18\x02 \x01(\r\x12/\n\nGridAwards\x18\x05 \x03(\x0b\x32\x1b.pb.RoyalPass.PassGridAward\x1a}\n\rPassGridState\x12\r\n\x05level\x18\x01 \x01(\r\x12.\n\tLockState\x18\x03 \x01(\x0e\x32\x1b.pb.RoyalPass.GridLockState\x12-\n\x05State\x18\x04 \x01(\x0e\x32\x1e.pb.RoyalPass.GridCollectState\x1a\x41\n\tPassWheel\x12\x13\n\x0b\x63\x61nUseTimes\x18\x01 \x01(\r\x12\r\n\x05point\x18\x02 \x01(\r\x12\x10\n\x08maxPoint\x18\x03 \x01(\r\"\xb2\x01\n\rPassAwardType\x12\x1b\n\x17PassAwardType_CoinValue\x10\x00\x12\x16\n\x12PassAwardType_Item\x10\x01\x12\x1a\n\x16PassAwardType_Currency\x10\x02\x12\x1b\n\x17PassAwardType_BonusGame\x10\x03\x12\x19\n\x15PassAwardType_Booster\x10\x04\x12\x18\n\x14PassAwardType_RanBox\x10\x05\"7\n\rGridLockState\x12\x13\n\x0fGridStateUnLock\x10\x00\x12\x11\n\rGridStateLock\x10\x01\"d\n\x10GridCollectState\x12\x17\n\x13GridStateCanCollect\x10\x00\x12\x1a\n\x16GridStateCanNotCollect\x10\x01\x12\x1b\n\x17GridStateAlreadyCollect\x10\x02\"%\n\x08GridType\x12\x0c\n\x08\x46reeGrid\x10\x00\x12\x0b\n\x07PayGrid\x10\x01\x42\x06Z\x04.;pbb\x06proto3'
+  serialized_pb=b'\n\x0froyalpass.proto\x12\x02pb\"\xee\x17\n\tRoyalPass\x1a\xed\x02\n\x03Req\x12%\n\x04Info\x18\x01 \x01(\x0b\x32\x15.pb.RoyalPass.InfoReqH\x00\x12\x39\n\x0eSyncStaticData\x18\x02 \x01(\x0b\x32\x1f.pb.RoyalPass.SyncStaticDataReqH\x00\x12%\n\x04List\x18\x03 \x01(\x0b\x32\x15.pb.RoyalPass.ListReqH\x00\x12+\n\x07\x43ollect\x18\x04 \x01(\x0b\x32\x18.pb.RoyalPass.CollectReqH\x00\x12\x37\n\rCollectOneKey\x18\x05 \x01(\x0b\x32\x1e.pb.RoyalPass.CollectOneKeyReqH\x00\x12\x37\n\rPassWheelList\x18\x06 \x01(\x0b\x32\x1e.pb.RoyalPass.PassWheelListReqH\x00\x12\x37\n\rPassWheelSpin\x18\x07 \x01(\x0b\x32\x1e.pb.RoyalPass.PassWheelSpinReqH\x00\x42\x05\n\x03one\x1a\xed\x02\n\x03Rsp\x12%\n\x04Info\x18\x01 \x01(\x0b\x32\x15.pb.RoyalPass.InfoRspH\x00\x12\x39\n\x0eSyncStaticData\x18\x02 \x01(\x0b\x32\x1f.pb.RoyalPass.SyncStaticDataRspH\x00\x12%\n\x04List\x18\x03 \x01(\x0b\x32\x15.pb.RoyalPass.ListRspH\x00\x12+\n\x07\x43ollect\x18\x04 \x01(\x0b\x32\x18.pb.RoyalPass.CollectRspH\x00\x12\x37\n\rCollectOneKey\x18\x05 \x01(\x0b\x32\x1e.pb.RoyalPass.CollectOneKeyRspH\x00\x12\x37\n\rPassWheelList\x18\x06 \x01(\x0b\x32\x1e.pb.RoyalPass.PassWheelListRspH\x00\x12\x37\n\rPassWheelSpin\x18\x07 \x01(\x0b\x32\x1e.pb.RoyalPass.PassWheelSpinRspH\x00\x42\x05\n\x03one\x1a\t\n\x07InfoReq\x1a\x92\x01\n\x07InfoRsp\x12\r\n\x05\x63ount\x18\x01 \x01(\r\x12\x12\n\nwheelTimes\x18\x02 \x01(\r\x12\x11\n\tstartTime\x18\x07 \x01(\x03\x12\x0f\n\x07\x65ndTime\x18\x08 \x01(\x03\x12\r\n\x05point\x18\t \x01(\r\x12\x10\n\x08maxPoint\x18\n \x01(\r\x12\r\n\x05level\x18\x0b \x01(\r\x12\x10\n\x08maxLevel\x18\x0c \x01(\r\x1a\x13\n\x11SyncStaticDataReq\x1ah\n\x11SyncStaticDataRsp\x12)\n\tFreeGrids\x18\x04 \x03(\x0b\x32\x16.pb.RoyalPass.PassGrid\x12(\n\x08PayGrids\x18\x05 \x03(\x0b\x32\x16.pb.RoyalPass.PassGrid\x1a\t\n\x07ListReq\x1a\xa0\x02\n\x07ListRsp\x12\r\n\x05point\x18\x01 \x01(\r\x12\x10\n\x08maxPoint\x18\x02 \x01(\r\x12\r\n\x05level\x18\x03 \x01(\r\x12\x10\n\x08maxLevel\x18\x04 \x01(\r\x12.\n\tFreeGrids\x18\x05 \x03(\x0b\x32\x1b.pb.RoyalPass.PassGridState\x12-\n\x08PayGrids\x18\x06 \x03(\x0b\x32\x1b.pb.RoyalPass.PassGridState\x12*\n\tPassWheel\x18\x07 \x01(\x0b\x32\x17.pb.RoyalPass.PassWheel\x12\x11\n\tstartTime\x18\x08 \x01(\x03\x12\x0f\n\x07\x65ndTime\x18\t \x01(\x03\x12\r\n\x05isPay\x18\n \x01(\x08\x12\x15\n\risHisUnlocked\x18\x0b \x01(\x08\x1a\x45\n\nCollectReq\x12\r\n\x05level\x18\x01 \x01(\r\x12(\n\x08gridType\x18\x02 \x01(\x0e\x32\x16.pb.RoyalPass.GridType\x1a\x66\n\nCollectRsp\x12.\n\tgridState\x18\x01 \x01(\x0b\x32\x1b.pb.RoyalPass.PassGridState\x12(\n\x08gridType\x18\x02 \x01(\x0e\x32\x16.pb.RoyalPass.GridType\x1a\x12\n\x10\x43ollectOneKeyReq\x1as\n\x10\x43ollectOneKeyRsp\x12/\n\tFreeGrids\x18\x04 \x03(\x0b\x32\x1c.pb.RoyalPass.OneKeyPassGrid\x12.\n\x08PayGrids\x18\x05 \x03(\x0b\x32\x1c.pb.RoyalPass.OneKeyPassGrid\x1a\x12\n\x10PassWheelListReq\x1aT\n\x10PassWheelListRsp\x12\x13\n\x0b\x63\x61nUseTimes\x18\x01 \x01(\r\x12+\n\x06\x41wards\x18\x05 \x03(\x0b\x32\x1b.pb.RoyalPass.PassGridAward\x1a\x12\n\x10PassWheelSpinReq\x1a\x36\n\x10PassWheelSpinRsp\x12\x0e\n\x06hitPos\x18\x01 \x01(\r\x12\x12\n\nwheelTimes\x18\x02 \x01(\r\x1a;\n\tPassAward\x12\t\n\x01n\x18\x02 \x01(\t\x12\t\n\x01\x63\x18\x03 \x01(\x04\x12\x0b\n\x03min\x18\x04 \x01(\r\x12\x0b\n\x03max\x18\x05 \x01(\r\x1a\x83\x01\n\rPassGridAward\x12)\n\x04Type\x18\x01 \x01(\x0e\x32\x1b.pb.RoyalPass.PassAwardType\x12*\n\tPassAward\x18\x02 \x03(\x0b\x32\x17.pb.RoyalPass.PassAward\x12\x0c\n\x04skin\x18\x06 \x01(\r\x12\r\n\x05value\x18\x07 \x01(\x01\x1a]\n\x08PassGrid\x12\r\n\x05level\x18\x01 \x01(\r\x12\x11\n\tneedPoint\x18\x02 \x01(\r\x12/\n\nGridAwards\x18\x05 \x03(\x0b\x32\x1b.pb.RoyalPass.PassGridAward\x1aM\n\rPassGridState\x12\r\n\x05level\x18\x01 \x01(\r\x12-\n\x05State\x18\x04 \x01(\x0e\x32\x1e.pb.RoyalPass.GridCollectState\x1a\xa2\x01\n\x0eOneKeyPassGrid\x12\r\n\x05level\x18\x01 \x01(\r\x12-\n\x05State\x18\x02 \x01(\x0e\x32\x1e.pb.RoyalPass.GridCollectState\x12(\n\x08GotAward\x18\x03 \x03(\x0b\x32\x16.pb.RoyalPass.GotAward\x12(\n\x08gridType\x18\x04 \x01(\x0e\x32\x16.pb.RoyalPass.GridType\x1a \n\x08GotAward\x12\t\n\x01n\x18\x02 \x01(\t\x12\t\n\x01\x63\x18\x03 \x01(\x04\x1a\x41\n\tPassWheel\x12\x13\n\x0b\x63\x61nUseTimes\x18\x01 \x01(\r\x12\r\n\x05point\x18\x02 \x01(\r\x12\x10\n\x08maxPoint\x18\x03 \x01(\r\x1a\x88\x02\n\x1cRoyalPassDailyMissionUpdated\x12\r\n\x05point\x18\x01 \x01(\r\x12\x10\n\x08maxPoint\x18\x02 \x01(\r\x12\r\n\x05level\x18\x03 \x01(\r\x12\x10\n\x08maxLevel\x18\x04 \x01(\r\x12*\n\tPassWheel\x18\x05 \x01(\x0b\x32\x17.pb.RoyalPass.PassWheel\x12\x0f\n\x07levelUp\x18\x06 \x01(\x08\x12\x34\n\x0f\x46reeUpdateGrids\x18\x07 \x03(\x0b\x32\x1b.pb.RoyalPass.PassGridState\x12\x33\n\x0ePayUpdateGrids\x18\x08 \x03(\x0b\x32\x1b.pb.RoyalPass.PassGridState\"\xb2\x01\n\rPassAwardType\x12\x1b\n\x17PassAwardType_CoinValue\x10\x00\x12\x16\n\x12PassAwardType_Item\x10\x01\x12\x1a\n\x16PassAwardType_Currency\x10\x02\x12\x1b\n\x17PassAwardType_BonusGame\x10\x03\x12\x19\n\x15PassAwardType_Booster\x10\x04\x12\x18\n\x14PassAwardType_RanBox\x10\x05\"d\n\x10GridCollectState\x12\x17\n\x13GridStateCanCollect\x10\x00\x12\x1a\n\x16GridStateCanNotCollect\x10\x01\x12\x1b\n\x17GridStateAlreadyCollect\x10\x02\"%\n\x08GridType\x12\x0c\n\x08\x46reeGrid\x10\x00\x12\x0b\n\x07PayGrid\x10\x01\x42\x06Z\x04.;pbb\x06proto3'
 )
 
 
@@ -64,35 +64,10 @@ _ROYALPASS_PASSAWARDTYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=2154,
-  serialized_end=2332,
+  serialized_start=2759,
+  serialized_end=2937,
 )
 _sym_db.RegisterEnumDescriptor(_ROYALPASS_PASSAWARDTYPE)
-
-_ROYALPASS_GRIDLOCKSTATE = _descriptor.EnumDescriptor(
-  name='GridLockState',
-  full_name='pb.RoyalPass.GridLockState',
-  filename=None,
-  file=DESCRIPTOR,
-  create_key=_descriptor._internal_create_key,
-  values=[
-    _descriptor.EnumValueDescriptor(
-      name='GridStateUnLock', index=0, number=0,
-      serialized_options=None,
-      type=None,
-      create_key=_descriptor._internal_create_key),
-    _descriptor.EnumValueDescriptor(
-      name='GridStateLock', index=1, number=1,
-      serialized_options=None,
-      type=None,
-      create_key=_descriptor._internal_create_key),
-  ],
-  containing_type=None,
-  serialized_options=None,
-  serialized_start=2334,
-  serialized_end=2389,
-)
-_sym_db.RegisterEnumDescriptor(_ROYALPASS_GRIDLOCKSTATE)
 
 _ROYALPASS_GRIDCOLLECTSTATE = _descriptor.EnumDescriptor(
   name='GridCollectState',
@@ -119,8 +94,8 @@ _ROYALPASS_GRIDCOLLECTSTATE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=2391,
-  serialized_end=2491,
+  serialized_start=2939,
+  serialized_end=3039,
 )
 _sym_db.RegisterEnumDescriptor(_ROYALPASS_GRIDCOLLECTSTATE)
 
@@ -144,8 +119,8 @@ _ROYALPASS_GRIDTYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=2493,
-  serialized_end=2530,
+  serialized_start=3041,
+  serialized_end=3078,
 )
 _sym_db.RegisterEnumDescriptor(_ROYALPASS_GRIDTYPE)
 
@@ -366,6 +341,34 @@ _ROYALPASS_INFORSP = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='point', full_name='pb.RoyalPass.InfoRsp.point', index=4,
+      number=9, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='maxPoint', full_name='pb.RoyalPass.InfoRsp.maxPoint', index=5,
+      number=10, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='level', full_name='pb.RoyalPass.InfoRsp.level', index=6,
+      number=11, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='maxLevel', full_name='pb.RoyalPass.InfoRsp.maxLevel', index=7,
+      number=12, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -378,8 +381,8 @@ _ROYALPASS_INFORSP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=784,
-  serialized_end=864,
+  serialized_start=785,
+  serialized_end=931,
 )
 
 _ROYALPASS_SYNCSTATICDATAREQ = _descriptor.Descriptor(
@@ -402,8 +405,8 @@ _ROYALPASS_SYNCSTATICDATAREQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=866,
-  serialized_end=885,
+  serialized_start=933,
+  serialized_end=952,
 )
 
 _ROYALPASS_SYNCSTATICDATARSP = _descriptor.Descriptor(
@@ -440,8 +443,8 @@ _ROYALPASS_SYNCSTATICDATARSP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=887,
-  serialized_end=991,
+  serialized_start=954,
+  serialized_end=1058,
 )
 
 _ROYALPASS_LISTREQ = _descriptor.Descriptor(
@@ -464,8 +467,8 @@ _ROYALPASS_LISTREQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=993,
-  serialized_end=1002,
+  serialized_start=1060,
+  serialized_end=1069,
 )
 
 _ROYALPASS_LISTRSP = _descriptor.Descriptor(
@@ -498,37 +501,58 @@ _ROYALPASS_LISTRSP = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='FreeGrids', full_name='pb.RoyalPass.ListRsp.FreeGrids', index=3,
-      number=4, type=11, cpp_type=10, label=3,
-      has_default_value=False, default_value=[],
+      name='maxLevel', full_name='pb.RoyalPass.ListRsp.maxLevel', index=3,
+      number=4, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='PayGrids', full_name='pb.RoyalPass.ListRsp.PayGrids', index=4,
+      name='FreeGrids', full_name='pb.RoyalPass.ListRsp.FreeGrids', index=4,
       number=5, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='PassWheel', full_name='pb.RoyalPass.ListRsp.PassWheel', index=5,
-      number=6, type=11, cpp_type=10, label=1,
+      name='PayGrids', full_name='pb.RoyalPass.ListRsp.PayGrids', index=5,
+      number=6, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='PassWheel', full_name='pb.RoyalPass.ListRsp.PassWheel', index=6,
+      number=7, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='startTime', full_name='pb.RoyalPass.ListRsp.startTime', index=6,
-      number=7, type=3, cpp_type=2, label=1,
+      name='startTime', full_name='pb.RoyalPass.ListRsp.startTime', index=7,
+      number=8, type=3, cpp_type=2, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='endTime', full_name='pb.RoyalPass.ListRsp.endTime', index=7,
-      number=8, type=3, cpp_type=2, label=1,
+      name='endTime', full_name='pb.RoyalPass.ListRsp.endTime', index=8,
+      number=9, type=3, cpp_type=2, label=1,
       has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='isPay', full_name='pb.RoyalPass.ListRsp.isPay', index=9,
+      number=10, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='isHisUnlocked', full_name='pb.RoyalPass.ListRsp.isHisUnlocked', index=10,
+      number=11, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
@@ -544,8 +568,8 @@ _ROYALPASS_LISTRSP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1005,
-  serialized_end=1237,
+  serialized_start=1072,
+  serialized_end=1360,
 )
 
 _ROYALPASS_COLLECTREQ = _descriptor.Descriptor(
@@ -582,8 +606,8 @@ _ROYALPASS_COLLECTREQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1239,
-  serialized_end=1308,
+  serialized_start=1362,
+  serialized_end=1431,
 )
 
 _ROYALPASS_COLLECTRSP = _descriptor.Descriptor(
@@ -601,6 +625,13 @@ _ROYALPASS_COLLECTRSP = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='gridType', full_name='pb.RoyalPass.CollectRsp.gridType', index=1,
+      number=2, type=14, cpp_type=8, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -613,8 +644,8 @@ _ROYALPASS_COLLECTRSP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1310,
-  serialized_end=1370,
+  serialized_start=1433,
+  serialized_end=1535,
 )
 
 _ROYALPASS_COLLECTONEKEYREQ = _descriptor.Descriptor(
@@ -637,8 +668,8 @@ _ROYALPASS_COLLECTONEKEYREQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1372,
-  serialized_end=1390,
+  serialized_start=1537,
+  serialized_end=1555,
 )
 
 _ROYALPASS_COLLECTONEKEYRSP = _descriptor.Descriptor(
@@ -675,8 +706,8 @@ _ROYALPASS_COLLECTONEKEYRSP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1392,
-  serialized_end=1505,
+  serialized_start=1557,
+  serialized_end=1672,
 )
 
 _ROYALPASS_PASSWHEELLISTREQ = _descriptor.Descriptor(
@@ -699,8 +730,8 @@ _ROYALPASS_PASSWHEELLISTREQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1507,
-  serialized_end=1525,
+  serialized_start=1674,
+  serialized_end=1692,
 )
 
 _ROYALPASS_PASSWHEELLISTRSP = _descriptor.Descriptor(
@@ -737,8 +768,8 @@ _ROYALPASS_PASSWHEELLISTRSP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1527,
-  serialized_end=1611,
+  serialized_start=1694,
+  serialized_end=1778,
 )
 
 _ROYALPASS_PASSWHEELSPINREQ = _descriptor.Descriptor(
@@ -761,8 +792,8 @@ _ROYALPASS_PASSWHEELSPINREQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1613,
-  serialized_end=1631,
+  serialized_start=1780,
+  serialized_end=1798,
 )
 
 _ROYALPASS_PASSWHEELSPINRSP = _descriptor.Descriptor(
@@ -780,6 +811,13 @@ _ROYALPASS_PASSWHEELSPINRSP = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='wheelTimes', full_name='pb.RoyalPass.PassWheelSpinRsp.wheelTimes', index=1,
+      number=2, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -792,8 +830,8 @@ _ROYALPASS_PASSWHEELSPINRSP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1633,
-  serialized_end=1667,
+  serialized_start=1800,
+  serialized_end=1854,
 )
 
 _ROYALPASS_PASSAWARD = _descriptor.Descriptor(
@@ -844,8 +882,8 @@ _ROYALPASS_PASSAWARD = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1669,
-  serialized_end=1728,
+  serialized_start=1856,
+  serialized_end=1915,
 )
 
 _ROYALPASS_PASSGRIDAWARD = _descriptor.Descriptor(
@@ -896,8 +934,8 @@ _ROYALPASS_PASSGRIDAWARD = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1731,
-  serialized_end=1862,
+  serialized_start=1918,
+  serialized_end=2049,
 )
 
 _ROYALPASS_PASSGRID = _descriptor.Descriptor(
@@ -941,8 +979,8 @@ _ROYALPASS_PASSGRID = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1864,
-  serialized_end=1957,
+  serialized_start=2051,
+  serialized_end=2144,
 )
 
 _ROYALPASS_PASSGRIDSTATE = _descriptor.Descriptor(
@@ -961,14 +999,7 @@ _ROYALPASS_PASSGRIDSTATE = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='LockState', full_name='pb.RoyalPass.PassGridState.LockState', index=1,
-      number=3, type=14, cpp_type=8, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='State', full_name='pb.RoyalPass.PassGridState.State', index=2,
+      name='State', full_name='pb.RoyalPass.PassGridState.State', index=1,
       number=4, type=14, cpp_type=8, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -986,8 +1017,98 @@ _ROYALPASS_PASSGRIDSTATE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1959,
-  serialized_end=2084,
+  serialized_start=2146,
+  serialized_end=2223,
+)
+
+_ROYALPASS_ONEKEYPASSGRID = _descriptor.Descriptor(
+  name='OneKeyPassGrid',
+  full_name='pb.RoyalPass.OneKeyPassGrid',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='level', full_name='pb.RoyalPass.OneKeyPassGrid.level', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='State', full_name='pb.RoyalPass.OneKeyPassGrid.State', index=1,
+      number=2, type=14, cpp_type=8, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='GotAward', full_name='pb.RoyalPass.OneKeyPassGrid.GotAward', index=2,
+      number=3, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='gridType', full_name='pb.RoyalPass.OneKeyPassGrid.gridType', index=3,
+      number=4, type=14, cpp_type=8, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=2226,
+  serialized_end=2388,
+)
+
+_ROYALPASS_GOTAWARD = _descriptor.Descriptor(
+  name='GotAward',
+  full_name='pb.RoyalPass.GotAward',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='n', full_name='pb.RoyalPass.GotAward.n', index=0,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='c', full_name='pb.RoyalPass.GotAward.c', index=1,
+      number=3, type=4, cpp_type=4, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=2390,
+  serialized_end=2422,
 )
 
 _ROYALPASS_PASSWHEEL = _descriptor.Descriptor(
@@ -1031,8 +1152,88 @@ _ROYALPASS_PASSWHEEL = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2086,
-  serialized_end=2151,
+  serialized_start=2424,
+  serialized_end=2489,
+)
+
+_ROYALPASS_ROYALPASSDAILYMISSIONUPDATED = _descriptor.Descriptor(
+  name='RoyalPassDailyMissionUpdated',
+  full_name='pb.RoyalPass.RoyalPassDailyMissionUpdated',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='point', full_name='pb.RoyalPass.RoyalPassDailyMissionUpdated.point', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='maxPoint', full_name='pb.RoyalPass.RoyalPassDailyMissionUpdated.maxPoint', index=1,
+      number=2, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='level', full_name='pb.RoyalPass.RoyalPassDailyMissionUpdated.level', index=2,
+      number=3, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='maxLevel', full_name='pb.RoyalPass.RoyalPassDailyMissionUpdated.maxLevel', index=3,
+      number=4, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='PassWheel', full_name='pb.RoyalPass.RoyalPassDailyMissionUpdated.PassWheel', index=4,
+      number=5, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='levelUp', full_name='pb.RoyalPass.RoyalPassDailyMissionUpdated.levelUp', index=5,
+      number=6, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='FreeUpdateGrids', full_name='pb.RoyalPass.RoyalPassDailyMissionUpdated.FreeUpdateGrids', index=6,
+      number=7, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='PayUpdateGrids', full_name='pb.RoyalPass.RoyalPassDailyMissionUpdated.PayUpdateGrids', index=7,
+      number=8, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=2492,
+  serialized_end=2756,
 )
 
 _ROYALPASS = _descriptor.Descriptor(
@@ -1046,10 +1247,9 @@ _ROYALPASS = _descriptor.Descriptor(
   ],
   extensions=[
   ],
-  nested_types=[_ROYALPASS_REQ, _ROYALPASS_RSP, _ROYALPASS_INFOREQ, _ROYALPASS_INFORSP, _ROYALPASS_SYNCSTATICDATAREQ, _ROYALPASS_SYNCSTATICDATARSP, _ROYALPASS_LISTREQ, _ROYALPASS_LISTRSP, _ROYALPASS_COLLECTREQ, _ROYALPASS_COLLECTRSP, _ROYALPASS_COLLECTONEKEYREQ, _ROYALPASS_COLLECTONEKEYRSP, _ROYALPASS_PASSWHEELLISTREQ, _ROYALPASS_PASSWHEELLISTRSP, _ROYALPASS_PASSWHEELSPINREQ, _ROYALPASS_PASSWHEELSPINRSP, _ROYALPASS_PASSAWARD, _ROYALPASS_PASSGRIDAWARD, _ROYALPASS_PASSGRID, _ROYALPASS_PASSGRIDSTATE, _ROYALPASS_PASSWHEEL, ],
+  nested_types=[_ROYALPASS_REQ, _ROYALPASS_RSP, _ROYALPASS_INFOREQ, _ROYALPASS_INFORSP, _ROYALPASS_SYNCSTATICDATAREQ, _ROYALPASS_SYNCSTATICDATARSP, _ROYALPASS_LISTREQ, _ROYALPASS_LISTRSP, _ROYALPASS_COLLECTREQ, _ROYALPASS_COLLECTRSP, _ROYALPASS_COLLECTONEKEYREQ, _ROYALPASS_COLLECTONEKEYRSP, _ROYALPASS_PASSWHEELLISTREQ, _ROYALPASS_PASSWHEELLISTRSP, _ROYALPASS_PASSWHEELSPINREQ, _ROYALPASS_PASSWHEELSPINRSP, _ROYALPASS_PASSAWARD, _ROYALPASS_PASSGRIDAWARD, _ROYALPASS_PASSGRID, _ROYALPASS_PASSGRIDSTATE, _ROYALPASS_ONEKEYPASSGRID, _ROYALPASS_GOTAWARD, _ROYALPASS_PASSWHEEL, _ROYALPASS_ROYALPASSDAILYMISSIONUPDATED, ],
   enum_types=[
     _ROYALPASS_PASSAWARDTYPE,
-    _ROYALPASS_GRIDLOCKSTATE,
     _ROYALPASS_GRIDCOLLECTSTATE,
     _ROYALPASS_GRIDTYPE,
   ],
@@ -1060,7 +1260,7 @@ _ROYALPASS = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=24,
-  serialized_end=2530,
+  serialized_end=3078,
 )
 
 _ROYALPASS_REQ.fields_by_name['Info'].message_type = _ROYALPASS_INFOREQ
@@ -1135,10 +1335,11 @@ _ROYALPASS_LISTRSP.containing_type = _ROYALPASS
 _ROYALPASS_COLLECTREQ.fields_by_name['gridType'].enum_type = _ROYALPASS_GRIDTYPE
 _ROYALPASS_COLLECTREQ.containing_type = _ROYALPASS
 _ROYALPASS_COLLECTRSP.fields_by_name['gridState'].message_type = _ROYALPASS_PASSGRIDSTATE
+_ROYALPASS_COLLECTRSP.fields_by_name['gridType'].enum_type = _ROYALPASS_GRIDTYPE
 _ROYALPASS_COLLECTRSP.containing_type = _ROYALPASS
 _ROYALPASS_COLLECTONEKEYREQ.containing_type = _ROYALPASS
-_ROYALPASS_COLLECTONEKEYRSP.fields_by_name['FreeGrids'].message_type = _ROYALPASS_PASSGRIDSTATE
-_ROYALPASS_COLLECTONEKEYRSP.fields_by_name['PayGrids'].message_type = _ROYALPASS_PASSGRIDSTATE
+_ROYALPASS_COLLECTONEKEYRSP.fields_by_name['FreeGrids'].message_type = _ROYALPASS_ONEKEYPASSGRID
+_ROYALPASS_COLLECTONEKEYRSP.fields_by_name['PayGrids'].message_type = _ROYALPASS_ONEKEYPASSGRID
 _ROYALPASS_COLLECTONEKEYRSP.containing_type = _ROYALPASS
 _ROYALPASS_PASSWHEELLISTREQ.containing_type = _ROYALPASS
 _ROYALPASS_PASSWHEELLISTRSP.fields_by_name['Awards'].message_type = _ROYALPASS_PASSGRIDAWARD
@@ -1151,12 +1352,19 @@ _ROYALPASS_PASSGRIDAWARD.fields_by_name['PassAward'].message_type = _ROYALPASS_P
 _ROYALPASS_PASSGRIDAWARD.containing_type = _ROYALPASS
 _ROYALPASS_PASSGRID.fields_by_name['GridAwards'].message_type = _ROYALPASS_PASSGRIDAWARD
 _ROYALPASS_PASSGRID.containing_type = _ROYALPASS
-_ROYALPASS_PASSGRIDSTATE.fields_by_name['LockState'].enum_type = _ROYALPASS_GRIDLOCKSTATE
 _ROYALPASS_PASSGRIDSTATE.fields_by_name['State'].enum_type = _ROYALPASS_GRIDCOLLECTSTATE
 _ROYALPASS_PASSGRIDSTATE.containing_type = _ROYALPASS
+_ROYALPASS_ONEKEYPASSGRID.fields_by_name['State'].enum_type = _ROYALPASS_GRIDCOLLECTSTATE
+_ROYALPASS_ONEKEYPASSGRID.fields_by_name['GotAward'].message_type = _ROYALPASS_GOTAWARD
+_ROYALPASS_ONEKEYPASSGRID.fields_by_name['gridType'].enum_type = _ROYALPASS_GRIDTYPE
+_ROYALPASS_ONEKEYPASSGRID.containing_type = _ROYALPASS
+_ROYALPASS_GOTAWARD.containing_type = _ROYALPASS
 _ROYALPASS_PASSWHEEL.containing_type = _ROYALPASS
+_ROYALPASS_ROYALPASSDAILYMISSIONUPDATED.fields_by_name['PassWheel'].message_type = _ROYALPASS_PASSWHEEL
+_ROYALPASS_ROYALPASSDAILYMISSIONUPDATED.fields_by_name['FreeUpdateGrids'].message_type = _ROYALPASS_PASSGRIDSTATE
+_ROYALPASS_ROYALPASSDAILYMISSIONUPDATED.fields_by_name['PayUpdateGrids'].message_type = _ROYALPASS_PASSGRIDSTATE
+_ROYALPASS_ROYALPASSDAILYMISSIONUPDATED.containing_type = _ROYALPASS
 _ROYALPASS_PASSAWARDTYPE.containing_type = _ROYALPASS
-_ROYALPASS_GRIDLOCKSTATE.containing_type = _ROYALPASS
 _ROYALPASS_GRIDCOLLECTSTATE.containing_type = _ROYALPASS
 _ROYALPASS_GRIDTYPE.containing_type = _ROYALPASS
 DESCRIPTOR.message_types_by_name['RoyalPass'] = _ROYALPASS
@@ -1304,10 +1512,31 @@ RoyalPass = _reflection.GeneratedProtocolMessageType('RoyalPass', (_message.Mess
     })
   ,
 
+  'OneKeyPassGrid' : _reflection.GeneratedProtocolMessageType('OneKeyPassGrid', (_message.Message,), {
+    'DESCRIPTOR' : _ROYALPASS_ONEKEYPASSGRID,
+    '__module__' : 'royalpass_pb2'
+    # @@protoc_insertion_point(class_scope:pb.RoyalPass.OneKeyPassGrid)
+    })
+  ,
+
+  'GotAward' : _reflection.GeneratedProtocolMessageType('GotAward', (_message.Message,), {
+    'DESCRIPTOR' : _ROYALPASS_GOTAWARD,
+    '__module__' : 'royalpass_pb2'
+    # @@protoc_insertion_point(class_scope:pb.RoyalPass.GotAward)
+    })
+  ,
+
   'PassWheel' : _reflection.GeneratedProtocolMessageType('PassWheel', (_message.Message,), {
     'DESCRIPTOR' : _ROYALPASS_PASSWHEEL,
     '__module__' : 'royalpass_pb2'
     # @@protoc_insertion_point(class_scope:pb.RoyalPass.PassWheel)
+    })
+  ,
+
+  'RoyalPassDailyMissionUpdated' : _reflection.GeneratedProtocolMessageType('RoyalPassDailyMissionUpdated', (_message.Message,), {
+    'DESCRIPTOR' : _ROYALPASS_ROYALPASSDAILYMISSIONUPDATED,
+    '__module__' : 'royalpass_pb2'
+    # @@protoc_insertion_point(class_scope:pb.RoyalPass.RoyalPassDailyMissionUpdated)
     })
   ,
   'DESCRIPTOR' : _ROYALPASS,
@@ -1335,7 +1564,10 @@ _sym_db.RegisterMessage(RoyalPass.PassAward)
 _sym_db.RegisterMessage(RoyalPass.PassGridAward)
 _sym_db.RegisterMessage(RoyalPass.PassGrid)
 _sym_db.RegisterMessage(RoyalPass.PassGridState)
+_sym_db.RegisterMessage(RoyalPass.OneKeyPassGrid)
+_sym_db.RegisterMessage(RoyalPass.GotAward)
 _sym_db.RegisterMessage(RoyalPass.PassWheel)
+_sym_db.RegisterMessage(RoyalPass.RoyalPassDailyMissionUpdated)
 
 
 DESCRIPTOR._options = None
