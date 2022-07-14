@@ -148,6 +148,11 @@ def make_hero_active_req(player_id, token, hero_id, name):
     request.Hero.HeroActive.itemName = name
     return req
 
+def make_treasure_get_req(player_id, token):
+    req, request = make_multi_req(player_id, token)
+    request.TreasureRoom.Get.Type = 0
+    return req
+
 
 # def make_cardgathering_data_req(player_id, token, season):
 #     req, request = make_multi_req(player_id, token)

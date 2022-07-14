@@ -51,7 +51,7 @@ def run(player):
     # player.send_cmd(free_me)
     
     # player.send_cmd(coin_cmd)
-    # player.send_cmd(level_cmd)
+    player.send_cmd(level_cmd)
     # player.send_cmd(lv10_cmd)
     # player.send_cmd(dice_cmd)
     # player.send_cmd(bingoball_cmd)
@@ -59,11 +59,12 @@ def run(player):
     # player.send_cmd(journey_roll)
     # player.send_cmd(journey)
     
-    player.req_activity_list()
+    player.req_treasure_get()
+    # player.req_activity_list()
 
     act_id = 8
     # act_id = 23
-    player.req_activity_user_data(act_id)
+    # player.req_activity_user_data(act_id)
     # for i in range(0, 30):
         # player.req_activity_play(act_id)
         # pass

@@ -116,6 +116,10 @@ class RobotBase:
         req = make_hero_active_req(self.player_id, self.token, id, name)
         self.send_packet(req)
 
+    def req_treasure_get(self):
+        req = make_treasure_get_req(self.player_id, self.token)
+        self.send_packet(req)
+
     def on_response(self, packet):
         if packet.Error != None:
             # self.log("--------Got Error--------[" + str(packet.Error) + "]")
@@ -134,6 +138,8 @@ class RobotBase:
                 self.on_activity(r.Activity)
             elif r.HasField("CardGathering"):
                 self.on_cardgathering(r.CardGathering)
+            elif packet.HasField("TreasureRoom"):
+                self.on_treasure(packet.TreasureRoom)
                 pass
         
         self.log("Awards", packet.Multi.Awards)
@@ -176,6 +182,9 @@ class RobotBase:
         self.log(packet)
 
     def on_cardgathering(self, packet):
+        self.log(packet)
+
+    def on_treasure(self, packet):
         self.log(packet)
 
 
