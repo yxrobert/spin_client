@@ -11,9 +11,9 @@ def log_act_bigo(robot, packet):
         log_packet.BoardIdx = packet.data.Bingo.BoardIdx
         log_packet.Progress = packet.data.Bingo.Progress
         # log_packet.CurBoard.CurCard = packet.data.Bingo.CurBoard.CurCard
-        robot.log(packet.data.Bingo.CurBoard.CurCard)
+        # robot.log(packet.data.Bingo.CurBoard)
         # robot.log(packet.data.Bingo)
-        robot.log(log_packet)
+        # robot.log(log_packet)
 
 
 def main():

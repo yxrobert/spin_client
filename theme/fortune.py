@@ -43,10 +43,10 @@ def run(player):
     # player.send_gm(enter_pick)
     # player.spin()
     # player.pick(0)
-    # player.serials_game(jp_arr)
+    player.serials_game(jp_arr)
 
     # player.spin_to_base()
-    player.spin()
+    # player.spin()
     # player.spin_times(30)
 
   

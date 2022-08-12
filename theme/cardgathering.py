@@ -46,11 +46,11 @@ cost_cards = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
 def run(player):
     # player.send_cmd(add_card_all)
 
-    # player.req_cardgathering_data(0)
+    player.req_cardgathering_data(-1)
     # player.req_cardgathering_exchange(2, 5)
 
     # player.send_cmd(gem_cmd)
-    player.req_cardgathering_reset()
+    # player.req_cardgathering_reset()
 
 
     # player.send_cmd(cost_cmd)
