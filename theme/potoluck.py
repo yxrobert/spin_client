@@ -27,7 +27,7 @@ def run(player):
     # player.send_cmd(cheat_free)
     # player.send_cmd(cheat_6)
     # player.send_cmd(test_gm)
-    player.send_cmd(rtp_150)
+    # player.send_cmd(rtp_150)
 
     # player.send_cmd(cheat_free)
     # player.send_cmd(cheat_58)

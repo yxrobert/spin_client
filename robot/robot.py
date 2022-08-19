@@ -10,6 +10,7 @@ import msg
 from conf import save_user_data, get_user_id, get_token
 
 log_name = "./log/{}.log"
+add_money = "add coin 99999999999"
 
 class RobotBase:
     def __init__(self, name):
@@ -147,8 +148,12 @@ class RobotBase:
 
     
     def process_err(self, err):
-        if str(err).find("token-match") > 0 or str(err).find("bad-auth") > 0:
+        err_str = str(err)
+        self.log(err_str)
+        if err_str.find("token-match") > 0 or err_str.find("bad-auth") > 0 or err_str.find("time back") > 0:
             self.req_login()
+        elif err_str.find("not-enough") > 0:
+            self.send_cmd(add_money)
 
     def on_login(self, packet):
         login = packet.Login

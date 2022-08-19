@@ -19,7 +19,7 @@ class TrainRobot(SpinRobot):
         pass
 
 def run(player):
-    # player.select_bet(160000000000)
+    player.select_bet(160000000000)
 
     # player.send_cmd(cheat_12)
     # player.spin_to_next_stage()
@@ -27,16 +27,13 @@ def run(player):
 
     # player.send_cmd(panels_yq)
     # player.send_cmd(gm_enter)
-    # player.send_cmd(mul_panels)
-    player.spin_times(1)
+    player.spin_times(10)
     # player.spin_to_base()
     # player.spin_to_next_stage()
 
     # player.pick(1)
     # player.send_cmd(demon_panelgroup)
     pass
-
-mul_panels = '''panelstr [[{"ss":[{"s":11,"t":5},{"s":11,"t":5},{"s":11,"t":6}]},{"ss":[{"s":7},{"s":11,"t":4},{"s":11,"t":3}]},{"ss":[{"s":7},{"s":2},{"s":2}]},{"ss":[{"s":5},{"s":3},{"s":4}]},{"ss":[{"s":2},{"s":7},{"s":7}]}],[{"ss":[{"s":11,"t":6},{"s":11,"t":5},{"s":4}]},{"ss":[{"s":7},{"s":11,"t":4},{"s":12,"t":3}]},{"ss":[{"s":7},{"s":2},{"s":4}]},{"ss":[{"s":5},{"s":3},{"s":4}]},{"ss":[{"s":2},{"s":7},{"s":7}]}],[{"ss":[{"s":7},{"s":7},{"s":7}]},{"ss":[{"s":7},{"s":7},{"s":12,"t":3}]},{"ss":[{"s":7},{"s":2},{"s":2}]},{"ss":[{"s":5},{"s":3},{"s":4}]},{"ss":[{"s":2},{"s":7},{"s":7}]}]]'''
 
 panels = '''panelstr [[{"ss":[{"s":4},{"s":11,"t":5},{"s":11,"t":6}]},{"ss":[{"s":7},{"s":11,"t":4},{"s":12,"t":3}]},{"ss":[{"s":7},{"s":2},{"s":2}]},{"ss":[{"s":5},{"s":3},{"s":4}]},{"ss":[{"s":2},{"s":7},{"s":7}]}],[{"ss":[{"s":4},{"s":11,"t":5},{"s":11,"t":6}]},{"ss":[{"s":7},{"s":11,"t":4},{"s":12,"t":3}]},{"ss":[{"s":7},{"s":2},{"s":2}]},{"ss":[{"s":5},{"s":3},{"s":4}]},{"ss":[{"s":2},{"s":7},{"s":7}]}]]'''
 panels_yq = '''panelstr [[{"ss":[{"s":7},{"s":11,"t":5},{"s":11,"t":6}]},{"ss":[{"s":7},{"s":11,"t":4},{"s":12,"t":3}]},{"ss":[{"s":7},{"s":2},{"s":2}]},{"ss":[{"s":5},{"s":3},{"s":4}]},{"ss":[{"s":2},{"s":7},{"s":7}]}]]'''
