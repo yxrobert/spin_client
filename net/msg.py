@@ -37,9 +37,10 @@ def make_novice_req(player_id, token):
     request.NoviceGuide.Holder = False
     return req
 
-def make_novice_save_req(player_id, token):
+def make_novice_save_req(player_id, token, _id):
     req, request = make_multi_req(player_id, token)
-    request.NoviceGuideSave.Data.ID = 1
+    request.NoviceGuideSave.Data.ID = _id
+    request.NoviceGuideSave.Data.State = 1
     return req
 
 def make_play_req(player_id, token, theme_id, bet):

@@ -19,7 +19,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'Z\004.;pb',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\nhero.proto\x12\x02pb\"\xd7\x19\n\x04Hero\x1a\xb6\x03\n\x03Req\x12(\n\x08HeroList\x18\x01 \x01(\x0b\x32\x14.pb.Hero.HeroListReqH\x00\x12.\n\x0bHeroLevelUp\x18\x02 \x01(\x0b\x32\x17.pb.Hero.HeroLevelUpReqH\x00\x12,\n\nHeroActive\x18\x03 \x01(\x0b\x32\x16.pb.Hero.HeroActiveReqH\x00\x12,\n\nHeroChoose\x18\x04 \x01(\x0b\x32\x16.pb.Hero.HeroChooseReqH\x00\x12\x30\n\x0cHeroSlotInfo\x18\x05 \x01(\x0b\x32\x18.pb.Hero.HeroSlotInfoReqH\x00\x12(\n\x08HeroInfo\x18\x06 \x01(\x0b\x32\x14.pb.Hero.HeroInfoReqH\x00\x12@\n\x14HeroSkillEffectAward\x18\x07 \x01(\x0b\x32 .pb.Hero.HeroSkillEffectAwardReqH\x00\x12,\n\nHeroUnlock\x18\x08 \x01(\x0b\x32\x16.pb.Hero.HeroUnlockReqH\x00\x12&\n\x07HeroGet\x18\t \x01(\x0b\x32\x13.pb.Hero.HeroGetReqH\x00\x42\x05\n\x03one\x1a\xb6\x03\n\x03Rsp\x12(\n\x08HeroList\x18\x01 \x01(\x0b\x32\x14.pb.Hero.HeroListRspH\x00\x12.\n\x0bHeroLevelUp\x18\x02 \x01(\x0b\x32\x17.pb.Hero.HeroLevelUpRspH\x00\x12,\n\nHeroActive\x18\x03 \x01(\x0b\x32\x16.pb.Hero.HeroActiveRspH\x00\x12,\n\nHeroChoose\x18\x04 \x01(\x0b\x32\x16.pb.Hero.HeroChooseRspH\x00\x12\x30\n\x0cHeroSlotInfo\x18\x05 \x01(\x0b\x32\x18.pb.Hero.HeroSlotInfoRspH\x00\x12(\n\x08HeroInfo\x18\x06 \x01(\x0b\x32\x14.pb.Hero.HeroInfoRspH\x00\x12@\n\x14HeroSkillEffectAward\x18\x07 \x01(\x0b\x32 .pb.Hero.HeroSkillEffectAwardRspH\x00\x12,\n\nHeroUnlock\x18\x08 \x01(\x0b\x32\x16.pb.Hero.HeroUnlockRspH\x00\x12&\n\x07HeroGet\x18\t \x01(\x0b\x32\x13.pb.Hero.HeroGetRspH\x00\x42\x05\n\x03one\x1a\x1c\n\x0bHeroListReq\x12\r\n\x05State\x18\x01 \x01(\r\x1a\\\n\x0bHeroListRsp\x12\x1c\n\x05heros\x18\x01 \x03(\x0b\x32\r.pb.Hero.Hero\x12 \n\x05items\x18\x02 \x03(\x0b\x32\x11.pb.Hero.HeroItem\x12\r\n\x05State\x18\x03 \x01(\r\x1a\x32\n\x0eHeroLevelUpReq\x12\x0e\n\x06heroID\x18\x01 \x01(\t\x12\x10\n\x08itemName\x18\x02 \x01(\t\x1a\x86\x01\n\x0eHeroLevelUpRsp\x12\x1b\n\x04hero\x18\x01 \x01(\x0b\x32\r.pb.Hero.Hero\x12#\n\x04Type\x18\x02 \x01(\x0e\x32\x15.pb.Hero.HeroItemType\x12\x10\n\x08UseCount\x18\x03 \x01(\x04\x12 \n\x05items\x18\x04 \x03(\x0b\x32\x11.pb.Hero.HeroItem\x1a\x31\n\rHeroActiveReq\x12\x0e\n\x06heroID\x18\x01 \x01(\t\x12\x10\n\x08itemName\x18\x02 \x01(\t\x1a\x85\x01\n\rHeroActiveRsp\x12\x1b\n\x04hero\x18\x01 \x01(\x0b\x32\r.pb.Hero.Hero\x12#\n\x04Type\x18\x02 \x01(\x0e\x32\x15.pb.Hero.HeroItemType\x12\x10\n\x08UseCount\x18\x03 \x01(\x04\x12 \n\x05items\x18\x04 \x03(\x0b\x32\x11.pb.Hero.HeroItem\x1a\x1f\n\rHeroChooseReq\x12\x0e\n\x06heroID\x18\x01 \x01(\t\x1a,\n\rHeroChooseRsp\x12\x1b\n\x04hero\x18\x01 \x01(\x0b\x32\r.pb.Hero.Hero\x1a\x11\n\x0fHeroSlotInfoReq\x1aP\n\x0fHeroSlotInfoRsp\x12\x1b\n\x04hero\x18\x01 \x01(\x0b\x32\r.pb.Hero.Hero\x12 \n\x05items\x18\x02 \x03(\x0b\x32\x11.pb.Hero.HeroItem\x1a\r\n\x0bHeroInfoReq\x1aM\n\x0bHeroInfoRsp\x12 \n\x05heros\x18\x01 \x03(\x0b\x32\x11.pb.Hero.HeroInfo\x12\x1c\n\x14\x46reeActiveItemCanUse\x18\x02 \x01(\x08\x1a)\n\x17HeroSkillEffectAwardReq\x12\x0e\n\x06heroID\x18\x01 \x01(\t\x1a}\n\x17HeroSkillEffectAwardRsp\x12\x1b\n\x04hero\x18\x01 \x01(\x0b\x32\r.pb.Hero.Hero\x12.\n\tAwardType\x18\x02 \x01(\x0e\x32\x1b.pb.Hero.HeroSkillAwardType\x12\x15\n\rAwardMultiple\x18\x03 \x01(\r\x1a\x1f\n\rHeroUnlockReq\x12\x0e\n\x06heroID\x18\x01 \x01(\t\x1a,\n\rHeroUnlockRsp\x12\x1b\n\x04hero\x18\x01 \x01(\x0b\x32\r.pb.Hero.Hero\x1a\x1c\n\nHeroGetReq\x12\x0e\n\x06heroID\x18\x01 \x01(\t\x1aK\n\nHeroGetRsp\x12\x1b\n\x04hero\x18\x01 \x01(\x0b\x32\r.pb.Hero.Hero\x12 \n\x05items\x18\x02 \x03(\x0b\x32\x11.pb.Hero.HeroItem\x1a]\n\x08HeroInfo\x12\x0e\n\x06HeroID\x18\x01 \x01(\t\x12-\n\x0b\x41\x63itveState\x18\x02 \x01(\x0e\x32\x18.pb.Hero.HeroActiveState\x12\x12\n\nFinishTime\x18\x03 \x01(\x03\x1a\xba\x02\n\x04Hero\x12\x0e\n\x06HeroID\x18\x01 \x01(\t\x12\r\n\x05Level\x18\x02 \x01(\r\x12\x0f\n\x07LevelXp\x18\x03 \x01(\x04\x12\x12\n\nLevelXpMax\x18\x04 \x01(\x04\x12.\n\tCanUnlock\x18\x05 \x01(\x0e\x32\x1b.pb.Hero.HeroCanUnlockState\x12)\n\tlockState\x18\x06 \x01(\x0e\x32\x16.pb.Hero.HeroLockState\x12-\n\x0b\x41\x63itveState\x18\x07 \x01(\x0e\x32\x18.pb.Hero.HeroActiveState\x12-\n\x0b\x43hooseState\x18\x08 \x01(\x0e\x32\x18.pb.Hero.HeroChooseState\x12\x12\n\nFinishTime\x18\t \x01(\x03\x12!\n\x05skill\x18\n \x01(\x0b\x32\x12.pb.Hero.HeroSkill\x1a\x66\n\x08HeroItem\x12#\n\x04Type\x18\x01 \x01(\x0e\x32\x15.pb.Hero.HeroItemType\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x0e\n\x06\x61mount\x18\x03 \x01(\x04\x12\x17\n\x0fnextRefreshTime\x18\x04 \x01(\x03\x1a\xaa\x02\n\tHeroSkill\x12\x1c\n\x14\x42\x61seSkillEffectValue\x18\x65 \x01(\r\x12\x18\n\x10SkillEffectValue\x18\x01 \x01(\r\x12\x1c\n\x14NextSkillEffectValue\x18\x02 \x01(\r\x12\n\n\x02\x43V\x18\x03 \x01(\x04\x12\n\n\x02TV\x18\x04 \x01(\x04\x12.\n\tAwardType\x18\x05 \x01(\x0e\x32\x1b.pb.Hero.HeroSkillAwardType\x12\x15\n\rAwardMultiple\x18\x06 \x01(\r\x12\x15\n\rAwardRestTime\x18\x07 \x01(\x03\x12\x12\n\ncanGotCoin\x18\x08 \x01(\x04\x12\x11\n\tawardCoin\x18\t \x01(\x04\x12\x16\n\x0enextLevelAward\x18\n \x01(\r\x12\x12\n\nawardLevel\x18\x0b \x01(\r\"C\n\rHeroLockState\x12\x19\n\x15StatePlayerHeroUnlock\x10\x00\x12\x17\n\x13StatePlayerHeroLock\x10\x01\"I\n\x0fHeroActiveState\x12\x1b\n\x17StatePlayerHeroUnActive\x10\x00\x12\x19\n\x15StatePlayerHeroActive\x10\x01\"I\n\x0fHeroChooseState\x12\x1b\n\x17StatePlayerHeroUnChoose\x10\x00\x12\x19\n\x15StatePlayerHeroChoose\x10\x01\"=\n\x12HeroCanUnlockState\x12\x11\n\rHeroCanUnlock\x10\x00\x12\x14\n\x10HeroCanNotUnlock\x10\x01\"V\n\x0cHeroItemType\x12\x12\n\x0eHeroItemTypeXp\x10\x00\x12\x16\n\x12HeroItemTypeActive\x10\x01\x12\x1a\n\x16HeroItemTypeFreeActive\x10\x02\"P\n\x12HeroSkillAwardType\x12\x1d\n\x19HeroSkillAewardTypeNormal\x10\x00\x12\x1b\n\x17HeroSkillAewardTypeDice\x10\x01\x42\x06Z\x04.;pbb\x06proto3'
+  serialized_pb=b'\n\nhero.proto\x12\x02pb\"\x9c\x1a\n\x04Hero\x1a\xb6\x03\n\x03Req\x12(\n\x08HeroList\x18\x01 \x01(\x0b\x32\x14.pb.Hero.HeroListReqH\x00\x12.\n\x0bHeroLevelUp\x18\x02 \x01(\x0b\x32\x17.pb.Hero.HeroLevelUpReqH\x00\x12,\n\nHeroActive\x18\x03 \x01(\x0b\x32\x16.pb.Hero.HeroActiveReqH\x00\x12,\n\nHeroChoose\x18\x04 \x01(\x0b\x32\x16.pb.Hero.HeroChooseReqH\x00\x12\x30\n\x0cHeroSlotInfo\x18\x05 \x01(\x0b\x32\x18.pb.Hero.HeroSlotInfoReqH\x00\x12(\n\x08HeroInfo\x18\x06 \x01(\x0b\x32\x14.pb.Hero.HeroInfoReqH\x00\x12@\n\x14HeroSkillEffectAward\x18\x07 \x01(\x0b\x32 .pb.Hero.HeroSkillEffectAwardReqH\x00\x12,\n\nHeroUnlock\x18\x08 \x01(\x0b\x32\x16.pb.Hero.HeroUnlockReqH\x00\x12&\n\x07HeroGet\x18\t \x01(\x0b\x32\x13.pb.Hero.HeroGetReqH\x00\x42\x05\n\x03one\x1a\xb6\x03\n\x03Rsp\x12(\n\x08HeroList\x18\x01 \x01(\x0b\x32\x14.pb.Hero.HeroListRspH\x00\x12.\n\x0bHeroLevelUp\x18\x02 \x01(\x0b\x32\x17.pb.Hero.HeroLevelUpRspH\x00\x12,\n\nHeroActive\x18\x03 \x01(\x0b\x32\x16.pb.Hero.HeroActiveRspH\x00\x12,\n\nHeroChoose\x18\x04 \x01(\x0b\x32\x16.pb.Hero.HeroChooseRspH\x00\x12\x30\n\x0cHeroSlotInfo\x18\x05 \x01(\x0b\x32\x18.pb.Hero.HeroSlotInfoRspH\x00\x12(\n\x08HeroInfo\x18\x06 \x01(\x0b\x32\x14.pb.Hero.HeroInfoRspH\x00\x12@\n\x14HeroSkillEffectAward\x18\x07 \x01(\x0b\x32 .pb.Hero.HeroSkillEffectAwardRspH\x00\x12,\n\nHeroUnlock\x18\x08 \x01(\x0b\x32\x16.pb.Hero.HeroUnlockRspH\x00\x12&\n\x07HeroGet\x18\t \x01(\x0b\x32\x13.pb.Hero.HeroGetRspH\x00\x42\x05\n\x03one\x1a\x1c\n\x0bHeroListReq\x12\r\n\x05State\x18\x01 \x01(\r\x1a\\\n\x0bHeroListRsp\x12\x1c\n\x05heros\x18\x01 \x03(\x0b\x32\r.pb.Hero.Hero\x12 \n\x05items\x18\x02 \x03(\x0b\x32\x11.pb.Hero.HeroItem\x12\r\n\x05State\x18\x03 \x01(\r\x1a\x32\n\x0eHeroLevelUpReq\x12\x0e\n\x06heroID\x18\x01 \x01(\t\x12\x10\n\x08itemName\x18\x02 \x01(\t\x1a\x86\x01\n\x0eHeroLevelUpRsp\x12\x1b\n\x04hero\x18\x01 \x01(\x0b\x32\r.pb.Hero.Hero\x12#\n\x04Type\x18\x02 \x01(\x0e\x32\x15.pb.Hero.HeroItemType\x12\x10\n\x08UseCount\x18\x03 \x01(\x04\x12 \n\x05items\x18\x04 \x03(\x0b\x32\x11.pb.Hero.HeroItem\x1a\x31\n\rHeroActiveReq\x12\x0e\n\x06heroID\x18\x01 \x01(\t\x12\x10\n\x08itemName\x18\x02 \x01(\t\x1a\x85\x01\n\rHeroActiveRsp\x12\x1b\n\x04hero\x18\x01 \x01(\x0b\x32\r.pb.Hero.Hero\x12#\n\x04Type\x18\x02 \x01(\x0e\x32\x15.pb.Hero.HeroItemType\x12\x10\n\x08UseCount\x18\x03 \x01(\x04\x12 \n\x05items\x18\x04 \x03(\x0b\x32\x11.pb.Hero.HeroItem\x1a\x1f\n\rHeroChooseReq\x12\x0e\n\x06heroID\x18\x01 \x01(\t\x1a,\n\rHeroChooseRsp\x12\x1b\n\x04hero\x18\x01 \x01(\x0b\x32\r.pb.Hero.Hero\x1a\x11\n\x0fHeroSlotInfoReq\x1aP\n\x0fHeroSlotInfoRsp\x12\x1b\n\x04hero\x18\x01 \x01(\x0b\x32\r.pb.Hero.Hero\x12 \n\x05items\x18\x02 \x03(\x0b\x32\x11.pb.Hero.HeroItem\x1a\r\n\x0bHeroInfoReq\x1aM\n\x0bHeroInfoRsp\x12 \n\x05heros\x18\x01 \x03(\x0b\x32\x11.pb.Hero.HeroInfo\x12\x1c\n\x14\x46reeActiveItemCanUse\x18\x02 \x01(\x08\x1a)\n\x17HeroSkillEffectAwardReq\x12\x0e\n\x06heroID\x18\x01 \x01(\t\x1a}\n\x17HeroSkillEffectAwardRsp\x12\x1b\n\x04hero\x18\x01 \x01(\x0b\x32\r.pb.Hero.Hero\x12.\n\tAwardType\x18\x02 \x01(\x0e\x32\x1b.pb.Hero.HeroSkillAwardType\x12\x15\n\rAwardMultiple\x18\x03 \x01(\r\x1a\x1f\n\rHeroUnlockReq\x12\x0e\n\x06heroID\x18\x01 \x01(\t\x1a,\n\rHeroUnlockRsp\x12\x1b\n\x04hero\x18\x01 \x01(\x0b\x32\r.pb.Hero.Hero\x1a\x1c\n\nHeroGetReq\x12\x0e\n\x06heroID\x18\x01 \x01(\t\x1aK\n\nHeroGetRsp\x12\x1b\n\x04hero\x18\x01 \x01(\x0b\x32\r.pb.Hero.Hero\x12 \n\x05items\x18\x02 \x03(\x0b\x32\x11.pb.Hero.HeroItem\x1a]\n\x08HeroInfo\x12\x0e\n\x06HeroID\x18\x01 \x01(\t\x12-\n\x0b\x41\x63itveState\x18\x02 \x01(\x0e\x32\x18.pb.Hero.HeroActiveState\x12\x12\n\nFinishTime\x18\x03 \x01(\x03\x1a\xba\x02\n\x04Hero\x12\x0e\n\x06HeroID\x18\x01 \x01(\t\x12\r\n\x05Level\x18\x02 \x01(\r\x12\x0f\n\x07LevelXp\x18\x03 \x01(\x04\x12\x12\n\nLevelXpMax\x18\x04 \x01(\x04\x12.\n\tCanUnlock\x18\x05 \x01(\x0e\x32\x1b.pb.Hero.HeroCanUnlockState\x12)\n\tlockState\x18\x06 \x01(\x0e\x32\x16.pb.Hero.HeroLockState\x12-\n\x0b\x41\x63itveState\x18\x07 \x01(\x0e\x32\x18.pb.Hero.HeroActiveState\x12-\n\x0b\x43hooseState\x18\x08 \x01(\x0e\x32\x18.pb.Hero.HeroChooseState\x12\x12\n\nFinishTime\x18\t \x01(\x03\x12!\n\x05skill\x18\n \x01(\x0b\x32\x12.pb.Hero.HeroSkill\x1a\x66\n\x08HeroItem\x12#\n\x04Type\x18\x01 \x01(\x0e\x32\x15.pb.Hero.HeroItemType\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x0e\n\x06\x61mount\x18\x03 \x01(\x04\x12\x17\n\x0fnextRefreshTime\x18\x04 \x01(\x03\x1a\xef\x02\n\tHeroSkill\x12\x1c\n\x14\x42\x61seSkillEffectValue\x18\x65 \x01(\r\x12\x18\n\x10SkillEffectValue\x18\x01 \x01(\r\x12\x1c\n\x14NextSkillEffectValue\x18\x02 \x01(\r\x12\n\n\x02\x43V\x18\x03 \x01(\x04\x12\n\n\x02TV\x18\x04 \x01(\x04\x12.\n\tAwardType\x18\x05 \x01(\x0e\x32\x1b.pb.Hero.HeroSkillAwardType\x12\x15\n\rAwardMultiple\x18\x06 \x01(\r\x12\x15\n\rAwardRestTime\x18\x07 \x01(\x03\x12\x12\n\ncanGotCoin\x18\x08 \x01(\x04\x12\x11\n\tawardCoin\x18\t \x01(\x04\x12\x16\n\x0enextLevelAward\x18\n \x01(\r\x12\x12\n\nawardLevel\x18\x0b \x01(\r\x12\x0f\n\x07\x61wardXp\x18\x0c \x01(\r\x12\r\n\x05Level\x18\r \x01(\r\x12\x0f\n\x07LevelXp\x18\x0e \x01(\x04\x12\x12\n\nLevelXpMax\x18\x0f \x01(\x04\"C\n\rHeroLockState\x12\x19\n\x15StatePlayerHeroUnlock\x10\x00\x12\x17\n\x13StatePlayerHeroLock\x10\x01\"I\n\x0fHeroActiveState\x12\x1b\n\x17StatePlayerHeroUnActive\x10\x00\x12\x19\n\x15StatePlayerHeroActive\x10\x01\"I\n\x0fHeroChooseState\x12\x1b\n\x17StatePlayerHeroUnChoose\x10\x00\x12\x19\n\x15StatePlayerHeroChoose\x10\x01\"=\n\x12HeroCanUnlockState\x12\x11\n\rHeroCanUnlock\x10\x00\x12\x14\n\x10HeroCanNotUnlock\x10\x01\"V\n\x0cHeroItemType\x12\x12\n\x0eHeroItemTypeXp\x10\x00\x12\x16\n\x12HeroItemTypeActive\x10\x01\x12\x1a\n\x16HeroItemTypeFreeActive\x10\x02\"P\n\x12HeroSkillAwardType\x12\x1d\n\x19HeroSkillAewardTypeNormal\x10\x00\x12\x1b\n\x17HeroSkillAewardTypeDice\x10\x01\x42\x06Z\x04.;pbb\x06proto3'
 )
 
 
@@ -44,8 +44,8 @@ _HERO_HEROLOCKSTATE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=2856,
-  serialized_end=2923,
+  serialized_start=2925,
+  serialized_end=2992,
 )
 _sym_db.RegisterEnumDescriptor(_HERO_HEROLOCKSTATE)
 
@@ -69,8 +69,8 @@ _HERO_HEROACTIVESTATE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=2925,
-  serialized_end=2998,
+  serialized_start=2994,
+  serialized_end=3067,
 )
 _sym_db.RegisterEnumDescriptor(_HERO_HEROACTIVESTATE)
 
@@ -94,8 +94,8 @@ _HERO_HEROCHOOSESTATE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=3000,
-  serialized_end=3073,
+  serialized_start=3069,
+  serialized_end=3142,
 )
 _sym_db.RegisterEnumDescriptor(_HERO_HEROCHOOSESTATE)
 
@@ -119,8 +119,8 @@ _HERO_HEROCANUNLOCKSTATE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=3075,
-  serialized_end=3136,
+  serialized_start=3144,
+  serialized_end=3205,
 )
 _sym_db.RegisterEnumDescriptor(_HERO_HEROCANUNLOCKSTATE)
 
@@ -149,8 +149,8 @@ _HERO_HEROITEMTYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=3138,
-  serialized_end=3224,
+  serialized_start=3207,
+  serialized_end=3293,
 )
 _sym_db.RegisterEnumDescriptor(_HERO_HEROITEMTYPE)
 
@@ -174,8 +174,8 @@ _HERO_HEROSKILLAWARDTYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=3226,
-  serialized_end=3306,
+  serialized_start=3295,
+  serialized_end=3375,
 )
 _sym_db.RegisterEnumDescriptor(_HERO_HEROSKILLAWARDTYPE)
 
@@ -1296,6 +1296,34 @@ _HERO_HEROSKILL = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='awardXp', full_name='pb.Hero.HeroSkill.awardXp', index=12,
+      number=12, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='Level', full_name='pb.Hero.HeroSkill.Level', index=13,
+      number=13, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='LevelXp', full_name='pb.Hero.HeroSkill.LevelXp', index=14,
+      number=14, type=4, cpp_type=4, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='LevelXpMax', full_name='pb.Hero.HeroSkill.LevelXpMax', index=15,
+      number=15, type=4, cpp_type=4, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -1309,7 +1337,7 @@ _HERO_HEROSKILL = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=2556,
-  serialized_end=2854,
+  serialized_end=2923,
 )
 
 _HERO = _descriptor.Descriptor(
@@ -1339,7 +1367,7 @@ _HERO = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=19,
-  serialized_end=3306,
+  serialized_end=3375,
 )
 
 _HERO_REQ.fields_by_name['HeroList'].message_type = _HERO_HEROLISTREQ

@@ -45,7 +45,17 @@ def default_theme_callback(packet):
 def fakeTIme():
     Sender.send_timefake("11111")
 
+def gm_meta(player):
+    player.send_cmd("metaj 2,6")
+    # player.send_cmd("metap")
+    # player.send_cmd("metas")
+
+    # player.send_cmd("candypop 2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2")
+
+    pass
+
 def run(player):
+    # player.req_novice_save(131)
     # player.send_cmd(gem_cmd)
     # player.send_cmd(add_money)
     # player.send_cmd(free_me)
@@ -53,17 +63,19 @@ def run(player):
     # player.send_cmd(coin_cmd)
     # player.send_cmd(level_cmd)
     # player.send_cmd(lv10_cmd)
+    gm_meta(player)
+
     # player.send_cmd(dice_cmd)
+    # player.send_cmd(candy_cmd)
     # player.send_cmd(bingoball_cmd)
     # player.send_cmd(gmnow)
     # player.send_cmd(journey_roll)
     
-    player.req_activity_list()
-
-    act_id = 1
-    # player.req_activity_user_data(act_id)
-    # for i in range(0, 10):
-        # player.req_activity_play(act_id)
+    # player.req_activity_list()
+    act_id = 7
+    player.req_activity_user_data(act_id)
+    # for i in range(0, 20):
+    #     player.req_activity_play(act_id)
     # player.req_activity_play(act_id)
 
     # player.send_cmd(dice_cmd)
@@ -85,9 +97,12 @@ gmnow = "now"
 journey = "journey 0,100"
 journey_roll = "jroll 50"
 dice_cmd = "add dice 999999"
+candy_cmd = "add candy 999999"
 level_cmd = "add level 100"
 lv10_cmd = "add level 10"
 coin_cmd = "add coin 99999999"
 gem_cmd = "add gem 99999999"
 bingoball_cmd = "add bingoBall 999999"
 mock_time="st:2022-04-09 14:02:00"
+metaj = "metaj 0,4"
+

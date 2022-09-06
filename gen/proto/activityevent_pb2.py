@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'Z\004.;pb',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x13\x61\x63tivityevent.proto\x12\x02pb\"i\n\rActivityEvent\x12\r\n\x05\x45ntry\x18\x01 \x01(\x05\x12\x10\n\x08progress\x18\x02 \x01(\x03\x12\x0e\n\x06target\x18\x03 \x01(\x03\x12\'\n\x06Status\x18\x04 \x01(\x0e\x32\x17.pb.ActivityEventStatus*K\n\x13\x41\x63tivityEventStatus\x12\x0f\n\x0b\x41\x45S_NotOpen\x10\x00\x12\x11\n\rAES_InHanding\x10\x01\x12\x10\n\x0c\x41\x45S_Finished\x10\x02\x42\x06Z\x04.;pbb\x06proto3'
+  serialized_pb=b'\n\x13\x61\x63tivityevent.proto\x12\x02pb\"i\n\rActivityEvent\x12\r\n\x05\x45ntry\x18\x01 \x01(\x05\x12\x10\n\x08progress\x18\x02 \x01(\x03\x12\x0e\n\x06target\x18\x03 \x01(\x03\x12\'\n\x06Status\x18\x04 \x01(\x0e\x32\x17.pb.ActivityEventStatus\"W\n\x0c\x41\x63tivityBuff\x12\"\n\x04Type\x18\x01 \x01(\x0e\x32\x14.pb.ActivityBuffType\x12\r\n\x05Value\x18\x02 \x01(\x05\x12\x14\n\x0c\x45ndTimeStamp\x18\x03 \x01(\x03*K\n\x13\x41\x63tivityEventStatus\x12\x0f\n\x0b\x41\x45S_NotOpen\x10\x00\x12\x11\n\rAES_InHanding\x10\x01\x12\x10\n\x0c\x41\x45S_Finished\x10\x02*e\n\x10\x41\x63tivityBuffType\x12\x13\n\x0f\x41\x42_KJPathReward\x10\x00\x12\x15\n\x11\x41\x42_KJSpinProgress\x10\x01\x12\x13\n\x0f\x41\x42_KJCoinReward\x10\x02\x12\x10\n\x0c\x41\x42_KJProtect\x10\x03\x42\x06Z\x04.;pbb\x06proto3'
 )
 
 _ACTIVITYEVENTSTATUS = _descriptor.EnumDescriptor(
@@ -48,15 +48,55 @@ _ACTIVITYEVENTSTATUS = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=134,
-  serialized_end=209,
+  serialized_start=223,
+  serialized_end=298,
 )
 _sym_db.RegisterEnumDescriptor(_ACTIVITYEVENTSTATUS)
 
 ActivityEventStatus = enum_type_wrapper.EnumTypeWrapper(_ACTIVITYEVENTSTATUS)
+_ACTIVITYBUFFTYPE = _descriptor.EnumDescriptor(
+  name='ActivityBuffType',
+  full_name='pb.ActivityBuffType',
+  filename=None,
+  file=DESCRIPTOR,
+  create_key=_descriptor._internal_create_key,
+  values=[
+    _descriptor.EnumValueDescriptor(
+      name='AB_KJPathReward', index=0, number=0,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='AB_KJSpinProgress', index=1, number=1,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='AB_KJCoinReward', index=2, number=2,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='AB_KJProtect', index=3, number=3,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+  ],
+  containing_type=None,
+  serialized_options=None,
+  serialized_start=300,
+  serialized_end=401,
+)
+_sym_db.RegisterEnumDescriptor(_ACTIVITYBUFFTYPE)
+
+ActivityBuffType = enum_type_wrapper.EnumTypeWrapper(_ACTIVITYBUFFTYPE)
 AES_NotOpen = 0
 AES_InHanding = 1
 AES_Finished = 2
+AB_KJPathReward = 0
+AB_KJSpinProgress = 1
+AB_KJCoinReward = 2
+AB_KJProtect = 3
 
 
 
@@ -112,9 +152,58 @@ _ACTIVITYEVENT = _descriptor.Descriptor(
   serialized_end=132,
 )
 
+
+_ACTIVITYBUFF = _descriptor.Descriptor(
+  name='ActivityBuff',
+  full_name='pb.ActivityBuff',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='Type', full_name='pb.ActivityBuff.Type', index=0,
+      number=1, type=14, cpp_type=8, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='Value', full_name='pb.ActivityBuff.Value', index=1,
+      number=2, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='EndTimeStamp', full_name='pb.ActivityBuff.EndTimeStamp', index=2,
+      number=3, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=134,
+  serialized_end=221,
+)
+
 _ACTIVITYEVENT.fields_by_name['Status'].enum_type = _ACTIVITYEVENTSTATUS
+_ACTIVITYBUFF.fields_by_name['Type'].enum_type = _ACTIVITYBUFFTYPE
 DESCRIPTOR.message_types_by_name['ActivityEvent'] = _ACTIVITYEVENT
+DESCRIPTOR.message_types_by_name['ActivityBuff'] = _ACTIVITYBUFF
 DESCRIPTOR.enum_types_by_name['ActivityEventStatus'] = _ACTIVITYEVENTSTATUS
+DESCRIPTOR.enum_types_by_name['ActivityBuffType'] = _ACTIVITYBUFFTYPE
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 ActivityEvent = _reflection.GeneratedProtocolMessageType('ActivityEvent', (_message.Message,), {
@@ -123,6 +212,13 @@ ActivityEvent = _reflection.GeneratedProtocolMessageType('ActivityEvent', (_mess
   # @@protoc_insertion_point(class_scope:pb.ActivityEvent)
   })
 _sym_db.RegisterMessage(ActivityEvent)
+
+ActivityBuff = _reflection.GeneratedProtocolMessageType('ActivityBuff', (_message.Message,), {
+  'DESCRIPTOR' : _ACTIVITYBUFF,
+  '__module__' : 'activityevent_pb2'
+  # @@protoc_insertion_point(class_scope:pb.ActivityBuff)
+  })
+_sym_db.RegisterMessage(ActivityBuff)
 
 
 DESCRIPTOR._options = None

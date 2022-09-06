@@ -41,9 +41,9 @@ class RobotBase:
         req = make_novice_req(self.player_id, self.token)
         self.send_packet(req)
 
-    def req_novice_save(self):
+    def req_novice_save(self, _id):
         self.log("req_novice")
-        req = make_novice_save_req(self.player_id, self.token)
+        req = make_novice_save_req(self.player_id, self.token, _id)
         self.send_packet(req)
 
     def req_play(self, theme_id, bet):
