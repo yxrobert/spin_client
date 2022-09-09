@@ -37,9 +37,10 @@ def make_novice_req(player_id, token):
     request.NoviceGuide.Holder = False
     return req
 
-def make_novice_save_req(player_id, token):
+def make_novice_save_req(player_id, token, _id):
     req, request = make_multi_req(player_id, token)
-    request.NoviceGuideSave.Data.ID = 1
+    request.NoviceGuideSave.Data.ID = _id
+    request.NoviceGuideSave.Data.State = 1
     return req
 
 def make_play_req(player_id, token, theme_id, bet):
@@ -83,17 +84,14 @@ def make_game_req(player_id, token, theme_id, bet, x, y = -1):
     request.Play.PickPos = 0
     request.Play.PickInfo = ""
 
-    if y != -1:
-        request.Play.coords.X = x
-        request.Play.coords.Y = y
-    else:
-        request.Play.index.X = x
+    request.Play.index.X = x
 
     return req
 
 def make_multi_rsp(data):
+    print("xxxxxx")
     rsp = pb.BunchResponse()
-    rsp.ParseFromString(data)
+    rsp.ParseFromString(data.strip())
     return rsp
 
 def make_theme_status_req(player_id, token, theme_id):
@@ -142,43 +140,35 @@ def make_activity_play_req(player_id, token, uid):
     request.Activity.Play.Input.InputX = 0
     return req
 
-def make_hero_active_req(player_id, token, hero_id, name):
-    req, request = make_multi_req(player_id, token)
-    request.Hero.HeroActive.heroID = hero_id
-    request.Hero.HeroActive.itemName = name
-    return req
 
-def make_treasure_get_req(player_id, token):
+def make_cardgathering_data_req(player_id, token, season):
     req, request = make_multi_req(player_id, token)
-    request.TreasureRoom.Get.Type = 0
+    request.CardGathering.UserData.Season = season
     return req
 
 
-# def make_cardgathering_data_req(player_id, token, season):
-#     req, request = make_multi_req(player_id, token)
-#     request.CardGathering.UserData.Season = season
-#     return req
+def make_cardgathering_exchange_req(player_id, token, src, dest):
+    req, request = make_multi_req(player_id, token)
+    request.CardGathering.ExchangeCard.Src = src
+    request.CardGathering.ExchangeCard.Dest = dest
+    return req
 
 
-# def make_cardgathering_exchange_req(player_id, token, src, dest):
-#     req, request = make_multi_req(player_id, token)
-#     request.CardGathering.ExchangeCard.Src = src
-#     request.CardGathering.ExchangeCard.Dest = dest
-#     return req
-
-
-# def make_cardgathering_break_req(player_id, token, level, card_list):
-#     req, request = make_multi_req(player_id, token)
-#     request.CardGathering.BreakCard.Level = level
-#     request.CardGathering.BreakCard.CostCards.extend(card_list)
+def make_cardgathering_break_req(player_id, token, level, card_list):
+    req, request = make_multi_req(player_id, token)
+    request.CardGathering.BreakCard.Level = level
+    request.CardGathering.BreakCard.CostCards.extend(card_list)
     
-#     return req
+    # for c in card_list:
+    #     card = request.CardGathering.BreakCard.CostCards.add()
+    #     card = c
+    return req
 
 
-# def make_cardgathering_reset_req(player_id, token):
-#     req, request = make_multi_req(player_id, token)
-#     request.CardGathering.ResetBreaking.Type = 0
-#     return req
+def make_cardgathering_reset_req(player_id, token):
+    req, request = make_multi_req(player_id, token)
+    request.CardGathering.ResetBreaking.Type = 0
+    return req
 
 
 
