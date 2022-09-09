@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'Z\004.;pb',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x13\x61\x63tivityevent.proto\x12\x02pb\"i\n\rActivityEvent\x12\r\n\x05\x45ntry\x18\x01 \x01(\x05\x12\x10\n\x08progress\x18\x02 \x01(\x03\x12\x0e\n\x06target\x18\x03 \x01(\x03\x12\'\n\x06Status\x18\x04 \x01(\x0e\x32\x17.pb.ActivityEventStatus\"W\n\x0c\x41\x63tivityBuff\x12\"\n\x04Type\x18\x01 \x01(\x0e\x32\x14.pb.ActivityBuffType\x12\r\n\x05Value\x18\x02 \x01(\x05\x12\x14\n\x0c\x45ndTimeStamp\x18\x03 \x01(\x03*K\n\x13\x41\x63tivityEventStatus\x12\x0f\n\x0b\x41\x45S_NotOpen\x10\x00\x12\x11\n\rAES_InHanding\x10\x01\x12\x10\n\x0c\x41\x45S_Finished\x10\x02*e\n\x10\x41\x63tivityBuffType\x12\x13\n\x0f\x41\x42_KJPathReward\x10\x00\x12\x15\n\x11\x41\x42_KJSpinProgress\x10\x01\x12\x13\n\x0f\x41\x42_KJCoinReward\x10\x02\x12\x10\n\x0c\x41\x42_KJProtect\x10\x03\x42\x06Z\x04.;pbb\x06proto3'
+  serialized_pb=b'\n\x13\x61\x63tivityevent.proto\x12\x02pb\"w\n\rActivityEvent\x12\r\n\x05\x45ntry\x18\x01 \x01(\x05\x12\x10\n\x08progress\x18\x02 \x01(\x03\x12\x0e\n\x06target\x18\x03 \x01(\x03\x12\'\n\x06Status\x18\x04 \x01(\x0e\x32\x17.pb.ActivityEventStatus\x12\x0c\n\x04Type\x18\x05 \x01(\t\"W\n\x0c\x41\x63tivityBuff\x12\"\n\x04Type\x18\x01 \x01(\x0e\x32\x14.pb.ActivityBuffType\x12\r\n\x05Value\x18\x02 \x01(\x05\x12\x14\n\x0c\x45ndTimeStamp\x18\x03 \x01(\x03*K\n\x13\x41\x63tivityEventStatus\x12\x0f\n\x0b\x41\x45S_NotOpen\x10\x00\x12\x11\n\rAES_InHanding\x10\x01\x12\x10\n\x0c\x41\x45S_Finished\x10\x02*e\n\x10\x41\x63tivityBuffType\x12\x13\n\x0f\x41\x42_KJPathReward\x10\x00\x12\x15\n\x11\x41\x42_KJSpinProgress\x10\x01\x12\x13\n\x0f\x41\x42_KJCoinReward\x10\x02\x12\x10\n\x0c\x41\x42_KJProtect\x10\x03\x42\x06Z\x04.;pbb\x06proto3'
 )
 
 _ACTIVITYEVENTSTATUS = _descriptor.EnumDescriptor(
@@ -48,8 +48,8 @@ _ACTIVITYEVENTSTATUS = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=223,
-  serialized_end=298,
+  serialized_start=237,
+  serialized_end=312,
 )
 _sym_db.RegisterEnumDescriptor(_ACTIVITYEVENTSTATUS)
 
@@ -84,8 +84,8 @@ _ACTIVITYBUFFTYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=300,
-  serialized_end=401,
+  serialized_start=314,
+  serialized_end=415,
 )
 _sym_db.RegisterEnumDescriptor(_ACTIVITYBUFFTYPE)
 
@@ -136,6 +136,13 @@ _ACTIVITYEVENT = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='Type', full_name='pb.ActivityEvent.Type', index=4,
+      number=5, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -149,7 +156,7 @@ _ACTIVITYEVENT = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=27,
-  serialized_end=132,
+  serialized_end=146,
 )
 
 
@@ -194,8 +201,8 @@ _ACTIVITYBUFF = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=134,
-  serialized_end=221,
+  serialized_start=148,
+  serialized_end=235,
 )
 
 _ACTIVITYEVENT.fields_by_name['Status'].enum_type = _ACTIVITYEVENTSTATUS
