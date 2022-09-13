@@ -125,7 +125,7 @@ class RobotBase:
         if packet.Error != None:
             # self.log("--------Got Error--------[" + str(packet.Error) + "]")
             self.process_err(packet.Error)
-            
+
         if packet.HasField("Login"):
             self.on_login(packet)
             return
@@ -146,11 +146,14 @@ class RobotBase:
         self.log("Awards", packet.Multi.Awards)
         self.log("ActivityEventDropList", packet.Multi.ActivityEventDropList)
 
-    
+    def check_relogin(self, err_str):
+        print(err_str)
+        return err_str.find("token-match") > 0 or err_str.find("bad-auth") > 0 or err_str.find("time back") > 0 or err_str.find("need login") > 0
+
     def process_err(self, err):
         err_str = str(err)
         self.log(err_str)
-        if err_str.find("token-match") > 0 or err_str.find("bad-auth") > 0 or err_str.find("time back") > 0:
+        if self.check_relogin(err_str):
             self.req_login()
         elif err_str.find("not-enough") > 0:
             self.send_cmd(add_money)

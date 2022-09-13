@@ -47,7 +47,7 @@ def fakeTIme():
 def run(player):
     # player.send_cmd(candy_cmd)
     # player.send_cmd(gem_cmd)
-    # player.send_cmd(add_money)
+    player.send_cmd(add_money)
     # player.send_cmd(xpay)
     # player.send_cmd(free_me)
     # player.send_cmd(cmd_lj)

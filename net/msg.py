@@ -2,8 +2,15 @@
 #coding=utf-8
 
 import gen.proto as pb
-import random
+import random, sys
 from sys import maxint
+
+reload(sys)
+sys.setdefaultencoding('utf8')
+
+def check_relogin(err_str):
+    print(err_str)
+    return err_str.find("token-match") > 0 or err_str.find("bad-auth") > 0 or err_str.find("time back") > 0 or err_str.find("need login") > 0
 
 def gen_sid():
     return random.randint(0, maxint/10000000000)
@@ -89,9 +96,17 @@ def make_game_req(player_id, token, theme_id, bet, x, y = -1):
     return req
 
 def make_multi_rsp(data):
-    print("xxxxxx")
     rsp = pb.BunchResponse()
-    rsp.ParseFromString(data.strip())
+
+    try:
+        rsp.ParseFromString(data.strip())
+    # except pb._DecodeError :
+    except :
+        print(str(data))
+        # rsp.Error.Msg = str(data).encode(encoding="UTF-8")
+        if check_relogin(str(data)):
+            rsp.Error.Msg = "need login" 
+
     return rsp
 
 def make_theme_status_req(player_id, token, theme_id):
