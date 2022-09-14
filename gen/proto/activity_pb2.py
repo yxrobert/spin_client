@@ -18,6 +18,7 @@ import endlessriches_pb2 as endlessriches__pb2
 import chase_pb2 as chase__pb2
 import bingo_pb2 as bingo__pb2
 import challenge_pb2 as challenge__pb2
+import candymart_pb2 as candymart__pb2
 import opcode_pb2 as opcode__pb2
 import award_pb2 as award__pb2
 import activityevent_pb2 as activityevent__pb2
@@ -696,7 +697,11 @@ _ACTIVITYDATA = _descriptor.Descriptor(
       create_key=_descriptor._internal_create_key,
     fields=[]),
   ],
+<<<<<<< HEAD
   serialized_start=615,
+=======
+  serialized_start=618,
+>>>>>>> main
   serialized_end=1065,
 )
 
@@ -887,8 +892,13 @@ _ACTIVITY_OPINPUT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
+<<<<<<< HEAD
   serialized_start=1523,
   serialized_end=1653,
+=======
+  serialized_start=1522,
+  serialized_end=1643,
+>>>>>>> main
 )
 
 _ACTIVITY_BRIEFUSERDATA = _descriptor.Descriptor(
@@ -939,8 +949,13 @@ _ACTIVITY_BRIEFUSERDATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
+<<<<<<< HEAD
   serialized_start=1655,
   serialized_end=1751,
+=======
+  serialized_start=1645,
+  serialized_end=1741,
+>>>>>>> main
 )
 
 _ACTIVITY_REQ_ACTIVITYLIST = _descriptor.Descriptor(
@@ -970,8 +985,13 @@ _ACTIVITY_REQ_ACTIVITYLIST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
+<<<<<<< HEAD
   serialized_start=1910,
   serialized_end=1938,
+=======
+  serialized_start=1900,
+  serialized_end=1928,
+>>>>>>> main
 )
 
 _ACTIVITY_REQ_ACTIVITYUSERDATA = _descriptor.Descriptor(
@@ -1008,8 +1028,13 @@ _ACTIVITY_REQ_ACTIVITYUSERDATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
+<<<<<<< HEAD
   serialized_start=1940,
   serialized_end=1985,
+=======
+  serialized_start=1930,
+  serialized_end=1975,
+>>>>>>> main
 )
 
 _ACTIVITY_REQ_ACTIVITYPLAY = _descriptor.Descriptor(
@@ -1046,8 +1071,13 @@ _ACTIVITY_REQ_ACTIVITYPLAY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
+<<<<<<< HEAD
   serialized_start=1987,
   serialized_end=2051,
+=======
+  serialized_start=1977,
+  serialized_end=2041,
+>>>>>>> main
 )
 
 _ACTIVITY_REQ = _descriptor.Descriptor(
@@ -1096,8 +1126,13 @@ _ACTIVITY_REQ = _descriptor.Descriptor(
       create_key=_descriptor._internal_create_key,
     fields=[]),
   ],
+<<<<<<< HEAD
   serialized_start=1754,
   serialized_end=2058,
+=======
+  serialized_start=1744,
+  serialized_end=2048,
+>>>>>>> main
 )
 
 _ACTIVITY_RSP_ACTIVITYLIST = _descriptor.Descriptor(
@@ -1134,8 +1169,13 @@ _ACTIVITY_RSP_ACTIVITYLIST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
+<<<<<<< HEAD
   serialized_start=2257,
   serialized_end=2357,
+=======
+  serialized_start=2247,
+  serialized_end=2347,
+>>>>>>> main
 )
 
 _ACTIVITY_RSP_ACTIVITYUSERDATA = _descriptor.Descriptor(
@@ -1186,8 +1226,13 @@ _ACTIVITY_RSP_ACTIVITYUSERDATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
+<<<<<<< HEAD
   serialized_start=2359,
   serialized_end=2451,
+=======
+  serialized_start=2349,
+  serialized_end=2441,
+>>>>>>> main
 )
 
 _ACTIVITY_RSP_ACTIVITYPLAY = _descriptor.Descriptor(
@@ -1231,8 +1276,13 @@ _ACTIVITY_RSP_ACTIVITYPLAY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
+<<<<<<< HEAD
   serialized_start=2453,
   serialized_end=2549,
+=======
+  serialized_start=2443,
+  serialized_end=2539,
+>>>>>>> main
 )
 
 _ACTIVITY_RSP = _descriptor.Descriptor(
@@ -1288,8 +1338,13 @@ _ACTIVITY_RSP = _descriptor.Descriptor(
       create_key=_descriptor._internal_create_key,
     fields=[]),
   ],
+<<<<<<< HEAD
   serialized_start=2061,
   serialized_end=2556,
+=======
+  serialized_start=2051,
+  serialized_end=2546,
+>>>>>>> main
 )
 
 _ACTIVITY = _descriptor.Descriptor(
@@ -1313,7 +1368,11 @@ _ACTIVITY = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=1510,
+<<<<<<< HEAD
   serialized_end=2556,
+=======
+  serialized_end=2546,
+>>>>>>> main
 )
 
 _ACTIVITYOPRESULT.fields_by_name['OpCode'].enum_type = opcode__pb2._OPCODE
@@ -1331,7 +1390,11 @@ _ACTIVITYDATA.fields_by_name['EndlessRiches'].message_type = endlessriches__pb2.
 _ACTIVITYDATA.fields_by_name['Bingo'].message_type = bingo__pb2._BINGO_DATA
 _ACTIVITYDATA.fields_by_name['Challenge'].message_type = challenge__pb2._CHALLENGE_DATA
 _ACTIVITYDATA.fields_by_name['Chase'].message_type = chase__pb2._CHASE_DATA
+<<<<<<< HEAD
 _ACTIVITYDATA.fields_by_name['Conpon'].message_type = conpon__pb2._CONPON_DATA
+=======
+_ACTIVITYDATA.fields_by_name['Candy'].message_type = candymart__pb2._CANDYMART
+>>>>>>> main
 _ACTIVITYDATA.oneofs_by_name['one'].fields.append(
   _ACTIVITYDATA.fields_by_name['Journey'])
 _ACTIVITYDATA.fields_by_name['Journey'].containing_oneof = _ACTIVITYDATA.oneofs_by_name['one']
@@ -1351,8 +1414,13 @@ _ACTIVITYDATA.oneofs_by_name['one'].fields.append(
   _ACTIVITYDATA.fields_by_name['Chase'])
 _ACTIVITYDATA.fields_by_name['Chase'].containing_oneof = _ACTIVITYDATA.oneofs_by_name['one']
 _ACTIVITYDATA.oneofs_by_name['one'].fields.append(
+<<<<<<< HEAD
   _ACTIVITYDATA.fields_by_name['Conpon'])
 _ACTIVITYDATA.fields_by_name['Conpon'].containing_oneof = _ACTIVITYDATA.oneofs_by_name['one']
+=======
+  _ACTIVITYDATA.fields_by_name['Candy'])
+_ACTIVITYDATA.fields_by_name['Candy'].containing_oneof = _ACTIVITYDATA.oneofs_by_name['one']
+>>>>>>> main
 _ACTIVITYDROP.fields_by_name['SRC'].enum_type = award__pb2._AWARDINFO_AWARDSRC
 _ACTIVITYDROP.fields_by_name['Type'].enum_type = _ACTIVITYDROPTYPE
 _ACTIVITYDROP.fields_by_name['Event'].message_type = activityevent__pb2._ACTIVITYEVENT

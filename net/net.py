@@ -14,6 +14,15 @@ class Sender:
     server_time_fake2 = "/timeFake2"
     header = {'user-agent':'BestHTTP/2 v2.5.2'}
     interval = 0.2
+    g_ssid = 0
+
+    @classmethod
+    def gen_header(cls):
+        hm = cls.header
+        hm['SessionID'] = gen_sid()
+        cls.g_ssid += 1
+        hm['SID'] = cls.g_ssid
+        return hm
 
     @classmethod
     def set_server_addr(cls, server_addr):
@@ -23,14 +32,14 @@ class Sender:
     def send(cls, packet, server_url):
         data = packet.SerializeToString()
         conn = httplib.HTTPConnection(cls.server_addr)
-        conn.request('POST', server_url, data, cls.header)
+        conn.request('POST', server_url, data, cls.gen_header())
         return conn.getresponse()
 
     @classmethod
     def send_debug(cls, packet):
         data = packet.SerializeToString()
         conn = httplib.HTTPConnection(cls.server_addr)
-        conn.request('POST', cls.server_debug_url, data, cls.header)
+        conn.request('POST', cls.server_debug_url, data, cls.gen_header())
         return conn.getresponse()
 
     @classmethod
@@ -52,7 +61,7 @@ class Sender:
     @classmethod
     def send_timefake(cls, data):
         conn = httplib.HTTPConnection(cls.server_addr)
-        conn.request('POST', cls.server_time_fake2, data, cls.header)
+        conn.request('POST', cls.server_time_fake2, data, cls.gen_header())
         return conn.getresponse()
 
 def main():

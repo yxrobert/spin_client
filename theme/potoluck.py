@@ -23,11 +23,14 @@ def run(player):
     # player.send_cmd(cheat_12)
     # player.spin_to_next_stage()
 
+    # player.send_cmd(cheat_free)
+    # player.send_cmd(cheat_free)
     # player.send_cmd(cheat_6)
     # player.send_cmd(test_gm)
+    # player.send_cmd(rtp_150)
 
     # player.send_cmd(cheat_free)
-    player.send_cmd(cheat_58)
+    # player.send_cmd(cheat_58)
     player.spin()
     # player.spin_to_base()
 
@@ -35,7 +38,7 @@ def run(player):
     # player.send_cmd(demon_panelgroup)
     pass
 
-
+rtp_150 = "rtpf 150"
 cheat_free = "math:55"
 p_cmd = "panel 11,11,1,1,1,12,12,12,12,12,12,12,12,12,12,2,2,2,2,2,3,3,3,3,3"
 

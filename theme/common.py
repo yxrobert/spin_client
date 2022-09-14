@@ -20,15 +20,14 @@ class DefaultRobot(SpinRobot):
     def play_status_callback(self, packet):
         pass
 
-    # def on_activity(self, packet):
-    #     # self.log(111111)
-    #     # if packet.HasField("Play"):
-    #     #     self.log(packet.Play.data.Bingo)
-    #         # if packet.Play.data.HasField("Bingo"):
-    #         #     d = packet.Play.data.Bingo
-    #         #     self.log(111111)
-    #         #     self.log(p)
-    #     pass
+    def on_act_play(self, packet):
+        pass
+
+    def on_act_userdata(self, packet):
+        msg.log_act_bigo(self, packet)
+
+    def on_act_play(self, packet):
+        msg.log_act_bigo(self, packet)
 
 
 def default_spin_callback(packet):
@@ -55,27 +54,38 @@ def gm_meta(player):
     pass
 
 def run(player):
-    # player.req_novice_save(131)
+    # player.send_cmd(candy_cmd)
     # player.send_cmd(gem_cmd)
-    # player.send_cmd(add_money)
+    player.send_cmd(add_money)
+    # player.send_cmd(xpay)
     # player.send_cmd(free_me)
+    # player.send_cmd(cmd_lj)
     
+    # player.send_cmd(basebet_cmd)
     # player.send_cmd(coin_cmd)
-    # player.send_cmd(level_cmd)
+    player.send_cmd(level_cmd)
+    # player.send_cmd(bingo_bp)
     # player.send_cmd(lv10_cmd)
     gm_meta(player)
 
     # player.send_cmd(dice_cmd)
     # player.send_cmd(candy_cmd)
     # player.send_cmd(bingoball_cmd)
+    player.send_cmd(bingo_pro_cmd)
     # player.send_cmd(gmnow)
     # player.send_cmd(journey_roll)
+    # player.send_cmd(journey)
     
+    # player.req_treasure_get()
     # player.req_activity_list()
-    act_id = 7
-    player.req_activity_user_data(act_id)
-    # for i in range(0, 20):
-    #     player.req_activity_play(act_id)
+
+    # act_id = 50011
+    act_id = 23
+    # player.req_activity_user_data(act_id)
+    times = 1
+    for i in range(0, times):
+        player.req_activity_play(act_id)
+        pass
     # player.req_activity_play(act_id)
 
     # player.send_cmd(dice_cmd)
@@ -92,9 +102,11 @@ def run(player):
     # player.pick(1)
     pass
 
+basebet_cmd="basebet"
 free_me = "freeme"
+xpay = "xpay 10000 1"
 gmnow = "now"
-journey = "journey 0,100"
+journey = "journey 1,100"
 journey_roll = "jroll 50"
 dice_cmd = "add dice 999999"
 candy_cmd = "add candy 999999"
@@ -102,7 +114,10 @@ level_cmd = "add level 100"
 lv10_cmd = "add level 10"
 coin_cmd = "add coin 99999999"
 gem_cmd = "add gem 99999999"
+candy_cmd = "add candy 99999999"
 bingoball_cmd = "add bingoBall 999999"
+bingo_bp = "bgboxpass"
+bingo_pro_cmd = "bgaddp 10000"
 mock_time="st:2022-04-09 14:02:00"
-metaj = "metaj 0,4"
 
+cmd_lj="rpanel 1,1,1,1,1,1,1,1,2,2,2,2,2,2,2,2,3,3,3,3,3,3,3,3,4,4,4,4,4,4,4,4,5,5,5,5,5,5,5,5"

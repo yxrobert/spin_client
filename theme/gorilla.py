@@ -4,22 +4,29 @@
 import msg
 from robot import SpinRobot
 
+gorilla_theme_id = 10080
+# gorilla_theme_id = 10140
+
 class GorillaRobot(SpinRobot):
     def __init__(self, name, theme_id):
-        SpinRobot.__init__(self, name, theme_id)
+        SpinRobot.__init__(self, name, gorilla_theme_id)
 
     def theme_status_callback(self, packet):
         pass
 
     def play_status_callback(self, packet):
-        self.log_spin_wins(packet.Spin)
+        # self.log_spin_wins(packet.Spin)
+        self.log(msg.log_gorilla(packet))
         pass
 
 
 def run(player):
     # player.select_bet(40000)
 
-    player.send_cmd(free)
+    # player.send_cmd(glcoin)
+    # for i in range(0, 9):
+    #     player.game(0, i)
+
     # player.spin_to_next_stage()
     # player.spin()
     # player.pick(0)
@@ -27,12 +34,19 @@ def run(player):
     # player.spin()
     # player.pick(1)
     # player.send_cmd(grorilla_panelgroup)
+    player.send_cmd(multi_panel)
+    player.spin()
+    # player.send_cmd(test_ln)
     pass
 
+test_ln="rpanel 2,2,2,10,10,10,2,2,2,10,10,10,2,2,2,2,2,2,2,2,2,10,10,10,2,2,2,10,10,10"
 free = "gm:cmd:randpanels {*:4-13}_{-|:1}1_5_*_*_1_5_*_*_1_5_*_*_*_5_*_*_*_5_*_*"
 glcoin = "glcoin 99999"
 # grorilla_3sc = "panels 1_5_7_9_9_9_9_9_1_9_9_9_9_9_9_9_1_9_9_9"
 grorilla_panelgroup = "panelgroup 1_5_7_9_9_9_9_9_1_9_9_9_9_9_9_9_1_9_9_9|1_5_7_9_9_9_9_9_1_9_9_9_9_9_9_9_1_9_9_9"
+
+multi_panel = "panelstr [[{\"ss\":[{\"s\":12},{\"s\":2},{\"s\":12},{\"s\":11}]},{\"id\":611,\"ss\":[{\"s\":2},{\"s\":5},{\"s\":8},{\"s\":8}]},{\"ss\":[{\"s\":11},{\"s\":5},{\"s\":5},{\"s\":4}]},{\"ss\":[{\"s\":5},{\"s\":4},{\"s\":10},{\"s\":0,\"w\":2}]},{\"ss\":[{\"s\":10},{\"s\":4},{\"s\":5},{\"s\":7}]}]]"
+
 
 # def run_gm(player):
 #     player.send_cmd(theme.cheat_6)

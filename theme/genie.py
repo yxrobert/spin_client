@@ -19,7 +19,6 @@ class GenieRobot(SpinRobot):
 
 def run(player):
     # player.select_bet(40000)
-
     # player.send_cmd(cheat_12)
     # player.spin_to_next_stage()
 
@@ -29,11 +28,16 @@ def run(player):
     # player.spin()
     # player.pick(0)
 
-    player.spin()
+    # player.spin()
+    # player.spin_times(30)
     # player.spin_to_base()
 
-    # player.pick(1)
+    # player.pick(0)
     # player.send_cmd(demon_panelgroup)
+
+    for i in range(0, 30):
+        player.spin()
+        player.pick(0)
     pass
 
 free_cmd = "gm:2_200|4"

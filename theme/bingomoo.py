@@ -54,7 +54,7 @@ bingomoo_free_cmd = "gm:0_0|2_3_15"
 bingomoo_mega = "eval FeatureProgress_11"
 bingomoo_supper = "eval FeatureProgress_17"
 bm_cmd="gm:cmd:bmf 11:0_0|0_3_15"
-
+coin_cmd = "add coin 9999999999"
 chain = "chain"
 
 def run_mege(player):
@@ -76,15 +76,17 @@ def run_mege(player):
     # player.send_cmd(bingomoo_mega)
     # player.send_cmd(bingomoo_supper)
 
-    player.send_cmd(bm_cmd)
+    # player.send_cmd(bm_cmd)
     # player.spin()
-    # player.spin_to_next_stage()
+    # player.spin_times(20)
+    player.spin_to_next_stage()
 
-    player.spin_to_base()
+    # player.spin_to_base()
     pass
 
 def run(player):
-    # player.select_bet(20000)
+    player.send_cmd(coin_cmd)
+    player.select_bet(60000000)
     player.spin()
     # player.spin_to_next_stage()
     # player.spin_to_base()

@@ -10,6 +10,7 @@ import msg
 from conf import save_user_data, get_user_id, get_token
 
 log_name = "./log/{}.log"
+add_money = "add coin 99999999999"
 
 class RobotBase:
     def __init__(self, name):
@@ -111,11 +112,20 @@ class RobotBase:
         req = make_cardgathering_reset_req(self.player_id, self.token)
         self.send_packet(req)
 
+
+    def req_hero_active(self, id, name):
+        req = make_hero_active_req(self.player_id, self.token, id, name)
+        self.send_packet(req)
+
+    def req_treasure_get(self):
+        req = make_treasure_get_req(self.player_id, self.token)
+        self.send_packet(req)
+
     def on_response(self, packet):
         if packet.Error != None:
             # self.log("--------Got Error--------[" + str(packet.Error) + "]")
             self.process_err(packet.Error)
-            
+
         if packet.HasField("Login"):
             self.on_login(packet)
             return
@@ -129,15 +139,24 @@ class RobotBase:
                 self.on_activity(r.Activity)
             elif r.HasField("CardGathering"):
                 self.on_cardgathering(r.CardGathering)
+            elif packet.HasField("TreasureRoom"):
+                self.on_treasure(packet.TreasureRoom)
                 pass
         
         self.log("Awards", packet.Multi.Awards)
         self.log("ActivityEventDropList", packet.Multi.ActivityEventDropList)
 
-    
+    def check_relogin(self, err_str):
+        print(err_str)
+        return err_str.find("token-match") > 0 or err_str.find("bad-auth") > 0 or err_str.find("time back") > 0 or err_str.find("need login") > 0
+
     def process_err(self, err):
-        if str(err).find("token-match") > 0 or str(err).find("bad-auth") > 0:
+        err_str = str(err)
+        self.log(err_str)
+        if self.check_relogin(err_str):
             self.req_login()
+        elif err_str.find("not-enough") > 0:
+            self.send_cmd(add_money)
 
     def on_login(self, packet):
         login = packet.Login
@@ -156,9 +175,24 @@ class RobotBase:
         pass
 
     def on_activity(self, packet):
+        if packet.HasField("List"):
+            self.log(packet.List)
+        elif packet.HasField("UserData"):
+            self.on_act_userdata(packet.UserData)
+        elif packet.HasField("Play"):
+            self.on_act_play(packet.Play)
+        pass
+
+    def on_act_play(self, packet):
+        self.log(packet)
+
+    def on_act_userdata(self, packet):
         self.log(packet)
 
     def on_cardgathering(self, packet):
+        self.log(packet)
+
+    def on_treasure(self, packet):
         self.log(packet)
 
 
