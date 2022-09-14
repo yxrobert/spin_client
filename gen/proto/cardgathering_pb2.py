@@ -14,6 +14,7 @@ _sym_db = _symbol_database.Default()
 
 import award_pb2 as award__pb2
 import opcode_pb2 as opcode__pb2
+import awarddata_pb2 as awarddata__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
@@ -22,9 +23,9 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'Z\004.;pb',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x13\x63\x61rdgathering.proto\x12\x02pb\x1a\x0b\x61ward.proto\x1a\x0copcode.proto\"\xf9\x10\n\rCardGathering\x1a\'\n\tCardArray\x12\r\n\x05\x45ntry\x18\x01 \x01(\x05\x12\x0b\n\x03Num\x18\x02 \x01(\x05\x1a\x30\n\x08UserData\x12\r\n\x05Score\x18\x01 \x01(\x05\x12\x15\n\rCardBreakTime\x18\x02 \x01(\x03\x1a=\n\x08\x43\x61rdDeck\x12\r\n\x05\x45ntry\x18\x01 \x01(\x05\x12\"\n\x06Status\x18\x02 \x01(\x0e\x32\x12.pb.CardDeckStatus\x1av\n\x08\x43\x61rdData\x12\r\n\x05\x45ntry\x18\x01 \x01(\x05\x12\x0b\n\x03Num\x18\x02 \x01(\x05\x12\x11\n\tStartTime\x18\x03 \x01(\x03\x12\x0f\n\x07\x45ndTime\x18\x04 \x01(\x03\x12\x1b\n\x13RemainExchangeTimes\x18\x05 \x01(\x05\x12\r\n\x05IsNew\x18\x06 \x01(\x08\x1a|\n\x07\x43\x61rdLog\x12\r\n\x05\x45ntry\x18\x01 \x01(\x05\x12\x12\n\nObtainTime\x18\x02 \x01(\x03\x12#\n\x03Src\x18\x03 \x01(\x0e\x32\x16.pb.AwardInfo.AwardSRC\x12)\n\x06SubSrc\x18\x04 \x01(\x0e\x32\x19.pb.AwardInfo.AwardSubSRC\x1a\x42\n\x14\x43\x61rdDeckCollectAward\x12\x0b\n\x03Num\x18\x01 \x01(\x05\x12\x1d\n\x06\x41wards\x18\x02 \x03(\x0b\x32\r.pb.AwardInfo\x1a=\n\rCardDeckAward\x12\r\n\x05\x45ntry\x18\x01 \x01(\x05\x12\x1d\n\x06\x41wards\x18\x02 \x03(\x0b\x32\r.pb.AwardInfo\x1aN\n\x04\x43onf\x12\r\n\x05\x45ntry\x18\x01 \x01(\x05\x12\x11\n\tStartTime\x18\x02 \x01(\x03\x12\x0f\n\x07\x45ndTime\x18\x03 \x01(\x03\x12\x13\n\x0bUnlockLevel\x18\x04 \x01(\x05\x1a\xa2\x02\n\x04\x44\x61ta\x12\x0e\n\x06Season\x18\x01 \x01(\x05\x12,\n\x08UserData\x18\x02 \x01(\x0b\x32\x1a.pb.CardGathering.UserData\x12\x30\n\x0c\x43\x61rdDeckList\x18\x03 \x03(\x0b\x32\x1a.pb.CardGathering.CardDeck\x12,\n\x08\x43\x61rdList\x18\x04 \x03(\x0b\x32\x1a.pb.CardGathering.CardData\x12\x44\n\x14\x43\x61rdDeckCollectAward\x18\x05 \x03(\x0b\x32&.pb.CardGathering.CardDeckCollectAward\x12\x36\n\rCardDeckAward\x18\x06 \x03(\x0b\x32\x1f.pb.CardGathering.CardDeckAward\x1a\xc5\x03\n\x03Req\x12.\n\x08UserData\x18\x01 \x01(\x0b\x32\x1a.pb.CardGathering.Req.DataH\x00\x12\x36\n\x0c\x45xchangeCard\x18\x02 \x01(\x0b\x32\x1e.pb.CardGathering.Req.ExchangeH\x00\x12\x33\n\tBreakCard\x18\x03 \x01(\x0b\x32\x1e.pb.CardGathering.Req.BreakingH\x00\x12\x34\n\rResetBreaking\x18\x04 \x01(\x0b\x32\x1b.pb.CardGathering.Req.ResetH\x00\x12)\n\x04logs\x18\x05 \x01(\x0b\x32\x19.pb.CardGathering.Req.LogH\x00\x1a\x16\n\x04\x44\x61ta\x12\x0e\n\x06Season\x18\x01 \x01(\x05\x1a%\n\x08\x45xchange\x12\x0b\n\x03Src\x18\x01 \x01(\x05\x12\x0c\n\x04\x44\x65st\x18\x02 \x01(\x05\x1aI\n\x08\x42reaking\x12\r\n\x05Level\x18\x01 \x01(\x05\x12.\n\tCostCards\x18\x02 \x03(\x0b\x32\x1b.pb.CardGathering.CardArray\x1a\x15\n\x05Reset\x12\x0c\n\x04Type\x18\x01 \x01(\x05\x1a\x18\n\x03Log\x12\x11\n\tTimestamp\x18\x01 \x01(\x03\x42\x05\n\x03one\x1a\xeb\x05\n\x03Rsp\x12\x1e\n\x08OpResult\x18\x64 \x01(\x0b\x32\x0c.pb.OpResult\x12.\n\x08UserData\x18\x01 \x01(\x0b\x32\x1a.pb.CardGathering.Rsp.DataH\x00\x12\x36\n\x0c\x45xchangeCard\x18\x02 \x01(\x0b\x32\x1e.pb.CardGathering.Rsp.ExchangeH\x00\x12\x33\n\tBreakCard\x18\x03 \x01(\x0b\x32\x1e.pb.CardGathering.Rsp.BreakingH\x00\x12\x34\n\rResetBreaking\x18\x04 \x01(\x0b\x32\x1b.pb.CardGathering.Rsp.ResetH\x00\x12)\n\x04Logs\x18\x05 \x01(\x0b\x32\x19.pb.CardGathering.Rsp.LogH\x00\x1a\x62\n\x04\x44\x61ta\x12\x0e\n\x06Season\x18\x01 \x01(\x05\x12$\n\x04\x44\x61ta\x18\x02 \x01(\x0b\x32\x16.pb.CardGathering.Data\x12$\n\x04\x43onf\x18\x03 \x03(\x0b\x32\x16.pb.CardGathering.Conf\x1aS\n\x08\x45xchange\x12\x0b\n\x03Src\x18\x01 \x01(\x05\x12\x0c\n\x04\x44\x65st\x18\x02 \x01(\x05\x12,\n\x08UserData\x18\x03 \x01(\x0b\x32\x1a.pb.CardGathering.Rsp.Data\x1aw\n\x08\x42reaking\x12\r\n\x05Level\x18\x01 \x01(\x05\x12.\n\tCostCards\x18\x02 \x03(\x0b\x32\x1b.pb.CardGathering.CardArray\x12,\n\x08UserData\x18\x03 \x01(\x0b\x32\x1a.pb.CardGathering.Rsp.Data\x1a\x43\n\x05Reset\x12\x0c\n\x04Type\x18\x01 \x01(\x05\x12,\n\x08UserData\x18\x02 \x01(\x0b\x32\x1a.pb.CardGathering.Rsp.Data\x1aH\n\x03Log\x12\x11\n\tTimestamp\x18\x01 \x01(\x03\x12.\n\x0b\x43\x61rdLogList\x18\x02 \x03(\x0b\x32\x19.pb.CardGathering.CardLogB\x05\n\x03one\"*\n\x08\x43\x61rdType\x12\n\n\x06Normal\x10\x00\x12\x08\n\x04Gold\x10\x01\x12\x08\n\x04Wild\x10\x02*.\n\x0e\x43\x61rdDeckStatus\x12\x0e\n\nUnFinished\x10\x00\x12\x0c\n\x08\x46inished\x10\x01\x42\x06Z\x04.;pbb\x06proto3'
+  serialized_pb=b'\n\x13\x63\x61rdgathering.proto\x12\x02pb\x1a\x0b\x61ward.proto\x1a\x0copcode.proto\x1a\x0f\x61warddata.proto\"\xfd\x0f\n\rCardGathering\x1a\'\n\tCardArray\x12\r\n\x05\x45ntry\x18\x01 \x01(\x05\x12\x0b\n\x03Num\x18\x02 \x01(\x05\x1a\x30\n\x08UserData\x12\r\n\x05Score\x18\x01 \x01(\x05\x12\x15\n\rCardBreakTime\x18\x02 \x01(\x03\x1a=\n\x08\x43\x61rdDeck\x12\r\n\x05\x45ntry\x18\x01 \x01(\x05\x12\"\n\x06Status\x18\x02 \x01(\x0e\x32\x12.pb.CardDeckStatus\x1a|\n\x07\x43\x61rdLog\x12\r\n\x05\x45ntry\x18\x01 \x01(\x05\x12\x12\n\nObtainTime\x18\x02 \x01(\x03\x12#\n\x03Src\x18\x03 \x01(\x0e\x32\x16.pb.AwardInfo.AwardSRC\x12)\n\x06SubSrc\x18\x04 \x01(\x0e\x32\x19.pb.AwardInfo.AwardSubSRC\x1a\x42\n\x14\x43\x61rdDeckCollectAward\x12\x0b\n\x03Num\x18\x01 \x01(\x05\x12\x1d\n\x06\x41wards\x18\x02 \x03(\x0b\x32\r.pb.AwardInfo\x1a=\n\rCardDeckAward\x12\r\n\x05\x45ntry\x18\x01 \x01(\x05\x12\x1d\n\x06\x41wards\x18\x02 \x03(\x0b\x32\r.pb.AwardInfo\x1aN\n\x04\x43onf\x12\r\n\x05\x45ntry\x18\x01 \x01(\x05\x12\x11\n\tStartTime\x18\x02 \x01(\x03\x12\x0f\n\x07\x45ndTime\x18\x03 \x01(\x03\x12\x13\n\x0bUnlockLevel\x18\x04 \x01(\x05\x1a\x9e\x02\n\x04\x44\x61ta\x12\x0e\n\x06Season\x18\x01 \x01(\x05\x12,\n\x08UserData\x18\x02 \x01(\x0b\x32\x1a.pb.CardGathering.UserData\x12\x30\n\x0c\x43\x61rdDeckList\x18\x03 \x03(\x0b\x32\x1a.pb.CardGathering.CardDeck\x12(\n\x08\x43\x61rdList\x18\x04 \x03(\x0b\x32\x16.pb.AwardData.CardData\x12\x44\n\x14\x43\x61rdDeckCollectAward\x18\x05 \x03(\x0b\x32&.pb.CardGathering.CardDeckCollectAward\x12\x36\n\rCardDeckAward\x18\x06 \x03(\x0b\x32\x1f.pb.CardGathering.CardDeckAward\x1a\xc5\x03\n\x03Req\x12.\n\x08UserData\x18\x01 \x01(\x0b\x32\x1a.pb.CardGathering.Req.DataH\x00\x12\x36\n\x0c\x45xchangeCard\x18\x02 \x01(\x0b\x32\x1e.pb.CardGathering.Req.ExchangeH\x00\x12\x33\n\tBreakCard\x18\x03 \x01(\x0b\x32\x1e.pb.CardGathering.Req.BreakingH\x00\x12\x34\n\rResetBreaking\x18\x04 \x01(\x0b\x32\x1b.pb.CardGathering.Req.ResetH\x00\x12)\n\x04logs\x18\x05 \x01(\x0b\x32\x19.pb.CardGathering.Req.LogH\x00\x1a\x16\n\x04\x44\x61ta\x12\x0e\n\x06Season\x18\x01 \x01(\x05\x1a%\n\x08\x45xchange\x12\x0b\n\x03Src\x18\x01 \x01(\x05\x12\x0c\n\x04\x44\x65st\x18\x02 \x01(\x05\x1aI\n\x08\x42reaking\x12\r\n\x05Level\x18\x01 \x01(\x05\x12.\n\tCostCards\x18\x02 \x03(\x0b\x32\x1b.pb.CardGathering.CardArray\x1a\x15\n\x05Reset\x12\x0c\n\x04Type\x18\x01 \x01(\x05\x1a\x18\n\x03Log\x12\x11\n\tTimestamp\x18\x01 \x01(\x03\x42\x05\n\x03one\x1a\xeb\x05\n\x03Rsp\x12\x1e\n\x08OpResult\x18\x64 \x01(\x0b\x32\x0c.pb.OpResult\x12.\n\x08UserData\x18\x01 \x01(\x0b\x32\x1a.pb.CardGathering.Rsp.DataH\x00\x12\x36\n\x0c\x45xchangeCard\x18\x02 \x01(\x0b\x32\x1e.pb.CardGathering.Rsp.ExchangeH\x00\x12\x33\n\tBreakCard\x18\x03 \x01(\x0b\x32\x1e.pb.CardGathering.Rsp.BreakingH\x00\x12\x34\n\rResetBreaking\x18\x04 \x01(\x0b\x32\x1b.pb.CardGathering.Rsp.ResetH\x00\x12)\n\x04Logs\x18\x05 \x01(\x0b\x32\x19.pb.CardGathering.Rsp.LogH\x00\x1a\x62\n\x04\x44\x61ta\x12\x0e\n\x06Season\x18\x01 \x01(\x05\x12$\n\x04\x44\x61ta\x18\x02 \x01(\x0b\x32\x16.pb.CardGathering.Data\x12$\n\x04\x43onf\x18\x03 \x03(\x0b\x32\x16.pb.CardGathering.Conf\x1aS\n\x08\x45xchange\x12\x0b\n\x03Src\x18\x01 \x01(\x05\x12\x0c\n\x04\x44\x65st\x18\x02 \x01(\x05\x12,\n\x08UserData\x18\x03 \x01(\x0b\x32\x1a.pb.CardGathering.Rsp.Data\x1aw\n\x08\x42reaking\x12\r\n\x05Level\x18\x01 \x01(\x05\x12.\n\tCostCards\x18\x02 \x03(\x0b\x32\x1b.pb.CardGathering.CardArray\x12,\n\x08UserData\x18\x03 \x01(\x0b\x32\x1a.pb.CardGathering.Rsp.Data\x1a\x43\n\x05Reset\x12\x0c\n\x04Type\x18\x01 \x01(\x05\x12,\n\x08UserData\x18\x02 \x01(\x0b\x32\x1a.pb.CardGathering.Rsp.Data\x1aH\n\x03Log\x12\x11\n\tTimestamp\x18\x01 \x01(\x03\x12.\n\x0b\x43\x61rdLogList\x18\x02 \x03(\x0b\x32\x19.pb.CardGathering.CardLogB\x05\n\x03one\"*\n\x08\x43\x61rdType\x12\n\n\x06Normal\x10\x00\x12\x08\n\x04Gold\x10\x01\x12\x08\n\x04Wild\x10\x02*.\n\x0e\x43\x61rdDeckStatus\x12\x0e\n\nUnFinished\x10\x00\x12\x0c\n\x08\x46inished\x10\x01\x42\x06Z\x04.;pbb\x06proto3'
   ,
-  dependencies=[award__pb2.DESCRIPTOR,opcode__pb2.DESCRIPTOR,])
+  dependencies=[award__pb2.DESCRIPTOR,opcode__pb2.DESCRIPTOR,awarddata__pb2.DESCRIPTOR,])
 
 _CARDDECKSTATUS = _descriptor.EnumDescriptor(
   name='CardDeckStatus',
@@ -46,8 +47,8 @@ _CARDDECKSTATUS = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=2226,
-  serialized_end=2272,
+  serialized_start=2119,
+  serialized_end=2165,
 )
 _sym_db.RegisterEnumDescriptor(_CARDDECKSTATUS)
 
@@ -81,8 +82,8 @@ _CARDGATHERING_CARDTYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=2182,
-  serialized_end=2224,
+  serialized_start=2075,
+  serialized_end=2117,
 )
 _sym_db.RegisterEnumDescriptor(_CARDGATHERING_CARDTYPE)
 
@@ -121,8 +122,8 @@ _CARDGATHERING_CARDARRAY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=72,
-  serialized_end=111,
+  serialized_start=89,
+  serialized_end=128,
 )
 
 _CARDGATHERING_USERDATA = _descriptor.Descriptor(
@@ -159,8 +160,8 @@ _CARDGATHERING_USERDATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=113,
-  serialized_end=161,
+  serialized_start=130,
+  serialized_end=178,
 )
 
 _CARDGATHERING_CARDDECK = _descriptor.Descriptor(
@@ -197,74 +198,8 @@ _CARDGATHERING_CARDDECK = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=163,
-  serialized_end=224,
-)
-
-_CARDGATHERING_CARDDATA = _descriptor.Descriptor(
-  name='CardData',
-  full_name='pb.CardGathering.CardData',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  create_key=_descriptor._internal_create_key,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='Entry', full_name='pb.CardGathering.CardData.Entry', index=0,
-      number=1, type=5, cpp_type=1, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='Num', full_name='pb.CardGathering.CardData.Num', index=1,
-      number=2, type=5, cpp_type=1, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='StartTime', full_name='pb.CardGathering.CardData.StartTime', index=2,
-      number=3, type=3, cpp_type=2, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='EndTime', full_name='pb.CardGathering.CardData.EndTime', index=3,
-      number=4, type=3, cpp_type=2, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='RemainExchangeTimes', full_name='pb.CardGathering.CardData.RemainExchangeTimes', index=4,
-      number=5, type=5, cpp_type=1, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='IsNew', full_name='pb.CardGathering.CardData.IsNew', index=5,
-      number=6, type=8, cpp_type=7, label=1,
-      has_default_value=False, default_value=False,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=226,
-  serialized_end=344,
+  serialized_start=180,
+  serialized_end=241,
 )
 
 _CARDGATHERING_CARDLOG = _descriptor.Descriptor(
@@ -315,8 +250,8 @@ _CARDGATHERING_CARDLOG = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=346,
-  serialized_end=470,
+  serialized_start=243,
+  serialized_end=367,
 )
 
 _CARDGATHERING_CARDDECKCOLLECTAWARD = _descriptor.Descriptor(
@@ -353,8 +288,8 @@ _CARDGATHERING_CARDDECKCOLLECTAWARD = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=472,
-  serialized_end=538,
+  serialized_start=369,
+  serialized_end=435,
 )
 
 _CARDGATHERING_CARDDECKAWARD = _descriptor.Descriptor(
@@ -391,8 +326,8 @@ _CARDGATHERING_CARDDECKAWARD = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=540,
-  serialized_end=601,
+  serialized_start=437,
+  serialized_end=498,
 )
 
 _CARDGATHERING_CONF = _descriptor.Descriptor(
@@ -443,8 +378,8 @@ _CARDGATHERING_CONF = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=603,
-  serialized_end=681,
+  serialized_start=500,
+  serialized_end=578,
 )
 
 _CARDGATHERING_DATA = _descriptor.Descriptor(
@@ -509,8 +444,8 @@ _CARDGATHERING_DATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=684,
-  serialized_end=974,
+  serialized_start=581,
+  serialized_end=867,
 )
 
 _CARDGATHERING_REQ_DATA = _descriptor.Descriptor(
@@ -540,8 +475,8 @@ _CARDGATHERING_REQ_DATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=684,
-  serialized_end=706,
+  serialized_start=581,
+  serialized_end=603,
 )
 
 _CARDGATHERING_REQ_EXCHANGE = _descriptor.Descriptor(
@@ -578,8 +513,8 @@ _CARDGATHERING_REQ_EXCHANGE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1262,
-  serialized_end=1299,
+  serialized_start=1155,
+  serialized_end=1192,
 )
 
 _CARDGATHERING_REQ_BREAKING = _descriptor.Descriptor(
@@ -616,8 +551,8 @@ _CARDGATHERING_REQ_BREAKING = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1301,
-  serialized_end=1374,
+  serialized_start=1194,
+  serialized_end=1267,
 )
 
 _CARDGATHERING_REQ_RESET = _descriptor.Descriptor(
@@ -647,8 +582,8 @@ _CARDGATHERING_REQ_RESET = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1376,
-  serialized_end=1397,
+  serialized_start=1269,
+  serialized_end=1290,
 )
 
 _CARDGATHERING_REQ_LOG = _descriptor.Descriptor(
@@ -678,8 +613,8 @@ _CARDGATHERING_REQ_LOG = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1399,
-  serialized_end=1423,
+  serialized_start=1292,
+  serialized_end=1316,
 )
 
 _CARDGATHERING_REQ = _descriptor.Descriptor(
@@ -742,8 +677,8 @@ _CARDGATHERING_REQ = _descriptor.Descriptor(
       create_key=_descriptor._internal_create_key,
     fields=[]),
   ],
-  serialized_start=977,
-  serialized_end=1430,
+  serialized_start=870,
+  serialized_end=1323,
 )
 
 _CARDGATHERING_RSP_DATA = _descriptor.Descriptor(
@@ -787,8 +722,8 @@ _CARDGATHERING_RSP_DATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1726,
-  serialized_end=1824,
+  serialized_start=1619,
+  serialized_end=1717,
 )
 
 _CARDGATHERING_RSP_EXCHANGE = _descriptor.Descriptor(
@@ -832,8 +767,8 @@ _CARDGATHERING_RSP_EXCHANGE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1826,
-  serialized_end=1909,
+  serialized_start=1719,
+  serialized_end=1802,
 )
 
 _CARDGATHERING_RSP_BREAKING = _descriptor.Descriptor(
@@ -877,8 +812,8 @@ _CARDGATHERING_RSP_BREAKING = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1911,
-  serialized_end=2030,
+  serialized_start=1804,
+  serialized_end=1923,
 )
 
 _CARDGATHERING_RSP_RESET = _descriptor.Descriptor(
@@ -915,8 +850,8 @@ _CARDGATHERING_RSP_RESET = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2032,
-  serialized_end=2099,
+  serialized_start=1925,
+  serialized_end=1992,
 )
 
 _CARDGATHERING_RSP_LOG = _descriptor.Descriptor(
@@ -953,8 +888,8 @@ _CARDGATHERING_RSP_LOG = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2101,
-  serialized_end=2173,
+  serialized_start=1994,
+  serialized_end=2066,
 )
 
 _CARDGATHERING_RSP = _descriptor.Descriptor(
@@ -1024,8 +959,8 @@ _CARDGATHERING_RSP = _descriptor.Descriptor(
       create_key=_descriptor._internal_create_key,
     fields=[]),
   ],
-  serialized_start=1433,
-  serialized_end=2180,
+  serialized_start=1326,
+  serialized_end=2073,
 )
 
 _CARDGATHERING = _descriptor.Descriptor(
@@ -1039,7 +974,7 @@ _CARDGATHERING = _descriptor.Descriptor(
   ],
   extensions=[
   ],
-  nested_types=[_CARDGATHERING_CARDARRAY, _CARDGATHERING_USERDATA, _CARDGATHERING_CARDDECK, _CARDGATHERING_CARDDATA, _CARDGATHERING_CARDLOG, _CARDGATHERING_CARDDECKCOLLECTAWARD, _CARDGATHERING_CARDDECKAWARD, _CARDGATHERING_CONF, _CARDGATHERING_DATA, _CARDGATHERING_REQ, _CARDGATHERING_RSP, ],
+  nested_types=[_CARDGATHERING_CARDARRAY, _CARDGATHERING_USERDATA, _CARDGATHERING_CARDDECK, _CARDGATHERING_CARDLOG, _CARDGATHERING_CARDDECKCOLLECTAWARD, _CARDGATHERING_CARDDECKAWARD, _CARDGATHERING_CONF, _CARDGATHERING_DATA, _CARDGATHERING_REQ, _CARDGATHERING_RSP, ],
   enum_types=[
     _CARDGATHERING_CARDTYPE,
   ],
@@ -1049,15 +984,14 @@ _CARDGATHERING = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=55,
-  serialized_end=2224,
+  serialized_start=72,
+  serialized_end=2117,
 )
 
 _CARDGATHERING_CARDARRAY.containing_type = _CARDGATHERING
 _CARDGATHERING_USERDATA.containing_type = _CARDGATHERING
 _CARDGATHERING_CARDDECK.fields_by_name['Status'].enum_type = _CARDDECKSTATUS
 _CARDGATHERING_CARDDECK.containing_type = _CARDGATHERING
-_CARDGATHERING_CARDDATA.containing_type = _CARDGATHERING
 _CARDGATHERING_CARDLOG.fields_by_name['Src'].enum_type = award__pb2._AWARDINFO_AWARDSRC
 _CARDGATHERING_CARDLOG.fields_by_name['SubSrc'].enum_type = award__pb2._AWARDINFO_AWARDSUBSRC
 _CARDGATHERING_CARDLOG.containing_type = _CARDGATHERING
@@ -1068,7 +1002,7 @@ _CARDGATHERING_CARDDECKAWARD.containing_type = _CARDGATHERING
 _CARDGATHERING_CONF.containing_type = _CARDGATHERING
 _CARDGATHERING_DATA.fields_by_name['UserData'].message_type = _CARDGATHERING_USERDATA
 _CARDGATHERING_DATA.fields_by_name['CardDeckList'].message_type = _CARDGATHERING_CARDDECK
-_CARDGATHERING_DATA.fields_by_name['CardList'].message_type = _CARDGATHERING_CARDDATA
+_CARDGATHERING_DATA.fields_by_name['CardList'].message_type = awarddata__pb2._AWARDDATA_CARDDATA
 _CARDGATHERING_DATA.fields_by_name['CardDeckCollectAward'].message_type = _CARDGATHERING_CARDDECKCOLLECTAWARD
 _CARDGATHERING_DATA.fields_by_name['CardDeckAward'].message_type = _CARDGATHERING_CARDDECKAWARD
 _CARDGATHERING_DATA.containing_type = _CARDGATHERING
@@ -1158,13 +1092,6 @@ CardGathering = _reflection.GeneratedProtocolMessageType('CardGathering', (_mess
     'DESCRIPTOR' : _CARDGATHERING_CARDDECK,
     '__module__' : 'cardgathering_pb2'
     # @@protoc_insertion_point(class_scope:pb.CardGathering.CardDeck)
-    })
-  ,
-
-  'CardData' : _reflection.GeneratedProtocolMessageType('CardData', (_message.Message,), {
-    'DESCRIPTOR' : _CARDGATHERING_CARDDATA,
-    '__module__' : 'cardgathering_pb2'
-    # @@protoc_insertion_point(class_scope:pb.CardGathering.CardData)
     })
   ,
 
@@ -1294,7 +1221,6 @@ _sym_db.RegisterMessage(CardGathering)
 _sym_db.RegisterMessage(CardGathering.CardArray)
 _sym_db.RegisterMessage(CardGathering.UserData)
 _sym_db.RegisterMessage(CardGathering.CardDeck)
-_sym_db.RegisterMessage(CardGathering.CardData)
 _sym_db.RegisterMessage(CardGathering.CardLog)
 _sym_db.RegisterMessage(CardGathering.CardDeckCollectAward)
 _sym_db.RegisterMessage(CardGathering.CardDeckAward)
