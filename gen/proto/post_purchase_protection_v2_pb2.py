@@ -19,7 +19,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'Z\004.;pb',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n!post_purchase_protection_v2.proto\x12\x02pb\"\xcb\x08\n\x15PostPurchaseProtectV2\x12,\n\x04life\x18\x01 \x01(\x0b\x32\x1e.pb.PostPurchaseProtectV2.Life\x12\x34\n\x08snapshot\x18\x02 \x01(\x0b\x32\".pb.PostPurchaseProtectV2.Snapshot\x12*\n\x03hot\x18\x03 \x01(\x0b\x32\x1d.pb.PostPurchaseProtectV2.Hot\x12,\n\x04warm\x18\x04 \x01(\x0b\x32\x1e.pb.PostPurchaseProtectV2.Warm\x12\x30\n\x06shared\x18\x05 \x01(\x0b\x32 .pb.PostPurchaseProtectV2.Shared\x1ar\n\x04Life\x12\x33\n\x05stage\x18\x01 \x01(\x0e\x32$.pb.PostPurchaseProtectV2.Life.Stage\"5\n\x05Stage\x12\x0f\n\x0bUNSPECIFIED\x10\x00\x12\x07\n\x03HOT\x10\x01\x12\x08\n\x04WARM\x10\x02\x12\x08\n\x04\x43OLD\x10\x03\x1a\x19\n\x08Snapshot\x12\r\n\x05\x63oins\x18\x01 \x01(\x04\x1a\xd3\x02\n\x03Hot\x12\x30\n\x04step\x18\x01 \x01(\x0b\x32\".pb.PostPurchaseProtectV2.Hot.Step\x12\x32\n\x05\x64\x65lta\x18\x02 \x01(\x0b\x32#.pb.PostPurchaseProtectV2.Hot.Delta\x12\x34\n\x06safety\x18\x03 \x01(\x0b\x32$.pb.PostPurchaseProtectV2.Hot.Safety\x12\x32\n\x05\x63heat\x18\x04 \x01(\x0b\x32#.pb.PostPurchaseProtectV2.Hot.Cheat\x1a\x35\n\x05\x44\x65lta\x12\x0e\n\x06\x65xpect\x18\x01 \x01(\x04\x12\x0c\n\x04real\x18\x02 \x01(\x03\x12\x0e\n\x06target\x18\x03 \x01(\x04\x1a\x16\n\x06Safety\x12\x0c\n\x04step\x18\x01 \x01(\r\x1a\x15\n\x05\x43heat\x12\x0c\n\x04step\x18\x01 \x01(\r\x1a\x16\n\x04Step\x12\x0e\n\x06passed\x18\x01 \x01(\r\x1a\xfc\x01\n\x04Warm\x12\x31\n\x04step\x18\x01 \x01(\x0b\x32#.pb.PostPurchaseProtectV2.Warm.Step\x12\x33\n\x05\x64\x65lta\x18\x02 \x01(\x0b\x32$.pb.PostPurchaseProtectV2.Warm.Delta\x12\x35\n\x06safety\x18\x03 \x01(\x0b\x32%.pb.PostPurchaseProtectV2.Warm.Safety\x1a\x15\n\x05\x44\x65lta\x12\x0c\n\x04real\x18\x02 \x01(\x03\x1a\x15\n\x06Safety\x12\x0b\n\x03red\x18\x01 \x01(\x04\x1a\'\n\x04Step\x12\x0f\n\x07granted\x18\x01 \x01(\r\x12\x0e\n\x06passed\x18\x02 \x01(\r\x1a^\n\x06Shared\x12\x39\n\x06safety\x18\x01 \x01(\x0b\x32).pb.PostPurchaseProtectV2.Shared.Selected\x1a\x19\n\x08Selected\x12\r\n\x05\x63heat\x18\x01 \x01(\x05\x42\x06Z\x04.;pbb\x06proto3'
+  serialized_pb=b'\n!post_purchase_protection_v2.proto\x12\x02pb\"\xd9\x08\n\x15PostPurchaseProtectV2\x12,\n\x04life\x18\x01 \x01(\x0b\x32\x1e.pb.PostPurchaseProtectV2.Life\x12\x34\n\x08snapshot\x18\x02 \x01(\x0b\x32\".pb.PostPurchaseProtectV2.Snapshot\x12*\n\x03hot\x18\x03 \x01(\x0b\x32\x1d.pb.PostPurchaseProtectV2.Hot\x12,\n\x04warm\x18\x04 \x01(\x0b\x32\x1e.pb.PostPurchaseProtectV2.Warm\x12\x30\n\x06shared\x18\x05 \x01(\x0b\x32 .pb.PostPurchaseProtectV2.Shared\x1ar\n\x04Life\x12\x33\n\x05stage\x18\x01 \x01(\x0e\x32$.pb.PostPurchaseProtectV2.Life.Stage\"5\n\x05Stage\x12\x0f\n\x0bUNSPECIFIED\x10\x00\x12\x07\n\x03HOT\x10\x01\x12\x08\n\x04WARM\x10\x02\x12\x08\n\x04\x43OLD\x10\x03\x1a\x19\n\x08Snapshot\x12\r\n\x05\x63oins\x18\x01 \x01(\x04\x1a\xd3\x02\n\x03Hot\x12\x30\n\x04step\x18\x01 \x01(\x0b\x32\".pb.PostPurchaseProtectV2.Hot.Step\x12\x32\n\x05\x64\x65lta\x18\x02 \x01(\x0b\x32#.pb.PostPurchaseProtectV2.Hot.Delta\x12\x34\n\x06safety\x18\x03 \x01(\x0b\x32$.pb.PostPurchaseProtectV2.Hot.Safety\x12\x32\n\x05\x63heat\x18\x04 \x01(\x0b\x32#.pb.PostPurchaseProtectV2.Hot.Cheat\x1a\x35\n\x05\x44\x65lta\x12\x0e\n\x06\x65xpect\x18\x01 \x01(\x04\x12\x0c\n\x04real\x18\x02 \x01(\x03\x12\x0e\n\x06target\x18\x03 \x01(\x04\x1a\x16\n\x06Safety\x12\x0c\n\x04step\x18\x01 \x01(\r\x1a\x15\n\x05\x43heat\x12\x0c\n\x04step\x18\x01 \x01(\r\x1a\x16\n\x04Step\x12\x0e\n\x06passed\x18\x01 \x01(\r\x1a\x8a\x02\n\x04Warm\x12\x31\n\x04step\x18\x01 \x01(\x0b\x32#.pb.PostPurchaseProtectV2.Warm.Step\x12\x33\n\x05\x64\x65lta\x18\x02 \x01(\x0b\x32$.pb.PostPurchaseProtectV2.Warm.Delta\x12\x35\n\x06safety\x18\x03 \x01(\x0b\x32%.pb.PostPurchaseProtectV2.Warm.Safety\x1a\x15\n\x05\x44\x65lta\x12\x0c\n\x04real\x18\x02 \x01(\x03\x1a#\n\x06Safety\x12\x0b\n\x03red\x18\x01 \x01(\x04\x12\x0c\n\x04step\x18\x02 \x01(\r\x1a\'\n\x04Step\x12\x0f\n\x07granted\x18\x01 \x01(\r\x12\x0e\n\x06passed\x18\x02 \x01(\r\x1a^\n\x06Shared\x12\x39\n\x06safety\x18\x01 \x01(\x0b\x32).pb.PostPurchaseProtectV2.Shared.Selected\x1a\x19\n\x08Selected\x12\r\n\x05\x63heat\x18\x01 \x01(\x05\x42\x06Z\x04.;pbb\x06proto3'
 )
 
 
@@ -359,6 +359,13 @@ _POSTPURCHASEPROTECTV2_WARM_SAFETY = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='step', full_name='pb.PostPurchaseProtectV2.Warm.Safety.step', index=1,
+      number=2, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -372,7 +379,7 @@ _POSTPURCHASEPROTECTV2_WARM_SAFETY = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=983,
-  serialized_end=1004,
+  serialized_end=1018,
 )
 
 _POSTPURCHASEPROTECTV2_WARM_STEP = _descriptor.Descriptor(
@@ -409,8 +416,8 @@ _POSTPURCHASEPROTECTV2_WARM_STEP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1006,
-  serialized_end=1045,
+  serialized_start=1020,
+  serialized_end=1059,
 )
 
 _POSTPURCHASEPROTECTV2_WARM = _descriptor.Descriptor(
@@ -455,7 +462,7 @@ _POSTPURCHASEPROTECTV2_WARM = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=793,
-  serialized_end=1045,
+  serialized_end=1059,
 )
 
 _POSTPURCHASEPROTECTV2_SHARED_SELECTED = _descriptor.Descriptor(
@@ -485,8 +492,8 @@ _POSTPURCHASEPROTECTV2_SHARED_SELECTED = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1116,
-  serialized_end=1141,
+  serialized_start=1130,
+  serialized_end=1155,
 )
 
 _POSTPURCHASEPROTECTV2_SHARED = _descriptor.Descriptor(
@@ -516,8 +523,8 @@ _POSTPURCHASEPROTECTV2_SHARED = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1047,
-  serialized_end=1141,
+  serialized_start=1061,
+  serialized_end=1155,
 )
 
 _POSTPURCHASEPROTECTV2 = _descriptor.Descriptor(
@@ -576,7 +583,7 @@ _POSTPURCHASEPROTECTV2 = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=42,
-  serialized_end=1141,
+  serialized_end=1155,
 )
 
 _POSTPURCHASEPROTECTV2_LIFE.fields_by_name['stage'].enum_type = _POSTPURCHASEPROTECTV2_LIFE_STAGE

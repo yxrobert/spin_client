@@ -67,8 +67,8 @@ def run(player):
     # player.req_treasure_get()
     # player.req_activity_list()
 
-    act_id = 50011
-    # act_id = 23
+    # act_id = 50011
+    act_id = 23
     # player.req_activity_user_data(act_id)
     times = 1
     for i in range(0, times):
