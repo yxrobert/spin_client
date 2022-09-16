@@ -5,7 +5,7 @@ import msg
 from robot import SpinRobot
 from common import *
 
-demon_theme_id = 10090
+demon_theme_id = 10250
 
 class TrainRobot(SpinRobot):
     def __init__(self, name, theme_id):
@@ -32,7 +32,7 @@ def run(player):
     # player.send_cmd("add level 11")
     # player.send_cmd("bgdrop 4")
 
-    player.spin_times(11)
+    player.spin_times(1)
     # player.spin_to_base()
     # player.spin_to_next_stage()
 

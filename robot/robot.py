@@ -112,6 +112,9 @@ class RobotBase:
         req = make_cardgathering_reset_req(self.player_id, self.token)
         self.send_packet(req)
 
+    def req_cardgathering_gameaward(self):
+        req = make_cardgathering_gameaward_req(self.player_id, self.token)
+        self.send_packet(req)
 
     def req_hero_active(self, id, name):
         req = make_hero_active_req(self.player_id, self.token, id, name)

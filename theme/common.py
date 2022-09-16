@@ -71,7 +71,7 @@ def run(player):
     # player.send_cmd(dice_cmd)
     # player.send_cmd(candy_cmd)
     # player.send_cmd(bingoball_cmd)
-    player.send_cmd(bingo_pro_cmd)
+    # player.send_cmd(bingo_pro_cmd)
     # player.send_cmd(gmnow)
     # player.send_cmd(journey_roll)
     # player.send_cmd(journey)
@@ -81,7 +81,7 @@ def run(player):
 
     # act_id = 50011
     act_id = 23
-    # player.req_activity_user_data(act_id)
+    player.req_activity_user_data(act_id)
     times = 1
     for i in range(0, times):
         player.req_activity_play(act_id)

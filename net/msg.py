@@ -185,6 +185,12 @@ def make_cardgathering_reset_req(player_id, token):
     request.CardGathering.ResetBreaking.Type = 0
     return req
 
+def make_cardgathering_gameaward_req(player_id, token):
+    req, request = make_multi_req(player_id, token)
+    request.CardGathering.GameAwards.Type = 0
+    return req
+
+
 
 
 def main():
