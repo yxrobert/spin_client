@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'Z\004.;pb',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x0bpiggy.proto\x12\x02pb\x1a\nshop.proto\"\x82\x05\n\x05Piggy\x1a|\n\x08PiggyReq\x12!\n\x04Info\x18\x01 \x01(\x0b\x32\x11.pb.Piggy.InfoReqH\x00\x12#\n\x05\x41ward\x18\x02 \x01(\x0b\x32\x12.pb.Piggy.AwardReqH\x00\x12!\n\x04List\x18\x03 \x01(\x0b\x32\x11.pb.Piggy.ListReqH\x00\x42\x05\n\x03one\x1a|\n\x08PiggyRsp\x12!\n\x04Info\x18\x01 \x01(\x0b\x32\x11.pb.Piggy.InfoRspH\x00\x12#\n\x05\x41ward\x18\x02 \x01(\x0b\x32\x12.pb.Piggy.AwardRspH\x00\x12!\n\x04List\x18\x03 \x01(\x0b\x32\x11.pb.Piggy.ListRspH\x00\x42\x05\n\x03one\x1a\t\n\x07InfoReq\x1a)\n\x07InfoRsp\x12\x0e\n\x06IsFull\x18\x01 \x01(\x08\x12\x0e\n\x06IsLock\x18\x02 \x01(\x08\x1a\n\n\x08\x41wardReq\x1a(\n\x08\x41wardRsp\x12\x1c\n\x05Piggy\x18\x01 \x01(\x0b\x32\r.pb.Piggy.Rsp\x1a\t\n\x07ListReq\x1a\'\n\x07ListRsp\x12\x1c\n\x05Piggy\x18\x01 \x01(\x0b\x32\r.pb.Piggy.Rsp\x1at\n\x03Rsp\x12\x0e\n\x06IsFull\x18\x01 \x01(\x08\x12\x11\n\tcoinAward\x18\x02 \x01(\x04\x12\x10\n\x08payCount\x18\x03 \x01(\r\x12\x11\n\tproductId\x18\x04 \x01(\t\x12%\n\tRoyalSeal\x18\x05 \x01(\x0b\x32\x12.pb.Shop.RoyalSeal\x1ag\n\x07Updated\x12\x0e\n\x06IsFull\x18\x01 \x01(\x05\x12\x11\n\tFirstFull\x18\x02 \x01(\x08\x12\x10\n\x08\x43urrFull\x18\x03 \x01(\x08\x12\n\n\x02\x43V\x18\x04 \x01(\x04\x12\n\n\x02TV\x18\x05 \x01(\x04\x12\x0f\n\x07ShowPay\x18\x06 \x01(\rB\x06Z\x04.;pbb\x06proto3'
+  serialized_pb=b'\n\x0bpiggy.proto\x12\x02pb\x1a\nshop.proto\"\xac\x05\n\x05Piggy\x1a|\n\x08PiggyReq\x12!\n\x04Info\x18\x01 \x01(\x0b\x32\x11.pb.Piggy.InfoReqH\x00\x12#\n\x05\x41ward\x18\x02 \x01(\x0b\x32\x12.pb.Piggy.AwardReqH\x00\x12!\n\x04List\x18\x03 \x01(\x0b\x32\x11.pb.Piggy.ListReqH\x00\x42\x05\n\x03one\x1a|\n\x08PiggyRsp\x12!\n\x04Info\x18\x01 \x01(\x0b\x32\x11.pb.Piggy.InfoRspH\x00\x12#\n\x05\x41ward\x18\x02 \x01(\x0b\x32\x12.pb.Piggy.AwardRspH\x00\x12!\n\x04List\x18\x03 \x01(\x0b\x32\x11.pb.Piggy.ListRspH\x00\x42\x05\n\x03one\x1a\t\n\x07InfoReq\x1a)\n\x07InfoRsp\x12\x0e\n\x06IsFull\x18\x01 \x01(\x08\x12\x0e\n\x06IsLock\x18\x02 \x01(\x08\x1a\n\n\x08\x41wardReq\x1a(\n\x08\x41wardRsp\x12\x1c\n\x05Piggy\x18\x01 \x01(\x0b\x32\r.pb.Piggy.Rsp\x1a\t\n\x07ListReq\x1a\'\n\x07ListRsp\x12\x1c\n\x05Piggy\x18\x01 \x01(\x0b\x32\r.pb.Piggy.Rsp\x1a\x9d\x01\n\x03Rsp\x12\x0e\n\x06IsFull\x18\x01 \x01(\x08\x12\x11\n\tcoinAward\x18\x02 \x01(\x04\x12\x10\n\x08payCount\x18\x03 \x01(\r\x12\x11\n\tproductId\x18\x04 \x01(\t\x12%\n\tRoyalSeal\x18\x05 \x01(\x0b\x32\x12.pb.Shop.RoyalSeal\x12\x14\n\x0c\x66reeConponID\x18\x07 \x01(\x03\x12\x11\n\tconponBuf\x18\x08 \x01(\x01\x1ag\n\x07Updated\x12\x0e\n\x06IsFull\x18\x01 \x01(\x05\x12\x11\n\tFirstFull\x18\x02 \x01(\x08\x12\x10\n\x08\x43urrFull\x18\x03 \x01(\x08\x12\n\n\x02\x43V\x18\x04 \x01(\x04\x12\n\n\x02TV\x18\x05 \x01(\x04\x12\x0f\n\x07ShowPay\x18\x06 \x01(\rB\x06Z\x04.;pbb\x06proto3'
   ,
   dependencies=[shop__pb2.DESCRIPTOR,])
 
@@ -342,6 +342,20 @@ _PIGGY_RSP = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='freeConponID', full_name='pb.Piggy.Rsp.freeConponID', index=5,
+      number=7, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='conponBuf', full_name='pb.Piggy.Rsp.conponBuf', index=6,
+      number=8, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -354,8 +368,8 @@ _PIGGY_RSP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=453,
-  serialized_end=569,
+  serialized_start=454,
+  serialized_end=611,
 )
 
 _PIGGY_UPDATED = _descriptor.Descriptor(
@@ -420,8 +434,8 @@ _PIGGY_UPDATED = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=571,
-  serialized_end=674,
+  serialized_start=613,
+  serialized_end=716,
 )
 
 _PIGGY = _descriptor.Descriptor(
@@ -445,7 +459,7 @@ _PIGGY = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=32,
-  serialized_end=674,
+  serialized_end=716,
 )
 
 _PIGGY_PIGGYREQ.fields_by_name['Info'].message_type = _PIGGY_INFOREQ

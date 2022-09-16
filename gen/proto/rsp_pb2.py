@@ -24,6 +24,7 @@ import rsp_error_pb2 as rsp__error__pb2
 import shop_pb2 as shop__pb2
 import slots_pb2 as slots__pb2
 import slots_jackpot_pb2 as slots__jackpot__pb2
+import slots_puzzle_pb2 as slots__puzzle__pb2
 import slots_theme_pb2 as slots__theme__pb2
 import tourney_pb2 as tourney__pb2
 import version_pb2 as version__pb2
@@ -42,6 +43,7 @@ import activity_pb2 as activity__pb2
 import lobbyluckyseven_pb2 as lobbyluckyseven__pb2
 import royalpass_pb2 as royalpass__pb2
 import chase_pb2 as chase__pb2
+import conpon_pb2 as conpon__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
@@ -50,9 +52,9 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'Z\004.;pb',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\trsp.proto\x12\x02pb\x1a\x12\x61uthenticate.proto\x1a\x0b\x61ward.proto\x1a\x0b\x62onus.proto\x1a\nbuff.proto\x1a\x12login_reward.proto\x1a\rmailbox.proto\x1a\rmission.proto\x1a\x0cplayer.proto\x1a\x11post_office.proto\x1a\x0frsp_error.proto\x1a\nshop.proto\x1a\x0bslots.proto\x1a\x13slots_jackpot.proto\x1a\x11slots_theme.proto\x1a\rtourney.proto\x1a\rversion.proto\x1a\x0bquest.proto\x1a\x10lobbywheel.proto\x1a\x10\x64\x61ilybonus.proto\x1a\tvip.proto\x1a\x12\x64\x61ilymission.proto\x1a\x15lobbyluckypoker.proto\x1a\x11noviceguide.proto\x1a\nhero.proto\x1a\rlevelup.proto\x1a\x08\x66\x62.proto\x1a\x0bpiggy.proto\x1a\x0e\x61\x63tivity.proto\x1a\x15lobbyluckyseven.proto\x1a\x0froyalpass.proto\x1a\x0b\x63hase.proto\"\xbb\x02\n\rBunchResponse\x12\x1b\n\x05\x45rror\x18\x01 \x01(\x0b\x32\x0c.pb.RspError\x12\x1d\n\x05Login\x18\x02 \x01(\x0b\x32\x0c.pb.RespAuthH\x00\x12\x1f\n\x06Public\x18\x03 \x01(\x0b\x32\r.pb.RspPublicH\x00\x12\x1d\n\x05Multi\x18\x05 \x01(\x0b\x32\x0c.pb.RspMultiH\x00\x12\x15\n\x0cMidnightZero\x18\xe8\x07 \x01(\x03\x12\x13\n\nServerTime\x18\xe9\x07 \x01(\x03\x12\x13\n\nPlayerTime\x18\xea\x07 \x01(\x03\x12\x18\n\x0fServerLocalTime\x18\xf3\x07 \x01(\t\x12\x18\n\x0fPlayerLocalTime\x18\xf4\x07 \x01(\t\x12\x1a\n\x11MidnightLocalTime\x18\xf5\x07 \x01(\t\x12\x16\n\rServerUTCZone\x18\xf7\x07 \x01(\x05\x42\x05\n\x03one\"\x86\n\n\x08Response\x12\x0c\n\x04Step\x18\x01 \x01(\r\x12\x11\n\tRequestID\x18\x02 \x01(\r\x12 \n\x06Player\x18\xf0. \x01(\x0b\x32\r.pb.RspPlayerH\x00\x12!\n\x04Play\x18\xb8\x17 \x01(\x0b\x32\x10.pb.PlayResponseH\x00\x12/\n\x07Jackpot\x18\xb9\x17 \x01(\x0b\x32\x1b.pb.JackpotSyncing.ResponseH\x00\x12#\n\tThemeList\x18\xd0\x0f \x01(\x0b\x32\r.pb.ThemeListH\x00\x12\'\n\x0bThemeStatus\x18\xa0\x1f \x01(\x0b\x32\x0f.pb.ThemeStatusH\x00\x12)\n\x0cThemeRestore\x18\xa2\x1f \x01(\x0b\x32\x10.pb.ThemeRestoreH\x00\x12\'\n\x0bLastSpinRsp\x18\xa1\x1f \x01(\x0b\x32\x0f.pb.LastSpinRspH\x00\x12#\n\x07Tourney\x18\xa8\x46 \x01(\x0b\x32\x0f.pb.RespTourneyH\x00\x12\x1e\n\x05\x42onus\x18\x90N \x01(\x0b\x32\x0c.pb.RspBonusH\x00\x12*\n\x0bLoginReward\x18\x91N \x01(\x0b\x32\x12.pb.RspLoginRewardH\x00\x12#\n\x07HoneyDo\x18\xf8U \x01(\x0b\x32\x0f.pb.HoneyDo.RspH\x00\x12$\n\x07Mailbox\x18\xe0] \x01(\x0b\x32\x10.pb.Mailbox.RespH\x00\x12\x1e\n\x04Shop\x18\xc8\x65 \x01(\x0b\x32\r.pb.Shop.RespH\x00\x12\x1e\n\x04\x42uff\x18\xb0m \x01(\x0b\x32\r.pb.Buff.RespH\x00\x12*\n\nPostOffice\x18\x80} \x01(\x0b\x32\x13.pb.PostOffice.RespH\x00\x12!\n\x05Quest\x18\xe8\x84\x01 \x01(\x0b\x32\x0e.pb.Quests.RspH\x00\x12+\n\x0bNoviceGuide\x18\xcc\x85\x01 \x01(\x0b\x32\x12.pb.NoviceGuideRspH\x00\x12\x36\n\x12NoviceGuideSaveRsp\x18\xcd\x85\x01 \x01(\x0b\x32\x16.pb.NoviceGuideSaveRspH\x00\x12&\n\x08\x41\x63tivity\x18\xd6\x85\x01 \x01(\x0b\x32\x10.pb.Activity.RspH\x00\x12)\n\nLobbyWheel\x18\xd0\x8c\x01 \x01(\x0b\x32\x11.pb.LobbyWheelRspH\x00\x12*\n\nDailyBonus\x18\xd1\x8c\x01 \x01(\x0b\x32\x12.pb.DailyBonus.RspH\x00\x12\x1f\n\x03Vip\x18\xd2\x8c\x01 \x01(\x0b\x32\x0e.pb.Vip.VipRspH\x00\x12.\n\x0c\x44\x61ilyMission\x18\xd3\x8c\x01 \x01(\x0b\x32\x14.pb.DailyMission.RspH\x00\x12*\n\nLobbyPoker\x18\xd4\x8c\x01 \x01(\x0b\x32\x12.pb.LobbyPoker.RspH\x00\x12\x1e\n\x04Hero\x18\xd5\x8c\x01 \x01(\x0b\x32\x0c.pb.Hero.RspH\x00\x12\x1c\n\x02\x46\x42\x18\xd6\x8c\x01 \x01(\x0b\x32\x0c.pb.FB.FBRspH\x00\x12%\n\x05Piggy\x18\xd7\x8c\x01 \x01(\x0b\x32\x12.pb.Piggy.PiggyRspH\x00\x12$\n\x06\x46\x42\x42ind\x18\xd8\x8c\x01 \x01(\x0b\x32\x10.pb.FB.FBBindRspH\x00\x12<\n\x0eLobbLuckySeven\x18\xd9\x8c\x01 \x01(\x0b\x32 .pb.LobbLuckySeven.LuckySevenRspH\x00\x12(\n\tRoyalPass\x18\xda\x8c\x01 \x01(\x0b\x32\x11.pb.RoyalPass.RspH\x00\x12\x0c\n\x03SID\x18\xe9\x07 \x01(\r\x12\r\n\x04SSID\x18\xea\x07 \x01(\x03\x42\x05\n\x03one\"\xe9\x01\n\tRspPublic\x12&\n\x04Util\x18\xe8\x07 \x01(\x0b\x32\x15.pb.RspPublic.RspUtilH\x00\x1a\x44\n\x04Pong\x12\x15\n\rNanoTimestamp\x18\x01 \x01(\x03\x12\x11\n\tTimestamp\x18\x02 \x01(\x05\x12\x12\n\nNanoSecond\x18\x03 \x01(\x05\x1ag\n\x07RspUtil\x12#\n\x04Ping\x18\xe9\x07 \x01(\x0b\x32\x12.pb.RspPublic.PongH\x00\x12\x0f\n\x04\x45\x63ho\x18\xea\x07 \x01(\tH\x00\x12\x1f\n\x07Version\x18\xeb\x07 \x01(\x0b\x32\x0b.pb.VersionH\x00\x42\x05\n\x03oneB\x05\n\x03one\"\xb2\x05\n\x08RspMulti\x12\x1f\n\tResponses\x18\x01 \x03(\x0b\x32\x0c.pb.Response\x12\x19\n\x06\x41wards\x18\x02 \x03(\x0b\x32\t.pb.Award\x12\x1e\n\x05State\x18\x03 \x01(\x0b\x32\x0f.pb.Player.Mode\x12$\n\x07\x41\x63\x63ount\x18\x04 \x01(\x0b\x32\x13.pb.Player.Currency\x12\"\n\x05Times\x18\x05 \x01(\x0b\x32\x13.pb.Player.TimesBag\x12$\n\x08\x42oosters\x18\x06 \x03(\x0b\x32\x12.pb.Player.Booster\x12$\n\x08\x42\x61gItems\x18\x07 \x03(\x0b\x32\x12.pb.Player.BagItem\x12-\n\x13HoneyDoUpdatedTasks\x18\x0b \x03(\x0b\x32\x10.pb.HoneyDo.Task\x12*\n\x0cQuestUpdated\x18\x0c \x03(\x0b\x32\x14.pb.Quests.QuestInfo\x12\x35\n\x0eMissionUpdated\x18\r \x03(\x0b\x32\x1d.pb.DailyMission.MissionTasks\x12\'\n\x0bHeroUpdated\x18\x0e \x01(\x0b\x32\x12.pb.Hero.HeroSkill\x12&\n\x0fHeroInfoUpdated\x18\x0f \x01(\x0b\x32\r.pb.Hero.Hero\x12(\n\x0elevelUpUpdated\x18\x10 \x01(\x0b\x32\x10.pb.LevelUpAward\x12\'\n\x0cpiggyUpdated\x18\x11 \x01(\x0b\x32\x11.pb.Piggy.Updated\x12/\n\x15\x41\x63tivityEventDropList\x18\x12 \x03(\x0b\x32\x10.pb.ActivityDrop\x12,\n\x0c\x43haseUpdated\x18\x13 \x01(\x0b\x32\x16.pb.Chase.ChaseUpdated\x12\x0f\n\x06\x45vents\x18\xc8\x01 \x03(\t\x12\x0e\n\x05Tasks\x18\xc9\x01 \x03(\t\"6\n\x08RspQuest\x12\x11\n\x06Newbie\x18\xa1\x1f \x01(\rH\x00\x12\x10\n\x05\x44\x61ily\x18\xa2\x1f \x01(\rH\x00\x42\x05\n\x03oneB\x06Z\x04.;pbb\x06proto3'
+  serialized_pb=b'\n\trsp.proto\x12\x02pb\x1a\x12\x61uthenticate.proto\x1a\x0b\x61ward.proto\x1a\x0b\x62onus.proto\x1a\nbuff.proto\x1a\x12login_reward.proto\x1a\rmailbox.proto\x1a\rmission.proto\x1a\x0cplayer.proto\x1a\x11post_office.proto\x1a\x0frsp_error.proto\x1a\nshop.proto\x1a\x0bslots.proto\x1a\x13slots_jackpot.proto\x1a\x12slots_puzzle.proto\x1a\x11slots_theme.proto\x1a\rtourney.proto\x1a\rversion.proto\x1a\x0bquest.proto\x1a\x10lobbywheel.proto\x1a\x10\x64\x61ilybonus.proto\x1a\tvip.proto\x1a\x12\x64\x61ilymission.proto\x1a\x15lobbyluckypoker.proto\x1a\x11noviceguide.proto\x1a\nhero.proto\x1a\rlevelup.proto\x1a\x08\x66\x62.proto\x1a\x0bpiggy.proto\x1a\x0e\x61\x63tivity.proto\x1a\x15lobbyluckyseven.proto\x1a\x0froyalpass.proto\x1a\x0b\x63hase.proto\x1a\x0c\x63onpon.proto\"\xbb\x02\n\rBunchResponse\x12\x1b\n\x05\x45rror\x18\x01 \x01(\x0b\x32\x0c.pb.RspError\x12\x1d\n\x05Login\x18\x02 \x01(\x0b\x32\x0c.pb.RespAuthH\x00\x12\x1f\n\x06Public\x18\x03 \x01(\x0b\x32\r.pb.RspPublicH\x00\x12\x1d\n\x05Multi\x18\x05 \x01(\x0b\x32\x0c.pb.RspMultiH\x00\x12\x15\n\x0cMidnightZero\x18\xe8\x07 \x01(\x03\x12\x13\n\nServerTime\x18\xe9\x07 \x01(\x03\x12\x13\n\nPlayerTime\x18\xea\x07 \x01(\x03\x12\x18\n\x0fServerLocalTime\x18\xf3\x07 \x01(\t\x12\x18\n\x0fPlayerLocalTime\x18\xf4\x07 \x01(\t\x12\x1a\n\x11MidnightLocalTime\x18\xf5\x07 \x01(\t\x12\x16\n\rServerUTCZone\x18\xf7\x07 \x01(\x05\x42\x05\n\x03one\"\xd2\n\n\x08Response\x12\x0c\n\x04Step\x18\x01 \x01(\r\x12\x11\n\tRequestID\x18\x02 \x01(\r\x12 \n\x06Player\x18\xf0. \x01(\x0b\x32\r.pb.RspPlayerH\x00\x12!\n\x04Play\x18\xb8\x17 \x01(\x0b\x32\x10.pb.PlayResponseH\x00\x12/\n\x07Jackpot\x18\xb9\x17 \x01(\x0b\x32\x1b.pb.JackpotSyncing.ResponseH\x00\x12&\n\x06Puzzle\x18\xba\x17 \x01(\x0b\x32\x13.pb.Puzzle.ResponseH\x00\x12#\n\tThemeList\x18\xd0\x0f \x01(\x0b\x32\r.pb.ThemeListH\x00\x12\'\n\x0bThemeStatus\x18\xa0\x1f \x01(\x0b\x32\x0f.pb.ThemeStatusH\x00\x12)\n\x0cThemeRestore\x18\xa2\x1f \x01(\x0b\x32\x10.pb.ThemeRestoreH\x00\x12\'\n\x0bLastSpinRsp\x18\xa1\x1f \x01(\x0b\x32\x0f.pb.LastSpinRspH\x00\x12#\n\x07Tourney\x18\xa8\x46 \x01(\x0b\x32\x0f.pb.RespTourneyH\x00\x12\x1e\n\x05\x42onus\x18\x90N \x01(\x0b\x32\x0c.pb.RspBonusH\x00\x12*\n\x0bLoginReward\x18\x91N \x01(\x0b\x32\x12.pb.RspLoginRewardH\x00\x12#\n\x07HoneyDo\x18\xf8U \x01(\x0b\x32\x0f.pb.HoneyDo.RspH\x00\x12$\n\x07Mailbox\x18\xe0] \x01(\x0b\x32\x10.pb.Mailbox.RespH\x00\x12\x1e\n\x04Shop\x18\xc8\x65 \x01(\x0b\x32\r.pb.Shop.RespH\x00\x12\x1e\n\x04\x42uff\x18\xb0m \x01(\x0b\x32\r.pb.Buff.RespH\x00\x12*\n\nPostOffice\x18\x80} \x01(\x0b\x32\x13.pb.PostOffice.RespH\x00\x12!\n\x05Quest\x18\xe8\x84\x01 \x01(\x0b\x32\x0e.pb.Quests.RspH\x00\x12+\n\x0bNoviceGuide\x18\xcc\x85\x01 \x01(\x0b\x32\x12.pb.NoviceGuideRspH\x00\x12\x36\n\x12NoviceGuideSaveRsp\x18\xcd\x85\x01 \x01(\x0b\x32\x16.pb.NoviceGuideSaveRspH\x00\x12&\n\x08\x41\x63tivity\x18\xd6\x85\x01 \x01(\x0b\x32\x10.pb.Activity.RspH\x00\x12)\n\nLobbyWheel\x18\xd0\x8c\x01 \x01(\x0b\x32\x11.pb.LobbyWheelRspH\x00\x12*\n\nDailyBonus\x18\xd1\x8c\x01 \x01(\x0b\x32\x12.pb.DailyBonus.RspH\x00\x12\x1f\n\x03Vip\x18\xd2\x8c\x01 \x01(\x0b\x32\x0e.pb.Vip.VipRspH\x00\x12.\n\x0c\x44\x61ilyMission\x18\xd3\x8c\x01 \x01(\x0b\x32\x14.pb.DailyMission.RspH\x00\x12*\n\nLobbyPoker\x18\xd4\x8c\x01 \x01(\x0b\x32\x12.pb.LobbyPoker.RspH\x00\x12\x1e\n\x04Hero\x18\xd5\x8c\x01 \x01(\x0b\x32\x0c.pb.Hero.RspH\x00\x12\x1c\n\x02\x46\x42\x18\xd6\x8c\x01 \x01(\x0b\x32\x0c.pb.FB.FBRspH\x00\x12%\n\x05Piggy\x18\xd7\x8c\x01 \x01(\x0b\x32\x12.pb.Piggy.PiggyRspH\x00\x12$\n\x06\x46\x42\x42ind\x18\xd8\x8c\x01 \x01(\x0b\x32\x10.pb.FB.FBBindRspH\x00\x12<\n\x0eLobbLuckySeven\x18\xd9\x8c\x01 \x01(\x0b\x32 .pb.LobbLuckySeven.LuckySevenRspH\x00\x12(\n\tRoyalPass\x18\xda\x8c\x01 \x01(\x0b\x32\x11.pb.RoyalPass.RspH\x00\x12\"\n\x06\x43onpon\x18\xdb\x8c\x01 \x01(\x0b\x32\x0e.pb.Conpon.RspH\x00\x12\x0c\n\x03SID\x18\xe9\x07 \x01(\r\x12\r\n\x04SSID\x18\xea\x07 \x01(\x03\x42\x05\n\x03one\"\xe9\x01\n\tRspPublic\x12&\n\x04Util\x18\xe8\x07 \x01(\x0b\x32\x15.pb.RspPublic.RspUtilH\x00\x1a\x44\n\x04Pong\x12\x15\n\rNanoTimestamp\x18\x01 \x01(\x03\x12\x11\n\tTimestamp\x18\x02 \x01(\x05\x12\x12\n\nNanoSecond\x18\x03 \x01(\x05\x1ag\n\x07RspUtil\x12#\n\x04Ping\x18\xe9\x07 \x01(\x0b\x32\x12.pb.RspPublic.PongH\x00\x12\x0f\n\x04\x45\x63ho\x18\xea\x07 \x01(\tH\x00\x12\x1f\n\x07Version\x18\xeb\x07 \x01(\x0b\x32\x0b.pb.VersionH\x00\x42\x05\n\x03oneB\x05\n\x03one\"\xd6\x05\n\x08RspMulti\x12\x1f\n\tResponses\x18\x01 \x03(\x0b\x32\x0c.pb.Response\x12\x19\n\x06\x41wards\x18\x02 \x03(\x0b\x32\t.pb.Award\x12\x1e\n\x05State\x18\x03 \x01(\x0b\x32\x0f.pb.Player.Mode\x12$\n\x07\x41\x63\x63ount\x18\x04 \x01(\x0b\x32\x13.pb.Player.Currency\x12\"\n\x05Times\x18\x05 \x01(\x0b\x32\x13.pb.Player.TimesBag\x12$\n\x08\x42oosters\x18\x06 \x03(\x0b\x32\x12.pb.Player.Booster\x12$\n\x08\x42\x61gItems\x18\x07 \x03(\x0b\x32\x12.pb.Player.BagItem\x12\"\n\x07\x43onpons\x18\x08 \x03(\x0b\x32\x11.pb.Player.Conpon\x12-\n\x13HoneyDoUpdatedTasks\x18\x0b \x03(\x0b\x32\x10.pb.HoneyDo.Task\x12*\n\x0cQuestUpdated\x18\x0c \x03(\x0b\x32\x14.pb.Quests.QuestInfo\x12\x35\n\x0eMissionUpdated\x18\r \x03(\x0b\x32\x1d.pb.DailyMission.MissionTasks\x12\'\n\x0bHeroUpdated\x18\x0e \x01(\x0b\x32\x12.pb.Hero.HeroSkill\x12&\n\x0fHeroInfoUpdated\x18\x0f \x01(\x0b\x32\r.pb.Hero.Hero\x12(\n\x0elevelUpUpdated\x18\x10 \x01(\x0b\x32\x10.pb.LevelUpAward\x12\'\n\x0cpiggyUpdated\x18\x11 \x01(\x0b\x32\x11.pb.Piggy.Updated\x12/\n\x15\x41\x63tivityEventDropList\x18\x12 \x03(\x0b\x32\x10.pb.ActivityDrop\x12,\n\x0c\x43haseUpdated\x18\x13 \x01(\x0b\x32\x16.pb.Chase.ChaseUpdated\x12\x0f\n\x06\x45vents\x18\xc8\x01 \x03(\t\x12\x0e\n\x05Tasks\x18\xc9\x01 \x03(\t\"6\n\x08RspQuest\x12\x11\n\x06Newbie\x18\xa1\x1f \x01(\rH\x00\x12\x10\n\x05\x44\x61ily\x18\xa2\x1f \x01(\rH\x00\x42\x05\n\x03oneB\x06Z\x04.;pbb\x06proto3'
   ,
-  dependencies=[authenticate__pb2.DESCRIPTOR,award__pb2.DESCRIPTOR,bonus__pb2.DESCRIPTOR,buff__pb2.DESCRIPTOR,login__reward__pb2.DESCRIPTOR,mailbox__pb2.DESCRIPTOR,mission__pb2.DESCRIPTOR,player__pb2.DESCRIPTOR,post__office__pb2.DESCRIPTOR,rsp__error__pb2.DESCRIPTOR,shop__pb2.DESCRIPTOR,slots__pb2.DESCRIPTOR,slots__jackpot__pb2.DESCRIPTOR,slots__theme__pb2.DESCRIPTOR,tourney__pb2.DESCRIPTOR,version__pb2.DESCRIPTOR,quest__pb2.DESCRIPTOR,lobbywheel__pb2.DESCRIPTOR,dailybonus__pb2.DESCRIPTOR,vip__pb2.DESCRIPTOR,dailymission__pb2.DESCRIPTOR,lobbyluckypoker__pb2.DESCRIPTOR,noviceguide__pb2.DESCRIPTOR,hero__pb2.DESCRIPTOR,levelup__pb2.DESCRIPTOR,fb__pb2.DESCRIPTOR,piggy__pb2.DESCRIPTOR,activity__pb2.DESCRIPTOR,lobbyluckyseven__pb2.DESCRIPTOR,royalpass__pb2.DESCRIPTOR,chase__pb2.DESCRIPTOR,])
+  dependencies=[authenticate__pb2.DESCRIPTOR,award__pb2.DESCRIPTOR,bonus__pb2.DESCRIPTOR,buff__pb2.DESCRIPTOR,login__reward__pb2.DESCRIPTOR,mailbox__pb2.DESCRIPTOR,mission__pb2.DESCRIPTOR,player__pb2.DESCRIPTOR,post__office__pb2.DESCRIPTOR,rsp__error__pb2.DESCRIPTOR,shop__pb2.DESCRIPTOR,slots__pb2.DESCRIPTOR,slots__jackpot__pb2.DESCRIPTOR,slots__puzzle__pb2.DESCRIPTOR,slots__theme__pb2.DESCRIPTOR,tourney__pb2.DESCRIPTOR,version__pb2.DESCRIPTOR,quest__pb2.DESCRIPTOR,lobbywheel__pb2.DESCRIPTOR,dailybonus__pb2.DESCRIPTOR,vip__pb2.DESCRIPTOR,dailymission__pb2.DESCRIPTOR,lobbyluckypoker__pb2.DESCRIPTOR,noviceguide__pb2.DESCRIPTOR,hero__pb2.DESCRIPTOR,levelup__pb2.DESCRIPTOR,fb__pb2.DESCRIPTOR,piggy__pb2.DESCRIPTOR,activity__pb2.DESCRIPTOR,lobbyluckyseven__pb2.DESCRIPTOR,royalpass__pb2.DESCRIPTOR,chase__pb2.DESCRIPTOR,conpon__pb2.DESCRIPTOR,])
 
 
 
@@ -159,8 +161,8 @@ _BUNCHRESPONSE = _descriptor.Descriptor(
       create_key=_descriptor._internal_create_key,
     fields=[]),
   ],
-  serialized_start=512,
-  serialized_end=827,
+  serialized_start=546,
+  serialized_end=861,
 )
 
 
@@ -208,203 +210,217 @@ _RESPONSE = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='ThemeList', full_name='pb.Response.ThemeList', index=5,
+      name='Puzzle', full_name='pb.Response.Puzzle', index=5,
+      number=3002, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='ThemeList', full_name='pb.Response.ThemeList', index=6,
       number=2000, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='ThemeStatus', full_name='pb.Response.ThemeStatus', index=6,
+      name='ThemeStatus', full_name='pb.Response.ThemeStatus', index=7,
       number=4000, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='ThemeRestore', full_name='pb.Response.ThemeRestore', index=7,
+      name='ThemeRestore', full_name='pb.Response.ThemeRestore', index=8,
       number=4002, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='LastSpinRsp', full_name='pb.Response.LastSpinRsp', index=8,
+      name='LastSpinRsp', full_name='pb.Response.LastSpinRsp', index=9,
       number=4001, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='Tourney', full_name='pb.Response.Tourney', index=9,
+      name='Tourney', full_name='pb.Response.Tourney', index=10,
       number=9000, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='Bonus', full_name='pb.Response.Bonus', index=10,
+      name='Bonus', full_name='pb.Response.Bonus', index=11,
       number=10000, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='LoginReward', full_name='pb.Response.LoginReward', index=11,
+      name='LoginReward', full_name='pb.Response.LoginReward', index=12,
       number=10001, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='HoneyDo', full_name='pb.Response.HoneyDo', index=12,
+      name='HoneyDo', full_name='pb.Response.HoneyDo', index=13,
       number=11000, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='Mailbox', full_name='pb.Response.Mailbox', index=13,
+      name='Mailbox', full_name='pb.Response.Mailbox', index=14,
       number=12000, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='Shop', full_name='pb.Response.Shop', index=14,
+      name='Shop', full_name='pb.Response.Shop', index=15,
       number=13000, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='Buff', full_name='pb.Response.Buff', index=15,
+      name='Buff', full_name='pb.Response.Buff', index=16,
       number=14000, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='PostOffice', full_name='pb.Response.PostOffice', index=16,
+      name='PostOffice', full_name='pb.Response.PostOffice', index=17,
       number=16000, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='Quest', full_name='pb.Response.Quest', index=17,
+      name='Quest', full_name='pb.Response.Quest', index=18,
       number=17000, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='NoviceGuide', full_name='pb.Response.NoviceGuide', index=18,
+      name='NoviceGuide', full_name='pb.Response.NoviceGuide', index=19,
       number=17100, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='NoviceGuideSaveRsp', full_name='pb.Response.NoviceGuideSaveRsp', index=19,
+      name='NoviceGuideSaveRsp', full_name='pb.Response.NoviceGuideSaveRsp', index=20,
       number=17101, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='Activity', full_name='pb.Response.Activity', index=20,
+      name='Activity', full_name='pb.Response.Activity', index=21,
       number=17110, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='LobbyWheel', full_name='pb.Response.LobbyWheel', index=21,
+      name='LobbyWheel', full_name='pb.Response.LobbyWheel', index=22,
       number=18000, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='DailyBonus', full_name='pb.Response.DailyBonus', index=22,
+      name='DailyBonus', full_name='pb.Response.DailyBonus', index=23,
       number=18001, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='Vip', full_name='pb.Response.Vip', index=23,
+      name='Vip', full_name='pb.Response.Vip', index=24,
       number=18002, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='DailyMission', full_name='pb.Response.DailyMission', index=24,
+      name='DailyMission', full_name='pb.Response.DailyMission', index=25,
       number=18003, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='LobbyPoker', full_name='pb.Response.LobbyPoker', index=25,
+      name='LobbyPoker', full_name='pb.Response.LobbyPoker', index=26,
       number=18004, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='Hero', full_name='pb.Response.Hero', index=26,
+      name='Hero', full_name='pb.Response.Hero', index=27,
       number=18005, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='FB', full_name='pb.Response.FB', index=27,
+      name='FB', full_name='pb.Response.FB', index=28,
       number=18006, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='Piggy', full_name='pb.Response.Piggy', index=28,
+      name='Piggy', full_name='pb.Response.Piggy', index=29,
       number=18007, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='FBBind', full_name='pb.Response.FBBind', index=29,
+      name='FBBind', full_name='pb.Response.FBBind', index=30,
       number=18008, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='LobbLuckySeven', full_name='pb.Response.LobbLuckySeven', index=30,
+      name='LobbLuckySeven', full_name='pb.Response.LobbLuckySeven', index=31,
       number=18009, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='RoyalPass', full_name='pb.Response.RoyalPass', index=31,
+      name='RoyalPass', full_name='pb.Response.RoyalPass', index=32,
       number=18010, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='SID', full_name='pb.Response.SID', index=32,
+      name='Conpon', full_name='pb.Response.Conpon', index=33,
+      number=18011, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='SID', full_name='pb.Response.SID', index=34,
       number=1001, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='SSID', full_name='pb.Response.SSID', index=33,
+      name='SSID', full_name='pb.Response.SSID', index=35,
       number=1002, type=3, cpp_type=2, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -427,8 +443,8 @@ _RESPONSE = _descriptor.Descriptor(
       create_key=_descriptor._internal_create_key,
     fields=[]),
   ],
-  serialized_start=830,
-  serialized_end=2116,
+  serialized_start=864,
+  serialized_end=2226,
 )
 
 
@@ -473,8 +489,8 @@ _RSPPUBLIC_PONG = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2172,
-  serialized_end=2240,
+  serialized_start=2282,
+  serialized_end=2350,
 )
 
 _RSPPUBLIC_RSPUTIL = _descriptor.Descriptor(
@@ -523,8 +539,8 @@ _RSPPUBLIC_RSPUTIL = _descriptor.Descriptor(
       create_key=_descriptor._internal_create_key,
     fields=[]),
   ],
-  serialized_start=2242,
-  serialized_end=2345,
+  serialized_start=2352,
+  serialized_end=2455,
 )
 
 _RSPPUBLIC = _descriptor.Descriptor(
@@ -559,8 +575,8 @@ _RSPPUBLIC = _descriptor.Descriptor(
       create_key=_descriptor._internal_create_key,
     fields=[]),
   ],
-  serialized_start=2119,
-  serialized_end=2352,
+  serialized_start=2229,
+  serialized_end=2462,
 )
 
 
@@ -622,77 +638,84 @@ _RSPMULTI = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='HoneyDoUpdatedTasks', full_name='pb.RspMulti.HoneyDoUpdatedTasks', index=7,
+      name='Conpons', full_name='pb.RspMulti.Conpons', index=7,
+      number=8, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='HoneyDoUpdatedTasks', full_name='pb.RspMulti.HoneyDoUpdatedTasks', index=8,
       number=11, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='QuestUpdated', full_name='pb.RspMulti.QuestUpdated', index=8,
+      name='QuestUpdated', full_name='pb.RspMulti.QuestUpdated', index=9,
       number=12, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='MissionUpdated', full_name='pb.RspMulti.MissionUpdated', index=9,
+      name='MissionUpdated', full_name='pb.RspMulti.MissionUpdated', index=10,
       number=13, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='HeroUpdated', full_name='pb.RspMulti.HeroUpdated', index=10,
+      name='HeroUpdated', full_name='pb.RspMulti.HeroUpdated', index=11,
       number=14, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='HeroInfoUpdated', full_name='pb.RspMulti.HeroInfoUpdated', index=11,
+      name='HeroInfoUpdated', full_name='pb.RspMulti.HeroInfoUpdated', index=12,
       number=15, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='levelUpUpdated', full_name='pb.RspMulti.levelUpUpdated', index=12,
+      name='levelUpUpdated', full_name='pb.RspMulti.levelUpUpdated', index=13,
       number=16, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='piggyUpdated', full_name='pb.RspMulti.piggyUpdated', index=13,
+      name='piggyUpdated', full_name='pb.RspMulti.piggyUpdated', index=14,
       number=17, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='ActivityEventDropList', full_name='pb.RspMulti.ActivityEventDropList', index=14,
+      name='ActivityEventDropList', full_name='pb.RspMulti.ActivityEventDropList', index=15,
       number=18, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='ChaseUpdated', full_name='pb.RspMulti.ChaseUpdated', index=15,
+      name='ChaseUpdated', full_name='pb.RspMulti.ChaseUpdated', index=16,
       number=19, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='Events', full_name='pb.RspMulti.Events', index=16,
+      name='Events', full_name='pb.RspMulti.Events', index=17,
       number=200, type=9, cpp_type=9, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='Tasks', full_name='pb.RspMulti.Tasks', index=17,
+      name='Tasks', full_name='pb.RspMulti.Tasks', index=18,
       number=201, type=9, cpp_type=9, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
@@ -710,8 +733,8 @@ _RSPMULTI = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2355,
-  serialized_end=3045,
+  serialized_start=2465,
+  serialized_end=3191,
 )
 
 
@@ -754,8 +777,8 @@ _RSPQUEST = _descriptor.Descriptor(
       create_key=_descriptor._internal_create_key,
     fields=[]),
   ],
-  serialized_start=3047,
-  serialized_end=3101,
+  serialized_start=3193,
+  serialized_end=3247,
 )
 
 _BUNCHRESPONSE.fields_by_name['Error'].message_type = rsp__error__pb2._RSPERROR
@@ -774,6 +797,7 @@ _BUNCHRESPONSE.fields_by_name['Multi'].containing_oneof = _BUNCHRESPONSE.oneofs_
 _RESPONSE.fields_by_name['Player'].message_type = player__pb2._RSPPLAYER
 _RESPONSE.fields_by_name['Play'].message_type = slots__pb2._PLAYRESPONSE
 _RESPONSE.fields_by_name['Jackpot'].message_type = slots__jackpot__pb2._JACKPOTSYNCING_RESPONSE
+_RESPONSE.fields_by_name['Puzzle'].message_type = slots__puzzle__pb2._PUZZLE_RESPONSE
 _RESPONSE.fields_by_name['ThemeList'].message_type = slots__theme__pb2._THEMELIST
 _RESPONSE.fields_by_name['ThemeStatus'].message_type = slots__pb2._THEMESTATUS
 _RESPONSE.fields_by_name['ThemeRestore'].message_type = slots__pb2._THEMERESTORE
@@ -801,6 +825,7 @@ _RESPONSE.fields_by_name['Piggy'].message_type = piggy__pb2._PIGGY_PIGGYRSP
 _RESPONSE.fields_by_name['FBBind'].message_type = fb__pb2._FB_FBBINDRSP
 _RESPONSE.fields_by_name['LobbLuckySeven'].message_type = lobbyluckyseven__pb2._LOBBLUCKYSEVEN_LUCKYSEVENRSP
 _RESPONSE.fields_by_name['RoyalPass'].message_type = royalpass__pb2._ROYALPASS_RSP
+_RESPONSE.fields_by_name['Conpon'].message_type = conpon__pb2._CONPON_RSP
 _RESPONSE.oneofs_by_name['one'].fields.append(
   _RESPONSE.fields_by_name['Player'])
 _RESPONSE.fields_by_name['Player'].containing_oneof = _RESPONSE.oneofs_by_name['one']
@@ -810,6 +835,9 @@ _RESPONSE.fields_by_name['Play'].containing_oneof = _RESPONSE.oneofs_by_name['on
 _RESPONSE.oneofs_by_name['one'].fields.append(
   _RESPONSE.fields_by_name['Jackpot'])
 _RESPONSE.fields_by_name['Jackpot'].containing_oneof = _RESPONSE.oneofs_by_name['one']
+_RESPONSE.oneofs_by_name['one'].fields.append(
+  _RESPONSE.fields_by_name['Puzzle'])
+_RESPONSE.fields_by_name['Puzzle'].containing_oneof = _RESPONSE.oneofs_by_name['one']
 _RESPONSE.oneofs_by_name['one'].fields.append(
   _RESPONSE.fields_by_name['ThemeList'])
 _RESPONSE.fields_by_name['ThemeList'].containing_oneof = _RESPONSE.oneofs_by_name['one']
@@ -891,6 +919,9 @@ _RESPONSE.fields_by_name['LobbLuckySeven'].containing_oneof = _RESPONSE.oneofs_b
 _RESPONSE.oneofs_by_name['one'].fields.append(
   _RESPONSE.fields_by_name['RoyalPass'])
 _RESPONSE.fields_by_name['RoyalPass'].containing_oneof = _RESPONSE.oneofs_by_name['one']
+_RESPONSE.oneofs_by_name['one'].fields.append(
+  _RESPONSE.fields_by_name['Conpon'])
+_RESPONSE.fields_by_name['Conpon'].containing_oneof = _RESPONSE.oneofs_by_name['one']
 _RSPPUBLIC_PONG.containing_type = _RSPPUBLIC
 _RSPPUBLIC_RSPUTIL.fields_by_name['Ping'].message_type = _RSPPUBLIC_PONG
 _RSPPUBLIC_RSPUTIL.fields_by_name['Version'].message_type = version__pb2._VERSION
@@ -915,6 +946,7 @@ _RSPMULTI.fields_by_name['Account'].message_type = player__pb2._PLAYER_CURRENCY
 _RSPMULTI.fields_by_name['Times'].message_type = player__pb2._PLAYER_TIMESBAG
 _RSPMULTI.fields_by_name['Boosters'].message_type = player__pb2._PLAYER_BOOSTER
 _RSPMULTI.fields_by_name['BagItems'].message_type = player__pb2._PLAYER_BAGITEM
+_RSPMULTI.fields_by_name['Conpons'].message_type = player__pb2._PLAYER_CONPON
 _RSPMULTI.fields_by_name['HoneyDoUpdatedTasks'].message_type = mission__pb2._HONEYDO_TASK
 _RSPMULTI.fields_by_name['QuestUpdated'].message_type = quest__pb2._QUESTS_QUESTINFO
 _RSPMULTI.fields_by_name['MissionUpdated'].message_type = dailymission__pb2._DAILYMISSION_MISSIONTASKS

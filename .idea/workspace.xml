@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="ALL" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="cc20b577-6be8-49a1-a47d-976cc19a1179" name="Changes" comment="111">
+      <change beforePath="$PROJECT_DIR$/conf/server_list.py" beforeDir="false" afterPath="$PROJECT_DIR$/conf/server_list.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config.ini" beforeDir="false" afterPath="$PROJECT_DIR$/config.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gen/proto/activity_pb2.py" beforeDir="false" afterPath="$PROJECT_DIR$/gen/proto/activity_pb2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gen/proto/activityevent_pb2.py" beforeDir="false" afterPath="$PROJECT_DIR$/gen/proto/activityevent_pb2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gen/proto/authenticate_pb2.py" beforeDir="false" afterPath="$PROJECT_DIR$/gen/proto/authenticate_pb2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gen/proto/award_pb2.py" beforeDir="false" afterPath="$PROJECT_DIR$/gen/proto/award_pb2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gen/proto/candymart_pb2.py" beforeDir="false" afterPath="$PROJECT_DIR$/gen/proto/candymart_pb2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gen/proto/journey_pb2.py" beforeDir="false" afterPath="$PROJECT_DIR$/gen/proto/journey_pb2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gen/proto/multiverse_pb2.py" beforeDir="false" afterPath="$PROJECT_DIR$/gen/proto/multiverse_pb2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gen/proto/opcode_pb2.py" beforeDir="false" afterPath="$PROJECT_DIR$/gen/proto/opcode_pb2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gen/proto/piggy_pb2.py" beforeDir="false" afterPath="$PROJECT_DIR$/gen/proto/piggy_pb2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gen/proto/player_pb2.py" beforeDir="false" afterPath="$PROJECT_DIR$/gen/proto/player_pb2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gen/proto/req_pb2.py" beforeDir="false" afterPath="$PROJECT_DIR$/gen/proto/req_pb2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gen/proto/rsp_pb2.py" beforeDir="false" afterPath="$PROJECT_DIR$/gen/proto/rsp_pb2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gen/proto/shop_pb2.py" beforeDir="false" afterPath="$PROJECT_DIR$/gen/proto/shop_pb2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/theme/common.py" beforeDir="false" afterPath="$PROJECT_DIR$/theme/common.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="GOROOT" url="file:///usr/local/go" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GoLibraries">
+    <option name="indexEntireGoPath" value="false" />
+  </component>
+  <component name="ProjectId" id="2El1LD0ruPSjR8ObOnYgFu4VacR" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="go.formatter.settings.were.checked" value="true" />
+    <property name="go.import.settings.migrated" value="true" />
+    <property name="go.modules.go.list.on.any.changes.was.set" value="true" />
+    <property name="go.sdk.automatically.set" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="111" />
+    <option name="LAST_COMMIT_MESSAGE" value="111" />
+  </component>
+  <component name="VgoProject">
+    <integration-enabled>true</integration-enabled>
+  </component>
+</project>
