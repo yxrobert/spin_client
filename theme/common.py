@@ -45,7 +45,7 @@ def fakeTIme():
     Sender.send_timefake("11111")
 
 def run(player):
-    player.send_cmd(candy_cmd)
+    # player.send_cmd(candy_cmd)
     # player.send_cmd(gem_cmd)
     # player.send_cmd(add_money)
     # player.send_cmd(xpay)
@@ -68,11 +68,11 @@ def run(player):
     # player.req_activity_list()
 
     # act_id = 50011
-    act_id = 23
-    # player.req_activity_user_data(act_id)
-    times = 5
+    act_id = 60
+    player.req_activity_user_data(act_id)
+    times = 1
     for i in range(0, times):
-        player.req_activity_play(act_id)
+        # player.req_activity_play(act_id)
         pass
     # player.req_activity_play(act_id)
 
