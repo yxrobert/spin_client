@@ -4,7 +4,7 @@
 import msg
 from robot import SpinRobot
 
-fortune_theme_id = 10040
+fortune_theme_id = 10220
 
 class FortuneRobot(SpinRobot):
     def __init__(self, name, theme_id):
@@ -19,8 +19,8 @@ class FortuneRobot(SpinRobot):
 
 
 def run(player):
-    player.send_cmd(add_money)
-    player.select_bet(60000000)
+    # player.send_cmd(add_money)
+    # player.select_bet(60000000)
 
     # player.send_cmd(bonus)
 
@@ -43,11 +43,13 @@ def run(player):
     # player.send_gm(enter_pick)
     # player.spin()
     # player.pick(0)
-    player.serials_game(jp_arr)
+    # player.serials_game(jp_arr)
 
     # player.spin_to_base()
     # player.spin()
-    # player.spin_times(30)
+    player.spin_times(30)
+    # player.spin_to_next_stage()
+
 
   
     # player.send_cmd(demon_panelgroup)

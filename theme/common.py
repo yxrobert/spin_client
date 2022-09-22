@@ -67,6 +67,9 @@ def run(player):
     # player.req_treasure_get()
     # player.req_activity_list()
 
+    # player.send_cmd("metaj 0,1")
+    # player.send_cmd("metas")
+
     # act_id = 50011
     act_id = 60
     player.req_activity_user_data(act_id)

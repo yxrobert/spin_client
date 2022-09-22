@@ -4,24 +4,7 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cc20b577-6be8-49a1-a47d-976cc19a1179" name="Changes" comment="111">
-      <change beforePath="$PROJECT_DIR$/conf/server_list.py" beforeDir="false" afterPath="$PROJECT_DIR$/conf/server_list.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config.ini" beforeDir="false" afterPath="$PROJECT_DIR$/config.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gen/proto/activity_pb2.py" beforeDir="false" afterPath="$PROJECT_DIR$/gen/proto/activity_pb2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gen/proto/activityevent_pb2.py" beforeDir="false" afterPath="$PROJECT_DIR$/gen/proto/activityevent_pb2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gen/proto/authenticate_pb2.py" beforeDir="false" afterPath="$PROJECT_DIR$/gen/proto/authenticate_pb2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gen/proto/award_pb2.py" beforeDir="false" afterPath="$PROJECT_DIR$/gen/proto/award_pb2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gen/proto/candymart_pb2.py" beforeDir="false" afterPath="$PROJECT_DIR$/gen/proto/candymart_pb2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gen/proto/journey_pb2.py" beforeDir="false" afterPath="$PROJECT_DIR$/gen/proto/journey_pb2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gen/proto/multiverse_pb2.py" beforeDir="false" afterPath="$PROJECT_DIR$/gen/proto/multiverse_pb2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gen/proto/opcode_pb2.py" beforeDir="false" afterPath="$PROJECT_DIR$/gen/proto/opcode_pb2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gen/proto/piggy_pb2.py" beforeDir="false" afterPath="$PROJECT_DIR$/gen/proto/piggy_pb2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gen/proto/player_pb2.py" beforeDir="false" afterPath="$PROJECT_DIR$/gen/proto/player_pb2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gen/proto/req_pb2.py" beforeDir="false" afterPath="$PROJECT_DIR$/gen/proto/req_pb2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gen/proto/rsp_pb2.py" beforeDir="false" afterPath="$PROJECT_DIR$/gen/proto/rsp_pb2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gen/proto/shop_pb2.py" beforeDir="false" afterPath="$PROJECT_DIR$/gen/proto/shop_pb2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/theme/common.py" beforeDir="false" afterPath="$PROJECT_DIR$/theme/common.py" afterDir="false" />
-    </list>
+    <list default="true" id="b3f91da9-f6f3-43c8-baa2-14bf6395fd66" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -63,13 +46,9 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="111" />
     <option name="LAST_COMMIT_MESSAGE" value="111" />
-  </component>
-  <component name="VgoProject">
-    <integration-enabled>true</integration-enabled>
   </component>
 </project>
