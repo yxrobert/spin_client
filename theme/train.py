@@ -3,6 +3,7 @@
 
 import msg
 from robot import SpinRobot
+from common import *
 
 demon_theme_id = 10090
 
@@ -15,11 +16,11 @@ class TrainRobot(SpinRobot):
 
     def play_status_callback(self, packet):
         # self.log(packet.Spin.SymbolList)
-        self.log_spin_wins(packet.Spin)
+        # self.log_spin_wins(packet.Spin)
         pass
 
 def run(player):
-    # player.select_bet(160000000000)
+    # player.select_bet(120000)
 
     # player.send_cmd(cheat_12)
     # player.spin_to_next_stage()
@@ -27,7 +28,11 @@ def run(player):
 
     # player.send_cmd(panels_yq)
     # player.send_cmd(gm_enter)
-    player.spin_times(1)
+    player.send_cmd(add_money)
+    # player.send_cmd("add level 50")
+    # player.send_cmd("bgdrop 4")
+
+    player.spin_times(100000)
     # player.spin_to_base()
     # player.spin_to_next_stage()
 
@@ -38,6 +43,7 @@ def run(player):
 panels = '''panelstr [[{"ss":[{"s":4},{"s":11,"t":5},{"s":11,"t":6}]},{"ss":[{"s":7},{"s":11,"t":4},{"s":12,"t":3}]},{"ss":[{"s":7},{"s":2},{"s":2}]},{"ss":[{"s":5},{"s":3},{"s":4}]},{"ss":[{"s":2},{"s":7},{"s":7}]}],[{"ss":[{"s":4},{"s":11,"t":5},{"s":11,"t":6}]},{"ss":[{"s":7},{"s":11,"t":4},{"s":12,"t":3}]},{"ss":[{"s":7},{"s":2},{"s":2}]},{"ss":[{"s":5},{"s":3},{"s":4}]},{"ss":[{"s":2},{"s":7},{"s":7}]}]]'''
 panels_yq = '''panelstr [[{"ss":[{"s":7},{"s":11,"t":5},{"s":11,"t":6}]},{"ss":[{"s":7},{"s":11,"t":4},{"s":12,"t":3}]},{"ss":[{"s":7},{"s":2},{"s":2}]},{"ss":[{"s":5},{"s":3},{"s":4}]},{"ss":[{"s":2},{"s":7},{"s":7}]}]]'''
 
+gm_free = "gm:2_200|2;0_0|0_0_12"
 test_gm = "gm:2_200|2;1_100|2_3_7"
 cheat_6 = "cheat 6"
 

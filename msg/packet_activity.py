@@ -15,6 +15,14 @@ def log_act_bigo(robot, packet):
         # robot.log(packet.data.Bingo)
         # robot.log(log_packet)
 
+def log_act_all(robot, packet):
+    robot.log(packet)
+    # if packet.data.HasField("CandyMart"):
+    #     log_packet = pb.CandyMart.Data()
+        # robot.log(packet)
+        # log_packet.BingoBall = packet.data.Bingo.BingoBall
+        # robot.log(log_packet)
+        # pass
 
 def main():
     pass

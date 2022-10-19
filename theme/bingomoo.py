@@ -4,6 +4,7 @@
 import msg
 import gen.proto as pb
 from robot import SpinRobot
+from common import *
 
 bingoMoo_theme_id = 10050
 
@@ -85,8 +86,9 @@ def run_mege(player):
     pass
 
 def run(player):
-    player.send_cmd(coin_cmd)
-    player.select_bet(60000000)
+    # player.send_cmd(coin_cmd)
+    # player.send_cmd(level_cmd)
+    player.select_bet(5000000)
     player.spin()
     # player.spin_to_next_stage()
     # player.spin_to_base()

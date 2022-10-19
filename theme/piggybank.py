@@ -28,17 +28,18 @@ pg_yq = "panel 7,8,8,7,7,9,6,6,6,6,6,6,6,6,6"
 
 def run(player):
     # player.send_cmd(add_money)
-    # player.spin_to_next_stage()
+    player.spin_to_next_stage()
     # player.spin_to_base()
 
     # player.send_gm(piggy_free)
     # player.send_cmd(piggy_supper)
-    player.send_cmd(pg_yq)
+    # player.send_cmd(pg_yq)
 
     # player.send_cmd(theme.cheat_6)
     # player.send_cmd(piggy_stepper)
 
-    player.spin()
+    # for i in range(0, 10):
+    #     player.spin()
     # player.spin_to_base()
 
     pass

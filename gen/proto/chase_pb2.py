@@ -19,7 +19,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'Z\004.;pb',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x0b\x63hase.proto\x12\x02pb\"\x9b\x02\n\x05\x43hase\x1ag\n\x04\x44\x61ta\x12\r\n\x05Point\x18\x01 \x01(\r\x12\x10\n\x08MaxPoint\x18\x02 \x01(\r\x12)\n\x0bPointAwards\x18\x03 \x03(\x0b\x32\x14.pb.Chase.PointAward\x12\x13\n\x0b\x41wardPoints\x18\x04 \x03(\r\x1a@\n\nPointAward\x12\x11\n\tNeedPoint\x18\x01 \x01(\r\x12\x1f\n\x06\x41wards\x18\x02 \x03(\x0b\x32\x0f.pb.Chase.Award\x1a\x1d\n\x05\x41ward\x12\t\n\x01n\x18\x02 \x01(\t\x12\t\n\x01\x63\x18\x03 \x01(\x04\x1aH\n\x0c\x43haseUpdated\x12\r\n\x05Point\x18\x01 \x01(\r\x12)\n\x0bPointAwards\x18\x02 \x03(\x0b\x32\x14.pb.Chase.PointAwardB\x06Z\x04.;pbb\x06proto3'
+  serialized_pb=b'\n\x0b\x63hase.proto\x12\x02pb\"\xad\x02\n\x05\x43hase\x1ag\n\x04\x44\x61ta\x12\r\n\x05Point\x18\x01 \x01(\r\x12\x10\n\x08MaxPoint\x18\x02 \x01(\r\x12)\n\x0bPointAwards\x18\x03 \x03(\x0b\x32\x14.pb.Chase.PointAward\x12\x13\n\x0b\x41wardPoints\x18\x04 \x03(\r\x1a@\n\nPointAward\x12\x11\n\tNeedPoint\x18\x01 \x01(\r\x12\x1f\n\x06\x41wards\x18\x02 \x03(\x0b\x32\x0f.pb.Chase.Award\x1a/\n\x05\x41ward\x12\t\n\x01n\x18\x02 \x01(\t\x12\t\n\x01\x63\x18\x03 \x01(\x04\x12\x10\n\x08\x63\x61rdSkin\x18\x08 \x01(\r\x1aH\n\x0c\x43haseUpdated\x12\r\n\x05Point\x18\x01 \x01(\r\x12)\n\x0bPointAwards\x18\x02 \x03(\x0b\x32\x14.pb.Chase.PointAwardB\x06Z\x04.;pbb\x06proto3'
 )
 
 
@@ -137,6 +137,13 @@ _CHASE_AWARD = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='cardSkin', full_name='pb.Chase.Award.cardSkin', index=2,
+      number=8, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -150,7 +157,7 @@ _CHASE_AWARD = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=200,
-  serialized_end=229,
+  serialized_end=247,
 )
 
 _CHASE_CHASEUPDATED = _descriptor.Descriptor(
@@ -187,8 +194,8 @@ _CHASE_CHASEUPDATED = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=231,
-  serialized_end=303,
+  serialized_start=249,
+  serialized_end=321,
 )
 
 _CHASE = _descriptor.Descriptor(
@@ -212,7 +219,7 @@ _CHASE = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=20,
-  serialized_end=303,
+  serialized_end=321,
 )
 
 _CHASE_DATA.fields_by_name['PointAwards'].message_type = _CHASE_POINTAWARD
