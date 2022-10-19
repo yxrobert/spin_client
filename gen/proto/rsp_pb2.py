@@ -45,6 +45,7 @@ import royalpass_pb2 as royalpass__pb2
 import chase_pb2 as chase__pb2
 import cardgathering_pb2 as cardgathering__pb2
 import conpon_pb2 as conpon__pb2
+import levelsprint_pb2 as levelsprint__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
@@ -53,9 +54,9 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'Z\004.;pb',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\trsp.proto\x12\x02pb\x1a\x12\x61uthenticate.proto\x1a\x0b\x61ward.proto\x1a\x0b\x62onus.proto\x1a\nbuff.proto\x1a\x12login_reward.proto\x1a\rmailbox.proto\x1a\rmission.proto\x1a\x0cplayer.proto\x1a\x11post_office.proto\x1a\x0frsp_error.proto\x1a\nshop.proto\x1a\x0bslots.proto\x1a\x13slots_jackpot.proto\x1a\x12slots_puzzle.proto\x1a\x11slots_theme.proto\x1a\rtourney.proto\x1a\rversion.proto\x1a\x0bquest.proto\x1a\x10lobbywheel.proto\x1a\x10\x64\x61ilybonus.proto\x1a\tvip.proto\x1a\x12\x64\x61ilymission.proto\x1a\x15lobbyluckypoker.proto\x1a\x11noviceguide.proto\x1a\nhero.proto\x1a\rlevelup.proto\x1a\x08\x66\x62.proto\x1a\x0bpiggy.proto\x1a\x0e\x61\x63tivity.proto\x1a\x15lobbyluckyseven.proto\x1a\x0froyalpass.proto\x1a\x0b\x63hase.proto\x1a\x13\x63\x61rdgathering.proto\x1a\x0c\x63onpon.proto\"\xbb\x02\n\rBunchResponse\x12\x1b\n\x05\x45rror\x18\x01 \x01(\x0b\x32\x0c.pb.RspError\x12\x1d\n\x05Login\x18\x02 \x01(\x0b\x32\x0c.pb.RespAuthH\x00\x12\x1f\n\x06Public\x18\x03 \x01(\x0b\x32\r.pb.RspPublicH\x00\x12\x1d\n\x05Multi\x18\x05 \x01(\x0b\x32\x0c.pb.RspMultiH\x00\x12\x15\n\x0cMidnightZero\x18\xe8\x07 \x01(\x03\x12\x13\n\nServerTime\x18\xe9\x07 \x01(\x03\x12\x13\n\nPlayerTime\x18\xea\x07 \x01(\x03\x12\x18\n\x0fServerLocalTime\x18\xf3\x07 \x01(\t\x12\x18\n\x0fPlayerLocalTime\x18\xf4\x07 \x01(\t\x12\x1a\n\x11MidnightLocalTime\x18\xf5\x07 \x01(\t\x12\x16\n\rServerUTCZone\x18\xf7\x07 \x01(\x05\x42\x05\n\x03one\"\x84\x0b\n\x08Response\x12\x0c\n\x04Step\x18\x01 \x01(\r\x12\x11\n\tRequestID\x18\x02 \x01(\r\x12 \n\x06Player\x18\xf0. \x01(\x0b\x32\r.pb.RspPlayerH\x00\x12!\n\x04Play\x18\xb8\x17 \x01(\x0b\x32\x10.pb.PlayResponseH\x00\x12/\n\x07Jackpot\x18\xb9\x17 \x01(\x0b\x32\x1b.pb.JackpotSyncing.ResponseH\x00\x12&\n\x06Puzzle\x18\xba\x17 \x01(\x0b\x32\x13.pb.Puzzle.ResponseH\x00\x12#\n\tThemeList\x18\xd0\x0f \x01(\x0b\x32\r.pb.ThemeListH\x00\x12\'\n\x0bThemeStatus\x18\xa0\x1f \x01(\x0b\x32\x0f.pb.ThemeStatusH\x00\x12)\n\x0cThemeRestore\x18\xa2\x1f \x01(\x0b\x32\x10.pb.ThemeRestoreH\x00\x12\'\n\x0bLastSpinRsp\x18\xa1\x1f \x01(\x0b\x32\x0f.pb.LastSpinRspH\x00\x12#\n\x07Tourney\x18\xa8\x46 \x01(\x0b\x32\x0f.pb.RespTourneyH\x00\x12\x1e\n\x05\x42onus\x18\x90N \x01(\x0b\x32\x0c.pb.RspBonusH\x00\x12*\n\x0bLoginReward\x18\x91N \x01(\x0b\x32\x12.pb.RspLoginRewardH\x00\x12#\n\x07HoneyDo\x18\xf8U \x01(\x0b\x32\x0f.pb.HoneyDo.RspH\x00\x12$\n\x07Mailbox\x18\xe0] \x01(\x0b\x32\x10.pb.Mailbox.RespH\x00\x12\x1e\n\x04Shop\x18\xc8\x65 \x01(\x0b\x32\r.pb.Shop.RespH\x00\x12\x1e\n\x04\x42uff\x18\xb0m \x01(\x0b\x32\r.pb.Buff.RespH\x00\x12*\n\nPostOffice\x18\x80} \x01(\x0b\x32\x13.pb.PostOffice.RespH\x00\x12!\n\x05Quest\x18\xe8\x84\x01 \x01(\x0b\x32\x0e.pb.Quests.RspH\x00\x12+\n\x0bNoviceGuide\x18\xcc\x85\x01 \x01(\x0b\x32\x12.pb.NoviceGuideRspH\x00\x12\x36\n\x12NoviceGuideSaveRsp\x18\xcd\x85\x01 \x01(\x0b\x32\x16.pb.NoviceGuideSaveRspH\x00\x12&\n\x08\x41\x63tivity\x18\xd6\x85\x01 \x01(\x0b\x32\x10.pb.Activity.RspH\x00\x12\x30\n\rCardGathering\x18\xe0\x85\x01 \x01(\x0b\x32\x15.pb.CardGathering.RspH\x00\x12)\n\nLobbyWheel\x18\xd0\x8c\x01 \x01(\x0b\x32\x11.pb.LobbyWheelRspH\x00\x12*\n\nDailyBonus\x18\xd1\x8c\x01 \x01(\x0b\x32\x12.pb.DailyBonus.RspH\x00\x12\x1f\n\x03Vip\x18\xd2\x8c\x01 \x01(\x0b\x32\x0e.pb.Vip.VipRspH\x00\x12.\n\x0c\x44\x61ilyMission\x18\xd3\x8c\x01 \x01(\x0b\x32\x14.pb.DailyMission.RspH\x00\x12*\n\nLobbyPoker\x18\xd4\x8c\x01 \x01(\x0b\x32\x12.pb.LobbyPoker.RspH\x00\x12\x1e\n\x04Hero\x18\xd5\x8c\x01 \x01(\x0b\x32\x0c.pb.Hero.RspH\x00\x12\x1c\n\x02\x46\x42\x18\xd6\x8c\x01 \x01(\x0b\x32\x0c.pb.FB.FBRspH\x00\x12%\n\x05Piggy\x18\xd7\x8c\x01 \x01(\x0b\x32\x12.pb.Piggy.PiggyRspH\x00\x12$\n\x06\x46\x42\x42ind\x18\xd8\x8c\x01 \x01(\x0b\x32\x10.pb.FB.FBBindRspH\x00\x12<\n\x0eLobbLuckySeven\x18\xd9\x8c\x01 \x01(\x0b\x32 .pb.LobbLuckySeven.LuckySevenRspH\x00\x12(\n\tRoyalPass\x18\xda\x8c\x01 \x01(\x0b\x32\x11.pb.RoyalPass.RspH\x00\x12\"\n\x06\x43onpon\x18\xdb\x8c\x01 \x01(\x0b\x32\x0e.pb.Conpon.RspH\x00\x12\x0c\n\x03SID\x18\xe9\x07 \x01(\r\x12\r\n\x04SSID\x18\xea\x07 \x01(\x03\x42\x05\n\x03one\"\xe9\x01\n\tRspPublic\x12&\n\x04Util\x18\xe8\x07 \x01(\x0b\x32\x15.pb.RspPublic.RspUtilH\x00\x1a\x44\n\x04Pong\x12\x15\n\rNanoTimestamp\x18\x01 \x01(\x03\x12\x11\n\tTimestamp\x18\x02 \x01(\x05\x12\x12\n\nNanoSecond\x18\x03 \x01(\x05\x1ag\n\x07RspUtil\x12#\n\x04Ping\x18\xe9\x07 \x01(\x0b\x32\x12.pb.RspPublic.PongH\x00\x12\x0f\n\x04\x45\x63ho\x18\xea\x07 \x01(\tH\x00\x12\x1f\n\x07Version\x18\xeb\x07 \x01(\x0b\x32\x0b.pb.VersionH\x00\x42\x05\n\x03oneB\x05\n\x03one\"\xd6\x05\n\x08RspMulti\x12\x1f\n\tResponses\x18\x01 \x03(\x0b\x32\x0c.pb.Response\x12\x19\n\x06\x41wards\x18\x02 \x03(\x0b\x32\t.pb.Award\x12\x1e\n\x05State\x18\x03 \x01(\x0b\x32\x0f.pb.Player.Mode\x12$\n\x07\x41\x63\x63ount\x18\x04 \x01(\x0b\x32\x13.pb.Player.Currency\x12\"\n\x05Times\x18\x05 \x01(\x0b\x32\x13.pb.Player.TimesBag\x12$\n\x08\x42oosters\x18\x06 \x03(\x0b\x32\x12.pb.Player.Booster\x12$\n\x08\x42\x61gItems\x18\x07 \x03(\x0b\x32\x12.pb.Player.BagItem\x12\"\n\x07\x43onpons\x18\x08 \x03(\x0b\x32\x11.pb.Player.Conpon\x12-\n\x13HoneyDoUpdatedTasks\x18\x0b \x03(\x0b\x32\x10.pb.HoneyDo.Task\x12*\n\x0cQuestUpdated\x18\x0c \x03(\x0b\x32\x14.pb.Quests.QuestInfo\x12\x35\n\x0eMissionUpdated\x18\r \x03(\x0b\x32\x1d.pb.DailyMission.MissionTasks\x12\'\n\x0bHeroUpdated\x18\x0e \x01(\x0b\x32\x12.pb.Hero.HeroSkill\x12&\n\x0fHeroInfoUpdated\x18\x0f \x01(\x0b\x32\r.pb.Hero.Hero\x12(\n\x0elevelUpUpdated\x18\x10 \x01(\x0b\x32\x10.pb.LevelUpAward\x12\'\n\x0cpiggyUpdated\x18\x11 \x01(\x0b\x32\x11.pb.Piggy.Updated\x12/\n\x15\x41\x63tivityEventDropList\x18\x12 \x03(\x0b\x32\x10.pb.ActivityDrop\x12,\n\x0c\x43haseUpdated\x18\x13 \x01(\x0b\x32\x16.pb.Chase.ChaseUpdated\x12\x0f\n\x06\x45vents\x18\xc8\x01 \x03(\t\x12\x0e\n\x05Tasks\x18\xc9\x01 \x03(\t\"6\n\x08RspQuest\x12\x11\n\x06Newbie\x18\xa1\x1f \x01(\rH\x00\x12\x10\n\x05\x44\x61ily\x18\xa2\x1f \x01(\rH\x00\x42\x05\n\x03oneB\x06Z\x04.;pbb\x06proto3'
+  serialized_pb=b'\n\trsp.proto\x12\x02pb\x1a\x12\x61uthenticate.proto\x1a\x0b\x61ward.proto\x1a\x0b\x62onus.proto\x1a\nbuff.proto\x1a\x12login_reward.proto\x1a\rmailbox.proto\x1a\rmission.proto\x1a\x0cplayer.proto\x1a\x11post_office.proto\x1a\x0frsp_error.proto\x1a\nshop.proto\x1a\x0bslots.proto\x1a\x13slots_jackpot.proto\x1a\x12slots_puzzle.proto\x1a\x11slots_theme.proto\x1a\rtourney.proto\x1a\rversion.proto\x1a\x0bquest.proto\x1a\x10lobbywheel.proto\x1a\x10\x64\x61ilybonus.proto\x1a\tvip.proto\x1a\x12\x64\x61ilymission.proto\x1a\x15lobbyluckypoker.proto\x1a\x11noviceguide.proto\x1a\nhero.proto\x1a\rlevelup.proto\x1a\x08\x66\x62.proto\x1a\x0bpiggy.proto\x1a\x0e\x61\x63tivity.proto\x1a\x15lobbyluckyseven.proto\x1a\x0froyalpass.proto\x1a\x0b\x63hase.proto\x1a\x13\x63\x61rdgathering.proto\x1a\x0c\x63onpon.proto\x1a\x11levelsprint.proto\"\xbb\x02\n\rBunchResponse\x12\x1b\n\x05\x45rror\x18\x01 \x01(\x0b\x32\x0c.pb.RspError\x12\x1d\n\x05Login\x18\x02 \x01(\x0b\x32\x0c.pb.RespAuthH\x00\x12\x1f\n\x06Public\x18\x03 \x01(\x0b\x32\r.pb.RspPublicH\x00\x12\x1d\n\x05Multi\x18\x05 \x01(\x0b\x32\x0c.pb.RspMultiH\x00\x12\x15\n\x0cMidnightZero\x18\xe8\x07 \x01(\x03\x12\x13\n\nServerTime\x18\xe9\x07 \x01(\x03\x12\x13\n\nPlayerTime\x18\xea\x07 \x01(\x03\x12\x18\n\x0fServerLocalTime\x18\xf3\x07 \x01(\t\x12\x18\n\x0fPlayerLocalTime\x18\xf4\x07 \x01(\t\x12\x1a\n\x11MidnightLocalTime\x18\xf5\x07 \x01(\t\x12\x16\n\rServerUTCZone\x18\xf7\x07 \x01(\x05\x42\x05\n\x03one\"\xb2\x0b\n\x08Response\x12\x0c\n\x04Step\x18\x01 \x01(\r\x12\x11\n\tRequestID\x18\x02 \x01(\r\x12 \n\x06Player\x18\xf0. \x01(\x0b\x32\r.pb.RspPlayerH\x00\x12!\n\x04Play\x18\xb8\x17 \x01(\x0b\x32\x10.pb.PlayResponseH\x00\x12/\n\x07Jackpot\x18\xb9\x17 \x01(\x0b\x32\x1b.pb.JackpotSyncing.ResponseH\x00\x12&\n\x06Puzzle\x18\xba\x17 \x01(\x0b\x32\x13.pb.Puzzle.ResponseH\x00\x12#\n\tThemeList\x18\xd0\x0f \x01(\x0b\x32\r.pb.ThemeListH\x00\x12\'\n\x0bThemeStatus\x18\xa0\x1f \x01(\x0b\x32\x0f.pb.ThemeStatusH\x00\x12)\n\x0cThemeRestore\x18\xa2\x1f \x01(\x0b\x32\x10.pb.ThemeRestoreH\x00\x12\'\n\x0bLastSpinRsp\x18\xa1\x1f \x01(\x0b\x32\x0f.pb.LastSpinRspH\x00\x12#\n\x07Tourney\x18\xa8\x46 \x01(\x0b\x32\x0f.pb.RespTourneyH\x00\x12\x1e\n\x05\x42onus\x18\x90N \x01(\x0b\x32\x0c.pb.RspBonusH\x00\x12*\n\x0bLoginReward\x18\x91N \x01(\x0b\x32\x12.pb.RspLoginRewardH\x00\x12#\n\x07HoneyDo\x18\xf8U \x01(\x0b\x32\x0f.pb.HoneyDo.RspH\x00\x12$\n\x07Mailbox\x18\xe0] \x01(\x0b\x32\x10.pb.Mailbox.RespH\x00\x12\x1e\n\x04Shop\x18\xc8\x65 \x01(\x0b\x32\r.pb.Shop.RespH\x00\x12\x1e\n\x04\x42uff\x18\xb0m \x01(\x0b\x32\r.pb.Buff.RespH\x00\x12*\n\nPostOffice\x18\x80} \x01(\x0b\x32\x13.pb.PostOffice.RespH\x00\x12!\n\x05Quest\x18\xe8\x84\x01 \x01(\x0b\x32\x0e.pb.Quests.RspH\x00\x12+\n\x0bNoviceGuide\x18\xcc\x85\x01 \x01(\x0b\x32\x12.pb.NoviceGuideRspH\x00\x12\x36\n\x12NoviceGuideSaveRsp\x18\xcd\x85\x01 \x01(\x0b\x32\x16.pb.NoviceGuideSaveRspH\x00\x12&\n\x08\x41\x63tivity\x18\xd6\x85\x01 \x01(\x0b\x32\x10.pb.Activity.RspH\x00\x12\x30\n\rCardGathering\x18\xe0\x85\x01 \x01(\x0b\x32\x15.pb.CardGathering.RspH\x00\x12)\n\nLobbyWheel\x18\xd0\x8c\x01 \x01(\x0b\x32\x11.pb.LobbyWheelRspH\x00\x12*\n\nDailyBonus\x18\xd1\x8c\x01 \x01(\x0b\x32\x12.pb.DailyBonus.RspH\x00\x12\x1f\n\x03Vip\x18\xd2\x8c\x01 \x01(\x0b\x32\x0e.pb.Vip.VipRspH\x00\x12.\n\x0c\x44\x61ilyMission\x18\xd3\x8c\x01 \x01(\x0b\x32\x14.pb.DailyMission.RspH\x00\x12*\n\nLobbyPoker\x18\xd4\x8c\x01 \x01(\x0b\x32\x12.pb.LobbyPoker.RspH\x00\x12\x1e\n\x04Hero\x18\xd5\x8c\x01 \x01(\x0b\x32\x0c.pb.Hero.RspH\x00\x12\x1c\n\x02\x46\x42\x18\xd6\x8c\x01 \x01(\x0b\x32\x0c.pb.FB.FBRspH\x00\x12%\n\x05Piggy\x18\xd7\x8c\x01 \x01(\x0b\x32\x12.pb.Piggy.PiggyRspH\x00\x12$\n\x06\x46\x42\x42ind\x18\xd8\x8c\x01 \x01(\x0b\x32\x10.pb.FB.FBBindRspH\x00\x12<\n\x0eLobbLuckySeven\x18\xd9\x8c\x01 \x01(\x0b\x32 .pb.LobbLuckySeven.LuckySevenRspH\x00\x12(\n\tRoyalPass\x18\xda\x8c\x01 \x01(\x0b\x32\x11.pb.RoyalPass.RspH\x00\x12\"\n\x06\x43onpon\x18\xdb\x8c\x01 \x01(\x0b\x32\x0e.pb.Conpon.RspH\x00\x12,\n\x0bLevelSprint\x18\xdc\x8c\x01 \x01(\x0b\x32\x13.pb.LevelSprint.RspH\x00\x12\x0c\n\x03SID\x18\xe9\x07 \x01(\r\x12\r\n\x04SSID\x18\xea\x07 \x01(\x03\x42\x05\n\x03one\"\xe9\x01\n\tRspPublic\x12&\n\x04Util\x18\xe8\x07 \x01(\x0b\x32\x15.pb.RspPublic.RspUtilH\x00\x1a\x44\n\x04Pong\x12\x15\n\rNanoTimestamp\x18\x01 \x01(\x03\x12\x11\n\tTimestamp\x18\x02 \x01(\x05\x12\x12\n\nNanoSecond\x18\x03 \x01(\x05\x1ag\n\x07RspUtil\x12#\n\x04Ping\x18\xe9\x07 \x01(\x0b\x32\x12.pb.RspPublic.PongH\x00\x12\x0f\n\x04\x45\x63ho\x18\xea\x07 \x01(\tH\x00\x12\x1f\n\x07Version\x18\xeb\x07 \x01(\x0b\x32\x0b.pb.VersionH\x00\x42\x05\n\x03oneB\x05\n\x03one\"\x89\x06\n\x08RspMulti\x12\x1f\n\tResponses\x18\x01 \x03(\x0b\x32\x0c.pb.Response\x12\x19\n\x06\x41wards\x18\x02 \x03(\x0b\x32\t.pb.Award\x12\x1e\n\x05State\x18\x03 \x01(\x0b\x32\x0f.pb.Player.Mode\x12$\n\x07\x41\x63\x63ount\x18\x04 \x01(\x0b\x32\x13.pb.Player.Currency\x12\"\n\x05Times\x18\x05 \x01(\x0b\x32\x13.pb.Player.TimesBag\x12$\n\x08\x42oosters\x18\x06 \x03(\x0b\x32\x12.pb.Player.Booster\x12$\n\x08\x42\x61gItems\x18\x07 \x03(\x0b\x32\x12.pb.Player.BagItem\x12\"\n\x07\x43onpons\x18\x08 \x03(\x0b\x32\x11.pb.Player.Conpon\x12-\n\x13HoneyDoUpdatedTasks\x18\x0b \x03(\x0b\x32\x10.pb.HoneyDo.Task\x12*\n\x0cQuestUpdated\x18\x0c \x03(\x0b\x32\x14.pb.Quests.QuestInfo\x12\x35\n\x0eMissionUpdated\x18\r \x03(\x0b\x32\x1d.pb.DailyMission.MissionTasks\x12\'\n\x0bHeroUpdated\x18\x0e \x01(\x0b\x32\x12.pb.Hero.HeroSkill\x12&\n\x0fHeroInfoUpdated\x18\x0f \x01(\x0b\x32\r.pb.Hero.Hero\x12(\n\x0elevelUpUpdated\x18\x10 \x01(\x0b\x32\x10.pb.LevelUpAward\x12\'\n\x0cpiggyUpdated\x18\x11 \x01(\x0b\x32\x11.pb.Piggy.Updated\x12/\n\x15\x41\x63tivityEventDropList\x18\x12 \x03(\x0b\x32\x10.pb.ActivityDrop\x12,\n\x0c\x43haseUpdated\x18\x13 \x01(\x0b\x32\x16.pb.Chase.ChaseUpdated\x12\x31\n\x0fLevelSpiritGame\x18\x14 \x01(\x0b\x32\x18.pb.LevelSprint.GameData\x12\x0f\n\x06\x45vents\x18\xc8\x01 \x03(\t\x12\x0e\n\x05Tasks\x18\xc9\x01 \x03(\t\"6\n\x08RspQuest\x12\x11\n\x06Newbie\x18\xa1\x1f \x01(\rH\x00\x12\x10\n\x05\x44\x61ily\x18\xa2\x1f \x01(\rH\x00\x42\x05\n\x03oneB\x06Z\x04.;pbb\x06proto3'
   ,
-  dependencies=[authenticate__pb2.DESCRIPTOR,award__pb2.DESCRIPTOR,bonus__pb2.DESCRIPTOR,buff__pb2.DESCRIPTOR,login__reward__pb2.DESCRIPTOR,mailbox__pb2.DESCRIPTOR,mission__pb2.DESCRIPTOR,player__pb2.DESCRIPTOR,post__office__pb2.DESCRIPTOR,rsp__error__pb2.DESCRIPTOR,shop__pb2.DESCRIPTOR,slots__pb2.DESCRIPTOR,slots__jackpot__pb2.DESCRIPTOR,slots__puzzle__pb2.DESCRIPTOR,slots__theme__pb2.DESCRIPTOR,tourney__pb2.DESCRIPTOR,version__pb2.DESCRIPTOR,quest__pb2.DESCRIPTOR,lobbywheel__pb2.DESCRIPTOR,dailybonus__pb2.DESCRIPTOR,vip__pb2.DESCRIPTOR,dailymission__pb2.DESCRIPTOR,lobbyluckypoker__pb2.DESCRIPTOR,noviceguide__pb2.DESCRIPTOR,hero__pb2.DESCRIPTOR,levelup__pb2.DESCRIPTOR,fb__pb2.DESCRIPTOR,piggy__pb2.DESCRIPTOR,activity__pb2.DESCRIPTOR,lobbyluckyseven__pb2.DESCRIPTOR,royalpass__pb2.DESCRIPTOR,chase__pb2.DESCRIPTOR,cardgathering__pb2.DESCRIPTOR,conpon__pb2.DESCRIPTOR,])
+  dependencies=[authenticate__pb2.DESCRIPTOR,award__pb2.DESCRIPTOR,bonus__pb2.DESCRIPTOR,buff__pb2.DESCRIPTOR,login__reward__pb2.DESCRIPTOR,mailbox__pb2.DESCRIPTOR,mission__pb2.DESCRIPTOR,player__pb2.DESCRIPTOR,post__office__pb2.DESCRIPTOR,rsp__error__pb2.DESCRIPTOR,shop__pb2.DESCRIPTOR,slots__pb2.DESCRIPTOR,slots__jackpot__pb2.DESCRIPTOR,slots__puzzle__pb2.DESCRIPTOR,slots__theme__pb2.DESCRIPTOR,tourney__pb2.DESCRIPTOR,version__pb2.DESCRIPTOR,quest__pb2.DESCRIPTOR,lobbywheel__pb2.DESCRIPTOR,dailybonus__pb2.DESCRIPTOR,vip__pb2.DESCRIPTOR,dailymission__pb2.DESCRIPTOR,lobbyluckypoker__pb2.DESCRIPTOR,noviceguide__pb2.DESCRIPTOR,hero__pb2.DESCRIPTOR,levelup__pb2.DESCRIPTOR,fb__pb2.DESCRIPTOR,piggy__pb2.DESCRIPTOR,activity__pb2.DESCRIPTOR,lobbyluckyseven__pb2.DESCRIPTOR,royalpass__pb2.DESCRIPTOR,chase__pb2.DESCRIPTOR,cardgathering__pb2.DESCRIPTOR,conpon__pb2.DESCRIPTOR,levelsprint__pb2.DESCRIPTOR,])
 
 
 
@@ -162,8 +163,8 @@ _BUNCHRESPONSE = _descriptor.Descriptor(
       create_key=_descriptor._internal_create_key,
     fields=[]),
   ],
-  serialized_start=567,
-  serialized_end=882,
+  serialized_start=586,
+  serialized_end=901,
 )
 
 
@@ -421,14 +422,21 @@ _RESPONSE = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='SID', full_name='pb.Response.SID', index=35,
+      name='LevelSprint', full_name='pb.Response.LevelSprint', index=35,
+      number=18012, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='SID', full_name='pb.Response.SID', index=36,
       number=1001, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='SSID', full_name='pb.Response.SSID', index=36,
+      name='SSID', full_name='pb.Response.SSID', index=37,
       number=1002, type=3, cpp_type=2, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -451,8 +459,8 @@ _RESPONSE = _descriptor.Descriptor(
       create_key=_descriptor._internal_create_key,
     fields=[]),
   ],
-  serialized_start=885,
-  serialized_end=2297,
+  serialized_start=904,
+  serialized_end=2362,
 )
 
 
@@ -497,8 +505,8 @@ _RSPPUBLIC_PONG = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2353,
-  serialized_end=2421,
+  serialized_start=2418,
+  serialized_end=2486,
 )
 
 _RSPPUBLIC_RSPUTIL = _descriptor.Descriptor(
@@ -547,8 +555,8 @@ _RSPPUBLIC_RSPUTIL = _descriptor.Descriptor(
       create_key=_descriptor._internal_create_key,
     fields=[]),
   ],
-  serialized_start=2423,
-  serialized_end=2526,
+  serialized_start=2488,
+  serialized_end=2591,
 )
 
 _RSPPUBLIC = _descriptor.Descriptor(
@@ -583,8 +591,8 @@ _RSPPUBLIC = _descriptor.Descriptor(
       create_key=_descriptor._internal_create_key,
     fields=[]),
   ],
-  serialized_start=2300,
-  serialized_end=2533,
+  serialized_start=2365,
+  serialized_end=2598,
 )
 
 
@@ -716,14 +724,21 @@ _RSPMULTI = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='Events', full_name='pb.RspMulti.Events', index=17,
+      name='LevelSpiritGame', full_name='pb.RspMulti.LevelSpiritGame', index=17,
+      number=20, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='Events', full_name='pb.RspMulti.Events', index=18,
       number=200, type=9, cpp_type=9, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='Tasks', full_name='pb.RspMulti.Tasks', index=18,
+      name='Tasks', full_name='pb.RspMulti.Tasks', index=19,
       number=201, type=9, cpp_type=9, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
@@ -741,8 +756,8 @@ _RSPMULTI = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2536,
-  serialized_end=3262,
+  serialized_start=2601,
+  serialized_end=3378,
 )
 
 
@@ -785,8 +800,8 @@ _RSPQUEST = _descriptor.Descriptor(
       create_key=_descriptor._internal_create_key,
     fields=[]),
   ],
-  serialized_start=3264,
-  serialized_end=3318,
+  serialized_start=3380,
+  serialized_end=3434,
 )
 
 _BUNCHRESPONSE.fields_by_name['Error'].message_type = rsp__error__pb2._RSPERROR
@@ -835,6 +850,7 @@ _RESPONSE.fields_by_name['FBBind'].message_type = fb__pb2._FB_FBBINDRSP
 _RESPONSE.fields_by_name['LobbLuckySeven'].message_type = lobbyluckyseven__pb2._LOBBLUCKYSEVEN_LUCKYSEVENRSP
 _RESPONSE.fields_by_name['RoyalPass'].message_type = royalpass__pb2._ROYALPASS_RSP
 _RESPONSE.fields_by_name['Conpon'].message_type = conpon__pb2._CONPON_RSP
+_RESPONSE.fields_by_name['LevelSprint'].message_type = levelsprint__pb2._LEVELSPRINT_RSP
 _RESPONSE.oneofs_by_name['one'].fields.append(
   _RESPONSE.fields_by_name['Player'])
 _RESPONSE.fields_by_name['Player'].containing_oneof = _RESPONSE.oneofs_by_name['one']
@@ -934,6 +950,9 @@ _RESPONSE.fields_by_name['RoyalPass'].containing_oneof = _RESPONSE.oneofs_by_nam
 _RESPONSE.oneofs_by_name['one'].fields.append(
   _RESPONSE.fields_by_name['Conpon'])
 _RESPONSE.fields_by_name['Conpon'].containing_oneof = _RESPONSE.oneofs_by_name['one']
+_RESPONSE.oneofs_by_name['one'].fields.append(
+  _RESPONSE.fields_by_name['LevelSprint'])
+_RESPONSE.fields_by_name['LevelSprint'].containing_oneof = _RESPONSE.oneofs_by_name['one']
 _RSPPUBLIC_PONG.containing_type = _RSPPUBLIC
 _RSPPUBLIC_RSPUTIL.fields_by_name['Ping'].message_type = _RSPPUBLIC_PONG
 _RSPPUBLIC_RSPUTIL.fields_by_name['Version'].message_type = version__pb2._VERSION
@@ -968,6 +987,7 @@ _RSPMULTI.fields_by_name['levelUpUpdated'].message_type = levelup__pb2._LEVELUPA
 _RSPMULTI.fields_by_name['piggyUpdated'].message_type = piggy__pb2._PIGGY_UPDATED
 _RSPMULTI.fields_by_name['ActivityEventDropList'].message_type = activity__pb2._ACTIVITYDROP
 _RSPMULTI.fields_by_name['ChaseUpdated'].message_type = chase__pb2._CHASE_CHASEUPDATED
+_RSPMULTI.fields_by_name['LevelSpiritGame'].message_type = levelsprint__pb2._LEVELSPRINT_GAMEDATA
 _RSPQUEST.oneofs_by_name['one'].fields.append(
   _RSPQUEST.fields_by_name['Newbie'])
 _RSPQUEST.fields_by_name['Newbie'].containing_oneof = _RSPQUEST.oneofs_by_name['one']

@@ -12,6 +12,7 @@ from google.protobuf import symbol_database as _symbol_database
 _sym_db = _symbol_database.Default()
 
 
+import award_pb2 as award__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
@@ -20,8 +21,9 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'Z\004.;pb',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x12\x61uthenticate.proto\x12\x02pb\".\n\x07ReqAuth\x12\x14\n\x08PlayerID\x18\x01 \x01(\x10\x42\x02\x30\x01\x12\r\n\x05Token\x18\x02 \x01(\t\"\x8b\x02\n\x08RespAuth\x12\x14\n\x08PlayerID\x18\x01 \x01(\x10\x42\x02\x30\x01\x12\r\n\x05Token\x18\x02 \x01(\t\x12\x10\n\x08RTMToken\x18\x03 \x01(\t\x12\x14\n\x0cRTMProjectID\x18\x04 \x01(\x05\x12\x1e\n\x06Result\x18\x05 \x01(\x0e\x32\x0e.pb.AuthResult\x12\x13\n\x0bLoginDayNth\x18\x07 \x01(\x05\x12\x13\n\x0bPayServerID\x18\x08 \x01(\t\x12\x12\n\nServerMark\x18\t \x01(\t\x12\x0b\n\x03Vip\x18\n \x01(\r\x12\r\n\x05Level\x18\x0b \x01(\r\x12\x0f\n\x07PayUser\x18\x0c \x01(\x08\x12\x14\n\x0c\x43liVerUpCoin\x18\r \x01(\x04\x12\x11\n\tsessionID\x18\x0e \x01(\t*0\n\nAuthResult\x12\n\n\x06\x41uthOK\x10\x00\x12\x16\n\x12\x41uthInvalidSession\x10\x01\x42\x06Z\x04.;pbb\x06proto3'
-)
+  serialized_pb=b'\n\x12\x61uthenticate.proto\x12\x02pb\x1a\x0b\x61ward.proto\".\n\x07ReqAuth\x12\x14\n\x08PlayerID\x18\x01 \x01(\x10\x42\x02\x30\x01\x12\r\n\x05Token\x18\x02 \x01(\t\"\xa6\x02\n\x08RespAuth\x12\x14\n\x08PlayerID\x18\x01 \x01(\x10\x42\x02\x30\x01\x12\r\n\x05Token\x18\x02 \x01(\t\x12\x10\n\x08RTMToken\x18\x03 \x01(\t\x12\x14\n\x0cRTMProjectID\x18\x04 \x01(\x05\x12\x1e\n\x06Result\x18\x05 \x01(\x0e\x32\x0e.pb.AuthResult\x12\x13\n\x0bLoginDayNth\x18\x07 \x01(\x05\x12\x13\n\x0bPayServerID\x18\x08 \x01(\t\x12\x12\n\nServerMark\x18\t \x01(\t\x12\x0b\n\x03Vip\x18\n \x01(\r\x12\r\n\x05Level\x18\x0b \x01(\r\x12\x0f\n\x07PayUser\x18\x0c \x01(\x08\x12\x14\n\x0c\x43liVerUpCoin\x18\r \x01(\x04\x12\x11\n\tsessionID\x18\x0e \x01(\t\x12\x19\n\x06\x41wards\x18\x0f \x03(\x0b\x32\t.pb.Award*0\n\nAuthResult\x12\n\n\x06\x41uthOK\x10\x00\x12\x16\n\x12\x41uthInvalidSession\x10\x01\x42\x06Z\x04.;pbb\x06proto3'
+  ,
+  dependencies=[award__pb2.DESCRIPTOR,])
 
 _AUTHRESULT = _descriptor.EnumDescriptor(
   name='AuthResult',
@@ -43,8 +45,8 @@ _AUTHRESULT = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=344,
-  serialized_end=392,
+  serialized_start=384,
+  serialized_end=432,
 )
 _sym_db.RegisterEnumDescriptor(_AUTHRESULT)
 
@@ -88,8 +90,8 @@ _REQAUTH = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=26,
-  serialized_end=72,
+  serialized_start=39,
+  serialized_end=85,
 )
 
 
@@ -192,6 +194,13 @@ _RESPAUTH = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='Awards', full_name='pb.RespAuth.Awards', index=13,
+      number=15, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -204,11 +213,12 @@ _RESPAUTH = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=75,
-  serialized_end=342,
+  serialized_start=88,
+  serialized_end=382,
 )
 
 _RESPAUTH.fields_by_name['Result'].enum_type = _AUTHRESULT
+_RESPAUTH.fields_by_name['Awards'].message_type = award__pb2._AWARD
 DESCRIPTOR.message_types_by_name['ReqAuth'] = _REQAUTH
 DESCRIPTOR.message_types_by_name['RespAuth'] = _RESPAUTH
 DESCRIPTOR.enum_types_by_name['AuthResult'] = _AUTHRESULT

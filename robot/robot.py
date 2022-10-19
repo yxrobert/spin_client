@@ -116,6 +116,14 @@ class RobotBase:
         req = make_cardgathering_gameaward_req(self.player_id, self.token)
         self.send_packet(req)
 
+    def req_levelsprint_get(self):
+        req = make_levelsprint_get_req(self.player_id, self.token)
+        self.send_packet(req)
+
+    def req_levelsprint_draw(self):
+        req = make_levelsprint_draw_req(self.player_id, self.token)
+        self.send_packet(req)
+
     def req_hero_active(self, id, name):
         req = make_hero_active_req(self.player_id, self.token, id, name)
         self.send_packet(req)
@@ -142,8 +150,10 @@ class RobotBase:
                 self.on_activity(r.Activity)
             elif r.HasField("CardGathering"):
                 self.on_cardgathering(r.CardGathering)
-            elif packet.HasField("TreasureRoom"):
-                self.on_treasure(packet.TreasureRoom)
+            # elif packet.HasField("TreasureRoom"):
+            #     self.on_treasure(packet.TreasureRoom)
+            elif r.HasField("LevelSprint"):
+                self.on_levelsprint(r.LevelSprint)
                 pass
         
         self.log("Awards", packet.Multi.Awards)
@@ -193,6 +203,9 @@ class RobotBase:
         self.log(packet)
 
     def on_cardgathering(self, packet):
+        self.log(packet)
+
+    def on_levelsprint(self, packet):
         self.log(packet)
 
     def on_treasure(self, packet):

@@ -4,11 +4,11 @@
 import msg
 from robot import SpinRobot
 
-fortune_theme_id = 10040
+_theme_id = 10010
 
-class FortuneRobot(SpinRobot):
+class IcePrincessRobot(SpinRobot):
     def __init__(self, name, theme_id):
-        SpinRobot.__init__(self, name, fortune_theme_id)
+        SpinRobot.__init__(self, name, _theme_id)
 
     def theme_status_callback(self, packet):
         pass

@@ -5,7 +5,7 @@ import msg
 from robot import SpinRobot
 from common import *
 
-demon_theme_id = 10250
+demon_theme_id = 10090
 
 class TrainRobot(SpinRobot):
     def __init__(self, name, theme_id):
@@ -16,7 +16,7 @@ class TrainRobot(SpinRobot):
 
     def play_status_callback(self, packet):
         # self.log(packet.Spin.SymbolList)
-        self.log_spin_wins(packet.Spin)
+        # self.log_spin_wins(packet.Spin)
         pass
 
 def run(player):
@@ -28,11 +28,11 @@ def run(player):
 
     # player.send_cmd(panels_yq)
     # player.send_cmd(gm_enter)
-    # player.send_cmd(add_money)
-    # player.send_cmd("add level 11")
+    player.send_cmd(add_money)
+    # player.send_cmd("add level 50")
     # player.send_cmd("bgdrop 4")
 
-    player.spin_times(1)
+    player.spin_times(100000)
     # player.spin_to_base()
     # player.spin_to_next_stage()
 

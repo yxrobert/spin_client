@@ -24,10 +24,11 @@ class DefaultRobot(SpinRobot):
         pass
 
     def on_act_userdata(self, packet):
-        msg.log_act_bigo(self, packet)
+        msg.log_act_all(self, packet)
 
     def on_act_play(self, packet):
-        msg.log_act_bigo(self, packet)
+        msg.log_act_all(self, packet)
+
 
 
 def default_spin_callback(packet):
@@ -45,28 +46,32 @@ def fakeTIme():
     Sender.send_timefake("11111")
 
 def gm_meta(player):
-    player.send_cmd("metaj 2,6")
+    player.send_cmd("metaj 0,6")
     # player.send_cmd("metap")
-    # player.send_cmd("metas")
+    player.send_cmd("metas")
 
     # player.send_cmd("candypop 2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2")
 
     pass
 
 def run(player):
+    player.send_cmd("panelm 1,2,3;1,2,3,4;1,2,3,4,5|1,2,3;1,2,3,4;1,2,3,4,5")
     # player.send_cmd(candy_cmd)
     # player.send_cmd(gem_cmd)
-    player.send_cmd(add_money)
+    # player.send_cmd(add_money)
+    # player.send_cmd("currency coin,1111")
+    # player.send_cmd("pgto 120")
+    # player.send_cmd("pgreset")
     # player.send_cmd(xpay)
     # player.send_cmd(free_me)
     # player.send_cmd(cmd_lj)
     
     # player.send_cmd(basebet_cmd)
     # player.send_cmd(coin_cmd)
-    player.send_cmd(level_cmd)
+    # player.send_cmd(level_cmd)
     # player.send_cmd(bingo_bp)
     # player.send_cmd(lv10_cmd)
-    gm_meta(player)
+    # gm_meta(player)
 
     # player.send_cmd(dice_cmd)
     # player.send_cmd(candy_cmd)
@@ -77,7 +82,7 @@ def run(player):
     # player.send_cmd(journey)
     
     # player.req_treasure_get()
-    # player.req_activity_list()
+    player.req_activity_list()
 
     # act_id = 50011
     act_id = 23

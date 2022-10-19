@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'Z\004.;pb',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x13\x65ndlessriches.proto\x12\x02pb\x1a\nshop.proto\"\xa0\x04\n\rEndlessRiches\x1aT\n\x04\x44\x61ta\x12%\n\x05Grids\x18\x01 \x03(\x0b\x32\x16.pb.EndlessRiches.Grid\x12%\n\tRoyalSeal\x18\x02 \x01(\x0b\x32\x12.pb.Shop.RoyalSeal\x1ai\n\x04Grid\x12\x0e\n\x06GridID\x18\x01 \x01(\r\x12/\n\nGridAwards\x18\x02 \x03(\x0b\x32\x1b.pb.EndlessRiches.GridAward\x12\r\n\x05price\x18\x03 \x01(\r\x12\x11\n\tproductID\x18\x04 \x01(\t\x1a\x37\n\x05\x41ward\x12\t\n\x01n\x18\x02 \x01(\t\x12\t\n\x01\x63\x18\x03 \x01(\x04\x12\x0b\n\x03min\x18\x04 \x01(\r\x12\x0b\n\x03max\x18\x05 \x01(\r\x1a|\n\tGridAward\x12)\n\x04Type\x18\x01 \x01(\x0e\x32\x1b.pb.EndlessRiches.AwardType\x12\'\n\x06\x41wards\x18\x02 \x03(\x0b\x32\x17.pb.EndlessRiches.Award\x12\x0c\n\x04skin\x18\x06 \x01(\r\x12\r\n\x05value\x18\x07 \x01(\x01\"\x96\x01\n\tAwardType\x12\x17\n\x13\x41wardType_CoinValue\x10\x00\x12\x12\n\x0e\x41wardType_Item\x10\x01\x12\x16\n\x12\x41wardType_Currency\x10\x02\x12\x17\n\x13\x41wardType_BonusGame\x10\x03\x12\x15\n\x11\x41wardType_Booster\x10\x04\x12\x14\n\x10\x41wardType_RanBox\x10\x05\x42\x06Z\x04.;pbb\x06proto3'
+  serialized_pb=b'\n\x13\x65ndlessriches.proto\x12\x02pb\x1a\nshop.proto\"\xe1\x04\n\rEndlessRiches\x1aT\n\x04\x44\x61ta\x12%\n\x05Grids\x18\x01 \x03(\x0b\x32\x16.pb.EndlessRiches.Grid\x12%\n\tRoyalSeal\x18\x02 \x01(\x0b\x32\x12.pb.Shop.RoyalSeal\x1ai\n\x04Grid\x12\x0e\n\x06GridID\x18\x01 \x01(\r\x12/\n\nGridAwards\x18\x02 \x03(\x0b\x32\x1b.pb.EndlessRiches.GridAward\x12\r\n\x05price\x18\x03 \x01(\r\x12\x11\n\tproductID\x18\x04 \x01(\t\x1a\x45\n\x05\x41ward\x12\t\n\x01n\x18\x02 \x01(\t\x12\t\n\x01\x63\x18\x03 \x01(\x04\x12\x0b\n\x03min\x18\x04 \x01(\r\x12\x0b\n\x03max\x18\x05 \x01(\r\x12\x0c\n\x04skin\x18\x06 \x01(\t\x1a|\n\tGridAward\x12)\n\x04Type\x18\x01 \x01(\x0e\x32\x1b.pb.EndlessRiches.AwardType\x12\'\n\x06\x41wards\x18\x02 \x03(\x0b\x32\x17.pb.EndlessRiches.Award\x12\x0c\n\x04skin\x18\x06 \x01(\t\x12\r\n\x05value\x18\x07 \x01(\x01\"\xc9\x01\n\tAwardType\x12\x17\n\x13\x41wardType_CoinValue\x10\x00\x12\x12\n\x0e\x41wardType_Item\x10\x01\x12\x16\n\x12\x41wardType_Currency\x10\x02\x12\x17\n\x13\x41wardType_BonusGame\x10\x03\x12\x15\n\x11\x41wardType_Booster\x10\x04\x12\x14\n\x10\x41wardType_RanBox\x10\x05\x12\x17\n\x13\x41wardType_CardBonus\x10\x06\x12\x18\n\x14PassAwardType_Conpon\x10\x07\x42\x06Z\x04.;pbb\x06proto3'
   ,
   dependencies=[shop__pb2.DESCRIPTOR,])
 
@@ -63,11 +63,21 @@ _ENDLESSRICHES_AWARDTYPE = _descriptor.EnumDescriptor(
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='AwardType_CardBonus', index=6, number=6,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='PassAwardType_Conpon', index=7, number=7,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=434,
-  serialized_end=584,
+  serialized_start=448,
+  serialized_end=649,
 )
 _sym_db.RegisterEnumDescriptor(_ENDLESSRICHES_AWARDTYPE)
 
@@ -198,6 +208,13 @@ _ENDLESSRICHES_AWARD = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='skin', full_name='pb.EndlessRiches.Award.skin', index=4,
+      number=6, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -211,7 +228,7 @@ _ENDLESSRICHES_AWARD = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=250,
-  serialized_end=305,
+  serialized_end=319,
 )
 
 _ENDLESSRICHES_GRIDAWARD = _descriptor.Descriptor(
@@ -238,8 +255,8 @@ _ENDLESSRICHES_GRIDAWARD = _descriptor.Descriptor(
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='skin', full_name='pb.EndlessRiches.GridAward.skin', index=2,
-      number=6, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
+      number=6, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
@@ -262,8 +279,8 @@ _ENDLESSRICHES_GRIDAWARD = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=307,
-  serialized_end=431,
+  serialized_start=321,
+  serialized_end=445,
 )
 
 _ENDLESSRICHES = _descriptor.Descriptor(
@@ -288,7 +305,7 @@ _ENDLESSRICHES = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=40,
-  serialized_end=584,
+  serialized_end=649,
 )
 
 _ENDLESSRICHES_DATA.fields_by_name['Grids'].message_type = _ENDLESSRICHES_GRID

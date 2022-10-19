@@ -19,11 +19,49 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'Z\004.;pb',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x0f\x61warddata.proto\x12\x02pb\"\x83\x01\n\tAwardData\x1av\n\x08\x43\x61rdData\x12\r\n\x05\x45ntry\x18\x01 \x01(\x05\x12\x0b\n\x03Num\x18\x02 \x01(\x05\x12\x11\n\tStartTime\x18\x03 \x01(\x03\x12\x0f\n\x07\x45ndTime\x18\x04 \x01(\x03\x12\x1b\n\x13RemainExchangeTimes\x18\x05 \x01(\x05\x12\r\n\x05IsNew\x18\x06 \x01(\x08\x42\x06Z\x04.;pbb\x06proto3'
+  serialized_pb=b'\n\x0f\x61warddata.proto\x12\x02pb\"\xc7\x01\n\tAwardData\x1a\xb9\x01\n\x08\x43\x61rdData\x12\r\n\x05\x45ntry\x18\x01 \x01(\x05\x12\x0b\n\x03Num\x18\x02 \x01(\x05\x12\x11\n\tStartTime\x18\x03 \x01(\x03\x12\x35\n\x0cPropertyList\x18\x04 \x03(\x0b\x32\x1f.pb.AwardData.CardData.Property\x12\r\n\x05IsNew\x18\x05 \x01(\x08\x1a\x38\n\x08Property\x12\x0f\n\x07\x45ndTime\x18\x01 \x01(\x03\x12\x1b\n\x13RemainExchangeTimes\x18\x02 \x01(\x05\x42\x06Z\x04.;pbb\x06proto3'
 )
 
 
 
+
+_AWARDDATA_CARDDATA_PROPERTY = _descriptor.Descriptor(
+  name='Property',
+  full_name='pb.AwardData.CardData.Property',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='EndTime', full_name='pb.AwardData.CardData.Property.EndTime', index=0,
+      number=1, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='RemainExchangeTimes', full_name='pb.AwardData.CardData.Property.RemainExchangeTimes', index=1,
+      number=2, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=167,
+  serialized_end=223,
+)
 
 _AWARDDATA_CARDDATA = _descriptor.Descriptor(
   name='CardData',
@@ -55,22 +93,15 @@ _AWARDDATA_CARDDATA = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='EndTime', full_name='pb.AwardData.CardData.EndTime', index=3,
-      number=4, type=3, cpp_type=2, label=1,
-      has_default_value=False, default_value=0,
+      name='PropertyList', full_name='pb.AwardData.CardData.PropertyList', index=3,
+      number=4, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='RemainExchangeTimes', full_name='pb.AwardData.CardData.RemainExchangeTimes', index=4,
-      number=5, type=5, cpp_type=1, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='IsNew', full_name='pb.AwardData.CardData.IsNew', index=5,
-      number=6, type=8, cpp_type=7, label=1,
+      name='IsNew', full_name='pb.AwardData.CardData.IsNew', index=4,
+      number=5, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -78,7 +109,7 @@ _AWARDDATA_CARDDATA = _descriptor.Descriptor(
   ],
   extensions=[
   ],
-  nested_types=[],
+  nested_types=[_AWARDDATA_CARDDATA_PROPERTY, ],
   enum_types=[
   ],
   serialized_options=None,
@@ -87,8 +118,8 @@ _AWARDDATA_CARDDATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=37,
-  serialized_end=155,
+  serialized_start=38,
+  serialized_end=223,
 )
 
 _AWARDDATA = _descriptor.Descriptor(
@@ -112,9 +143,11 @@ _AWARDDATA = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=24,
-  serialized_end=155,
+  serialized_end=223,
 )
 
+_AWARDDATA_CARDDATA_PROPERTY.containing_type = _AWARDDATA_CARDDATA
+_AWARDDATA_CARDDATA.fields_by_name['PropertyList'].message_type = _AWARDDATA_CARDDATA_PROPERTY
 _AWARDDATA_CARDDATA.containing_type = _AWARDDATA
 DESCRIPTOR.message_types_by_name['AwardData'] = _AWARDDATA
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
@@ -122,6 +155,13 @@ _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 AwardData = _reflection.GeneratedProtocolMessageType('AwardData', (_message.Message,), {
 
   'CardData' : _reflection.GeneratedProtocolMessageType('CardData', (_message.Message,), {
+
+    'Property' : _reflection.GeneratedProtocolMessageType('Property', (_message.Message,), {
+      'DESCRIPTOR' : _AWARDDATA_CARDDATA_PROPERTY,
+      '__module__' : 'awarddata_pb2'
+      # @@protoc_insertion_point(class_scope:pb.AwardData.CardData.Property)
+      })
+    ,
     'DESCRIPTOR' : _AWARDDATA_CARDDATA,
     '__module__' : 'awarddata_pb2'
     # @@protoc_insertion_point(class_scope:pb.AwardData.CardData)
@@ -133,6 +173,7 @@ AwardData = _reflection.GeneratedProtocolMessageType('AwardData', (_message.Mess
   })
 _sym_db.RegisterMessage(AwardData)
 _sym_db.RegisterMessage(AwardData.CardData)
+_sym_db.RegisterMessage(AwardData.CardData.Property)
 
 
 DESCRIPTOR._options = None
