@@ -23,7 +23,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'Z\004.;pb',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x10multiverse.proto\x12\x02pb\x1a\x13\x61\x63tivityevent.proto\x1a\x0b\x61ward.proto\x1a\x10slots_util.proto\"[\n\x0eMultiverseBuff\x12$\n\x04Type\x18\x01 \x01(\x0e\x32\x16.pb.MultiverseBuffType\x12\r\n\x05Value\x18\x02 \x01(\x05\x12\x14\n\x0c\x45ndTimeStamp\x18\x03 \x01(\x03\"\xdf\x04\n\x0eMultiverseData\x12\r\n\x05\x45ntry\x18\x01 \x01(\x05\x12\r\n\x05Level\x18\x02 \x01(\x05\x12\x12\n\nChapterIdx\x18\x03 \x01(\x05\x12\x0f\n\x07NodeIdx\x18\x04 \x01(\x05\x12,\n\nNodeStatus\x18\x05 \x01(\x0e\x32\x18.pb.MultiverseNodeStatus\x12$\n\tQuestList\x18\x06 \x03(\x0b\x32\x11.pb.ActivityEvent\x12\x38\n\x11\x43hooseLevelReward\x18\x07 \x03(\x0b\x32\x1d.pb.MultiverseData.LevelAward\x12\x36\n\rChapterReward\x18\x08 \x01(\x0b\x32\x1f.pb.MultiverseData.ChapterAward\x12!\n\nHellReward\x18\t \x03(\x0b\x32\r.pb.AwardInfo\x12 \n\x04\x42uff\x18\n \x03(\x0b\x32\x12.pb.MultiverseBuff\x12\x15\n\rChapterThemes\x18\x0b \x03(\x05\x12\x0f\n\x07GemCost\x18\x0c \x01(\x05\x12\x0e\n\x06\x42\x65Hell\x18\r \x01(\x08\x1a+\n\nLevelAward\x12\x1d\n\x06\x41wards\x18\x01 \x03(\x0b\x32\r.pb.AwardInfo\x1a.\n\tNodeAward\x12!\n\nNodeAwards\x18\x01 \x03(\x0b\x32\r.pb.AwardInfo\x1aj\n\x0c\x43hapterAward\x12\x30\n\nNodeAwards\x18\x01 \x03(\x0b\x32\x1c.pb.MultiverseData.NodeAward\x12(\n\nReelReward\x18\x02 \x01(\x0b\x32\x14.pb.MultiverseReward\"\xb5\x03\n\x10MultiverseReward\x12.\n\x08Jackpots\x18\x01 \x03(\x0b\x32\x1c.pb.MultiverseReward.Section\x12(\n\x05Reels\x18\x02 \x03(\x0b\x32\x19.pb.MultiverseReward.Reel\x12\x34\n\tExtraData\x18\x03 \x03(\x0b\x32!.pb.MultiverseReward.ExtraJackpot\x1a\x41\n\x07Section\x12\'\n\x04Type\x18\x01 \x01(\x0e\x32\x19.pb.MultiverseReward.Type\x12\r\n\x05Value\x18\x02 \x01(\x03\x1aY\n\x0c\x45xtraJackpot\x12\'\n\x04Type\x18\x01 \x01(\x0e\x32\x19.pb.MultiverseReward.Type\x12 \n\x07IncData\x18\x02 \x01(\x0b\x32\x0f.pb.IncResource\x1a\x36\n\x04Reel\x12.\n\x08Sections\x18\x01 \x03(\x0b\x32\x1c.pb.MultiverseReward.Section\";\n\x04Type\x12\t\n\x05Minor\x10\x00\x12\t\n\x05Major\x10\x01\x12\t\n\x05Grand\x10\x02\x12\t\n\x05Money\x10\n\x12\x07\n\x03Key\x10\x0b*C\n\x14MultiverseNodeStatus\x12\x0c\n\x08\x43hoosing\x10\x00\x12\r\n\tInHanding\x10\x01\x12\x0e\n\nInAwarding\x10\x02*G\n\x14MultiverseDifficulty\x12\n\n\x06Normal\x10\x00\x12\r\n\tNightmare\x10\x01\x12\x08\n\x04Hell\x10\x02\x12\n\n\x06Length\x10\x03*&\n\x12MultiverseBuffType\x12\x10\n\x0cMBT_Progress\x10\x00\x42\x06Z\x04.;pbb\x06proto3'
+  serialized_pb=b'\n\x10multiverse.proto\x12\x02pb\x1a\x13\x61\x63tivityevent.proto\x1a\x0b\x61ward.proto\x1a\x10slots_util.proto\"[\n\x0eMultiverseBuff\x12$\n\x04Type\x18\x01 \x01(\x0e\x32\x16.pb.MultiverseBuffType\x12\r\n\x05Value\x18\x02 \x01(\x05\x12\x14\n\x0c\x45ndTimeStamp\x18\x03 \x01(\x03\"\xf8\x04\n\x0eMultiverseData\x12\r\n\x05\x45ntry\x18\x01 \x01(\x05\x12\r\n\x05Level\x18\x02 \x01(\x05\x12\x12\n\nChapterIdx\x18\x03 \x01(\x05\x12\x0f\n\x07NodeIdx\x18\x04 \x01(\x05\x12,\n\nNodeStatus\x18\x05 \x01(\x0e\x32\x18.pb.MultiverseNodeStatus\x12$\n\tQuestList\x18\x06 \x03(\x0b\x32\x11.pb.ActivityEvent\x12\x38\n\x11\x43hooseLevelReward\x18\x07 \x03(\x0b\x32\x1d.pb.MultiverseData.LevelAward\x12\x36\n\rChapterReward\x18\x08 \x01(\x0b\x32\x1f.pb.MultiverseData.ChapterAward\x12!\n\nHellReward\x18\t \x03(\x0b\x32\r.pb.AwardInfo\x12 \n\x04\x42uff\x18\n \x03(\x0b\x32\x12.pb.MultiverseBuff\x12\x15\n\rChapterThemes\x18\x0b \x03(\x05\x12\x0f\n\x07GemCost\x18\x0c \x01(\x05\x12\x0e\n\x06\x42\x65Hell\x18\r \x01(\x08\x12\x17\n\x0fMaxChapterLevel\x18\x0e \x03(\x05\x1a+\n\nLevelAward\x12\x1d\n\x06\x41wards\x18\x01 \x03(\x0b\x32\r.pb.AwardInfo\x1a.\n\tNodeAward\x12!\n\nNodeAwards\x18\x01 \x03(\x0b\x32\r.pb.AwardInfo\x1aj\n\x0c\x43hapterAward\x12\x30\n\nNodeAwards\x18\x01 \x03(\x0b\x32\x1c.pb.MultiverseData.NodeAward\x12(\n\nReelReward\x18\x02 \x01(\x0b\x32\x14.pb.MultiverseReward\"\xb5\x03\n\x10MultiverseReward\x12.\n\x08Jackpots\x18\x01 \x03(\x0b\x32\x1c.pb.MultiverseReward.Section\x12(\n\x05Reels\x18\x02 \x03(\x0b\x32\x19.pb.MultiverseReward.Reel\x12\x34\n\tExtraData\x18\x03 \x03(\x0b\x32!.pb.MultiverseReward.ExtraJackpot\x1a\x41\n\x07Section\x12\'\n\x04Type\x18\x01 \x01(\x0e\x32\x19.pb.MultiverseReward.Type\x12\r\n\x05Value\x18\x02 \x01(\x03\x1aY\n\x0c\x45xtraJackpot\x12\'\n\x04Type\x18\x01 \x01(\x0e\x32\x19.pb.MultiverseReward.Type\x12 \n\x07IncData\x18\x02 \x01(\x0b\x32\x0f.pb.IncResource\x1a\x36\n\x04Reel\x12.\n\x08Sections\x18\x01 \x03(\x0b\x32\x1c.pb.MultiverseReward.Section\";\n\x04Type\x12\t\n\x05Minor\x10\x00\x12\t\n\x05Major\x10\x01\x12\t\n\x05Grand\x10\x02\x12\t\n\x05Money\x10\n\x12\x07\n\x03Key\x10\x0b*C\n\x14MultiverseNodeStatus\x12\x0c\n\x08\x43hoosing\x10\x00\x12\r\n\tInHanding\x10\x01\x12\x0e\n\nInAwarding\x10\x02*G\n\x14MultiverseDifficulty\x12\n\n\x06Normal\x10\x00\x12\r\n\tNightmare\x10\x01\x12\x08\n\x04Hell\x10\x02\x12\n\n\x06Length\x10\x03*&\n\x12MultiverseBuffType\x12\x10\n\x0cMBT_Progress\x10\x00\x42\x06Z\x04.;pbb\x06proto3'
   ,
   dependencies=[activityevent__pb2.DESCRIPTOR,award__pb2.DESCRIPTOR,slots__util__pb2.DESCRIPTOR,])
 
@@ -52,8 +52,8 @@ _MULTIVERSENODESTATUS = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=1219,
-  serialized_end=1286,
+  serialized_start=1244,
+  serialized_end=1311,
 )
 _sym_db.RegisterEnumDescriptor(_MULTIVERSENODESTATUS)
 
@@ -88,8 +88,8 @@ _MULTIVERSEDIFFICULTY = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=1288,
-  serialized_end=1359,
+  serialized_start=1313,
+  serialized_end=1384,
 )
 _sym_db.RegisterEnumDescriptor(_MULTIVERSEDIFFICULTY)
 
@@ -109,8 +109,8 @@ _MULTIVERSEBUFFTYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=1361,
-  serialized_end=1399,
+  serialized_start=1386,
+  serialized_end=1424,
 )
 _sym_db.RegisterEnumDescriptor(_MULTIVERSEBUFFTYPE)
 
@@ -160,8 +160,8 @@ _MULTIVERSEREWARD_TYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=1158,
-  serialized_end=1217,
+  serialized_start=1183,
+  serialized_end=1242,
 )
 _sym_db.RegisterEnumDescriptor(_MULTIVERSEREWARD_TYPE)
 
@@ -239,8 +239,8 @@ _MULTIVERSEDATA_LEVELAWARD = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=578,
-  serialized_end=621,
+  serialized_start=603,
+  serialized_end=646,
 )
 
 _MULTIVERSEDATA_NODEAWARD = _descriptor.Descriptor(
@@ -270,8 +270,8 @@ _MULTIVERSEDATA_NODEAWARD = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=623,
-  serialized_end=669,
+  serialized_start=648,
+  serialized_end=694,
 )
 
 _MULTIVERSEDATA_CHAPTERAWARD = _descriptor.Descriptor(
@@ -308,8 +308,8 @@ _MULTIVERSEDATA_CHAPTERAWARD = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=671,
-  serialized_end=777,
+  serialized_start=696,
+  serialized_end=802,
 )
 
 _MULTIVERSEDATA = _descriptor.Descriptor(
@@ -411,6 +411,13 @@ _MULTIVERSEDATA = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='MaxChapterLevel', full_name='pb.MultiverseData.MaxChapterLevel', index=13,
+      number=14, type=5, cpp_type=1, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -424,7 +431,7 @@ _MULTIVERSEDATA = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=170,
-  serialized_end=777,
+  serialized_end=802,
 )
 
 
@@ -462,8 +469,8 @@ _MULTIVERSEREWARD_SECTION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=944,
-  serialized_end=1009,
+  serialized_start=969,
+  serialized_end=1034,
 )
 
 _MULTIVERSEREWARD_EXTRAJACKPOT = _descriptor.Descriptor(
@@ -500,8 +507,8 @@ _MULTIVERSEREWARD_EXTRAJACKPOT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1011,
-  serialized_end=1100,
+  serialized_start=1036,
+  serialized_end=1125,
 )
 
 _MULTIVERSEREWARD_REEL = _descriptor.Descriptor(
@@ -531,8 +538,8 @@ _MULTIVERSEREWARD_REEL = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1102,
-  serialized_end=1156,
+  serialized_start=1127,
+  serialized_end=1181,
 )
 
 _MULTIVERSEREWARD = _descriptor.Descriptor(
@@ -577,8 +584,8 @@ _MULTIVERSEREWARD = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=780,
-  serialized_end=1217,
+  serialized_start=805,
+  serialized_end=1242,
 )
 
 _MULTIVERSEBUFF.fields_by_name['Type'].enum_type = _MULTIVERSEBUFFTYPE

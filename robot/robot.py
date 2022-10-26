@@ -250,6 +250,20 @@ class SpinRobot(RobotBase):
     def select_bet(self, bet):
         self.themeData.set_play_bet(bet)
 
+    def select_mini_bet(self):
+        bet = self.themeData.status.Bets[0]
+        self.themeData.set_play_bet(bet)
+
+    def select_max_bet(self):
+        bet = self.themeData.status.Bets[-1]
+        self.themeData.set_play_bet(bet)
+
+    def select_rand_bet(self):
+        bet = self.themeData.status.Bets[random.randint(0,len(self.themeData.status.Bets))]
+        # self.log(self.themeData.status.Bets)
+        # self.log("rand bet", bet)
+        self.themeData.set_play_bet(bet)
+
     def on_theme_status(self, packet):
         self.themeData.update_from_theme(packet)
         self.log("on_theme_status")

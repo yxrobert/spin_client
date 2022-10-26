@@ -79,8 +79,8 @@ def run_mege(player):
 
     # player.send_cmd(bm_cmd)
     # player.spin()
-    # player.spin_times(20)
-    player.spin_to_next_stage()
+    player.spin_times(10)
+    # player.spin_to_next_stage()
 
     # player.spin_to_base()
     pass
@@ -88,8 +88,10 @@ def run_mege(player):
 def run(player):
     # player.send_cmd(coin_cmd)
     # player.send_cmd(level_cmd)
-    player.select_bet(5000000)
-    player.spin()
+    # player.select_bet(300000)
+    player.select_rand_bet()
+    # player.spin()
+    player.spin_times(10)
     # player.spin_to_next_stage()
     # player.spin_to_base()
 
