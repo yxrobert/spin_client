@@ -19,7 +19,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'Z\004.;pb',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x0cplayer.proto\x12\x02pb\"\xf7\x02\n\tReqPlayer\x12\x0f\n\x04Info\x18\xf1. \x01(\x08H\x00\x12\'\n\x07Profile\x18\xf2. \x01(\x0b\x32\x13.pb.Player.PropertyH\x00\x12#\n\x04\x46TUE\x18\xf3. \x01(\x0b\x32\x12.pb.Player.ReqFTUEH\x00\x12)\n\x07GetData\x18\xf4. \x01(\x0b\x32\x15.pb.Player.ReqGetDataH\x00\x12)\n\x07SetData\x18\xf5. \x01(\x0b\x32\x15.pb.Player.ReqSetDataH\x00\x12\x39\n\x0fSetSystemSwitch\x18\xf6. \x01(\x0b\x32\x1d.pb.Player.ReqSetSystemSwitchH\x00\x12\x39\n\x0fGetSystemSwitch\x18\xf7. \x01(\x0b\x32\x1d.pb.Player.ReqGetSystemSwitchH\x00\x12\x38\n\x10GetFunPlusPlayer\x18\xf8. \x01(\x0b\x32\x1b.pb.Player.ReqFunPlusPlayerH\x00\x42\x05\n\x03one\"\xc4\x02\n\tRspPlayer\x12\x1b\n\x04Info\x18\xf1. \x01(\x0b\x32\n.pb.PlayerH\x00\x12\'\n\x07Profile\x18\xf2. \x01(\x0b\x32\x13.pb.Player.PropertyH\x00\x12$\n\x04\x46TUE\x18\xf3. \x01(\x0b\x32\x13.pb.Player.RespFTUEH\x00\x12*\n\x07GetData\x18\xf4. \x01(\x0b\x32\x16.pb.Player.RespGetDataH\x00\x12*\n\x07SetData\x18\xf5. \x01(\x0b\x32\x16.pb.Player.RespSetDataH\x00\x12\x34\n\x0cSystemSwitch\x18\xf6. \x01(\x0b\x32\x1b.pb.Player.RespSystemSwitchH\x00\x12\x36\n\rFunPlusPlayer\x18\xf7. \x01(\x0b\x32\x1c.pb.Player.RespFunPlusPlayerH\x00\x42\x05\n\x03one\"\xc4\x0c\n\x06Player\x12\x0b\n\x02ID\x18\xe9\x07 \x01(\x10\x12\r\n\x04Name\x18\xea\x07 \x01(\t\x12\x1f\n\x05State\x18\xeb\x07 \x01(\x0b\x32\x0f.pb.Player.Mode\x12#\n\x05Times\x18\xec\x07 \x01(\x0b\x32\x13.pb.Player.TimesBag\x12%\n\x08\x42oosters\x18\xed\x07 \x03(\x0b\x32\x12.pb.Player.Booster\x12%\n\x07Profile\x18\xd0\x0f \x01(\x0b\x32\x13.pb.Player.Property\x12%\n\x07\x41\x63\x63ount\x18\xb8\x17 \x01(\x0b\x32\x13.pb.Player.Currency\x12%\n\x08\x42\x61gItems\x18\xa0\x1f \x03(\x0b\x32\x12.pb.Player.BagItem\x12(\n\x0c\x43orrelations\x18\x88\' \x03(\x0b\x32\x11.pb.Player.Social\x1a\xc8\x02\n\x04Mode\x12\n\n\x02XP\x18\n \x01(\x04\x12\r\n\x05Level\x18\x0b \x01(\r\x12\x10\n\x08TicketXP\x18\x14 \x01(\x04\x12\x15\n\rTicketXPLevel\x18\x15 \x01(\x04\x12\x11\n\tSpinTimes\x18\x1e \x01(\x04\x12\x0e\n\x06Trophy\x18( \x01(\x04\x12\r\n\x05VipXP\x18\x32 \x01(\x04\x12\x10\n\x08VipLevel\x18< \x01(\r\x12\x17\n\x0fLobbyBonusTimes\x18\x46 \x01(\r\x12\x17\n\x0fLobbyPokerTimes\x18G \x01(\r\x12\"\n\x1aLobbyPokerLastRefreshTimes\x18H \x01(\x03\x12\x0f\n\x07LastBet\x18P \x01(\x04\x12\x10\n\x08\x46irstPay\x18Q \x01(\r\x12\x15\n\rFirstPurchase\x18R \x01(\r\x12\x12\n\nRegistTime\x18S \x01(\x03\x12\x14\n\x0cLevelUp4Time\x18T \x01(\x03\x1a\xbc\x01\n\x08Property\x12\x10\n\x08Nickname\x18\x01 \x01(\t\x12\x0c\n\x04Icon\x18\x02 \x01(\t\x12\x10\n\x08Timezone\x18\x03 \x01(\t\x12\x12\n\nSocialIcon\x18\x04 \x01(\t\x12\x12\n\nDeviceType\x18\x05 \x01(\t\x12\x16\n\x0e\x41\x63\x63ountChannel\x18\x06 \x01(\t\x12\x11\n\tPackageID\x18\x07 \x01(\t\x12\x13\n\x0bGameVersion\x18\x08 \x01(\t\x12\n\n\x02IP\x18\t \x01(\t\x12\n\n\x02OS\x18\n \x01(\t\x1aI\n\x08\x43urrency\x12\x0c\n\x04\x43oin\x18\x01 \x01(\x04\x12\x0e\n\x06Ticket\x18\x02 \x01(\x04\x12\x0b\n\x03Gem\x18\x03 \x01(\x04\x12\x12\n\nPuzzleCoin\x18\x04 \x01(\x04\x1a%\n\x07\x42\x61gItem\x12\n\n\x02ID\x18\x01 \x01(\t\x12\x0e\n\x06\x41mount\x18\x02 \x01(\x03\x1aN\n\x08TimesBag\x12\r\n\x05Wheel\x18\x01 \x01(\r\x12\r\n\x05Poker\x18\x02 \x01(\r\x12\r\n\x05Piggy\x18\x03 \x01(\r\x12\x15\n\rEndlessRiches\x18\x04 \x01(\r\x1a+\n\x07\x42ooster\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x12\n\nfinishTime\x18\x02 \x01(\x03\x1aq\n\x06\x43onpon\x12\n\n\x02id\x18\x01 \x01(\x03\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x0c\n\x04type\x18\x03 \x01(\x05\x12\r\n\x05state\x18\x04 \x01(\x05\x12\x0c\n\x04\x62uff\x18\x05 \x01(\x01\x12\x12\n\nfinishTime\x18\x06 \x01(\x03\x12\x0e\n\x06source\x18\x07 \x01(\t\x1a&\n\x06Social\x12\x10\n\x08Platform\x18\x01 \x01(\t\x12\n\n\x02ID\x18\x02 \x01(\t\x1a\x0c\n\nReqGetData\x1a\x1b\n\x0bRespGetData\x12\x0c\n\x04\x44\x61ta\x18\x01 \x01(\t\x1a\x1a\n\nReqSetData\x12\x0c\n\x04\x44\x61ta\x18\x01 \x01(\t\x1a\r\n\x0bRespSetData\x1a\t\n\x07ReqFTUE\x1a\x18\n\x08RespFTUE\x12\x0c\n\x04\x46TUE\x18\x01 \x01(\x04\x1a=\n\x12ReqSetSystemSwitch\x12\'\n\x06switch\x18\x01 \x01(\x0b\x32\x17.pb.Player.SystemSwitch\x1a\x14\n\x12ReqGetSystemSwitch\x1a;\n\x10RespSystemSwitch\x12\'\n\x06switch\x18\x01 \x03(\x0b\x32\x17.pb.Player.SystemSwitch\x1a+\n\x0cSystemSwitch\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\x04\x1a#\n\x10ReqFunPlusPlayer\x12\x0f\n\x07Session\x18\x01 \x01(\t\x1a\x1f\n\x11RespFunPlusPlayer\x12\n\n\x02ID\x18\x01 \x01(\x10\x42\x06Z\x04.;pbb\x06proto3'
+  serialized_pb=b'\n\x0cplayer.proto\x12\x02pb\"\xf7\x02\n\tReqPlayer\x12\x0f\n\x04Info\x18\xf1. \x01(\x08H\x00\x12\'\n\x07Profile\x18\xf2. \x01(\x0b\x32\x13.pb.Player.PropertyH\x00\x12#\n\x04\x46TUE\x18\xf3. \x01(\x0b\x32\x12.pb.Player.ReqFTUEH\x00\x12)\n\x07GetData\x18\xf4. \x01(\x0b\x32\x15.pb.Player.ReqGetDataH\x00\x12)\n\x07SetData\x18\xf5. \x01(\x0b\x32\x15.pb.Player.ReqSetDataH\x00\x12\x39\n\x0fSetSystemSwitch\x18\xf6. \x01(\x0b\x32\x1d.pb.Player.ReqSetSystemSwitchH\x00\x12\x39\n\x0fGetSystemSwitch\x18\xf7. \x01(\x0b\x32\x1d.pb.Player.ReqGetSystemSwitchH\x00\x12\x38\n\x10GetFunPlusPlayer\x18\xf8. \x01(\x0b\x32\x1b.pb.Player.ReqFunPlusPlayerH\x00\x42\x05\n\x03one\"\xc4\x02\n\tRspPlayer\x12\x1b\n\x04Info\x18\xf1. \x01(\x0b\x32\n.pb.PlayerH\x00\x12\'\n\x07Profile\x18\xf2. \x01(\x0b\x32\x13.pb.Player.PropertyH\x00\x12$\n\x04\x46TUE\x18\xf3. \x01(\x0b\x32\x13.pb.Player.RespFTUEH\x00\x12*\n\x07GetData\x18\xf4. \x01(\x0b\x32\x16.pb.Player.RespGetDataH\x00\x12*\n\x07SetData\x18\xf5. \x01(\x0b\x32\x16.pb.Player.RespSetDataH\x00\x12\x34\n\x0cSystemSwitch\x18\xf6. \x01(\x0b\x32\x1b.pb.Player.RespSystemSwitchH\x00\x12\x36\n\rFunPlusPlayer\x18\xf7. \x01(\x0b\x32\x1c.pb.Player.RespFunPlusPlayerH\x00\x42\x05\n\x03one\"\xd5\x0c\n\x06Player\x12\x0b\n\x02ID\x18\xe9\x07 \x01(\x10\x12\r\n\x04Name\x18\xea\x07 \x01(\t\x12\x1f\n\x05State\x18\xeb\x07 \x01(\x0b\x32\x0f.pb.Player.Mode\x12#\n\x05Times\x18\xec\x07 \x01(\x0b\x32\x13.pb.Player.TimesBag\x12%\n\x08\x42oosters\x18\xed\x07 \x03(\x0b\x32\x12.pb.Player.Booster\x12%\n\x07Profile\x18\xd0\x0f \x01(\x0b\x32\x13.pb.Player.Property\x12%\n\x07\x41\x63\x63ount\x18\xb8\x17 \x01(\x0b\x32\x13.pb.Player.Currency\x12%\n\x08\x42\x61gItems\x18\xa0\x1f \x03(\x0b\x32\x12.pb.Player.BagItem\x12(\n\x0c\x43orrelations\x18\x88\' \x03(\x0b\x32\x11.pb.Player.Social\x1a\xc8\x02\n\x04Mode\x12\n\n\x02XP\x18\n \x01(\x04\x12\r\n\x05Level\x18\x0b \x01(\r\x12\x10\n\x08TicketXP\x18\x14 \x01(\x04\x12\x15\n\rTicketXPLevel\x18\x15 \x01(\x04\x12\x11\n\tSpinTimes\x18\x1e \x01(\x04\x12\x0e\n\x06Trophy\x18( \x01(\x04\x12\r\n\x05VipXP\x18\x32 \x01(\x04\x12\x10\n\x08VipLevel\x18< \x01(\r\x12\x17\n\x0fLobbyBonusTimes\x18\x46 \x01(\r\x12\x17\n\x0fLobbyPokerTimes\x18G \x01(\r\x12\"\n\x1aLobbyPokerLastRefreshTimes\x18H \x01(\x03\x12\x0f\n\x07LastBet\x18P \x01(\x04\x12\x10\n\x08\x46irstPay\x18Q \x01(\r\x12\x15\n\rFirstPurchase\x18R \x01(\r\x12\x12\n\nRegistTime\x18S \x01(\x03\x12\x14\n\x0cLevelUp4Time\x18T \x01(\x03\x1a\xbc\x01\n\x08Property\x12\x10\n\x08Nickname\x18\x01 \x01(\t\x12\x0c\n\x04Icon\x18\x02 \x01(\t\x12\x10\n\x08Timezone\x18\x03 \x01(\t\x12\x12\n\nSocialIcon\x18\x04 \x01(\t\x12\x12\n\nDeviceType\x18\x05 \x01(\t\x12\x16\n\x0e\x41\x63\x63ountChannel\x18\x06 \x01(\t\x12\x11\n\tPackageID\x18\x07 \x01(\t\x12\x13\n\x0bGameVersion\x18\x08 \x01(\t\x12\n\n\x02IP\x18\t \x01(\t\x12\n\n\x02OS\x18\n \x01(\t\x1aI\n\x08\x43urrency\x12\x0c\n\x04\x43oin\x18\x01 \x01(\x04\x12\x0e\n\x06Ticket\x18\x02 \x01(\x04\x12\x0b\n\x03Gem\x18\x03 \x01(\x04\x12\x12\n\nPuzzleCoin\x18\x04 \x01(\x04\x1a%\n\x07\x42\x61gItem\x12\n\n\x02ID\x18\x01 \x01(\t\x12\x0e\n\x06\x41mount\x18\x02 \x01(\x03\x1a_\n\x08TimesBag\x12\r\n\x05Wheel\x18\x01 \x01(\r\x12\r\n\x05Poker\x18\x02 \x01(\r\x12\r\n\x05Piggy\x18\x03 \x01(\r\x12\x15\n\rEndlessRiches\x18\x04 \x01(\r\x12\x0f\n\x07SpinMax\x18\x05 \x01(\r\x1a+\n\x07\x42ooster\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x12\n\nfinishTime\x18\x02 \x01(\x03\x1aq\n\x06\x43onpon\x12\n\n\x02id\x18\x01 \x01(\x03\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x0c\n\x04type\x18\x03 \x01(\x05\x12\r\n\x05state\x18\x04 \x01(\x05\x12\x0c\n\x04\x62uff\x18\x05 \x01(\x01\x12\x12\n\nfinishTime\x18\x06 \x01(\x03\x12\x0e\n\x06source\x18\x07 \x01(\t\x1a&\n\x06Social\x12\x10\n\x08Platform\x18\x01 \x01(\t\x12\n\n\x02ID\x18\x02 \x01(\t\x1a\x0c\n\nReqGetData\x1a\x1b\n\x0bRespGetData\x12\x0c\n\x04\x44\x61ta\x18\x01 \x01(\t\x1a\x1a\n\nReqSetData\x12\x0c\n\x04\x44\x61ta\x18\x01 \x01(\t\x1a\r\n\x0bRespSetData\x1a\t\n\x07ReqFTUE\x1a\x18\n\x08RespFTUE\x12\x0c\n\x04\x46TUE\x18\x01 \x01(\x04\x1a=\n\x12ReqSetSystemSwitch\x12\'\n\x06switch\x18\x01 \x01(\x0b\x32\x17.pb.Player.SystemSwitch\x1a\x14\n\x12ReqGetSystemSwitch\x1a;\n\x10RespSystemSwitch\x12\'\n\x06switch\x18\x01 \x03(\x0b\x32\x17.pb.Player.SystemSwitch\x1a+\n\x0cSystemSwitch\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\x04\x1a#\n\x10ReqFunPlusPlayer\x12\x0f\n\x07Session\x18\x01 \x01(\t\x1a\x1f\n\x11RespFunPlusPlayer\x12\n\n\x02ID\x18\x01 \x01(\x10\x42\x06Z\x04.;pbb\x06proto3'
 )
 
 
@@ -546,6 +546,13 @@ _PLAYER_TIMESBAG = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='SpinMax', full_name='pb.Player.TimesBag.SpinMax', index=4,
+      number=5, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -559,7 +566,7 @@ _PLAYER_TIMESBAG = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=1668,
-  serialized_end=1746,
+  serialized_end=1763,
 )
 
 _PLAYER_BOOSTER = _descriptor.Descriptor(
@@ -596,8 +603,8 @@ _PLAYER_BOOSTER = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1748,
-  serialized_end=1791,
+  serialized_start=1765,
+  serialized_end=1808,
 )
 
 _PLAYER_CONPON = _descriptor.Descriptor(
@@ -669,8 +676,8 @@ _PLAYER_CONPON = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1793,
-  serialized_end=1906,
+  serialized_start=1810,
+  serialized_end=1923,
 )
 
 _PLAYER_SOCIAL = _descriptor.Descriptor(
@@ -707,8 +714,8 @@ _PLAYER_SOCIAL = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1908,
-  serialized_end=1946,
+  serialized_start=1925,
+  serialized_end=1963,
 )
 
 _PLAYER_REQGETDATA = _descriptor.Descriptor(
@@ -731,8 +738,8 @@ _PLAYER_REQGETDATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1948,
-  serialized_end=1960,
+  serialized_start=1965,
+  serialized_end=1977,
 )
 
 _PLAYER_RESPGETDATA = _descriptor.Descriptor(
@@ -762,8 +769,8 @@ _PLAYER_RESPGETDATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1962,
-  serialized_end=1989,
+  serialized_start=1979,
+  serialized_end=2006,
 )
 
 _PLAYER_REQSETDATA = _descriptor.Descriptor(
@@ -793,8 +800,8 @@ _PLAYER_REQSETDATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1991,
-  serialized_end=2017,
+  serialized_start=2008,
+  serialized_end=2034,
 )
 
 _PLAYER_RESPSETDATA = _descriptor.Descriptor(
@@ -817,8 +824,8 @@ _PLAYER_RESPSETDATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2019,
-  serialized_end=2032,
+  serialized_start=2036,
+  serialized_end=2049,
 )
 
 _PLAYER_REQFTUE = _descriptor.Descriptor(
@@ -841,8 +848,8 @@ _PLAYER_REQFTUE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2034,
-  serialized_end=2043,
+  serialized_start=2051,
+  serialized_end=2060,
 )
 
 _PLAYER_RESPFTUE = _descriptor.Descriptor(
@@ -872,8 +879,8 @@ _PLAYER_RESPFTUE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2045,
-  serialized_end=2069,
+  serialized_start=2062,
+  serialized_end=2086,
 )
 
 _PLAYER_REQSETSYSTEMSWITCH = _descriptor.Descriptor(
@@ -903,8 +910,8 @@ _PLAYER_REQSETSYSTEMSWITCH = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2071,
-  serialized_end=2132,
+  serialized_start=2088,
+  serialized_end=2149,
 )
 
 _PLAYER_REQGETSYSTEMSWITCH = _descriptor.Descriptor(
@@ -927,8 +934,8 @@ _PLAYER_REQGETSYSTEMSWITCH = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2134,
-  serialized_end=2154,
+  serialized_start=2151,
+  serialized_end=2171,
 )
 
 _PLAYER_RESPSYSTEMSWITCH = _descriptor.Descriptor(
@@ -958,8 +965,8 @@ _PLAYER_RESPSYSTEMSWITCH = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2156,
-  serialized_end=2215,
+  serialized_start=2173,
+  serialized_end=2232,
 )
 
 _PLAYER_SYSTEMSWITCH = _descriptor.Descriptor(
@@ -996,8 +1003,8 @@ _PLAYER_SYSTEMSWITCH = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2217,
-  serialized_end=2260,
+  serialized_start=2234,
+  serialized_end=2277,
 )
 
 _PLAYER_REQFUNPLUSPLAYER = _descriptor.Descriptor(
@@ -1027,8 +1034,8 @@ _PLAYER_REQFUNPLUSPLAYER = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2262,
-  serialized_end=2297,
+  serialized_start=2279,
+  serialized_end=2314,
 )
 
 _PLAYER_RESPFUNPLUSPLAYER = _descriptor.Descriptor(
@@ -1058,8 +1065,8 @@ _PLAYER_RESPFUNPLUSPLAYER = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2299,
-  serialized_end=2330,
+  serialized_start=2316,
+  serialized_end=2347,
 )
 
 _PLAYER = _descriptor.Descriptor(
@@ -1146,7 +1153,7 @@ _PLAYER = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=726,
-  serialized_end=2330,
+  serialized_end=2347,
 )
 
 _REQPLAYER.fields_by_name['Profile'].message_type = _PLAYER_PROPERTY

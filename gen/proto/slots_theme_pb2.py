@@ -19,63 +19,120 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'Z\004.;pb',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x11slots_theme.proto\x12\x02pb\"$\n\tThemeList\x12\x17\n\x04List\x18\x01 \x03(\x0b\x32\t.pb.Theme\"\x90\x01\n\x05Theme\x12\n\n\x02ID\x18\x01 \x01(\x05\x12\"\n\x05Label\x18\x02 \x01(\x0e\x32\x13.pb.Theme.LabelType\x12\x0e\n\x06Locked\x18\x03 \x01(\x08\"G\n\tLabelType\x12\x0f\n\x0bUNSPECIFIED\x10\x00\x12\x0b\n\x07\x46\x45\x41TURE\x10\x01\x12\n\n\x06STICKY\x10\x02\x12\x07\n\x03NEW\x10\x03\x12\x07\n\x03HOT\x10\x04\x42\x06Z\x04.;pbb\x06proto3'
+  serialized_pb=b'\n\x11slots_theme.proto\x12\x02pb\"\x89\x03\n\tThemeList\x12\'\n\x08sections\x18\x04 \x03(\x0b\x32\x15.pb.ThemeList.Section\x12*\n\ntheme_tags\x18\x05 \x03(\x0b\x32\x16.pb.ThemeList.ThemeTag\x12!\n\x05masks\x18\x06 \x03(\x0b\x32\x12.pb.ThemeList.Mask\x12\x1a\n\x12recent_play_format\x18\x07 \x03(\x05\x1a\x99\x01\n\x07Section\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x14\n\x0climited_time\x18\x02 \x01(\x05\x12+\n\x06themes\x18\x03 \x03(\x0b\x32\x1b.pb.ThemeList.Section.Theme\x1a=\n\x05Theme\x12\r\n\x05theme\x18\x01 \x01(\x05\x12\x11\n\ticon_type\x18\x02 \x01(\x05\x12\x12\n\nuser_level\x18\x03 \x01(\x04\x1a$\n\x08ThemeTag\x12\n\n\x02id\x18\x01 \x01(\x05\x12\x0c\n\x04tags\x18\x02 \x03(\t\x1a&\n\x04Mask\x12\r\n\x05theme\x18\x01 \x01(\x05\x12\x0f\n\x07timeout\x18\x02 \x01(\x05\x42\x06Z\x04.;pbb\x06proto3'
 )
 
 
 
-_THEME_LABELTYPE = _descriptor.EnumDescriptor(
-  name='LabelType',
-  full_name='pb.Theme.LabelType',
-  filename=None,
-  file=DESCRIPTOR,
-  create_key=_descriptor._internal_create_key,
-  values=[
-    _descriptor.EnumValueDescriptor(
-      name='UNSPECIFIED', index=0, number=0,
-      serialized_options=None,
-      type=None,
-      create_key=_descriptor._internal_create_key),
-    _descriptor.EnumValueDescriptor(
-      name='FEATURE', index=1, number=1,
-      serialized_options=None,
-      type=None,
-      create_key=_descriptor._internal_create_key),
-    _descriptor.EnumValueDescriptor(
-      name='STICKY', index=2, number=2,
-      serialized_options=None,
-      type=None,
-      create_key=_descriptor._internal_create_key),
-    _descriptor.EnumValueDescriptor(
-      name='NEW', index=3, number=3,
-      serialized_options=None,
-      type=None,
-      create_key=_descriptor._internal_create_key),
-    _descriptor.EnumValueDescriptor(
-      name='HOT', index=4, number=4,
-      serialized_options=None,
-      type=None,
-      create_key=_descriptor._internal_create_key),
-  ],
-  containing_type=None,
-  serialized_options=None,
-  serialized_start=137,
-  serialized_end=208,
-)
-_sym_db.RegisterEnumDescriptor(_THEME_LABELTYPE)
 
-
-_THEMELIST = _descriptor.Descriptor(
-  name='ThemeList',
-  full_name='pb.ThemeList',
+_THEMELIST_SECTION_THEME = _descriptor.Descriptor(
+  name='Theme',
+  full_name='pb.ThemeList.Section.Theme',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='List', full_name='pb.ThemeList.List', index=0,
-      number=1, type=11, cpp_type=10, label=3,
+      name='theme', full_name='pb.ThemeList.Section.Theme.theme', index=0,
+      number=1, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='icon_type', full_name='pb.ThemeList.Section.Theme.icon_type', index=1,
+      number=2, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='user_level', full_name='pb.ThemeList.Section.Theme.user_level', index=2,
+      number=3, type=4, cpp_type=4, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=280,
+  serialized_end=341,
+)
+
+_THEMELIST_SECTION = _descriptor.Descriptor(
+  name='Section',
+  full_name='pb.ThemeList.Section',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='name', full_name='pb.ThemeList.Section.name', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='limited_time', full_name='pb.ThemeList.Section.limited_time', index=1,
+      number=2, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='themes', full_name='pb.ThemeList.Section.themes', index=2,
+      number=3, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[_THEMELIST_SECTION_THEME, ],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=188,
+  serialized_end=341,
+)
+
+_THEMELIST_THEMETAG = _descriptor.Descriptor(
+  name='ThemeTag',
+  full_name='pb.ThemeList.ThemeTag',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='id', full_name='pb.ThemeList.ThemeTag.id', index=0,
+      number=1, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='tags', full_name='pb.ThemeList.ThemeTag.tags', index=1,
+      number=2, type=9, cpp_type=9, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -92,37 +149,29 @@ _THEMELIST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=25,
-  serialized_end=61,
+  serialized_start=343,
+  serialized_end=379,
 )
 
-
-_THEME = _descriptor.Descriptor(
-  name='Theme',
-  full_name='pb.Theme',
+_THEMELIST_MASK = _descriptor.Descriptor(
+  name='Mask',
+  full_name='pb.ThemeList.Mask',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='ID', full_name='pb.Theme.ID', index=0,
+      name='theme', full_name='pb.ThemeList.Mask.theme', index=0,
       number=1, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='Label', full_name='pb.Theme.Label', index=1,
-      number=2, type=14, cpp_type=8, label=1,
+      name='timeout', full_name='pb.ThemeList.Mask.timeout', index=1,
+      number=2, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='Locked', full_name='pb.Theme.Locked', index=2,
-      number=3, type=8, cpp_type=7, label=1,
-      has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
@@ -131,7 +180,6 @@ _THEME = _descriptor.Descriptor(
   ],
   nested_types=[],
   enum_types=[
-    _THEME_LABELTYPE,
   ],
   serialized_options=None,
   is_extendable=False,
@@ -139,30 +187,111 @@ _THEME = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=64,
-  serialized_end=208,
+  serialized_start=381,
+  serialized_end=419,
 )
 
-_THEMELIST.fields_by_name['List'].message_type = _THEME
-_THEME.fields_by_name['Label'].enum_type = _THEME_LABELTYPE
-_THEME_LABELTYPE.containing_type = _THEME
+_THEMELIST = _descriptor.Descriptor(
+  name='ThemeList',
+  full_name='pb.ThemeList',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='sections', full_name='pb.ThemeList.sections', index=0,
+      number=4, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='theme_tags', full_name='pb.ThemeList.theme_tags', index=1,
+      number=5, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='masks', full_name='pb.ThemeList.masks', index=2,
+      number=6, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='recent_play_format', full_name='pb.ThemeList.recent_play_format', index=3,
+      number=7, type=5, cpp_type=1, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[_THEMELIST_SECTION, _THEMELIST_THEMETAG, _THEMELIST_MASK, ],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=26,
+  serialized_end=419,
+)
+
+_THEMELIST_SECTION_THEME.containing_type = _THEMELIST_SECTION
+_THEMELIST_SECTION.fields_by_name['themes'].message_type = _THEMELIST_SECTION_THEME
+_THEMELIST_SECTION.containing_type = _THEMELIST
+_THEMELIST_THEMETAG.containing_type = _THEMELIST
+_THEMELIST_MASK.containing_type = _THEMELIST
+_THEMELIST.fields_by_name['sections'].message_type = _THEMELIST_SECTION
+_THEMELIST.fields_by_name['theme_tags'].message_type = _THEMELIST_THEMETAG
+_THEMELIST.fields_by_name['masks'].message_type = _THEMELIST_MASK
 DESCRIPTOR.message_types_by_name['ThemeList'] = _THEMELIST
-DESCRIPTOR.message_types_by_name['Theme'] = _THEME
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 ThemeList = _reflection.GeneratedProtocolMessageType('ThemeList', (_message.Message,), {
+
+  'Section' : _reflection.GeneratedProtocolMessageType('Section', (_message.Message,), {
+
+    'Theme' : _reflection.GeneratedProtocolMessageType('Theme', (_message.Message,), {
+      'DESCRIPTOR' : _THEMELIST_SECTION_THEME,
+      '__module__' : 'slots_theme_pb2'
+      # @@protoc_insertion_point(class_scope:pb.ThemeList.Section.Theme)
+      })
+    ,
+    'DESCRIPTOR' : _THEMELIST_SECTION,
+    '__module__' : 'slots_theme_pb2'
+    # @@protoc_insertion_point(class_scope:pb.ThemeList.Section)
+    })
+  ,
+
+  'ThemeTag' : _reflection.GeneratedProtocolMessageType('ThemeTag', (_message.Message,), {
+    'DESCRIPTOR' : _THEMELIST_THEMETAG,
+    '__module__' : 'slots_theme_pb2'
+    # @@protoc_insertion_point(class_scope:pb.ThemeList.ThemeTag)
+    })
+  ,
+
+  'Mask' : _reflection.GeneratedProtocolMessageType('Mask', (_message.Message,), {
+    'DESCRIPTOR' : _THEMELIST_MASK,
+    '__module__' : 'slots_theme_pb2'
+    # @@protoc_insertion_point(class_scope:pb.ThemeList.Mask)
+    })
+  ,
   'DESCRIPTOR' : _THEMELIST,
   '__module__' : 'slots_theme_pb2'
   # @@protoc_insertion_point(class_scope:pb.ThemeList)
   })
 _sym_db.RegisterMessage(ThemeList)
-
-Theme = _reflection.GeneratedProtocolMessageType('Theme', (_message.Message,), {
-  'DESCRIPTOR' : _THEME,
-  '__module__' : 'slots_theme_pb2'
-  # @@protoc_insertion_point(class_scope:pb.Theme)
-  })
-_sym_db.RegisterMessage(Theme)
+_sym_db.RegisterMessage(ThemeList.Section)
+_sym_db.RegisterMessage(ThemeList.Section.Theme)
+_sym_db.RegisterMessage(ThemeList.ThemeTag)
+_sym_db.RegisterMessage(ThemeList.Mask)
 
 
 DESCRIPTOR._options = None

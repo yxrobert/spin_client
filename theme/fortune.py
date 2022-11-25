@@ -4,7 +4,7 @@
 import msg
 from robot import SpinRobot
 
-fortune_theme_id = 10220
+fortune_theme_id = 10040
 
 class FortuneRobot(SpinRobot):
     def __init__(self, name, theme_id):
@@ -17,10 +17,22 @@ class FortuneRobot(SpinRobot):
         self.log_spin_wins(packet.Spin)
         pass
 
+def test_playcycle(player):
+    player.spin_to_base() 
+
+    # player.send_gm(jackpot)
+    # player.send_gm("freeme")
+    player.send_gm(enter_pick)
+    player.spin()
+    player.pick(0)
+
+    player.spin_to_base()
+ 
+    pass
 
 def run(player):
     # player.send_cmd(add_money)
-    # player.select_bet(60000000)
+    # player.select_bet(20000)
 
     # player.send_cmd(bonus)
 
@@ -36,26 +48,19 @@ def run(player):
     # player.pick(0)
 
     # go_money_pick(player, 0)
-    # go_pick(player, 0)
-
-    # player.send_gm(jackpot)
-    # player.send_gm("freeme")
-    # player.send_gm(enter_pick)
-    # player.spin()
-    # player.pick(0)
+    # go_pick(player, 1)
     # player.serials_game(jp_arr)
-
-    # player.spin_to_base()
     # player.spin()
-    player.spin_times(30)
+    player.spin_times(100)
     # player.spin_to_next_stage()
 
-
+    
   
     # player.send_cmd(demon_panelgroup)
     pass
 
 def go_money_pick(player, idx):
+    player.spin_to_base()
     player.send_cmd(money_pick)
     player.spin()
     player.pick(idx)
@@ -63,6 +68,7 @@ def go_money_pick(player, idx):
 
 
 def go_pick(player, idx):
+    player.spin_to_base()
     player.send_gm(enter_pick)
     player.spin()
     player.pick(idx)

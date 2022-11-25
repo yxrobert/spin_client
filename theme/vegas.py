@@ -18,17 +18,18 @@ class VegasRobot(SpinRobot):
         pass
 
 def run(player):
-    player.select_bet(400000)
-
+    # player.select_bet(400000)
+    # player.send_cmd("rtpf 55")
     # player.send_cmd(cheat_12)
     # player.spin_to_next_stage()
 
     # player.send_cmd(cheat_6)
     # player.send_cmd(test_gm)
 
-    # player.send_cmd(gm_bonus_jp)
+    player.spin_to_base()
+    player.send_cmd(gm_bonus_jp)
     # player.send_cmd(free_cmd)
-    # player.spin()
+    player.spin()
     player.spin_to_base()
 
     # player.pick(1)

@@ -59,7 +59,8 @@ coin_cmd = "add coin 9999999999"
 chain = "chain"
 
 def run_mege(player):
-    # player.send_cmd(chain)
+    player.send_cmd(coin_cmd)
+    player.send_cmd(level_cmd)
     # average bet
     # player.select_bet(200000)
     # player.spin()
@@ -79,7 +80,7 @@ def run_mege(player):
 
     # player.send_cmd(bm_cmd)
     # player.spin()
-    player.spin_times(10)
+    player.spin_times(1)
     # player.spin_to_next_stage()
 
     # player.spin_to_base()

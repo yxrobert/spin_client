@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'Z\004.;pb',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x0copcode.proto\x12\x02pb\"7\n\x08OpResult\x12\x1a\n\x06OpCode\x18\x01 \x01(\x0e\x32\n.pb.OpCode\x12\x0f\n\x07\x43ontent\x18\x02 \x01(\t*\xfa\x05\n\x06OpCode\x12\x0f\n\x0bOpResult_OK\x10\x00\x12\x10\n\x0cOpResult_Err\x10\x01\x12\x1e\n\x1aOpResult_Request_Param_Err\x10\x02\x12\x1a\n\x16OpResult_Data_Outdated\x10\x03\x12\x16\n\x12OpResult_InvalidID\x10\x04\x12\x19\n\x15OpResult_Repeated_Req\x10\x05\x12\x1b\n\x17OpResult_NotEnough_Coin\x10\x14\x12\x1b\n\x17OpResult_NotEnough_Dice\x10\x15\x12 \n\x1cOpResult_NotEnough_BingoBall\x10\x16\x12\x1a\n\x16OpResult_NotEnough_Gem\x10\x17\x12\x1c\n\x18OpResult_NotEnough_Candy\x10\x18\x12\x1b\n\x17OpResult_NotEnough_Time\x10\x19\x12\x1c\n\x18OpResult_NotEnough_Level\x10\x1a\x12\x1c\n\x18OpResult_NotEnough_Times\x10\x1b\x12\x1f\n\x1bOpResult_Activity_Not_Exist\x10\x64\x12\x1d\n\x19OpResult_Activity_Req_Err\x10\x65\x12\x1c\n\x17OpResult_Card_Not_Exist\x10\xc8\x01\x12!\n\x1cOpResult_ExchangeCard_Failed\x10\xc9\x01\x12 \n\x1bOpResult_LevelSprint_InGame\x10\xac\x02\x12#\n\x1eOpResult_LevelSprint_NotInGame\x10\xad\x02\x12#\n\x1eOpResult_LevelSprint_ErrStatus\x10\xae\x02\x12\x30\n+OpResult_LevelSprint_NotEnough_BuyBuffTimes\x10\xaf\x02\x12(\n#OpResult_LevelSprint_Have_DrawTimes\x10\xb0\x02\x12&\n!OpResult_LevelSprint_No_DrawTimes\x10\xb1\x02\x42\x06Z\x04.;pbb\x06proto3'
+  serialized_pb=b'\n\x0copcode.proto\x12\x02pb\"7\n\x08OpResult\x12\x1a\n\x06OpCode\x18\x01 \x01(\x0e\x32\n.pb.OpCode\x12\x0f\n\x07\x43ontent\x18\x02 \x01(\t*\xb3\x06\n\x06OpCode\x12\x0f\n\x0bOpResult_OK\x10\x00\x12\x10\n\x0cOpResult_Err\x10\x01\x12\x1e\n\x1aOpResult_Request_Param_Err\x10\x02\x12\x1a\n\x16OpResult_Data_Outdated\x10\x03\x12\x16\n\x12OpResult_InvalidID\x10\x04\x12\x19\n\x15OpResult_Repeated_Req\x10\x05\x12\x1b\n\x17OpResult_NotEnough_Coin\x10\x14\x12\x1b\n\x17OpResult_NotEnough_Dice\x10\x15\x12 \n\x1cOpResult_NotEnough_BingoBall\x10\x16\x12\x1a\n\x16OpResult_NotEnough_Gem\x10\x17\x12\x1c\n\x18OpResult_NotEnough_Candy\x10\x18\x12\x1b\n\x17OpResult_NotEnough_Time\x10\x19\x12\x1c\n\x18OpResult_NotEnough_Level\x10\x1a\x12\x1c\n\x18OpResult_NotEnough_Times\x10\x1b\x12\x1f\n\x1bOpResult_Activity_Not_Exist\x10\x64\x12\x1d\n\x19OpResult_Activity_Req_Err\x10\x65\x12\x1c\n\x17OpResult_Card_Not_Exist\x10\xc8\x01\x12!\n\x1cOpResult_ExchangeCard_Failed\x10\xc9\x01\x12 \n\x1bOpResult_LevelSprint_InGame\x10\xac\x02\x12#\n\x1eOpResult_LevelSprint_NotInGame\x10\xad\x02\x12#\n\x1eOpResult_LevelSprint_ErrStatus\x10\xae\x02\x12\x30\n+OpResult_LevelSprint_NotEnough_BuyBuffTimes\x10\xaf\x02\x12\x30\n+OpResult_LevelSprint_NotEnough_BuyTimeTimes\x10\xb0\x02\x12(\n#OpResult_LevelSprint_Have_DrawTimes\x10\xb1\x02\x12-\n(OpResult_LevelSprint_NotEnough_DrawTimes\x10\xb2\x02\x42\x06Z\x04.;pbb\x06proto3'
 )
 
 _OPCODE = _descriptor.EnumDescriptor(
@@ -141,12 +141,17 @@ _OPCODE = _descriptor.EnumDescriptor(
       type=None,
       create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
-      name='OpResult_LevelSprint_Have_DrawTimes', index=22, number=304,
+      name='OpResult_LevelSprint_NotEnough_BuyTimeTimes', index=22, number=304,
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
-      name='OpResult_LevelSprint_No_DrawTimes', index=23, number=305,
+      name='OpResult_LevelSprint_Have_DrawTimes', index=23, number=305,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='OpResult_LevelSprint_NotEnough_DrawTimes', index=24, number=306,
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
@@ -154,7 +159,7 @@ _OPCODE = _descriptor.EnumDescriptor(
   containing_type=None,
   serialized_options=None,
   serialized_start=78,
-  serialized_end=840,
+  serialized_end=897,
 )
 _sym_db.RegisterEnumDescriptor(_OPCODE)
 
@@ -181,8 +186,9 @@ OpResult_LevelSprint_InGame = 300
 OpResult_LevelSprint_NotInGame = 301
 OpResult_LevelSprint_ErrStatus = 302
 OpResult_LevelSprint_NotEnough_BuyBuffTimes = 303
-OpResult_LevelSprint_Have_DrawTimes = 304
-OpResult_LevelSprint_No_DrawTimes = 305
+OpResult_LevelSprint_NotEnough_BuyTimeTimes = 304
+OpResult_LevelSprint_Have_DrawTimes = 305
+OpResult_LevelSprint_NotEnough_DrawTimes = 306
 
 
 

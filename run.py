@@ -29,6 +29,7 @@ tab_theme_robot = {
 
     1 : [theme.CardGathering, theme.cardgathering.run],
     2 : [theme.LevelSprint, theme.levelsprint.run],
+    10 : [theme.SystemRobot, theme.SystemRobot.run],
     100 : [theme.FuncRobot, theme.functions.run],
     }
 

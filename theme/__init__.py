@@ -14,3 +14,4 @@ from cardgathering import *
 from functions import *
 from levelsprint import *
 from iceprincess import *
+from gamesystem import *

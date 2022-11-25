@@ -201,6 +201,12 @@ def make_levelsprint_draw_req(player_id, token):
     request.LevelSprint.DrawLottery.Type = 0
     return req
 
+def make_bonus_req(player_id, token, src, act):
+    req, request = make_multi_req(player_id, token)
+    request.Bonus.Source = src
+    request.Bonus.Action = act
+    return req
+
 
 
 

@@ -51,11 +51,11 @@ def gm_card(player):
 
 
 def run(player):
-    # player.send_cmd(add_card_all)
+    player.send_cmd(add_card_all)
     # player.send_cmd("cardadd 122 1")
 
-    # player.req_cardgathering_data(-1)
-    # player.req_cardgathering_exchange(122, 50)
+    player.req_cardgathering_data(-1)
+    player.req_cardgathering_exchange(122, 50)
     # player.req_cardgathering_gameaward()
 
     # player.send_cmd(gem_cmd)
@@ -65,7 +65,7 @@ def run(player):
     # player.send_cmd("cardreset")
     # player.send_cmd("cardadd 90,15")
     # player.req_cardgathering_break(2, cost_cards)
-    player.req_cardgathering_gameaward()
+    # player.req_cardgathering_gameaward()
 
     # gm_card(player)
     # player.spin()

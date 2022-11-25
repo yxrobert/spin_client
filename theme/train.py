@@ -20,7 +20,7 @@ class TrainRobot(SpinRobot):
         pass
 
 def run(player):
-    # player.select_bet(120000)
+    player.select_bet(6000000)
 
     # player.send_cmd(cheat_12)
     # player.spin_to_next_stage()
@@ -32,7 +32,7 @@ def run(player):
     # player.send_cmd("add level 50")
     # player.send_cmd("bgdrop 4")
 
-    player.spin_times(100000)
+    player.spin_times(1000)
     # player.spin_to_base()
     # player.spin_to_next_stage()
 

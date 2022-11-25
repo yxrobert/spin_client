@@ -132,6 +132,10 @@ class RobotBase:
         req = make_treasure_get_req(self.player_id, self.token)
         self.send_packet(req)
 
+    def req_bonus(self, src, act):
+        req = make_bonus_req(self.player_id, self.token, src, act)
+        self.send_packet(req)
+
     def on_response(self, packet):
         if packet.Error != None:
             # self.log("--------Got Error--------[" + str(packet.Error) + "]")
@@ -220,6 +224,9 @@ class SpinRobot(RobotBase):
         self.themeData = ThemeData()
         self.theme_id = theme_id
         self.interval = 0.2
+
+    def get_next_stage(self):
+        return self.themeData.NextStage
 
     def set_auto_interval(self, val):
         self.interval = val

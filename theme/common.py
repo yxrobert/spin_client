@@ -55,7 +55,7 @@ def gm_meta(player):
     pass
 
 def run(player):
-    player.send_cmd("panelm 1,2,3;1,2,3,4;1,2,3,4,5|1,2,3;1,2,3,4;1,2,3,4,5")
+    # player.send_cmd("panelm 1,2,3;1,2,3,4;1,2,3,4,5|1,2,3;1,2,3,4;1,2,3,4,5")
     # player.send_cmd(candy_cmd)
     # player.send_cmd(gem_cmd)
     # player.send_cmd(add_money)
@@ -79,7 +79,8 @@ def run(player):
     # player.send_cmd(bingo_pro_cmd)
     # player.send_cmd(gmnow)
     # player.send_cmd(journey_roll)
-    # player.send_cmd(journey)
+    # player.send_cmd("journey 0,118")
+    # player.send_cmd("jroll 20")
     
     # player.req_treasure_get()
     # player.req_activity_list()
@@ -87,10 +88,14 @@ def run(player):
     # player.send_cmd("metaj 0,1")
     # player.send_cmd("metas")
 
+    # player.send_cmd("trs")
+    # player.send_cmd("bgboxpass")
+    # player.send_cmd("trmail")
+
     # act_id = 50011
-    act_id = 23
+    act_id = 113
     player.req_activity_user_data(act_id)
-    times = 1
+    times = 0
     for i in range(0, times):
         player.req_activity_play(act_id)
         pass

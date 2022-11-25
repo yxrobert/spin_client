@@ -21,7 +21,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'Z\004.;pb',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x11levelsprint.proto\x12\x02pb\x1a\x0copcode.proto\x1a\x0b\x61ward.proto\"\xd5\x12\n\x0bLevelSprint\x1a\x8b\x02\n\x0bMissionData\x12\x10\n\x08\x43urLevel\x18\x01 \x01(\x05\x12\x0e\n\x06Levels\x18\x02 \x03(\x05\x12\x0e\n\x06Reward\x18\x03 \x03(\x08\x12\x16\n\x0eMissionEndTime\x18\x04 \x01(\x03\x12\x12\n\nBeginLevel\x18\x05 \x01(\x05\x12\x1a\n\x12RemainBuyBuffTimes\x18\x06 \x01(\x05\x12\x12\n\nPickReward\x18\x07 \x03(\x08\x12%\n\x0eLowLevelAwards\x18\x08 \x03(\x0b\x32\r.pb.AwardInfo\x12\x10\n\x08\x42uffCost\x18\t \x01(\x05\x12\x10\n\x08TimeCost\x18\n \x01(\x05\x12#\n\x0cMaxGameAward\x18\x0b \x03(\x0b\x32\r.pb.AwardInfo\x1a\x65\n\nLevelsData\x12)\n\tCurStatus\x18\x01 \x01(\x0e\x32\x16.pb.LevelSprint.Status\x12,\n\x07Mission\x18\x02 \x01(\x0b\x32\x1b.pb.LevelSprint.MissionData\x1a\xe1\x02\n\x08GameData\x12\x0e\n\x06InGame\x18\x01 \x01(\x08\x12\x0f\n\x07IsFirst\x18\x02 \x01(\x08\x12\x12\n\nRewardList\x18\x03 \x03(\x05\x12\x12\n\nJPProgress\x18\x04 \x01(\x05\x12\x11\n\tDrawTimes\x18\x05 \x01(\x05\x12\r\n\x05IsPay\x18\x06 \x01(\x08\x12\x1a\n\x12RemainingDrawTimes\x18\x07 \x01(\x05\x12\x10\n\x08PayPrice\x18\x08 \x01(\x05\x12%\n\x0e\x46reeGameAwards\x18\t \x03(\x0b\x32\r.pb.AwardList\x12$\n\rPayGameAwards\x18\n \x03(\x0b\x32\r.pb.AwardList\x12#\n\x0c\x46reeJPAwards\x18\x0b \x03(\x0b\x32\r.pb.AwardList\x12\"\n\x0bPayJPAwards\x18\x0c \x03(\x0b\x32\r.pb.AwardList\x12&\n\x0fMaxPayGameAward\x18\r \x03(\x0b\x32\r.pb.AwardInfo\x1a^\n\x08UserData\x12*\n\x06Levels\x18\x01 \x01(\x0b\x32\x1a.pb.LevelSprint.LevelsData\x12&\n\x04Game\x18\x02 \x01(\x0b\x32\x18.pb.LevelSprint.GameData\x1a\xa6\x04\n\x03Req\x12*\n\x03Get\x18\x01 \x01(\x0b\x32\x1b.pb.LevelSprint.Req.GetDataH\x00\x12+\n\x07\x42uyTime\x18\x02 \x01(\x0b\x32\x18.pb.LevelSprint.Req.TimeH\x00\x12+\n\x07\x42uyBuff\x18\x03 \x01(\x0b\x32\x18.pb.LevelSprint.Req.BuffH\x00\x12/\n\tChooseWay\x18\x04 \x01(\x0b\x32\x1a.pb.LevelSprint.Req.ChooseH\x00\x12/\n\x0b\x44rawLottery\x18\x05 \x01(\x0b\x32\x18.pb.LevelSprint.Req.DrawH\x00\x12,\n\x08QuitGame\x18\x06 \x01(\x0b\x32\x18.pb.LevelSprint.Req.QuitH\x00\x12,\n\x06reward\x18\x07 \x01(\x0b\x32\x1a.pb.LevelSprint.Req.RewardH\x00\x1a\x17\n\x07GetData\x12\x0c\n\x04Type\x18\x01 \x01(\x05\x1a\x16\n\x06Reward\x12\x0c\n\x04Type\x18\x01 \x01(\x05\x1a-\n\x04Time\x12%\n\x04Type\x18\x01 \x01(\x0e\x32\x17.pb.LevelSprint.BuyType\x1a\x14\n\x04\x42uff\x12\x0c\n\x04Type\x18\x01 \x01(\x05\x1a\x32\n\x06\x43hoose\x12(\n\x04Type\x18\x01 \x01(\x0e\x32\x1a.pb.LevelSprint.ChooseType\x1a\x14\n\x04\x44raw\x12\x0c\n\x04Type\x18\x01 \x01(\x05\x1a\x14\n\x04Quit\x12\x0c\n\x04Type\x18\x01 \x01(\x05\x42\x05\n\x03one\x1a\x98\x06\n\x03Rsp\x12\x1e\n\x08OpResult\x18\x64 \x01(\x0b\x32\x0c.pb.OpResult\x12*\n\x03Get\x18\x01 \x01(\x0b\x32\x1b.pb.LevelSprint.Rsp.GetDataH\x00\x12+\n\x07\x42uyTime\x18\x02 \x01(\x0b\x32\x18.pb.LevelSprint.Rsp.TimeH\x00\x12+\n\x07\x42uyBuff\x18\x03 \x01(\x0b\x32\x18.pb.LevelSprint.Rsp.BuffH\x00\x12/\n\tChooseWay\x18\x04 \x01(\x0b\x32\x1a.pb.LevelSprint.Rsp.ChooseH\x00\x12/\n\x0b\x44rawLottery\x18\x05 \x01(\x0b\x32\x18.pb.LevelSprint.Rsp.DrawH\x00\x12,\n\x08QuitGame\x18\x06 \x01(\x0b\x32\x18.pb.LevelSprint.Rsp.QuitH\x00\x12,\n\x06reward\x18\x07 \x01(\x0b\x32\x1a.pb.LevelSprint.Rsp.RewardH\x00\x1a\x31\n\x07GetData\x12&\n\x04\x44\x61ta\x18\x01 \x01(\x0b\x32\x18.pb.LevelSprint.UserData\x1a\x30\n\x06Reward\x12&\n\x04\x44\x61ta\x18\x01 \x01(\x0b\x32\x18.pb.LevelSprint.UserData\x1aU\n\x04Time\x12%\n\x04Type\x18\x01 \x01(\x0e\x32\x17.pb.LevelSprint.BuyType\x12&\n\x04\x44\x61ta\x18\x02 \x01(\x0b\x32\x18.pb.LevelSprint.UserData\x1a.\n\x04\x42uff\x12&\n\x04\x44\x61ta\x18\x01 \x01(\x0b\x32\x18.pb.LevelSprint.UserData\x1aZ\n\x06\x43hoose\x12(\n\x04Type\x18\x01 \x01(\x0e\x32\x1a.pb.LevelSprint.ChooseType\x12&\n\x04\x44\x61ta\x18\x02 \x01(\x0b\x32\x18.pb.LevelSprint.UserData\x1a.\n\x04\x44raw\x12&\n\x04\x44\x61ta\x18\x01 \x01(\x0b\x32\x18.pb.LevelSprint.UserData\x1a.\n\x04Quit\x12&\n\x04\x44\x61ta\x18\x01 \x01(\x0b\x32\x18.pb.LevelSprint.UserDataB\x05\n\x03one\"S\n\x06Status\x12\n\n\x06\x43losed\x10\x00\x12\x08\n\x04Open\x10\x01\x12\r\n\tInMission\x10\x02\x12\n\n\x06\x45nding\x10\x03\x12\x0c\n\x08\x43hoosing\x10\x04\x12\n\n\x06Gaming\x10\x05\"3\n\x08RandType\x12\x06\n\x02JP\x10\x00\x12\x08\n\x04\x43oin\x10\x01\x12\x08\n\x04Item\x10\x02\x12\x0b\n\x07TypeMax\x10\x03\"\x1e\n\x07\x42uyType\x12\x07\n\x03\x42uy\x10\x00\x12\n\n\x06GiveUp\x10\x01\"\x1f\n\nChooseType\x12\x07\n\x03Now\x10\x00\x12\x08\n\x04Mail\x10\x01\x42\x06Z\x04.;pbb\x06proto3'
+  serialized_pb=b'\n\x11levelsprint.proto\x12\x02pb\x1a\x0copcode.proto\x1a\x0b\x61ward.proto\"\xf1\x12\n\x0bLevelSprint\x1a\xa7\x02\n\x0bMissionData\x12\x10\n\x08\x43urLevel\x18\x01 \x01(\x05\x12\x0e\n\x06Levels\x18\x02 \x03(\x05\x12\x0e\n\x06Reward\x18\x03 \x03(\x08\x12\x16\n\x0eMissionEndTime\x18\x04 \x01(\x03\x12\x12\n\nBeginLevel\x18\x05 \x01(\x05\x12\x1a\n\x12RemainBuyBuffTimes\x18\x06 \x01(\x05\x12\x1a\n\x12RemainBuyTimeTimes\x18\x07 \x01(\x05\x12\x12\n\nPickReward\x18\x08 \x03(\x08\x12\x10\n\x08\x42uffCost\x18\t \x01(\x05\x12\x10\n\x08TimeCost\x18\n \x01(\x05\x12%\n\x0eLowLevelAwards\x18\x0b \x03(\x0b\x32\r.pb.AwardInfo\x12#\n\x0cMaxGameAward\x18\x0c \x03(\x0b\x32\r.pb.AwardInfo\x1a\x65\n\nLevelsData\x12)\n\tCurStatus\x18\x01 \x01(\x0e\x32\x16.pb.LevelSprint.Status\x12,\n\x07Mission\x18\x02 \x01(\x0b\x32\x1b.pb.LevelSprint.MissionData\x1a\xe1\x02\n\x08GameData\x12\x0e\n\x06InGame\x18\x01 \x01(\x08\x12\x0f\n\x07IsFirst\x18\x02 \x01(\x08\x12\x12\n\nRewardList\x18\x03 \x03(\x05\x12\x12\n\nJPProgress\x18\x04 \x01(\x05\x12\x11\n\tDrawTimes\x18\x05 \x01(\x05\x12\r\n\x05IsPay\x18\x06 \x01(\x08\x12\x1a\n\x12RemainingDrawTimes\x18\x07 \x01(\x05\x12\x10\n\x08PayPrice\x18\x08 \x01(\x05\x12%\n\x0e\x46reeGameAwards\x18\t \x03(\x0b\x32\r.pb.AwardList\x12$\n\rPayGameAwards\x18\n \x03(\x0b\x32\r.pb.AwardList\x12#\n\x0c\x46reeJPAwards\x18\x0b \x03(\x0b\x32\r.pb.AwardList\x12\"\n\x0bPayJPAwards\x18\x0c \x03(\x0b\x32\r.pb.AwardList\x12&\n\x0fMaxPayGameAward\x18\r \x03(\x0b\x32\r.pb.AwardInfo\x1a^\n\x08UserData\x12*\n\x06Levels\x18\x01 \x01(\x0b\x32\x1a.pb.LevelSprint.LevelsData\x12&\n\x04Game\x18\x02 \x01(\x0b\x32\x18.pb.LevelSprint.GameData\x1a\xa6\x04\n\x03Req\x12*\n\x03Get\x18\x01 \x01(\x0b\x32\x1b.pb.LevelSprint.Req.GetDataH\x00\x12+\n\x07\x42uyTime\x18\x02 \x01(\x0b\x32\x18.pb.LevelSprint.Req.TimeH\x00\x12+\n\x07\x42uyBuff\x18\x03 \x01(\x0b\x32\x18.pb.LevelSprint.Req.BuffH\x00\x12/\n\tChooseWay\x18\x04 \x01(\x0b\x32\x1a.pb.LevelSprint.Req.ChooseH\x00\x12/\n\x0b\x44rawLottery\x18\x05 \x01(\x0b\x32\x18.pb.LevelSprint.Req.DrawH\x00\x12,\n\x08QuitGame\x18\x06 \x01(\x0b\x32\x18.pb.LevelSprint.Req.QuitH\x00\x12,\n\x06reward\x18\x07 \x01(\x0b\x32\x1a.pb.LevelSprint.Req.RewardH\x00\x1a\x17\n\x07GetData\x12\x0c\n\x04Type\x18\x01 \x01(\x05\x1a\x16\n\x06Reward\x12\x0c\n\x04Type\x18\x01 \x01(\x05\x1a-\n\x04Time\x12%\n\x04Type\x18\x01 \x01(\x0e\x32\x17.pb.LevelSprint.BuyType\x1a\x14\n\x04\x42uff\x12\x0c\n\x04Type\x18\x01 \x01(\x05\x1a\x32\n\x06\x43hoose\x12(\n\x04Type\x18\x01 \x01(\x0e\x32\x1a.pb.LevelSprint.ChooseType\x1a\x14\n\x04\x44raw\x12\x0c\n\x04Type\x18\x01 \x01(\x05\x1a\x14\n\x04Quit\x12\x0c\n\x04Type\x18\x01 \x01(\x05\x42\x05\n\x03one\x1a\x98\x06\n\x03Rsp\x12\x1e\n\x08OpResult\x18\x64 \x01(\x0b\x32\x0c.pb.OpResult\x12*\n\x03Get\x18\x01 \x01(\x0b\x32\x1b.pb.LevelSprint.Rsp.GetDataH\x00\x12+\n\x07\x42uyTime\x18\x02 \x01(\x0b\x32\x18.pb.LevelSprint.Rsp.TimeH\x00\x12+\n\x07\x42uyBuff\x18\x03 \x01(\x0b\x32\x18.pb.LevelSprint.Rsp.BuffH\x00\x12/\n\tChooseWay\x18\x04 \x01(\x0b\x32\x1a.pb.LevelSprint.Rsp.ChooseH\x00\x12/\n\x0b\x44rawLottery\x18\x05 \x01(\x0b\x32\x18.pb.LevelSprint.Rsp.DrawH\x00\x12,\n\x08QuitGame\x18\x06 \x01(\x0b\x32\x18.pb.LevelSprint.Rsp.QuitH\x00\x12,\n\x06reward\x18\x07 \x01(\x0b\x32\x1a.pb.LevelSprint.Rsp.RewardH\x00\x1a\x31\n\x07GetData\x12&\n\x04\x44\x61ta\x18\x01 \x01(\x0b\x32\x18.pb.LevelSprint.UserData\x1a\x30\n\x06Reward\x12&\n\x04\x44\x61ta\x18\x01 \x01(\x0b\x32\x18.pb.LevelSprint.UserData\x1aU\n\x04Time\x12%\n\x04Type\x18\x01 \x01(\x0e\x32\x17.pb.LevelSprint.BuyType\x12&\n\x04\x44\x61ta\x18\x02 \x01(\x0b\x32\x18.pb.LevelSprint.UserData\x1a.\n\x04\x42uff\x12&\n\x04\x44\x61ta\x18\x01 \x01(\x0b\x32\x18.pb.LevelSprint.UserData\x1aZ\n\x06\x43hoose\x12(\n\x04Type\x18\x01 \x01(\x0e\x32\x1a.pb.LevelSprint.ChooseType\x12&\n\x04\x44\x61ta\x18\x02 \x01(\x0b\x32\x18.pb.LevelSprint.UserData\x1a.\n\x04\x44raw\x12&\n\x04\x44\x61ta\x18\x01 \x01(\x0b\x32\x18.pb.LevelSprint.UserData\x1a.\n\x04Quit\x12&\n\x04\x44\x61ta\x18\x01 \x01(\x0b\x32\x18.pb.LevelSprint.UserDataB\x05\n\x03one\"S\n\x06Status\x12\n\n\x06\x43losed\x10\x00\x12\x08\n\x04Open\x10\x01\x12\r\n\tInMission\x10\x02\x12\n\n\x06\x45nding\x10\x03\x12\x0c\n\x08\x43hoosing\x10\x04\x12\n\n\x06Gaming\x10\x05\"3\n\x08RandType\x12\x06\n\x02JP\x10\x00\x12\x08\n\x04\x43oin\x10\x01\x12\x08\n\x04Item\x10\x02\x12\x0b\n\x07TypeMax\x10\x03\"\x1e\n\x07\x42uyType\x12\x07\n\x03\x42uy\x10\x00\x12\n\n\x06GiveUp\x10\x01\"\x1f\n\nChooseType\x12\x07\n\x03Now\x10\x00\x12\x08\n\x04Mail\x10\x01\x42\x06Z\x04.;pbb\x06proto3'
   ,
   dependencies=[opcode__pb2.DESCRIPTOR,award__pb2.DESCRIPTOR,])
 
@@ -67,8 +67,8 @@ _LEVELSPRINT_STATUS = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=2241,
-  serialized_end=2324,
+  serialized_start=2269,
+  serialized_end=2352,
 )
 _sym_db.RegisterEnumDescriptor(_LEVELSPRINT_STATUS)
 
@@ -102,8 +102,8 @@ _LEVELSPRINT_RANDTYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=2326,
-  serialized_end=2377,
+  serialized_start=2354,
+  serialized_end=2405,
 )
 _sym_db.RegisterEnumDescriptor(_LEVELSPRINT_RANDTYPE)
 
@@ -127,8 +127,8 @@ _LEVELSPRINT_BUYTYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=2379,
-  serialized_end=2409,
+  serialized_start=2407,
+  serialized_end=2437,
 )
 _sym_db.RegisterEnumDescriptor(_LEVELSPRINT_BUYTYPE)
 
@@ -152,8 +152,8 @@ _LEVELSPRINT_CHOOSETYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=2411,
-  serialized_end=2442,
+  serialized_start=2439,
+  serialized_end=2470,
 )
 _sym_db.RegisterEnumDescriptor(_LEVELSPRINT_CHOOSETYPE)
 
@@ -209,15 +209,15 @@ _LEVELSPRINT_MISSIONDATA = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='PickReward', full_name='pb.LevelSprint.MissionData.PickReward', index=6,
-      number=7, type=8, cpp_type=7, label=3,
-      has_default_value=False, default_value=[],
+      name='RemainBuyTimeTimes', full_name='pb.LevelSprint.MissionData.RemainBuyTimeTimes', index=6,
+      number=7, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='LowLevelAwards', full_name='pb.LevelSprint.MissionData.LowLevelAwards', index=7,
-      number=8, type=11, cpp_type=10, label=3,
+      name='PickReward', full_name='pb.LevelSprint.MissionData.PickReward', index=7,
+      number=8, type=8, cpp_type=7, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -237,8 +237,15 @@ _LEVELSPRINT_MISSIONDATA = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='MaxGameAward', full_name='pb.LevelSprint.MissionData.MaxGameAward', index=10,
+      name='LowLevelAwards', full_name='pb.LevelSprint.MissionData.LowLevelAwards', index=10,
       number=11, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='MaxGameAward', full_name='pb.LevelSprint.MissionData.MaxGameAward', index=11,
+      number=12, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -256,7 +263,7 @@ _LEVELSPRINT_MISSIONDATA = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=69,
-  serialized_end=336,
+  serialized_end=364,
 )
 
 _LEVELSPRINT_LEVELSDATA = _descriptor.Descriptor(
@@ -293,8 +300,8 @@ _LEVELSPRINT_LEVELSDATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=338,
-  serialized_end=439,
+  serialized_start=366,
+  serialized_end=467,
 )
 
 _LEVELSPRINT_GAMEDATA = _descriptor.Descriptor(
@@ -408,8 +415,8 @@ _LEVELSPRINT_GAMEDATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=442,
-  serialized_end=795,
+  serialized_start=470,
+  serialized_end=823,
 )
 
 _LEVELSPRINT_USERDATA = _descriptor.Descriptor(
@@ -446,8 +453,8 @@ _LEVELSPRINT_USERDATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=797,
-  serialized_end=891,
+  serialized_start=825,
+  serialized_end=919,
 )
 
 _LEVELSPRINT_REQ_GETDATA = _descriptor.Descriptor(
@@ -477,8 +484,8 @@ _LEVELSPRINT_REQ_GETDATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1225,
-  serialized_end=1248,
+  serialized_start=1253,
+  serialized_end=1276,
 )
 
 _LEVELSPRINT_REQ_REWARD = _descriptor.Descriptor(
@@ -508,8 +515,8 @@ _LEVELSPRINT_REQ_REWARD = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1250,
-  serialized_end=1272,
+  serialized_start=1278,
+  serialized_end=1300,
 )
 
 _LEVELSPRINT_REQ_TIME = _descriptor.Descriptor(
@@ -539,8 +546,8 @@ _LEVELSPRINT_REQ_TIME = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1274,
-  serialized_end=1319,
+  serialized_start=1302,
+  serialized_end=1347,
 )
 
 _LEVELSPRINT_REQ_BUFF = _descriptor.Descriptor(
@@ -570,8 +577,8 @@ _LEVELSPRINT_REQ_BUFF = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1321,
-  serialized_end=1341,
+  serialized_start=1349,
+  serialized_end=1369,
 )
 
 _LEVELSPRINT_REQ_CHOOSE = _descriptor.Descriptor(
@@ -601,8 +608,8 @@ _LEVELSPRINT_REQ_CHOOSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1343,
-  serialized_end=1393,
+  serialized_start=1371,
+  serialized_end=1421,
 )
 
 _LEVELSPRINT_REQ_DRAW = _descriptor.Descriptor(
@@ -632,8 +639,8 @@ _LEVELSPRINT_REQ_DRAW = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1395,
-  serialized_end=1415,
+  serialized_start=1423,
+  serialized_end=1443,
 )
 
 _LEVELSPRINT_REQ_QUIT = _descriptor.Descriptor(
@@ -663,8 +670,8 @@ _LEVELSPRINT_REQ_QUIT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1417,
-  serialized_end=1437,
+  serialized_start=1445,
+  serialized_end=1465,
 )
 
 _LEVELSPRINT_REQ = _descriptor.Descriptor(
@@ -741,8 +748,8 @@ _LEVELSPRINT_REQ = _descriptor.Descriptor(
       create_key=_descriptor._internal_create_key,
     fields=[]),
   ],
-  serialized_start=894,
-  serialized_end=1444,
+  serialized_start=922,
+  serialized_end=1472,
 )
 
 _LEVELSPRINT_RSP_GETDATA = _descriptor.Descriptor(
@@ -772,8 +779,8 @@ _LEVELSPRINT_RSP_GETDATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1810,
-  serialized_end=1859,
+  serialized_start=1838,
+  serialized_end=1887,
 )
 
 _LEVELSPRINT_RSP_REWARD = _descriptor.Descriptor(
@@ -803,8 +810,8 @@ _LEVELSPRINT_RSP_REWARD = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1861,
-  serialized_end=1909,
+  serialized_start=1889,
+  serialized_end=1937,
 )
 
 _LEVELSPRINT_RSP_TIME = _descriptor.Descriptor(
@@ -841,8 +848,8 @@ _LEVELSPRINT_RSP_TIME = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1911,
-  serialized_end=1996,
+  serialized_start=1939,
+  serialized_end=2024,
 )
 
 _LEVELSPRINT_RSP_BUFF = _descriptor.Descriptor(
@@ -872,8 +879,8 @@ _LEVELSPRINT_RSP_BUFF = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1998,
-  serialized_end=2044,
+  serialized_start=2026,
+  serialized_end=2072,
 )
 
 _LEVELSPRINT_RSP_CHOOSE = _descriptor.Descriptor(
@@ -910,8 +917,8 @@ _LEVELSPRINT_RSP_CHOOSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2046,
-  serialized_end=2136,
+  serialized_start=2074,
+  serialized_end=2164,
 )
 
 _LEVELSPRINT_RSP_DRAW = _descriptor.Descriptor(
@@ -941,8 +948,8 @@ _LEVELSPRINT_RSP_DRAW = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2138,
-  serialized_end=2184,
+  serialized_start=2166,
+  serialized_end=2212,
 )
 
 _LEVELSPRINT_RSP_QUIT = _descriptor.Descriptor(
@@ -972,8 +979,8 @@ _LEVELSPRINT_RSP_QUIT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2186,
-  serialized_end=2232,
+  serialized_start=2214,
+  serialized_end=2260,
 )
 
 _LEVELSPRINT_RSP = _descriptor.Descriptor(
@@ -1057,8 +1064,8 @@ _LEVELSPRINT_RSP = _descriptor.Descriptor(
       create_key=_descriptor._internal_create_key,
     fields=[]),
   ],
-  serialized_start=1447,
-  serialized_end=2239,
+  serialized_start=1475,
+  serialized_end=2267,
 )
 
 _LEVELSPRINT = _descriptor.Descriptor(
@@ -1086,7 +1093,7 @@ _LEVELSPRINT = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=53,
-  serialized_end=2442,
+  serialized_end=2470,
 )
 
 _LEVELSPRINT_MISSIONDATA.fields_by_name['LowLevelAwards'].message_type = award__pb2._AWARDINFO

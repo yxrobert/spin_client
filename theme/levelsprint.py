@@ -26,9 +26,10 @@ class LevelSprint(SpinRobot):
 def run(player):
     # player.send_cmd(add_card_all)
     # player.send_cmd("lsgame")
+    # player.send_cmd("add level 30")
 
-    player.req_levelsprint_draw()
-    # player.req_levelsprint_get()
+    # player.req_levelsprint_draw()
+    player.req_levelsprint_get()
 
     # player.spin()
     # player.req_cardgathering_data(-1)
