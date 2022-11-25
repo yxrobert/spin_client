@@ -9,10 +9,13 @@ class PreRobot(SpinRobot):
         SpinRobot.__init__(self, name, theme_id)
         self.life = int(life)
         self.set_auto_interval(0.001)
+        self.log_switch = False
 
     def on_response(self, packet):
         if packet.Error != None:
             self.process_err(packet.Error)
+            self.err_count += 1
+            self.log_err("err_count:%d" % self.err_count)
 
         if packet.HasField("Login"):
             self.on_login(packet)

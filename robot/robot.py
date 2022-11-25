@@ -12,27 +12,36 @@ from conf import save_user_data, get_user_id, get_token
 log_name = "./log/{}.log"
 add_money = "add coin 99999999999"
 
+
+def log_output(name, content):
+    file_name = log_name.format(name)
+    with open(file_name, "a+") as f:
+        print >> f, content
+
 class RobotBase:
     def __init__(self, name):
         self.name = name
         self.err_count = 0
         self.err_max = 3
+        self.log_switch = True
 
     def log(self, *content):
         print(content)
-        file_name = log_name.format(self.name)
-        # with open(file_name, "w+") as f:
-        #     lines = f.readlines()
-        #     for c in content:
-        #         lines.append(str(c))
-        #     f.seek(0)
-        #     f.writelines(lines)
-        with open(file_name, "a+") as f:
-            print >> f, content
+        if self.log_switch:
+            log_output(self.name, content)
+         
+    def log_err(self, *content):
+        print(content)
+        log_output(self.name, content)
+    
+    # def log_output(name, content):
+    #     file_name = log_name.formati(name)
+    #     with open(file_name, "a+") as f:
+    #         print >> f, content
 
     def send_packet(self, req):
         if self.err_count >= self.err_max:
-            self.log("err max")
+            self.log_err("err max")
             exit(1)
 
         rsp = Sender.send_result(req)
@@ -174,9 +183,8 @@ class RobotBase:
         return err_str.find("token-match") > 0 or err_str.find("bad-auth") > 0 or err_str.find("time back") > 0 or err_str.find("need login") > 0
 
     def process_err(self, err):
-        self.err_count += 1
         err_str = str(err)
-        self.log(err_str)
+        self.log_err(err_str)
         if self.check_relogin(err_str):
             self.req_login()
         elif err_str.find("not-enough") > 0:
