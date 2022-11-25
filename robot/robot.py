@@ -15,6 +15,8 @@ add_money = "add coin 99999999999"
 class RobotBase:
     def __init__(self, name):
         self.name = name
+        self.err_count = 0
+        self.err_max = 3
 
     def log(self, *content):
         print(content)
@@ -29,6 +31,10 @@ class RobotBase:
             print >> f, content
 
     def send_packet(self, req):
+        if self.err_count >= self.err_max:
+            self.log("err max")
+            exit(1)
+
         rsp = Sender.send_result(req)
         self.on_response(rsp)
 
@@ -168,6 +174,7 @@ class RobotBase:
         return err_str.find("token-match") > 0 or err_str.find("bad-auth") > 0 or err_str.find("time back") > 0 or err_str.find("need login") > 0
 
     def process_err(self, err):
+        self.err_count += 1
         err_str = str(err)
         self.log(err_str)
         if self.check_relogin(err_str):
@@ -179,11 +186,15 @@ class RobotBase:
         login = packet.Login
         self.set_user_data(login.PlayerID, login.Token)
         save_user_data(self.token, self.player_id)
-        self.log("on_login", login.PlayerID)        
+        # self.log("on_login", login.PlayerID)
+        self.print_user_data()     
 
     def set_user_data(self, user_id, token):
         self.player_id = int(user_id)
         self.token = token
+
+    def print_user_data(self):
+        self.log("[name:%s uid:%d token:%s]" % (self.name, self.player_id, self.token))
 
     def on_play(self, packet):
         pass

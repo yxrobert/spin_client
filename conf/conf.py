@@ -7,6 +7,7 @@ config_file = "config.ini"
 def_section = "default"
 user_section = "user"
 theme_section = "theme"
+pressure_section = "pressure"
 
 
 conf = ConfigParser.ConfigParser()
@@ -41,3 +42,22 @@ def save_user_data(token, user_id):
 def save_all():
     with open(config_file, "w+") as f:
         conf.write(f)
+
+# pressure
+def pressure_acc():
+    return conf.get(pressure_section, "account")
+
+def pressure_theme():
+    return conf.get(pressure_section, "themes").split(",")
+
+def pressure_process():
+    return conf.get(pressure_section, "process")
+
+def pressure_level():
+    return conf.get(pressure_section, "level")
+
+def pressure_init_coin():
+    return conf.get(pressure_section, "init_coin")
+
+def pressure_spin_times():
+    return conf.get(pressure_section, "base_spin_times")
