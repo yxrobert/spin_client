@@ -13,6 +13,9 @@ class PreRobot(SpinRobot):
         self.log_switch = False
         self.transportor = Transportor(addr)
 
+    def print_user_data(self):
+        self.log("[name:%s uid:%d token:%s life:%d]" % (self.name, self.player_id, self.token, self.life))
+
     def send_packet(self, req):
         if self.err_count >= self.err_max:
             self.log_err("err max")
@@ -48,6 +51,7 @@ class PreRobot(SpinRobot):
             self.process_err(packet.Error)
             self.err_count += 1
             self.log_err("[code:%d] [mgs:%s]err_count:%d" % (packet.Error.Code, packet.Error.Msg, self.err_count))
+            return
 
         if packet.HasField("Login"):
             self.on_login(packet)
@@ -57,6 +61,7 @@ class PreRobot(SpinRobot):
             if r.HasField("ThemeStatus"):
                 self.on_theme_status(r.ThemeStatus)
             elif r.HasField("Play"):
+                self.on_play(r.Play)
                 pass
         
     def on_play(self, packet):
@@ -64,10 +69,10 @@ class PreRobot(SpinRobot):
         # self.log("on_play")
         # self.themeData.show_stage()
         # print(packet.Spin.CurrentStage)
-        # print(pb.Slot.Stage.BASE)
         if packet.Spin.CurrentStage == pb.Slot.Stage.BASE:
             self.life -= 1
-            print(self.life)
+            if self.life % 1000 == 0:
+                self.print_user_data()
 
     def prepare(self):
         self.req_login()
