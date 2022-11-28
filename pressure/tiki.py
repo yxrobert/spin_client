@@ -2,6 +2,7 @@
 #coding=utf-8
 
 from controller import ThemeController
+from controller import *
 
 class Tiki(ThemeController):
     def __init__(self, theme_id):

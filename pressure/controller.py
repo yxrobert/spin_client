@@ -1,11 +1,10 @@
 #! /usr/bin/env
 #coding=utf-8
 
-from controller import *
 from tiki import *
 
 theme_register = {
-    10290 : ThemeController,
+    10290 : Tiki,
 }
 
 def create_theme_controller(theme_id):
