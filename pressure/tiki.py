@@ -1,7 +1,6 @@
 #! /usr/bin/env
 #coding=utf-8
 
-from controller import ThemeController
 from controller import *
 
 class Tiki(ThemeController):
