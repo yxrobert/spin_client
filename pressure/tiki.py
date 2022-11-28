@@ -1,7 +1,7 @@
 #! /usr/bin/env
 #coding=utf-8
 
-import controller
+from controller import *
 
 class Tiki(ThemeController):
     def __init__(self, theme_id):
