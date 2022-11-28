@@ -15,7 +15,7 @@ add_money = "add coin 99999999999"
 
 def log_output(name, content):
     file_name = log_name.format(name)
-    with open(file_name, "a+") as f:
+    with open(file_name, "ab+") as f:
         print >> f, content
 
 class RobotBase:
