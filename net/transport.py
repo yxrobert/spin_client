@@ -3,7 +3,7 @@
 
 import time
 import httplib
-
+import gen.proto as pb
 from msg import *
 
 
