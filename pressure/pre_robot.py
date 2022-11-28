@@ -44,10 +44,10 @@ class PreRobot(SpinRobot):
         self.print_user_data()     
 
     def on_response(self, packet):
-        if packet.Error != None:
+        if packet.Error != None and len(packet.Error.Msg) > 0:
             self.process_err(packet.Error)
             self.err_count += 1
-            self.log_err("[%s]err_count:%d" % (packet.Error, self.err_count))
+            self.log_err("[code:%d] [mgs:%s]err_count:%d" % (packet.Error.Code, packet.Error.Msg, self.err_count))
 
         if packet.HasField("Login"):
             self.on_login(packet)
