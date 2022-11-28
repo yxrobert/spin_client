@@ -3,13 +3,33 @@
 
 from robot import SpinRobot
 import gen.proto as pb
+import net
 
 class PreRobot(SpinRobot):
-    def __init__(self, name, theme_id, life):
+    def __init__(self, addr, name, theme_id, life):
         SpinRobot.__init__(self, name, theme_id)
         self.life = int(life)
         self.set_auto_interval(0.001)
         self.log_switch = False
+        self.transportor = net.Transportor(addr)
+
+    def send_packet(self, req):
+        if self.err_count >= self.err_max:
+            self.log_err("err max")
+            exit(1)
+
+        rsp = self.transportor.send_result(req)
+        self.on_response(rsp)
+
+    def req_debug(self, player_id, theme_id, cmd, bet):
+        self.log("req_debug : ", cmd)
+        req = make_debug_req(player_id, theme_id, cmd, bet)
+        self.transportor.send_debug(req)
+
+    def req_debug_cmd(self, player_id, theme_id, cmd, bet):
+        self.log("req_debug : ", cmd)
+        req = make_debug_cmd_req(player_id, theme_id, cmd, bet)
+        self.transportor.send_debug(req)
 
     def on_response(self, packet):
         if packet.Error != None:

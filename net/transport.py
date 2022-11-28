@@ -63,10 +63,10 @@ class Transportor:
 def main():
     tr = Transportor("127.0.0.1:9999")
     req = pb.BunchRequest()
-    req.SID = gen_sid()
-    req.Login.NativeChannel.Name = name
+    req.SID = 1
+    req.Login.NativeChannel.Name = "yx_01"
     req.Login.NativeChannel.Timezone = "+8"
-    tr.send_result(packet, req)
+    tr.send_result(req)
     pass
 
 if __name__ == '__main__':
