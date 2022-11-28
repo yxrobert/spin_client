@@ -47,7 +47,7 @@ class PreRobot(SpinRobot):
         if packet.Error != None:
             self.process_err(packet.Error)
             self.err_count += 1
-            self.log_err("err_count:%d" % self.err_count)
+            self.log_err("[%s]err_count:%d" % (pacekt.Error, self.err_count))
 
         if packet.HasField("Login"):
             self.on_login(packet)
