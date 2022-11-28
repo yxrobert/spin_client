@@ -3,7 +3,7 @@
 
 from robot import SpinRobot
 import gen.proto as pb
-import net
+from net import *
 
 class PreRobot(SpinRobot):
     def __init__(self, addr, name, theme_id, life):
@@ -11,7 +11,7 @@ class PreRobot(SpinRobot):
         self.life = int(life)
         self.set_auto_interval(0.001)
         self.log_switch = False
-        self.transportor = net.Transportor(addr)
+        self.transportor = Transportor(addr)
 
     def send_packet(self, req):
         if self.err_count >= self.err_max:
@@ -31,6 +31,13 @@ class PreRobot(SpinRobot):
         req = make_debug_cmd_req(player_id, theme_id, cmd, bet)
         self.transportor.send_debug(req)
 
+    def send_gm(self, cmd):
+        self.req_debug(self.player_id, self.theme_id, cmd, self.themeData.get_play_bet())
+
+    def send_cmd(self, cmd):
+        self.req_debug_cmd(self.player_id, self.theme_id, cmd, self.themeData.get_play_bet())
+
+    # response
     def on_login(self, packet):
         login = packet.Login
         self.set_user_data(login.PlayerID, login.Token)
