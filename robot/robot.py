@@ -343,13 +343,13 @@ class SpinRobot(RobotBase):
     
     # stage
     def in_base(self):
-        return self.themeData.NextStage == pb.Slot.Stage.BASE
+        return self.themeData.status.NextStage == pb.Slot.Stage.BASE
 
     def in_pick(self):
-        return self.themeData.NextStage == pb.Slot.Stage.PICKER
+        return self.themeData.status.NextStage == pb.Slot.Stage.PICKER
 
     def in_head_pick(self):
-        return self.themeData.NextStage == pb.Slot.Stage.PICKER and self.themeData.CurrentStage != pb.Slot.Stage.PICKER
+        return self.themeData.status.NextStage == pb.Slot.Stage.PICKER and self.themeData.status.CurrentStage != pb.Slot.Stage.PICKER
 
 
 def robot_init(robot):

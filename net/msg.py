@@ -57,7 +57,9 @@ def make_play_req(player_id, token, theme_id, bet, pick_id, pick_ids):
     request.Play.ThemeID = theme_id
     request.Play.TotalBet = bet
     request.Play.PickID = pick_id
-    request.Play.PickIDs = pick_ids
+    if pick_ids != None:
+        add = request.Play.PickIDs.add
+        add = pick_ids
     request.Play.PickPos = 0
     request.Play.PickInfo = ""
 

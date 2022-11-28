@@ -4,8 +4,18 @@
 from robot import SpinRobot
 import gen.proto as pb
 from net import *
-from controller import *
+from controller import ThemeController
+from tiki import Tiki
 
+theme_register = {
+    10290 : Tiki,
+}
+
+def create_theme_controller(theme_id):
+    if theme_register.has_key(theme_id):
+         return theme_register[theme_id](theme_id)   
+    else:
+        return ThemeController(theme_id)
 
 class PreRobot(SpinRobot):
     def __init__(self, addr, name, theme_id, life):
@@ -81,5 +91,5 @@ class PreRobot(SpinRobot):
     def run(self):
         while self.life > 0:
             # self.spin()
-            self.controller.do_play(robot)
+            self.controller.do_play(self)
         pass
