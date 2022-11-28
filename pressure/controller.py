@@ -1,6 +1,7 @@
 #! /usr/bin/env
 #coding=utf-8
 
+import controller
 from tiki import *
 
 theme_register = {
