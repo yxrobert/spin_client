@@ -19,7 +19,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'Z\004.;pb',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x0c\x63onpon.proto\x12\x02pb\"\xfb\x05\n\x06\x43onpon\x1a^\n\x03Req\x12(\n\x04List\x18\x01 \x01(\x0b\x32\x18.pb.Conpon.ReqConponListH\x00\x12&\n\x03Use\x18\x02 \x01(\x0b\x32\x17.pb.Conpon.ReqUseConponH\x00\x42\x05\n\x03one\x1a^\n\x03Rsp\x12(\n\x04List\x18\x01 \x01(\x0b\x32\x18.pb.Conpon.RspConponListH\x00\x12&\n\x03Use\x18\x02 \x01(\x0b\x32\x17.pb.Conpon.RspUseConponH\x00\x42\x05\n\x03one\x1a,\n\rReqConponList\x12\r\n\x05\x43ount\x18\x01 \x01(\x05\x12\x0c\n\x04Page\x18\x02 \x01(\x05\x1a\x31\n\rRspConponList\x12 \n\x05Items\x18\x01 \x03(\x0b\x32\x11.pb.Conpon.Conpon\x1a\x1a\n\x0cReqUseConpon\x12\n\n\x02ID\x18\x01 \x01(\x03\x1a/\n\x0cRspUseConpon\x12\x1f\n\x04Item\x18\x01 \x01(\x0b\x32\x11.pb.Conpon.Conpon\x1a\x92\x01\n\x06\x43onpon\x12\n\n\x02ID\x18\x01 \x01(\x03\x12\x0c\n\x04Name\x18\x02 \x01(\t\x12\x12\n\nFinishTime\x18\x03 \x01(\x03\x12%\n\x05State\x18\x04 \x01(\x0e\x32\x16.pb.Conpon.ConponState\x12#\n\x04Type\x18\x05 \x01(\x0e\x32\x15.pb.Conpon.ConponType\x12\x0e\n\x06Source\x18\x06 \x01(\t\x1a\x1e\n\x04\x44\x61ta\x12\x16\n\x0ePurchaseStatus\x18\x01 \x01(\r\"=\n\x0b\x43onponState\x12\x16\n\x12\x43ONPON_STATE_UNUSE\x10\x00\x12\x16\n\x12\x43ONPON_STATE_INUSE\x10\x01\"\x8e\x01\n\nConponType\x12\x13\n\x0f\x43ONPON_TYPE_NIL\x10\x00\x12\x1a\n\x16\x43ONPON_TYPE_PIGGY_FREE\x10\x01\x12\x19\n\x15\x43ONPON_TYPE_SHOP_COIN\x10\x02\x12\x1a\n\x16\x43ONPON_TYPE_PIGGY_COIN\x10\x03\x12\x18\n\x14\x43ONPON_TYPE_SHOP_GEM\x10\x04\x42\x06Z\x04.;pbb\x06proto3'
+  serialized_pb=b'\n\x0c\x63onpon.proto\x12\x02pb\"\xdf\x07\n\x06\x43onpon\x1a^\n\x03Req\x12(\n\x04List\x18\x01 \x01(\x0b\x32\x18.pb.Conpon.ReqConponListH\x00\x12&\n\x03Use\x18\x02 \x01(\x0b\x32\x17.pb.Conpon.ReqUseConponH\x00\x42\x05\n\x03one\x1a^\n\x03Rsp\x12(\n\x04List\x18\x01 \x01(\x0b\x32\x18.pb.Conpon.RspConponListH\x00\x12&\n\x03Use\x18\x02 \x01(\x0b\x32\x17.pb.Conpon.RspUseConponH\x00\x42\x05\n\x03one\x1a,\n\rReqConponList\x12\r\n\x05\x43ount\x18\x01 \x01(\x05\x12\x0c\n\x04Page\x18\x02 \x01(\x05\x1a\x31\n\rRspConponList\x12 \n\x05Items\x18\x01 \x03(\x0b\x32\x11.pb.Conpon.Conpon\x1a\x1a\n\x0cReqUseConpon\x12\n\n\x02ID\x18\x01 \x01(\x03\x1a/\n\x0cRspUseConpon\x12\x1f\n\x04Item\x18\x01 \x01(\x0b\x32\x11.pb.Conpon.Conpon\x1a\x92\x01\n\x06\x43onpon\x12\n\n\x02ID\x18\x01 \x01(\x03\x12\x0c\n\x04Name\x18\x02 \x01(\t\x12\x12\n\nFinishTime\x18\x03 \x01(\x03\x12%\n\x05State\x18\x04 \x01(\x0e\x32\x16.pb.Conpon.ConponState\x12#\n\x04Type\x18\x05 \x01(\x0e\x32\x15.pb.Conpon.ConponType\x12\x0e\n\x06Source\x18\x06 \x01(\t\x1a\x1e\n\x04\x44\x61ta\x12\x16\n\x0ePurchaseStatus\x18\x01 \x01(\r\x1aK\n\x10\x43onponChooseData\x12)\n\x04Type\x18\x01 \x01(\x0e\x32\x1b.pb.Conpon.ConponChooseType\x12\x0c\n\x04Show\x18\x02 \x03(\r\x1aJ\n\x10\x43onponChooseList\x12)\n\x04\x44\x61ta\x18\x01 \x03(\x0b\x32\x1b.pb.Conpon.ConponChooseData\x12\x0b\n\x03got\x18\x02 \x01(\x08\"=\n\x0b\x43onponState\x12\x16\n\x12\x43ONPON_STATE_UNUSE\x10\x00\x12\x16\n\x12\x43ONPON_STATE_INUSE\x10\x01\"\x8e\x01\n\nConponType\x12\x13\n\x0f\x43ONPON_TYPE_NIL\x10\x00\x12\x1a\n\x16\x43ONPON_TYPE_PIGGY_FREE\x10\x01\x12\x19\n\x15\x43ONPON_TYPE_SHOP_COIN\x10\x02\x12\x1a\n\x16\x43ONPON_TYPE_PIGGY_COIN\x10\x03\x12\x18\n\x14\x43ONPON_TYPE_SHOP_GEM\x10\x04\"I\n\x10\x43onponChooseType\x12\x19\n\x15\x43onponChooseTypeFixed\x10\x00\x12\x1a\n\x16\x43onponChooseTypeRandom\x10\x01\x42\x06Z\x04.;pbb\x06proto3'
 )
 
 
@@ -44,8 +44,8 @@ _CONPON_CONPONSTATE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=578,
-  serialized_end=639,
+  serialized_start=731,
+  serialized_end=792,
 )
 _sym_db.RegisterEnumDescriptor(_CONPON_CONPONSTATE)
 
@@ -84,10 +84,35 @@ _CONPON_CONPONTYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=642,
-  serialized_end=784,
+  serialized_start=795,
+  serialized_end=937,
 )
 _sym_db.RegisterEnumDescriptor(_CONPON_CONPONTYPE)
+
+_CONPON_CONPONCHOOSETYPE = _descriptor.EnumDescriptor(
+  name='ConponChooseType',
+  full_name='pb.Conpon.ConponChooseType',
+  filename=None,
+  file=DESCRIPTOR,
+  create_key=_descriptor._internal_create_key,
+  values=[
+    _descriptor.EnumValueDescriptor(
+      name='ConponChooseTypeFixed', index=0, number=0,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='ConponChooseTypeRandom', index=1, number=1,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+  ],
+  containing_type=None,
+  serialized_options=None,
+  serialized_start=939,
+  serialized_end=1012,
+)
+_sym_db.RegisterEnumDescriptor(_CONPON_CONPONCHOOSETYPE)
 
 
 _CONPON_REQ = _descriptor.Descriptor(
@@ -404,6 +429,82 @@ _CONPON_DATA = _descriptor.Descriptor(
   serialized_end=576,
 )
 
+_CONPON_CONPONCHOOSEDATA = _descriptor.Descriptor(
+  name='ConponChooseData',
+  full_name='pb.Conpon.ConponChooseData',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='Type', full_name='pb.Conpon.ConponChooseData.Type', index=0,
+      number=1, type=14, cpp_type=8, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='Show', full_name='pb.Conpon.ConponChooseData.Show', index=1,
+      number=2, type=13, cpp_type=3, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=578,
+  serialized_end=653,
+)
+
+_CONPON_CONPONCHOOSELIST = _descriptor.Descriptor(
+  name='ConponChooseList',
+  full_name='pb.Conpon.ConponChooseList',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='Data', full_name='pb.Conpon.ConponChooseList.Data', index=0,
+      number=1, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='got', full_name='pb.Conpon.ConponChooseList.got', index=1,
+      number=2, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=655,
+  serialized_end=729,
+)
+
 _CONPON = _descriptor.Descriptor(
   name='Conpon',
   full_name='pb.Conpon',
@@ -415,10 +516,11 @@ _CONPON = _descriptor.Descriptor(
   ],
   extensions=[
   ],
-  nested_types=[_CONPON_REQ, _CONPON_RSP, _CONPON_REQCONPONLIST, _CONPON_RSPCONPONLIST, _CONPON_REQUSECONPON, _CONPON_RSPUSECONPON, _CONPON_CONPON, _CONPON_DATA, ],
+  nested_types=[_CONPON_REQ, _CONPON_RSP, _CONPON_REQCONPONLIST, _CONPON_RSPCONPONLIST, _CONPON_REQUSECONPON, _CONPON_RSPUSECONPON, _CONPON_CONPON, _CONPON_DATA, _CONPON_CONPONCHOOSEDATA, _CONPON_CONPONCHOOSELIST, ],
   enum_types=[
     _CONPON_CONPONSTATE,
     _CONPON_CONPONTYPE,
+    _CONPON_CONPONCHOOSETYPE,
   ],
   serialized_options=None,
   is_extendable=False,
@@ -427,7 +529,7 @@ _CONPON = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=21,
-  serialized_end=784,
+  serialized_end=1012,
 )
 
 _CONPON_REQ.fields_by_name['List'].message_type = _CONPON_REQCONPONLIST
@@ -458,8 +560,13 @@ _CONPON_CONPON.fields_by_name['State'].enum_type = _CONPON_CONPONSTATE
 _CONPON_CONPON.fields_by_name['Type'].enum_type = _CONPON_CONPONTYPE
 _CONPON_CONPON.containing_type = _CONPON
 _CONPON_DATA.containing_type = _CONPON
+_CONPON_CONPONCHOOSEDATA.fields_by_name['Type'].enum_type = _CONPON_CONPONCHOOSETYPE
+_CONPON_CONPONCHOOSEDATA.containing_type = _CONPON
+_CONPON_CONPONCHOOSELIST.fields_by_name['Data'].message_type = _CONPON_CONPONCHOOSEDATA
+_CONPON_CONPONCHOOSELIST.containing_type = _CONPON
 _CONPON_CONPONSTATE.containing_type = _CONPON
 _CONPON_CONPONTYPE.containing_type = _CONPON
+_CONPON_CONPONCHOOSETYPE.containing_type = _CONPON
 DESCRIPTOR.message_types_by_name['Conpon'] = _CONPON
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
@@ -520,6 +627,20 @@ Conpon = _reflection.GeneratedProtocolMessageType('Conpon', (_message.Message,),
     # @@protoc_insertion_point(class_scope:pb.Conpon.Data)
     })
   ,
+
+  'ConponChooseData' : _reflection.GeneratedProtocolMessageType('ConponChooseData', (_message.Message,), {
+    'DESCRIPTOR' : _CONPON_CONPONCHOOSEDATA,
+    '__module__' : 'conpon_pb2'
+    # @@protoc_insertion_point(class_scope:pb.Conpon.ConponChooseData)
+    })
+  ,
+
+  'ConponChooseList' : _reflection.GeneratedProtocolMessageType('ConponChooseList', (_message.Message,), {
+    'DESCRIPTOR' : _CONPON_CONPONCHOOSELIST,
+    '__module__' : 'conpon_pb2'
+    # @@protoc_insertion_point(class_scope:pb.Conpon.ConponChooseList)
+    })
+  ,
   'DESCRIPTOR' : _CONPON,
   '__module__' : 'conpon_pb2'
   # @@protoc_insertion_point(class_scope:pb.Conpon)
@@ -533,6 +654,8 @@ _sym_db.RegisterMessage(Conpon.ReqUseConpon)
 _sym_db.RegisterMessage(Conpon.RspUseConpon)
 _sym_db.RegisterMessage(Conpon.Conpon)
 _sym_db.RegisterMessage(Conpon.Data)
+_sym_db.RegisterMessage(Conpon.ConponChooseData)
+_sym_db.RegisterMessage(Conpon.ConponChooseList)
 
 
 DESCRIPTOR._options = None

@@ -12,6 +12,7 @@ from google.protobuf import symbol_database as _symbol_database
 _sym_db = _symbol_database.Default()
 
 
+import award_pb2 as award__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
@@ -20,8 +21,9 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'Z\004.;pb',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x13\x61\x63tivityevent.proto\x12\x02pb\"w\n\rActivityEvent\x12\r\n\x05\x45ntry\x18\x01 \x01(\x05\x12\x10\n\x08progress\x18\x02 \x01(\x03\x12\x0e\n\x06target\x18\x03 \x01(\x03\x12\'\n\x06Status\x18\x04 \x01(\x0e\x32\x17.pb.ActivityEventStatus\x12\x0c\n\x04Type\x18\x05 \x01(\t\"W\n\x0c\x41\x63tivityBuff\x12\"\n\x04Type\x18\x01 \x01(\x0e\x32\x14.pb.ActivityBuffType\x12\r\n\x05Value\x18\x02 \x01(\x05\x12\x14\n\x0c\x45ndTimeStamp\x18\x03 \x01(\x03*K\n\x13\x41\x63tivityEventStatus\x12\x0f\n\x0b\x41\x45S_NotOpen\x10\x00\x12\x11\n\rAES_InHanding\x10\x01\x12\x10\n\x0c\x41\x45S_Finished\x10\x02*e\n\x10\x41\x63tivityBuffType\x12\x13\n\x0f\x41\x42_KJPathReward\x10\x00\x12\x15\n\x11\x41\x42_KJSpinProgress\x10\x01\x12\x13\n\x0f\x41\x42_KJCoinReward\x10\x02\x12\x10\n\x0c\x41\x42_KJProtect\x10\x03\x42\x06Z\x04.;pbb\x06proto3'
-)
+  serialized_pb=b'\n\x13\x61\x63tivityevent.proto\x12\x02pb\x1a\x0b\x61ward.proto\"w\n\rActivityEvent\x12\r\n\x05\x45ntry\x18\x01 \x01(\x05\x12\x10\n\x08progress\x18\x02 \x01(\x03\x12\x0e\n\x06target\x18\x03 \x01(\x03\x12\'\n\x06Status\x18\x04 \x01(\x0e\x32\x17.pb.ActivityEventStatus\x12\x0c\n\x04Type\x18\x05 \x01(\t\"W\n\x0c\x41\x63tivityBuff\x12\"\n\x04Type\x18\x01 \x01(\x0e\x32\x14.pb.ActivityBuffType\x12\r\n\x05Value\x18\x02 \x01(\x05\x12\x14\n\x0c\x45ndTimeStamp\x18\x03 \x01(\x03\"p\n\x0b\x45ventAwards\x12 \n\x04Type\x18\x01 \x01(\x0e\x32\x12.pb.EventAwardType\x12\"\n\nEventAward\x18\x02 \x03(\x0b\x32\x0e.pb.EventAward\x12\x0c\n\x04skin\x18\x06 \x01(\t\x12\r\n\x05value\x18\x07 \x01(\x01\"@\n\rProgressAward\x12\x10\n\x08Progress\x18\x01 \x01(\x05\x12\x1d\n\x06\x41wards\x18\x02 \x03(\x0b\x32\r.pb.AwardInfo\"0\n\nEventAward\x12\t\n\x01n\x18\x01 \x01(\t\x12\t\n\x01\x63\x18\x02 \x01(\x04\x12\x0c\n\x04skin\x18\x03 \x01(\t*]\n\x13\x41\x63tivityEventStatus\x12\x0f\n\x0b\x41\x45S_NotOpen\x10\x00\x12\x11\n\rAES_InHanding\x10\x01\x12\x10\n\x0c\x41\x45S_InReward\x10\x02\x12\x10\n\x0c\x41\x45S_Finished\x10\x03*e\n\x10\x41\x63tivityBuffType\x12\x13\n\x0f\x41\x42_KJPathReward\x10\x00\x12\x15\n\x11\x41\x42_KJSpinProgress\x10\x01\x12\x13\n\x0f\x41\x42_KJCoinReward\x10\x02\x12\x10\n\x0c\x41\x42_KJProtect\x10\x03*\xf2\x01\n\x0e\x45ventAwardType\x12\x1c\n\x18\x45ventAwardType_CoinValue\x10\x00\x12\x17\n\x13\x45ventAwardType_Item\x10\x01\x12\x1b\n\x17\x45ventAwardType_Currency\x10\x02\x12\x1c\n\x18\x45ventAwardType_BonusGame\x10\x03\x12\x1a\n\x16\x45ventAwardType_Booster\x10\x04\x12\x19\n\x15\x45ventAwardType_RanBox\x10\x05\x12\x1c\n\x18\x45ventAwardType_CardBonus\x10\x06\x12\x19\n\x15\x45ventAwardType_Conpon\x10\x07\x42\x06Z\x04.;pbb\x06proto3'
+  ,
+  dependencies=[award__pb2.DESCRIPTOR,])
 
 _ACTIVITYEVENTSTATUS = _descriptor.EnumDescriptor(
   name='ActivityEventStatus',
@@ -41,15 +43,20 @@ _ACTIVITYEVENTSTATUS = _descriptor.EnumDescriptor(
       type=None,
       create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
-      name='AES_Finished', index=2, number=2,
+      name='AES_InReward', index=2, number=2,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='AES_Finished', index=3, number=3,
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=237,
-  serialized_end=312,
+  serialized_start=480,
+  serialized_end=573,
 )
 _sym_db.RegisterEnumDescriptor(_ACTIVITYEVENTSTATUS)
 
@@ -84,19 +91,84 @@ _ACTIVITYBUFFTYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=314,
-  serialized_end=415,
+  serialized_start=575,
+  serialized_end=676,
 )
 _sym_db.RegisterEnumDescriptor(_ACTIVITYBUFFTYPE)
 
 ActivityBuffType = enum_type_wrapper.EnumTypeWrapper(_ACTIVITYBUFFTYPE)
+_EVENTAWARDTYPE = _descriptor.EnumDescriptor(
+  name='EventAwardType',
+  full_name='pb.EventAwardType',
+  filename=None,
+  file=DESCRIPTOR,
+  create_key=_descriptor._internal_create_key,
+  values=[
+    _descriptor.EnumValueDescriptor(
+      name='EventAwardType_CoinValue', index=0, number=0,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='EventAwardType_Item', index=1, number=1,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='EventAwardType_Currency', index=2, number=2,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='EventAwardType_BonusGame', index=3, number=3,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='EventAwardType_Booster', index=4, number=4,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='EventAwardType_RanBox', index=5, number=5,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='EventAwardType_CardBonus', index=6, number=6,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='EventAwardType_Conpon', index=7, number=7,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+  ],
+  containing_type=None,
+  serialized_options=None,
+  serialized_start=679,
+  serialized_end=921,
+)
+_sym_db.RegisterEnumDescriptor(_EVENTAWARDTYPE)
+
+EventAwardType = enum_type_wrapper.EnumTypeWrapper(_EVENTAWARDTYPE)
 AES_NotOpen = 0
 AES_InHanding = 1
-AES_Finished = 2
+AES_InReward = 2
+AES_Finished = 3
 AB_KJPathReward = 0
 AB_KJSpinProgress = 1
 AB_KJCoinReward = 2
 AB_KJProtect = 3
+EventAwardType_CoinValue = 0
+EventAwardType_Item = 1
+EventAwardType_Currency = 2
+EventAwardType_BonusGame = 3
+EventAwardType_Booster = 4
+EventAwardType_RanBox = 5
+EventAwardType_CardBonus = 6
+EventAwardType_Conpon = 7
 
 
 
@@ -155,8 +227,8 @@ _ACTIVITYEVENT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=27,
-  serialized_end=146,
+  serialized_start=40,
+  serialized_end=159,
 )
 
 
@@ -201,16 +273,161 @@ _ACTIVITYBUFF = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=148,
-  serialized_end=235,
+  serialized_start=161,
+  serialized_end=248,
+)
+
+
+_EVENTAWARDS = _descriptor.Descriptor(
+  name='EventAwards',
+  full_name='pb.EventAwards',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='Type', full_name='pb.EventAwards.Type', index=0,
+      number=1, type=14, cpp_type=8, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='EventAward', full_name='pb.EventAwards.EventAward', index=1,
+      number=2, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='skin', full_name='pb.EventAwards.skin', index=2,
+      number=6, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='value', full_name='pb.EventAwards.value', index=3,
+      number=7, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=250,
+  serialized_end=362,
+)
+
+
+_PROGRESSAWARD = _descriptor.Descriptor(
+  name='ProgressAward',
+  full_name='pb.ProgressAward',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='Progress', full_name='pb.ProgressAward.Progress', index=0,
+      number=1, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='Awards', full_name='pb.ProgressAward.Awards', index=1,
+      number=2, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=364,
+  serialized_end=428,
+)
+
+
+_EVENTAWARD = _descriptor.Descriptor(
+  name='EventAward',
+  full_name='pb.EventAward',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='n', full_name='pb.EventAward.n', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='c', full_name='pb.EventAward.c', index=1,
+      number=2, type=4, cpp_type=4, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='skin', full_name='pb.EventAward.skin', index=2,
+      number=3, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=430,
+  serialized_end=478,
 )
 
 _ACTIVITYEVENT.fields_by_name['Status'].enum_type = _ACTIVITYEVENTSTATUS
 _ACTIVITYBUFF.fields_by_name['Type'].enum_type = _ACTIVITYBUFFTYPE
+_EVENTAWARDS.fields_by_name['Type'].enum_type = _EVENTAWARDTYPE
+_EVENTAWARDS.fields_by_name['EventAward'].message_type = _EVENTAWARD
+_PROGRESSAWARD.fields_by_name['Awards'].message_type = award__pb2._AWARDINFO
 DESCRIPTOR.message_types_by_name['ActivityEvent'] = _ACTIVITYEVENT
 DESCRIPTOR.message_types_by_name['ActivityBuff'] = _ACTIVITYBUFF
+DESCRIPTOR.message_types_by_name['EventAwards'] = _EVENTAWARDS
+DESCRIPTOR.message_types_by_name['ProgressAward'] = _PROGRESSAWARD
+DESCRIPTOR.message_types_by_name['EventAward'] = _EVENTAWARD
 DESCRIPTOR.enum_types_by_name['ActivityEventStatus'] = _ACTIVITYEVENTSTATUS
 DESCRIPTOR.enum_types_by_name['ActivityBuffType'] = _ACTIVITYBUFFTYPE
+DESCRIPTOR.enum_types_by_name['EventAwardType'] = _EVENTAWARDTYPE
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 ActivityEvent = _reflection.GeneratedProtocolMessageType('ActivityEvent', (_message.Message,), {
@@ -226,6 +443,27 @@ ActivityBuff = _reflection.GeneratedProtocolMessageType('ActivityBuff', (_messag
   # @@protoc_insertion_point(class_scope:pb.ActivityBuff)
   })
 _sym_db.RegisterMessage(ActivityBuff)
+
+EventAwards = _reflection.GeneratedProtocolMessageType('EventAwards', (_message.Message,), {
+  'DESCRIPTOR' : _EVENTAWARDS,
+  '__module__' : 'activityevent_pb2'
+  # @@protoc_insertion_point(class_scope:pb.EventAwards)
+  })
+_sym_db.RegisterMessage(EventAwards)
+
+ProgressAward = _reflection.GeneratedProtocolMessageType('ProgressAward', (_message.Message,), {
+  'DESCRIPTOR' : _PROGRESSAWARD,
+  '__module__' : 'activityevent_pb2'
+  # @@protoc_insertion_point(class_scope:pb.ProgressAward)
+  })
+_sym_db.RegisterMessage(ProgressAward)
+
+EventAward = _reflection.GeneratedProtocolMessageType('EventAward', (_message.Message,), {
+  'DESCRIPTOR' : _EVENTAWARD,
+  '__module__' : 'activityevent_pb2'
+  # @@protoc_insertion_point(class_scope:pb.EventAward)
+  })
+_sym_db.RegisterMessage(EventAward)
 
 
 DESCRIPTOR._options = None

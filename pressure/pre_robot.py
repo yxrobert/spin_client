@@ -31,6 +31,11 @@ class PreRobot(SpinRobot):
         req = make_debug_cmd_req(player_id, theme_id, cmd, bet)
         self.transportor.send_debug(req)
 
+    def on_login(self, packet):
+        login = packet.Login
+        self.set_user_data(login.PlayerID, login.Token)
+        self.print_user_data()     
+
     def on_response(self, packet):
         if packet.Error != None:
             self.process_err(packet.Error)
