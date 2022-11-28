@@ -60,6 +60,7 @@ class PreRobot(SpinRobot):
         self.print_user_data()     
 
     def on_response(self, packet):
+        print("on_response")
         if packet.Error != None and len(packet.Error.Msg) > 0:
             self.process_err(packet.Error)
             self.err_count += 1

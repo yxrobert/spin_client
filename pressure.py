@@ -5,6 +5,7 @@ import conf
 import pressure
 import net
 import gen.proto as pb
+from multiprocessing import Process
 
 def testTransportor():
     tr = net.Transportor("10.0.84.74:9999")
@@ -17,19 +18,29 @@ def testTransportor():
 
 def main():
     theme_id = int(conf.pressure_theme()[0])
-    process = conf.pressure_process()
+    process = int(conf.pressure_process())
     acc = conf.pressure_acc()
     lv = conf.pressure_level()
     coin = conf.pressure_init_coin()
     spin_times = conf.pressure_spin_times()
     addr = conf.get_svr_url()
-    
-    player = pressure.PreRobot(addr, acc, theme_id, spin_times)
+
+    process_list = []
+    for i in range(process):
+        name = acc + str(i)
+        player = pressure.PreRobot(addr, name, theme_id, spin_times)
+        p = Process(target=process_run,args=(player, coin, lv))
+        p.start()
+        process_list.append(p)
+
+    for i in process_list:
+        p.join()
+
+def process_run(player, coin, lv):
     player.prepare()
     player.send_cmd("currency coin," + coin)
     player.send_cmd("setlevel " + lv)
     player.run()
-
 
 if __name__ == '__main__':
 	main()
