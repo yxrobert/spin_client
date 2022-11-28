@@ -50,14 +50,14 @@ def make_novice_save_req(player_id, token, _id):
     request.NoviceGuideSave.Data.State = 1
     return req
 
-def make_play_req(player_id, token, theme_id, bet):
+def make_play_req(player_id, token, theme_id, bet, pick_id, pick_ids):
     req, request = make_multi_req(player_id, token)
 
     request.Play.Operation = pb.PlayRequest.OperationType.SPIN
     request.Play.ThemeID = theme_id
     request.Play.TotalBet = bet
-    request.Play.PickID = 0
-    # request.Play.PickIDs = ""
+    request.Play.PickID = pick_id
+    request.Play.PickIDs = pick_ids
     request.Play.PickPos = 0
     request.Play.PickInfo = ""
 

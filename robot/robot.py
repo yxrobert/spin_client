@@ -62,9 +62,9 @@ class RobotBase:
         req = make_novice_save_req(self.player_id, self.token, _id)
         self.send_packet(req)
 
-    def req_play(self, theme_id, bet):
+    def req_play(self, theme_id, bet, pick_id, pick_ids):
         self.log("req_play", bet)
-        req = make_play_req(self.player_id, self.token, theme_id, bet)
+        req = make_play_req(self.player_id, self.token, theme_id, bet, pick_id, pick_ids)
         self.send_packet(req)
 
     def req_pick(self, theme_id, bet, x, y):
@@ -256,8 +256,8 @@ class SpinRobot(RobotBase):
     # def set_theme_func(self, f):
     #     self.theme_callback = f
 
-    def spin(self):
-        self.req_play(self.theme_id, self.themeData.get_play_bet())
+    def spin(self, pick_id=0, pick_ids=None):
+        self.req_play(self.theme_id, self.themeData.get_play_bet(), pick_id, pick_ids)
 
     def pick(self, x=-1, y=-1):
         self.req_pick(self.theme_id, self.themeData.get_play_bet(), x, y)
@@ -340,7 +340,16 @@ class SpinRobot(RobotBase):
 
     def log_spin_wins(self, spin_packet):
         self.log(msg.log_wins(spin_packet))
+    
+    # stage
+    def in_base(self):
+        return self.themeData.NextStage == pb.Slot.Stage.BASE
 
+    def in_pick(self):
+        return self.themeData.NextStage == pb.Slot.Stage.PICKER
+
+    def in_head_pick(self):
+        return self.themeData.NextStage == pb.Slot.Stage.PICKER and self.themeData.CurrentStage != pb.Slot.Stage.PICKER
 
 
 def robot_init(robot):

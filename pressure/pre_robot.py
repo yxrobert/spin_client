@@ -4,6 +4,8 @@
 from robot import SpinRobot
 import gen.proto as pb
 from net import *
+from controller import *
+
 
 class PreRobot(SpinRobot):
     def __init__(self, addr, name, theme_id, life):
@@ -12,6 +14,7 @@ class PreRobot(SpinRobot):
         self.set_auto_interval(0.001)
         self.log_switch = False
         self.transportor = Transportor(addr)
+        self.controller = create_theme_controller(theme_id)
 
     def print_user_data(self):
         self.log("[name:%s uid:%d token:%s life:%d]" % (self.name, self.player_id, self.token, self.life))
@@ -66,9 +69,6 @@ class PreRobot(SpinRobot):
         
     def on_play(self, packet):
         self.themeData.update_from_play(packet)
-        # self.log("on_play")
-        # self.themeData.show_stage()
-        # print(packet.Spin.CurrentStage)
         if packet.Spin.CurrentStage == pb.Slot.Stage.BASE:
             self.life -= 1
             if self.life % 1000 == 0:
@@ -79,11 +79,7 @@ class PreRobot(SpinRobot):
         self.enter_theme()
 
     def run(self):
-        # self.req_login()
-        # self.send_cmd("add coin 9999999")
-        # self.send_cmd("setlevel 50")
-
-        # self.enter_theme()
         while self.life > 0:
-            self.spin()
+            # self.spin()
+            self.controller.do_play(robot)
         pass
