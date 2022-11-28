@@ -1,7 +1,7 @@
 #! /usr/bin/env
 #coding=utf-8
 
-import tiki
+from tiki import *
 
 theme_register = {
     10290 : ThemeController,
