@@ -44,7 +44,7 @@ def main():
 def process_run(player, coin, lv):
     player.prepare()
     player.send_cmd("currency coin," + coin)
-    player.send_cmd("setlevel " + lv)
+    player.send_cmd("level " + lv)
     player.run()
 
 if __name__ == '__main__':
