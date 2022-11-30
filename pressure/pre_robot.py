@@ -6,6 +6,7 @@ import gen.proto as pb
 from net import *
 from controller import ThemeController
 from tiki import Tiki
+import time
 
 theme_register = {
     10290 : Tiki,
@@ -18,16 +19,21 @@ def create_theme_controller(theme_id):
         return ThemeController(theme_id)
 
 class PreRobot(SpinRobot):
-    def __init__(self, addr, name, theme_id, life):
+    def __init__(self, addr, name, theme_id, spin_quest):
         SpinRobot.__init__(self, name, theme_id)
-        self.life = int(life)
+        self.spin_quest = int(spin_quest)
+        self.quest_interval = self.spin_quest / 10
         self.set_auto_interval(0.001)
         self.log_switch = False
         self.transportor = Transportor(addr)
         self.controller = create_theme_controller(theme_id)
+        self.start_time = int(time.time())
+
+    def get_life(self):
+        return int(time.time()) - self.start_time
 
     def print_user_data(self):
-        self.log("[name:%s uid:%d token:%s life:%d]" % (self.name, self.player_id, self.token, self.life))
+        self.log("[name:%s uid:%d token:%s spin_quest:%d life:%d(s)]" % (self.name, self.player_id, self.token, self.spin_quest, self.get_life()))
 
     def send_packet(self, req):
         if self.err_count >= self.err_max:
@@ -60,7 +66,7 @@ class PreRobot(SpinRobot):
         self.print_user_data()     
 
     def on_response(self, packet):
-        print("on_response")
+        # print("on_response")
         if packet.Error != None and len(packet.Error.Msg) > 0:
             self.process_err(packet.Error)
             self.err_count += 1
@@ -81,8 +87,8 @@ class PreRobot(SpinRobot):
     def on_play(self, packet):
         self.themeData.update_from_play(packet)
         if packet.Spin.CurrentStage == pb.Slot.Stage.BASE:
-            self.life -= 1
-            if self.life % 1000 == 0:
+            self.spin_quest -= 1
+            if self.spin_quest % self.quest_interval == 0:
                 self.print_user_data()
 
     def prepare(self):
@@ -90,7 +96,7 @@ class PreRobot(SpinRobot):
         self.enter_theme()
 
     def run(self):
-        while self.life > 0:
+        while self.spin_quest > 0:
             # self.spin()
             self.controller.do_play(self)
         pass

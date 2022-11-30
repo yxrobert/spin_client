@@ -63,7 +63,7 @@ class RobotBase:
         self.send_packet(req)
 
     def req_play(self, theme_id, bet, pick_id, pick_ids):
-        self.log("req_play", bet)
+        # self.log("req_play", bet)
         req = make_play_req(self.player_id, self.token, theme_id, bet, pick_id, pick_ids)
         self.send_packet(req)
 

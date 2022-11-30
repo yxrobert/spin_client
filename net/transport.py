@@ -48,7 +48,8 @@ class Transportor:
 
     def send_result(self, packet):
         response = self.send(packet, self.server_gateway_url)
-        print(response.status)
+        if response.status != 200:
+            print(response.status)
         time.sleep(self.interval)
 
         data = response.read()
