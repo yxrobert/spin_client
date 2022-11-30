@@ -29,6 +29,7 @@ class PreRobot(SpinRobot):
         # self.transportor = Transportor(addr)
         self.controller = create_theme_controller(theme_id)
         self.start_time = int(time.time())
+        self.is_login = False
 
     def get_life(self):
         return int(time.time()) - self.start_time
@@ -65,6 +66,7 @@ class PreRobot(SpinRobot):
     def on_login(self, packet):
         login = packet.Login
         self.set_user_data(login.PlayerID, login.Token)
+        self.is_login = True
         self.print_user_data()     
 
     def on_response(self, packet):
@@ -75,17 +77,16 @@ class PreRobot(SpinRobot):
             self.log_err("[code:%d] [mgs:%s]err_count:%d" % (packet.Error.Code, packet.Error.Msg, self.err_count))
             return
 
-        if packet.HasField("Login"):
+        if ~self.is_login and packet.HasField("Login"):
             self.on_login(packet)
             return
 
         for r in packet.Multi.Responses:
-            if r.HasField("ThemeStatus"):
-                self.on_theme_status(r.ThemeStatus)
-            elif r.HasField("Play"):
+            if r.HasField("Play"):
                 self.on_play(r.Play)
-                pass
-        
+            elif r.HasField("ThemeStatus"):
+                self.on_theme_status(r.ThemeStatus)
+            
     def on_play(self, packet):
         self.themeData.update_from_play(packet)
         if packet.Spin.CurrentStage == pb.Slot.Stage.BASE:
