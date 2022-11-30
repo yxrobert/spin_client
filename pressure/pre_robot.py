@@ -35,8 +35,8 @@ class PreRobot(SpinRobot):
         return int(time.time()) - self.start_time
 
     def print_user_data(self):
-        self.log("[name:%s uid:%d token:%s theme:%d spin_quest:%d life:%d(s)]" 
-            % (self.name, self.player_id, self.token, self.theme_id, self.spin_quest, self.get_life()))
+        self.log("[name:%s uid:%d token:%s theme:%d spin_quest:%d life:%d(s)] speed:%.4f" 
+            % (self.name, self.player_id, self.token, self.theme_id, self.spin_quest, self.get_life(), self.transportor.get_speed()))
 
     def send_packet(self, req):
         if self.err_count >= self.err_max:

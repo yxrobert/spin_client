@@ -60,6 +60,9 @@ class Transportor:
         conn = httplib.HTTPConnection(self.server_addr)
         conn.request('POST', self.server_time_fake2, data, self.gen_header())
         return conn.getresponse()
+    
+    def get_speed(self):
+        return 0.0
 
 def main():
     tr = Transportor("127.0.0.1:9999")

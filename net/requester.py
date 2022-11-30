@@ -20,6 +20,8 @@ class Requester:
     def __init__(self, addr):
         self.server_addr = addr
         self.s = Session()
+        self.net_count = 0
+        self.net_time = 0.0
         # self.conn.headers.update(self.gen_header())
 
     def gen_header(self):
@@ -39,7 +41,11 @@ class Requester:
         data = packet.SerializeToString()
         req = Request('POST', self.gen_addr(server_url), data=data, headers=self.gen_header())
         prepped = req.prepare()
-        return self.s.send(prepped)
+        before = time.time()
+        rsp = self.s.send(prepped)
+        self.net_count += 1
+        self.net_time += time.time() - before
+        return rsp
 
     def send_debug(self, packet):
         data = packet.SerializeToString()
@@ -68,6 +74,11 @@ class Requester:
         rsp = make_multi_rsp(data)
         return rsp
 
+    def get_speed(self):
+        if self.net_count > 0:
+            return self.net_time / self.net_count
+        else:
+            return 0
 
 
 def main():
