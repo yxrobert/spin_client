@@ -38,7 +38,8 @@ def main():
     for i in process_list:
         p.join()
 
-    print("total cost time %d(sec)" % (int(time.time()) - start_time))
+    cost = (int(time.time()) - start_time)
+    print("player[%d] * quest[%d]total cost time %d(sec)" % (process, spin_times, cost))
 
 def process_run(player, coin, lv):
     player.prepare()
