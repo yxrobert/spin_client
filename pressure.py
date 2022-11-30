@@ -1,6 +1,7 @@
 #! /usr/bin/env
 #coding=utf-8
 
+import time
 import conf
 import pressure
 import net
@@ -17,6 +18,7 @@ def testTransportor():
     return
 
 def main():
+    start_time = int(time.time())
     theme_id = int(conf.pressure_theme()[0])
     process = int(conf.pressure_process())
     acc = conf.pressure_acc()
@@ -35,6 +37,8 @@ def main():
 
     for i in process_list:
         p.join()
+
+    print("total cost time %d(sec)" % (int(time.time()) - start_time))
 
 def process_run(player, coin, lv):
     player.prepare()
