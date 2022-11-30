@@ -25,7 +25,8 @@ class PreRobot(SpinRobot):
         self.quest_interval = self.spin_quest / 10
         self.set_auto_interval(0.001)
         self.log_switch = False
-        self.transportor = Transportor(addr)
+        self.transportor = Requester(addr)
+        # self.transportor = Transportor(addr)
         self.controller = create_theme_controller(theme_id)
         self.start_time = int(time.time())
 

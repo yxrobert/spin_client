@@ -39,7 +39,7 @@ def main():
         p.join()
 
     cost = (int(time.time()) - start_time)
-    print("player[%d] * quest[%d]total cost time %d(sec)" % (int(process), int(spin_times), int(cost)))
+    print("player[%d] * quest[%d] time [%d(sec)]" % (int(process), int(spin_times), int(cost)))
 
 def process_run(player, coin, lv):
     player.prepare()
