@@ -22,7 +22,7 @@ class PreRobot(SpinRobot):
     def __init__(self, addr, name, theme_id, spin_quest):
         SpinRobot.__init__(self, name, theme_id)
         self.spin_quest = int(spin_quest)
-        self.quest_interval = self.spin_quest / 10
+        self.quest_interval = self.spin_quest / 3
         self.set_auto_interval(0.001)
         self.log_switch = False
         self.transportor = Requester(addr)
