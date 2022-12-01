@@ -1,6 +1,7 @@
 #! /usr/bin/env
 #coding=utf-8
 
+import time
 from robot import SpinRobot
 import gen.proto as pb
 from net import *
@@ -8,14 +9,15 @@ from controller import ThemeController
 from tiki import Tiki
 from genie import Genie
 from fortune import Fortune
-import time
+from witch import Witch
 
 theme_register = {
     # default theme
-    # [10090, 10020]
+    # [10090, 10020, 10050, 10070, 10080]
     10290 : Tiki,
     10030 : Genie,
     10040 : Fortune,
+    10060 : Witch,
 }
 
 def create_theme_controller(theme_id):

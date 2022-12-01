@@ -18,6 +18,3 @@ class Tiki(ThemeController):
             return
         
         robot.spin()
-
-    def handle_play(self):
-        pass
