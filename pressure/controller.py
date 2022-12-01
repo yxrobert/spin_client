@@ -8,6 +8,8 @@ class ThemeController:
     def do_play(self, robot):
         robot.spin()
 
-    def handle_play(self):
+    def handle_play(self, packet):
         pass
 
+    def handle_theme_status(self, packet):
+        pass

@@ -14,8 +14,13 @@ class ThemeData:
         self.status = packet
 
     def update_from_play(self, packet):
-        self.status.CurrentStage = packet.Spin.CurrentStage
-        self.status.NextStage = packet.Spin.NextStage
+        if packet.HasField("Game"):
+            self.status.CurrentStage = packet.Game.CurrentStage
+            self.status.NextStage = packet.Game.NextStage
+        else:
+            self.status.CurrentStage = packet.Spin.CurrentStage
+            self.status.NextStage = packet.Spin.NextStage
+        
         for bet in packet.Spin.UserBets:
             if bet == packet.Spin.TotalBet:
                 self.status.LastBet = packet.Spin.TotalBet

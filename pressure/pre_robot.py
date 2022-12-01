@@ -6,10 +6,16 @@ import gen.proto as pb
 from net import *
 from controller import ThemeController
 from tiki import Tiki
+from genie import Genie
+from fortune import Fortune
 import time
 
 theme_register = {
+    # default theme
+    # [10090, 10020]
     10290 : Tiki,
+    10030 : Genie,
+    10040 : Fortune,
 }
 
 def create_theme_controller(theme_id):
@@ -84,8 +90,10 @@ class PreRobot(SpinRobot):
         for r in packet.Multi.Responses:
             if r.HasField("Play"):
                 self.on_play(r.Play)
+                self.controller.handle_play(r.Play)
             elif r.HasField("ThemeStatus"):
                 self.on_theme_status(r.ThemeStatus)
+                self.controller.handle_theme_status(r.ThemeStatus)
             
     def on_play(self, packet):
         self.themeData.update_from_play(packet)

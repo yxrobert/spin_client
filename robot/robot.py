@@ -68,12 +68,12 @@ class RobotBase:
         self.send_packet(req)
 
     def req_pick(self, theme_id, bet, x, y):
-        self.log("req_pick")
+        # self.log("req_pick")
         req = make_pick_req(self.player_id, self.token, theme_id, bet, x, y)
         self.send_packet(req)
 
     def req_game(self, theme_id, bet, x, y):
-        self.log("req_game")
+        # self.log("req_game")
         req = make_game_req(self.player_id, self.token, theme_id, bet, x, y)
         self.send_packet(req)
 
@@ -342,6 +342,9 @@ class SpinRobot(RobotBase):
         self.log(msg.log_wins(spin_packet))
     
     # stage
+    def tell_stage(self):
+        self.themeData.show_stage()
+
     def in_base(self):
         return self.themeData.status.NextStage == pb.Slot.Stage.BASE
 
@@ -351,6 +354,11 @@ class SpinRobot(RobotBase):
     def in_head_pick(self):
         return self.themeData.status.NextStage == pb.Slot.Stage.PICKER and self.themeData.status.CurrentStage != pb.Slot.Stage.PICKER
 
+    def in_game(self):
+        return self.themeData.status.NextStage == pb.Slot.Stage.GAMING
+
+    def in_head_game(self):
+        return self.themeData.status.NextStage == pb.Slot.Stage.GAMING and self.themeData.status.CurrentStage != pb.Slot.Stage.GAMING
 
 def robot_init(robot):
     robot.set_user_data(get_user_id(), get_token())
