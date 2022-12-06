@@ -9,6 +9,7 @@ from controller import ThemeController
 from tiki import Tiki
 from genie import Genie
 from fortune import Fortune
+from gorilla import Gorilla
 from witch import Witch
 
 theme_register = {
@@ -18,6 +19,7 @@ theme_register = {
     10030 : Genie,
     10040 : Fortune,
     10060 : Witch,
+    10080 : Gorilla,
 }
 
 def create_theme_controller(theme_id):
