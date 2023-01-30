@@ -85,17 +85,23 @@ def make_pick_req(player_id, token, theme_id, bet, x, y = -1):
 
 def make_game_req(player_id, token, theme_id, bet, x, y = -1):
     req, request = make_multi_req(player_id, token)
-
     request.Play.Operation = pb.PlayRequest.OperationType.GAME
     request.Play.ThemeID = theme_id
     request.Play.TotalBet = bet
     request.Play.PickID = x
     request.Play.PickPos = 0
     request.Play.PickInfo = ""
-
     request.Play.index.X = x
-
     return req
+
+def make_rpc_game_req(player_id, token, theme_id, bet, ids):
+    req, request = make_multi_req(player_id, token)
+    request.Play.Operation = pb.PlayRequest.OperationType.RPC_GAME
+    request.Play.ThemeID = theme_id
+    request.Play.TotalBet = bet
+    request.Play.PickIDs.extend(ids)
+    return req
+
 
 def make_multi_rsp(data):
     rsp = pb.BunchResponse()
@@ -154,7 +160,8 @@ def make_activity_user_data_req(player_id, token, uid):
 def make_activity_play_req(player_id, token, uid):
     req, request = make_multi_req(player_id, token)
     request.Activity.Play.UID = uid
-    request.Activity.Play.Input.InputX = 0
+    request.Activity.Play.Input.Type = 5
+    request.Activity.Play.Input.params.extend([1])
     return req
 
 

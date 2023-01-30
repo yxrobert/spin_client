@@ -1,7 +1,7 @@
 #! /usr/bin/env
 #coding=utf-8
 
-import httplib
+import httplib, time
 import sys
 
 from net import Sender
@@ -25,7 +25,7 @@ tab_theme_robot = {
     10040 : [theme.FortuneRobot, theme.fortune.run],
     10030 : [theme.GenieRobot, theme.genie.run],
     10150 : [theme.LuckRobot, theme.potoluck.run],
-    10110 : [theme.IcePrincessRobot, theme.hook.run],
+    10110 : [theme.IcePrincessRobot, theme.iceprincess.run],
 
     1 : [theme.CardGathering, theme.cardgathering.run],
     2 : [theme.LevelSprint, theme.levelsprint.run],
@@ -53,9 +53,15 @@ def run(theme_id):
 
     run_func(player)
     
+def md5_str():
+    print(abs(hash("1673085562#5009001659698033#JJJUCPFAXYHLKD7U#10006#ifun_game_email_push")))
 
 
 def main():
+    # for i in range(10):
+    #     md5_str()
+    #     time.sleep(1)
+    # return
     if len(sys.argv) <= 1:
         print("select theme")
         return

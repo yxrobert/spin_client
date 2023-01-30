@@ -55,6 +55,8 @@ def gm_meta(player):
     pass
 
 def run(player):
+    # player.req_novice_save(1)
+    # return 
     # player.send_cmd("panelm 1,2,3;1,2,3,4;1,2,3,4,5|1,2,3;1,2,3,4;1,2,3,4,5")
     # player.send_cmd(candy_cmd)
     # player.send_cmd(gem_cmd)
@@ -70,7 +72,7 @@ def run(player):
     # player.send_cmd(coin_cmd)
     # player.send_cmd(level_cmd)
     # player.send_cmd(bingo_bp)
-    # player.send_cmd(lv10_cmd)
+    player.send_cmd(lv10_cmd)
     # gm_meta(player)
 
     # player.send_cmd(dice_cmd)
@@ -91,11 +93,12 @@ def run(player):
     # player.send_cmd("trs")
     # player.send_cmd("bgboxpass")
     # player.send_cmd("trmail")
+    # player.send_cmd("maildrop 56002")
 
-    # act_id = 50011
-    act_id = 113
+    # act_id = 113
+    act_id = 146
     player.req_activity_user_data(act_id)
-    times = 0
+    times = 1
     for i in range(0, times):
         player.req_activity_play(act_id)
         pass

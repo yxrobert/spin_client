@@ -13,6 +13,7 @@ _sym_db = _symbol_database.Default()
 
 import opcode_pb2 as opcode__pb2
 import activityevent_pb2 as activityevent__pb2
+import award_pb2 as award__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
@@ -21,9 +22,9 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'Z\004.;pb',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x12treasureroom.proto\x12\x02pb\x1a\x0copcode.proto\x1a\x13\x61\x63tivityevent.proto\"\xe5\x08\n\x0cTreasureRoom\x1a\x45\n\x0cMissionEvent\x12 \n\x05Quest\x18\x01 \x01(\x0b\x32\x11.pb.ActivityEvent\x12\x13\n\x0b\x41\x64\x64Progress\x18\x02 \x01(\x05\x1a\x65\n\x0e\x44\x61yMissionData\x12\x30\n\tQuestList\x18\x01 \x03(\x0b\x32\x1d.pb.TreasureRoom.MissionEvent\x12\x11\n\tBeginTime\x18\x02 \x01(\x03\x12\x0e\n\x06IsOpen\x18\x03 \x01(\x08\x1a\xca\x01\n\x04\x44\x61ta\x12*\n\tCurStatus\x18\x01 \x01(\x0e\x32\x17.pb.TreasureRoom.Status\x12\x1a\n\x12MissionRewardState\x18\x02 \x03(\x08\x12\x37\n\x0e\x64\x61yMissionData\x18\x03 \x03(\x0b\x32\x1f.pb.TreasureRoom.DayMissionData\x12(\n\rMissionAwards\x18\x04 \x03(\x0b\x32\x11.pb.ProgressAward\x12\x17\n\x0fMissionProgress\x18\x05 \x01(\x05\x1a\x98\x02\n\x03Req\x12+\n\x03Get\x18\x01 \x01(\x0b\x32\x1c.pb.TreasureRoom.Req.GetDataH\x00\x12\x39\n\x0fpickQuestReward\x18\x02 \x01(\x0b\x32\x1e.pb.TreasureRoom.Req.PickQuestH\x00\x12=\n\x11pickMissionReward\x18\x03 \x01(\x0b\x32 .pb.TreasureRoom.Req.PickMissionH\x00\x1a\x17\n\x07GetData\x12\x0c\n\x04Type\x18\x01 \x01(\x05\x1a-\n\tPickQuest\x12\x0e\n\x06\x44\x61yIdx\x18\x01 \x01(\x05\x12\x10\n\x08QuestIdx\x18\x02 \x01(\x05\x1a\x1b\n\x0bPickMission\x12\x0c\n\x04Type\x18\x01 \x01(\x05\x42\x05\n\x03one\x1a\x9d\x03\n\x03Rsp\x12\x1e\n\x08OpResult\x18\x64 \x01(\x0b\x32\x0c.pb.OpResult\x12+\n\x03Get\x18\x01 \x01(\x0b\x32\x1c.pb.TreasureRoom.Rsp.GetDataH\x00\x12\x39\n\x0fpickQuestReward\x18\x02 \x01(\x0b\x32\x1e.pb.TreasureRoom.Rsp.PickQuestH\x00\x12=\n\x11pickMissionReward\x18\x03 \x01(\x0b\x32 .pb.TreasureRoom.Rsp.PickMissionH\x00\x1a.\n\x07GetData\x12#\n\x04\x64\x61ta\x18\x01 \x01(\x0b\x32\x15.pb.TreasureRoom.Data\x1a\x64\n\tPickQuest\x12\x0e\n\x06\x44\x61yIdx\x18\x01 \x01(\x05\x12\x10\n\x08QuestIdx\x18\x02 \x01(\x05\x12#\n\x04\x64\x61ta\x18\x03 \x01(\x0b\x32\x15.pb.TreasureRoom.Data\x12\x10\n\x08\x41\x64\x64Score\x18\x04 \x01(\x05\x1a\x32\n\x0bPickMission\x12#\n\x04\x64\x61ta\x18\x01 \x01(\x0b\x32\x15.pb.TreasureRoom.DataB\x05\n\x03one\"\x1f\n\x06Status\x12\x0b\n\x07NotOpen\x10\x00\x12\x08\n\x04Open\x10\x01\x42\x06Z\x04.;pbb\x06proto3'
+  serialized_pb=b'\n\x12treasureroom.proto\x12\x02pb\x1a\x0copcode.proto\x1a\x13\x61\x63tivityevent.proto\x1a\x0b\x61ward.proto\"\xe5\x08\n\x0cTreasureRoom\x1a\x45\n\x0cMissionEvent\x12 \n\x05Quest\x18\x01 \x01(\x0b\x32\x11.pb.ActivityEvent\x12\x13\n\x0b\x41\x64\x64Progress\x18\x02 \x01(\x05\x1a\x65\n\x0e\x44\x61yMissionData\x12\x30\n\tQuestList\x18\x01 \x03(\x0b\x32\x1d.pb.TreasureRoom.MissionEvent\x12\x11\n\tBeginTime\x18\x02 \x01(\x03\x12\x0e\n\x06IsOpen\x18\x03 \x01(\x08\x1a\xca\x01\n\x04\x44\x61ta\x12*\n\tCurStatus\x18\x01 \x01(\x0e\x32\x17.pb.TreasureRoom.Status\x12\x1a\n\x12MissionRewardState\x18\x02 \x03(\x08\x12\x37\n\x0e\x64\x61yMissionData\x18\x03 \x03(\x0b\x32\x1f.pb.TreasureRoom.DayMissionData\x12(\n\rMissionAwards\x18\x04 \x03(\x0b\x32\x11.pb.ProgressAward\x12\x17\n\x0fMissionProgress\x18\x05 \x01(\x05\x1a\x98\x02\n\x03Req\x12+\n\x03Get\x18\x01 \x01(\x0b\x32\x1c.pb.TreasureRoom.Req.GetDataH\x00\x12\x39\n\x0fpickQuestReward\x18\x02 \x01(\x0b\x32\x1e.pb.TreasureRoom.Req.PickQuestH\x00\x12=\n\x11pickMissionReward\x18\x03 \x01(\x0b\x32 .pb.TreasureRoom.Req.PickMissionH\x00\x1a\x17\n\x07GetData\x12\x0c\n\x04Type\x18\x01 \x01(\x05\x1a-\n\tPickQuest\x12\x0e\n\x06\x44\x61yIdx\x18\x01 \x01(\x05\x12\x10\n\x08QuestIdx\x18\x02 \x01(\x05\x1a\x1b\n\x0bPickMission\x12\x0c\n\x04Type\x18\x01 \x01(\x05\x42\x05\n\x03one\x1a\x9d\x03\n\x03Rsp\x12\x1e\n\x08OpResult\x18\x64 \x01(\x0b\x32\x0c.pb.OpResult\x12+\n\x03Get\x18\x01 \x01(\x0b\x32\x1c.pb.TreasureRoom.Rsp.GetDataH\x00\x12\x39\n\x0fpickQuestReward\x18\x02 \x01(\x0b\x32\x1e.pb.TreasureRoom.Rsp.PickQuestH\x00\x12=\n\x11pickMissionReward\x18\x03 \x01(\x0b\x32 .pb.TreasureRoom.Rsp.PickMissionH\x00\x1a.\n\x07GetData\x12#\n\x04\x64\x61ta\x18\x01 \x01(\x0b\x32\x15.pb.TreasureRoom.Data\x1a\x64\n\tPickQuest\x12\x0e\n\x06\x44\x61yIdx\x18\x01 \x01(\x05\x12\x10\n\x08QuestIdx\x18\x02 \x01(\x05\x12#\n\x04\x64\x61ta\x18\x03 \x01(\x0b\x32\x15.pb.TreasureRoom.Data\x12\x10\n\x08\x41\x64\x64Score\x18\x04 \x01(\x05\x1a\x32\n\x0bPickMission\x12#\n\x04\x64\x61ta\x18\x01 \x01(\x0b\x32\x15.pb.TreasureRoom.DataB\x05\n\x03one\"\x1f\n\x06Status\x12\x0b\n\x07NotOpen\x10\x00\x12\x08\n\x04Open\x10\x01\x42\x06Z\x04.;pbb\x06proto3'
   ,
-  dependencies=[opcode__pb2.DESCRIPTOR,activityevent__pb2.DESCRIPTOR,])
+  dependencies=[opcode__pb2.DESCRIPTOR,activityevent__pb2.DESCRIPTOR,award__pb2.DESCRIPTOR,])
 
 
 
@@ -47,8 +48,8 @@ _TREASUREROOM_STATUS = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=1156,
-  serialized_end=1187,
+  serialized_start=1169,
+  serialized_end=1200,
 )
 _sym_db.RegisterEnumDescriptor(_TREASUREROOM_STATUS)
 
@@ -87,8 +88,8 @@ _TREASUREROOM_MISSIONEVENT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=78,
-  serialized_end=147,
+  serialized_start=91,
+  serialized_end=160,
 )
 
 _TREASUREROOM_DAYMISSIONDATA = _descriptor.Descriptor(
@@ -132,8 +133,8 @@ _TREASUREROOM_DAYMISSIONDATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=149,
-  serialized_end=250,
+  serialized_start=162,
+  serialized_end=263,
 )
 
 _TREASUREROOM_DATA = _descriptor.Descriptor(
@@ -191,8 +192,8 @@ _TREASUREROOM_DATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=253,
-  serialized_end=455,
+  serialized_start=266,
+  serialized_end=468,
 )
 
 _TREASUREROOM_REQ_GETDATA = _descriptor.Descriptor(
@@ -222,8 +223,8 @@ _TREASUREROOM_REQ_GETDATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=632,
-  serialized_end=655,
+  serialized_start=645,
+  serialized_end=668,
 )
 
 _TREASUREROOM_REQ_PICKQUEST = _descriptor.Descriptor(
@@ -260,8 +261,8 @@ _TREASUREROOM_REQ_PICKQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=657,
-  serialized_end=702,
+  serialized_start=670,
+  serialized_end=715,
 )
 
 _TREASUREROOM_REQ_PICKMISSION = _descriptor.Descriptor(
@@ -291,8 +292,8 @@ _TREASUREROOM_REQ_PICKMISSION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=704,
-  serialized_end=731,
+  serialized_start=717,
+  serialized_end=744,
 )
 
 _TREASUREROOM_REQ = _descriptor.Descriptor(
@@ -341,8 +342,8 @@ _TREASUREROOM_REQ = _descriptor.Descriptor(
       create_key=_descriptor._internal_create_key,
     fields=[]),
   ],
-  serialized_start=458,
-  serialized_end=738,
+  serialized_start=471,
+  serialized_end=751,
 )
 
 _TREASUREROOM_RSP_GETDATA = _descriptor.Descriptor(
@@ -372,8 +373,8 @@ _TREASUREROOM_RSP_GETDATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=947,
-  serialized_end=993,
+  serialized_start=960,
+  serialized_end=1006,
 )
 
 _TREASUREROOM_RSP_PICKQUEST = _descriptor.Descriptor(
@@ -424,8 +425,8 @@ _TREASUREROOM_RSP_PICKQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=995,
-  serialized_end=1095,
+  serialized_start=1008,
+  serialized_end=1108,
 )
 
 _TREASUREROOM_RSP_PICKMISSION = _descriptor.Descriptor(
@@ -455,8 +456,8 @@ _TREASUREROOM_RSP_PICKMISSION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1097,
-  serialized_end=1147,
+  serialized_start=1110,
+  serialized_end=1160,
 )
 
 _TREASUREROOM_RSP = _descriptor.Descriptor(
@@ -512,8 +513,8 @@ _TREASUREROOM_RSP = _descriptor.Descriptor(
       create_key=_descriptor._internal_create_key,
     fields=[]),
   ],
-  serialized_start=741,
-  serialized_end=1154,
+  serialized_start=754,
+  serialized_end=1167,
 )
 
 _TREASUREROOM = _descriptor.Descriptor(
@@ -537,8 +538,8 @@ _TREASUREROOM = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=62,
-  serialized_end=1187,
+  serialized_start=75,
+  serialized_end=1200,
 )
 
 _TREASUREROOM_MISSIONEVENT.fields_by_name['Quest'].message_type = activityevent__pb2._ACTIVITYEVENT
@@ -547,7 +548,7 @@ _TREASUREROOM_DAYMISSIONDATA.fields_by_name['QuestList'].message_type = _TREASUR
 _TREASUREROOM_DAYMISSIONDATA.containing_type = _TREASUREROOM
 _TREASUREROOM_DATA.fields_by_name['CurStatus'].enum_type = _TREASUREROOM_STATUS
 _TREASUREROOM_DATA.fields_by_name['dayMissionData'].message_type = _TREASUREROOM_DAYMISSIONDATA
-_TREASUREROOM_DATA.fields_by_name['MissionAwards'].message_type = activityevent__pb2._PROGRESSAWARD
+_TREASUREROOM_DATA.fields_by_name['MissionAwards'].message_type = award__pb2._PROGRESSAWARD
 _TREASUREROOM_DATA.containing_type = _TREASUREROOM
 _TREASUREROOM_REQ_GETDATA.containing_type = _TREASUREROOM_REQ
 _TREASUREROOM_REQ_PICKQUEST.containing_type = _TREASUREROOM_REQ

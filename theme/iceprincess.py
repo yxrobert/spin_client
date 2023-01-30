@@ -19,6 +19,8 @@ class IcePrincessRobot(SpinRobot):
 
 
 def run(player):
+    print("rpc!!!!!_____________")
+    player.rpc_game([1,3,5])
     # player.send_cmd(add_money)
     # player.select_bet(60000000)
 

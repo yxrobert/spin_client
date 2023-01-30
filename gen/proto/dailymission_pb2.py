@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'Z\004.;pb',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x12\x64\x61ilymission.proto\x12\x02pb\x1a\x0froyalpass.proto\"\x9d\x13\n\x0c\x44\x61ilyMission\x1a\xf3\x01\n\x03Req\x12\x36\n\x0bMissionList\x18\x01 \x01(\x0b\x32\x1f.pb.DailyMission.MissionListReqH\x00\x12<\n\x0eMissionCollect\x18\x02 \x01(\x0b\x32\".pb.DailyMission.MissionCollectReqH\x00\x12>\n\x0fTotalPointAward\x18\x03 \x01(\x0b\x32#.pb.DailyMission.TotalPointAwardReqH\x00\x12/\n\x04Info\x18\x04 \x01(\x0b\x32\x1f.pb.DailyMission.MissionInfoReqH\x00\x42\x05\n\x03one\x1a\xf3\x01\n\x03Rsp\x12\x36\n\x0bMissionList\x18\x01 \x01(\x0b\x32\x1f.pb.DailyMission.MissionListRspH\x00\x12<\n\x0eMissionCollect\x18\x02 \x01(\x0b\x32\".pb.DailyMission.MissionCollectRspH\x00\x12>\n\x0fTotalPointAward\x18\x03 \x01(\x0b\x32#.pb.DailyMission.TotalPointAwardRspH\x00\x12/\n\x04Info\x18\x04 \x01(\x0b\x32\x1f.pb.DailyMission.MissionInfoRspH\x00\x42\x05\n\x03one\x1a\x1f\n\x0eMissionListReq\x12\r\n\x05State\x18\x03 \x01(\r\x1aU\n\x0eMissionListRsp\x12\x34\n\x07Mission\x18\x01 \x01(\x0b\x32#.pb.DailyMission.PlayerDailyMission\x12\r\n\x05State\x18\x02 \x01(\r\x1aU\n\x11MissionCollectReq\x12\x31\n\x0bMissionType\x18\x01 \x01(\x0e\x32\x1c.pb.DailyMission.MissionType\x12\r\n\x05Order\x18\x02 \x01(\r\x1a\x88\x01\n\x11MissionCollectRsp\x12\x34\n\x07Mission\x18\x01 \x01(\x0b\x32#.pb.DailyMission.PlayerDailyMission\x12=\n\tRoyalPass\x18\x02 \x01(\x0b\x32*.pb.RoyalPass.RoyalPassDailyMissionUpdated\x1a,\n\x12TotalPointAwardReq\x12\x16\n\x0e\x41wardNeedPoint\x18\x01 \x01(\r\x1a\x41\n\x12TotalPointAwardRsp\x12+\n\x06Points\x18\x01 \x01(\x0b\x32\x1b.pb.DailyMission.TotalPoint\x1a\x10\n\x0eMissionInfoReq\x1a\x9c\x01\n\x0eMissionInfoRsp\x12,\n\x06Normal\x18\x01 \x01(\x0b\x32\x1c.pb.DailyMission.MissionInfo\x12+\n\x05Super\x18\x02 \x01(\x0b\x32\x1c.pb.DailyMission.MissionInfo\x12/\n\x06Points\x18\x03 \x01(\x0b\x32\x1f.pb.DailyMission.TotalPointInfo\x1a<\n\x0eTotalPointInfo\x12\x11\n\tCanReward\x18\x01 \x01(\x08\x12\x17\n\x0fNextRefreshTime\x18\x05 \x01(\x03\x1a\x81\x01\n\x0bMissionInfo\x12)\n\x05State\x18\x06 \x01(\x0e\x32\x1a.pb.DailyMission.TaskState\x12\x11\n\tCanReward\x18\x07 \x01(\x08\x12\x17\n\x0fNextRefreshTime\x18\x08 \x01(\x03\x12\r\n\x05Order\x18\t \x01(\r\x12\x0c\n\x04Size\x18\n \x01(\r\x1a\x94\x01\n\x12PlayerDailyMission\x12(\n\x06Normal\x18\x01 \x01(\x0b\x32\x18.pb.DailyMission.Mission\x12\'\n\x05Super\x18\x02 \x01(\x0b\x32\x18.pb.DailyMission.Mission\x12+\n\x06Points\x18\x03 \x01(\x0b\x32\x1b.pb.DailyMission.TotalPoint\x1a\xad\x01\n\x07Mission\x12\x17\n\x0fLastRefreshTime\x18\x04 \x01(\x03\x12\x17\n\x0fNextRefreshTime\x18\x05 \x01(\x03\x12\x30\n\tCurrTasks\x18\x07 \x01(\x0b\x32\x1d.pb.DailyMission.MissionTasks\x12\x30\n\tNextTasks\x18\x08 \x01(\x0b\x32\x1d.pb.DailyMission.MissionTasks\x12\x0c\n\x04Size\x18\n \x01(\r\x1a\x83\x02\n\x0cMissionTasks\x12\x31\n\x0bMissionType\x18\x01 \x01(\x0e\x32\x1c.pb.DailyMission.MissionType\x12\r\n\x05Order\x18\x02 \x01(\r\x12\x11\n\tTaskIndex\x18\x03 \x01(\r\x12\x10\n\x08TaskType\x18\x04 \x01(\r\x12\x0b\n\x03XCV\x18\x05 \x01(\x04\x12\x0b\n\x03XTV\x18\x06 \x01(\x04\x12\x0b\n\x03NCV\x18\x07 \x01(\x04\x12\x0b\n\x03NTV\x18\x08 \x01(\x04\x12)\n\x05State\x18\t \x01(\x0e\x32\x1a.pb.DailyMission.TaskState\x12-\n\x06\x41wards\x18\n \x03(\x0b\x32\x1d.pb.DailyMission.MissionAward\x1a\x32\n\x0cMissionAward\x12\t\n\x01n\x18\x01 \x01(\t\x12\t\n\x01\x63\x18\x02 \x01(\x04\x12\x0c\n\x04skin\x18\x03 \x01(\t\x1a\xa6\x01\n\nTotalPoint\x12\x1c\n\x14\x46inishSuperTaskCount\x18\x01 \x01(\r\x12\x12\n\nTotalPoint\x18\x02 \x01(\r\x12\x15\n\rTotalAwardIDs\x18\x03 \x03(\r\x12\x36\n\x10TotalPointAwards\x18\x04 \x03(\x0b\x32\x1c.pb.DailyMission.TotalAwards\x12\x17\n\x0fNextRefreshTime\x18\x05 \x01(\x03\x1aP\n\x0bTotalAwards\x12\x11\n\tneedPoint\x18\x01 \x01(\r\x12.\n\x05\x41ward\x18\x02 \x03(\x0b\x32\x1f.pb.DailyMission.TotalAwardInfo\x1a.\n\x0eTotalAwardInfo\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0e\n\x06\x61mount\x18\x02 \x01(\x04\"2\n\x0bMissionType\x12\x11\n\rNormalMission\x10\x00\x12\x10\n\x0cSuperMission\x10\x01\"0\n\x0bSettingType\x12\x0e\n\nNewSetting\x10\x00\x12\x11\n\rNormalSetting\x10\x01\"Q\n\tTaskState\x12\x12\n\x0eStateNotFinish\x10\x00\x12\x17\n\x13StateFinishNotAward\x10\x01\x12\x17\n\x13StateFinishAndAward\x10\x02\x42\x06Z\x04.;pbb\x06proto3'
+  serialized_pb=b'\n\x12\x64\x61ilymission.proto\x12\x02pb\x1a\x0froyalpass.proto\"\xa7\x15\n\x0c\x44\x61ilyMission\x1a\xf3\x01\n\x03Req\x12\x36\n\x0bMissionList\x18\x01 \x01(\x0b\x32\x1f.pb.DailyMission.MissionListReqH\x00\x12<\n\x0eMissionCollect\x18\x02 \x01(\x0b\x32\".pb.DailyMission.MissionCollectReqH\x00\x12>\n\x0fTotalPointAward\x18\x03 \x01(\x0b\x32#.pb.DailyMission.TotalPointAwardReqH\x00\x12/\n\x04Info\x18\x04 \x01(\x0b\x32\x1f.pb.DailyMission.MissionInfoReqH\x00\x42\x05\n\x03one\x1a\xf3\x01\n\x03Rsp\x12\x36\n\x0bMissionList\x18\x01 \x01(\x0b\x32\x1f.pb.DailyMission.MissionListRspH\x00\x12<\n\x0eMissionCollect\x18\x02 \x01(\x0b\x32\".pb.DailyMission.MissionCollectRspH\x00\x12>\n\x0fTotalPointAward\x18\x03 \x01(\x0b\x32#.pb.DailyMission.TotalPointAwardRspH\x00\x12/\n\x04Info\x18\x04 \x01(\x0b\x32\x1f.pb.DailyMission.MissionInfoRspH\x00\x42\x05\n\x03one\x1a\x1f\n\x0eMissionListReq\x12\r\n\x05State\x18\x03 \x01(\r\x1aU\n\x0eMissionListRsp\x12\x34\n\x07Mission\x18\x01 \x01(\x0b\x32#.pb.DailyMission.PlayerDailyMission\x12\r\n\x05State\x18\x02 \x01(\r\x1aU\n\x11MissionCollectReq\x12\x31\n\x0bMissionType\x18\x01 \x01(\x0e\x32\x1c.pb.DailyMission.MissionType\x12\r\n\x05Order\x18\x02 \x01(\r\x1a\x88\x01\n\x11MissionCollectRsp\x12\x34\n\x07Mission\x18\x01 \x01(\x0b\x32#.pb.DailyMission.PlayerDailyMission\x12=\n\tRoyalPass\x18\x02 \x01(\x0b\x32*.pb.RoyalPass.RoyalPassDailyMissionUpdated\x1a,\n\x12TotalPointAwardReq\x12\x16\n\x0e\x41wardNeedPoint\x18\x01 \x01(\r\x1a\x41\n\x12TotalPointAwardRsp\x12+\n\x06Points\x18\x01 \x01(\x0b\x32\x1b.pb.DailyMission.TotalPoint\x1a\x10\n\x0eMissionInfoReq\x1a\x9c\x01\n\x0eMissionInfoRsp\x12,\n\x06Normal\x18\x01 \x01(\x0b\x32\x1c.pb.DailyMission.MissionInfo\x12+\n\x05Super\x18\x02 \x01(\x0b\x32\x1c.pb.DailyMission.MissionInfo\x12/\n\x06Points\x18\x03 \x01(\x0b\x32\x1f.pb.DailyMission.TotalPointInfo\x1a<\n\x0eTotalPointInfo\x12\x11\n\tCanReward\x18\x01 \x01(\x08\x12\x17\n\x0fNextRefreshTime\x18\x05 \x01(\x03\x1a\x81\x01\n\x0bMissionInfo\x12)\n\x05State\x18\x06 \x01(\x0e\x32\x1a.pb.DailyMission.TaskState\x12\x11\n\tCanReward\x18\x07 \x01(\x08\x12\x17\n\x0fNextRefreshTime\x18\x08 \x01(\x03\x12\r\n\x05Order\x18\t \x01(\r\x12\x0c\n\x04Size\x18\n \x01(\r\x1a\x94\x01\n\x12PlayerDailyMission\x12(\n\x06Normal\x18\x01 \x01(\x0b\x32\x18.pb.DailyMission.Mission\x12\'\n\x05Super\x18\x02 \x01(\x0b\x32\x18.pb.DailyMission.Mission\x12+\n\x06Points\x18\x03 \x01(\x0b\x32\x1b.pb.DailyMission.TotalPoint\x1a\xad\x01\n\x07Mission\x12\x17\n\x0fLastRefreshTime\x18\x04 \x01(\x03\x12\x17\n\x0fNextRefreshTime\x18\x05 \x01(\x03\x12\x30\n\tCurrTasks\x18\x07 \x01(\x0b\x32\x1d.pb.DailyMission.MissionTasks\x12\x30\n\tNextTasks\x18\x08 \x01(\x0b\x32\x1d.pb.DailyMission.MissionTasks\x12\x0c\n\x04Size\x18\n \x01(\r\x1a\x83\x02\n\x0cMissionTasks\x12\x31\n\x0bMissionType\x18\x01 \x01(\x0e\x32\x1c.pb.DailyMission.MissionType\x12\r\n\x05Order\x18\x02 \x01(\r\x12\x11\n\tTaskIndex\x18\x03 \x01(\r\x12\x10\n\x08TaskType\x18\x04 \x01(\r\x12\x0b\n\x03XCV\x18\x05 \x01(\x04\x12\x0b\n\x03XTV\x18\x06 \x01(\x04\x12\x0b\n\x03NCV\x18\x07 \x01(\x04\x12\x0b\n\x03NTV\x18\x08 \x01(\x04\x12)\n\x05State\x18\t \x01(\x0e\x32\x1a.pb.DailyMission.TaskState\x12-\n\x06\x41wards\x18\n \x03(\x0b\x32\x1d.pb.DailyMission.MissionAward\x1a\\\n\x0cMissionAward\x12\t\n\x01n\x18\x01 \x01(\t\x12\t\n\x01\x63\x18\x02 \x01(\x04\x12\x0c\n\x04skin\x18\x03 \x01(\t\x12(\n\x04Type\x18\x04 \x01(\x0e\x32\x1a.pb.DailyMission.AwardType\x1a\xa6\x01\n\nTotalPoint\x12\x1c\n\x14\x46inishSuperTaskCount\x18\x01 \x01(\r\x12\x12\n\nTotalPoint\x18\x02 \x01(\r\x12\x15\n\rTotalAwardIDs\x18\x03 \x03(\r\x12\x36\n\x10TotalPointAwards\x18\x04 \x03(\x0b\x32\x1c.pb.DailyMission.TotalAwards\x12\x17\n\x0fNextRefreshTime\x18\x05 \x01(\x03\x1aP\n\x0bTotalAwards\x12\x11\n\tneedPoint\x18\x01 \x01(\r\x12.\n\x05\x41ward\x18\x02 \x03(\x0b\x32\x1f.pb.DailyMission.TotalAwardInfo\x1a.\n\x0eTotalAwardInfo\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0e\n\x06\x61mount\x18\x02 \x01(\x04\"2\n\x0bMissionType\x12\x11\n\rNormalMission\x10\x00\x12\x10\n\x0cSuperMission\x10\x01\"0\n\x0bSettingType\x12\x0e\n\nNewSetting\x10\x00\x12\x11\n\rNormalSetting\x10\x01\"Q\n\tTaskState\x12\x12\n\x0eStateNotFinish\x10\x00\x12\x17\n\x13StateFinishNotAward\x10\x01\x12\x17\n\x13StateFinishAndAward\x10\x02\"\xdd\x01\n\tAwardType\x12\x1b\n\x17MissionAwardType_Points\x10\x00\x12\x19\n\x15MissionAwardType_Item\x10\x01\x12\x1d\n\x19MissionAwardType_Currency\x10\x02\x12\x1e\n\x1aMissionAwardType_BonusGame\x10\x03\x12\x1c\n\x18MissionAwardType_Booster\x10\x04\x12\x1e\n\x1aMissionAwardType_CardBonus\x10\x05\x12\x1b\n\x17MissionAwardType_Conpon\x10\x06\x42\x06Z\x04.;pbb\x06proto3'
   ,
   dependencies=[royalpass__pb2.DESCRIPTOR,])
 
@@ -46,8 +46,8 @@ _DAILYMISSION_MISSIONTYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=2322,
-  serialized_end=2372,
+  serialized_start=2364,
+  serialized_end=2414,
 )
 _sym_db.RegisterEnumDescriptor(_DAILYMISSION_MISSIONTYPE)
 
@@ -71,8 +71,8 @@ _DAILYMISSION_SETTINGTYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=2374,
-  serialized_end=2422,
+  serialized_start=2416,
+  serialized_end=2464,
 )
 _sym_db.RegisterEnumDescriptor(_DAILYMISSION_SETTINGTYPE)
 
@@ -101,10 +101,60 @@ _DAILYMISSION_TASKSTATE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=2424,
-  serialized_end=2505,
+  serialized_start=2466,
+  serialized_end=2547,
 )
 _sym_db.RegisterEnumDescriptor(_DAILYMISSION_TASKSTATE)
+
+_DAILYMISSION_AWARDTYPE = _descriptor.EnumDescriptor(
+  name='AwardType',
+  full_name='pb.DailyMission.AwardType',
+  filename=None,
+  file=DESCRIPTOR,
+  create_key=_descriptor._internal_create_key,
+  values=[
+    _descriptor.EnumValueDescriptor(
+      name='MissionAwardType_Points', index=0, number=0,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='MissionAwardType_Item', index=1, number=1,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='MissionAwardType_Currency', index=2, number=2,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='MissionAwardType_BonusGame', index=3, number=3,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='MissionAwardType_Booster', index=4, number=4,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='MissionAwardType_CardBonus', index=5, number=5,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='MissionAwardType_Conpon', index=6, number=6,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+  ],
+  containing_type=None,
+  serialized_options=None,
+  serialized_start=2550,
+  serialized_end=2771,
+)
+_sym_db.RegisterEnumDescriptor(_DAILYMISSION_AWARDTYPE)
 
 
 _DAILYMISSION_REQ = _descriptor.Descriptor(
@@ -821,6 +871,13 @@ _DAILYMISSION_MISSIONAWARD = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='Type', full_name='pb.DailyMission.MissionAward.Type', index=3,
+      number=4, type=14, cpp_type=8, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -834,7 +891,7 @@ _DAILYMISSION_MISSIONAWARD = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=1971,
-  serialized_end=2021,
+  serialized_end=2063,
 )
 
 _DAILYMISSION_TOTALPOINT = _descriptor.Descriptor(
@@ -892,8 +949,8 @@ _DAILYMISSION_TOTALPOINT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2024,
-  serialized_end=2190,
+  serialized_start=2066,
+  serialized_end=2232,
 )
 
 _DAILYMISSION_TOTALAWARDS = _descriptor.Descriptor(
@@ -930,8 +987,8 @@ _DAILYMISSION_TOTALAWARDS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2192,
-  serialized_end=2272,
+  serialized_start=2234,
+  serialized_end=2314,
 )
 
 _DAILYMISSION_TOTALAWARDINFO = _descriptor.Descriptor(
@@ -968,8 +1025,8 @@ _DAILYMISSION_TOTALAWARDINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2274,
-  serialized_end=2320,
+  serialized_start=2316,
+  serialized_end=2362,
 )
 
 _DAILYMISSION = _descriptor.Descriptor(
@@ -988,6 +1045,7 @@ _DAILYMISSION = _descriptor.Descriptor(
     _DAILYMISSION_MISSIONTYPE,
     _DAILYMISSION_SETTINGTYPE,
     _DAILYMISSION_TASKSTATE,
+    _DAILYMISSION_AWARDTYPE,
   ],
   serialized_options=None,
   is_extendable=False,
@@ -996,7 +1054,7 @@ _DAILYMISSION = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=44,
-  serialized_end=2505,
+  serialized_end=2771,
 )
 
 _DAILYMISSION_REQ.fields_by_name['MissionList'].message_type = _DAILYMISSION_MISSIONLISTREQ
@@ -1063,6 +1121,7 @@ _DAILYMISSION_MISSIONTASKS.fields_by_name['MissionType'].enum_type = _DAILYMISSI
 _DAILYMISSION_MISSIONTASKS.fields_by_name['State'].enum_type = _DAILYMISSION_TASKSTATE
 _DAILYMISSION_MISSIONTASKS.fields_by_name['Awards'].message_type = _DAILYMISSION_MISSIONAWARD
 _DAILYMISSION_MISSIONTASKS.containing_type = _DAILYMISSION
+_DAILYMISSION_MISSIONAWARD.fields_by_name['Type'].enum_type = _DAILYMISSION_AWARDTYPE
 _DAILYMISSION_MISSIONAWARD.containing_type = _DAILYMISSION
 _DAILYMISSION_TOTALPOINT.fields_by_name['TotalPointAwards'].message_type = _DAILYMISSION_TOTALAWARDS
 _DAILYMISSION_TOTALPOINT.containing_type = _DAILYMISSION
@@ -1072,6 +1131,7 @@ _DAILYMISSION_TOTALAWARDINFO.containing_type = _DAILYMISSION
 _DAILYMISSION_MISSIONTYPE.containing_type = _DAILYMISSION
 _DAILYMISSION_SETTINGTYPE.containing_type = _DAILYMISSION
 _DAILYMISSION_TASKSTATE.containing_type = _DAILYMISSION
+_DAILYMISSION_AWARDTYPE.containing_type = _DAILYMISSION
 DESCRIPTOR.message_types_by_name['DailyMission'] = _DAILYMISSION
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
