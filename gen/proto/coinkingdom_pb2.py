@@ -21,7 +21,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'Z\004.;pb',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x11\x63oinkingdom.proto\x12\x02pb\x1a\x0b\x61ward.proto\x1a\x13\x61\x63tivityevent.proto\"\xa9\n\n\x0b\x43oinKingdom\x1a\xa7\x02\n\x04\x44\x61ta\x12\x10\n\x08PushCoin\x18\x01 \x01(\x05\x12\x10\n\x08StageIdx\x18\x02 \x01(\x05\x12\x10\n\x08Progress\x18\x03 \x01(\x05\x12$\n\x05Stage\x18\x04 \x01(\x0b\x32\x15.pb.CoinKingdom.Stage\x12\x10\n\x08PopQueue\x18\x06 \x03(\x05\x12/\n\x0bStageReward\x18\x07 \x03(\x0b\x32\x1a.pb.CoinKingdom.StageAward\x12\x30\n\x0eProgressReward\x18\x08 \x03(\x0b\x32\x18.pb.CoinKingdom.Progress\x12#\n\tSlotsBuff\x18\t \x03(\x0b\x32\x10.pb.ActivityBuff\x12\x15\n\rPushCoinLimit\x18\n \x01(\x05\x12\x12\n\nFreeReward\x18\x0b \x01(\x08\x1a\x8e\x01\n\x05Stage\x12/\n\x0bGroundCoins\x18\x01 \x03(\x0b\x32\x1a.pb.CoinKingdom.GroundCoin\x12\x12\n\nDifficulty\x18\x02 \x01(\x05\x12\x17\n\x0f\x44ifficultyLimit\x18\x03 \x01(\x05\x12\'\n\x04\x42uff\x18\x04 \x03(\x0b\x32\x19.pb.CoinKingdom.StageBuff\x1a\x41\n\nGroundCoin\x12&\n\x04Type\x18\x01 \x01(\x0e\x32\x18.pb.CoinKingdom.CoinType\x12\x0b\n\x03Num\x18\x02 \x01(\x05\x1a\xa7\x01\n\x0b\x43ollectCoin\x12&\n\x04Type\x18\x01 \x01(\x0e\x32\x18.pb.CoinKingdom.CoinType\x12(\n\x05SType\x18\x02 \x01(\x0e\x32\x19.pb.CoinKingdom.SevenType\x12\x15\n\rAddDifficulty\x18\x03 \x01(\x05\x12/\n\nSevenPanel\x18\x04 \x03(\x0e\x32\x1b.pb.CoinKingdom.SevenSymbol\x1a+\n\nStageAward\x12\x1d\n\x06\x41wards\x18\x01 \x03(\x0b\x32\r.pb.AwardInfo\x1a\x38\n\x08Progress\x12\r\n\x05Value\x18\x01 \x01(\x05\x12\x1d\n\x06\x41wards\x18\x02 \x03(\x0b\x32\r.pb.AwardInfo\x1a\x42\n\tStageBuff\x12&\n\x04Type\x18\x01 \x01(\x0e\x32\x18.pb.CoinKingdom.BuffType\x12\r\n\x05Value\x18\x02 \x01(\x05\x1ag\n\x08\x44ropCoin\x12)\n\x05\x43oins\x18\x01 \x03(\x0b\x32\x1a.pb.CoinKingdom.GroundCoin\x12\x30\n\x0b\x43ollectList\x18\x02 \x03(\x0b\x32\x1b.pb.CoinKingdom.CollectCoin\"c\n\x08\x43oinType\x12\n\n\x06Normal\x10\x00\x12\t\n\x05Seven\x10\x01\x12\x07\n\x03\x42ox\x10\x02\x12\x0b\n\x07Unknown\x10\x03\x12\x0c\n\x08RedArrow\x10\x04\x12\x0b\n\x07\x42igCoin\x10\x05\x12\x0f\n\x0bMaxCoinType\x10\x06\"p\n\tSevenType\x12\x0e\n\nST_Invalid\x10\x00\x12\x0f\n\x0bST_CoinPile\x10\x01\x12\x0e\n\nST_BigCoin\x10\x02\x12\x0b\n\x07ST_Boom\x10\x03\x12\x13\n\x0fST_MassCoinPile\x10\x04\x12\x10\n\x0cST_CoinFalls\x10\x05\"i\n\x0bSevenSymbol\x12\x0e\n\nS_CoinPile\x10\x00\x12\r\n\tS_BigCoin\x10\x01\x12\n\n\x06S_Boom\x10\x02\x12\x12\n\x0eS_MassCoinPile\x10\x03\x12\x0f\n\x0bS_CoinFalls\x10\x04\x12\n\n\x06S_Wild\x10\x05\"\x1c\n\x08\x42uffType\x12\x10\n\x0cRedArrowCoin\x10\x00\x42\x06Z\x04.;pbb\x06proto3'
+  serialized_pb=b'\n\x11\x63oinkingdom.proto\x12\x02pb\x1a\x0b\x61ward.proto\x1a\x13\x61\x63tivityevent.proto\"\xb8\n\n\x0b\x43oinKingdom\x1a\xc4\x02\n\x04\x44\x61ta\x12\x10\n\x08PushCoin\x18\x01 \x01(\x05\x12\x10\n\x08StageIdx\x18\x02 \x01(\x05\x12\x14\n\x0c\x44ropProgress\x18\x03 \x01(\x05\x12\x17\n\x0fMissionProgress\x18\x04 \x01(\x05\x12$\n\x05Stage\x18\x05 \x01(\x0b\x32\x15.pb.CoinKingdom.Stage\x12\x10\n\x08PopQueue\x18\x06 \x03(\x05\x12/\n\x0bStageReward\x18\x07 \x03(\x0b\x32\x1a.pb.CoinKingdom.StageAward\x12\x30\n\x0eProgressReward\x18\x08 \x03(\x0b\x32\x18.pb.CoinKingdom.Progress\x12#\n\tSlotsBuff\x18\t \x03(\x0b\x32\x10.pb.ActivityBuff\x12\x15\n\rPushCoinLimit\x18\n \x01(\x05\x12\x12\n\nFreeReward\x18\x0b \x01(\x08\x1a\x8e\x01\n\x05Stage\x12/\n\x0bGroundCoins\x18\x01 \x03(\x0b\x32\x1a.pb.CoinKingdom.GroundCoin\x12\x12\n\nDifficulty\x18\x02 \x01(\x05\x12\x17\n\x0f\x44ifficultyLimit\x18\x03 \x01(\x05\x12\'\n\x04\x42uff\x18\x04 \x03(\x0b\x32\x19.pb.CoinKingdom.StageBuff\x1a\x41\n\nGroundCoin\x12&\n\x04Type\x18\x01 \x01(\x0e\x32\x18.pb.CoinKingdom.CoinType\x12\x0b\n\x03Num\x18\x02 \x01(\x05\x1a\x99\x01\n\x0b\x43ollectCoin\x12&\n\x04Type\x18\x01 \x01(\x0e\x32\x18.pb.CoinKingdom.CoinType\x12(\n\x05SType\x18\x02 \x01(\x0e\x32\x19.pb.CoinKingdom.SevenType\x12\x15\n\rAddDifficulty\x18\x03 \x01(\x05\x12\x12\n\nSevenPanel\x18\x04 \x03(\x05\x12\r\n\x05Value\x18\x05 \x01(\x05\x1a+\n\nStageAward\x12\x1d\n\x06\x41wards\x18\x01 \x03(\x0b\x32\r.pb.AwardList\x1a\x38\n\x08Progress\x12\r\n\x05Value\x18\x01 \x01(\x05\x12\x1d\n\x06\x41wards\x18\x02 \x03(\x0b\x32\r.pb.AwardInfo\x1a\x42\n\tStageBuff\x12&\n\x04Type\x18\x01 \x01(\x0e\x32\x18.pb.CoinKingdom.BuffType\x12\r\n\x05Value\x18\x02 \x01(\x05\x1ag\n\x08\x44ropCoin\x12)\n\x05\x43oins\x18\x01 \x03(\x0b\x32\x1a.pb.CoinKingdom.GroundCoin\x12\x30\n\x0b\x43ollectList\x18\x02 \x03(\x0b\x32\x1b.pb.CoinKingdom.CollectCoin\"c\n\x08\x43oinType\x12\n\n\x06Normal\x10\x00\x12\t\n\x05Seven\x10\x01\x12\x07\n\x03\x42ox\x10\x02\x12\x0b\n\x07Unknown\x10\x03\x12\x0c\n\x08RedArrow\x10\x04\x12\x0b\n\x07\x42igCoin\x10\x05\x12\x0f\n\x0bMaxCoinType\x10\x06\"p\n\tSevenType\x12\x0e\n\nST_Invalid\x10\x00\x12\x0f\n\x0bST_CoinPile\x10\x01\x12\x0e\n\nST_BigCoin\x10\x02\x12\x0b\n\x07ST_Boom\x10\x03\x12\x13\n\x0fST_MassCoinPile\x10\x04\x12\x10\n\x0cST_CoinFalls\x10\x05\"i\n\x0bSevenSymbol\x12\x0e\n\nS_CoinPile\x10\x00\x12\r\n\tS_BigCoin\x10\x01\x12\n\n\x06S_Boom\x10\x02\x12\x12\n\x0eS_MassCoinPile\x10\x03\x12\x0f\n\x0bS_CoinFalls\x10\x04\x12\n\n\x06S_Wild\x10\x05\"\x1c\n\x08\x42uffType\x12\x10\n\x0cRedArrowCoin\x10\x00\x42\x06Z\x04.;pbb\x06proto3'
   ,
   dependencies=[award__pb2.DESCRIPTOR,activityevent__pb2.DESCRIPTOR,])
 
@@ -72,8 +72,8 @@ _COINKINGDOM_COINTYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=1031,
-  serialized_end=1130,
+  serialized_start=1046,
+  serialized_end=1145,
 )
 _sym_db.RegisterEnumDescriptor(_COINKINGDOM_COINTYPE)
 
@@ -117,8 +117,8 @@ _COINKINGDOM_SEVENTYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=1132,
-  serialized_end=1244,
+  serialized_start=1147,
+  serialized_end=1259,
 )
 _sym_db.RegisterEnumDescriptor(_COINKINGDOM_SEVENTYPE)
 
@@ -162,8 +162,8 @@ _COINKINGDOM_SEVENSYMBOL = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=1246,
-  serialized_end=1351,
+  serialized_start=1261,
+  serialized_end=1366,
 )
 _sym_db.RegisterEnumDescriptor(_COINKINGDOM_SEVENSYMBOL)
 
@@ -182,8 +182,8 @@ _COINKINGDOM_BUFFTYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=1353,
-  serialized_end=1381,
+  serialized_start=1368,
+  serialized_end=1396,
 )
 _sym_db.RegisterEnumDescriptor(_COINKINGDOM_BUFFTYPE)
 
@@ -211,56 +211,63 @@ _COINKINGDOM_DATA = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='Progress', full_name='pb.CoinKingdom.Data.Progress', index=2,
+      name='DropProgress', full_name='pb.CoinKingdom.Data.DropProgress', index=2,
       number=3, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='Stage', full_name='pb.CoinKingdom.Data.Stage', index=3,
-      number=4, type=11, cpp_type=10, label=1,
+      name='MissionProgress', full_name='pb.CoinKingdom.Data.MissionProgress', index=3,
+      number=4, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='Stage', full_name='pb.CoinKingdom.Data.Stage', index=4,
+      number=5, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='PopQueue', full_name='pb.CoinKingdom.Data.PopQueue', index=4,
+      name='PopQueue', full_name='pb.CoinKingdom.Data.PopQueue', index=5,
       number=6, type=5, cpp_type=1, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='StageReward', full_name='pb.CoinKingdom.Data.StageReward', index=5,
+      name='StageReward', full_name='pb.CoinKingdom.Data.StageReward', index=6,
       number=7, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='ProgressReward', full_name='pb.CoinKingdom.Data.ProgressReward', index=6,
+      name='ProgressReward', full_name='pb.CoinKingdom.Data.ProgressReward', index=7,
       number=8, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='SlotsBuff', full_name='pb.CoinKingdom.Data.SlotsBuff', index=7,
+      name='SlotsBuff', full_name='pb.CoinKingdom.Data.SlotsBuff', index=8,
       number=9, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='PushCoinLimit', full_name='pb.CoinKingdom.Data.PushCoinLimit', index=8,
+      name='PushCoinLimit', full_name='pb.CoinKingdom.Data.PushCoinLimit', index=9,
       number=10, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='FreeReward', full_name='pb.CoinKingdom.Data.FreeReward', index=9,
+      name='FreeReward', full_name='pb.CoinKingdom.Data.FreeReward', index=10,
       number=11, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
@@ -279,7 +286,7 @@ _COINKINGDOM_DATA = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=76,
-  serialized_end=371,
+  serialized_end=400,
 )
 
 _COINKINGDOM_STAGE = _descriptor.Descriptor(
@@ -330,8 +337,8 @@ _COINKINGDOM_STAGE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=374,
-  serialized_end=516,
+  serialized_start=403,
+  serialized_end=545,
 )
 
 _COINKINGDOM_GROUNDCOIN = _descriptor.Descriptor(
@@ -368,8 +375,8 @@ _COINKINGDOM_GROUNDCOIN = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=518,
-  serialized_end=583,
+  serialized_start=547,
+  serialized_end=612,
 )
 
 _COINKINGDOM_COLLECTCOIN = _descriptor.Descriptor(
@@ -403,8 +410,15 @@ _COINKINGDOM_COLLECTCOIN = _descriptor.Descriptor(
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='SevenPanel', full_name='pb.CoinKingdom.CollectCoin.SevenPanel', index=3,
-      number=4, type=14, cpp_type=8, label=3,
+      number=4, type=5, cpp_type=1, label=3,
       has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='Value', full_name='pb.CoinKingdom.CollectCoin.Value', index=4,
+      number=5, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
@@ -420,8 +434,8 @@ _COINKINGDOM_COLLECTCOIN = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=586,
-  serialized_end=753,
+  serialized_start=615,
+  serialized_end=768,
 )
 
 _COINKINGDOM_STAGEAWARD = _descriptor.Descriptor(
@@ -451,8 +465,8 @@ _COINKINGDOM_STAGEAWARD = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=755,
-  serialized_end=798,
+  serialized_start=770,
+  serialized_end=813,
 )
 
 _COINKINGDOM_PROGRESS = _descriptor.Descriptor(
@@ -489,8 +503,8 @@ _COINKINGDOM_PROGRESS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=800,
-  serialized_end=856,
+  serialized_start=815,
+  serialized_end=871,
 )
 
 _COINKINGDOM_STAGEBUFF = _descriptor.Descriptor(
@@ -527,8 +541,8 @@ _COINKINGDOM_STAGEBUFF = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=858,
-  serialized_end=924,
+  serialized_start=873,
+  serialized_end=939,
 )
 
 _COINKINGDOM_DROPCOIN = _descriptor.Descriptor(
@@ -565,8 +579,8 @@ _COINKINGDOM_DROPCOIN = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=926,
-  serialized_end=1029,
+  serialized_start=941,
+  serialized_end=1044,
 )
 
 _COINKINGDOM = _descriptor.Descriptor(
@@ -594,7 +608,7 @@ _COINKINGDOM = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=60,
-  serialized_end=1381,
+  serialized_end=1396,
 )
 
 _COINKINGDOM_DATA.fields_by_name['Stage'].message_type = _COINKINGDOM_STAGE
@@ -609,9 +623,8 @@ _COINKINGDOM_GROUNDCOIN.fields_by_name['Type'].enum_type = _COINKINGDOM_COINTYPE
 _COINKINGDOM_GROUNDCOIN.containing_type = _COINKINGDOM
 _COINKINGDOM_COLLECTCOIN.fields_by_name['Type'].enum_type = _COINKINGDOM_COINTYPE
 _COINKINGDOM_COLLECTCOIN.fields_by_name['SType'].enum_type = _COINKINGDOM_SEVENTYPE
-_COINKINGDOM_COLLECTCOIN.fields_by_name['SevenPanel'].enum_type = _COINKINGDOM_SEVENSYMBOL
 _COINKINGDOM_COLLECTCOIN.containing_type = _COINKINGDOM
-_COINKINGDOM_STAGEAWARD.fields_by_name['Awards'].message_type = award__pb2._AWARDINFO
+_COINKINGDOM_STAGEAWARD.fields_by_name['Awards'].message_type = award__pb2._AWARDLIST
 _COINKINGDOM_STAGEAWARD.containing_type = _COINKINGDOM
 _COINKINGDOM_PROGRESS.fields_by_name['Awards'].message_type = award__pb2._AWARDINFO
 _COINKINGDOM_PROGRESS.containing_type = _COINKINGDOM

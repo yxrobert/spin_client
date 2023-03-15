@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'Z\004.;pb',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x13\x61\x63tivityevent.proto\x12\x02pb\"w\n\rActivityEvent\x12\r\n\x05\x45ntry\x18\x01 \x01(\x05\x12\x10\n\x08progress\x18\x02 \x01(\x03\x12\x0e\n\x06target\x18\x03 \x01(\x03\x12\'\n\x06Status\x18\x04 \x01(\x0e\x32\x17.pb.ActivityEventStatus\x12\x0c\n\x04Type\x18\x05 \x01(\t\"W\n\x0c\x41\x63tivityBuff\x12\"\n\x04Type\x18\x01 \x01(\x0e\x32\x14.pb.ActivityBuffType\x12\r\n\x05Value\x18\x02 \x01(\x05\x12\x14\n\x0c\x45ndTimeStamp\x18\x03 \x01(\x03\"p\n\x0b\x45ventAwards\x12 \n\x04Type\x18\x01 \x01(\x0e\x32\x12.pb.EventAwardType\x12\"\n\nEventAward\x18\x02 \x03(\x0b\x32\x0e.pb.EventAward\x12\x0c\n\x04skin\x18\x06 \x01(\t\x12\r\n\x05value\x18\x07 \x01(\x01\"0\n\nEventAward\x12\t\n\x01n\x18\x01 \x01(\t\x12\t\n\x01\x63\x18\x02 \x01(\x04\x12\x0c\n\x04skin\x18\x03 \x01(\t*]\n\x13\x41\x63tivityEventStatus\x12\x0f\n\x0b\x41\x45S_NotOpen\x10\x00\x12\x11\n\rAES_InHanding\x10\x01\x12\x10\n\x0c\x41\x45S_InReward\x10\x02\x12\x10\n\x0c\x41\x45S_Finished\x10\x03*e\n\x10\x41\x63tivityBuffType\x12\x13\n\x0f\x41\x42_KJPathReward\x10\x00\x12\x15\n\x11\x41\x42_KJSpinProgress\x10\x01\x12\x13\n\x0f\x41\x42_KJCoinReward\x10\x02\x12\x10\n\x0c\x41\x42_KJProtect\x10\x03*\xf2\x01\n\x0e\x45ventAwardType\x12\x1c\n\x18\x45ventAwardType_CoinValue\x10\x00\x12\x17\n\x13\x45ventAwardType_Item\x10\x01\x12\x1b\n\x17\x45ventAwardType_Currency\x10\x02\x12\x1c\n\x18\x45ventAwardType_BonusGame\x10\x03\x12\x1a\n\x16\x45ventAwardType_Booster\x10\x04\x12\x19\n\x15\x45ventAwardType_RanBox\x10\x05\x12\x1c\n\x18\x45ventAwardType_CardBonus\x10\x06\x12\x19\n\x15\x45ventAwardType_Conpon\x10\x07\x42\x06Z\x04.;pbb\x06proto3'
+  serialized_pb=b'\n\x13\x61\x63tivityevent.proto\x12\x02pb\"w\n\rActivityEvent\x12\r\n\x05\x45ntry\x18\x01 \x01(\x05\x12\x10\n\x08progress\x18\x02 \x01(\x03\x12\x0e\n\x06target\x18\x03 \x01(\x03\x12\'\n\x06Status\x18\x04 \x01(\x0e\x32\x17.pb.ActivityEventStatus\x12\x0c\n\x04Type\x18\x05 \x01(\t\"W\n\x0c\x41\x63tivityBuff\x12\"\n\x04Type\x18\x01 \x01(\x0e\x32\x14.pb.ActivityBuffType\x12\r\n\x05Value\x18\x02 \x01(\x05\x12\x14\n\x0c\x45ndTimeStamp\x18\x03 \x01(\x03\"p\n\x0b\x45ventAwards\x12 \n\x04Type\x18\x01 \x01(\x0e\x32\x12.pb.EventAwardType\x12\"\n\nEventAward\x18\x02 \x03(\x0b\x32\x0e.pb.EventAward\x12\x0c\n\x04skin\x18\x06 \x01(\t\x12\r\n\x05value\x18\x07 \x01(\x01\"J\n\nEventAward\x12\t\n\x01n\x18\x01 \x01(\t\x12\t\n\x01\x63\x18\x02 \x01(\x04\x12\x0c\n\x04skin\x18\x03 \x01(\t\x12\x0b\n\x03min\x18\x04 \x01(\r\x12\x0b\n\x03max\x18\x05 \x01(\r*]\n\x13\x41\x63tivityEventStatus\x12\x0f\n\x0b\x41\x45S_NotOpen\x10\x00\x12\x11\n\rAES_InHanding\x10\x01\x12\x10\n\x0c\x41\x45S_InReward\x10\x02\x12\x10\n\x0c\x41\x45S_Finished\x10\x03*\xdd\x01\n\x10\x41\x63tivityBuffType\x12\x13\n\x0f\x41\x42_KJPathReward\x10\x00\x12\x15\n\x11\x41\x42_KJSpinProgress\x10\x01\x12\x13\n\x0f\x41\x42_KJCoinReward\x10\x02\x12\x10\n\x0c\x41\x42_KJProtect\x10\x03\x12\x12\n\x0e\x41\x42_CKLongBoard\x10\x14\x12\x12\n\x0e\x41\x42_CKHighBoard\x10\x15\x12\x13\n\x0f\x41\x42_CKDoubleCoin\x10\x16\x12\x15\n\x11\x41\x42_CMSpinProgress\x10\x19\x12\x13\n\x0f\x41\x42_CMCoinReward\x10\x1a\x12\r\n\tAB_CMPick\x10\x1b*\xf2\x01\n\x0e\x45ventAwardType\x12\x1c\n\x18\x45ventAwardType_CoinValue\x10\x00\x12\x17\n\x13\x45ventAwardType_Item\x10\x01\x12\x1b\n\x17\x45ventAwardType_Currency\x10\x02\x12\x1c\n\x18\x45ventAwardType_BonusGame\x10\x03\x12\x1a\n\x16\x45ventAwardType_Booster\x10\x04\x12\x19\n\x15\x45ventAwardType_RanBox\x10\x05\x12\x1c\n\x18\x45ventAwardType_CardBonus\x10\x06\x12\x19\n\x15\x45ventAwardType_Conpon\x10\x07\x42\x06Z\x04.;pbb\x06proto3'
 )
 
 _ACTIVITYEVENTSTATUS = _descriptor.EnumDescriptor(
@@ -53,8 +53,8 @@ _ACTIVITYEVENTSTATUS = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=401,
-  serialized_end=494,
+  serialized_start=427,
+  serialized_end=520,
 )
 _sym_db.RegisterEnumDescriptor(_ACTIVITYEVENTSTATUS)
 
@@ -86,11 +86,41 @@ _ACTIVITYBUFFTYPE = _descriptor.EnumDescriptor(
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='AB_CKLongBoard', index=4, number=20,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='AB_CKHighBoard', index=5, number=21,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='AB_CKDoubleCoin', index=6, number=22,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='AB_CMSpinProgress', index=7, number=25,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='AB_CMCoinReward', index=8, number=26,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='AB_CMPick', index=9, number=27,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=496,
-  serialized_end=597,
+  serialized_start=523,
+  serialized_end=744,
 )
 _sym_db.RegisterEnumDescriptor(_ACTIVITYBUFFTYPE)
 
@@ -145,8 +175,8 @@ _EVENTAWARDTYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=600,
-  serialized_end=842,
+  serialized_start=747,
+  serialized_end=989,
 )
 _sym_db.RegisterEnumDescriptor(_EVENTAWARDTYPE)
 
@@ -159,6 +189,12 @@ AB_KJPathReward = 0
 AB_KJSpinProgress = 1
 AB_KJCoinReward = 2
 AB_KJProtect = 3
+AB_CKLongBoard = 20
+AB_CKHighBoard = 21
+AB_CKDoubleCoin = 22
+AB_CMSpinProgress = 25
+AB_CMCoinReward = 26
+AB_CMPick = 27
 EventAwardType_CoinValue = 0
 EventAwardType_Item = 1
 EventAwardType_Currency = 2
@@ -358,6 +394,20 @@ _EVENTAWARD = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='min', full_name='pb.EventAward.min', index=3,
+      number=4, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='max', full_name='pb.EventAward.max', index=4,
+      number=5, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -371,7 +421,7 @@ _EVENTAWARD = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=351,
-  serialized_end=399,
+  serialized_end=425,
 )
 
 _ACTIVITYEVENT.fields_by_name['Status'].enum_type = _ACTIVITYEVENTSTATUS

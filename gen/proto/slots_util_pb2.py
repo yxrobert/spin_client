@@ -22,11 +22,41 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'Z\004.;pb',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x10slots_util.proto\x12\x02pb\x1a\x16slots_coordinate.proto\x1a\x18slots_feature_game.proto\x1a\x11slots_stage.proto\"%\n\x04\x44\x61ta\x12\x0c\n\x04Type\x18\x01 \x01(\t\x12\x0f\n\x07\x43ontent\x18\x02 \x01(\x0c\"G\n\x06\x43olumn\x12\x1b\n\x07Symbols\x18\x01 \x03(\x0b\x32\n.pb.Symbol\x12\x10\n\x08ReelStop\x18\x02 \x01(\x05\x12\x0e\n\x06ReelId\x18\x03 \x01(\x05\"a\n\x06Symbol\x12\x0e\n\x06Symbol\x18\x01 \x01(\x05\x12\x11\n\tWatermark\x18\x02 \x01(\x05\x12\x16\n\x0eTransformation\x18\x03 \x01(\x05\x12\r\n\x05Prize\x18\x04 \x01(\t\x12\r\n\x05Value\x18\x05 \x01(\x04\"\x94\x01\n\tSymbolWin\x12\x0e\n\x06Symbol\x18\x01 \x01(\x05\x12\r\n\x05Prize\x18\x02 \x01(\x04\x12\r\n\x05Times\x18\x03 \x01(\x05\x12\x12\n\nLineNumber\x18\x04 \x01(\x05\x12\x0e\n\x06Length\x18\x0b \x01(\x05\x12\x10\n\x08WithWild\x18\x0c \x01(\x08\x12#\n\x0b\x43oordinates\x18\x1f \x03(\x0b\x32\x0e.pb.Coordinate\"T\n\x0bLineWinInfo\x12\x1b\n\x04Line\x18\x01 \x01(\x0b\x32\x0b.pb.LineWinH\x00\x12!\n\x07Scatter\x18\x02 \x01(\x0b\x32\x0e.pb.ScatterWinH\x00\x42\x05\n\x03One\"W\n\x0cMultiWayInfo\x12\x1d\n\x05Multi\x18\x01 \x01(\x0b\x32\x0c.pb.MultiWayH\x00\x12!\n\x07Scatter\x18\x02 \x01(\x0b\x32\x0e.pb.ScatterWinH\x00\x42\x05\n\x03One\"P\n\nScatterWin\x12\x0e\n\x06Symbol\x18\x01 \x01(\x05\x12#\n\x0b\x43oordinates\x18\x02 \x03(\x0b\x32\x0e.pb.Coordinate\x12\r\n\x05Prize\x18\x03 \x01(\x04\"m\n\x08MultiWay\x12\x0e\n\x06Symbol\x18\x01 \x01(\x05\x12#\n\x0b\x43oordinates\x18\x02 \x03(\x0b\x32\x0e.pb.Coordinate\x12\r\n\x05Prize\x18\x03 \x01(\x04\x12\x0e\n\x06Length\x18\x04 \x01(\x05\x12\r\n\x05Times\x18\x05 \x01(\x05\"f\n\x07LineWin\x12\x11\n\tWinLineID\x18\x01 \x01(\x05\x12\x11\n\tWinSymbol\x18\x02 \x01(\x05\x12\x11\n\tWinLength\x18\x03 \x01(\x05\x12\r\n\x05Prize\x18\x04 \x01(\x04\x12\x13\n\x0bHitWithWild\x18\x05 \x01(\x08\"\xde\x02\n\x0cPickerStatus\x12\x18\n\x10NeedToBeSelected\x18\x01 \x01(\r\x12\"\n\x0e\x43urrentOptions\x18\x02 \x03(\x0b\x32\n.pb.Option\x12!\n\rChosenOptions\x18\x03 \x03(\x0b\x32\n.pb.Option\x12\"\n\x16\x46utureOrderedOptionIDS\x18\x04 \x03(\rB\x02\x10\x01\x12\x0f\n\x07Waiting\x18\x05 \x01(\x08\x12\x1c\n\x14\x41\x63tivelyChooseReward\x18\x06 \x01(\x08\x12\x1f\n\x06Reward\x18\x07 \x01(\x0b\x32\x0f.pb.BonusReward\x12\x17\n\x0fTriggerTotalBet\x18\x08 \x01(\x04\x12&\n\x12TriggerSymbolLists\x18\t \x03(\x0b\x32\n.pb.Column\x12$\n\x0cTriggerStage\x18\n \x01(\x0e\x32\x0e.pb.Slot.Stage\x12\x12\n\nTriggerWin\x18\x0b \x01(\x04\"\x94\x01\n\nGameStatus\x12\x0f\n\x07Playing\x18\x01 \x01(\x08\x12 \n\x07Rewards\x18\x02 \x01(\x0b\x32\x0f.pb.BonusReward\x12\x0c\n\x04Wins\x18\x03 \x01(\x04\x12\x10\n\x08TotalBet\x18\x04 \x01(\x04\x12\'\n\x0b\x66ortuneGame\x18\xe8\x07 \x01(\x0b\x32\x0f.pb.FortuneGameH\x00\x42\n\n\x08GameData\"F\n\x0b\x46ortuneGame\x12\x14\n\x0cJackpotArray\x18\x01 \x03(\x05\x12!\n\x08PickList\x18\x02 \x03(\x0b\x32\x0f.pb.CoordinateX\"F\n\x0bGorillaGame\x12\x14\n\x0cJackpotArray\x18\x01 \x03(\x05\x12!\n\x08PickList\x18\x02 \x03(\x0b\x32\x0f.pb.CoordinateX\"P\n\x06Option\x12\n\n\x02ID\x18\x01 \x01(\r\x12\x0b\n\x03Pos\x18\x02 \x01(\r\x12\x1f\n\x06Reward\x18\x03 \x01(\x0b\x32\x0f.pb.BonusReward\x12\x0c\n\x04Info\x18\x04 \x01(\t\"P\n\rJackpotSymbol\x12\r\n\x05Level\x18\x01 \x01(\x05\x12\x0b\n\x03Pos\x18\x02 \x01(\x05\x12\t\n\x01X\x18\x03 \x01(\x05\x12\t\n\x01Y\x18\x04 \x01(\x05\x12\r\n\x05Value\x18\x05 \x01(\x04\"\xbc\x02\n\x06Reward\x12\x1f\n\x06Reward\x18\x01 \x01(\x0b\x32\x0f.pb.BonusReward\x12+\n\x0b\x43oordinates\x18\xe9\x07 \x01(\x0b\x32\x13.pb.CoordinateArrayH\x00\x12\x1c\n\x04Line\x18\xea\x07 \x01(\x0b\x32\x0b.pb.LineWinH\x00\x12#\n\x07\x46\x65\x61ture\x18\xeb\x07 \x01(\x0e\x32\x0f.pb.FeatureGameH\x00\x12\x12\n\x07Jackpot\x18\xec\x07 \x01(\x05H\x00\x12.\n\x0cJackpotWheel\x18\xed\x07 \x01(\x0b\x32\x15.pb.Reward.HitJackpotH\x00\x12+\n\rJackpotSymbol\x18\xee\x07 \x01(\x0b\x32\x11.pb.JackpotSymbolH\x00\x1a(\n\nHitJackpot\x12\r\n\x05Level\x18\x01 \x01(\x05\x12\x0b\n\x03Pos\x18\x02 \x01(\x05\x42\x06\n\x04\x46rom\"\xdc\x01\n\x0b\x42onusReward\x12\x0c\n\x04Wins\x18\x01 \x01(\x04\x12\x10\n\x08\x46reeSpin\x18\x02 \x01(\r\x12\x16\n\x0e\x43ollectionSpin\x18\x03 \x01(\r\x12\x0e\n\x06Respin\x18\x04 \x01(\r\x12\x12\n\nMultiplier\x18\x05 \x01(\x04\x12$\n\x0b\x46\x65\x61tureGame\x18\x06 \x01(\x0e\x32\x0f.pb.FeatureGame\x12\x0f\n\x07HitWild\x18\x07 \x01(\x08\x12\x11\n\tReTrigger\x18\x08 \x01(\x08\x12\x0e\n\x06IsShow\x18\t \x01(\x08\x12\x17\n\x0fHitJackpotLevel\x18\n \x01(\x05\"A\n\rSectionReward\x12\x0f\n\x07Section\x18\x01 \x01(\x05\x12\x1f\n\x06Reward\x18\x02 \x01(\x0b\x32\x0f.pb.BonusReward\"0\n\rUserInjection\x12\x1f\n\x04\x64\x61ta\x18\x01 \x03(\x0b\x32\x11.pb.InjectionData\"\x1f\n\rInjectionData\x12\x0e\n\x06values\x18\x01 \x03(\x05\"=\n\x0e\x42ingoPanelWrap\x12\x0b\n\x03\x42\x65t\x18\x01 \x01(\x04\x12\x1e\n\nBingoPanel\x18\x02 \x03(\x0b\x32\n.pb.Column\")\n\nRewardWrap\x12\x1b\n\x07Rewards\x18\x01 \x03(\x0b\x32\n.pb.Reward\"\\\n\x0bIncResource\x12\x15\n\rInitTimeStamp\x18\x01 \x01(\x03\x12\x13\n\x0bIncInterval\x18\x02 \x01(\x03\x12\x0f\n\x07IncRate\x18\x03 \x01(\x03\x12\x10\n\x08MaxLoops\x18\x04 \x01(\x03\"&\n\x06\x44\x42\x42son\x12\x0e\n\x06\x46ilter\x18\x01 \x01(\x0c\x12\x0c\n\x04\x44\x61ta\x18\x02 \x01(\x0c\x42\x06Z\x04.;pbb\x06proto3'
+  serialized_pb=b'\n\x10slots_util.proto\x12\x02pb\x1a\x16slots_coordinate.proto\x1a\x18slots_feature_game.proto\x1a\x11slots_stage.proto\"%\n\x04\x44\x61ta\x12\x0c\n\x04Type\x18\x01 \x01(\t\x12\x0f\n\x07\x43ontent\x18\x02 \x01(\x0c\"\xbd\x01\n\x06\x43olumn\x12\x1b\n\x07Symbols\x18\x01 \x03(\x0b\x32\n.pb.Symbol\x12\x10\n\x08ReelStop\x18\x02 \x01(\x05\x12\x0e\n\x06ReelId\x18\x03 \x01(\x05\x12-\n\nManipulate\x18\x04 \x01(\x0e\x32\x19.pb.Column.ManipulateFlag\"E\n\x0eManipulateFlag\x12\x12\n\x0e\x42Y_UNSPECIFIED\x10\x00\x12\x11\n\rBY_WILD_REELS\x10\x01\x12\x0c\n\x08\x42Y_NUDGE\x10\x02\"a\n\x06Symbol\x12\x0e\n\x06Symbol\x18\x01 \x01(\x05\x12\x11\n\tWatermark\x18\x02 \x01(\x05\x12\x16\n\x0eTransformation\x18\x03 \x01(\x05\x12\r\n\x05Prize\x18\x04 \x01(\t\x12\r\n\x05Value\x18\x05 \x01(\x04\"\x94\x01\n\tSymbolWin\x12\x0e\n\x06Symbol\x18\x01 \x01(\x05\x12\r\n\x05Prize\x18\x02 \x01(\x04\x12\r\n\x05Times\x18\x03 \x01(\x05\x12\x12\n\nLineNumber\x18\x04 \x01(\x05\x12\x0e\n\x06Length\x18\x0b \x01(\x05\x12\x10\n\x08WithWild\x18\x0c \x01(\x08\x12#\n\x0b\x43oordinates\x18\x1f \x03(\x0b\x32\x0e.pb.Coordinate\"T\n\x0bLineWinInfo\x12\x1b\n\x04Line\x18\x01 \x01(\x0b\x32\x0b.pb.LineWinH\x00\x12!\n\x07Scatter\x18\x02 \x01(\x0b\x32\x0e.pb.ScatterWinH\x00\x42\x05\n\x03One\"W\n\x0cMultiWayInfo\x12\x1d\n\x05Multi\x18\x01 \x01(\x0b\x32\x0c.pb.MultiWayH\x00\x12!\n\x07Scatter\x18\x02 \x01(\x0b\x32\x0e.pb.ScatterWinH\x00\x42\x05\n\x03One\"P\n\nScatterWin\x12\x0e\n\x06Symbol\x18\x01 \x01(\x05\x12#\n\x0b\x43oordinates\x18\x02 \x03(\x0b\x32\x0e.pb.Coordinate\x12\r\n\x05Prize\x18\x03 \x01(\x04\"m\n\x08MultiWay\x12\x0e\n\x06Symbol\x18\x01 \x01(\x05\x12#\n\x0b\x43oordinates\x18\x02 \x03(\x0b\x32\x0e.pb.Coordinate\x12\r\n\x05Prize\x18\x03 \x01(\x04\x12\x0e\n\x06Length\x18\x04 \x01(\x05\x12\r\n\x05Times\x18\x05 \x01(\x05\"f\n\x07LineWin\x12\x11\n\tWinLineID\x18\x01 \x01(\x05\x12\x11\n\tWinSymbol\x18\x02 \x01(\x05\x12\x11\n\tWinLength\x18\x03 \x01(\x05\x12\r\n\x05Prize\x18\x04 \x01(\x04\x12\x13\n\x0bHitWithWild\x18\x05 \x01(\x08\"\xde\x02\n\x0cPickerStatus\x12\x18\n\x10NeedToBeSelected\x18\x01 \x01(\r\x12\"\n\x0e\x43urrentOptions\x18\x02 \x03(\x0b\x32\n.pb.Option\x12!\n\rChosenOptions\x18\x03 \x03(\x0b\x32\n.pb.Option\x12\"\n\x16\x46utureOrderedOptionIDS\x18\x04 \x03(\rB\x02\x10\x01\x12\x0f\n\x07Waiting\x18\x05 \x01(\x08\x12\x1c\n\x14\x41\x63tivelyChooseReward\x18\x06 \x01(\x08\x12\x1f\n\x06Reward\x18\x07 \x01(\x0b\x32\x0f.pb.BonusReward\x12\x17\n\x0fTriggerTotalBet\x18\x08 \x01(\x04\x12&\n\x12TriggerSymbolLists\x18\t \x03(\x0b\x32\n.pb.Column\x12$\n\x0cTriggerStage\x18\n \x01(\x0e\x32\x0e.pb.Slot.Stage\x12\x12\n\nTriggerWin\x18\x0b \x01(\x04\"\x94\x01\n\nGameStatus\x12\x0f\n\x07Playing\x18\x01 \x01(\x08\x12 \n\x07Rewards\x18\x02 \x01(\x0b\x32\x0f.pb.BonusReward\x12\x0c\n\x04Wins\x18\x03 \x01(\x04\x12\x10\n\x08TotalBet\x18\x04 \x01(\x04\x12\'\n\x0b\x66ortuneGame\x18\xe8\x07 \x01(\x0b\x32\x0f.pb.FortuneGameH\x00\x42\n\n\x08GameData\"F\n\x0b\x46ortuneGame\x12\x14\n\x0cJackpotArray\x18\x01 \x03(\x05\x12!\n\x08PickList\x18\x02 \x03(\x0b\x32\x0f.pb.CoordinateX\"F\n\x0bGorillaGame\x12\x14\n\x0cJackpotArray\x18\x01 \x03(\x05\x12!\n\x08PickList\x18\x02 \x03(\x0b\x32\x0f.pb.CoordinateX\"P\n\x06Option\x12\n\n\x02ID\x18\x01 \x01(\r\x12\x0b\n\x03Pos\x18\x02 \x01(\r\x12\x1f\n\x06Reward\x18\x03 \x01(\x0b\x32\x0f.pb.BonusReward\x12\x0c\n\x04Info\x18\x04 \x01(\t\"P\n\rJackpotSymbol\x12\r\n\x05Level\x18\x01 \x01(\x05\x12\x0b\n\x03Pos\x18\x02 \x01(\x05\x12\t\n\x01X\x18\x03 \x01(\x05\x12\t\n\x01Y\x18\x04 \x01(\x05\x12\r\n\x05Value\x18\x05 \x01(\x04\"\xbc\x02\n\x06Reward\x12\x1f\n\x06Reward\x18\x01 \x01(\x0b\x32\x0f.pb.BonusReward\x12+\n\x0b\x43oordinates\x18\xe9\x07 \x01(\x0b\x32\x13.pb.CoordinateArrayH\x00\x12\x1c\n\x04Line\x18\xea\x07 \x01(\x0b\x32\x0b.pb.LineWinH\x00\x12#\n\x07\x46\x65\x61ture\x18\xeb\x07 \x01(\x0e\x32\x0f.pb.FeatureGameH\x00\x12\x12\n\x07Jackpot\x18\xec\x07 \x01(\x05H\x00\x12.\n\x0cJackpotWheel\x18\xed\x07 \x01(\x0b\x32\x15.pb.Reward.HitJackpotH\x00\x12+\n\rJackpotSymbol\x18\xee\x07 \x01(\x0b\x32\x11.pb.JackpotSymbolH\x00\x1a(\n\nHitJackpot\x12\r\n\x05Level\x18\x01 \x01(\x05\x12\x0b\n\x03Pos\x18\x02 \x01(\x05\x42\x06\n\x04\x46rom\"\xdc\x01\n\x0b\x42onusReward\x12\x0c\n\x04Wins\x18\x01 \x01(\x04\x12\x10\n\x08\x46reeSpin\x18\x02 \x01(\r\x12\x16\n\x0e\x43ollectionSpin\x18\x03 \x01(\r\x12\x0e\n\x06Respin\x18\x04 \x01(\r\x12\x12\n\nMultiplier\x18\x05 \x01(\x04\x12$\n\x0b\x46\x65\x61tureGame\x18\x06 \x01(\x0e\x32\x0f.pb.FeatureGame\x12\x0f\n\x07HitWild\x18\x07 \x01(\x08\x12\x11\n\tReTrigger\x18\x08 \x01(\x08\x12\x0e\n\x06IsShow\x18\t \x01(\x08\x12\x17\n\x0fHitJackpotLevel\x18\n \x01(\x05\"A\n\rSectionReward\x12\x0f\n\x07Section\x18\x01 \x01(\x05\x12\x1f\n\x06Reward\x18\x02 \x01(\x0b\x32\x0f.pb.BonusReward\"0\n\rUserInjection\x12\x1f\n\x04\x64\x61ta\x18\x01 \x03(\x0b\x32\x11.pb.InjectionData\"\x1f\n\rInjectionData\x12\x0e\n\x06values\x18\x01 \x03(\x05\"=\n\x0e\x42ingoPanelWrap\x12\x0b\n\x03\x42\x65t\x18\x01 \x01(\x04\x12\x1e\n\nBingoPanel\x18\x02 \x03(\x0b\x32\n.pb.Column\")\n\nRewardWrap\x12\x1b\n\x07Rewards\x18\x01 \x03(\x0b\x32\n.pb.Reward\"\\\n\x0bIncResource\x12\x15\n\rInitTimeStamp\x18\x01 \x01(\x03\x12\x13\n\x0bIncInterval\x18\x02 \x01(\x03\x12\x0f\n\x07IncRate\x18\x03 \x01(\x03\x12\x10\n\x08MaxLoops\x18\x04 \x01(\x03\"&\n\x06\x44\x42\x42son\x12\x0e\n\x06\x46ilter\x18\x01 \x01(\x0c\x12\x0c\n\x04\x44\x61ta\x18\x02 \x01(\x0c\x42\x06Z\x04.;pbb\x06proto3'
   ,
   dependencies=[slots__coordinate__pb2.DESCRIPTOR,slots__feature__game__pb2.DESCRIPTOR,slots__stage__pb2.DESCRIPTOR,])
 
 
+
+_COLUMN_MANIPULATEFLAG = _descriptor.EnumDescriptor(
+  name='ManipulateFlag',
+  full_name='pb.Column.ManipulateFlag',
+  filename=None,
+  file=DESCRIPTOR,
+  create_key=_descriptor._internal_create_key,
+  values=[
+    _descriptor.EnumValueDescriptor(
+      name='BY_UNSPECIFIED', index=0, number=0,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='BY_WILD_REELS', index=1, number=1,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='BY_NUDGE', index=2, number=2,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+  ],
+  containing_type=None,
+  serialized_options=None,
+  serialized_start=253,
+  serialized_end=322,
+)
+_sym_db.RegisterEnumDescriptor(_COLUMN_MANIPULATEFLAG)
 
 
 _DATA = _descriptor.Descriptor(
@@ -97,11 +127,19 @@ _COLUMN = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='Manipulate', full_name='pb.Column.Manipulate', index=3,
+      number=4, type=14, cpp_type=8, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
   nested_types=[],
   enum_types=[
+    _COLUMN_MANIPULATEFLAG,
   ],
   serialized_options=None,
   is_extendable=False,
@@ -109,8 +147,8 @@ _COLUMN = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=132,
-  serialized_end=203,
+  serialized_start=133,
+  serialized_end=322,
 )
 
 
@@ -169,8 +207,8 @@ _SYMBOL = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=205,
-  serialized_end=302,
+  serialized_start=324,
+  serialized_end=421,
 )
 
 
@@ -243,8 +281,8 @@ _SYMBOLWIN = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=305,
-  serialized_end=453,
+  serialized_start=424,
+  serialized_end=572,
 )
 
 
@@ -287,8 +325,8 @@ _LINEWININFO = _descriptor.Descriptor(
       create_key=_descriptor._internal_create_key,
     fields=[]),
   ],
-  serialized_start=455,
-  serialized_end=539,
+  serialized_start=574,
+  serialized_end=658,
 )
 
 
@@ -331,8 +369,8 @@ _MULTIWAYINFO = _descriptor.Descriptor(
       create_key=_descriptor._internal_create_key,
     fields=[]),
   ],
-  serialized_start=541,
-  serialized_end=628,
+  serialized_start=660,
+  serialized_end=747,
 )
 
 
@@ -377,8 +415,8 @@ _SCATTERWIN = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=630,
-  serialized_end=710,
+  serialized_start=749,
+  serialized_end=829,
 )
 
 
@@ -437,8 +475,8 @@ _MULTIWAY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=712,
-  serialized_end=821,
+  serialized_start=831,
+  serialized_end=940,
 )
 
 
@@ -497,8 +535,8 @@ _LINEWIN = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=823,
-  serialized_end=925,
+  serialized_start=942,
+  serialized_end=1044,
 )
 
 
@@ -599,8 +637,8 @@ _PICKERSTATUS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=928,
-  serialized_end=1278,
+  serialized_start=1047,
+  serialized_end=1397,
 )
 
 
@@ -664,8 +702,8 @@ _GAMESTATUS = _descriptor.Descriptor(
       create_key=_descriptor._internal_create_key,
     fields=[]),
   ],
-  serialized_start=1281,
-  serialized_end=1429,
+  serialized_start=1400,
+  serialized_end=1548,
 )
 
 
@@ -703,8 +741,8 @@ _FORTUNEGAME = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1431,
-  serialized_end=1501,
+  serialized_start=1550,
+  serialized_end=1620,
 )
 
 
@@ -742,8 +780,8 @@ _GORILLAGAME = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1503,
-  serialized_end=1573,
+  serialized_start=1622,
+  serialized_end=1692,
 )
 
 
@@ -795,8 +833,8 @@ _OPTION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1575,
-  serialized_end=1655,
+  serialized_start=1694,
+  serialized_end=1774,
 )
 
 
@@ -855,8 +893,8 @@ _JACKPOTSYMBOL = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1657,
-  serialized_end=1737,
+  serialized_start=1776,
+  serialized_end=1856,
 )
 
 
@@ -894,8 +932,8 @@ _REWARD_HITJACKPOT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2008,
-  serialized_end=2048,
+  serialized_start=2127,
+  serialized_end=2167,
 )
 
 _REWARD = _descriptor.Descriptor(
@@ -972,8 +1010,8 @@ _REWARD = _descriptor.Descriptor(
       create_key=_descriptor._internal_create_key,
     fields=[]),
   ],
-  serialized_start=1740,
-  serialized_end=2056,
+  serialized_start=1859,
+  serialized_end=2175,
 )
 
 
@@ -1067,8 +1105,8 @@ _BONUSREWARD = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2059,
-  serialized_end=2279,
+  serialized_start=2178,
+  serialized_end=2398,
 )
 
 
@@ -1106,8 +1144,8 @@ _SECTIONREWARD = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2281,
-  serialized_end=2346,
+  serialized_start=2400,
+  serialized_end=2465,
 )
 
 
@@ -1138,8 +1176,8 @@ _USERINJECTION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2348,
-  serialized_end=2396,
+  serialized_start=2467,
+  serialized_end=2515,
 )
 
 
@@ -1170,8 +1208,8 @@ _INJECTIONDATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2398,
-  serialized_end=2429,
+  serialized_start=2517,
+  serialized_end=2548,
 )
 
 
@@ -1209,8 +1247,8 @@ _BINGOPANELWRAP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2431,
-  serialized_end=2492,
+  serialized_start=2550,
+  serialized_end=2611,
 )
 
 
@@ -1241,8 +1279,8 @@ _REWARDWRAP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2494,
-  serialized_end=2535,
+  serialized_start=2613,
+  serialized_end=2654,
 )
 
 
@@ -1294,8 +1332,8 @@ _INCRESOURCE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2537,
-  serialized_end=2629,
+  serialized_start=2656,
+  serialized_end=2748,
 )
 
 
@@ -1333,11 +1371,13 @@ _DBBSON = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2631,
-  serialized_end=2669,
+  serialized_start=2750,
+  serialized_end=2788,
 )
 
 _COLUMN.fields_by_name['Symbols'].message_type = _SYMBOL
+_COLUMN.fields_by_name['Manipulate'].enum_type = _COLUMN_MANIPULATEFLAG
+_COLUMN_MANIPULATEFLAG.containing_type = _COLUMN
 _SYMBOLWIN.fields_by_name['Coordinates'].message_type = slots__coordinate__pb2._COORDINATE
 _LINEWININFO.fields_by_name['Line'].message_type = _LINEWIN
 _LINEWININFO.fields_by_name['Scatter'].message_type = _SCATTERWIN

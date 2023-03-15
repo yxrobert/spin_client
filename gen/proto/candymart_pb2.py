@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'Z\004.;pb',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x0f\x63\x61ndymart.proto\x12\x02pb\x1a\x0b\x61ward.proto\"\x8b\t\n\tCandyMart\x12!\n\x05\x43\x61ndy\x18\x01 \x01(\x0b\x32\x12.pb.CandyMart.Data\x1a\x99\x03\n\x04\x44\x61ta\x12\r\n\x05\x43\x61ndy\x18\x01 \x01(\x05\x12\x10\n\x08StageIdx\x18\x02 \x01(\x05\x12\x17\n\x0fMissionProgress\x18\x03 \x01(\x05\x12\x14\n\x0c\x44ropProgress\x18\x04 \x01(\x05\x12\x12\n\nJPProgress\x18\x05 \x03(\x05\x12%\n\x08\x43urStage\x18\x06 \x01(\x0b\x32\x13.pb.CandyMart.Stage\x12)\n\tLastCandy\x18\x07 \x01(\x0b\x32\x16.pb.CandyMart.PopCandy\x12.\n\x0eProgressReward\x18\x08 \x03(\x0b\x32\x16.pb.CandyMart.Progress\x12-\n\x0bStageReward\x18\t \x03(\x0b\x32\x18.pb.CandyMart.StageAward\x12\'\n\x08JPAwards\x18\n \x03(\x0b\x32\x15.pb.CandyMart.JPAward\x12\x0f\n\x07HasDrop\x18\x0b \x01(\x08\x12\x10\n\x08\x42\x65Guided\x18\x0c \x01(\x08\x12\x30\n\x0e\x43urStageReward\x18\r \x01(\x0b\x32\x18.pb.CandyMart.StageAward\x1a;\n\x04\x42uff\x12$\n\x04Type\x18\x01 \x01(\x0e\x32\x16.pb.CandyMart.BuffType\x12\r\n\x05Value\x18\x02 \x01(\x05\x1a\x80\x01\n\x05Stage\x12+\n\x0bGroundCandy\x18\x01 \x03(\x0b\x32\x16.pb.CandyMart.PopCandy\x12(\n\x08\x42oxCandy\x18\x02 \x03(\x0b\x32\x16.pb.CandyMart.PopCandy\x12 \n\x04\x42uff\x18\x03 \x03(\x0b\x32\x12.pb.CandyMart.Buff\x1a\xd8\x01\n\x08PopCandy\x12%\n\x04Type\x18\x01 \x01(\x0e\x32\x17.pb.CandyMart.CandyType\x12\x13\n\x0b\x41\x64\x64Progress\x18\x02 \x01(\x05\x12\x15\n\rAfterProgress\x18\x03 \x01(\x05\x12.\n\x0bJPPointType\x18\x04 \x01(\x0e\x32\x19.pb.CandyMart.JPPointType\x12\x12\n\nAddJPPoint\x18\x05 \x01(\x05\x12\x14\n\x0c\x41\x66terJPPoint\x18\x06 \x01(\x05\x12\r\n\x05HitJP\x18\x07 \x01(\x08\x12\x10\n\x08Position\x18\x08 \x01(\x05\x1a(\n\x07JPAward\x12\x1d\n\x06\x41wards\x18\x01 \x03(\x0b\x32\r.pb.AwardInfo\x1a+\n\nStageAward\x12\x1d\n\x06\x41wards\x18\x01 \x03(\x0b\x32\r.pb.AwardInfo\x1a\x38\n\x08Progress\x12\r\n\x05Value\x18\x01 \x01(\x05\x12\x1d\n\x06\x41wards\x18\x02 \x03(\x0b\x32\r.pb.AwardInfo\":\n\tCandyType\x12\t\n\x05\x45mpty\x10\x00\x12\x0b\n\x07Present\x10\x01\x12\x0b\n\x07JPPoint\x10\x02\x12\x08\n\x04Pass\x10\x03\"A\n\x0bJPPointType\x12\x07\n\x03One\x10\x00\x12\x07\n\x03Two\x10\x01\x12\t\n\x05Three\x10\x02\x12\x08\n\x04\x46our\x10\x03\x12\x0b\n\x07\x42oarder\x10\x04\"\x14\n\x08\x42uffType\x12\x08\n\x04\x43oin\x10\x00\x42\x06Z\x04.;pbb\x06proto3'
+  serialized_pb=b'\n\x0f\x63\x61ndymart.proto\x12\x02pb\x1a\x0b\x61ward.proto\"\xec\n\n\tCandyMart\x12!\n\x05\x43\x61ndy\x18\x01 \x01(\x0b\x32\x12.pb.CandyMart.Data\x1a\xc4\x04\n\x04\x44\x61ta\x12\r\n\x05\x43\x61ndy\x18\x01 \x01(\x05\x12\x10\n\x08StageIdx\x18\x02 \x01(\x05\x12\x17\n\x0fMissionProgress\x18\x03 \x01(\x05\x12\x14\n\x0c\x44ropProgress\x18\x04 \x01(\x05\x12\x12\n\nJPProgress\x18\x05 \x03(\x05\x12%\n\x08\x43urStage\x18\x06 \x01(\x0b\x32\x13.pb.CandyMart.Stage\x12)\n\tLastCandy\x18\x07 \x01(\x0b\x32\x16.pb.CandyMart.PopCandy\x12.\n\x0eProgressReward\x18\x08 \x03(\x0b\x32\x16.pb.CandyMart.Progress\x12-\n\x0bStageReward\x18\t \x03(\x0b\x32\x18.pb.CandyMart.StageAward\x12\'\n\x08JPAwards\x18\n \x03(\x0b\x32\x15.pb.CandyMart.JPAward\x12\x0f\n\x07HasDrop\x18\x0b \x01(\x08\x12\x10\n\x08\x42\x65Guided\x18\x0c \x01(\x08\x12\x30\n\x0e\x43urStageReward\x18\r \x01(\x0b\x32\x18.pb.CandyMart.StageAward\x12-\n\rMorePickCandy\x18\x0e \x01(\x0b\x32\x16.pb.CandyMart.PopCandy\x12#\n\x07\x42ooster\x18\x0f \x03(\x0b\x32\x12.pb.CandyMart.Buff\x12\x12\n\nCandyLimit\x18\x10 \x01(\x05\x12\r\n\x05Loops\x18\x11 \x01(\x05\x12\x0f\n\x07\x42\x65\x45nter\x18\x12 \x01(\x08\x12!\n\nFinalAward\x18\x13 \x01(\x0b\x32\r.pb.AwardList\x1aL\n\x04\x42uff\x12$\n\x04Type\x18\x01 \x01(\x0e\x32\x16.pb.CandyMart.BuffType\x12\r\n\x05Value\x18\x02 \x01(\x05\x12\x0f\n\x07\x45ndTime\x18\x03 \x01(\x03\x1a\x80\x01\n\x05Stage\x12+\n\x0bGroundCandy\x18\x01 \x03(\x0b\x32\x16.pb.CandyMart.PopCandy\x12(\n\x08\x42oxCandy\x18\x02 \x03(\x0b\x32\x16.pb.CandyMart.PopCandy\x12 \n\x04\x42uff\x18\x03 \x03(\x0b\x32\x12.pb.CandyMart.Buff\x1a\xd8\x01\n\x08PopCandy\x12%\n\x04Type\x18\x01 \x01(\x0e\x32\x17.pb.CandyMart.CandyType\x12\x13\n\x0b\x41\x64\x64Progress\x18\x02 \x01(\x05\x12\x15\n\rAfterProgress\x18\x03 \x01(\x05\x12.\n\x0bJPPointType\x18\x04 \x01(\x0e\x32\x19.pb.CandyMart.JPPointType\x12\x12\n\nAddJPPoint\x18\x05 \x01(\x05\x12\x14\n\x0c\x41\x66terJPPoint\x18\x06 \x01(\x05\x12\r\n\x05HitJP\x18\x07 \x01(\x08\x12\x10\n\x08Position\x18\x08 \x01(\x05\x1a(\n\x07JPAward\x12\x1d\n\x06\x41wards\x18\x01 \x03(\x0b\x32\r.pb.AwardInfo\x1a+\n\nStageAward\x12\x1d\n\x06\x41wards\x18\x01 \x03(\x0b\x32\r.pb.AwardInfo\x1a\x38\n\x08Progress\x12\r\n\x05Value\x18\x01 \x01(\x05\x12\x1d\n\x06\x41wards\x18\x02 \x03(\x0b\x32\r.pb.AwardInfo\":\n\tCandyType\x12\t\n\x05\x45mpty\x10\x00\x12\x0b\n\x07Present\x10\x01\x12\x0b\n\x07JPPoint\x10\x02\x12\x08\n\x04Pass\x10\x03\"A\n\x0bJPPointType\x12\x07\n\x03One\x10\x00\x12\x07\n\x03Two\x10\x01\x12\t\n\x05Three\x10\x02\x12\x08\n\x04\x46our\x10\x03\x12\x0b\n\x07\x42oarder\x10\x04\"9\n\x08\x42uffType\x12\x08\n\x04\x43oin\x10\x00\x12\x08\n\x04Spin\x10\x01\x12\x0f\n\x0b\x42oosterCoin\x10\x02\x12\x08\n\x04Pick\x10\x03\x42\x06Z\x04.;pbb\x06proto3'
   ,
   dependencies=[award__pb2.DESCRIPTOR,])
 
@@ -56,8 +56,8 @@ _CANDYMART_CANDYTYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=1053,
-  serialized_end=1111,
+  serialized_start=1241,
+  serialized_end=1299,
 )
 _sym_db.RegisterEnumDescriptor(_CANDYMART_CANDYTYPE)
 
@@ -96,8 +96,8 @@ _CANDYMART_JPPOINTTYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=1113,
-  serialized_end=1178,
+  serialized_start=1301,
+  serialized_end=1366,
 )
 _sym_db.RegisterEnumDescriptor(_CANDYMART_JPPOINTTYPE)
 
@@ -113,11 +113,26 @@ _CANDYMART_BUFFTYPE = _descriptor.EnumDescriptor(
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='Spin', index=1, number=1,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='BoosterCoin', index=2, number=2,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='Pick', index=3, number=3,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=1180,
-  serialized_end=1200,
+  serialized_start=1368,
+  serialized_end=1425,
 )
 _sym_db.RegisterEnumDescriptor(_CANDYMART_BUFFTYPE)
 
@@ -221,6 +236,48 @@ _CANDYMART_DATA = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='MorePickCandy', full_name='pb.CandyMart.Data.MorePickCandy', index=13,
+      number=14, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='Booster', full_name='pb.CandyMart.Data.Booster', index=14,
+      number=15, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='CandyLimit', full_name='pb.CandyMart.Data.CandyLimit', index=15,
+      number=16, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='Loops', full_name='pb.CandyMart.Data.Loops', index=16,
+      number=17, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='BeEnter', full_name='pb.CandyMart.Data.BeEnter', index=17,
+      number=18, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='FinalAward', full_name='pb.CandyMart.Data.FinalAward', index=18,
+      number=19, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -234,7 +291,7 @@ _CANDYMART_DATA = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=86,
-  serialized_end=495,
+  serialized_end=666,
 )
 
 _CANDYMART_BUFF = _descriptor.Descriptor(
@@ -259,6 +316,13 @@ _CANDYMART_BUFF = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='EndTime', full_name='pb.CandyMart.Buff.EndTime', index=2,
+      number=3, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -271,8 +335,8 @@ _CANDYMART_BUFF = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=497,
-  serialized_end=556,
+  serialized_start=668,
+  serialized_end=744,
 )
 
 _CANDYMART_STAGE = _descriptor.Descriptor(
@@ -316,8 +380,8 @@ _CANDYMART_STAGE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=559,
-  serialized_end=687,
+  serialized_start=747,
+  serialized_end=875,
 )
 
 _CANDYMART_POPCANDY = _descriptor.Descriptor(
@@ -396,8 +460,8 @@ _CANDYMART_POPCANDY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=690,
-  serialized_end=906,
+  serialized_start=878,
+  serialized_end=1094,
 )
 
 _CANDYMART_JPAWARD = _descriptor.Descriptor(
@@ -427,8 +491,8 @@ _CANDYMART_JPAWARD = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=908,
-  serialized_end=948,
+  serialized_start=1096,
+  serialized_end=1136,
 )
 
 _CANDYMART_STAGEAWARD = _descriptor.Descriptor(
@@ -458,8 +522,8 @@ _CANDYMART_STAGEAWARD = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=950,
-  serialized_end=993,
+  serialized_start=1138,
+  serialized_end=1181,
 )
 
 _CANDYMART_PROGRESS = _descriptor.Descriptor(
@@ -496,8 +560,8 @@ _CANDYMART_PROGRESS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=995,
-  serialized_end=1051,
+  serialized_start=1183,
+  serialized_end=1239,
 )
 
 _CANDYMART = _descriptor.Descriptor(
@@ -531,7 +595,7 @@ _CANDYMART = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=37,
-  serialized_end=1200,
+  serialized_end=1425,
 )
 
 _CANDYMART_DATA.fields_by_name['CurStage'].message_type = _CANDYMART_STAGE
@@ -540,6 +604,9 @@ _CANDYMART_DATA.fields_by_name['ProgressReward'].message_type = _CANDYMART_PROGR
 _CANDYMART_DATA.fields_by_name['StageReward'].message_type = _CANDYMART_STAGEAWARD
 _CANDYMART_DATA.fields_by_name['JPAwards'].message_type = _CANDYMART_JPAWARD
 _CANDYMART_DATA.fields_by_name['CurStageReward'].message_type = _CANDYMART_STAGEAWARD
+_CANDYMART_DATA.fields_by_name['MorePickCandy'].message_type = _CANDYMART_POPCANDY
+_CANDYMART_DATA.fields_by_name['Booster'].message_type = _CANDYMART_BUFF
+_CANDYMART_DATA.fields_by_name['FinalAward'].message_type = award__pb2._AWARDLIST
 _CANDYMART_DATA.containing_type = _CANDYMART
 _CANDYMART_BUFF.fields_by_name['Type'].enum_type = _CANDYMART_BUFFTYPE
 _CANDYMART_BUFF.containing_type = _CANDYMART

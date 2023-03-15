@@ -30,7 +30,10 @@ class SystemRobot(SpinRobot):
         pass
 
     def run(player):
-        player.req_bonus(2,2)
+        for i in range(0,7):
+            player.req_magic_play(0, i)
+        # print("req bonus")
+        # player.req_bonus(2,2)
         pass
 
 basebet_cmd="basebet"

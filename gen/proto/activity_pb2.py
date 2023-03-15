@@ -31,6 +31,15 @@ import onetwopromotion_pb2 as onetwopromotion__pb2
 import dailymissionchoose_pb2 as dailymissionchoose__pb2
 import tastybonus_pb2 as tastybonus__pb2
 import activity_tiny_pb2 as activity__tiny__pb2
+import starroad_pb2 as starroad__pb2
+import threechooseone_pb2 as threechooseone__pb2
+import threechooseonerepeat_pb2 as threechooseonerepeat__pb2
+import salebuffchoose_pb2 as salebuffchoose__pb2
+import coinkingdom_pb2 as coinkingdom__pb2
+import paygiftgroup_pb2 as paygiftgroup__pb2
+import salebuff_pb2 as salebuff__pb2
+import prizecatcher_pb2 as prizecatcher__pb2
+import luckycard_pb2 as luckycard__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
@@ -39,9 +48,9 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'Z\004.;pb',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x0e\x61\x63tivity.proto\x12\x02pb\x1a\rjourney.proto\x1a\x10multiverse.proto\x1a\x13\x65ndlessriches.proto\x1a\x0b\x63hase.proto\x1a\x0b\x62ingo.proto\x1a\x0f\x63hallenge.proto\x1a\x0f\x63\x61ndymart.proto\x1a\x12treasureroom.proto\x1a\x0bkitty.proto\x1a\x0copcode.proto\x1a\x0b\x61ward.proto\x1a\x13\x61\x63tivityevent.proto\x1a\x0c\x63onpon.proto\x1a\rspinmax.proto\x1a\rpaygift.proto\x1a\x15onetwopromotion.proto\x1a\x18\x64\x61ilymissionchoose.proto\x1a\x10tastybonus.proto\x1a\x13\x61\x63tivity_tiny.proto\"?\n\x10\x41\x63tivityOpResult\x12\x1a\n\x06OpCode\x18\x01 \x01(\x0e\x32\n.pb.OpCode\x12\x0f\n\x07\x43ontent\x18\x02 \x01(\t\"\xed\x02\n\x0e\x41\x63tivityHeader\x12\x0b\n\x03UID\x18\x01 \x01(\x04\x12\x0f\n\x07Version\x18\x02 \x01(\x05\x12\x1e\n\x04Type\x18\x03 \x01(\x0e\x32\x10.pb.ActivityType\x12\r\n\x05\x45ntry\x18\x04 \x01(\x05\x12\x11\n\tStartTime\x18\x05 \x01(\x03\x12\x0f\n\x07\x45ndTime\x18\x06 \x01(\x03\x12\x0e\n\x06IsOpen\x18\x07 \x01(\x05\x12\x12\n\nLimitLevel\x18\x08 \x03(\x05\x12\x10\n\x08LimitVip\x18\t \x03(\x05\x12\x30\n\nTimeLimits\x18\n \x03(\x0b\x32\x1c.pb.ActivityHeader.TimeLimit\x12\x0f\n\x07Payment\x18\x0b \x01(\x05\x12\r\n\x05ResID\x18\x32 \x01(\x05\x12\r\n\x05Index\x18\x33 \x01(\x05\x12\r\n\x05Group\x18\x34 \x01(\x05\x12(\n\tGroupType\x18\x35 \x01(\x0e\x32\x15.pb.ActivityGroupType\x1a\x1a\n\tTimeLimit\x12\r\n\x05Param\x18\x01 \x03(\x05\"\x86\x07\n\x0c\x41\x63tivityData\x12\"\n\x06Header\x18\x01 \x01(\x0b\x32\x12.pb.ActivityHeader\x12\'\n\x04User\x18\x02 \x01(\x0b\x32\x19.pb.ActivityData.UserData\x12\"\n\x07Journey\x18\x64 \x01(\x0b\x32\x0f.pb.JourneyDataH\x00\x12(\n\nMultiverse\x18\x65 \x01(\x0b\x32\x12.pb.MultiverseDataH\x00\x12/\n\rEndlessRiches\x18\x66 \x01(\x0b\x32\x16.pb.EndlessRiches.DataH\x00\x12\x1f\n\x05\x42ingo\x18g \x01(\x0b\x32\x0e.pb.Bingo.DataH\x00\x12\'\n\tChallenge\x18h \x01(\x0b\x32\x12.pb.Challenge.DataH\x00\x12\x1f\n\x05\x43hase\x18i \x01(\x0b\x32\x0e.pb.Chase.DataH\x00\x12!\n\x06\x43onpon\x18j \x01(\x0b\x32\x0f.pb.Conpon.DataH\x00\x12#\n\x07SpinMax\x18k \x01(\x0b\x32\x10.pb.SpinMax.DataH\x00\x12\x30\n\x0e\x44oubleWinAgain\x18p \x01(\x0b\x32\x16.pb.DoubleWinAgainDataH\x00\x12\x1e\n\x05\x43\x61ndy\x18q \x01(\x0b\x32\r.pb.CandyMartH\x00\x12\x1f\n\x05Kitty\x18r \x01(\x0b\x32\x0e.pb.Kitty.DataH\x00\x12\x33\n\x0c\x43onponChoose\x18x \x01(\x0b\x32\x1b.pb.Conpon.ConponChooseListH\x00\x12-\n\x0cTreasureRoom\x18{ \x01(\x0b\x32\x15.pb.TreasureRoom.DataH\x00\x12;\n\x15OneTwoPromotionAwards\x18y \x01(\x0b\x32\x1a.pb.OneTwoPromotion.AwardsH\x00\x12\x39\n\x12\x44\x61ilyMissionChoose\x18z \x01(\x0b\x32\x1b.pb.DailyMissionChoose.DataH\x00\x12#\n\x07PayGift\x18| \x01(\x0b\x32\x10.pb.PayGift.DataH\x00\x12)\n\nTastyBonus\x18} \x01(\x0b\x32\x13.pb.TastyBonus.DataH\x00\x1aQ\n\x08UserData\x12\x11\n\tStartTime\x18\x01 \x01(\x03\x12\x0f\n\x07\x45ndTime\x18\x02 \x01(\x03\x12!\n\x06Status\x18\x03 \x01(\x0e\x32\x11.pb.ActivityStatsB\x05\n\x03one\"\xa7\x02\n\x0c\x41\x63tivityDrop\x12#\n\x03SRC\x18\x01 \x01(\x0e\x32\x16.pb.AwardInfo.AwardSRC\x12)\n\x06SubSRC\x18\x02 \x01(\x0e\x32\x19.pb.AwardInfo.AwardSubSRC\x12\"\n\x04Type\x18\x03 \x01(\x0e\x32\x14.pb.ActivityDropType\x12\r\n\x05Value\x18\x04 \x01(\x03\x12\x10\n\x08\x41\x64\x64Value\x18\x05 \x01(\x03\x12\"\n\x05\x45vent\x18\x64 \x01(\x0b\x32\x11.pb.ActivityEventH\x00\x12,\n\nChangeList\x18\x65 \x01(\x0b\x32\x16.pb.ActivityChangeListH\x00\x12)\n\x06\x41wards\x18\x66 \x01(\x0b\x32\x17.pb.ActivityEventAwardsH\x00\x42\x05\n\x03one\"@\n\x12\x41\x63tivityChangeList\x12*\n\nChangeList\x18\x01 \x03(\x0b\x32\x16.pb.ActivityChangeData\"6\n\x13\x41\x63tivityEventAwards\x12\x1f\n\x06\x41wards\x18\x01 \x03(\x0b\x32\x0f.pb.EventAwards\"\xa1\x01\n\x12\x41\x63tivityChangeData\x12\x0b\n\x03UID\x18\x01 \x01(\x04\x12\x1e\n\x04Type\x18\x02 \x01(\x0e\x32\x10.pb.ActivityType\x12\x33\n\x0c\x43hangeStatus\x18\x03 \x01(\x0e\x32\x1d.pb.ActivityChangeData.Status\")\n\x06Status\x12\x07\n\x03New\x10\x00\x12\n\n\x06\x44\x65lete\x10\x01\x12\n\n\x06Update\x10\x02\"\xda\x08\n\x08\x41\x63tivity\x1a\xc6\x01\n\x07OpInput\x12)\n\x04Type\x18\x01 \x01(\x0e\x32\x1b.pb.Activity.OpInput.OpType\x12\x0e\n\x06InputX\x18\x02 \x01(\x05\x12\x0e\n\x06InputY\x18\x03 \x01(\x05\x12\x0e\n\x06params\x18\x04 \x03(\x05\"`\n\x06OpType\x12\x08\n\x04Play\x10\x00\x12\t\n\x05Reset\x10\x01\x12\n\n\x06Notice\x10\x02\x12\x08\n\x04Pick\x10\x03\x12\x07\n\x03\x42uy\x10\x04\x12\x0b\n\x07\x43ollect\x10\x05\x12\n\n\x06Repair\x10\x06\x12\t\n\x05\x45nter\x10\x07\x1a`\n\rBriefUserData\x12\x0b\n\x03UID\x18\x01 \x01(\x04\x12\x1e\n\x04Type\x18\x02 \x01(\x0e\x32\x10.pb.ActivityType\x12\x11\n\tStartTime\x18\x03 \x01(\x03\x12\x0f\n\x07\x45ndTime\x18\x04 \x01(\x03\x1a\xb0\x02\n\x03Req\x12-\n\x04List\x18\x01 \x01(\x0b\x32\x1d.pb.Activity.Req.ActivityListH\x00\x12\x35\n\x08UserData\x18\x02 \x01(\x0b\x32!.pb.Activity.Req.ActivityUserDataH\x00\x12-\n\x04Play\x18\x03 \x01(\x0b\x32\x1d.pb.Activity.Req.ActivityPlayH\x00\x1a\x1c\n\x0c\x41\x63tivityList\x12\x0c\n\x04Type\x18\x01 \x01(\x05\x1a-\n\x10\x41\x63tivityUserData\x12\x0b\n\x03UID\x18\x01 \x01(\x04\x12\x0c\n\x04Type\x18\x02 \x01(\x05\x1a@\n\x0c\x41\x63tivityPlay\x12\x0b\n\x03UID\x18\x01 \x01(\x04\x12#\n\x05Input\x18\x02 \x01(\x0b\x32\x14.pb.Activity.OpInputB\x05\n\x03one\x1a\xef\x03\n\x03Rsp\x12&\n\x08OpResult\x18\x64 \x01(\x0b\x32\x14.pb.ActivityOpResult\x12-\n\x04List\x18\x01 \x01(\x0b\x32\x1d.pb.Activity.Rsp.ActivityListH\x00\x12\x35\n\x08UserData\x18\x02 \x01(\x0b\x32!.pb.Activity.Rsp.ActivityUserDataH\x00\x12-\n\x04Play\x18\x03 \x01(\x0b\x32\x1d.pb.Activity.Rsp.ActivityPlayH\x00\x1a\x64\n\x0c\x41\x63tivityList\x12\"\n\x08\x44\x61taList\x18\x01 \x03(\x0b\x32\x10.pb.ActivityData\x12\x30\n\x0cUserDataList\x18\x02 \x03(\x0b\x32\x1a.pb.Activity.BriefUserData\x1a\\\n\x10\x41\x63tivityUserData\x12\x0b\n\x03UID\x18\x01 \x01(\x04\x12\x0c\n\x04Type\x18\x02 \x01(\x05\x12\x1e\n\x04\x64\x61ta\x18\x03 \x01(\x0b\x32\x10.pb.ActivityData\x12\r\n\x05Loops\x18\x04 \x01(\x05\x1a`\n\x0c\x41\x63tivityPlay\x12\x0b\n\x03UID\x18\x01 \x01(\x04\x12#\n\x05Input\x18\x02 \x01(\x0b\x32\x14.pb.Activity.OpInput\x12\x1e\n\x04\x64\x61ta\x18\x03 \x01(\x0b\x32\x10.pb.ActivityDataB\x05\n\x03one*x\n\rActivityStats\x12\x19\n\x15\x41\x63tivityStats_INVALID\x10\x00\x12\x19\n\x15\x41\x63tivityStats_NOTOPEN\x10\x01\x12\x16\n\x12\x41\x63tivityStats_OPEN\x10\x02\x12\x19\n\x15\x41\x63tivityStats_TIMEOUT\x10\x03*\xe6\x06\n\x0c\x41\x63tivityType\x12\x18\n\x14\x41\x63tivityType_Journey\x10\x00\x12\x1e\n\x1a\x41\x63tivityType_EndlessRiches\x10\x01\x12\x1a\n\x16\x41\x63tivityType_Challenge\x10\x02\x12\x16\n\x12\x41\x63tivityType_Chase\x10\x03\x12\x17\n\x13\x41\x63tivityType_Conpon\x10\x04\x12\x1a\n\x16\x41\x63tivityType_Multivers\x10\x05\x12\x16\n\x12\x41\x63tivityType_Bingo\x10\x06\x12\x16\n\x12\x41\x63tivityType_Quest\x10\x07\x12 \n\x1c\x41\x63tivityType_MissionActivity\x10\x08\x12\x1d\n\x19\x41\x63tivityType_DailyMission\x10\t\x12\x19\n\x15\x41\x63tivityType_VipBoost\x10\n\x12\x18\n\x14\x41\x63tivityType_SpinMax\x10\x0b\x12\x1f\n\x1b\x41\x63tivityType_DoubleWinAgain\x10\x0c\x12\x1a\n\x16\x41\x63tivityType_CandyMart\x10\r\x12\x16\n\x12\x41\x63tivityType_Kitty\x10\x0e\x12\x1b\n\x17\x41\x63tivityType_LuxurySeal\x10\x0f\x12\x1e\n\x1a\x41\x63tivityType_DoubleCardDay\x10\x10\x12\x1b\n\x17\x41\x63tivityType_DoubleSeal\x10\x11\x12#\n\x1f\x41\x63tivityType_DailyMissionChoose\x10\x12\x12 \n\x1c\x41\x63tivityType_OneTwoPromotion\x10\x13\x12\x19\n\x15\x41\x63tivityType_SaleBuff\x10\x14\x12\x1d\n\x19\x41\x63tivityType_ConponChoose\x10\x15\x12\x1a\n\x16\x41\x63tivityType_WildWheel\x10\x16\x12\x1d\n\x19\x41\x63tivityType_TreasureRoom\x10\x17\x12\x18\n\x14\x41\x63tivityType_PayGift\x10\x18\x12\x1b\n\x17\x41\x63tivityType_TastyBonus\x10\x1b\x12\x1d\n\x18\x41\x63tivityType_Advertising\x10\xe8\x07\x12\x19\n\x14\x41\x63tivityType_TestAct\x10\xe9\x07\x12\x14\n\x0f\x41\x63tivityType_TV\x10\xd0\x0f\x12\x1b\n\x16\x41\x63tivityType_PopWindow\x10\xb8\x17*O\n\x11\x41\x63tivityGroupType\x12\x1c\n\x18\x41\x63tivityGroupType_Normal\x10\x00\x12\x1c\n\x18\x41\x63tivityGroupType_Newbie\x10\x01*\x8b\x06\n\x10\x41\x63tivityDropType\x12\x10\n\x0c\x41\x44T_Progress\x10\x00\x12\x0c\n\x08\x41\x44T_Buff\x10\x01\x12\x0e\n\nADT_Portal\x10\x02\x12\x11\n\rADT_MultiReel\x10\x03\x12\r\n\tADT_Event\x10\x04\x12\x12\n\x0e\x41\x44T_BingoMedel\x10\x05\x12\x12\n\x0e\x41\x44T_ACT_Update\x10\x06\x12\x11\n\rADT_Challenge\x10\x07\x12\x1d\n\x19\x41\x44T_MissionNormalActivity\x10\x08\x12\x1f\n\x1b\x41\x44T_MissionSuperActivityOne\x10\t\x12\x1f\n\x1b\x41\x44T_MissionSuperActivityTwo\x10\n\x12!\n\x1d\x41\x44T_MissionSuperActivityThree\x10\x0b\x12\x1c\n\x18\x41\x44T_Multiverse_Node_Done\x10\x0c\x12\r\n\tADT_Candy\x10\r\x12\x1a\n\x16\x41\x44T_CardGathering_Deck\x10\x0e\x12\x1e\n\x1a\x41\x44T_CardGathering_Deck_Num\x10\x0f\x12\x1a\n\x16\x41\x44T_LevelSprint_Update\x10\x10\x12\x1c\n\x18\x41\x44T_LevelSprint_Choosing\x10\x11\x12\x1a\n\x16\x41\x44T_LevelSprint_Reward\x10\x12\x12 \n\x1c\x41\x44T_MissionNormalActivityOne\x10\x13\x12 \n\x1c\x41\x44T_MissionNormalActivityTwo\x10\x14\x12\"\n\x1e\x41\x44T_MissionNormalActivityThree\x10\x15\x12&\n\"ADT_WildWheelLevelSprintHighFinsih\x10\x16\x12+\n\'ADT_WildWheelMissionNormalActivityThree\x10\x17\x12\x18\n\x14\x41\x44T_WildWheelBooster\x10\x18\x12\x14\n\x10\x41\x44T_Kitty_Helmet\x10\x19\x12\x1d\n\x19\x41\x44T_DoubleWinAgain_BigWin\x10\x1a\x12\x1b\n\x17\x41\x44T_DoubleWinAgain_Mail\x10\x1b\x42\x06Z\x04.;pbb\x06proto3'
+  serialized_pb=b'\n\x0e\x61\x63tivity.proto\x12\x02pb\x1a\rjourney.proto\x1a\x10multiverse.proto\x1a\x13\x65ndlessriches.proto\x1a\x0b\x63hase.proto\x1a\x0b\x62ingo.proto\x1a\x0f\x63hallenge.proto\x1a\x0f\x63\x61ndymart.proto\x1a\x12treasureroom.proto\x1a\x0bkitty.proto\x1a\x0copcode.proto\x1a\x0b\x61ward.proto\x1a\x13\x61\x63tivityevent.proto\x1a\x0c\x63onpon.proto\x1a\rspinmax.proto\x1a\rpaygift.proto\x1a\x15onetwopromotion.proto\x1a\x18\x64\x61ilymissionchoose.proto\x1a\x10tastybonus.proto\x1a\x13\x61\x63tivity_tiny.proto\x1a\x0estarroad.proto\x1a\x14threechooseone.proto\x1a\x1athreechooseonerepeat.proto\x1a\x14salebuffchoose.proto\x1a\x11\x63oinkingdom.proto\x1a\x12paygiftgroup.proto\x1a\x0esalebuff.proto\x1a\x12prizecatcher.proto\x1a\x0fluckycard.proto\"?\n\x10\x41\x63tivityOpResult\x12\x1a\n\x06OpCode\x18\x01 \x01(\x0e\x32\n.pb.OpCode\x12\x0f\n\x07\x43ontent\x18\x02 \x01(\t\"\xed\x02\n\x0e\x41\x63tivityHeader\x12\x0b\n\x03UID\x18\x01 \x01(\x04\x12\x0f\n\x07Version\x18\x02 \x01(\x05\x12\x1e\n\x04Type\x18\x03 \x01(\x0e\x32\x10.pb.ActivityType\x12\r\n\x05\x45ntry\x18\x04 \x01(\x05\x12\x11\n\tStartTime\x18\x05 \x01(\x03\x12\x0f\n\x07\x45ndTime\x18\x06 \x01(\x03\x12\x0e\n\x06IsOpen\x18\x07 \x01(\x05\x12\x12\n\nLimitLevel\x18\x08 \x03(\x05\x12\x10\n\x08LimitVip\x18\t \x03(\x05\x12\x30\n\nTimeLimits\x18\n \x03(\x0b\x32\x1c.pb.ActivityHeader.TimeLimit\x12\x0f\n\x07Payment\x18\x0b \x01(\x05\x12\r\n\x05ResID\x18\x32 \x01(\x05\x12\r\n\x05Index\x18\x33 \x01(\x05\x12\r\n\x05Group\x18\x34 \x01(\x05\x12(\n\tGroupType\x18\x35 \x01(\x0e\x32\x15.pb.ActivityGroupType\x1a\x1a\n\tTimeLimit\x12\r\n\x05Param\x18\x01 \x03(\x05\"\xd1\n\n\x0c\x41\x63tivityData\x12\"\n\x06Header\x18\x01 \x01(\x0b\x32\x12.pb.ActivityHeader\x12\'\n\x04User\x18\x02 \x01(\x0b\x32\x19.pb.ActivityData.UserData\x12\"\n\x07Journey\x18\x64 \x01(\x0b\x32\x0f.pb.JourneyDataH\x00\x12(\n\nMultiverse\x18\x65 \x01(\x0b\x32\x12.pb.MultiverseDataH\x00\x12/\n\rEndlessRiches\x18\x66 \x01(\x0b\x32\x16.pb.EndlessRiches.DataH\x00\x12\x1f\n\x05\x42ingo\x18g \x01(\x0b\x32\x0e.pb.Bingo.DataH\x00\x12\'\n\tChallenge\x18h \x01(\x0b\x32\x12.pb.Challenge.DataH\x00\x12\x1f\n\x05\x43hase\x18i \x01(\x0b\x32\x0e.pb.Chase.DataH\x00\x12!\n\x06\x43onpon\x18j \x01(\x0b\x32\x0f.pb.Conpon.DataH\x00\x12#\n\x07SpinMax\x18k \x01(\x0b\x32\x10.pb.SpinMax.DataH\x00\x12\x30\n\x0e\x44oubleWinAgain\x18p \x01(\x0b\x32\x16.pb.DoubleWinAgainDataH\x00\x12\x1e\n\x05\x43\x61ndy\x18q \x01(\x0b\x32\r.pb.CandyMartH\x00\x12\x1f\n\x05Kitty\x18r \x01(\x0b\x32\x0e.pb.Kitty.DataH\x00\x12%\n\x08StarRoad\x18w \x01(\x0b\x32\x11.pb.StarRoad.DataH\x00\x12\x33\n\x0c\x43onponChoose\x18x \x01(\x0b\x32\x1b.pb.Conpon.ConponChooseListH\x00\x12%\n\x08SaleBuff\x18~ \x01(\x0b\x32\x11.pb.SaleBuff.DataH\x00\x12-\n\x0cTreasureRoom\x18{ \x01(\x0b\x32\x15.pb.TreasureRoom.DataH\x00\x12;\n\x15OneTwoPromotionAwards\x18y \x01(\x0b\x32\x1a.pb.OneTwoPromotion.AwardsH\x00\x12\x39\n\x12\x44\x61ilyMissionChoose\x18z \x01(\x0b\x32\x1b.pb.DailyMissionChoose.DataH\x00\x12#\n\x07PayGift\x18| \x01(\x0b\x32\x10.pb.PayGift.DataH\x00\x12+\n\x0b\x43oinKingdom\x18} \x01(\x0b\x32\x14.pb.CoinKingdom.DataH\x00\x12)\n\nTastyBonus\x18\x7f \x01(\x0b\x32\x13.pb.TastyBonus.DataH\x00\x12:\n\x14ThreeChooseOneAwards\x18\x80\x01 \x01(\x0b\x32\x19.pb.ThreeChooseOne.AwardsH\x00\x12\x38\n\x0eSaleBuffChoose\x18\x81\x01 \x01(\x0b\x32\x1d.pb.SaleBuffChoose.ChooseListH\x00\x12\x46\n\x1aThreeChooseOneRepeatAwards\x18\x83\x01 \x01(\x0b\x32\x1f.pb.ThreeChooseOneRepeat.AwardsH\x00\x12\x30\n\x0fLuckyCardAwards\x18\x89\x01 \x01(\x0b\x32\x14.pb.LuckyCard.AwardsH\x00\x12.\n\x0cPayGiftGroup\x18\x8a\x01 \x01(\x0b\x32\x15.pb.PayGiftGroup.DataH\x00\x12.\n\x0cPrizeCatcher\x18\x82\x01 \x01(\x0b\x32\x15.pb.PrizeCatcher.DataH\x00\x1aQ\n\x08UserData\x12\x11\n\tStartTime\x18\x01 \x01(\x03\x12\x0f\n\x07\x45ndTime\x18\x02 \x01(\x03\x12!\n\x06Status\x18\x03 \x01(\x0e\x32\x11.pb.ActivityStatsB\x05\n\x03one\"S\n\x0f\x41\x63tivityRspData\x12\x0b\n\x03Val\x18\x01 \x01(\x05\x12,\n\x08\x44ropCoin\x18\x64 \x01(\x0b\x32\x18.pb.CoinKingdom.DropCoinH\x00\x42\x05\n\x03One\"\xa7\x02\n\x0c\x41\x63tivityDrop\x12#\n\x03SRC\x18\x01 \x01(\x0e\x32\x16.pb.AwardInfo.AwardSRC\x12)\n\x06SubSRC\x18\x02 \x01(\x0e\x32\x19.pb.AwardInfo.AwardSubSRC\x12\"\n\x04Type\x18\x03 \x01(\x0e\x32\x14.pb.ActivityDropType\x12\r\n\x05Value\x18\x04 \x01(\x03\x12\x10\n\x08\x41\x64\x64Value\x18\x05 \x01(\x03\x12\"\n\x05\x45vent\x18\x64 \x01(\x0b\x32\x11.pb.ActivityEventH\x00\x12,\n\nChangeList\x18\x65 \x01(\x0b\x32\x16.pb.ActivityChangeListH\x00\x12)\n\x06\x41wards\x18\x66 \x01(\x0b\x32\x17.pb.ActivityEventAwardsH\x00\x42\x05\n\x03one\"@\n\x12\x41\x63tivityChangeList\x12*\n\nChangeList\x18\x01 \x03(\x0b\x32\x16.pb.ActivityChangeData\"6\n\x13\x41\x63tivityEventAwards\x12\x1f\n\x06\x41wards\x18\x01 \x03(\x0b\x32\x0f.pb.EventAwards\"\xa1\x01\n\x12\x41\x63tivityChangeData\x12\x0b\n\x03UID\x18\x01 \x01(\x04\x12\x1e\n\x04Type\x18\x02 \x01(\x0e\x32\x10.pb.ActivityType\x12\x33\n\x0c\x43hangeStatus\x18\x03 \x01(\x0e\x32\x1d.pb.ActivityChangeData.Status\")\n\x06Status\x12\x07\n\x03New\x10\x00\x12\n\n\x06\x44\x65lete\x10\x01\x12\n\n\x06Update\x10\x02\"\x81\t\n\x08\x41\x63tivity\x1a\xc6\x01\n\x07OpInput\x12)\n\x04Type\x18\x01 \x01(\x0e\x32\x1b.pb.Activity.OpInput.OpType\x12\x0e\n\x06InputX\x18\x02 \x01(\x05\x12\x0e\n\x06InputY\x18\x03 \x01(\x05\x12\x0e\n\x06params\x18\x04 \x03(\x05\"`\n\x06OpType\x12\x08\n\x04Play\x10\x00\x12\t\n\x05Reset\x10\x01\x12\n\n\x06Notice\x10\x02\x12\x08\n\x04Pick\x10\x03\x12\x07\n\x03\x42uy\x10\x04\x12\x0b\n\x07\x43ollect\x10\x05\x12\n\n\x06Repair\x10\x06\x12\t\n\x05\x45nter\x10\x07\x1a`\n\rBriefUserData\x12\x0b\n\x03UID\x18\x01 \x01(\x04\x12\x1e\n\x04Type\x18\x02 \x01(\x0e\x32\x10.pb.ActivityType\x12\x11\n\tStartTime\x18\x03 \x01(\x03\x12\x0f\n\x07\x45ndTime\x18\x04 \x01(\x03\x1a\xb0\x02\n\x03Req\x12-\n\x04List\x18\x01 \x01(\x0b\x32\x1d.pb.Activity.Req.ActivityListH\x00\x12\x35\n\x08UserData\x18\x02 \x01(\x0b\x32!.pb.Activity.Req.ActivityUserDataH\x00\x12-\n\x04Play\x18\x03 \x01(\x0b\x32\x1d.pb.Activity.Req.ActivityPlayH\x00\x1a\x1c\n\x0c\x41\x63tivityList\x12\x0c\n\x04Type\x18\x01 \x01(\x05\x1a-\n\x10\x41\x63tivityUserData\x12\x0b\n\x03UID\x18\x01 \x01(\x04\x12\x0c\n\x04Type\x18\x02 \x01(\x05\x1a@\n\x0c\x41\x63tivityPlay\x12\x0b\n\x03UID\x18\x01 \x01(\x04\x12#\n\x05Input\x18\x02 \x01(\x0b\x32\x14.pb.Activity.OpInputB\x05\n\x03one\x1a\x96\x04\n\x03Rsp\x12&\n\x08OpResult\x18\x64 \x01(\x0b\x32\x14.pb.ActivityOpResult\x12-\n\x04List\x18\x01 \x01(\x0b\x32\x1d.pb.Activity.Rsp.ActivityListH\x00\x12\x35\n\x08UserData\x18\x02 \x01(\x0b\x32!.pb.Activity.Rsp.ActivityUserDataH\x00\x12-\n\x04Play\x18\x03 \x01(\x0b\x32\x1d.pb.Activity.Rsp.ActivityPlayH\x00\x1a\x64\n\x0c\x41\x63tivityList\x12\"\n\x08\x44\x61taList\x18\x01 \x03(\x0b\x32\x10.pb.ActivityData\x12\x30\n\x0cUserDataList\x18\x02 \x03(\x0b\x32\x1a.pb.Activity.BriefUserData\x1a\\\n\x10\x41\x63tivityUserData\x12\x0b\n\x03UID\x18\x01 \x01(\x04\x12\x0c\n\x04Type\x18\x02 \x01(\x05\x12\x1e\n\x04\x64\x61ta\x18\x03 \x01(\x0b\x32\x10.pb.ActivityData\x12\r\n\x05Loops\x18\x04 \x01(\x05\x1a\x86\x01\n\x0c\x41\x63tivityPlay\x12\x0b\n\x03UID\x18\x01 \x01(\x04\x12#\n\x05Input\x18\x02 \x01(\x0b\x32\x14.pb.Activity.OpInput\x12\x1e\n\x04\x64\x61ta\x18\x03 \x01(\x0b\x32\x10.pb.ActivityData\x12$\n\x07RspData\x18\x04 \x01(\x0b\x32\x13.pb.ActivityRspDataB\x05\n\x03one*x\n\rActivityStats\x12\x19\n\x15\x41\x63tivityStats_INVALID\x10\x00\x12\x19\n\x15\x41\x63tivityStats_NOTOPEN\x10\x01\x12\x16\n\x12\x41\x63tivityStats_OPEN\x10\x02\x12\x19\n\x15\x41\x63tivityStats_TIMEOUT\x10\x03*\x9c\t\n\x0c\x41\x63tivityType\x12\x18\n\x14\x41\x63tivityType_Journey\x10\x00\x12\x1e\n\x1a\x41\x63tivityType_EndlessRiches\x10\x01\x12\x1a\n\x16\x41\x63tivityType_Challenge\x10\x02\x12\x16\n\x12\x41\x63tivityType_Chase\x10\x03\x12\x17\n\x13\x41\x63tivityType_Conpon\x10\x04\x12\x1a\n\x16\x41\x63tivityType_Multivers\x10\x05\x12\x16\n\x12\x41\x63tivityType_Bingo\x10\x06\x12\x16\n\x12\x41\x63tivityType_Quest\x10\x07\x12 \n\x1c\x41\x63tivityType_MissionActivity\x10\x08\x12\x1d\n\x19\x41\x63tivityType_DailyMission\x10\t\x12\x19\n\x15\x41\x63tivityType_VipBoost\x10\n\x12\x18\n\x14\x41\x63tivityType_SpinMax\x10\x0b\x12\x1f\n\x1b\x41\x63tivityType_DoubleWinAgain\x10\x0c\x12\x1a\n\x16\x41\x63tivityType_CandyMart\x10\r\x12\x16\n\x12\x41\x63tivityType_Kitty\x10\x0e\x12\x1b\n\x17\x41\x63tivityType_LuxurySeal\x10\x0f\x12\x1e\n\x1a\x41\x63tivityType_DoubleCardDay\x10\x10\x12\x1b\n\x17\x41\x63tivityType_DoubleSeal\x10\x11\x12#\n\x1f\x41\x63tivityType_DailyMissionChoose\x10\x12\x12 \n\x1c\x41\x63tivityType_OneTwoPromotion\x10\x13\x12\x19\n\x15\x41\x63tivityType_SaleBuff\x10\x14\x12\x1d\n\x19\x41\x63tivityType_ConponChoose\x10\x15\x12\x1a\n\x16\x41\x63tivityType_WildWheel\x10\x16\x12\x1d\n\x19\x41\x63tivityType_TreasureRoom\x10\x17\x12\x18\n\x14\x41\x63tivityType_PayGift\x10\x18\x12\x1c\n\x18\x41\x63tivityType_CoinKingdom\x10\x19\x12\x19\n\x15\x41\x63tivityType_StarRoad\x10\x1a\x12\x1b\n\x17\x41\x63tivityType_TastyBonus\x10\x1b\x12\x1f\n\x1b\x41\x63tivityType_ThreeChooseOne\x10\x1c\x12\x1f\n\x1b\x41\x63tivityType_SaleBuffChoose\x10\x1d\x12\x1d\n\x19\x41\x63tivityType_PrizeCatcher\x10\x1e\x12%\n!ActivityType_ThreeChooseOneRepeat\x10\x1f\x12\x1f\n\x1b\x41\x63tivityType_EndlessRiches2\x10$\x12\x1a\n\x16\x41\x63tivityType_LuckyCard\x10%\x12\x1d\n\x19\x41\x63tivityType_PayGiftGroup\x10&\x12\x1d\n\x18\x41\x63tivityType_Advertising\x10\xe8\x07\x12\x19\n\x14\x41\x63tivityType_TestAct\x10\xe9\x07\x12\x17\n\x12\x41\x63tivityType_Offer\x10\xcc\x08\x12\x14\n\x0f\x41\x63tivityType_TV\x10\xd0\x0f\x12\x1b\n\x16\x41\x63tivityType_PopWindow\x10\xb8\x17*O\n\x11\x41\x63tivityGroupType\x12\x1c\n\x18\x41\x63tivityGroupType_Normal\x10\x00\x12\x1c\n\x18\x41\x63tivityGroupType_Newbie\x10\x01*\xa0\t\n\x10\x41\x63tivityDropType\x12\x10\n\x0c\x41\x44T_Progress\x10\x00\x12\x0c\n\x08\x41\x44T_Buff\x10\x01\x12\x0e\n\nADT_Portal\x10\x02\x12\x11\n\rADT_MultiReel\x10\x03\x12\r\n\tADT_Event\x10\x04\x12\x12\n\x0e\x41\x44T_BingoMedel\x10\x05\x12\x12\n\x0e\x41\x44T_ACT_Update\x10\x06\x12\x11\n\rADT_Challenge\x10\x07\x12\x1d\n\x19\x41\x44T_MissionNormalActivity\x10\x08\x12\x1f\n\x1b\x41\x44T_MissionSuperActivityOne\x10\t\x12\x1f\n\x1b\x41\x44T_MissionSuperActivityTwo\x10\n\x12!\n\x1d\x41\x44T_MissionSuperActivityThree\x10\x0b\x12\x1c\n\x18\x41\x44T_Multiverse_Node_Done\x10\x0c\x12\r\n\tADT_Candy\x10\r\x12\x1a\n\x16\x41\x44T_CardGathering_Deck\x10\x0e\x12\x1e\n\x1a\x41\x44T_CardGathering_Deck_Num\x10\x0f\x12\x1a\n\x16\x41\x44T_LevelSprint_Update\x10\x10\x12\x1c\n\x18\x41\x44T_LevelSprint_Choosing\x10\x11\x12\x1a\n\x16\x41\x44T_LevelSprint_Reward\x10\x12\x12 \n\x1c\x41\x44T_MissionNormalActivityOne\x10\x13\x12 \n\x1c\x41\x44T_MissionNormalActivityTwo\x10\x14\x12\"\n\x1e\x41\x44T_MissionNormalActivityThree\x10\x15\x12&\n\"ADT_WildWheelLevelSprintHighFinsih\x10\x16\x12+\n\'ADT_WildWheelMissionNormalActivityThree\x10\x17\x12\x18\n\x14\x41\x44T_WildWheelBooster\x10\x18\x12\x14\n\x10\x41\x44T_Kitty_Helmet\x10\x19\x12\x1d\n\x19\x41\x44T_DoubleWinAgain_BigWin\x10\x1a\x12\x1b\n\x17\x41\x44T_DoubleWinAgain_Mail\x10\x1b\x12\x1f\n\x1b\x41\x44T_CoinKingdom_Coin_Normal\x10\'\x12\x1e\n\x1a\x41\x44T_CoinKingdom_Coin_Seven\x10(\x12\x1c\n\x18\x41\x44T_CoinKingdom_Coin_Box\x10)\x12 \n\x1c\x41\x44T_CoinKingdom_Coin_Unknown\x10*\x12!\n\x1d\x41\x44T_CoinKingdom_Coin_RedArrow\x10+\x12\"\n\x1e\x41\x44T_CoinKingdom_Seven_CoinPile\x10,\x12!\n\x1d\x41\x44T_CoinKingdom_Seven_BigCoin\x10-\x12#\n\x1f\x41\x44T_CoinKingdom_Seven_CoinFalls\x10.\x12\x1e\n\x1a\x41\x44T_CoinKingdom_Seven_Boom\x10/\x12&\n\"ADT_CoinKingdom_Seven_MassCoinPile\x10\x30\x12\x1d\n\x19\x41\x44T_CoinKingdom_Push_Coin\x10\x31\x12\x1c\n\x18\x41\x44T_CoinKingdom_Cur_Coin\x10\x32\x42\x06Z\x04.;pbb\x06proto3'
   ,
-  dependencies=[journey__pb2.DESCRIPTOR,multiverse__pb2.DESCRIPTOR,endlessriches__pb2.DESCRIPTOR,chase__pb2.DESCRIPTOR,bingo__pb2.DESCRIPTOR,challenge__pb2.DESCRIPTOR,candymart__pb2.DESCRIPTOR,treasureroom__pb2.DESCRIPTOR,kitty__pb2.DESCRIPTOR,opcode__pb2.DESCRIPTOR,award__pb2.DESCRIPTOR,activityevent__pb2.DESCRIPTOR,conpon__pb2.DESCRIPTOR,spinmax__pb2.DESCRIPTOR,paygift__pb2.DESCRIPTOR,onetwopromotion__pb2.DESCRIPTOR,dailymissionchoose__pb2.DESCRIPTOR,tastybonus__pb2.DESCRIPTOR,activity__tiny__pb2.DESCRIPTOR,])
+  dependencies=[journey__pb2.DESCRIPTOR,multiverse__pb2.DESCRIPTOR,endlessriches__pb2.DESCRIPTOR,chase__pb2.DESCRIPTOR,bingo__pb2.DESCRIPTOR,challenge__pb2.DESCRIPTOR,candymart__pb2.DESCRIPTOR,treasureroom__pb2.DESCRIPTOR,kitty__pb2.DESCRIPTOR,opcode__pb2.DESCRIPTOR,award__pb2.DESCRIPTOR,activityevent__pb2.DESCRIPTOR,conpon__pb2.DESCRIPTOR,spinmax__pb2.DESCRIPTOR,paygift__pb2.DESCRIPTOR,onetwopromotion__pb2.DESCRIPTOR,dailymissionchoose__pb2.DESCRIPTOR,tastybonus__pb2.DESCRIPTOR,activity__tiny__pb2.DESCRIPTOR,starroad__pb2.DESCRIPTOR,threechooseone__pb2.DESCRIPTOR,threechooseonerepeat__pb2.DESCRIPTOR,salebuffchoose__pb2.DESCRIPTOR,coinkingdom__pb2.DESCRIPTOR,paygiftgroup__pb2.DESCRIPTOR,salebuff__pb2.DESCRIPTOR,prizecatcher__pb2.DESCRIPTOR,luckycard__pb2.DESCRIPTOR,])
 
 _ACTIVITYSTATS = _descriptor.EnumDescriptor(
   name='ActivityStats',
@@ -73,8 +82,8 @@ _ACTIVITYSTATS = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=3388,
-  serialized_end=3508,
+  serialized_start=4151,
+  serialized_end=4271,
 )
 _sym_db.RegisterEnumDescriptor(_ACTIVITYSTATS)
 
@@ -212,35 +221,85 @@ _ACTIVITYTYPE = _descriptor.EnumDescriptor(
       type=None,
       create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
-      name='ActivityType_TastyBonus', index=25, number=27,
+      name='ActivityType_CoinKingdom', index=25, number=25,
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
-      name='ActivityType_Advertising', index=26, number=1000,
+      name='ActivityType_StarRoad', index=26, number=26,
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
-      name='ActivityType_TestAct', index=27, number=1001,
+      name='ActivityType_TastyBonus', index=27, number=27,
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
-      name='ActivityType_TV', index=28, number=2000,
+      name='ActivityType_ThreeChooseOne', index=28, number=28,
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
-      name='ActivityType_PopWindow', index=29, number=3000,
+      name='ActivityType_SaleBuffChoose', index=29, number=29,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='ActivityType_PrizeCatcher', index=30, number=30,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='ActivityType_ThreeChooseOneRepeat', index=31, number=31,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='ActivityType_EndlessRiches2', index=32, number=36,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='ActivityType_LuckyCard', index=33, number=37,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='ActivityType_PayGiftGroup', index=34, number=38,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='ActivityType_Advertising', index=35, number=1000,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='ActivityType_TestAct', index=36, number=1001,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='ActivityType_Offer', index=37, number=1100,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='ActivityType_TV', index=38, number=2000,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='ActivityType_PopWindow', index=39, number=3000,
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=3511,
-  serialized_end=4381,
+  serialized_start=4274,
+  serialized_end=5454,
 )
 _sym_db.RegisterEnumDescriptor(_ACTIVITYTYPE)
 
@@ -265,8 +324,8 @@ _ACTIVITYGROUPTYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=4383,
-  serialized_end=4462,
+  serialized_start=5456,
+  serialized_end=5535,
 )
 _sym_db.RegisterEnumDescriptor(_ACTIVITYGROUPTYPE)
 
@@ -418,11 +477,71 @@ _ACTIVITYDROPTYPE = _descriptor.EnumDescriptor(
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='ADT_CoinKingdom_Coin_Normal', index=28, number=39,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='ADT_CoinKingdom_Coin_Seven', index=29, number=40,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='ADT_CoinKingdom_Coin_Box', index=30, number=41,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='ADT_CoinKingdom_Coin_Unknown', index=31, number=42,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='ADT_CoinKingdom_Coin_RedArrow', index=32, number=43,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='ADT_CoinKingdom_Seven_CoinPile', index=33, number=44,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='ADT_CoinKingdom_Seven_BigCoin', index=34, number=45,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='ADT_CoinKingdom_Seven_CoinFalls', index=35, number=46,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='ADT_CoinKingdom_Seven_Boom', index=36, number=47,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='ADT_CoinKingdom_Seven_MassCoinPile', index=37, number=48,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='ADT_CoinKingdom_Push_Coin', index=38, number=49,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='ADT_CoinKingdom_Cur_Coin', index=39, number=50,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=4465,
-  serialized_end=5244,
+  serialized_start=5538,
+  serialized_end=6722,
 )
 _sym_db.RegisterEnumDescriptor(_ACTIVITYDROPTYPE)
 
@@ -456,9 +575,19 @@ ActivityType_ConponChoose = 21
 ActivityType_WildWheel = 22
 ActivityType_TreasureRoom = 23
 ActivityType_PayGift = 24
+ActivityType_CoinKingdom = 25
+ActivityType_StarRoad = 26
 ActivityType_TastyBonus = 27
+ActivityType_ThreeChooseOne = 28
+ActivityType_SaleBuffChoose = 29
+ActivityType_PrizeCatcher = 30
+ActivityType_ThreeChooseOneRepeat = 31
+ActivityType_EndlessRiches2 = 36
+ActivityType_LuckyCard = 37
+ActivityType_PayGiftGroup = 38
 ActivityType_Advertising = 1000
 ActivityType_TestAct = 1001
+ActivityType_Offer = 1100
 ActivityType_TV = 2000
 ActivityType_PopWindow = 3000
 ActivityGroupType_Normal = 0
@@ -491,6 +620,18 @@ ADT_WildWheelBooster = 24
 ADT_Kitty_Helmet = 25
 ADT_DoubleWinAgain_BigWin = 26
 ADT_DoubleWinAgain_Mail = 27
+ADT_CoinKingdom_Coin_Normal = 39
+ADT_CoinKingdom_Coin_Seven = 40
+ADT_CoinKingdom_Coin_Box = 41
+ADT_CoinKingdom_Coin_Unknown = 42
+ADT_CoinKingdom_Coin_RedArrow = 43
+ADT_CoinKingdom_Seven_CoinPile = 44
+ADT_CoinKingdom_Seven_BigCoin = 45
+ADT_CoinKingdom_Seven_CoinFalls = 46
+ADT_CoinKingdom_Seven_Boom = 47
+ADT_CoinKingdom_Seven_MassCoinPile = 48
+ADT_CoinKingdom_Push_Coin = 49
+ADT_CoinKingdom_Cur_Coin = 50
 
 
 _ACTIVITYCHANGEDATA_STATUS = _descriptor.EnumDescriptor(
@@ -518,8 +659,8 @@ _ACTIVITYCHANGEDATA_STATUS = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=2228,
-  serialized_end=2269,
+  serialized_start=2952,
+  serialized_end=2993,
 )
 _sym_db.RegisterEnumDescriptor(_ACTIVITYCHANGEDATA_STATUS)
 
@@ -573,8 +714,8 @@ _ACTIVITY_OPINPUT_OPTYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=2387,
-  serialized_end=2483,
+  serialized_start=3111,
+  serialized_end=3207,
 )
 _sym_db.RegisterEnumDescriptor(_ACTIVITY_OPINPUT_OPTYPE)
 
@@ -613,8 +754,8 @@ _ACTIVITYOPRESULT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=349,
-  serialized_end=412,
+  serialized_start=529,
+  serialized_end=592,
 )
 
 
@@ -645,8 +786,8 @@ _ACTIVITYHEADER_TIMELIMIT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=754,
-  serialized_end=780,
+  serialized_start=934,
+  serialized_end=960,
 )
 
 _ACTIVITYHEADER = _descriptor.Descriptor(
@@ -774,8 +915,8 @@ _ACTIVITYHEADER = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=415,
-  serialized_end=780,
+  serialized_start=595,
+  serialized_end=960,
 )
 
 
@@ -820,8 +961,8 @@ _ACTIVITYDATA_USERDATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1597,
-  serialized_end=1678,
+  serialized_start=2236,
+  serialized_end=2317,
 )
 
 _ACTIVITYDATA = _descriptor.Descriptor(
@@ -924,43 +1065,106 @@ _ACTIVITYDATA = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='ConponChoose', full_name='pb.ActivityData.ConponChoose', index=13,
+      name='StarRoad', full_name='pb.ActivityData.StarRoad', index=13,
+      number=119, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='ConponChoose', full_name='pb.ActivityData.ConponChoose', index=14,
       number=120, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='TreasureRoom', full_name='pb.ActivityData.TreasureRoom', index=14,
+      name='SaleBuff', full_name='pb.ActivityData.SaleBuff', index=15,
+      number=126, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='TreasureRoom', full_name='pb.ActivityData.TreasureRoom', index=16,
       number=123, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='OneTwoPromotionAwards', full_name='pb.ActivityData.OneTwoPromotionAwards', index=15,
+      name='OneTwoPromotionAwards', full_name='pb.ActivityData.OneTwoPromotionAwards', index=17,
       number=121, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='DailyMissionChoose', full_name='pb.ActivityData.DailyMissionChoose', index=16,
+      name='DailyMissionChoose', full_name='pb.ActivityData.DailyMissionChoose', index=18,
       number=122, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='PayGift', full_name='pb.ActivityData.PayGift', index=17,
+      name='PayGift', full_name='pb.ActivityData.PayGift', index=19,
       number=124, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='TastyBonus', full_name='pb.ActivityData.TastyBonus', index=18,
+      name='CoinKingdom', full_name='pb.ActivityData.CoinKingdom', index=20,
       number=125, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='TastyBonus', full_name='pb.ActivityData.TastyBonus', index=21,
+      number=127, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='ThreeChooseOneAwards', full_name='pb.ActivityData.ThreeChooseOneAwards', index=22,
+      number=128, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='SaleBuffChoose', full_name='pb.ActivityData.SaleBuffChoose', index=23,
+      number=129, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='ThreeChooseOneRepeatAwards', full_name='pb.ActivityData.ThreeChooseOneRepeatAwards', index=24,
+      number=131, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='LuckyCardAwards', full_name='pb.ActivityData.LuckyCardAwards', index=25,
+      number=137, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='PayGiftGroup', full_name='pb.ActivityData.PayGiftGroup', index=26,
+      number=138, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='PrizeCatcher', full_name='pb.ActivityData.PrizeCatcher', index=27,
+      number=130, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -982,8 +1186,52 @@ _ACTIVITYDATA = _descriptor.Descriptor(
       create_key=_descriptor._internal_create_key,
     fields=[]),
   ],
-  serialized_start=783,
-  serialized_end=1685,
+  serialized_start=963,
+  serialized_end=2324,
+)
+
+
+_ACTIVITYRSPDATA = _descriptor.Descriptor(
+  name='ActivityRspData',
+  full_name='pb.ActivityRspData',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='Val', full_name='pb.ActivityRspData.Val', index=0,
+      number=1, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='DropCoin', full_name='pb.ActivityRspData.DropCoin', index=1,
+      number=100, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+    _descriptor.OneofDescriptor(
+      name='One', full_name='pb.ActivityRspData.One',
+      index=0, containing_type=None,
+      create_key=_descriptor._internal_create_key,
+    fields=[]),
+  ],
+  serialized_start=2326,
+  serialized_end=2409,
 )
 
 
@@ -1068,8 +1316,8 @@ _ACTIVITYDROP = _descriptor.Descriptor(
       create_key=_descriptor._internal_create_key,
     fields=[]),
   ],
-  serialized_start=1688,
-  serialized_end=1983,
+  serialized_start=2412,
+  serialized_end=2707,
 )
 
 
@@ -1100,8 +1348,8 @@ _ACTIVITYCHANGELIST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1985,
-  serialized_end=2049,
+  serialized_start=2709,
+  serialized_end=2773,
 )
 
 
@@ -1132,8 +1380,8 @@ _ACTIVITYEVENTAWARDS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2051,
-  serialized_end=2105,
+  serialized_start=2775,
+  serialized_end=2829,
 )
 
 
@@ -1179,8 +1427,8 @@ _ACTIVITYCHANGEDATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2108,
-  serialized_end=2269,
+  serialized_start=2832,
+  serialized_end=2993,
 )
 
 
@@ -1233,8 +1481,8 @@ _ACTIVITY_OPINPUT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2285,
-  serialized_end=2483,
+  serialized_start=3009,
+  serialized_end=3207,
 )
 
 _ACTIVITY_BRIEFUSERDATA = _descriptor.Descriptor(
@@ -1285,8 +1533,8 @@ _ACTIVITY_BRIEFUSERDATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2485,
-  serialized_end=2581,
+  serialized_start=3209,
+  serialized_end=3305,
 )
 
 _ACTIVITY_REQ_ACTIVITYLIST = _descriptor.Descriptor(
@@ -1316,8 +1564,8 @@ _ACTIVITY_REQ_ACTIVITYLIST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2740,
-  serialized_end=2768,
+  serialized_start=3464,
+  serialized_end=3492,
 )
 
 _ACTIVITY_REQ_ACTIVITYUSERDATA = _descriptor.Descriptor(
@@ -1354,8 +1602,8 @@ _ACTIVITY_REQ_ACTIVITYUSERDATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2770,
-  serialized_end=2815,
+  serialized_start=3494,
+  serialized_end=3539,
 )
 
 _ACTIVITY_REQ_ACTIVITYPLAY = _descriptor.Descriptor(
@@ -1392,8 +1640,8 @@ _ACTIVITY_REQ_ACTIVITYPLAY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2817,
-  serialized_end=2881,
+  serialized_start=3541,
+  serialized_end=3605,
 )
 
 _ACTIVITY_REQ = _descriptor.Descriptor(
@@ -1442,8 +1690,8 @@ _ACTIVITY_REQ = _descriptor.Descriptor(
       create_key=_descriptor._internal_create_key,
     fields=[]),
   ],
-  serialized_start=2584,
-  serialized_end=2888,
+  serialized_start=3308,
+  serialized_end=3612,
 )
 
 _ACTIVITY_RSP_ACTIVITYLIST = _descriptor.Descriptor(
@@ -1480,8 +1728,8 @@ _ACTIVITY_RSP_ACTIVITYLIST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3087,
-  serialized_end=3187,
+  serialized_start=3811,
+  serialized_end=3911,
 )
 
 _ACTIVITY_RSP_ACTIVITYUSERDATA = _descriptor.Descriptor(
@@ -1532,8 +1780,8 @@ _ACTIVITY_RSP_ACTIVITYUSERDATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3189,
-  serialized_end=3281,
+  serialized_start=3913,
+  serialized_end=4005,
 )
 
 _ACTIVITY_RSP_ACTIVITYPLAY = _descriptor.Descriptor(
@@ -1565,6 +1813,13 @@ _ACTIVITY_RSP_ACTIVITYPLAY = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='RspData', full_name='pb.Activity.Rsp.ActivityPlay.RspData', index=3,
+      number=4, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -1577,8 +1832,8 @@ _ACTIVITY_RSP_ACTIVITYPLAY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3283,
-  serialized_end=3379,
+  serialized_start=4008,
+  serialized_end=4142,
 )
 
 _ACTIVITY_RSP = _descriptor.Descriptor(
@@ -1634,8 +1889,8 @@ _ACTIVITY_RSP = _descriptor.Descriptor(
       create_key=_descriptor._internal_create_key,
     fields=[]),
   ],
-  serialized_start=2891,
-  serialized_end=3386,
+  serialized_start=3615,
+  serialized_end=4149,
 )
 
 _ACTIVITY = _descriptor.Descriptor(
@@ -1658,8 +1913,8 @@ _ACTIVITY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2272,
-  serialized_end=3386,
+  serialized_start=2996,
+  serialized_end=4149,
 )
 
 _ACTIVITYOPRESULT.fields_by_name['OpCode'].enum_type = opcode__pb2._OPCODE
@@ -1682,12 +1937,21 @@ _ACTIVITYDATA.fields_by_name['SpinMax'].message_type = spinmax__pb2._SPINMAX_DAT
 _ACTIVITYDATA.fields_by_name['DoubleWinAgain'].message_type = activity__tiny__pb2._DOUBLEWINAGAINDATA
 _ACTIVITYDATA.fields_by_name['Candy'].message_type = candymart__pb2._CANDYMART
 _ACTIVITYDATA.fields_by_name['Kitty'].message_type = kitty__pb2._KITTY_DATA
+_ACTIVITYDATA.fields_by_name['StarRoad'].message_type = starroad__pb2._STARROAD_DATA
 _ACTIVITYDATA.fields_by_name['ConponChoose'].message_type = conpon__pb2._CONPON_CONPONCHOOSELIST
+_ACTIVITYDATA.fields_by_name['SaleBuff'].message_type = salebuff__pb2._SALEBUFF_DATA
 _ACTIVITYDATA.fields_by_name['TreasureRoom'].message_type = treasureroom__pb2._TREASUREROOM_DATA
 _ACTIVITYDATA.fields_by_name['OneTwoPromotionAwards'].message_type = onetwopromotion__pb2._ONETWOPROMOTION_AWARDS
 _ACTIVITYDATA.fields_by_name['DailyMissionChoose'].message_type = dailymissionchoose__pb2._DAILYMISSIONCHOOSE_DATA
 _ACTIVITYDATA.fields_by_name['PayGift'].message_type = paygift__pb2._PAYGIFT_DATA
+_ACTIVITYDATA.fields_by_name['CoinKingdom'].message_type = coinkingdom__pb2._COINKINGDOM_DATA
 _ACTIVITYDATA.fields_by_name['TastyBonus'].message_type = tastybonus__pb2._TASTYBONUS_DATA
+_ACTIVITYDATA.fields_by_name['ThreeChooseOneAwards'].message_type = threechooseone__pb2._THREECHOOSEONE_AWARDS
+_ACTIVITYDATA.fields_by_name['SaleBuffChoose'].message_type = salebuffchoose__pb2._SALEBUFFCHOOSE_CHOOSELIST
+_ACTIVITYDATA.fields_by_name['ThreeChooseOneRepeatAwards'].message_type = threechooseonerepeat__pb2._THREECHOOSEONEREPEAT_AWARDS
+_ACTIVITYDATA.fields_by_name['LuckyCardAwards'].message_type = luckycard__pb2._LUCKYCARD_AWARDS
+_ACTIVITYDATA.fields_by_name['PayGiftGroup'].message_type = paygiftgroup__pb2._PAYGIFTGROUP_DATA
+_ACTIVITYDATA.fields_by_name['PrizeCatcher'].message_type = prizecatcher__pb2._PRIZECATCHER_DATA
 _ACTIVITYDATA.oneofs_by_name['one'].fields.append(
   _ACTIVITYDATA.fields_by_name['Journey'])
 _ACTIVITYDATA.fields_by_name['Journey'].containing_oneof = _ACTIVITYDATA.oneofs_by_name['one']
@@ -1722,8 +1986,14 @@ _ACTIVITYDATA.oneofs_by_name['one'].fields.append(
   _ACTIVITYDATA.fields_by_name['Kitty'])
 _ACTIVITYDATA.fields_by_name['Kitty'].containing_oneof = _ACTIVITYDATA.oneofs_by_name['one']
 _ACTIVITYDATA.oneofs_by_name['one'].fields.append(
+  _ACTIVITYDATA.fields_by_name['StarRoad'])
+_ACTIVITYDATA.fields_by_name['StarRoad'].containing_oneof = _ACTIVITYDATA.oneofs_by_name['one']
+_ACTIVITYDATA.oneofs_by_name['one'].fields.append(
   _ACTIVITYDATA.fields_by_name['ConponChoose'])
 _ACTIVITYDATA.fields_by_name['ConponChoose'].containing_oneof = _ACTIVITYDATA.oneofs_by_name['one']
+_ACTIVITYDATA.oneofs_by_name['one'].fields.append(
+  _ACTIVITYDATA.fields_by_name['SaleBuff'])
+_ACTIVITYDATA.fields_by_name['SaleBuff'].containing_oneof = _ACTIVITYDATA.oneofs_by_name['one']
 _ACTIVITYDATA.oneofs_by_name['one'].fields.append(
   _ACTIVITYDATA.fields_by_name['TreasureRoom'])
 _ACTIVITYDATA.fields_by_name['TreasureRoom'].containing_oneof = _ACTIVITYDATA.oneofs_by_name['one']
@@ -1737,8 +2007,33 @@ _ACTIVITYDATA.oneofs_by_name['one'].fields.append(
   _ACTIVITYDATA.fields_by_name['PayGift'])
 _ACTIVITYDATA.fields_by_name['PayGift'].containing_oneof = _ACTIVITYDATA.oneofs_by_name['one']
 _ACTIVITYDATA.oneofs_by_name['one'].fields.append(
+  _ACTIVITYDATA.fields_by_name['CoinKingdom'])
+_ACTIVITYDATA.fields_by_name['CoinKingdom'].containing_oneof = _ACTIVITYDATA.oneofs_by_name['one']
+_ACTIVITYDATA.oneofs_by_name['one'].fields.append(
   _ACTIVITYDATA.fields_by_name['TastyBonus'])
 _ACTIVITYDATA.fields_by_name['TastyBonus'].containing_oneof = _ACTIVITYDATA.oneofs_by_name['one']
+_ACTIVITYDATA.oneofs_by_name['one'].fields.append(
+  _ACTIVITYDATA.fields_by_name['ThreeChooseOneAwards'])
+_ACTIVITYDATA.fields_by_name['ThreeChooseOneAwards'].containing_oneof = _ACTIVITYDATA.oneofs_by_name['one']
+_ACTIVITYDATA.oneofs_by_name['one'].fields.append(
+  _ACTIVITYDATA.fields_by_name['SaleBuffChoose'])
+_ACTIVITYDATA.fields_by_name['SaleBuffChoose'].containing_oneof = _ACTIVITYDATA.oneofs_by_name['one']
+_ACTIVITYDATA.oneofs_by_name['one'].fields.append(
+  _ACTIVITYDATA.fields_by_name['ThreeChooseOneRepeatAwards'])
+_ACTIVITYDATA.fields_by_name['ThreeChooseOneRepeatAwards'].containing_oneof = _ACTIVITYDATA.oneofs_by_name['one']
+_ACTIVITYDATA.oneofs_by_name['one'].fields.append(
+  _ACTIVITYDATA.fields_by_name['LuckyCardAwards'])
+_ACTIVITYDATA.fields_by_name['LuckyCardAwards'].containing_oneof = _ACTIVITYDATA.oneofs_by_name['one']
+_ACTIVITYDATA.oneofs_by_name['one'].fields.append(
+  _ACTIVITYDATA.fields_by_name['PayGiftGroup'])
+_ACTIVITYDATA.fields_by_name['PayGiftGroup'].containing_oneof = _ACTIVITYDATA.oneofs_by_name['one']
+_ACTIVITYDATA.oneofs_by_name['one'].fields.append(
+  _ACTIVITYDATA.fields_by_name['PrizeCatcher'])
+_ACTIVITYDATA.fields_by_name['PrizeCatcher'].containing_oneof = _ACTIVITYDATA.oneofs_by_name['one']
+_ACTIVITYRSPDATA.fields_by_name['DropCoin'].message_type = coinkingdom__pb2._COINKINGDOM_DROPCOIN
+_ACTIVITYRSPDATA.oneofs_by_name['One'].fields.append(
+  _ACTIVITYRSPDATA.fields_by_name['DropCoin'])
+_ACTIVITYRSPDATA.fields_by_name['DropCoin'].containing_oneof = _ACTIVITYRSPDATA.oneofs_by_name['One']
 _ACTIVITYDROP.fields_by_name['SRC'].enum_type = award__pb2._AWARDINFO_AWARDSRC
 _ACTIVITYDROP.fields_by_name['SubSRC'].enum_type = award__pb2._AWARDINFO_AWARDSUBSRC
 _ACTIVITYDROP.fields_by_name['Type'].enum_type = _ACTIVITYDROPTYPE
@@ -1788,6 +2083,7 @@ _ACTIVITY_RSP_ACTIVITYUSERDATA.fields_by_name['data'].message_type = _ACTIVITYDA
 _ACTIVITY_RSP_ACTIVITYUSERDATA.containing_type = _ACTIVITY_RSP
 _ACTIVITY_RSP_ACTIVITYPLAY.fields_by_name['Input'].message_type = _ACTIVITY_OPINPUT
 _ACTIVITY_RSP_ACTIVITYPLAY.fields_by_name['data'].message_type = _ACTIVITYDATA
+_ACTIVITY_RSP_ACTIVITYPLAY.fields_by_name['RspData'].message_type = _ACTIVITYRSPDATA
 _ACTIVITY_RSP_ACTIVITYPLAY.containing_type = _ACTIVITY_RSP
 _ACTIVITY_RSP.fields_by_name['OpResult'].message_type = _ACTIVITYOPRESULT
 _ACTIVITY_RSP.fields_by_name['List'].message_type = _ACTIVITY_RSP_ACTIVITYLIST
@@ -1806,6 +2102,7 @@ _ACTIVITY_RSP.fields_by_name['Play'].containing_oneof = _ACTIVITY_RSP.oneofs_by_
 DESCRIPTOR.message_types_by_name['ActivityOpResult'] = _ACTIVITYOPRESULT
 DESCRIPTOR.message_types_by_name['ActivityHeader'] = _ACTIVITYHEADER
 DESCRIPTOR.message_types_by_name['ActivityData'] = _ACTIVITYDATA
+DESCRIPTOR.message_types_by_name['ActivityRspData'] = _ACTIVITYRSPDATA
 DESCRIPTOR.message_types_by_name['ActivityDrop'] = _ACTIVITYDROP
 DESCRIPTOR.message_types_by_name['ActivityChangeList'] = _ACTIVITYCHANGELIST
 DESCRIPTOR.message_types_by_name['ActivityEventAwards'] = _ACTIVITYEVENTAWARDS
@@ -1853,6 +2150,13 @@ ActivityData = _reflection.GeneratedProtocolMessageType('ActivityData', (_messag
   })
 _sym_db.RegisterMessage(ActivityData)
 _sym_db.RegisterMessage(ActivityData.UserData)
+
+ActivityRspData = _reflection.GeneratedProtocolMessageType('ActivityRspData', (_message.Message,), {
+  'DESCRIPTOR' : _ACTIVITYRSPDATA,
+  '__module__' : 'activity_pb2'
+  # @@protoc_insertion_point(class_scope:pb.ActivityRspData)
+  })
+_sym_db.RegisterMessage(ActivityRspData)
 
 ActivityDrop = _reflection.GeneratedProtocolMessageType('ActivityDrop', (_message.Message,), {
   'DESCRIPTOR' : _ACTIVITYDROP,

@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'Z\004.;pb',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x0b\x61ward.proto\x12\x02pb\x1a\x0f\x61warddata.proto\"\xcb%\n\tAwardInfo\x12%\n\x04Type\x18\x01 \x01(\x0e\x32\x17.pb.AwardInfo.AwardType\x12\x10\n\x08SUB_TYPE\x18\x02 \x01(\t\x12\x0e\n\x06\x41mount\x18\x03 \x01(\x04\x12/\n\rCardPackAward\x18\x64 \x01(\x0b\x32\x16.pb.AwardInfo.CardPackH\x00\x12\'\n\tCardAward\x18\x65 \x01(\x0b\x32\x12.pb.AwardInfo.CardH\x00\x1aP\n\x08\x43\x61rdPack\x12\r\n\x05\x45ntry\x18\x01 \x01(\x05\x12!\n\x05\x43\x61rds\x18\x02 \x03(\x0b\x32\x12.pb.AwardInfo.Card\x12\x12\n\nResourceID\x18\x03 \x01(\x05\x1a@\n\x04\x43\x61rd\x12\x12\n\nResourceID\x18\x01 \x01(\x05\x12$\n\x04\x43\x61rd\x18\x02 \x01(\x0b\x32\x16.pb.AwardData.CardData\"\xf7\x01\n\tAwardType\x12\x0f\n\x0bUNSPECIFIED\x10\x00\x12\t\n\x05\x43OINS\x10\x01\x12\n\n\x06TICKET\x10\x02\x12\x0e\n\nCOLLECTION\x10\x03\x12\x08\n\x04\x42UFF\x10\x05\x12\x0c\n\x08POWER_UP\x10\x06\x12\t\n\x05STATE\x10\x07\x12\t\n\x05TIMES\x10\x08\x12\x07\n\x03GEM\x10\t\x12\n\n\x06POINTS\x10\n\x12\x08\n\x04ITEM\x10\x0b\x12\x08\n\x04HERO\x10\x0c\x12\x0b\n\x07HERO_XP\x10\r\x12\x0b\n\x07\x42OOSTER\x10\x0e\x12\n\n\x06\x43ONPON\x10\x0f\x12\x08\n\x04\x43\x41RD\x10\x10\x12\r\n\tCARD_PACK\x10\x11\x12\t\n\x05\x43raft\x10\x12\x12\x11\n\rACTIVITY_BUFF\x10\x13\"\x84\r\n\x08\x41wardSRC\x12\x13\n\x0fUNSPECIFIED_SRC\x10\x00\x12\x0b\n\x07SRC_LUR\x10\x01\x12\x13\n\x0fSRC_LOBBY_BONUS\x10\x02\x12\x12\n\x0eSRC_SHOP_BONUS\x10\x04\x12\x15\n\x11SRC_SHOP_PURCHASE\x10\x0b\x12\x15\n\x11SRC_SHOP_EXCHANGE\x10\x0c\x12\x0c\n\x08SRC_SPIN\x10\x0f\x12\x1a\n\x16SRC_Player_Update_Info\x10\x10\x12\r\n\tSRC_DEBUG\x10\x11\x12\x0e\n\nSRC_FRIEND\x10\x12\x12\x17\n\x13SRC_NEW_PLAYER_ECON\x10\x14\x12\r\n\tSRC_QUEST\x10\x15\x12\x17\n\x13SRC_LOBBYWHEEL_FREE\x10\x16\x12\x16\n\x12SRC_LOBBYWHEEL_PAY\x10\x17\x12\x19\n\x15SRC_DAILY_BONUS_SEVEN\x10\x18\x12\x1a\n\x16SRC_DAILY_BONUS_THIRTY\x10\x19\x12\x19\n\x15SRC_DAILY_BONUS_TOTAL\x10\x1a\x12\x13\n\x0fSRC_DAILY_LOGIN\x10\x1b\x12\x0e\n\nSRC_SYSTEM\x10\x1c\x12\x0c\n\x08SRC_MAIL\x10\x1d\x12\x14\n\x10SRC_DailyMission\x10\x1e\x12\x17\n\x13SRC_LOBBYPOKER_FREE\x10\x1f\x12\x16\n\x12SRC_LOBBYPOKER_PAY\x10 \x12\x12\n\x0eSRC_LOBBYPOKER\x10!\x12\x12\n\x0eSRC_LOBBYWHEEL\x10\"\x12\x0c\n\x08SRC_HERO\x10#\x12\x15\n\x11SRC_HERO_LEVEL_UP\x10$\x12\x14\n\x10SRC_NOVICE_GUIDE\x10%\x12\x13\n\x0fSRC_HERO_ACTIVE\x10&\x12\x18\n\x14SRC_HERO_SKILL_AWARD\x10\'\x12\x19\n\x15SRC_HERO2_SKILL_AWARD\x10(\x12\x0f\n\x0bSRC_FB_BIND\x10)\x12\r\n\tSRC_PIGGY\x10*\x12\x1b\n\x17SRC_SHOP_PIGGY_PURCHASE\x10+\x12\x13\n\x0fSRC_ACT_JOURNEY\x10,\x12\x0f\n\x0bSRC_BOOSTER\x10-\x12\x1b\n\x17SRC_BOOSTER_LUCKY_SEVEN\x10.\x12\x17\n\x13SRC_SHOP_Royal_seal\x10/\x12\x12\n\x0eSRC_ROYAL_PASS\x10\x30\x12\x19\n\x15SRC_ACT_ENDLESSRICHES\x10\x31\x12\x16\n\x12SRC_ACT_MULTIVERSE\x10\x32\x12\x14\n\x10SRC_REISSUE_HERO\x10\x33\x12\x15\n\x11SRC_REISSUE_HERO3\x10\x34\x12\x1f\n\x1bSRC_CLIENT_VERSION_LEVEL_UP\x10\x35\x12\x11\n\rSRC_ACT_BINGO\x10\x36\x12\x12\n\x0eSRC_ACT_CENTER\x10\x37\x12\x15\n\x11SRC_ACT_CHALLENGE\x10\x38\x12\x16\n\x12SRC_CARD_GATHERING\x10\x39\x12\x19\n\x15SRC_HERO3_SKILL_AWARD\x10:\x12\x11\n\rSRC_ACT_CHASE\x10;\x12\x16\n\x12SRC_MAILWHEEL_FREE\x10<\x12\x16\n\x12SRC_MAILPOKER_FREE\x10=\x12\x1b\n\x17SRC_ROYALPASSWHEEL_FREE\x10>\x12\x1b\n\x17SRC_ROYALPASSPOKER_FREE\x10?\x12\x1b\n\x17SRC_ACT_MISSIONACTIVITY\x10@\x12\x0e\n\nSRC_CONPON\x10\x41\x12\x12\n\x0eSRC_ACT_CONPON\x10\x42\x12\x18\n\x14SRC_PUZZLE_MILESTONE\x10\x43\x12\x16\n\x12SRC_ACT_CANDY_MART\x10\x44\x12\x16\n\x12SRC_ACT_LUXURYSEAL\x10\x45\x12\x13\n\x0fSRC_ACT_SPINMAX\x10\x46\x12\x14\n\x10SRC_LEVEL_SPRINT\x10G\x12\x1e\n\x1aSRC_ACT_DAILYMISSIONCHOOSE\x10H\x12\x1b\n\x17SRC_ACT_ONETWOPROMOTION\x10I\x12\x14\n\x10SRC_ACT_SALEBUFF\x10J\x12\x18\n\x14SRC_ACT_CONPONCHOOSE\x10K\x12\x15\n\x11SRC_ACT_WILDWHEEL\x10L\x12\x16\n\x12SRC_ACT_GAMELEGEND\x10P\x12\x15\n\x11SRC_ACT_VIP_BOOST\x10Q\x12\x19\n\x15SRC_ACT_TREASURE_ROOM\x10R\x12\x11\n\rSRC_ACT_KITTY\x10S\x12\x1c\n\x18SRC_ACT_DOUBLE_WIN_AGAIN\x10T\x12\x13\n\x0fSRC_TASTY_BONUS\x10X\"\xe7\x0f\n\x0b\x41wardSubSRC\x12\x17\n\x13SUB_UNSPECIFIED_SRC\x10\x00\x12\x1f\n\x1bSUB_SRC_DailyMission_Normal\x10\x01\x12\x1e\n\x1aSUB_SRC_DailyMission_Super\x10\x02\x12\x1e\n\x1aSUB_SRC_DailyMission_Point\x10\x03\x12\x15\n\x11SUB_SRC_Hero_Shop\x10\x04\x12!\n\x1dSUB_SRC_Hero_Skill_Award_Coin\x10\x05\x12!\n\x1dSUB_SRC_Hero_Skill_Award_Dice\x10\x06\x12\x1f\n\x1bSUB_SRC_BOOSTER_LEVEL_BLAST\x10\x07\x12\x1e\n\x1aSUB_SRC_BOOSTER_WHEEL_BOOM\x10\x08\x12\x1f\n\x1bSUB_SRC_BOOSTER_LUCKY_SEVEN\x10\t\x12\"\n\x1eSUB_SRC_BOOSTER_ONE_HOUR_BLITZ\x10\n\x12\x1c\n\x18SUB_SRC_Multiverse_Level\x10\x0b\x12\x1d\n\x19SUB_SRC_Multiverse_Reward\x10\x0c\x12\x1b\n\x17SUB_SRC_Multiverse_Reel\x10\r\x12\x17\n\x13SUB_SRC_Journey_Map\x10\x0e\x12\x18\n\x14SUB_SRC_Journey_Spin\x10\x0f\x12\x15\n\x11SUB_SRC_Bingo_Box\x10\x10\x12\x1a\n\x16SUB_SRC_Bingo_Progress\x10\x11\x12\x1b\n\x17SUB_SRC_Journey_PathEnd\x10\x12\x12\"\n\x1eSUB_SRC_Hero3_Skill_Award_Coin\x10\x13\x12\x1d\n\x19SUB_SRC_RoyalPass_Collect\x10\x14\x12#\n\x1fSUB_SRC_RoyalPass_OneKeyCollect\x10\x15\x12\x1f\n\x1bSUB_SRC_RoyalPass_WheelSpin\x10\x16\x12\x17\n\x13SUB_SRC_Bingo_Stage\x10\x17\x12\x16\n\x12SUB_SRC_Bingo_Shop\x10\x18\x12\x16\n\x12SUB_SRC_Bingo_Hero\x10\x19\x12\x19\n\x15SUB_SRC_Bingo_Mission\x10\x1a\x12\x1a\n\x16SUB_SRC_CandyMart_Spin\x10\x1b\x12\x1e\n\x1aSUB_SRC_CandyMart_Progress\x10\x1c\x12\x1b\n\x17SUB_SRC_CandyMart_Stage\x10\x1d\x12\x1d\n\x19SUB_SRC_CandyMart_Jackpot\x10\x1e\x12\x1d\n\x19SUB_SRC_CandyMart_Present\x10\x1f\x12&\n\"SUB_SRC_CardGathering_SeasonReward\x10 \x12%\n!SUB_SRC_CardGathering_LevelReward\x10!\x12$\n SUB_SRC_CardGathering_SpinReward\x10\"\x12\"\n\x1eSUB_SRC_CardGathering_Exchange\x10#\x12\"\n\x1eSUB_SRC_CardGathering_Breaking\x10$\x12\x10\n\x0cSUB_SRC_Shop\x10%\x12\x1e\n\x1aSUB_SRC_CardGathering_Deck\x10&\x12!\n\x1dSUB_SRC_CardGathering_DeckNum\x10\'\x12\x1d\n\x19SUB_SRC_CardEndlessRiches\x10(\x12\x15\n\x11SUB_SRC_CardChase\x10)\x12(\n$SUB_SRC_CardGathering_Breaking_Reset\x10*\x12\x1a\n\x16SUB_SRC_CardLuxurySeal\x10+\x12\x13\n\x0fSUB_SRC_LS_LvUp\x10,\x12\x13\n\x0fSUB_SRC_LS_Game\x10-\x12\x16\n\x12SUB_SRC_LS_BuyBuff\x10.\x12\x1d\n\x19SUB_SRC_LS_Game_Free_Draw\x10/\x12\x1c\n\x18SUB_SRC_LS_Game_Pay_Draw\x10\x30\x12\x1b\n\x17SUB_SRC_LS_Game_Free_JP\x10\x31\x12\x1a\n\x16SUB_SRC_LS_Game_Pay_JP\x10\x32\x12\"\n\x1eSUB_SRC_CardDailyMissionChoose\x10\x33\x12\x1f\n\x1bSUB_SRC_CardOneTwoPromotion\x10\x34\x12\x18\n\x14SUB_SRC_CardSaleBuff\x10\x35\x12\x1c\n\x18SUB_SRC_CardConponChoose\x10\x36\x12\x19\n\x15SUB_SRC_CardWildWheel\x10\x37\x12\"\n\x1eSUB_SRC_PayGift_LobbyPromotion\x10\x38\x12\x1c\n\x18SUB_SRC_PayGift_Purchase\x10\x39\x12\x1e\n\x1aSUB_SRC_TreasureRoom_Event\x10:\x12\x1f\n\x1bSUB_SRC_TreasureRoom_Reward\x10;\x12\x19\n\x15SUB_SRC_CardChallenge\x10<\x12 \n\x1cSUB_SRC_CardRoyalPassReissue\x10=\x12\x15\n\x11SUB_SRC_Kitty_Map\x10>\x12\x19\n\x15SUB_SRC_Kitty_PathEnd\x10?\x12\x16\n\x12SUB_SRC_Kitty_Spin\x10@\x12\x19\n\x15SUB_SRC_Kitty_Mission\x10\x41\x12\x17\n\x13SUB_SRC_Kitty_Final\x10\x42\"\x94\x04\n\x0c\x41wardGameSRC\x12\x14\n\x10GAME_SRC_Default\x10\x00\x12\x1c\n\x18GAME_SRC_Wheel_RoyalPass\x10\x0b\x12\x18\n\x14GAME_SRC_Wheel_Chase\x10\x0c\x12 \n\x1cGAME_SRC_Wheel_EndLessRiches\x10\r\x12>\n:GAME_SRC_Wheel_DailyMissionActivity_NormalMission_TaskFive\x10\x0e\x12:\n6GAME_SRC_Wheel_MissionActivity_SuperMission_ThreeTimes\x10\x0f\x12\x1c\n\x18GAME_SRC_Wheel_WildWheel\x10\x10\x12\"\n\x1eGAME_SRC_Wheel_OneTwoPromotion\x10\x11\x12\x1c\n\x18GAME_SRC_Poker_RoyalPass\x10\x65\x12\x18\n\x14GAME_SRC_Poker_Chase\x10\x66\x12 \n\x1cGAME_SRC_Poker_EndLessRiches\x10g\x12:\n6GAME_SRC_Poker_MissionActivity_NormalMission_TaskThree\x10h\x12\x1c\n\x18GAME_SRC_Poker_WildWheel\x10i\x12\"\n\x1eGAME_SRC_Poker_OneTwoPromotion\x10kB\x05\n\x03one\"[\n\x05\x41ward\x12#\n\x03SRC\x18\x01 \x01(\x0e\x32\x16.pb.AwardInfo.AwardSRC\x12\x0f\n\x07SUB_SRC\x18\x02 \x01(\r\x12\x1c\n\x05Pairs\x18\x03 \x03(\x0b\x32\r.pb.AwardInfo\"*\n\tAwardList\x12\x1d\n\x06\x41wards\x18\x01 \x03(\x0b\x32\r.pb.AwardInfo\"@\n\rProgressAward\x12\x10\n\x08Progress\x18\x01 \x01(\x05\x12\x1d\n\x06\x41wards\x18\x02 \x03(\x0b\x32\r.pb.AwardInfoB\x06Z\x04.;pbb\x06proto3'
+  serialized_pb=b'\n\x0b\x61ward.proto\x12\x02pb\x1a\x0f\x61warddata.proto\"\xf0\x31\n\tAwardInfo\x12%\n\x04Type\x18\x01 \x01(\x0e\x32\x17.pb.AwardInfo.AwardType\x12\x10\n\x08SUB_TYPE\x18\x02 \x01(\t\x12\x0e\n\x06\x41mount\x18\x03 \x01(\x04\x12/\n\rCardPackAward\x18\x64 \x01(\x0b\x32\x16.pb.AwardInfo.CardPackH\x00\x12\'\n\tCardAward\x18\x65 \x01(\x0b\x32\x12.pb.AwardInfo.CardH\x00\x1aP\n\x08\x43\x61rdPack\x12\r\n\x05\x45ntry\x18\x01 \x01(\x05\x12!\n\x05\x43\x61rds\x18\x02 \x03(\x0b\x32\x12.pb.AwardInfo.Card\x12\x12\n\nResourceID\x18\x03 \x01(\x05\x1a@\n\x04\x43\x61rd\x12\x12\n\nResourceID\x18\x01 \x01(\x05\x12$\n\x04\x43\x61rd\x18\x02 \x01(\x0b\x32\x16.pb.AwardData.CardData\"\xf7\x01\n\tAwardType\x12\x0f\n\x0bUNSPECIFIED\x10\x00\x12\t\n\x05\x43OINS\x10\x01\x12\n\n\x06TICKET\x10\x02\x12\x0e\n\nCOLLECTION\x10\x03\x12\x08\n\x04\x42UFF\x10\x05\x12\x0c\n\x08POWER_UP\x10\x06\x12\t\n\x05STATE\x10\x07\x12\t\n\x05TIMES\x10\x08\x12\x07\n\x03GEM\x10\t\x12\n\n\x06POINTS\x10\n\x12\x08\n\x04ITEM\x10\x0b\x12\x08\n\x04HERO\x10\x0c\x12\x0b\n\x07HERO_XP\x10\r\x12\x0b\n\x07\x42OOSTER\x10\x0e\x12\n\n\x06\x43ONPON\x10\x0f\x12\x08\n\x04\x43\x41RD\x10\x10\x12\r\n\tCARD_PACK\x10\x11\x12\t\n\x05\x43raft\x10\x12\x12\x11\n\rACTIVITY_BUFF\x10\x13\"\x80\x0f\n\x08\x41wardSRC\x12\x13\n\x0fUNSPECIFIED_SRC\x10\x00\x12\x0b\n\x07SRC_LUR\x10\x01\x12\x13\n\x0fSRC_LOBBY_BONUS\x10\x02\x12\x12\n\x0eSRC_SHOP_BONUS\x10\x04\x12\x15\n\x11SRC_SHOP_PURCHASE\x10\x0b\x12\x15\n\x11SRC_SHOP_EXCHANGE\x10\x0c\x12\x0c\n\x08SRC_SPIN\x10\x0f\x12\x1a\n\x16SRC_Player_Update_Info\x10\x10\x12\r\n\tSRC_DEBUG\x10\x11\x12\x0e\n\nSRC_FRIEND\x10\x12\x12\x17\n\x13SRC_NEW_PLAYER_ECON\x10\x14\x12\r\n\tSRC_QUEST\x10\x15\x12\x17\n\x13SRC_LOBBYWHEEL_FREE\x10\x16\x12\x16\n\x12SRC_LOBBYWHEEL_PAY\x10\x17\x12\x19\n\x15SRC_DAILY_BONUS_SEVEN\x10\x18\x12\x1a\n\x16SRC_DAILY_BONUS_THIRTY\x10\x19\x12\x19\n\x15SRC_DAILY_BONUS_TOTAL\x10\x1a\x12\x13\n\x0fSRC_DAILY_LOGIN\x10\x1b\x12\x0e\n\nSRC_SYSTEM\x10\x1c\x12\x0c\n\x08SRC_MAIL\x10\x1d\x12\x14\n\x10SRC_DailyMission\x10\x1e\x12\x17\n\x13SRC_LOBBYPOKER_FREE\x10\x1f\x12\x16\n\x12SRC_LOBBYPOKER_PAY\x10 \x12\x12\n\x0eSRC_LOBBYPOKER\x10!\x12\x12\n\x0eSRC_LOBBYWHEEL\x10\"\x12\x0c\n\x08SRC_HERO\x10#\x12\x15\n\x11SRC_HERO_LEVEL_UP\x10$\x12\x14\n\x10SRC_NOVICE_GUIDE\x10%\x12\x13\n\x0fSRC_HERO_ACTIVE\x10&\x12\x18\n\x14SRC_HERO_SKILL_AWARD\x10\'\x12\x19\n\x15SRC_HERO2_SKILL_AWARD\x10(\x12\x0f\n\x0bSRC_FB_BIND\x10)\x12\r\n\tSRC_PIGGY\x10*\x12\x1b\n\x17SRC_SHOP_PIGGY_PURCHASE\x10+\x12\x13\n\x0fSRC_ACT_JOURNEY\x10,\x12\x0f\n\x0bSRC_BOOSTER\x10-\x12\x1b\n\x17SRC_BOOSTER_LUCKY_SEVEN\x10.\x12\x17\n\x13SRC_SHOP_Royal_seal\x10/\x12\x12\n\x0eSRC_ROYAL_PASS\x10\x30\x12\x19\n\x15SRC_ACT_ENDLESSRICHES\x10\x31\x12\x16\n\x12SRC_ACT_MULTIVERSE\x10\x32\x12\x14\n\x10SRC_REISSUE_HERO\x10\x33\x12\x15\n\x11SRC_REISSUE_HERO3\x10\x34\x12\x1f\n\x1bSRC_CLIENT_VERSION_LEVEL_UP\x10\x35\x12\x11\n\rSRC_ACT_BINGO\x10\x36\x12\x12\n\x0eSRC_ACT_CENTER\x10\x37\x12\x15\n\x11SRC_ACT_CHALLENGE\x10\x38\x12\x16\n\x12SRC_CARD_GATHERING\x10\x39\x12\x19\n\x15SRC_HERO3_SKILL_AWARD\x10:\x12\x11\n\rSRC_ACT_CHASE\x10;\x12\x16\n\x12SRC_MAILWHEEL_FREE\x10<\x12\x16\n\x12SRC_MAILPOKER_FREE\x10=\x12\x1b\n\x17SRC_ROYALPASSWHEEL_FREE\x10>\x12\x1b\n\x17SRC_ROYALPASSPOKER_FREE\x10?\x12\x1b\n\x17SRC_ACT_MISSIONACTIVITY\x10@\x12\x0e\n\nSRC_CONPON\x10\x41\x12\x12\n\x0eSRC_ACT_CONPON\x10\x42\x12\x18\n\x14SRC_PUZZLE_MILESTONE\x10\x43\x12\x16\n\x12SRC_ACT_CANDY_MART\x10\x44\x12\x16\n\x12SRC_ACT_LUXURYSEAL\x10\x45\x12\x13\n\x0fSRC_ACT_SPINMAX\x10\x46\x12\x14\n\x10SRC_LEVEL_SPRINT\x10G\x12\x1e\n\x1aSRC_ACT_DAILYMISSIONCHOOSE\x10H\x12\x1b\n\x17SRC_ACT_ONETWOPROMOTION\x10I\x12\x14\n\x10SRC_ACT_SALEBUFF\x10J\x12\x18\n\x14SRC_ACT_CONPONCHOOSE\x10K\x12\x15\n\x11SRC_ACT_WILDWHEEL\x10L\x12\x16\n\x12SRC_ACT_MAGIC_WEEK\x10O\x12\x16\n\x12SRC_ACT_GAMELEGEND\x10P\x12\x15\n\x11SRC_ACT_VIP_BOOST\x10Q\x12\x19\n\x15SRC_ACT_TREASURE_ROOM\x10R\x12\x10\n\x0cSRC_RPC_GAME\x10S\x12\x11\n\rSRC_ACT_KITTY\x10T\x12\x1c\n\x18SRC_ACT_DOUBLE_WIN_AGAIN\x10U\x12\x18\n\x14SRC_ACT_COIN_KINGDOM\x10V\x12\x13\n\x0fSRC_TASTY_BONUS\x10X\x12\x1a\n\x16SRC_ACT_THREECHOOSEONE\x10Y\x12\x14\n\x10SRC_ACT_STARROAD\x10Z\x12 \n\x1cSRC_ACT_THREECHOOSEONEREPEAT\x10[\x12\x18\n\x14SRC_ACT_PAYGIFTGROUP\x10\\\x12\x15\n\x11SRC_PRIZE_CATCHER\x10]\x12\x1a\n\x16SRC_ACT_ENDLESSRICHES2\x10\x64\x12\x15\n\x11SRC_ACT_LUCKYCARD\x10\x65\"\xc2\x18\n\x0b\x41wardSubSRC\x12\x17\n\x13SUB_UNSPECIFIED_SRC\x10\x00\x12\x1f\n\x1bSUB_SRC_DailyMission_Normal\x10\x01\x12\x1e\n\x1aSUB_SRC_DailyMission_Super\x10\x02\x12\x1e\n\x1aSUB_SRC_DailyMission_Point\x10\x03\x12\x15\n\x11SUB_SRC_Hero_Shop\x10\x04\x12!\n\x1dSUB_SRC_Hero_Skill_Award_Coin\x10\x05\x12!\n\x1dSUB_SRC_Hero_Skill_Award_Dice\x10\x06\x12\x1f\n\x1bSUB_SRC_BOOSTER_LEVEL_BLAST\x10\x07\x12\x1e\n\x1aSUB_SRC_BOOSTER_WHEEL_BOOM\x10\x08\x12\x1f\n\x1bSUB_SRC_BOOSTER_LUCKY_SEVEN\x10\t\x12\"\n\x1eSUB_SRC_BOOSTER_ONE_HOUR_BLITZ\x10\n\x12\x1c\n\x18SUB_SRC_Multiverse_Level\x10\x0b\x12\x1d\n\x19SUB_SRC_Multiverse_Reward\x10\x0c\x12\x1b\n\x17SUB_SRC_Multiverse_Reel\x10\r\x12\x17\n\x13SUB_SRC_Journey_Map\x10\x0e\x12\x18\n\x14SUB_SRC_Journey_Spin\x10\x0f\x12\x15\n\x11SUB_SRC_Bingo_Box\x10\x10\x12\x1a\n\x16SUB_SRC_Bingo_Progress\x10\x11\x12\x1b\n\x17SUB_SRC_Journey_PathEnd\x10\x12\x12\"\n\x1eSUB_SRC_Hero3_Skill_Award_Coin\x10\x13\x12\x1d\n\x19SUB_SRC_RoyalPass_Collect\x10\x14\x12#\n\x1fSUB_SRC_RoyalPass_OneKeyCollect\x10\x15\x12\x1f\n\x1bSUB_SRC_RoyalPass_WheelSpin\x10\x16\x12\x17\n\x13SUB_SRC_Bingo_Stage\x10\x17\x12\x16\n\x12SUB_SRC_Bingo_Shop\x10\x18\x12\x16\n\x12SUB_SRC_Bingo_Hero\x10\x19\x12\x19\n\x15SUB_SRC_Bingo_Mission\x10\x1a\x12\x1a\n\x16SUB_SRC_CandyMart_Spin\x10\x1b\x12\x1e\n\x1aSUB_SRC_CandyMart_Progress\x10\x1c\x12\x1b\n\x17SUB_SRC_CandyMart_Stage\x10\x1d\x12\x1d\n\x19SUB_SRC_CandyMart_Jackpot\x10\x1e\x12\x1d\n\x19SUB_SRC_CandyMart_Present\x10\x1f\x12&\n\"SUB_SRC_CardGathering_SeasonReward\x10 \x12%\n!SUB_SRC_CardGathering_LevelReward\x10!\x12$\n SUB_SRC_CardGathering_SpinReward\x10\"\x12\"\n\x1eSUB_SRC_CardGathering_Exchange\x10#\x12\"\n\x1eSUB_SRC_CardGathering_Breaking\x10$\x12\x10\n\x0cSUB_SRC_Shop\x10%\x12\x1e\n\x1aSUB_SRC_CardGathering_Deck\x10&\x12!\n\x1dSUB_SRC_CardGathering_DeckNum\x10\'\x12\x1d\n\x19SUB_SRC_CardEndlessRiches\x10(\x12\x15\n\x11SUB_SRC_CardChase\x10)\x12(\n$SUB_SRC_CardGathering_Breaking_Reset\x10*\x12\x1a\n\x16SUB_SRC_CardLuxurySeal\x10+\x12\x13\n\x0fSUB_SRC_LS_LvUp\x10,\x12\x13\n\x0fSUB_SRC_LS_Game\x10-\x12\x16\n\x12SUB_SRC_LS_BuyBuff\x10.\x12\x1d\n\x19SUB_SRC_LS_Game_Free_Draw\x10/\x12\x1c\n\x18SUB_SRC_LS_Game_Pay_Draw\x10\x30\x12\x1b\n\x17SUB_SRC_LS_Game_Free_JP\x10\x31\x12\x1a\n\x16SUB_SRC_LS_Game_Pay_JP\x10\x32\x12\"\n\x1eSUB_SRC_CardDailyMissionChoose\x10\x33\x12\x1f\n\x1bSUB_SRC_CardOneTwoPromotion\x10\x34\x12\x18\n\x14SUB_SRC_CardSaleBuff\x10\x35\x12\x1c\n\x18SUB_SRC_CardConponChoose\x10\x36\x12\x19\n\x15SUB_SRC_CardWildWheel\x10\x37\x12\"\n\x1eSUB_SRC_PayGift_LobbyPromotion\x10\x38\x12\x1c\n\x18SUB_SRC_PayGift_Purchase\x10\x39\x12\x1e\n\x1aSUB_SRC_TreasureRoom_Event\x10:\x12\x1f\n\x1bSUB_SRC_TreasureRoom_Reward\x10;\x12\x19\n\x15SUB_SRC_CardChallenge\x10<\x12 \n\x1cSUB_SRC_CardRoyalPassReissue\x10=\x12\x15\n\x11SUB_SRC_Kitty_Map\x10>\x12\x19\n\x15SUB_SRC_Kitty_PathEnd\x10?\x12\x16\n\x12SUB_SRC_Kitty_Spin\x10@\x12\x19\n\x15SUB_SRC_Kitty_Mission\x10\x41\x12\x17\n\x13SUB_SRC_Kitty_Final\x10\x42\x12\x18\n\x14SUB_SRC_CardStarRoad\x10\x43\x12\x14\n\x10SUB_SRC_CardMail\x10\x44\x12*\n&SUB_SRC_StarRoad_FinishNorDailyMission\x10\x45\x12*\n&SUB_SRC_StarRoad_FinishSupDailyMission\x10\x46\x12#\n\x1fSUB_SRC_StarRoad_LobbyPromoTion\x10G\x12*\n&SUB_SRC_StarRoad_CollectWheelFreeAward\x10H\x12*\n&SUB_SRC_StarRoad_CollectPokerFreeAward\x10I\x12\"\n\x1eSUB_SRC_StarRoad_BingoCardDone\x10J\x12\x1b\n\x17SUB_SRC_StarRoad_GemBuy\x10K\x12\x1e\n\x1aSUB_SRC_CardThreeChooseOne\x10L\x12%\n!SUB_SRC_CardThreeChooseOnerRepeat\x10M\x12#\n\x1fSUB_SRC_CardDailyMission_Normal\x10N\x12\"\n\x1eSUB_SRC_CardDailyMission_Super\x10O\x12\x1c\n\x18SUB_SRC_CoinKingdom_Spin\x10Q\x12 \n\x1cSUB_SRC_CoinKingdom_Progress\x10R\x12\x1d\n\x19SUB_SRC_CoinKingdom_Stage\x10S\x12\x1f\n\x1bSUB_SRC_CoinKingdom_Jackpot\x10T\x12\x1f\n\x1bSUB_SRC_CoinKingdom_Unknown\x10U\x12\x1b\n\x17SUB_SRC_CoinKingdom_Box\x10V\x12\"\n\x1eSUB_SRC_CoinKingdom_FreeReward\x10W\x12 \n\x1cSUB_SRC_CoinKingdom_CoinPile\x10X\x12\x1c\n\x18SUB_SRC_CardPrizeCatcher\x10Y\x12#\n\x1fSUB_SRC_CandyMart_More_Progress\x10Z\x12 \n\x1cSUB_SRC_CandyMart_More_Stage\x10[\x12\"\n\x1eSUB_SRC_CandyMart_More_Jackpot\x10\\\x12\"\n\x1eSUB_SRC_CandyMart_More_Present\x10]\x12\x1e\n\x1aSUB_SRC_MagicWeek_GameCoin\x10_\x12\x1d\n\x19SUB_SRC_MagicWeek_KeyCoin\x10`\x12\x1c\n\x18SUB_SRC_MagicWeek_Reward\x10\x61\x12\x1e\n\x1aSUB_SRC_CardEndlessRiches2\x10\x64\x12\x19\n\x15SUB_SRC_CardLuckyCard\x10\x65\x12\x1c\n\x18SUB_SRC_Magic_Week_Daily\x10\x66\x12\x1c\n\x18SUB_SRC_Magic_Week_Login\x10g\"\xe2\x05\n\x0c\x41wardGameSRC\x12\x14\n\x10GAME_SRC_Default\x10\x00\x12\x1c\n\x18GAME_SRC_Wheel_RoyalPass\x10\x0b\x12\x18\n\x14GAME_SRC_Wheel_Chase\x10\x0c\x12 \n\x1cGAME_SRC_Wheel_EndLessRiches\x10\r\x12>\n:GAME_SRC_Wheel_DailyMissionActivity_NormalMission_TaskFive\x10\x0e\x12:\n6GAME_SRC_Wheel_MissionActivity_SuperMission_ThreeTimes\x10\x0f\x12\x1c\n\x18GAME_SRC_Wheel_WildWheel\x10\x10\x12\"\n\x1eGAME_SRC_Wheel_OneTwoPromotion\x10\x11\x12!\n\x1dGAME_SRC_Wheel_ThreeChooseOne\x10\x12\x12\x1f\n\x1bGAME_SRC_Wheel_PrizeCatcher\x10\x13\x12!\n\x1dGAME_SRC_Wheel_EndLessRiches2\x10\x14\x12\x1c\n\x18GAME_SRC_Poker_RoyalPass\x10\x65\x12\x18\n\x14GAME_SRC_Poker_Chase\x10\x66\x12 \n\x1cGAME_SRC_Poker_EndLessRiches\x10g\x12:\n6GAME_SRC_Poker_MissionActivity_NormalMission_TaskThree\x10h\x12\x1c\n\x18GAME_SRC_Poker_WildWheel\x10i\x12\"\n\x1eGAME_SRC_Poker_OneTwoPromotion\x10k\x12!\n\x1dGAME_SRC_Poker_ThreeChooseOne\x10l\x12\x1f\n\x1bGAME_SRC_Poker_PrizeCatcher\x10m\x12!\n\x1dGAME_SRC_Poker_EndLessRiches2\x10xB\x05\n\x03one\"[\n\x05\x41ward\x12#\n\x03SRC\x18\x01 \x01(\x0e\x32\x16.pb.AwardInfo.AwardSRC\x12\x0f\n\x07SUB_SRC\x18\x02 \x01(\r\x12\x1c\n\x05Pairs\x18\x03 \x03(\x0b\x32\r.pb.AwardInfo\"*\n\tAwardList\x12\x1d\n\x06\x41wards\x18\x01 \x03(\x0b\x32\r.pb.AwardInfo\"@\n\rProgressAward\x12\x10\n\x08Progress\x18\x01 \x01(\x05\x12\x1d\n\x06\x41wards\x18\x02 \x03(\x0b\x32\r.pb.AwardInfoB\x06Z\x04.;pbb\x06proto3'
   ,
   dependencies=[awarddata__pb2.DESCRIPTOR,])
 
@@ -479,32 +479,82 @@ _AWARDINFO_AWARDSRC = _descriptor.EnumDescriptor(
       type=None,
       create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
-      name='SRC_ACT_GAMELEGEND', index=67, number=80,
+      name='SRC_ACT_MAGIC_WEEK', index=67, number=79,
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
-      name='SRC_ACT_VIP_BOOST', index=68, number=81,
+      name='SRC_ACT_GAMELEGEND', index=68, number=80,
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
-      name='SRC_ACT_TREASURE_ROOM', index=69, number=82,
+      name='SRC_ACT_VIP_BOOST', index=69, number=81,
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
-      name='SRC_ACT_KITTY', index=70, number=83,
+      name='SRC_ACT_TREASURE_ROOM', index=70, number=82,
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
-      name='SRC_ACT_DOUBLE_WIN_AGAIN', index=71, number=84,
+      name='SRC_RPC_GAME', index=71, number=83,
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
-      name='SRC_TASTY_BONUS', index=72, number=88,
+      name='SRC_ACT_KITTY', index=72, number=84,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='SRC_ACT_DOUBLE_WIN_AGAIN', index=73, number=85,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='SRC_ACT_COIN_KINGDOM', index=74, number=86,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='SRC_TASTY_BONUS', index=75, number=88,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='SRC_ACT_THREECHOOSEONE', index=76, number=89,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='SRC_ACT_STARROAD', index=77, number=90,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='SRC_ACT_THREECHOOSEONEREPEAT', index=78, number=91,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='SRC_ACT_PAYGIFTGROUP', index=79, number=92,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='SRC_PRIZE_CATCHER', index=80, number=93,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='SRC_ACT_ENDLESSRICHES2', index=81, number=100,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='SRC_ACT_LUCKYCARD', index=82, number=101,
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
@@ -512,7 +562,7 @@ _AWARDINFO_AWARDSRC = _descriptor.EnumDescriptor(
   containing_type=None,
   serialized_options=None,
   serialized_start=612,
-  serialized_end=2280,
+  serialized_end=2532,
 )
 _sym_db.RegisterEnumDescriptor(_AWARDINFO_AWARDSRC)
 
@@ -858,11 +908,176 @@ _AWARDINFO_AWARDSUBSRC = _descriptor.EnumDescriptor(
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='SUB_SRC_CardStarRoad', index=67, number=67,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='SUB_SRC_CardMail', index=68, number=68,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='SUB_SRC_StarRoad_FinishNorDailyMission', index=69, number=69,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='SUB_SRC_StarRoad_FinishSupDailyMission', index=70, number=70,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='SUB_SRC_StarRoad_LobbyPromoTion', index=71, number=71,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='SUB_SRC_StarRoad_CollectWheelFreeAward', index=72, number=72,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='SUB_SRC_StarRoad_CollectPokerFreeAward', index=73, number=73,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='SUB_SRC_StarRoad_BingoCardDone', index=74, number=74,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='SUB_SRC_StarRoad_GemBuy', index=75, number=75,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='SUB_SRC_CardThreeChooseOne', index=76, number=76,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='SUB_SRC_CardThreeChooseOnerRepeat', index=77, number=77,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='SUB_SRC_CardDailyMission_Normal', index=78, number=78,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='SUB_SRC_CardDailyMission_Super', index=79, number=79,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='SUB_SRC_CoinKingdom_Spin', index=80, number=81,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='SUB_SRC_CoinKingdom_Progress', index=81, number=82,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='SUB_SRC_CoinKingdom_Stage', index=82, number=83,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='SUB_SRC_CoinKingdom_Jackpot', index=83, number=84,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='SUB_SRC_CoinKingdom_Unknown', index=84, number=85,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='SUB_SRC_CoinKingdom_Box', index=85, number=86,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='SUB_SRC_CoinKingdom_FreeReward', index=86, number=87,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='SUB_SRC_CoinKingdom_CoinPile', index=87, number=88,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='SUB_SRC_CardPrizeCatcher', index=88, number=89,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='SUB_SRC_CandyMart_More_Progress', index=89, number=90,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='SUB_SRC_CandyMart_More_Stage', index=90, number=91,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='SUB_SRC_CandyMart_More_Jackpot', index=91, number=92,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='SUB_SRC_CandyMart_More_Present', index=92, number=93,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='SUB_SRC_MagicWeek_GameCoin', index=93, number=95,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='SUB_SRC_MagicWeek_KeyCoin', index=94, number=96,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='SUB_SRC_MagicWeek_Reward', index=95, number=97,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='SUB_SRC_CardEndlessRiches2', index=96, number=100,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='SUB_SRC_CardLuckyCard', index=97, number=101,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='SUB_SRC_Magic_Week_Daily', index=98, number=102,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='SUB_SRC_Magic_Week_Login', index=99, number=103,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=2283,
-  serialized_end=4306,
+  serialized_start=2535,
+  serialized_end=5673,
 )
 _sym_db.RegisterEnumDescriptor(_AWARDINFO_AWARDSUBSRC)
 
@@ -914,40 +1129,70 @@ _AWARDINFO_AWARDGAMESRC = _descriptor.EnumDescriptor(
       type=None,
       create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
-      name='GAME_SRC_Poker_RoyalPass', index=8, number=101,
+      name='GAME_SRC_Wheel_ThreeChooseOne', index=8, number=18,
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
-      name='GAME_SRC_Poker_Chase', index=9, number=102,
+      name='GAME_SRC_Wheel_PrizeCatcher', index=9, number=19,
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
-      name='GAME_SRC_Poker_EndLessRiches', index=10, number=103,
+      name='GAME_SRC_Wheel_EndLessRiches2', index=10, number=20,
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
-      name='GAME_SRC_Poker_MissionActivity_NormalMission_TaskThree', index=11, number=104,
+      name='GAME_SRC_Poker_RoyalPass', index=11, number=101,
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
-      name='GAME_SRC_Poker_WildWheel', index=12, number=105,
+      name='GAME_SRC_Poker_Chase', index=12, number=102,
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
-      name='GAME_SRC_Poker_OneTwoPromotion', index=13, number=107,
+      name='GAME_SRC_Poker_EndLessRiches', index=13, number=103,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='GAME_SRC_Poker_MissionActivity_NormalMission_TaskThree', index=14, number=104,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='GAME_SRC_Poker_WildWheel', index=15, number=105,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='GAME_SRC_Poker_OneTwoPromotion', index=16, number=107,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='GAME_SRC_Poker_ThreeChooseOne', index=17, number=108,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='GAME_SRC_Poker_PrizeCatcher', index=18, number=109,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='GAME_SRC_Poker_EndLessRiches2', index=19, number=120,
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=4309,
-  serialized_end=4841,
+  serialized_start=5676,
+  serialized_end=6414,
 )
 _sym_db.RegisterEnumDescriptor(_AWARDINFO_AWARDGAMESRC)
 
@@ -1100,7 +1345,7 @@ _AWARDINFO = _descriptor.Descriptor(
     fields=[]),
   ],
   serialized_start=37,
-  serialized_end=4848,
+  serialized_end=6421,
 )
 
 
@@ -1145,8 +1390,8 @@ _AWARD = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4850,
-  serialized_end=4941,
+  serialized_start=6423,
+  serialized_end=6514,
 )
 
 
@@ -1177,8 +1422,8 @@ _AWARDLIST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4943,
-  serialized_end=4985,
+  serialized_start=6516,
+  serialized_end=6558,
 )
 
 
@@ -1216,8 +1461,8 @@ _PROGRESSAWARD = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4987,
-  serialized_end=5051,
+  serialized_start=6560,
+  serialized_end=6624,
 )
 
 _AWARDINFO_CARDPACK.fields_by_name['Cards'].message_type = _AWARDINFO_CARD

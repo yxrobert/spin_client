@@ -4,7 +4,7 @@
 import msg
 from robot import SpinRobot
 
-_theme_id = 10010
+_theme_id = 10110
 
 class IcePrincessRobot(SpinRobot):
     def __init__(self, name, theme_id):
@@ -19,8 +19,11 @@ class IcePrincessRobot(SpinRobot):
 
 
 def run(player):
+    # player.send_cmd(add_money)
+    player.select_bet(20000)
     print("rpc!!!!!_____________")
-    player.rpc_game([1,3,5])
+    player.spin()
+    # player.rpc_game([1,3,5])
     # player.send_cmd(add_money)
     # player.select_bet(60000000)
 

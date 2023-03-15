@@ -216,6 +216,11 @@ def make_bonus_req(player_id, token, src, act):
     request.Bonus.Action = act
     return req
 
+def make_magic_week_play_req(player_id, token, key, pos):
+    req, request = make_multi_req(player_id, token)
+    request.MagicWeek.PlayGame.KeyType = key
+    request.MagicWeek.PlayGame.Pos = pos
+    return req
 
 
 

@@ -155,6 +155,12 @@ class RobotBase:
         req = make_bonus_req(self.player_id, self.token, src, act)
         self.send_packet(req)
 
+    def req_magic_play(self, key, pos):
+        req = make_magic_week_play_req(self.player_id, self.token, key, pos)
+        self.send_packet(req)
+
+        
+
     def on_response(self, packet):
         if packet.Error != None:
             # self.log("--------Got Error--------[" + str(packet.Error) + "]")
