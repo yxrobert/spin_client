@@ -1,0 +1,47 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<build>
+  <actions>
+    <hudson.model.ParametersAction>
+      <safeParameters class="sorted-set"/>
+      <parameters>
+        <com.cwctravel.hudson.plugins.extended__choice__parameter.ExtendedChoiceParameterValue plugin="extended-choice-parameter@359.v35dcfdd0c20d">
+          <name>server_name</name>
+          <value>pkcp</value>
+        </com.cwctravel.hudson.plugins.extended__choice__parameter.ExtendedChoiceParameterValue>
+      </parameters>
+      <parameterDefinitionNames>
+        <string>server_name</string>
+      </parameterDefinitionNames>
+    </hudson.model.ParametersAction>
+    <hudson.model.CauseAction>
+      <causeBag class="linked-hash-map">
+        <entry>
+          <hudson.model.Cause_-UserIdCause>
+            <userId>root</userId>
+          </hudson.model.Cause_-UserIdCause>
+          <int>1</int>
+        </entry>
+      </causeBag>
+    </hudson.model.CauseAction>
+    <org.jenkinsci.plugins.envinject.EnvInjectPluginAction plugin="envinject@2.892.v25453b_80e595"/>
+    <hudson.plugins.ansicolor.action.ColorizedAction plugin="ansicolor@1.0.2">
+      <id>20a8f5ea-4c1b-44d2-8a67-e7ff33b2fc84</id>
+      <colorMapName>xterm</colorMapName>
+      <command>START</command>
+    </hudson.plugins.ansicolor.action.ColorizedAction>
+  </actions>
+  <queueId>6800</queueId>
+  <timestamp>1678422801408</timestamp>
+  <startTime>1678422801412</startTime>
+  <result>SUCCESS</result>
+  <duration>1199</duration>
+  <charset>UTF-8</charset>
+  <keepLog>false</keepLog>
+  <builtOn></builtOn>
+  <workspace>/var/jenkins_home/workspace/分支 - 查看运行中的分支版本</workspace>
+  <hudsonVersion>2.386</hudsonVersion>
+  <scm class="hudson.scm.NullChangeLogParser"/>
+  <culprits class="java.util.Collections$UnmodifiableSet">
+    <c class="sorted-set"/>
+  </culprits>
+</build>

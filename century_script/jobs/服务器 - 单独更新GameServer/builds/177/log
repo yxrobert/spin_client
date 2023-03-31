@@ -1,0 +1,291 @@
+Started by user [8mha:////4NL15lwhNok46o8LpNIYOqAIaurwr6Vm2yW5YSW4R5+wAAAAlh+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyWEgYu/dLi1CL9ovz8EgDKVWzSvwAAAA==[0mroot
+Running as SYSTEM
+[EnvInject] - Loading node environment variables.
+Building in workspace /var/jenkins_home/workspace/服务器 - 单独更新GameServer
+[8mha:////4MmhyC/LHDwKOmO/SOOp/o2C9up+WpZDapEma9jY9vUtAAAAqx+LCAAAAAAAAP9b85aBtbiIQSujNKU4P0+vIKc0PTOvWC8xrzgzOT8nv0gvMbkkEyjhCKb88ktSdwVsu2efuqidiYHRh4EDIu2ZUsIg5JOVWJaon5OYl64fXFKUmZduXVHEIAU1ODk/rzg/J1XPGUKDDGKAAEYmBoaKghIGlVRLA0MzE0MDXSMDk0Rdk+REc12LpJRE3URT02QzIzPzJENTcwDADacgrwAAAA==[0m[SSH] executing pre build script:
+server_name="pk7017"
+variable_args="disable_rtp_limit"
+
+#!/bin/bash
+source /root/jenkins/jk_func.sh
+
+if [ -z "$server_name" ]; then
+    echo "Error: 没有选择服务器!"
+    exit 1
+fi
+
+file_lock  || { echo "其他任务运行中，请稍后执行"; exit 1; }
+echo ${server_name}
+check_env_args ${server_name}
+echo ${variable_args}
+
+yaml $conf_file "['$server_name']"
+branch_name=$(yaml $conf_file "['$server_name']['game']")
+server_port=$(yaml $conf_file "['$server_name']['port']")
+echo ${branch_name}
+
+# run
+cd /mnt/slots/cc-server
+git cd $branch_name
+check_last_cmd $branch_name
+git pull
+check_last_cmd pull
+cd /mnt/slots/cc-slots-land/batch
+set_env_args ${variable_args}
+./compile.sh $server_name && ./build_image.sh $server_name && ./run_image.sh $server_name $server_port
+clear_env_args
+
+file_unlock
+
+
+
+
+脚本可执行
+pk7017
+disable_rtp_limit
+{'bandit': 'develop', 'game': 'feature/journey_booster_pr6', 'cc-conf': 'deploy-cc-conf', 'desc': 'pk7017', 'rpc_port': 7117, 'bandit-conf': 'deploy-bandit-conf', 'port': 7207}
+feature/journey_booster_pr6
+Switched to branch 'feature/journey_booster_pr6'
+remote: Enumerating objects: 10, done.[K
+remote: Counting objects:  10% (1/10)[Kremote: Counting objects:  20% (2/10)[Kremote: Counting objects:  30% (3/10)[Kremote: Counting objects:  40% (4/10)[Kremote: Counting objects:  50% (5/10)[Kremote: Counting objects:  60% (6/10)[Kremote: Counting objects:  70% (7/10)[Kremote: Counting objects:  80% (8/10)[Kremote: Counting objects:  90% (9/10)[Kremote: Counting objects: 100% (10/10)[Kremote: Counting objects: 100% (10/10), done.[K
+remote: Compressing objects:  10% (1/10)[Kremote: Compressing objects:  20% (2/10)[Kremote: Compressing objects:  30% (3/10)[Kremote: Compressing objects:  40% (4/10)[Kremote: Compressing objects:  50% (5/10)[Kremote: Compressing objects:  60% (6/10)[Kremote: Compressing objects:  70% (7/10)[Kremote: Compressing objects:  80% (8/10)[Kremote: Compressing objects:  90% (9/10)[Kremote: Compressing objects: 100% (10/10)[Kremote: Compressing objects: 100% (10/10), done.[K
+remote: Total 10 (delta 1), reused 0 (delta 0), pack-reused 0[K
+Unpacking objects:  10% (1/10)   Unpacking objects:  20% (2/10)   Unpacking objects:  30% (3/10)   Unpacking objects:  40% (4/10)   Unpacking objects:  50% (5/10)   Unpacking objects:  60% (6/10)   Unpacking objects:  70% (7/10)   Unpacking objects:  80% (8/10)   Unpacking objects:  90% (9/10)   Unpacking objects: 100% (10/10)   Unpacking objects: 100% (10/10), done.
+From gitlab.funplus.io:cheesecake/cc-server
+   25f8759..a24eaac  feature/journey_booster_pr6 -> origin/feature/journey_booster_pr6
+ * [new branch]      bugfix/cashback -> origin/bugfix/cashback
+Updating 25f8759..a24eaac
+Fast-forward
+ server/go.mod                                        | 2 [32m+[m[31m-[m
+ server/go.sum                                        | 4 [32m++[m[31m--[m
+ server/internal/activity/iactivity/journey/reward.go | 3 [32m+++[m
+ 3 files changed, 6 insertions(+), 3 deletions(-)
+disable_rtp_limit
+disable_rtp_limit
+[0;35m              ARCH:[0m linux
+[0;35m          LOCAL_IP:[0m 10.0.84.16
+[0;35m               APP:[0m pk7017
+[0;32m           APP_DIR:[0m /home/user00/cc/cc-slots-land/stage/app=pk7017/app
+[0;32m       Fluentd-DIR:[0m /mnt/slots/cc-slots-land/batch/pk7017/fluentd
+[0;32m         Mongo-DIR:[0m /mnt/slots/cc-slots-land/batch/pk7017/mongo
+[0;32m         Redis-DIR:[0m /mnt/slots/cc-slots-land/batch/pk7017/redis
+[0;32m       PM_CONF_DIR:[0m /home/user00/cc/cc-conf/gen/rawdata/server
+[0;35m  BACKEND_CODE_DIR:[0m /home/user00/cc/cc-server
+[0;35m  BACKEND_CONF_DIR:[0m /home/user00/cc/cc-conf
+[1;33m   BANDIT_CODE_DIR:[0m /home/user00/cc/bandit-server
+[1;33m   BANDIT_CONF_DIR:[0m /home/user00/cc/bandit-conf
+[0;35m   BACKEND_PM_PATH:[0m /pk7017_dev_backend
+[1;33m    BANDIT_PM_PATH:[0m /pk7017_dev_bandit
+[0;35m           Network:[0m pk7017
+[0;35m    ETCD_ENDPOINTS:[0m 10.0.84.16:2379
+[0;35m         REDIS_URI:[0m pk7017-redis:6379
+[0;35m Backend-Container:[0m pk7017-backend
+[1;33m  BANDIT-Container:[0m pk7017-rpc
+[0;32m Fluentd-Container:[0m pk7017-fluentd
+[0;32m   Mongo-Container:[0m pk7017-mongo
+[0;32m   Redis-Container:[0m pk7017-redis
+[1;33m    BUILD TARGET:[0m game
+[1;33m   BUILD COMMAND:[0m cd proto && make server -B && cd .. && server/output/build-server.sh docker
+[1;33m           IMAGE:[0m slots/backend-builder:latest
+[1;33m       CONTAINER:[0m backend-builder
+[1;33m          GO_DIR:[0m /home/user00/cc/cc-slots-land/go
+[1;33m        CODE_DIR:[0m /home/user00/cc/cc-server
+[1;33m        CONF_DIR:[0m /home/user00/cc/cc-conf
+[1;33m       BUILD_DIR:[0m /slots
+[1;33m  BUILD_CONF_DIR:[0m /cc-conf
+[1;33m     CONFIG_FILE:[0m pk7017/config.ini
+[1;33mCONFIG_FILE_PROD:[0m pk7017/config.ini
+[0;32mMOUNT_CONF_LOADER => /home/user00/cc/cc-conf/gen/golang/conf:/slots/server/pkg/gen/golang/conf[0m
+[0;32m MOUNT_CONF_MODEL => /home/user00/cc/cc-conf/gen/golang/rawdata:/cc-conf/gen/golang/rawdata[0m
+[0;36mdocker run -it   --name "backend-builder"   --hostname "backend-builder"   -v "/home/user00/cc/cc-slots-land/go":/go   -v "/home/user00/cc/cc-server":"/slots"   -v "/home/user00/cc/cc-conf":"/cc-conf"   -v "/home/user00/cc/cc-conf/gen/golang/conf:/slots/server/pkg/gen/golang/conf"   -v "/home/user00/cc/cc-conf/gen/golang/rawdata:/cc-conf/gen/golang/rawdata"    "slots/backend-builder:latest"   sh -c "cd proto && make server -B && cd .. && server/output/build-server.sh docker"[0m
+rm ../server/pb/*.pb.go 2>/dev/null || :
+protoc --go_out=../server/pb *.proto
+[0;32mbuilding "plutus-server"[0m
+[0;33mLDFLAGS[0m = [0;36m-X 'plutus/core.BuildGoVersion=go1.17.12 linux/amd64' -X 'plutus/core.BuildTime=2023-03-30T15:28:51+0800' -X 'plutus/core.BuildType=docker' -X 'plutus/core.BuildHost=backend-builder' -X 'plutus/core.BuildGit=feature/journey_booster_pr6:a24eaac01-dirty' -X 'plutus/core.BuildConf=v0.0.74-0.20230330060825-68ffedc1565a'[0m
+[0;33mTARGET[0m = [0;36m/slots/server/cmd/main/plutus-server-next[0m
+[0;31mgo: downloading gitlab.funplus.io/cheesecake/cc-conf v0.0.74-0.20230330060825-68ffedc1565a[0m
+[0;32mreset app dir: /home/user00/cc/cc-slots-land/stage/app=pk7017/app[0m
+[0;32mcopy compiled binary to app dir...[0m
+[0;32mcopy server config: pk7017/config.ini /home/user00/cc/cc-slots-land/stage/app=pk7017/app/config.ini[0m
+[0;32mremove container: backend-builder[0m
+[0;36mreclaim resources: backend-builder 443ca38bddd7[0m
+443ca38bddd7
+443ca38bddd7
+[0;32m/home/user00/cc/cc-slots-land/stage[0m
+Sending build context to Docker daemon  557.1kBSending build context to Docker daemon  8.356MBSending build context to Docker daemon  16.71MBSending build context to Docker daemon  25.62MBSending build context to Docker daemon  33.42MBSending build context to Docker daemon  41.22MBSending build context to Docker daemon  49.58MBSending build context to Docker daemon  57.38MBSending build context to Docker daemon  65.73MBSending build context to Docker daemon  74.09MBSending build context to Docker daemon  81.89MBSending build context to Docker daemon  90.24MBSending build context to Docker daemon   98.6MBSending build context to Docker daemon  107.5MBSending build context to Docker daemon  116.4MBSending build context to Docker daemon  125.3MBSending build context to Docker daemon  133.7MBSending build context to Docker daemon  137.6MBSending build context to Docker daemon  145.9MBSending build context to Docker daemon  153.7MBSending build context to Docker daemon  161.5MBSending build context to Docker daemon  167.7MBSending build context to Docker daemon    176MBSending build context to Docker daemon  184.4MBSending build context to Docker daemon  192.7MBSending build context to Docker daemon  201.1MBSending build context to Docker daemon  209.5MBSending build context to Docker daemon  217.8MBSending build context to Docker daemon  225.6MBSending build context to Docker daemon  233.4MBSending build context to Docker daemon  240.6MBSending build context to Docker daemon  247.9MBSending build context to Docker daemon  256.2MBSending build context to Docker daemon  265.2MBSending build context to Docker daemon  274.1MBSending build context to Docker daemon  281.3MBSending build context to Docker daemon  289.7MBSending build context to Docker daemon  297.5MBSending build context to Docker daemon  305.3MBSending build context to Docker daemon    307MB
+Step 1/5 : FROM alpine:3.12.0
+ ---> a24bb4013296
+Step 2/5 : ARG app
+ ---> Using cache
+ ---> 00422b32391e
+Step 3/5 : ADD $app/app/ /slots
+ ---> 5a8551105119
+Step 4/5 : WORKDIR /slots
+ ---> Running in 2cdf203c26a5
+Removing intermediate container 2cdf203c26a5
+ ---> debdd0e32e34
+Step 5/5 : ENTRYPOINT ["/slots/plutus-server"]
+ ---> Running in d9b2a7ae3550
+Removing intermediate container d9b2a7ae3550
+ ---> bed3a278ed83
+Successfully built bed3a278ed83
+Successfully tagged plutus:pk7017
+[0;32mgc: app=pk7017/app/backend[0m
+/mnt/slots/cc-slots-land/batch
+[0;35m              ARCH:[0m linux
+[0;35m          LOCAL_IP:[0m 10.0.84.16
+[0;35m               APP:[0m pk7017
+[0;32m           APP_DIR:[0m /home/user00/cc/cc-slots-land/stage/app=pk7017/app
+[0;32m       Fluentd-DIR:[0m /mnt/slots/cc-slots-land/batch/pk7017/fluentd
+[0;32m         Mongo-DIR:[0m /mnt/slots/cc-slots-land/batch/pk7017/mongo
+[0;32m         Redis-DIR:[0m /mnt/slots/cc-slots-land/batch/pk7017/redis
+[0;32m       PM_CONF_DIR:[0m /home/user00/cc/cc-conf/gen/rawdata/server
+[0;35m  BACKEND_CODE_DIR:[0m /home/user00/cc/cc-server
+[0;35m  BACKEND_CONF_DIR:[0m /home/user00/cc/cc-conf
+[1;33m   BANDIT_CODE_DIR:[0m /home/user00/cc/bandit-server
+[1;33m   BANDIT_CONF_DIR:[0m /home/user00/cc/bandit-conf
+[0;35m   BACKEND_PM_PATH:[0m /pk7017_dev_backend
+[1;33m    BANDIT_PM_PATH:[0m /pk7017_dev_bandit
+[0;35m           Network:[0m pk7017
+[0;35m    ETCD_ENDPOINTS:[0m 10.0.84.16:2379
+[0;35m         REDIS_URI:[0m pk7017-redis:6379
+[0;35m Backend-Container:[0m pk7017-backend
+[1;33m  BANDIT-Container:[0m pk7017-rpc
+[0;32m Fluentd-Container:[0m pk7017-fluentd
+[0;32m   Mongo-Container:[0m pk7017-mongo
+[0;32m   Redis-Container:[0m pk7017-redis
+
+[0;32mstart pk7017-backend[0m
+[0;36m  docker run -d     -e app=pk7017.dev     -e etcd_endpoints=10.0.84.16:2379     -e sys_env_name=pk7017     -e sys_stage=dev_backend     -e hostname=10.0.84.16     -e port=7207 	--env-file .env     -p 7207:9000 -p 7307:9168     --network pk7017     --name pk7017-backend     plutus:pk7017[0m
+[0;36mreclaim resources: pk7017-backend 013c9f43215b[0m
+013c9f43215b
+013c9f43215b
+6888e6edf1b7b57a27da295b5fd20a151e32c64822c0a10693358a71274521b9
+[0;32mwaiting for pk7017-backend...[0m
+[0;32m=====> try 0 times[0m
+curl: (56) Recv failure: Connection reset by peer
+[0;32m=====> try 1 times[0m
+400 Bad Request2023-03-30 07:31:35.285077 I | maxprocs: Leaving GOMAXPROCS=8: CPU quota undefined
+{"log_level":"warn","date":"2023-03-30T07:31:35.285Z","dd_meta_channel":"server","tags":["logbus"],"log_xid":"cgijlls28451002djh50","server_id":"cgijlls28451002djh30","server_ip":"192.168.128.6","server_birth":1680161495,"host_name":"6888e6edf1b7","glog-msg":"[sandwich] [deprecated] should use WithAdapter to initialize pmconf package."}
+{"log_level":"warn","date":"2023-03-30T07:31:35.302Z","dd_meta_channel":"server","tags":["logbus"],"log_xid":"cgijlls28451002djh5g","server_id":"cgijlls28451002djh30","server_ip":"192.168.128.6","server_birth":1680161495,"host_name":"6888e6edf1b7","glog-msg":"[sandwich] [deprecated] PmConfPath changed due to sys_env_name and sys_stage, should use sandwich_conf_env","sysConfEnvStaging":"pk7017_dev_backend","pm_conf_path":"/pk7017_dev_backend"}
+{
+	"logger": {
+		"timelocation": {},
+		"host": "pk7017-fluentd",
+		"type": "logbus",
+		"serverbirth": "2023-03-30T03:31:36-04:00",
+		"port": 24224,
+		"withcaller": false
+	},
+	"timelocation": {},
+	"gmt": {
+		"listen": "0.0.0.0:9000",
+		"secret": "xkcs;wjngSDGJL;KADlkafas"
+	},
+	"httplistenaddr": "0.0.0.0:9000",
+	"serverbirth": "2023-03-30T03:31:36-04:00",
+	"serveropen": "2021-01-01T00:00:00Z",
+	"lighthouse": {
+		"token": "c3p0zmycr83g00066h6g"
+	},
+	"app": "pk7017.dev",
+	"funplus": {
+		"url": "https://passport-sandbox-checksession.centurygame.com/server_api.php",
+		"paysecret": "o+gt#+v)@-0\u002609my@e0@1c9v\u0026629i02t(kd9ry_sw\u0026j*oi*l4)",
+		"serverpayid": "not-support",
+		"expire": 3600
+	},
+	"bi": {
+		"host": "",
+		"mark": "178_pk7017",
+		"port": 24224
+	},
+	"sisyphus": {
+		"listen": "0.0.0.0:9000",
+		"collection": "idGen",
+		"timeout": 10000000000,
+		"section": 0
+	},
+	"postoffice": {
+		"listen": "0.0.0.0:9000",
+		"serviceurl": "http://pk7017-postOffice:9000",
+		"router": "/push",
+		"reqpushurl": "",
+		"appkey": "ca176bf86c3300375acebc07ff6684b0",
+		"interval": 10,
+		"timeout": 30000000000,
+		"appid": 20106,
+		"workercount": 20
+	},
+	"redis": {
+		"uri": "pk7017-redis:6379",
+		"pwd": "",
+		"db": 0,
+		"timeout": 5000000000,
+		"usecluster": false
+	},
+	"rtm": {
+		"servergateurl": "",
+		"secretkey": "",
+		"connecttimeout": 0,
+		"questtimeout": 0,
+		"adminuid": 0,
+		"projectid": 0,
+		"autoreconnect": false,
+		"enable": false
+	},
+	"mongo": {
+		"uri": "mongodb://root:passwd@pk7017-mongo:27017/?authSource=admin",
+		"db": "plutus",
+		"connecttimeout": 2000000000,
+		"questtimeout": 10000000000,
+		"deferduration": 60000000000,
+		"lifetime": 3600000000000
+	},
+	"inbox": {
+		"timeout": 10000000000
+	},
+	"dev": {
+		"mode": true,
+		"usegops": false,
+		"richnewplayer": false
+	},
+	"gateway": {
+		"useentitycache": false
+	},
+	"canonical": false
+}
+2023-03-30T07:31:36.701Z	[34minfo[0m	buslogger/logger.go:121	server	{"tags": ["logbus"], "log_xid": "cgijlm428451002djh60", "server_ip": "192.168.128.6", "host_name": "6888e6edf1b7", "server_id": "a129fc27-fc77-4c7e-a979-bafae8673ad6", "server_birth": 1680161496, "role": "bootstrap", "msg": "Time Now: 2023-03-30 03:31:36.701249628 -0400 EDT"}
+2023-03-30T07:31:36.766Z	[34minfo[0m	sandwich@v1.2.85/endpoint.go:269	server	{"tags": ["logbus"], "log_xid": "cgijlm428451002djh7g", "server_ip": "192.168.128.6", "host_name": "6888e6edf1b7", "server_id": "a129fc27-fc77-4c7e-a979-bafae8673ad6", "server_birth": 1680161496, "glog-msg": "[sandwich] sandwich endpoint update summary", "registry_path": "/pk7017.dev/sandwich/service/slot/", "entries": ["cgehlgs28451fuos8of0_192.168.128.5:8087"], "added": ["cgehlgs28451fuos8of0_192.168.128.5:8087"], "keys_removed": [], "keys_now": ["cgehlgs28451fuos8of0"], "keys_old": []}
+2023-03-30T07:31:43.609Z	[34minfo[0m	buslogger/logger.go:101	server	{"tags": ["logbus"], "log_xid": "cgijlns28451002djh8g", "server_ip": "192.168.128.6", "host_name": "6888e6edf1b7", "server_id": "a129fc27-fc77-4c7e-a979-bafae8673ad6", "server_birth": 1680161496, "role": "server", "msg": "game server start..."}
+2023-03-30T07:31:43.856Z	[35mdebug[0m	ark@v1.2.2/ark.go:394	server	{"tags": ["logbus"], "log_xid": "cgijlns28451002djh9g", "server_ip": "192.168.128.6", "host_name": "6888e6edf1b7", "server_id": "a129fc27-fc77-4c7e-a979-bafae8673ad6", "server_birth": 1680161496, "glog-msg": "[ark]Listening and serving HTTP on listener 0.0.0.0:9000"}
+
+[0;32mpk7017-backend ready[0m
+[1;33mversion:[0m [0;32m{"Git":"feature/journey_booster_pr6:a24eaac01-dirty","BuildTime":"2023-03-30T15:28:51+0800","BuildHost":"backend-builder","Type":"docker","Go":"go1.17.12 linux/amd64","Conf":"v0.0.74-0.20230330060825-68ffedc1565a","Branch":""}[0m
+CONTAINER ID   IMAGE           COMMAND                  CREATED         STATUS         PORTS                                            NAMES
+6888e6edf1b7   plutus:pk7017   "/slots/plutus-server"   9 seconds ago   Up 8 seconds   0.0.0.0:7207->9000/tcp, 0.0.0.0:7307->9168/tcp   pk7017-backend
+释放脚本锁
+
+[SSH] completed
+[SSH] exit-status: 0
+
+[SSH] executing post build script:
+server_name="pk7017"
+BUILD_URL="http://10.0.84.16:8083/job/%E6%9C%8D%E5%8A%A1%E5%99%A8%20-%20%E5%8D%95%E7%8B%AC%E6%9B%B4%E6%96%B0GameServer/177/"
+
+#!/bin/bash -e
+source /root/jenkins/jk_func.sh
+~/jenkins/analyze_log/analyze_err -url ${BUILD_URL}  || { echo "任务执行失败"; exit 1; }
+sleep 5
+check_whole_server $server_name
+
+pk7017-backend Check
+pk7017-rpc Check
+pk7017-redis Check
+pk7017-mongo Check
+pk7017-fluentd Check
+
+[SSH] completed
+[SSH] exit-status: 0
+
+Finished: SUCCESS

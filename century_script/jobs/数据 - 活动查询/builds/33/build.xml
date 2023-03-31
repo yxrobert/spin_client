@@ -1,0 +1,69 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<build>
+  <actions>
+    <hudson.model.ParametersAction>
+      <safeParameters class="sorted-set"/>
+      <parameters>
+        <com.cwctravel.hudson.plugins.extended__choice__parameter.ExtendedChoiceParameterValue plugin="extended-choice-parameter@359.v35dcfdd0c20d">
+          <name>server_name</name>
+          <value>pkcp</value>
+        </com.cwctravel.hudson.plugins.extended__choice__parameter.ExtendedChoiceParameterValue>
+        <hudson.model.StringParameterValue>
+          <name>account</name>
+          <description>待查询账号</description>
+          <value>z634</value>
+        </hudson.model.StringParameterValue>
+        <hudson.model.StringParameterValue>
+          <name>act_id</name>
+          <description>待查询的活动id, 必填
+可参照
+&lt;li&gt;
+&lt;a href=&quot;https://docs.google.com/spreadsheets/d/1n3o5PTza30v40e2gHq37Oa_5rKYuueap6t7M4ENVaFo/edit#gid=0&quot;&gt;Activity&lt;/a&gt;
+&lt;/li&gt;</description>
+          <value>537</value>
+        </hudson.model.StringParameterValue>
+        <hudson.model.StringParameterValue>
+          <name>uid</name>
+          <description>也可以提供账号的user_id 例如: 100000000009440</description>
+          <value>100000000009440</value>
+        </hudson.model.StringParameterValue>
+      </parameters>
+      <parameterDefinitionNames>
+        <string>server_name</string>
+        <string>account</string>
+        <string>act_id</string>
+        <string>uid</string>
+      </parameterDefinitionNames>
+    </hudson.model.ParametersAction>
+    <hudson.model.CauseAction>
+      <causeBag class="linked-hash-map">
+        <entry>
+          <hudson.model.Cause_-UserIdCause>
+            <userId>root</userId>
+          </hudson.model.Cause_-UserIdCause>
+          <int>1</int>
+        </entry>
+      </causeBag>
+    </hudson.model.CauseAction>
+    <org.jenkinsci.plugins.envinject.EnvInjectPluginAction plugin="envinject@2.901.v0038b_6471582"/>
+    <hudson.plugins.ansicolor.action.ColorizedAction plugin="ansicolor@1.0.2">
+      <id>bccb9ad1-28b8-4624-9035-88275f6be07d</id>
+      <colorMapName>xterm</colorMapName>
+      <command>START</command>
+    </hudson.plugins.ansicolor.action.ColorizedAction>
+  </actions>
+  <queueId>7601</queueId>
+  <timestamp>1679910407039</timestamp>
+  <startTime>1679910407043</startTime>
+  <result>SUCCESS</result>
+  <duration>1199</duration>
+  <charset>UTF-8</charset>
+  <keepLog>false</keepLog>
+  <builtOn></builtOn>
+  <workspace>/var/jenkins_home/workspace/数据 - 活动查询</workspace>
+  <hudsonVersion>2.386</hudsonVersion>
+  <scm class="hudson.scm.NullChangeLogParser"/>
+  <culprits class="java.util.Collections$UnmodifiableSet">
+    <c class="sorted-set"/>
+  </culprits>
+</build>

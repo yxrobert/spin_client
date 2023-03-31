@@ -1,0 +1,40 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<build>
+  <actions>
+    <hudson.model.CauseAction>
+      <causeBag class="linked-hash-map">
+        <entry>
+          <hudson.model.Cause_-UserIdCause>
+            <userId>tanghao</userId>
+          </hudson.model.Cause_-UserIdCause>
+          <int>1</int>
+        </entry>
+      </causeBag>
+    </hudson.model.CauseAction>
+    <org.jenkinsci.plugins.envinject.EnvInjectPluginAction plugin="envinject@2.901.v0038b_6471582"/>
+    <hudson.plugins.ansicolor.action.ColorizedAction plugin="ansicolor@1.0.2">
+      <id>3e68c96e-1077-4be8-b40b-9b568b6f1247</id>
+      <colorMapName>xterm</colorMapName>
+      <command>START</command>
+    </hudson.plugins.ansicolor.action.ColorizedAction>
+    <hudson.plugins.ansicolor.action.ColorizedAction plugin="ansicolor@1.0.2">
+      <id>7KM5+nr2emDYOIjgouuB3aj68EvHv/hFSTF+QFnVeRc=</id>
+      <colorMapName>xterm</colorMapName>
+      <command>START</command>
+    </hudson.plugins.ansicolor.action.ColorizedAction>
+  </actions>
+  <queueId>7790</queueId>
+  <timestamp>1680079381602</timestamp>
+  <startTime>1680079381650</startTime>
+  <result>SUCCESS</result>
+  <duration>38169</duration>
+  <charset>UTF-8</charset>
+  <keepLog>false</keepLog>
+  <builtOn></builtOn>
+  <workspace>/var/jenkins_home/workspace/分支 - 尝试解决重启失败(重置凌乱的分支提交, 解锁)</workspace>
+  <hudsonVersion>2.386</hudsonVersion>
+  <scm class="hudson.scm.NullChangeLogParser"/>
+  <culprits class="java.util.Collections$UnmodifiableSet">
+    <c class="sorted-set"/>
+  </culprits>
+</build>

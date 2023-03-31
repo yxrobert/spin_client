@@ -1,0 +1,54 @@
+Started by user [8mha:////4NL15lwhNok46o8LpNIYOqAIaurwr6Vm2yW5YSW4R5+wAAAAlh+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyWEgYu/dLi1CL9ovz8EgDKVWzSvwAAAA==[0mroot
+Running as SYSTEM
+[EnvInject] - Loading node environment variables.
+Building in workspace /var/jenkins_home/workspace/服务器 - 更新GameServer与配置
+[8mha:////4Ma7cp6ImWj6ZoFpRV2IePyIAWh0pdTlmj4CWGXgIyU6AAAAqx+LCAAAAAAAAP9b85aBtbiIQSujNKU4P0+vIKc0PTOvWC8xrzgzOT8nv0gvMbkkEyjhCKb88ktSdwVsu2efuqidiYHRh4EDIu2ZUsIg5JOVWJaon5OYl64fXFKUmZduXVHEIAU1ODk/rzg/J1XPGUKDDGKAAEYmBoaKghIGleQky0TTNOMUXcNk02RdE1NjC91EUzMj3TSDVKNkCwNDo0RjCwBqycZHrwAAAA==[0m[SSH] executing pre build script:
+server_name="pkreview"
+variable_args="disable_rtp_limit"
+
+#!/bin/bash
+source /root/jenkins/jk_func.sh
+
+if [ -z "$server_name" ]; then
+    echo "Error: 没有选择服务器!"
+    exit 1
+fi
+
+# conf
+cd /home/user00/cc/cc-slots-land/cc-dev
+conf_br=$(yaml $conf_file "['$server_name']['cc-conf']")
+./auto_upload_config.sh ${server_name} ${conf_br}
+
+file_lock
+echo ${server_name}
+check_env_args ${server_name}
+echo ${variable_args}
+
+yaml $conf_file "['$server_name']"
+branch_name=$(yaml $conf_file "['$server_name']['game']")
+server_port=$(yaml $conf_file "['$server_name']['port']")
+echo ${branch_name}
+
+# run
+cd /mnt/slots/cc-server
+git cd $branch_name
+check_last_cmd $branch_name
+git pull
+check_last_cmd pull
+cd /mnt/slots/cc-slots-land/batch
+set_env_args ${variable_args}
+./compile.sh $server_name && ./build_image.sh $server_name && ./run_image.sh $server_name $server_port
+clear_env_args
+
+file_unlock
+
+
+
+
+[0;31m脚本运行中，请稍后执行！[0m
+脚本运行中，请稍后执行！
+
+[SSH] completed
+[SSH] exit-status: 1
+
+Finished: FAILURE

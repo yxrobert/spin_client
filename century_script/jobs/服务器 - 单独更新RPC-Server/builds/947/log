@@ -1,0 +1,40 @@
+Started by user [8mha:////4NL15lwhNok46o8LpNIYOqAIaurwr6Vm2yW5YSW4R5+wAAAAlh+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyWEgYu/dLi1CL9ovz8EgDKVWzSvwAAAA==[0mroot
+Running as SYSTEM
+[EnvInject] - Loading node environment variables.
+Building in workspace /var/jenkins_home/workspace/服务器 - 单独更新RPC-Server
+[8mha:////4GXGsQkfNeVanZ1txhRGYumRozWo476Ek0lrM1FBlqRZAAAAqR+LCAAAAAAAAP9b85aBtbiIQSujNKU4P0+vIKc0PTOvWC8xrzgzOT8nv0gvMbkkEyjhCKb88ktSdwVsu2efuqidiYHRh4EDIu2ZUsIg5JOVWJaon5OYl64fXFKUmZduXVHEIAU1ODk/rzg/J1XPGUKDDGKAAEYmBoaKghIGlTRj0xTTNNMk3TRDIwtdEwsjM91EIyDX3NTEyMw01dAcKAcAxQ9jg68AAAA=[0m[SSH] executing pre build script:
+server_name="pk7020"
+BUILD_URL="http://10.0.84.16:8083/job/%E6%9C%8D%E5%8A%A1%E5%99%A8%20-%20%E5%8D%95%E7%8B%AC%E6%9B%B4%E6%96%B0RPC-Server/947/"
+
+#!/bin/bash 
+source /root/jenkins/jk_func.sh
+
+if [ -z "$server_name" ]; then
+    echo "Error: 没有选择服务器!"
+    exit 1
+fi
+
+file_lock  || { echo "脚本运行中，请稍后执行"; exit 1; }
+
+yaml $conf_file "['$server_name']"
+branch_name=$(yaml $conf_file "['$server_name']['bandit']")
+rpc_port=$(yaml $conf_file "['$server_name']['rpc_port']")
+
+cd /mnt/slots/bandit-server
+git cd $branch_name
+check_last_cmd branch
+
+git pull
+check_last_cmd pull
+
+cd /mnt/slots/cc-slots-land/batch
+./compile_rpc.sh $server_name && ./build_image_rpc.sh $server_name && ./run_image_rpc.sh $server_name $rpc_port
+
+~/jenkins/analyze_log/analyze_err -url ${BUILD_URL}  || { echo "任务执行失败"; exit 1; }
+file_unlock
+脚本运行中，请稍后执行！
+
+[SSH] completed
+[SSH] exit-status: 1
+
+Finished: FAILURE

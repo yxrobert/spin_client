@@ -1,0 +1,75 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<build>
+  <actions>
+    <hudson.model.ParametersAction>
+      <safeParameters class="sorted-set"/>
+      <parameters>
+        <com.cwctravel.hudson.plugins.extended__choice__parameter.ExtendedChoiceParameterValue plugin="extended-choice-parameter@359.v35dcfdd0c20d">
+          <name>server_name</name>
+          <value>pk7017</value>
+        </com.cwctravel.hudson.plugins.extended__choice__parameter.ExtendedChoiceParameterValue>
+        <hudson.model.StringParameterValue>
+          <name>GAME_BR</name>
+          <description>game服务器分支名 (内部开发默认 [ develop ])</description>
+          <value>feature/journey_booster_pr6</value>
+        </hudson.model.StringParameterValue>
+        <hudson.model.StringParameterValue>
+          <name>BANDIT_BR</name>
+          <description>bandit服务器分支名 (内部开发默认 [ develop ])</description>
+          <value>develop</value>
+        </hudson.model.StringParameterValue>
+        <hudson.model.StringParameterValue>
+          <name>GAME_CONF</name>
+          <description>游戏服务器 配表分支
+(内部开发默认
+[  deploy-cc-conf  ])</description>
+          <value>deploy-cc-conf</value>
+        </hudson.model.StringParameterValue>
+        <hudson.model.StringParameterValue>
+          <name>BANDIT_CONF</name>
+          <description>RPC服务器 配表分支
+(内部开发默认
+[  deploy-bandit-conf  ])</description>
+          <value>deploy-bandit-conf</value>
+        </hudson.model.StringParameterValue>
+      </parameters>
+      <parameterDefinitionNames>
+        <string>server_name</string>
+        <string>GAME_BR</string>
+        <string>BANDIT_BR</string>
+        <string>GAME_CONF</string>
+        <string>BANDIT_CONF</string>
+      </parameterDefinitionNames>
+    </hudson.model.ParametersAction>
+    <hudson.model.CauseAction>
+      <causeBag class="linked-hash-map">
+        <entry>
+          <hudson.model.Cause_-UserIdCause>
+            <userId>root</userId>
+          </hudson.model.Cause_-UserIdCause>
+          <int>1</int>
+        </entry>
+      </causeBag>
+    </hudson.model.CauseAction>
+    <org.jenkinsci.plugins.envinject.EnvInjectPluginAction plugin="envinject@2.901.v0038b_6471582"/>
+    <hudson.plugins.ansicolor.action.ColorizedAction plugin="ansicolor@1.0.2">
+      <id>a1f4e09a-014d-4e32-93e7-551a544da9a1</id>
+      <colorMapName>xterm</colorMapName>
+      <command>START</command>
+    </hudson.plugins.ansicolor.action.ColorizedAction>
+  </actions>
+  <queueId>7685</queueId>
+  <timestamp>1679988755090</timestamp>
+  <startTime>1679988755093</startTime>
+  <result>SUCCESS</result>
+  <duration>3472</duration>
+  <charset>UTF-8</charset>
+  <keepLog>false</keepLog>
+  <builtOn></builtOn>
+  <workspace>/var/jenkins_home/workspace/分支 - 更改服务器分支配置</workspace>
+  <hudsonVersion>2.386</hudsonVersion>
+  <scm class="hudson.scm.NullChangeLogParser"/>
+  <culprits class="java.util.Collections$UnmodifiableSet">
+    <c class="sorted-set"/>
+  </culprits>
+</build>

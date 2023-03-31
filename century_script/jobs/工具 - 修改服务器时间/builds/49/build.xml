@@ -1,0 +1,58 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<build>
+  <actions>
+    <hudson.model.ParametersAction>
+      <safeParameters class="sorted-set"/>
+      <parameters>
+        <com.cwctravel.hudson.plugins.extended__choice__parameter.ExtendedChoiceParameterValue plugin="extended-choice-parameter@346.vd87693c5a_86c">
+          <name>server_name</name>
+          <value>pkyq</value>
+        </com.cwctravel.hudson.plugins.extended__choice__parameter.ExtendedChoiceParameterValue>
+        <me.leejay.jenkins.dateparameter.DateParameterValue plugin="date-parameter@0.0.4">
+          <name>date_param</name>
+          <value>2022-11-23 05:49:25</value>
+          <dateFormat>yyyy-MM-dd HH:mm:ss</dateFormat>
+        </me.leejay.jenkins.dateparameter.DateParameterValue>
+        <com.cwctravel.hudson.plugins.extended__choice__parameter.ExtendedChoiceParameterValue plugin="extended-choice-parameter@346.vd87693c5a_86c">
+          <name>force</name>
+          <value>1</value>
+        </com.cwctravel.hudson.plugins.extended__choice__parameter.ExtendedChoiceParameterValue>
+      </parameters>
+      <parameterDefinitionNames>
+        <string>server_name</string>
+        <string>date_param</string>
+        <string>force</string>
+      </parameterDefinitionNames>
+    </hudson.model.ParametersAction>
+    <hudson.model.CauseAction>
+      <causeBag class="linked-hash-map">
+        <entry>
+          <hudson.model.Cause_-UserIdCause>
+            <userId>root</userId>
+          </hudson.model.Cause_-UserIdCause>
+          <int>1</int>
+        </entry>
+      </causeBag>
+    </hudson.model.CauseAction>
+    <org.jenkinsci.plugins.envinject.EnvInjectPluginAction plugin="envinject@2.881.v37c62073ff97"/>
+    <hudson.plugins.ansicolor.action.ColorizedAction plugin="ansicolor@1.0.2">
+      <id>87457a48-84e1-43f2-a891-3d26f9ec8269</id>
+      <colorMapName>xterm</colorMapName>
+      <command>START</command>
+    </hudson.plugins.ansicolor.action.ColorizedAction>
+  </actions>
+  <queueId>3013</queueId>
+  <timestamp>1669186376145</timestamp>
+  <startTime>1669186376150</startTime>
+  <result>SUCCESS</result>
+  <duration>1181</duration>
+  <charset>UTF-8</charset>
+  <keepLog>false</keepLog>
+  <builtOn></builtOn>
+  <workspace>/var/jenkins_home/workspace/工具 - 修改服务器时间</workspace>
+  <hudsonVersion>2.346.3</hudsonVersion>
+  <scm class="hudson.scm.NullChangeLogParser"/>
+  <culprits class="java.util.Collections$UnmodifiableSet">
+    <c class="sorted-set"/>
+  </culprits>
+</build>

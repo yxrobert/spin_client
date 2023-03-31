@@ -1,0 +1,108 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<project>
+  <actions/>
+  <description></description>
+  <keepDependencies>false</keepDependencies>
+  <properties>
+    <io.jenkins.plugins.DingTalkJobProperty plugin="dingding-notifications@2.6.2">
+      <notifierConfigs>
+        <io.jenkins.plugins.DingTalkNotifierConfig>
+          <checked>true</checked>
+          <robotId>111</robotId>
+          <robotName>Jenkins</robotName>
+          <atAll>false</atAll>
+          <atMobile></atMobile>
+          <content>RPC-Server {$server_name} 执行更新</content>
+          <noticeOccasions>
+            <string>SUCCESS</string>
+            <string>START</string>
+            <string>NOT_BUILT</string>
+            <string>ABORTED</string>
+            <string>FAILURE</string>
+            <string>UNSTABLE</string>
+          </noticeOccasions>
+        </io.jenkins.plugins.DingTalkNotifierConfig>
+      </notifierConfigs>
+    </io.jenkins.plugins.DingTalkJobProperty>
+    <jenkins.advancedqueue.jobinclusion.strategy.JobInclusionJobProperty plugin="PrioritySorter@4.1.0">
+      <useJobGroup>true</useJobGroup>
+      <jobGroupName>服务器</jobGroupName>
+    </jenkins.advancedqueue.jobinclusion.strategy.JobInclusionJobProperty>
+    <jenkins.model.BuildDiscarderProperty>
+      <strategy class="hudson.tasks.LogRotator">
+        <daysToKeep>7</daysToKeep>
+        <numToKeep>20</numToKeep>
+        <artifactDaysToKeep>7</artifactDaysToKeep>
+        <artifactNumToKeep>10</artifactNumToKeep>
+      </strategy>
+    </jenkins.model.BuildDiscarderProperty>
+    <hudson.model.ParametersDefinitionProperty>
+      <parameterDefinitions>
+        <com.cwctravel.hudson.plugins.extended__choice__parameter.ExtendedChoiceParameterDefinition plugin="extended-choice-parameter@359.v35dcfdd0c20d">
+          <name>server_name</name>
+          <description>单独重启指定RPC服务器</description>
+          <quoteValue>false</quoteValue>
+          <saveJSONParameterToFile>false</saveJSONParameterToFile>
+          <visibleItemCount>29</visibleItemCount>
+          <type>PT_RADIO</type>
+          <propertyFile>/var/jenkins_home/server.list</propertyFile>
+          <propertyKey>SL</propertyKey>
+          <multiSelectDelimiter>,</multiSelectDelimiter>
+          <descriptionPropertyFile>/var/jenkins_home/server.list</descriptionPropertyFile>
+          <descriptionPropertyKey>SLDesc</descriptionPropertyKey>
+          <projectName>服务器 - 单独更新RPC-Server</projectName>
+        </com.cwctravel.hudson.plugins.extended__choice__parameter.ExtendedChoiceParameterDefinition>
+      </parameterDefinitions>
+    </hudson.model.ParametersDefinitionProperty>
+  </properties>
+  <scm class="hudson.scm.NullSCM"/>
+  <canRoam>true</canRoam>
+  <disabled>false</disabled>
+  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+  <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <triggers/>
+  <concurrentBuild>false</concurrentBuild>
+  <builders/>
+  <publishers/>
+  <buildWrappers>
+    <hudson.plugins.ansicolor.AnsiColorBuildWrapper plugin="ansicolor@1.0.2">
+      <colorMapName>xterm</colorMapName>
+    </hudson.plugins.ansicolor.AnsiColorBuildWrapper>
+    <org.jvnet.hudson.plugins.SSHBuildWrapper plugin="ssh@2.6.1">
+      <siteName>root@10.0.84.16:22</siteName>
+      <preScript>#!/bin/bash 
+source /root/jenkins/jk_func.sh
+
+if [ -z &quot;$server_name&quot; ]; then
+    echo &quot;Error: 没有选择服务器!&quot;
+    exit 1
+fi
+
+file_lock  || { echo &quot;其他任务运行中，请稍后执行&quot;; exit 1; }
+
+yaml $conf_file &quot;[&apos;$server_name&apos;]&quot;
+branch_name=$(yaml $conf_file &quot;[&apos;$server_name&apos;][&apos;bandit&apos;]&quot;)
+rpc_port=$(yaml $conf_file &quot;[&apos;$server_name&apos;][&apos;rpc_port&apos;]&quot;)
+
+cd /mnt/slots/bandit-server
+git cd $branch_name
+check_last_cmd branch
+
+git pull
+check_last_cmd pull
+
+cd /mnt/slots/cc-slots-land/batch
+./compile_rpc.sh $server_name &amp;&amp; ./build_image_rpc.sh $server_name &amp;&amp; ./run_image_rpc.sh $server_name $rpc_port
+
+file_unlock</preScript>
+      <postScript>#!/bin/bash -e
+source /root/jenkins/jk_func.sh
+~/jenkins/analyze_log/analyze_err -url ${BUILD_URL}  || { echo &quot;任务执行失败&quot;; exit 1; }
+sleep 5
+check_whole_server $server_name
+
+curl &apos;https://oapi.dingtalk.com/robot/send?access_token=13aa551ba8a79265c4424316089cd31c4f479b0f685f3d5a503b0ab6a1a42ec7&apos; -H &apos;Content-Type: application/json&apos;  -d &apos;{&quot;msgtype&quot;: &quot;text&quot;,&quot;text&quot;: {&quot;content&quot;: &quot;Jenkins-RPC-Server[&apos;&quot;${server_name}&quot;&apos;] Restart OK&quot;}}&apos;</postScript>
+      <hideCommand>false</hideCommand>
+    </org.jvnet.hudson.plugins.SSHBuildWrapper>
+  </buildWrappers>
+</project>

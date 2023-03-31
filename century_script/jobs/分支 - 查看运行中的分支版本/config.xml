@@ -1,0 +1,68 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<project>
+  <actions/>
+  <description>查看运行中的服务器分支配置(仅支持GameServer)&#xd;
+game/bandit&#xd;
+</description>
+  <keepDependencies>false</keepDependencies>
+  <properties>
+    <jenkins.advancedqueue.jobinclusion.strategy.JobInclusionJobProperty plugin="PrioritySorter@4.1.0">
+      <useJobGroup>true</useJobGroup>
+      <jobGroupName>分支</jobGroupName>
+    </jenkins.advancedqueue.jobinclusion.strategy.JobInclusionJobProperty>
+    <jenkins.model.BuildDiscarderProperty>
+      <strategy class="hudson.tasks.LogRotator">
+        <daysToKeep>7</daysToKeep>
+        <numToKeep>10</numToKeep>
+        <artifactDaysToKeep>7</artifactDaysToKeep>
+        <artifactNumToKeep>10</artifactNumToKeep>
+      </strategy>
+    </jenkins.model.BuildDiscarderProperty>
+    <hudson.model.ParametersDefinitionProperty>
+      <parameterDefinitions>
+        <com.cwctravel.hudson.plugins.extended__choice__parameter.ExtendedChoiceParameterDefinition plugin="extended-choice-parameter@359.v35dcfdd0c20d">
+          <name>server_name</name>
+          <description>指定服务器</description>
+          <quoteValue>false</quoteValue>
+          <saveJSONParameterToFile>false</saveJSONParameterToFile>
+          <visibleItemCount>29</visibleItemCount>
+          <type>PT_RADIO</type>
+          <propertyFile>/var/jenkins_home/server.list</propertyFile>
+          <propertyKey>SL</propertyKey>
+          <multiSelectDelimiter>,</multiSelectDelimiter>
+          <descriptionPropertyFile>/var/jenkins_home/server.list</descriptionPropertyFile>
+          <descriptionPropertyKey>SLDesc</descriptionPropertyKey>
+          <projectName>分支 - 查看运行中的分支版本</projectName>
+        </com.cwctravel.hudson.plugins.extended__choice__parameter.ExtendedChoiceParameterDefinition>
+      </parameterDefinitions>
+    </hudson.model.ParametersDefinitionProperty>
+  </properties>
+  <scm class="hudson.scm.NullSCM"/>
+  <canRoam>true</canRoam>
+  <disabled>false</disabled>
+  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+  <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <triggers/>
+  <concurrentBuild>false</concurrentBuild>
+  <builders/>
+  <publishers/>
+  <buildWrappers>
+    <hudson.plugins.ansicolor.AnsiColorBuildWrapper plugin="ansicolor@1.0.2">
+      <colorMapName>xterm</colorMapName>
+    </hudson.plugins.ansicolor.AnsiColorBuildWrapper>
+    <org.jvnet.hudson.plugins.SSHBuildWrapper plugin="ssh@2.6.1">
+      <siteName>root@10.0.84.16:22</siteName>
+      <preScript>#!/bin/bash
+
+cc_port=$(docker ps -a | grep ${server_name}-backend | awk -F &apos;-&gt;&apos; &apos;{print $1}&apos; | awk -F &apos;:&apos; &apos;{print $3}&apos;)
+echo &quot;GameBranch : ${cc_port}&quot;
+curl http://0.0.0.0:${cc_port}/version
+
+#bd_port=$(docker ps -a | grep ${server_name}-rpc | awk -F &apos;-&gt;&apos; &apos;{print $1}&apos; | awk -F &apos;:&apos; &apos;{print $3}&apos;)
+#echo BanditBranch:${bd_port}
+#curl http://0.0.0.0:${bd_port}/version</preScript>
+      <postScript></postScript>
+      <hideCommand>false</hideCommand>
+    </org.jvnet.hudson.plugins.SSHBuildWrapper>
+  </buildWrappers>
+</project>

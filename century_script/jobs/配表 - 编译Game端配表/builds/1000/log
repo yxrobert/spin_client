@@ -1,0 +1,49 @@
+Started by upstream project "[8mha:////4PHKa1DZSJXWSY/bUVaVqjOo30NFriCGoy8dnEpEEQV5AAAA9h+LCAAAAAAAAP9djUtOwzAURR9BsAAkJogJgzukbqs2tYU6iIP5SC0TVhColbYYO0pcBKtAYhswYREshz3gOCPyJMvHV9fnff3SQVPT2Xq3apwdPDrbOKMHS7fS5uat0rXZ2Kc75zV1s5cQvdZ02uv/q6bzz+/5R/WTUHJLh0bb0q8XtL+rjaejxbZ4KZgpbMnufb2x5UXQnfR0eXf391YBjj29s617YFBTyBmyaQs88nh4Hg6UaN/8EoojGyHjUDPIHCKNyRXEKH4WkCGZQHKICVQKISE7SCGH0csDXBfPOqZ5lIY0a70BhAh29gdPmFzORAEAAA==[0m工具 - 配表编译并且更新到Game服务器" build number [8mha:////4Dea7azrMNhddmi/r32vP1WsWZOXKzhKglaAAh5Qo/9rAAAA9h+LCAAAAAAAAP9djUtOwzAURV9TwQIYIiYM3pC6Qa1jq+ogDuYjtZ2wgkCt9GPsyHERbKPbgAmLYDndA44zIk+yfHx1fd73Cc4aB9ebw7qxZvRqTWO1Gi3tWunHz1o5vTX7lfUKuhkkAB8Ornr9f1U6//qZH+vfBJInONfKVH6zgOHBaQ8Xi135XhJdmoo8e7c11SzoLnu6orv7e+sAQw9HsrMvBOUURYb5tAUW+XZ8Ew5K3r7ZHUqGeYo5Q5mhKJDTmNwjT+NnjiIkExQM+QQlRS5QdEBRjKOXBXgo31RMiygNad56A3Ae7ISm2R+CpmleRwEAAA==[0m617
+originally caused by:
+ Started by user [8mha:////4NL15lwhNok46o8LpNIYOqAIaurwr6Vm2yW5YSW4R5+wAAAAlh+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyWEgYu/dLi1CL9ovz8EgDKVWzSvwAAAA==[0mroot
+Running as SYSTEM
+[EnvInject] - Loading node environment variables.
+Building in workspace /var/jenkins_home/workspace/配表 - 编译Game端配表
+[8mha:////4N2e+QcRWiO0bcWwT3aiP22l32op6PM8PA/bgkFaJ8U/AAAAqx+LCAAAAAAAAP9b85aBtbiIQSujNKU4P0+vIKc0PTOvWC8xrzgzOT8nv0gvMbkkEyjhCKb88ktSdwVsu2efuqidiYHRh4EDIu2ZUsIg5JOVWJaon5OYl64fXFKUmZduXVHEIAU1ODk/rzg/J1XPGUKDDGKAAEYmBoaKghIGFSNTQ+O05GQL3TSjVEtdE2NDE13LVCMzXQNLA1MjcwtDI6MUAwAU94Z/rwAAAA==[0m[SSH] executing pre build script:
+conf_name="Activity"
+
+#!/bin/bash -e
+source /root/jenkins/jk_func.sh
+
+file_dir=/mnt/slots/cc-conf
+file_lock || { echo "其他任务运行中，请稍后执行"; exit 1; }
+
+cd ${file_dir}
+git reset --hard origin/deploy-cc-conf
+git pull --ff-only
+
+arr=(`echo $conf_name | tr ',' ' '`)
+echo ${arr[@]}
+
+for el in ${arr[*]}
+do
+echo $el
+protokitgo drive sync ${el} --config=${file_dir}/setting.yaml --log_color=false
+cd ${file_dir}
+done
+
+protokitgo gen --config=${file_dir}/setting.yaml --log_color=false --branches=deploy-cc-conf
+check_last_cmd gen_config
+cd ${file_dir}
+protokitgo release upload_conf --upload_dir=${file_dir}/gen/lua --upload_types=.lua,.bytes --config=${file_dir}/setting.yaml --log_color=false
+cd ${file_dir}
+clear_ignore
+
+# commit
+git add -A
+git commit -am "auto commit by jenkins ${BUILD_USER}"
+git push
+
+file_unlock
+
+脚本运行中，请稍后执行！
+
+[SSH] completed
+[SSH] exit-status: 1
+
+Finished: FAILURE

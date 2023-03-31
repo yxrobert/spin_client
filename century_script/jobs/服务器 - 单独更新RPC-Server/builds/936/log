@@ -1,0 +1,33 @@
+Started by user [8mha:////4HzE0KdkKUoEe3LZuhNgH6yc83P/GTxEBP+eXA1cZtU+AAAAmR+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzOEgZe/dLi1CL9ksTMiszEfAA0j2PtwgAAAA==[0mhetaixiao
+Running as SYSTEM
+[EnvInject] - Loading node environment variables.
+Building in workspace /var/jenkins_home/workspace/服务器 - 单独更新RPC-Server
+[8mha:////4CgL4asewm0EUPkKaK3UU+V+z54AvH+2Yw0oWvrpsSy+AAAAqx+LCAAAAAAAAP9b85aBtbiIQSujNKU4P0+vIKc0PTOvWC8xrzgzOT8nv0gvMbkkEyjhCKb88ktSdwVsu2efuqidiYHRh4EDIu2ZUsIg5JOVWJaon5OYl64fXFKUmZduXVHEIAU1ODk/rzg/J1XPGUKDDGKAAEYmBoaKghIGFUtzw2RTE5NkXeNEcyNdkzRLA91Eo1QTXYNkQ2MTS1MDSwPjJABB7+1hrwAAAA==[0m[SSH] executing pre build script:
+server_name="pk7001"
+
+#!/bin/bash 
+source /root/jenkins/jk_func.sh
+
+file_lock
+
+yaml $conf_file "['$server_name']"
+branch_name=$(yaml $conf_file "['$server_name']['bandit']")
+rpc_port=$(yaml $conf_file "['$server_name']['rpc_port']")
+
+cd /mnt/slots/bandit-server
+git cd $branch_name
+check_last_cmd branch
+
+git pull
+check_last_cmd pull
+
+cd /mnt/slots/cc-slots-land/batch
+./compile_rpc.sh $server_name && ./build_image_rpc.sh $server_name && ./run_image_rpc.sh $server_name $rpc_port
+
+file_unlock
+脚本运行中，请稍后执行！
+
+[SSH] completed
+[SSH] exit-status: 1
+
+Finished: FAILURE

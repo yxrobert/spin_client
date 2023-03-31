@@ -1,0 +1,96 @@
+Started by user [8mha:////4NL15lwhNok46o8LpNIYOqAIaurwr6Vm2yW5YSW4R5+wAAAAlh+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyWEgYu/dLi1CL9ovz8EgDKVWzSvwAAAA==[0mroot
+Running as SYSTEM
+[EnvInject] - Loading node environment variables.
+Building in workspace /var/jenkins_home/workspace/分支 - 更改服务器分支配置
+[8mha:////4DUE4B76gpqMoPeFAn1eqPOGLyWEuEAWOU19oea5QBXuAAAAqx+LCAAAAAAAAP9b85aBtbiIQSujNKU4P0+vIKc0PTOvWC8xrzgzOT8nv0gvMbkkEyjhCKb88ktSdwVsu2efuqidiYHRh4EDIu2ZUsIg5JOVWJaon5OYl64fXFKUmZduXVHEIAU1ODk/rzg/J1XPGUKDDGKAAEYmBoaKghIGFWMjg2QDIwtDXdM08yRdE+NkC13LZJMUXcPUFEtzg+REYxOTZAAPKUSprwAAAA==[0m[SSH] executing pre build script:
+GAME_BR="feature/card_new_season_pr1"
+GAME_CONF="deploy-cc-conf"
+server_name="pk7016"
+BANDIT_BR="develop"
+BANDIT_CONF="deploy-bandit-conf"
+
+#!/bin/bash
+
+source /root/jenkins/jk_func.sh
+
+if [ -z "$server_name" ]; then
+    echo "Error: 没有选择服务器!"
+    exit 1
+fi
+
+file_lock
+LINE_NO=$(grep -n "${server_name}:" $conf_file | awk -F ":" '{print $1}')
+echo $LINE_NO
+mod_branch $LINE_NO $GAME_BR $BANDIT_BR $GAME_CONF $BANDIT_CONF
+file_unlock
+脚本可执行
+190
+
+before setting
+pk7016:
+ port: 7206 
+ game: develop
+ bandit: develop
+ cc-conf: deploy-cc-conf
+ bandit-conf: deploy-bandit-conf
+释放脚本锁
+
+[SSH] completed
+[SSH] exit-status: 0
+
+[SSH] executing post build script:
+GAME_BR="feature/card_new_season_pr1"
+GAME_CONF="deploy-cc-conf"
+server_name="pk7016"
+BANDIT_BR="develop"
+BUILD_URL="http://10.0.84.16:8083/job/%E5%88%86%E6%94%AF%20-%20%E6%9B%B4%E6%94%B9%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%88%86%E6%94%AF%E9%85%8D%E7%BD%AE/471/"
+BANDIT_CONF="deploy-bandit-conf"
+
+conf_file=~/jenkins/server_config.yaml
+cat $conf_file | grep $server_name -C 6
+
+cd /mnt/slots/bandit-server && git remote update
+cd /mnt/slots/cc-server && git remote update
+cd /var/lib/docker/volumes/jenkins-data/_data && python update_server_list.py
+
+curl 'https://oapi.dingtalk.com/robot/send?access_token=13aa551ba8a79265c4424316089cd31c4f479b0f685f3d5a503b0ab6a1a42ec7' -H 'Content-Type: application/json'  -d '{"msgtype": "text","text": {"content": "Jenkins-Server['"${server_name}"'] Change To Game['"${GAME_BR}"'] RPC['"${BANDIT_BR}"'] GAME_CONF['"${GAME_CONF}"'] BANDIT_CONF['"${BANDIT_CONF}"'] "}}'
+
+source /root/jenkins/jk_func.sh
+~/jenkins/analyze_log/analyze_err -url ${BUILD_URL}
+ bandit: develop
+ cc-conf: deploy-cc-conf
+ bandit-conf: deploy-bandit-conf
+ rpc_port: 7115
+ desc: pk7015 
+
+pk7016:
+ port: 7206 
+ game: feature/card_new_season_pr1
+ bandit: develop
+ cc-conf: deploy-cc-conf
+ bandit-conf: deploy-bandit-conf
+ rpc_port: 7116
+ desc: pk7016 
+
+pk7017:
+ port: 7207 
+ game: feature/journey_booster_pr6
+ bandit: develop
+ cc-conf: deploy-cc-conf
+Fetching origin
+Fetching origin
+remote: Enumerating objects: 113, done.[K
+remote: Counting objects:   1% (1/86)[Kremote: Counting objects:   2% (2/86)[Kremote: Counting objects:   3% (3/86)[Kremote: Counting objects:   4% (4/86)[Kremote: Counting objects:   5% (5/86)[Kremote: Counting objects:   6% (6/86)[Kremote: Counting objects:   8% (7/86)[Kremote: Counting objects:   9% (8/86)[Kremote: Counting objects:  10% (9/86)[Kremote: Counting objects:  11% (10/86)[Kremote: Counting objects:  12% (11/86)[Kremote: Counting objects:  13% (12/86)[Kremote: Counting objects:  15% (13/86)[Kremote: Counting objects:  16% (14/86)[Kremote: Counting objects:  17% (15/86)[Kremote: Counting objects:  18% (16/86)[Kremote: Counting objects:  19% (17/86)[Kremote: Counting objects:  20% (18/86)[Kremote: Counting objects:  22% (19/86)[Kremote: Counting objects:  23% (20/86)[Kremote: Counting objects:  24% (21/86)[Kremote: Counting objects:  25% (22/86)[Kremote: Counting objects:  26% (23/86)[Kremote: Counting objects:  27% (24/86)[Kremote: Counting objects:  29% (25/86)[Kremote: Counting objects:  30% (26/86)[Kremote: Counting objects:  31% (27/86)[Kremote: Counting objects:  32% (28/86)[Kremote: Counting objects:  33% (29/86)[Kremote: Counting objects:  34% (30/86)[Kremote: Counting objects:  36% (31/86)[Kremote: Counting objects:  37% (32/86)[Kremote: Counting objects:  38% (33/86)[Kremote: Counting objects:  39% (34/86)[Kremote: Counting objects:  40% (35/86)[Kremote: Counting objects:  41% (36/86)[Kremote: Counting objects:  43% (37/86)[Kremote: Counting objects:  44% (38/86)[Kremote: Counting objects:  45% (39/86)[Kremote: Counting objects:  46% (40/86)[Kremote: Counting objects:  47% (41/86)[Kremote: Counting objects:  48% (42/86)[Kremote: Counting objects:  50% (43/86)[Kremote: Counting objects:  51% (44/86)[Kremote: Counting objects:  52% (45/86)[Kremote: Counting objects:  53% (46/86)[Kremote: Counting objects:  54% (47/86)[Kremote: Counting objects:  55% (48/86)[Kremote: Counting objects:  56% (49/86)[Kremote: Counting objects:  58% (50/86)[Kremote: Counting objects:  59% (51/86)[Kremote: Counting objects:  60% (52/86)[Kremote: Counting objects:  61% (53/86)[Kremote: Counting objects:  62% (54/86)[Kremote: Counting objects:  63% (55/86)[Kremote: Counting objects:  65% (56/86)[Kremote: Counting objects:  66% (57/86)[Kremote: Counting objects:  67% (58/86)[Kremote: Counting objects:  68% (59/86)[Kremote: Counting objects:  69% (60/86)[Kremote: Counting objects:  70% (61/86)[Kremote: Counting objects:  72% (62/86)[Kremote: Counting objects:  73% (63/86)[Kremote: Counting objects:  74% (64/86)[Kremote: Counting objects:  75% (65/86)[Kremote: Counting objects:  76% (66/86)[Kremote: Counting objects:  77% (67/86)[Kremote: Counting objects:  79% (68/86)[Kremote: Counting objects:  80% (69/86)[Kremote: Counting objects:  81% (70/86)[Kremote: Counting objects:  82% (71/86)[Kremote: Counting objects:  83% (72/86)[Kremote: Counting objects:  84% (73/86)[Kremote: Counting objects:  86% (74/86)[Kremote: Counting objects:  87% (75/86)[Kremote: Counting objects:  88% (76/86)[Kremote: Counting objects:  89% (77/86)[Kremote: Counting objects:  90% (78/86)[Kremote: Counting objects:  91% (79/86)[Kremote: Counting objects:  93% (80/86)[Kremote: Counting objects:  94% (81/86)[Kremote: Counting objects:  95% (82/86)[Kremote: Counting objects:  96% (83/86)[Kremote: Counting objects:  97% (84/86)[Kremote: Counting objects:  98% (85/86)[Kremote: Counting objects: 100% (86/86)[Kremote: Counting objects: 100% (86/86), done.[K
+remote: Compressing objects:   3% (1/27)[Kremote: Compressing objects:   7% (2/27)[Kremote: Compressing objects:  11% (3/27)[Kremote: Compressing objects:  14% (4/27)[Kremote: Compressing objects:  18% (5/27)[Kremote: Compressing objects:  22% (6/27)[Kremote: Compressing objects:  25% (7/27)[Kremote: Compressing objects:  29% (8/27)[Kremote: Compressing objects:  33% (9/27)[Kremote: Compressing objects:  37% (10/27)[Kremote: Compressing objects:  40% (11/27)[Kremote: Compressing objects:  44% (12/27)[Kremote: Compressing objects:  48% (13/27)[Kremote: Compressing objects:  51% (14/27)[Kremote: Compressing objects:  55% (15/27)[Kremote: Compressing objects:  59% (16/27)[Kremote: Compressing objects:  62% (17/27)[Kremote: Compressing objects:  66% (18/27)[Kremote: Compressing objects:  70% (19/27)[Kremote: Compressing objects:  74% (20/27)[Kremote: Compressing objects:  77% (21/27)[Kremote: Compressing objects:  81% (22/27)[Kremote: Compressing objects:  85% (23/27)[Kremote: Compressing objects:  88% (24/27)[Kremote: Compressing objects:  92% (25/27)[Kremote: Compressing objects:  96% (26/27)[Kremote: Compressing objects: 100% (27/27)[Kremote: Compressing objects: 100% (27/27), done.[K
+Receiving objects:   0% (1/113)   Receiving objects:   1% (2/113)   Receiving objects:   2% (3/113)   Receiving objects:   3% (4/113)   Receiving objects:   4% (5/113)   Receiving objects:   5% (6/113)   Receiving objects:   6% (7/113)   Receiving objects:   7% (8/113)   Receiving objects:   8% (10/113)   Receiving objects:   9% (11/113)   Receiving objects:  10% (12/113)   Receiving objects:  11% (13/113)   remote: Total 113 (delta 62), reused 65 (delta 59), pack-reused 27[K
+Receiving objects:  12% (14/113)   Receiving objects:  13% (15/113)   Receiving objects:  14% (16/113)   Receiving objects:  15% (17/113)   Receiving objects:  16% (19/113)   Receiving objects:  17% (20/113)   Receiving objects:  18% (21/113)   Receiving objects:  19% (22/113)   Receiving objects:  20% (23/113)   Receiving objects:  21% (24/113)   Receiving objects:  22% (25/113)   Receiving objects:  23% (26/113)   Receiving objects:  24% (28/113)   Receiving objects:  25% (29/113)   Receiving objects:  26% (30/113)   Receiving objects:  27% (31/113)   Receiving objects:  28% (32/113)   Receiving objects:  29% (33/113)   Receiving objects:  30% (34/113)   Receiving objects:  31% (36/113)   Receiving objects:  32% (37/113)   Receiving objects:  33% (38/113)   Receiving objects:  34% (39/113)   Receiving objects:  35% (40/113)   Receiving objects:  36% (41/113)   Receiving objects:  37% (42/113)   Receiving objects:  38% (43/113)   Receiving objects:  39% (45/113)   Receiving objects:  40% (46/113)   Receiving objects:  41% (47/113)   Receiving objects:  42% (48/113)   Receiving objects:  43% (49/113)   Receiving objects:  44% (50/113)   Receiving objects:  45% (51/113)   Receiving objects:  46% (52/113)   Receiving objects:  47% (54/113)   Receiving objects:  48% (55/113)   Receiving objects:  49% (56/113)   Receiving objects:  50% (57/113)   Receiving objects:  51% (58/113)   Receiving objects:  52% (59/113)   Receiving objects:  53% (60/113)   Receiving objects:  54% (62/113)   Receiving objects:  55% (63/113)   Receiving objects:  56% (64/113)   Receiving objects:  57% (65/113)   Receiving objects:  58% (66/113)   Receiving objects:  59% (67/113)   Receiving objects:  60% (68/113)   Receiving objects:  61% (69/113)   Receiving objects:  62% (71/113)   Receiving objects:  63% (72/113)   Receiving objects:  64% (73/113)   Receiving objects:  65% (74/113)   Receiving objects:  66% (75/113)   Receiving objects:  67% (76/113)   Receiving objects:  68% (77/113)   Receiving objects:  69% (78/113)   Receiving objects:  70% (80/113)   Receiving objects:  71% (81/113)   Receiving objects:  72% (82/113)   Receiving objects:  73% (83/113)   Receiving objects:  74% (84/113)   Receiving objects:  75% (85/113)   Receiving objects:  76% (86/113)   Receiving objects:  77% (88/113)   Receiving objects:  78% (89/113)   Receiving objects:  79% (90/113)   Receiving objects:  80% (91/113)   Receiving objects:  81% (92/113)   Receiving objects:  82% (93/113)   Receiving objects:  83% (94/113)   Receiving objects:  84% (95/113)   Receiving objects:  85% (97/113)   Receiving objects:  86% (98/113)   Receiving objects:  87% (99/113)   Receiving objects:  88% (100/113)   Receiving objects:  89% (101/113)   Receiving objects:  90% (102/113)   Receiving objects:  91% (103/113)   Receiving objects:  92% (104/113)   Receiving objects:  93% (106/113)   Receiving objects:  94% (107/113)   Receiving objects:  95% (108/113)   Receiving objects:  96% (109/113)   Receiving objects:  97% (110/113)   Receiving objects:  98% (111/113)   Receiving objects:  99% (112/113)   Receiving objects: 100% (113/113)   Receiving objects: 100% (113/113), 41.91 KiB | 0 bytes/s, done.
+Resolving deltas:   0% (0/62)   Resolving deltas:   3% (2/62)   Resolving deltas:   4% (3/62)   Resolving deltas:   6% (4/62)   Resolving deltas:   8% (5/62)   Resolving deltas:   9% (6/62)   Resolving deltas:  11% (7/62)   Resolving deltas:  12% (8/62)   Resolving deltas:  14% (9/62)   Resolving deltas:  16% (10/62)   Resolving deltas:  17% (11/62)   Resolving deltas:  19% (12/62)   Resolving deltas:  20% (13/62)   Resolving deltas:  22% (14/62)   Resolving deltas:  24% (15/62)   Resolving deltas:  25% (16/62)   Resolving deltas:  27% (17/62)   Resolving deltas:  29% (18/62)   Resolving deltas:  30% (19/62)   Resolving deltas:  32% (20/62)   Resolving deltas:  33% (21/62)   Resolving deltas:  35% (22/62)   Resolving deltas:  37% (23/62)   Resolving deltas:  38% (24/62)   Resolving deltas:  40% (25/62)   Resolving deltas:  41% (26/62)   Resolving deltas:  43% (27/62)   Resolving deltas:  45% (28/62)   Resolving deltas:  46% (29/62)   Resolving deltas:  48% (30/62)   Resolving deltas:  50% (31/62)   Resolving deltas:  51% (32/62)   Resolving deltas:  53% (33/62)   Resolving deltas:  54% (34/62)   Resolving deltas:  56% (35/62)   Resolving deltas:  58% (36/62)   Resolving deltas:  59% (37/62)   Resolving deltas:  61% (38/62)   Resolving deltas:  62% (39/62)   Resolving deltas:  64% (40/62)   Resolving deltas:  66% (41/62)   Resolving deltas:  67% (42/62)   Resolving deltas:  69% (43/62)   Resolving deltas:  70% (44/62)   Resolving deltas:  72% (45/62)   Resolving deltas:  74% (46/62)   Resolving deltas:  75% (47/62)   Resolving deltas:  77% (48/62)   Resolving deltas:  79% (49/62)   Resolving deltas:  80% (50/62)   Resolving deltas:  82% (51/62)   Resolving deltas:  83% (52/62)   Resolving deltas:  85% (53/62)   Resolving deltas:  87% (54/62)   Resolving deltas:  88% (55/62)   Resolving deltas:  90% (56/62)   Resolving deltas:  91% (57/62)   Resolving deltas:  93% (58/62)   Resolving deltas:  95% (59/62)   Resolving deltas:  96% (60/62)   Resolving deltas:  98% (61/62)   Resolving deltas: 100% (62/62)   Resolving deltas: 100% (62/62), completed with 59 local objects.
+From gitlab.funplus.io:cheesecake/cc-server
+ * [new branch]      feature/card_new_season_pr1 -> origin/feature/card_new_season_pr1
+SL=pkzxj,pkyq,pktest,pkreview,pkjy,pkcp,pk7020,pk7019,pk7018,pk7017,pk7016,pk7015,pk7014,pk7013,pk7012,pk7011,pk7010,pk7009,pk7008,pk7007,pk7006,pk7005,pk7004,pk7003,pk7002,pk7001
+SLDesc=[ pkzxj ] game:[ develop ] bandit:[ develop ] port:[ 8888 ] cc-conf[ deploy-cc-conf ] bd-conf[ deploy-bandit-conf ],[ pkyq ] game:[ pre/v0.12.2 ] bandit:[ pre/v0.12.2 ] port:[ 3333 ] cc-conf[ pre/v0.12.2 ] bd-conf[ pre/v0.12.2 ],[ pktest ] game:[ develop ] bandit:[ develop ] port:[ 6666 ] cc-conf[ deploy-cc-conf ] bd-conf[ deploy-bandit-conf ],[ pkreview ] game:[ pre/v0.13.7 ] bandit:[ pre/v0.13.7 ] port:[ 4444 ] cc-conf[ pre/v0.13.7 ] bd-conf[ pre/v0.13.7 ],[ pkjy ] game:[ feature/disco-sp1 ] bandit:[ feature/disco-personal ] port:[ 5555 ] cc-conf[ deploy-cc-conf ] bd-conf[ deploy-bandit-conf ],[ pkcp ] game:[ feature/spin_max_bonus ] bandit:[ develop ] port:[ 9999 ] cc-conf[ deploy-cc-conf ] bd-conf[ deploy-bandit-conf ],[ pk7020 ] game:[ develop ] bandit:[ develop ] port:[ 7210 ] cc-conf[ deploy-cc-conf ] bd-conf[ deploy-bandit-conf ],[ pk7019 ] game:[ feature/new_quest ] bandit:[ develop ] port:[ 7209 ] cc-conf[ deploy-cc-conf ] bd-conf[ deploy-bandit-conf ],[ pk7018 ] game:[ feature/card_end_pr1 ] bandit:[ develop ] port:[ 7208 ] cc-conf[ deploy-cc-conf ] bd-conf[ deploy-bandit-conf ],[ pk7017 ] game:[ feature/journey_booster_pr6 ] bandit:[ develop ] port:[ 7207 ] cc-conf[ deploy-cc-conf ] bd-conf[ deploy-bandit-conf ],[ pk7016 ] game:[ feature/card_new_season_pr1 ] bandit:[ develop ] port:[ 7206 ] cc-conf[ deploy-cc-conf ] bd-conf[ deploy-bandit-conf ],[ pk7015 ] game:[ develop ] bandit:[ develop ] port:[ 7205 ] cc-conf[ deploy-cc-conf ] bd-conf[ deploy-bandit-conf ],[ pk7014 ] game:[ feature/piggyPinata ] bandit:[ feature/piggyPinata ] port:[ 7204 ] cc-conf[ deploy-cc-conf ] bd-conf[ deploy-bandit-conf ],[ qunlong/pk7013 ] game:[ pre/v0.13.7 ] bandit:[ pre/v0.13.7 ] port:[ 7203 ] cc-conf[ pre/v0.13.7 ] bd-conf[ pre/v0.13.7 ],[ tanghao/pk7012 ] game:[ develop ] bandit:[ develop ] port:[ 7202 ] cc-conf[ deploy-cc-conf ] bd-conf[ deploy-bandit-conf ],[ yanqiao/pk7011 ] game:[ pre/v0.13.7 ] bandit:[ pre/v0.13.7 ] port:[ 7201 ] cc-conf[ pre/v0.13.7 ] bd-conf[ pre/v0.13.7 ],[ pk7010 ] game:[ feature/luckyCard ] bandit:[ develop ] port:[ 7100 ] cc-conf[ deploy-cc-conf ] bd-conf[ deploy-bandit-conf ],[ pk7009 ] game:[ feature/tastyPiggy ] bandit:[ develop ] port:[ 7009 ] cc-conf[ deploy-cc-conf ] bd-conf[ deploy-bandit-conf ],[ pk7008 ] game:[ feature/goldenPharaoh_animation ] bandit:[ feature/goldenPharaoh ] port:[ 7008 ] cc-conf[ deploy-cc-conf ] bd-conf[ deploy-bandit-conf ],[ pk7007 ] game:[ feature/luckyCard ] bandit:[ develop ] port:[ 7007 ] cc-conf[ deploy-cc-conf ] bd-conf[ deploy-bandit-conf ],[ pk7006 ] game:[ develop ] bandit:[ develop ] port:[ 7006 ] cc-conf[ deploy-cc-conf ] bd-conf[ deploy-bandit-conf ],[ pk7005 ] game:[ feature/disco-personal ] bandit:[ feature/disco-personal ] port:[ 7005 ] cc-conf[ deploy-cc-conf ] bd-conf[ deploy-bandit-conf ],[ pk7004 ] game:[ feature/siberianWolf ] bandit:[ feature/siberianWolf ] port:[ 7004 ] cc-conf[ deploy-cc-conf ] bd-conf[ deploy-bandit-conf ],[ cehua/pk7003 ] game:[ develop ] bandit:[ develop ] port:[ 7003 ] cc-conf[ deploy-cc-conf ] bd-conf[ deploy-bandit-conf ],[ pk7002 ] game:[ feature/endless2 ] bandit:[ develop ] port:[ 7002 ] cc-conf[ deploy-cc-conf ] bd-conf[ deploy-bandit-conf ],[ pk7001 ] game:[ develop ] bandit:[ bugfix/lavaCash_polish ] port:[ 7001 ] cc-conf[ deploy-cc-conf ] bd-conf[ deploy-bandit-conf ]
+{"errcode":0,"errmsg":"ok"}
+[SSH] completed
+[SSH] exit-status: 0
+
+Finished: SUCCESS

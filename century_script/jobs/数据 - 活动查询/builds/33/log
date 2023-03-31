@@ -1,0 +1,36 @@
+Started by user [8mha:////4NL15lwhNok46o8LpNIYOqAIaurwr6Vm2yW5YSW4R5+wAAAAlh+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyWEgYu/dLi1CL9ovz8EgDKVWzSvwAAAA==[0mroot
+Running as SYSTEM
+[EnvInject] - Loading node environment variables.
+Building in workspace /var/jenkins_home/workspace/数据 - 活动查询
+[8mha:////4EFySQyqiRWONSUnWlxfIhtWBJVcg87rZWrDSfCuKT2YAAAAqx+LCAAAAAAAAP9b85aBtbiIQSujNKU4P0+vIKc0PTOvWC8xrzgzOT8nv0gvMbkkEyjhCKb88ktSdwVsu2efuqidiYHRh4EDIu2ZUsIg5JOVWJaon5OYl64fXFKUmZduXVHEIAU1ODk/rzg/J1XPGUKDDGKAAEYmBoaKghIGlaTk5CTLxBRDXSOLJAtdEzMjE11LA2NTXQsLI3PTNLOkVAPzFAA7QYIQrwAAAA==[0m[SSH] executing pre build script:
+PATH="/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+server_name="pkcp"
+act_id="537"
+uid="100000000009440"
+account="z634"
+
+echo $server_name
+#!/bin/bash -e
+
+export PATH=/usr/bin/curl:$PATH
+function mg_port() {
+    docker ps -a | grep ${1}-mongo | awk -F '->' '{print $1}' | awk -F ':' '{print $3}'
+}
+
+port=$(mg_port ${server_name})
+echo $port
+
+cd ~/jenkins/script/python/ && python mongo_activity_ex.py ${port} ${account} ${act_id} ${uid}
+pkcp
+9110
+('uid', 100000000002431L)
+find act_id:[537]~
+{u'_id': ObjectId('64213568eef5a0360fc64f1e'), u'payload': {u'activity': {}}}
+
+[SSH] completed
+[SSH] exit-status: 0
+
+[SSH] executing post build script:
+
+
+Finished: SUCCESS

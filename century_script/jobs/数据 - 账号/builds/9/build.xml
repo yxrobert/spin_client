@@ -1,0 +1,53 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<build>
+  <actions>
+    <hudson.model.ParametersAction>
+      <safeParameters class="sorted-set"/>
+      <parameters>
+        <com.cwctravel.hudson.plugins.extended__choice__parameter.ExtendedChoiceParameterValue plugin="extended-choice-parameter@359.v35dcfdd0c20d">
+          <name>server_name</name>
+          <value>pk7011</value>
+        </com.cwctravel.hudson.plugins.extended__choice__parameter.ExtendedChoiceParameterValue>
+        <hudson.model.StringParameterValue>
+          <name>account</name>
+          <description>待查询账号</description>
+          <value>nf1009020</value>
+        </hudson.model.StringParameterValue>
+      </parameters>
+      <parameterDefinitionNames>
+        <string>server_name</string>
+        <string>account</string>
+      </parameterDefinitionNames>
+    </hudson.model.ParametersAction>
+    <hudson.model.CauseAction>
+      <causeBag class="linked-hash-map">
+        <entry>
+          <hudson.model.Cause_-UserIdCause>
+            <userId>yanqiao</userId>
+          </hudson.model.Cause_-UserIdCause>
+          <int>1</int>
+        </entry>
+      </causeBag>
+    </hudson.model.CauseAction>
+    <org.jenkinsci.plugins.envinject.EnvInjectPluginAction plugin="envinject@2.892.v25453b_80e595"/>
+    <hudson.plugins.ansicolor.action.ColorizedAction plugin="ansicolor@1.0.2">
+      <id>b332abb3-e41c-4882-a442-f33ae7d7ca53</id>
+      <colorMapName>xterm</colorMapName>
+      <command>START</command>
+    </hudson.plugins.ansicolor.action.ColorizedAction>
+  </actions>
+  <queueId>7009</queueId>
+  <timestamp>1678785638690</timestamp>
+  <startTime>1678785638756</startTime>
+  <result>SUCCESS</result>
+  <duration>2202</duration>
+  <charset>UTF-8</charset>
+  <keepLog>false</keepLog>
+  <builtOn></builtOn>
+  <workspace>/var/jenkins_home/workspace/数据 - 账号</workspace>
+  <hudsonVersion>2.386</hudsonVersion>
+  <scm class="hudson.scm.NullChangeLogParser"/>
+  <culprits class="java.util.Collections$UnmodifiableSet">
+    <c class="sorted-set"/>
+  </culprits>
+</build>

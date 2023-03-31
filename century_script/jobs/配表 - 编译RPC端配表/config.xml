@@ -1,0 +1,114 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<project>
+  <actions/>
+  <description>编译RPC端服务器配表 &#xd;
+[slots]&#xd;
+&lt;li&gt;&#xd;
+ &lt;a href=&quot; https://docs.google.com/spreadsheets/d/1eyUIR3g7vqBr3TtkB-EUAH4xO-KoeSuaWHUqVPvOagA/edit?pli=1#gid=0&quot;&gt;BDSlots&lt;/a&gt;&#xd;
+&lt;/li&gt;</description>
+  <keepDependencies>false</keepDependencies>
+  <properties>
+    <jenkins.advancedqueue.jobinclusion.strategy.JobInclusionJobProperty plugin="PrioritySorter@4.1.0">
+      <useJobGroup>true</useJobGroup>
+      <jobGroupName>配表</jobGroupName>
+    </jenkins.advancedqueue.jobinclusion.strategy.JobInclusionJobProperty>
+    <jenkins.model.BuildDiscarderProperty>
+      <strategy class="hudson.tasks.LogRotator">
+        <daysToKeep>7</daysToKeep>
+        <numToKeep>10</numToKeep>
+        <artifactDaysToKeep>7</artifactDaysToKeep>
+        <artifactNumToKeep>10</artifactNumToKeep>
+      </strategy>
+    </jenkins.model.BuildDiscarderProperty>
+    <hudson.model.ParametersDefinitionProperty>
+      <parameterDefinitions>
+        <com.cwctravel.hudson.plugins.extended__choice__parameter.ExtendedChoiceParameterDefinition plugin="extended-choice-parameter@359.v35dcfdd0c20d">
+          <name>conf_name</name>
+          <description>需要 [ 推送编译后的配表到服务器 ] 或者 [ 重启服务器 ] 才可生效</description>
+          <quoteValue>false</quoteValue>
+          <saveJSONParameterToFile>false</saveJSONParameterToFile>
+          <visibleItemCount>50</visibleItemCount>
+          <type>PT_CHECKBOX</type>
+          <value>Slots</value>
+          <defaultValue>Slots</defaultValue>
+          <multiSelectDelimiter>,</multiSelectDelimiter>
+          <descriptionPropertyValue>当前只有Slots</descriptionPropertyValue>
+          <projectName>配表 - 编译RPC端配表</projectName>
+        </com.cwctravel.hudson.plugins.extended__choice__parameter.ExtendedChoiceParameterDefinition>
+      </parameterDefinitions>
+    </hudson.model.ParametersDefinitionProperty>
+  </properties>
+  <scm class="hudson.scm.NullSCM"/>
+  <canRoam>true</canRoam>
+  <disabled>false</disabled>
+  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+  <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <triggers/>
+  <concurrentBuild>false</concurrentBuild>
+  <builders/>
+  <publishers/>
+  <buildWrappers>
+    <hudson.plugins.ansicolor.AnsiColorBuildWrapper plugin="ansicolor@1.0.2">
+      <colorMapName>xterm</colorMapName>
+    </hudson.plugins.ansicolor.AnsiColorBuildWrapper>
+    <org.jvnet.hudson.plugins.SSHBuildWrapper plugin="ssh@2.6.1">
+      <siteName>root@10.0.84.16:22</siteName>
+      <preScript>echo $conf_name
+
+#!/bin/bash -e
+
+export PATH=/opt/protokitgo:$PATH
+file_dir=/home/user00/jenkins/bandit-conf
+branch=deploy-bandit-conf
+
+clear_ignore() {
+    rm -rf ./gen/csharp
+    rm -rf ./gen/js
+    rm -rf ./gen/lua
+    rm -rf ./gen/rawdata/csv
+    rm -rf ./gen/rawdata/client
+}
+
+check_last_cmd() {
+    if [ $? -ne 0 ]; then
+        echo &quot;failed &quot;$1
+        exit 1
+    else
+        echo &quot;succeed &quot;$1
+    fi
+}
+
+r_str() {
+    python -c &quot;print(&apos;$1&apos;.replace(&apos;,&apos;, &apos; &apos;))&quot;
+}
+conf_name=$(r_str ${conf_name})
+echo $conf_name
+
+cd ${file_dir}
+git reset --hard origin/${branch}
+git pull --ff-only
+
+protokitgo drive sync ${conf_name} --config=${file_dir}/setting.yaml --log_color=false
+cd ${file_dir}
+
+protokitgo gen --config=${file_dir}/setting.yaml --log_color=false --branches=${branch}
+check_last_cmd gen_config
+cd ${file_dir}
+
+
+protokitgo release upload_conf --upload_dir=${file_dir}/gen/lua --upload_types=.bytes --config=${file_dir}/setting.yaml --log_color=false
+cd ${file_dir}
+clear_ignore
+
+# commit
+git add -A
+git commit -am &quot;auto commit by jenkins ${BUILD_USER}&quot;
+git push
+</preScript>
+      <postScript>#cd /var/lib/docker/volumes/jenkins-data/_data
+#python update_conf_list.py</postScript>
+      <hideCommand>false</hideCommand>
+    </org.jvnet.hudson.plugins.SSHBuildWrapper>
+    <org.jenkinsci.plugins.builduser.BuildUser plugin="build-user-vars-plugin@1.9"/>
+  </buildWrappers>
+</project>

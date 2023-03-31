@@ -1,0 +1,98 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<com.tikal.jenkins.plugins.multijob.MultiJobBuild plugin="jenkins-multijob-plugin@623.v03401733c9a_9">
+  <actions>
+    <hudson.model.ParametersAction>
+      <safeParameters class="sorted-set"/>
+      <parameters>
+        <com.cwctravel.hudson.plugins.extended__choice__parameter.ExtendedChoiceParameterValue plugin="extended-choice-parameter@359.v35dcfdd0c20d">
+          <name>conf_name</name>
+          <value>Activity,ActivityC,Award</value>
+        </com.cwctravel.hudson.plugins.extended__choice__parameter.ExtendedChoiceParameterValue>
+        <com.cwctravel.hudson.plugins.extended__choice__parameter.ExtendedChoiceParameterValue plugin="extended-choice-parameter@359.v35dcfdd0c20d">
+          <name>server_name</name>
+          <value>pktest,pkcp</value>
+        </com.cwctravel.hudson.plugins.extended__choice__parameter.ExtendedChoiceParameterValue>
+      </parameters>
+      <parameterDefinitionNames>
+        <string>conf_name</string>
+        <string>server_name</string>
+      </parameterDefinitionNames>
+    </hudson.model.ParametersAction>
+    <hudson.model.CauseAction>
+      <causeBag class="linked-hash-map">
+        <entry>
+          <hudson.model.Cause_-UserIdCause>
+            <userId>root</userId>
+          </hudson.model.Cause_-UserIdCause>
+          <int>1</int>
+        </entry>
+      </causeBag>
+    </hudson.model.CauseAction>
+    <org.jenkinsci.plugins.envinject.EnvInjectPluginAction plugin="envinject@2.901.v0038b_6471582"/>
+    <org.jenkinsci.plugins.envinject.EnvInjectBuilderContributionAction plugin="envinject@2.901.v0038b_6471582"/>
+    <org.jenkinsci.plugins.envinject.EnvInjectBuilderContributionAction plugin="envinject@2.901.v0038b_6471582"/>
+    <org.jenkinsci.plugins.envinject.EnvInjectBuilderContributionAction plugin="envinject@2.901.v0038b_6471582"/>
+    <org.jenkinsci.plugins.envinject.EnvInjectBuilderContributionAction plugin="envinject@2.901.v0038b_6471582"/>
+    <org.jenkinsci.plugins.envinject.EnvInjectBuilderContributionAction plugin="envinject@2.901.v0038b_6471582"/>
+  </actions>
+  <queueId>7544</queueId>
+  <timestamp>1679886964189</timestamp>
+  <startTime>1679886964307</startTime>
+  <result>SUCCESS</result>
+  <duration>50165</duration>
+  <charset>UTF-8</charset>
+  <keepLog>false</keepLog>
+  <builtOn></builtOn>
+  <workspace>/var/jenkins_home/workspace/工具 - 配表编译并且更新到Game服务器</workspace>
+  <hudsonVersion>2.386</hudsonVersion>
+  <scm class="hudson.scm.NullChangeLogParser"/>
+  <culprits class="java.util.Collections$UnmodifiableSet">
+    <c class="sorted-set"/>
+  </culprits>
+  <subBuilds class="java.util.concurrent.CopyOnWriteArrayList">
+    <com.tikal.jenkins.plugins.multijob.MultiJobBuild_-SubBuild>
+      <parentJobName>工具 - 配表编译并且更新到Game服务器</parentJobName>
+      <parentBuildNumber>596</parentBuildNumber>
+      <jobName>配表 - 编译Game端配表</jobName>
+      <jobAlias></jobAlias>
+      <buildNumber>949</buildNumber>
+      <phaseName>编译配表 且 推送到服务器</phaseName>
+      <result>SUCCESS</result>
+      <icon>blue.png</icon>
+      <duration>40 sec</duration>
+      <url>job/%E9%85%8D%E8%A1%A8%20-%20%E7%BC%96%E8%AF%91Game%E7%AB%AF%E9%85%8D%E8%A1%A8/949/</url>
+      <retry>false</retry>
+      <aborted>false</aborted>
+      <buildID>配表 - 编译Game端配表#949</buildID>
+    </com.tikal.jenkins.plugins.multijob.MultiJobBuild_-SubBuild>
+    <com.tikal.jenkins.plugins.multijob.MultiJobBuild_-SubBuild>
+      <parentJobName>工具 - 配表编译并且更新到Game服务器</parentJobName>
+      <parentBuildNumber>596</parentBuildNumber>
+      <jobName>工具 - 更新Game服务器配表数据</jobName>
+      <jobAlias></jobAlias>
+      <buildNumber>632</buildNumber>
+      <phaseName>编译配表 且 推送到服务器</phaseName>
+      <result>SUCCESS</result>
+      <icon>blue.png</icon>
+      <duration>5.2 sec</duration>
+      <url>job/%E5%B7%A5%E5%85%B7%20-%20%E6%9B%B4%E6%96%B0Game%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%85%8D%E8%A1%A8%E6%95%B0%E6%8D%AE/632/</url>
+      <retry>false</retry>
+      <aborted>false</aborted>
+      <buildID>工具 - 更新Game服务器配表数据#632</buildID>
+    </com.tikal.jenkins.plugins.multijob.MultiJobBuild_-SubBuild>
+  </subBuilds>
+  <changeSets>
+    <run class="com.tikal.jenkins.plugins.multijob.MultiJobBuild" reference="../.."/>
+    <build class="com.tikal.jenkins.plugins.multijob.MultiJobBuild" reference="../.."/>
+  </changeSets>
+  <subBuildsMap>
+    <entry>
+      <string>编译配表 且 推送到服务器配表 - 编译Game端配表949</string>
+      <com.tikal.jenkins.plugins.multijob.MultiJobBuild_-SubBuild reference="../../../subBuilds/com.tikal.jenkins.plugins.multijob.MultiJobBuild_-SubBuild"/>
+    </entry>
+    <entry>
+      <string>编译配表 且 推送到服务器工具 - 更新Game服务器配表数据632</string>
+      <com.tikal.jenkins.plugins.multijob.MultiJobBuild_-SubBuild reference="../../../subBuilds/com.tikal.jenkins.plugins.multijob.MultiJobBuild_-SubBuild[2]"/>
+    </entry>
+  </subBuildsMap>
+</com.tikal.jenkins.plugins.multijob.MultiJobBuild>

@@ -1,0 +1,27 @@
+Started by user [8mha:////4NL15lwhNok46o8LpNIYOqAIaurwr6Vm2yW5YSW4R5+wAAAAlh+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyWEgYu/dLi1CL9ovz8EgDKVWzSvwAAAA==[0mroot
+Running as SYSTEM
+[EnvInject] - Loading node environment variables.
+Building in workspace /var/jenkins_home/workspace/工具 - 查看Game运行中的配表数据
+[8mha:////4LiRA9eEqrSN8VlYUsXmBG14WbpemOznsJxSFoR+MSalAAAAqx+LCAAAAAAAAP9b85aBtbiIQSujNKU4P0+vIKc0PTOvWC8xrzgzOT8nv0gvMbkkEyjhCKb88ktSdwVsu2efuqidiYHRh4EDIu2ZUsIg5JOVWJaon5OYl64fXFKUmZduXVHEIAU1ODk/rzg/J1XPGUKDDGKAAEYmBoaKghIGFbNEA5PUlLQk3bREY0Ndk1RzU12LlERL3VRLS8skA4MU80QTIwCaia13rwAAAA==[0m[SSH] executing pre build script:
+server_name="pkreview"
+conf_name="Lobby"
+
+echo $server_name
+echo $conf_name
+
+#!/bin/bash -e
+
+cd /root/jenkins && ./etcdwatcher -svr $server_name -conf $conf_name
+
+pkreview
+Lobby
+panic: runtime error: index out of range [0] with length 0
+
+goroutine 1 [running]:
+main.main()
+	/mnt/slots/cc-server/server/cmd/etcdwatcher/main.go:66 +0x7fe
+
+[SSH] completed
+[SSH] exit-status: 2
+
+Finished: FAILURE

@@ -1,0 +1,117 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<build>
+  <actions>
+    <com.tikal.jenkins.plugins.multijob.MultiJobParametersAction plugin="jenkins-multijob-plugin@623.v03401733c9a_9">
+      <safeParameters class="sorted-set"/>
+      <parameters>
+        <com.cwctravel.hudson.plugins.extended__choice__parameter.ExtendedChoiceParameterValue plugin="extended-choice-parameter@359.v35dcfdd0c20d">
+          <name>conf_name</name>
+          <value>Club,Shop</value>
+        </com.cwctravel.hudson.plugins.extended__choice__parameter.ExtendedChoiceParameterValue>
+        <com.cwctravel.hudson.plugins.extended__choice__parameter.ExtendedChoiceParameterValue plugin="extended-choice-parameter@359.v35dcfdd0c20d">
+          <name>server_name</name>
+          <value>pktest</value>
+        </com.cwctravel.hudson.plugins.extended__choice__parameter.ExtendedChoiceParameterValue>
+      </parameters>
+      <parameterDefinitionNames>
+        <string>conf_name</string>
+      </parameterDefinitionNames>
+      <parameters class="java.util.Arrays$ArrayList" defined-in="com.tikal.jenkins.plugins.multijob.MultiJobParametersAction">
+        <a class="hudson.model.ParameterValue-array">
+          <com.cwctravel.hudson.plugins.extended__choice__parameter.ExtendedChoiceParameterValue reference="../../../parameters/com.cwctravel.hudson.plugins.extended__choice__parameter.ExtendedChoiceParameterValue"/>
+          <com.cwctravel.hudson.plugins.extended__choice__parameter.ExtendedChoiceParameterValue reference="../../../parameters/com.cwctravel.hudson.plugins.extended__choice__parameter.ExtendedChoiceParameterValue[2]"/>
+        </a>
+      </parameters>
+    </com.tikal.jenkins.plugins.multijob.MultiJobParametersAction>
+    <com.tikal.jenkins.plugins.multijob.MultiJobBuilder_-MultiJobAction plugin="jenkins-multijob-plugin@623.v03401733c9a_9">
+      <buildNumber>622</buildNumber>
+      <index>1</index>
+      <outer-class>
+        <phaseName>编译配表 且 推送到服务器</phaseName>
+        <phaseJobs>
+          <com.tikal.jenkins.plugins.multijob.PhaseJobsConfig>
+            <jobName>配表 - 编译Game端配表</jobName>
+            <jobAlias></jobAlias>
+            <currParams>true</currParams>
+            <aggregatedTestResults>false</aggregatedTestResults>
+            <exposedSCM>false</exposedSCM>
+            <disableJob>false</disableJob>
+            <parsingRulesPath></parsingRulesPath>
+            <maxRetries>0</maxRetries>
+            <enableRetryStrategy>false</enableRetryStrategy>
+            <enableCondition>false</enableCondition>
+            <abortAllJob>true</abortAllJob>
+            <condition></condition>
+            <configs class="empty-list"/>
+            <killPhaseOnJobResultCondition>FAILURE</killPhaseOnJobResultCondition>
+            <buildOnlyIfSCMChanges>false</buildOnlyIfSCMChanges>
+            <applyConditionOnlyIfNoSCMChanges>false</applyConditionOnlyIfNoSCMChanges>
+          </com.tikal.jenkins.plugins.multijob.PhaseJobsConfig>
+          <com.tikal.jenkins.plugins.multijob.PhaseJobsConfig>
+            <jobName>工具 - 更新Game服务器配表数据</jobName>
+            <jobAlias></jobAlias>
+            <currParams>true</currParams>
+            <aggregatedTestResults>false</aggregatedTestResults>
+            <exposedSCM>false</exposedSCM>
+            <disableJob>false</disableJob>
+            <parsingRulesPath></parsingRulesPath>
+            <maxRetries>0</maxRetries>
+            <enableRetryStrategy>false</enableRetryStrategy>
+            <enableCondition>false</enableCondition>
+            <abortAllJob>true</abortAllJob>
+            <condition></condition>
+            <configs class="empty-list"/>
+            <killPhaseOnJobResultCondition>FAILURE</killPhaseOnJobResultCondition>
+            <buildOnlyIfSCMChanges>false</buildOnlyIfSCMChanges>
+            <applyConditionOnlyIfNoSCMChanges>false</applyConditionOnlyIfNoSCMChanges>
+          </com.tikal.jenkins.plugins.multijob.PhaseJobsConfig>
+        </phaseJobs>
+        <continuationCondition>ALWAYS</continuationCondition>
+        <executionType>SEQUENTIALLY</executionType>
+        <quietPeriodGroovy></quietPeriodGroovy>
+      </outer-class>
+    </com.tikal.jenkins.plugins.multijob.MultiJobBuilder_-MultiJobAction>
+    <hudson.model.CauseAction>
+      <causeBag class="linked-hash-map">
+        <entry>
+          <hudson.model.Cause_-UpstreamCause>
+            <upstreamProject>工具 - 配表编译并且更新到Game服务器</upstreamProject>
+            <upstreamUrl>job/%E5%B7%A5%E5%85%B7%20-%20%E9%85%8D%E8%A1%A8%E7%BC%96%E8%AF%91%E5%B9%B6%E4%B8%94%E6%9B%B4%E6%96%B0%E5%88%B0Game%E6%9C%8D%E5%8A%A1%E5%99%A8/</upstreamUrl>
+            <upstreamBuild>622</upstreamBuild>
+            <upstreamCauses>
+              <hudson.model.Cause_-UserIdCause>
+                <userId>root</userId>
+              </hudson.model.Cause_-UserIdCause>
+            </upstreamCauses>
+          </hudson.model.Cause_-UpstreamCause>
+          <int>1</int>
+        </entry>
+      </causeBag>
+    </hudson.model.CauseAction>
+    <org.jenkinsci.plugins.envinject.EnvInjectPluginAction plugin="envinject@2.901.v0038b_6471582"/>
+    <hudson.plugins.ansicolor.action.ColorizedAction plugin="ansicolor@1.0.2">
+      <id>17bd3395-f704-4787-93a4-8b08f163a0d8</id>
+      <colorMapName>xterm</colorMapName>
+      <command>START</command>
+    </hudson.plugins.ansicolor.action.ColorizedAction>
+    <hudson.plugins.ansicolor.action.ColorizedAction plugin="ansicolor@1.0.2">
+      <id>DrKT0BqmNLn1o9dowE6WoGZJ4rTdflGLkOnafX7jydk=</id>
+      <colorMapName>xterm</colorMapName>
+      <command>START</command>
+    </hudson.plugins.ansicolor.action.ColorizedAction>
+  </actions>
+  <queueId>7897</queueId>
+  <timestamp>1680166167297</timestamp>
+  <startTime>1680166167339</startTime>
+  <result>SUCCESS</result>
+  <duration>34528</duration>
+  <charset>UTF-8</charset>
+  <keepLog>false</keepLog>
+  <builtOn></builtOn>
+  <workspace>/var/jenkins_home/workspace/配表 - 编译Game端配表</workspace>
+  <hudsonVersion>2.386</hudsonVersion>
+  <scm class="hudson.scm.NullChangeLogParser"/>
+  <culprits class="java.util.Collections$UnmodifiableSet">
+    <c class="sorted-set"/>
+  </culprits>
+</build>

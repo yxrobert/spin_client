@@ -1,0 +1,32 @@
+Started by user [8mha:////4C7bLTxK9yl/jIeegGhjaDgWU/y/kzhxYbXniM7OIlkeAAAAmR+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAz2EgZe/dLi1CL9ysS8wszEfAD4hbgCwgAAAA==[0myanqiao
+Running as SYSTEM
+[EnvInject] - Loading node environment variables.
+Building in workspace /var/jenkins_home/workspace/数据 - 账号
+[8mha:////4DRykChEYS7Hywltjie3payOARBBuF5TUux41wsE1oMPAAAAqx+LCAAAAAAAAP9b85aBtbiIQSujNKU4P0+vIKc0PTOvWC8xrzgzOT8nv0gvMbkkEyjhCKb88ktSdwVsu2efuqidiYHRh4EDIu2ZUsIg5JOVWJaon5OYl64fXFKUmZduXVHEIAU1ODk/rzg/J1XPGUKDDGKAAEYmBoaKghIGlSRjY6PEpCRj3VQTw2RdEwsLI91EExMj3TRj48RU8xTz5ERTYwDpTgrqrwAAAA==[0m[SSH] executing pre build script:
+PATH="/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+server_name="pk7011"
+account="nf1009020"
+
+echo $server_name
+#!/bin/bash -e
+
+export PATH=/usr/bin/curl:$PATH
+function mg_port() {
+    docker ps -a | grep ${1}-mongo | awk -F '->' '{print $1}' | awk -F ':' '{print $3}'
+}
+
+port=$(mg_port ${server_name})
+echo $port
+
+cd ~/jenkins/script/python/ && python mongo_user.py ${port} ${account}
+pk7011
+9104
+('uid', 100000000001650)
+
+[SSH] completed
+[SSH] exit-status: 0
+
+[SSH] executing post build script:
+
+
+Finished: SUCCESS

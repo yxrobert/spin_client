@@ -1,0 +1,177 @@
+Started by user [8mha:////4NL15lwhNok46o8LpNIYOqAIaurwr6Vm2yW5YSW4R5+wAAAAlh+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyWEgYu/dLi1CL9ovz8EgDKVWzSvwAAAA==[0mroot
+Running as SYSTEM
+[EnvInject] - Loading node environment variables.
+Building in workspace /var/jenkins_home/workspace/服务器 - 单独更新RPC-Server
+[8mha:////4FEi/8wtLbMjMF1Bi27hacdqZue64Rk2nbA5qhHiUU9oAAAAqx+LCAAAAAAAAP9b85aBtbiIQSujNKU4P0+vIKc0PTOvWC8xrzgzOT8nv0gvMbkkEyjhCKb88ktSdwVsu2efuqidiYHRh4EDIu2ZUsIg5JOVWJaon5OYl64fXFKUmZduXVHEIAU1ODk/rzg/J1XPGUKDDGKAAEYmBoaKghIGFcMkY9Nkc6M03ZSUxBRdE4O0NN0kc0NDXQtLS3Mzs1SDFBOjFAB7EcwprwAAAA==[0m[SSH] executing pre build script:
+server_name="pk7008"
+
+#!/bin/bash 
+source /root/jenkins/jk_func.sh
+
+file_lock
+
+yaml $conf_file "['$server_name']"
+branch_name=$(yaml $conf_file "['$server_name']['bandit']")
+rpc_port=$(yaml $conf_file "['$server_name']['rpc_port']")
+
+cd /mnt/slots/bandit-server
+git cd $branch_name
+check_last_cmd branch
+
+git pull
+check_last_cmd pull
+
+cd /mnt/slots/cc-slots-land/batch
+./compile_rpc.sh $server_name && ./build_image_rpc.sh $server_name && ./run_image_rpc.sh $server_name $rpc_port
+
+file_unlock
+脚本可执行
+{'bandit': 'feature/goldenPharaoh', 'game': 'feature/goldenPharaoh_animation', 'cc-conf': 'deploy-cc-conf', 'desc': 'pk7008', 'rpc_port': 7018, 'bandit-conf': 'deploy-bandit-conf', 'port': 7008}
+Switched to branch 'feature/goldenPharaoh'
+remote: Enumerating objects: 6, done.[K
+remote: Counting objects:  16% (1/6)[Kremote: Counting objects:  33% (2/6)[Kremote: Counting objects:  50% (3/6)[Kremote: Counting objects:  66% (4/6)[Kremote: Counting objects:  83% (5/6)[Kremote: Counting objects: 100% (6/6)[Kremote: Counting objects: 100% (6/6), done.[K
+remote: Compressing objects:  16% (1/6)[Kremote: Compressing objects:  33% (2/6)[Kremote: Compressing objects:  50% (3/6)[Kremote: Compressing objects:  66% (4/6)[Kremote: Compressing objects:  83% (5/6)[Kremote: Compressing objects: 100% (6/6)[Kremote: Compressing objects: 100% (6/6), done.[K
+remote: Total 6 (delta 0), reused 0 (delta 0), pack-reused 0[K
+Unpacking objects:  16% (1/6)   Unpacking objects:  33% (2/6)   Unpacking objects:  50% (3/6)   Unpacking objects:  66% (4/6)   Unpacking objects:  83% (5/6)   Unpacking objects: 100% (6/6)   Unpacking objects: 100% (6/6), done.
+From gitlab.funplus.io:fruities/bandit-server
+   2c2c3af..621f13e  feature/goldenPharaoh -> origin/feature/goldenPharaoh
+Updating 2c2c3af..621f13e
+Fast-forward
+ themes/game/goldenPharaoh/gamePick.go | 3 [32m+++[m
+ 1 file changed, 3 insertions(+)
+[0;35m              ARCH:[0m linux
+[0;35m          LOCAL_IP:[0m 10.0.84.16
+[0;35m               APP:[0m pk7008
+[0;32m           APP_DIR:[0m /home/user00/cc/cc-slots-land/stage/app=pk7008/app
+[0;32m       Fluentd-DIR:[0m /mnt/slots/cc-slots-land/batch/pk7008/fluentd
+[0;32m         Mongo-DIR:[0m /mnt/slots/cc-slots-land/batch/pk7008/mongo
+[0;32m         Redis-DIR:[0m /mnt/slots/cc-slots-land/batch/pk7008/redis
+[0;32m       PM_CONF_DIR:[0m /home/user00/cc/cc-conf/gen/rawdata/server
+[0;35m  BACKEND_CODE_DIR:[0m /home/user00/cc/cc-server
+[0;35m  BACKEND_CONF_DIR:[0m /home/user00/cc/cc-conf
+[1;33m   BANDIT_CODE_DIR:[0m /home/user00/cc/bandit-server
+[1;33m   BANDIT_CONF_DIR:[0m /home/user00/cc/bandit-conf
+[0;35m   BACKEND_PM_PATH:[0m /pk7008_dev_backend
+[1;33m    BANDIT_PM_PATH:[0m /pk7008_dev_bandit
+[0;35m           Network:[0m pk7008
+[0;35m    ETCD_ENDPOINTS:[0m 10.0.84.16:2379
+[0;35m         REDIS_URI:[0m pk7008-redis:6379
+[0;35m Backend-Container:[0m pk7008-backend
+[1;33m  BANDIT-Container:[0m pk7008-rpc
+[0;32m Fluentd-Container:[0m pk7008-fluentd
+[0;32m   Mongo-Container:[0m pk7008-mongo
+[0;32m   Redis-Container:[0m pk7008-redis
+[1;33m            DATE:[0m 2023-03-27T18:27:59+0800
+[1;33m   BUILD COMMAND:[0m cd bandit-server/cmd/server && go build -ldflags '-X main.buildTime=2023-03-27T18:27:59+0800 -X main.buildCodeVer=feature/goldenPharaoh:621f13e -X main.buildConfVer=v1.1.16'
+[1;33m           IMAGE:[0m slots/backend-builder:latest
+[1;33m       CONTAINER:[0m rpc-backend-builder
+[1;33m          GO_DIR:[0m /home/user00/cc/cc-slots-land/go
+[1;33m        CODE_DIR:[0m /home/user00/cc/bandit-server feature/goldenPharaoh:621f13e
+[1;33m        CONF_DIR:[0m /home/user00/cc/bandit-conf v1.1.16
+[1;33m       BUILD_DIR:[0m /slots
+[1;33m  BUILD_CONF_DIR:[0m /cc-conf
+[1;33m     CONFIG_FILE:[0m pk7008/config.ini
+[1;33mCONFIG_FILE_PROD:[0m pk7008/config.ini
+[0;32mMOUNT_CONF_LOADER => /home/user00/cc/bandit-conf/gen/golang/conf:/slots/server/pkg/gen/golang/conf[0m
+[0;32m MOUNT_CONF_MODEL => /home/user00/cc/bandit-conf/gen/golang/rawdata:/cc-conf/gen/golang/rawdata[0m
+[0;36mdocker run -it   --name "rpc-backend-builder"   --hostname "rpc-backend-builder"   -v "/home/user00/cc/cc-slots-land/go":/go   -v "/home/user00/cc/bandit-server":"/slots/bandit-server"   -v "/home/user00/cc/bandit-conf":"/slots/bandit-conf"   -v "/home/user00/cc/bandit-conf/gen/golang/conf:/slots/server/pkg/gen/golang/conf"   -v "/home/user00/cc/bandit-conf/gen/golang/rawdata:/cc-conf/gen/golang/rawdata"    "slots/backend-builder:latest"   sh -c "cd bandit-server/cmd/server && go build -ldflags '-X main.buildTime=2023-03-27T18:27:59+0800 -X main.buildCodeVer=feature/goldenPharaoh:621f13e -X main.buildConfVer=v1.1.16'"[0m
+[0;32mreset app dir: /home/user00/cc/cc-slots-land/stage/app=pk7008/app[0m
+[0;32mcopy compiled binary to app dir...[0m
+[0;36mdocker container cp "rpc-backend-builder:/slots/bandit-server/cmd/server/server" "/home/user00/cc/cc-slots-land/stage/app=pk7008/app/bandit-server"[0m
+[0;32mcopy theme collector data to app dir...[0m
+[0;36mdocker container cp "rpc-backend-builder:/slots/bandit-server/themes/data" "/home/user00/cc/cc-slots-land/stage/app=pk7008/app/data"[0m
+[0;32mremove container: rpc-backend-builder[0m
+[0;36mreclaim resources: rpc-backend-builder 87f32cf0a51a[0m
+87f32cf0a51a
+87f32cf0a51a
+[0;36mRPC_APP: pk7008-rpc[0m
+[0;36mIMAGE: plutus:pk7008-rpc[0m
+[0;32m/home/user00/cc/cc-slots-land/stage[0m
+Sending build context to Docker daemon  557.1kBSending build context to Docker daemon  8.356MBSending build context to Docker daemon  16.15MBSending build context to Docker daemon  24.51MBSending build context to Docker daemon  32.87MBSending build context to Docker daemon  41.22MBSending build context to Docker daemon  49.58MBSending build context to Docker daemon  58.49MBSending build context to Docker daemon  66.29MBSending build context to Docker daemon  74.65MBSending build context to Docker daemon     83MBSending build context to Docker daemon   90.8MBSending build context to Docker daemon  98.04MBSending build context to Docker daemon  105.8MBSending build context to Docker daemon  114.2MBSending build context to Docker daemon  123.1MBSending build context to Docker daemon  129.2MBSending build context to Docker daemon  135.9MBSending build context to Docker daemon  142.6MBSending build context to Docker daemon    151MBSending build context to Docker daemon  157.1MBSending build context to Docker daemon  161.5MBSending build context to Docker daemon  167.1MBSending build context to Docker daemon  174.9MBSending build context to Docker daemon  182.7MBSending build context to Docker daemon    190MBSending build context to Docker daemon  197.2MBSending build context to Docker daemon  204.4MBSending build context to Docker daemon  211.7MBSending build context to Docker daemon    220MBSending build context to Docker daemon  227.8MBSending build context to Docker daemon  236.2MBSending build context to Docker daemon  244.5MBSending build context to Docker daemon  251.2MBSending build context to Docker daemon  255.7MBSending build context to Docker daemon  260.1MBSending build context to Docker daemon  266.3MBSending build context to Docker daemon  272.4MBSending build context to Docker daemon  279.1MBSending build context to Docker daemon  284.7MBSending build context to Docker daemon    288MBSending build context to Docker daemon  290.8MB
+Step 1/6 : FROM alpine:3.14
+ ---> dd53f409bf0b
+Step 2/6 : RUN apk update 	&& apk add tzdata     && cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime     && echo "Asia/Shanghai" >  /etc/timezone 	&& echo 'alias l="ls -ltA"' >> ~/.bashrc
+ ---> Using cache
+ ---> 5ad6219d23d9
+Step 3/6 : ARG app
+ ---> Using cache
+ ---> 6128053649fb
+Step 4/6 : ADD $app/app/ /slots
+ ---> 016aa8ec75e7
+Step 5/6 : WORKDIR /slots
+ ---> Running in 0b6db78c54dd
+Removing intermediate container 0b6db78c54dd
+ ---> 6a16fef72a79
+Step 6/6 : ENTRYPOINT ["/slots/bandit-server"]
+ ---> Running in f56880ae7110
+Removing intermediate container f56880ae7110
+ ---> c31c809f64ed
+Successfully built c31c809f64ed
+Successfully tagged plutus:pk7008-rpc
+[0;32mgc: app=pk7008/app/rpc[0m
+/mnt/slots/cc-slots-land/batch
+[0;35m              ARCH:[0m linux
+[0;35m          LOCAL_IP:[0m 10.0.84.16
+[0;35m               APP:[0m pk7008
+[0;32m           APP_DIR:[0m /home/user00/cc/cc-slots-land/stage/app=pk7008/app
+[0;32m       Fluentd-DIR:[0m /mnt/slots/cc-slots-land/batch/pk7008/fluentd
+[0;32m         Mongo-DIR:[0m /mnt/slots/cc-slots-land/batch/pk7008/mongo
+[0;32m         Redis-DIR:[0m /mnt/slots/cc-slots-land/batch/pk7008/redis
+[0;32m       PM_CONF_DIR:[0m /home/user00/cc/cc-conf/gen/rawdata/server
+[0;35m  BACKEND_CODE_DIR:[0m /home/user00/cc/cc-server
+[0;35m  BACKEND_CONF_DIR:[0m /home/user00/cc/cc-conf
+[1;33m   BANDIT_CODE_DIR:[0m /home/user00/cc/bandit-server
+[1;33m   BANDIT_CONF_DIR:[0m /home/user00/cc/bandit-conf
+[0;35m   BACKEND_PM_PATH:[0m /pk7008_dev_backend
+[1;33m    BANDIT_PM_PATH:[0m /pk7008_dev_bandit
+[0;35m           Network:[0m pk7008
+[0;35m    ETCD_ENDPOINTS:[0m 10.0.84.16:2379
+[0;35m         REDIS_URI:[0m pk7008-redis:6379
+[0;35m Backend-Container:[0m pk7008-backend
+[1;33m  BANDIT-Container:[0m pk7008-rpc
+[0;32m Fluentd-Container:[0m pk7008-fluentd
+[0;32m   Mongo-Container:[0m pk7008-mongo
+[0;32m   Redis-Container:[0m pk7008-redis
+
+[0;32mstart pk7008-rpc[0m
+[0;36m  docker run -d     -e app=pk7008.dev     -e etcd_endpoints=10.0.84.16:2379     -e sys_env_name=pk7008     -e sys_stage=dev_bandit     -e hostname=10.0.84.16     -e TZ=Asia/Shanghai     -e log_server_host=pk7008-fluentd     -e log_server_port=24224     -e redis_uri=pk7008-redis:6379     -e redis_passwd=     -e redis_db=0     -v /home/user00/cc/bandit-server/configs:/slots/configs/     -e panel_storage=/slots/data/gen/rawdata/panel_storage     --network pk7008     --name pk7008-rpc     plutus:pk7008-rpc[0m
+[0;36mreclaim resources: pk7008-rpc 3a481def0258[0m
+3a481def0258
+3a481def0258
+691cf8465454572f35e2596f361cf8b9e38bcc07c171822d3a3ce7031e498d97
+/slots <nil>
+configs/toml/dev.toml
+2023-03-27 18:29:00.521681 I | maxprocs: Leaving GOMAXPROCS=8: CPU quota undefined
+configs {"RedisName":"","RedisEnableMonitor":true,"RedisAddrs":["127.0.0.1:6379"],"RedisDB":0,"RedisUsername":"","RedisPassword":"","RedisMaxRetries":3,"RedisMinRetryBackoff":8000000,"RedisMaxRetryBackoff":512000000,"RedisConnDialTimeout":5000000000,"RedisSocketReadTimeout":3000000000,"RedisSocketWriteTimeout":3000000000,"RedisConnPoolSize":0,"RedisMinIdleConns":0,"RedisConnMaxAge":0,"RedisConnPoolTimeout":0,"RedisIdleConnTimeout":300000000000,"RedisIdleConnCheckFrequency":60000000000,"RedisCluster":false,"RedisClusterReadOnly":false,"RedisClusterRouteRandomly":false,"RedisClusterRouteByLatency":false,"RedisMasterName":"","KeyTokenInHeader":"Authorization","AuthSchema":"Bearer","SigningKeys":["e!L7pH4y","aQSdp5x*","J@I1R\u0026Op"],"TokenExpiration":604800000000000,"ServerName":"bandit-server","ApiToken":"c1c61sff2hn00006gg2g","PassportUrl":"http://passport-dev-cn.ifunplus.cn:8000/server_api.php","PmConfPath":"/pkjy_dev","AutoConfFiles":"","DbAgentType":"mysql","MysqlPassword":"","MysqlHost":"127.0.0.1","DataServerHost":"127.0.0.1","MysqlUser":"root","MysqlDbName":"bandit-server","DbProxyEndpoints":null,"DbMaxOpenConns":20,"DbTimeout":3000000000,"DbMaxIdleConns":20,"MysqlPort":3306,"DataServerPort":3308,"EtcdEndpoint":["10.0.84.74:2379"],"MicroEtcdEndpoint":["127.0.0.1:2379"],"SiidUrl":"http://127.0.0.1:16000/v1/siid","IdTryTimes":3,"UseSiid":false,"TcpPort":8087,"TcpSendChanSize":1024,"OpenTcpGate":false,"HttpPort":8088,"HttpRateLimit":0,"OpenHttpGate":false,"PipelineEnable":false,"PipelineCacheExpiration":300000000000,"MonitorPort":9168,"PrometheusPort":9158,"ActorPort":9088,"RpcPort":8089,"Development":true,"OpenEtcd":false,"UseMysql":false,"UseRedis":false}
+2023-03-27T18:29:00.526+0800	[35mdebug[0m	logbus/basic_logger.go:69	monitor	{"tags": ["monitor"], "log_xid": "cggmvr428455le7c1kr0", "server_id": "cggmvr428455le7c1kp0", "server_ip": "172.23.0.5", "server_birth": 1679912940, "host_name": "691cf8465454", "prometheus [http] listening on": ":9158", "path": "/metrics"}
+2023-03-27T18:29:00.526+0800	[34minfo[0m	logbus/logger.go:103	server	{"tags": ["logbus"], "log_xid": "cggmvr428455le7c1ks0", "server_birth": 1679912940, "host_name": "691cf8465454", "server_tag": "bandit", "server_id": "5ed5d959-7aad-474c-ab41-2a316589c70c", "server_ip": "172.23.0.5", "era": "2023-03-27T18:29:00+08:00", "code": " feature/goldenPharaoh:621f13e", "conf": "v1.1.16", "NumCPU": 8, "GOMAXPROCS": 8}
+2023-03-27T18:29:00.528+0800	[34minfo[0m	sjaeger/log.go:19	server	{"tags": ["logbus"], "log_xid": "cggmvr428455le7c1kt0", "server_birth": 1679912940, "host_name": "691cf8465454", "server_tag": "bandit", "server_id": "5ed5d959-7aad-474c-ab41-2a316589c70c", "server_ip": "172.23.0.5", "era": "2023-03-27T18:29:00+08:00", "code": " feature/goldenPharaoh:621f13e", "conf": "v1.1.16", "glog-msg": "[sandwich jaeger] Initializing logging reporter\n"}
+2023-03-27T18:29:00.532+0800	[33mwarn[0m	slog/slog.go:53	server	{"tags": ["logbus"], "log_xid": "cggmvr428455le7c1ku0", "server_birth": 1679912940, "host_name": "691cf8465454", "server_tag": "bandit", "server_id": "5ed5d959-7aad-474c-ab41-2a316589c70c", "server_ip": "172.23.0.5", "era": "2023-03-27T18:29:00+08:00", "code": " feature/goldenPharaoh:621f13e", "conf": "v1.1.16", "glog-msg": "[sandwich] [deprecated] should use WithAdapter to initialize pmconf package."}
+2023-03-27T18:29:00.534+0800	[33mwarn[0m	slog/slog.go:53	server	{"tags": ["logbus"], "log_xid": "cggmvr428455le7c1kv0", "server_birth": 1679912940, "host_name": "691cf8465454", "server_tag": "bandit", "server_id": "5ed5d959-7aad-474c-ab41-2a316589c70c", "server_ip": "172.23.0.5", "era": "2023-03-27T18:29:00+08:00", "code": " feature/goldenPharaoh:621f13e", "conf": "v1.1.16", "glog-msg": "[sandwich] [deprecated] PmConfPath changed due to sys_env_name and sys_stage, should use sandwich_conf_env", "sysConfEnvStaging": "pk7008_dev_bandit", "pm_conf_path": "/pk7008_dev_bandit"}
+PmConfPath = /pk7008_dev_bandit/, ETCD endpoints = [10.0.84.16:2379]
+etcd_endpoints = [10.0.84.16:2379]
+./run_image_rpc.sh: line 45: jq: command not found
+2023-03-27 18:29:00.521681 I | maxprocs: Leaving GOMAXPROCS=8: CPU quota undefined
+释放脚本锁
+
+[SSH] completed
+[SSH] exit-status: 0
+
+[SSH] executing post build script:
+server_name="pk7008"
+
+source /root/jenkins/jk_func.sh
+sleep 5
+check_whole_server $server_name
+
+curl 'https://oapi.dingtalk.com/robot/send?access_token=13aa551ba8a79265c4424316089cd31c4f479b0f685f3d5a503b0ab6a1a42ec7' -H 'Content-Type: application/json'  -d '{"msgtype": "text","text": {"content": "Jenkins-RPC-Server['"${server_name}"'] Restart OK"}}'
+pk7008-backend Check
+pk7008-rpc Check
+pk7008-redis Check
+pk7008-mongo Check
+pk7008-fluentd Check
+{"errcode":0,"errmsg":"ok"}
+[SSH] completed
+[SSH] exit-status: 0
+
+Finished: SUCCESS

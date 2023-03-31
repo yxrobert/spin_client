@@ -1,0 +1,25 @@
+Started by user [8mha:////4NL15lwhNok46o8LpNIYOqAIaurwr6Vm2yW5YSW4R5+wAAAAlh+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyWEgYu/dLi1CL9ovz8EgDKVWzSvwAAAA==[0mroot
+Running as SYSTEM
+[EnvInject] - Loading node environment variables.
+Building in workspace /var/jenkins_home/workspace/分支 - 查看运行中的分支版本
+[8mha:////4HlOg2kg0WWea3kz5UEbjx+7bdsHe3fuk9dfSI55AOd7AAAAqx+LCAAAAAAAAP9b85aBtbiIQSujNKU4P0+vIKc0PTOvWC8xrzgzOT8nv0gvMbkkEyjhCKb88ktSdwVsu2efuqidiYHRh4EDIu2ZUsIg5JOVWJaon5OYl64fXFKUmZduXVHEIAU1ODk/rzg/J1XPGUKDDGKAAEYmBoaKghIGFSODRIs009REXZNkwyRdE5MUI12LRDNz3VTztDRj4ySjtGQLEwBeM4MBrwAAAA==[0m[SSH] executing pre build script:
+server_name="pkcp"
+
+#!/bin/bash
+
+cc_port=$(docker ps -a | grep ${server_name}-backend | awk -F '->' '{print $1}' | awk -F ':' '{print $3}')
+echo "GameBranch : ${cc_port}"
+curl http://0.0.0.0:${cc_port}/version
+
+#bd_port=$(docker ps -a | grep ${server_name}-rpc | awk -F '->' '{print $1}' | awk -F ':' '{print $3}')
+#echo BanditBranch:${bd_port}
+#curl http://0.0.0.0:${bd_port}/version
+GameBranch : 9999
+{"Git":"feature/huge_win_again:0dd9052b9-dirty", "BuildTime":"2023-03-07T10:23:56+0800", "BuildHost":"backend-builder", "Type":"docker", "Go":"go1.17.12 linux/amd64", "Conf":"v0.0.66-0.20230303111937-7b9047c46e63", "Branch":""}
+[SSH] completed
+[SSH] exit-status: 0
+
+[SSH] executing post build script:
+
+
+Finished: SUCCESS

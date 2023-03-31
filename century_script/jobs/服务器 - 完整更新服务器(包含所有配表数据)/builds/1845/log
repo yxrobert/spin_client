@@ -1,0 +1,1086 @@
+Started by user [8mha:////4NL15lwhNok46o8LpNIYOqAIaurwr6Vm2yW5YSW4R5+wAAAAlh+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyWEgYu/dLi1CL9ovz8EgDKVWzSvwAAAA==[0mroot
+Running as SYSTEM
+[EnvInject] - Loading node environment variables.
+Building in workspace /var/jenkins_home/workspace/服务器 - 完整更新服务器(包含所有配表数据)
+[8mha:////4Jo5Cq+0uDjcw4H2qV06yV+bc+A4DU7BYon/z5Su8uImAAAAqx+LCAAAAAAAAP9b85aBtbiIQSujNKU4P0+vIKc0PTOvWC8xrzgzOT8nv0gvMbkkEyjhCKb88ktSdwVsu2efuqidiYHRh4EDIu2ZUsIg5JOVWJaon5OYl64fXFKUmZduXVHEIAU1ODk/rzg/J1XPGUKDDGKAAEYmBoaKghIGFYOUVAMLC1NjXbO0FGNdE3NjM91EY/MU3bSkNAuj1BQL0xQjAwCH72JTrwAAAA==[0m[SSH] executing pre build script:
+PATH="/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+server_name="pk7016"
+variable_args="disable_rtp_limit"
+
+#!/bin/bash -e
+source /root/jenkins/jk_func.sh
+export PATH=/opt/protokitgo:/root/bin/jq:$PATH
+
+if [ -z "$server_name" ]; then
+    echo "Error: 没有选择服务器!"
+    exit 1
+fi
+
+cd /home/user00/cc/cc-slots-land/cc-dev && ./update_server_env.sh $server_name $variable_args
+~/jenkins/etcdfilter -svr $server_name
+
+
+{'bandit': 'develop', 'game': 'feature/card_new_season_pr1', 'cc-conf': 'deploy-cc-conf', 'desc': 'pk7016', 'rpc_port': 7116, 'bandit-conf': 'deploy-bandit-conf', 'port': 7206}
+脚本可执行
+variable_args : disable_rtp_limit
+disable_rtp_limit
+disable_rtp_limit
+[0;32m###############################部署信息##############################[0m
+[0;36m            backend分支:[0m pk7016[0m
+[0;36m            backend分支:[0m deploy-cc-conf[0m
+[0;36m                rpc分支:[0m develop[0m
+[0;36m                rpc分支:[0m deploy-bandit-conf[0m
+[0;36m                   模式:[0m dev[0m
+[0;36m                   端口:[0m 7206[0m
+[0;36m                   类型:[0m game[0m
+[0;36m                系统版本:[0m Linux 10-0-84-16 3.10.0-1160.81.1.el7.x86_64 #1 SMP Fri Dec 16 17:29:43 UTC 2022 x86_64 x86_64 x86_64 GNU/Linux[0m
+[1;33m           backend:[0m pk7016-backend
+[1;33m             redis:[0m pk7016-redis
+[1;33m             mongo:[0m pk7016-mongo
+[1;33m           fluentd:[0m pk7016-fluentd
+[1;33m               rpc:[0m pk7016-rpc
+[0;32m###############################容器状态##############################[0m
+CONTAINER ID   IMAGE                COMMAND                  CREATED        STATUS        PORTS                                            NAMES
+ef7ba69a0442   plutus:pk7016        "/slots/plutus-server"   26 hours ago   Up 26 hours   0.0.0.0:7206->9000/tcp, 0.0.0.0:7306->9168/tcp   pk7016-backend
+df87a0afd803   plutus:pk7016-rpc    "/slots/bandit-server"   7 days ago     Up 7 days     0.0.0.0:7116->8087/tcp                           pk7016-rpc
+7df7b0855488   redis:5.0.9          "docker-entrypoint.s…"   7 days ago     Up 7 days     0.0.0.0:6102->6379/tcp                           pk7016-redis
+825f64ee9ceb   mongo:4.2.5          "docker-entrypoint.s…"   7 days ago     Up 7 days     0.0.0.0:9102->27017/tcp                          pk7016-mongo
+d1e5c1458376   fluentd:v1.9.1-1.0   "tini -- /bin/entryp…"   7 days ago     Up 7 days     5140/tcp, 24224/tcp                              pk7016-fluentd
+
+[0;32m###############################停止服务##############################[0m
+->[1;33m backend:[0m pk7016-backend
+[0;36m停止容器(stop): pk7016-backend ef7ba69a0442[0m
+ef7ba69a0442
+[0;36m删除容器(rm): pk7016-backend ef7ba69a0442[0m
+ef7ba69a0442
+->[1;33m redis:[0m pk7016-redis
+[0;36m停止容器(stop): pk7016-redis 7df7b0855488[0m
+7df7b0855488
+->[1;33m mongo:[0m pk7016-mongo
+[0;36m停止容器(stop): pk7016-mongo 825f64ee9ceb[0m
+825f64ee9ceb
+->[1;33m fluentd:[0m pk7016-fluentd
+[0;36m停止容器(stop): pk7016-fluentd d1e5c1458376[0m
+d1e5c1458376
+->[1;33m rpc:[0m pk7016-rpc
+[0;36m停止容器(stop): pk7016-rpc df87a0afd803[0m
+df87a0afd803
+[0;36m删除容器(rm): pk7016-rpc df87a0afd803[0m
+df87a0afd803
+[0;32m###############################容器状态##############################[0m
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+[0;32m###############################代码检查##############################[0m
+[0;32m>>>>>>>>>>>>>当前目录: /home/user00/cc/cc-conf[0m
+[0;32m目标分支: deploy-cc-conf[0m
+[0;32m当前所在分支：[0m
+deploy-cc-conf
+[0;32mfetch all：[0m
+Fetching origin
+remote: Enumerating objects: 39, done.[K
+remote: Counting objects:   2% (1/35)[Kremote: Counting objects:   5% (2/35)[Kremote: Counting objects:   8% (3/35)[Kremote: Counting objects:  11% (4/35)[Kremote: Counting objects:  14% (5/35)[Kremote: Counting objects:  17% (6/35)[Kremote: Counting objects:  20% (7/35)[Kremote: Counting objects:  22% (8/35)[Kremote: Counting objects:  25% (9/35)[Kremote: Counting objects:  28% (10/35)[Kremote: Counting objects:  31% (11/35)[Kremote: Counting objects:  34% (12/35)[Kremote: Counting objects:  37% (13/35)[Kremote: Counting objects:  40% (14/35)[Kremote: Counting objects:  42% (15/35)[Kremote: Counting objects:  45% (16/35)[Kremote: Counting objects:  48% (17/35)[Kremote: Counting objects:  51% (18/35)[Kremote: Counting objects:  54% (19/35)[Kremote: Counting objects:  57% (20/35)[Kremote: Counting objects:  60% (21/35)[Kremote: Counting objects:  62% (22/35)[Kremote: Counting objects:  65% (23/35)[Kremote: Counting objects:  68% (24/35)[Kremote: Counting objects:  71% (25/35)[Kremote: Counting objects:  74% (26/35)[Kremote: Counting objects:  77% (27/35)[Kremote: Counting objects:  80% (28/35)[Kremote: Counting objects:  82% (29/35)[Kremote: Counting objects:  85% (30/35)[Kremote: Counting objects:  88% (31/35)[Kremote: Counting objects:  91% (32/35)[Kremote: Counting objects:  94% (33/35)[Kremote: Counting objects:  97% (34/35)[Kremote: Counting objects: 100% (35/35)[Kremote: Counting objects: 100% (35/35), done.[K
+remote: Compressing objects:   5% (1/18)[Kremote: Compressing objects:  11% (2/18)[Kremote: Compressing objects:  16% (3/18)[Kremote: Compressing objects:  22% (4/18)[Kremote: Compressing objects:  27% (5/18)[Kremote: Compressing objects:  33% (6/18)[Kremote: Compressing objects:  38% (7/18)[Kremote: Compressing objects:  44% (8/18)[Kremote: Compressing objects:  50% (9/18)[Kremote: Compressing objects:  55% (10/18)[Kremote: Compressing objects:  61% (11/18)[Kremote: Compressing objects:  66% (12/18)[Kremote: Compressing objects:  72% (13/18)[Kremote: Compressing objects:  77% (14/18)[Kremote: Compressing objects:  83% (15/18)[Kremote: Compressing objects:  88% (16/18)[Kremote: Compressing objects:  94% (17/18)[Kremote: Compressing objects: 100% (18/18)[Kremote: Compressing objects: 100% (18/18), done.[K
+remote: Total 21 (delta 10), reused 10 (delta 2), pack-reused 0[K
+Unpacking objects:   4% (1/21)   Unpacking objects:   9% (2/21)   Unpacking objects:  14% (3/21)   Unpacking objects:  19% (4/21)   Unpacking objects:  23% (5/21)   Unpacking objects:  28% (6/21)   Unpacking objects:  33% (7/21)   Unpacking objects:  38% (8/21)   Unpacking objects:  42% (9/21)   Unpacking objects:  47% (10/21)   Unpacking objects:  52% (11/21)   Unpacking objects:  57% (12/21)   Unpacking objects:  61% (13/21)   Unpacking objects:  66% (14/21)   Unpacking objects:  71% (15/21)   Unpacking objects:  76% (16/21)   Unpacking objects:  80% (17/21)   Unpacking objects:  85% (18/21)   Unpacking objects:  90% (19/21)   Unpacking objects:  95% (20/21)   Unpacking objects: 100% (21/21)   Unpacking objects: 100% (21/21), done.
+From gitlab.funplus.io:cheesecake/cc-conf
+   c1ebab1..44cf3bb  pre/v0.13.7 -> origin/pre/v0.13.7
+   66d40df..f3a3437  prod/v0.13.0 -> origin/prod/v0.13.0
+[0;32mcheckout branch：deploy-cc-conf[0m
+Already on 'deploy-cc-conf'
+[0;32mpull branch：deploy-cc-conf[0m
+[0;32m>>>>>>>>>>>>>当前目录: /home/user00/cc/cc-server[0m
+[0;32m目标分支: feature/card_new_season_pr1[0m
+[0;32m当前所在分支：[0m
+develop
+[0;32mfetch all：[0m
+Fetching origin
+[0;32mcheckout branch：feature/card_new_season_pr1[0m
+Branch feature/card_new_season_pr1 set up to track remote branch feature/card_new_season_pr1 from origin.
+Switched to a new branch 'feature/card_new_season_pr1'
+[0;32mpull branch：feature/card_new_season_pr1[0m
+[0;32m>>>>>>>>>>>>>当前目录: /home/user00/cc/bandit-conf[0m
+[0;32m目标分支: deploy-bandit-conf[0m
+[0;32m当前所在分支：[0m
+deploy-bandit-conf
+[0;32mfetch all：[0m
+Fetching origin
+[0;32mcheckout branch：deploy-bandit-conf[0m
+Already on 'deploy-bandit-conf'
+[0;32mpull branch：deploy-bandit-conf[0m
+[0;32m>>>>>>>>>>>>>当前目录: /home/user00/cc/bandit-server[0m
+[0;32m目标分支: develop[0m
+[0;32m当前所在分支：[0m
+develop
+[0;32mfetch all：[0m
+Fetching origin
+[0;32mcheckout branch：develop[0m
+Already on 'develop'
+[0;32mpull branch：develop[0m
+
+[0;32m###############################etcd数据##############################[0m
+[0;32m>>>>>>>>>>>>>当前目录: /home/user00/cc/cc-slots-land/batch[0m
+[0;32m数值导入到etcd，节点path：/pk7016_dev_backend[0m
+[0;32mLoad config into ETCD from dir: /home/user00/cc/cc-conf to etcd path: /pk7016_dev_backend[0m
+[0;36mprotokitgo release etcd --log_level "0" --endpoint "10.0.84.16:2379" --key_prefix "/pk7016_dev_backend" --config setting.yaml[0m
+[90m2023-03-30T18:40:39+08:00[0m [33mDBG[0m load config file [36mconfigs=[0m["setting.yaml"]
+[90m2023-03-30T18:40:39+08:00[0m [33mDBG[0m Parse Default From Tag:default
+[90m2023-03-30T18:40:39+08:00[0m [33mDBG[0m load file: setting.yaml
+[90m2023-03-30T18:40:39+08:00[0m [33mDBG[0m Changelog: https://zhongtai.s3.amazonaws.com/software/protokitgo/release.html
+[90m2023-03-30T18:40:39+08:00[0m [33mDBG[0m version: 2.4.1-d889704-version/2.4-20220121111016
+[90m2023-03-30T18:40:39+08:00[0m [33mDBG[0m current setting [36msetting=[0m{"ActorTellResponseType":"netutils.NormalAck","ArgsProtokitgo":"","BasePackagePath":"gitlab.funplus.io/cheesecake/cc-conf/gen/golang","BlobFormat":"","CSBaseNamespace":"","CSRawDataNamespace":"gen.rawdata","Charset":"utf8mb4","CheckRawData":false,"CheckRawDataInterval":60,"Collate":"utf8mb4_general_ci","CompositeKeyUsingAlphabetOrder":false,"ConfName":"","CreateGoMod":true,"DirAsset":"asset","DirDbGen":"db","DirDbStates":["dbstate"],"DirDynamicService":"dynamic_service","DirGen":"gen","DirGenRawData":"rawdata","DirMeta":"meta","DirMigrationGen":"migration","DirProto":"protos","DirRawData":"excel","DirRawDataClient":"client","DirRawDataServer":"server","DirXdbGen":"xdb","EnableDescription":true,"EnableGenRawDataCSV":true,"EnableMonitor":true,"EnableQueue":true,"EnableXdb":false,"EnableZapLogMarshal":true,"EtcdLoadFilter":[".pb",".release"],"FileNameGrpcCsharpGen":"grpc_csharp_plugin","FileNameMeta":"meta.json","FileNamePb2db":"pb2db","FileNameProtoc":"protoc","FileNameProtocGenGo":"protoc-gen-go","FileNameSchema":"protoc-gen-jsonschema","GenCsharpGrpcCode":true,"GenGRPCServerHandler":false,"GenGlobalMessageRegistry":true,"GenJsCode":true,"GenLuaCode":true,"GenLuaCodeService":false,"GenNetutils":false,"GenPythonCode":false,"GenSubMessageRegistry":false,"GenVueCode":true,"GmtFieldType":"","GolangRelative":true,"GoogleDriveCouldUseExcel":false,"GoogleDriveFolderID":"1lmj4ISc6k8-h42NqTqe_Sf0nGzLhs9Zk","GoogleDriveIgnoreChildFolder":false,"GoogleDriveListCorrectRevision":true,"HasActorSystem":false,"InitActorRpcService":false,"InitHttpService":true,"InitRpcService":true,"InitTcpService":true,"InlineProtoDir":["inline"],"MarkerWithProtokitgoVersion":false,"MigrationDbHost":"127.0.0.1","MigrationDbName":"example","MigrationDbPassword":"","MigrationDbPort":3306,"MigrationDbUser":"root","NamePatternActorClient":"ActorClient%s","NamePatternActorServerHandlerMethod":"%s","NamePatternRpcClient":"RpcClient%s","NamePatternServerHandler":"ServerHandler%s","NamePatternSingleConfPackage":"%s","OssListURL":"","PathAsset":"/home/user00/cc/cc-conf/asset","PathBinGrpcCsharpGen":"/opt/protokitgo/bin/linux/grpc_csharp_plugin","PathBinPb2db":"/opt/protokitgo/bin/linux/pb2db","PathBinProtoc":"/opt/protokitgo/bin/linux/protoc","PathBinProtocGenGo":"/opt/protokitgo/bin/linux/protoc-gen-go","PathBinSchema":"/opt/protokitgo/bin/linux/protoc-gen-jsonschema","PathDbStateCodes":["/home/user00/cc/cc-conf/gen/golang/dbstate"],"PathDbStateProtos":["/home/user00/cc/cc-conf/protos/dbstate"],"PathGen":"/home/user00/cc/cc-conf/gen","PathGenCodeCs":"/home/user00/cc/cc-conf/gen/csharp","PathGenCodeGolang":"/home/user00/cc/cc-conf/gen/golang","PathGenCodeJs":"/home/user00/cc/cc-conf/gen/js","PathGenCodeLua":"/home/user00/cc/cc-conf/gen/lua","PathGenCodePython":"/home/user00/cc/cc-conf/gen/python","PathGenCodeRpc":"/home/user00/cc/cc-conf/gen/csharp/grpc","PathGenDb":"/home/user00/cc/cc-conf/gen/golang/db","PathGenMeta":"/home/user00/cc/cc-conf/gen/meta","PathGenMigration":"/home/user00/cc/cc-conf/gen/meta/migration","PathGenPersistents":["/home/user00/cc/cc-conf/gen/rawdata/client/lang","/home/user00/cc/cc-conf/gen/rawdata/version_list","/home/user00/cc/cc-conf/gen/rawdata/server/version_android.release","/home/user00/cc/cc-conf/gen/rawdata/server/version_ios.release","/home/user00/cc/cc-conf/gen/rawdata/server/version_data.release","/home/user00/cc/cc-conf/gen/rawdata/server/lighthouse.release","/home/user00/cc/cc-conf/gen/rawdata/server/resource_versions.release"],"PathGenRawData":"/home/user00/cc/cc-conf/gen/rawdata","PathGenRawDataClient":"/home/user00/cc/cc-conf/gen/rawdata/client","PathGenRawDataServer":"/home/user00/cc/cc-conf/gen/rawdata/server","PathInlineProto":["/home/user00/cc/cc-conf/protos/inline"],"PathProto":"/home/user00/cc/cc-conf/protos","PathProtoImportDir":["/home/user00/cc/cc-conf/protos","protos","/opt/protokitgo/sdk/proto_google","/tmp/netutils694568145"],"PathProtoKit":"/opt/protokitgo/","PathProtoKitSDK":"/opt/protokitgo/sdk","PathProtoKitSDKJsFramework":"/opt/protokitgo/sdk/js/framework","PathProtoKitSDKLuaFramework":"/opt/protokitgo/sdk/lua/framework","PathProtoNetUtils":"/tmp/netutils694568145","PathRawData":"/home/user00/cc/cc-conf/excel","PathRawDataCSV":"/home/user00/cc/cc-conf/gen/rawdata/csv","PathRawDataLinkTo":"","PathRawDataProto":"/home/user00/cc/cc-conf/protos/rawdata","PathRawDataProtoExclude":"/home/user00/cc/cc-conf/protos/rawdata_exclude","PathTmpBackupRawDataProto":"/home/user00/cc/cc-conf/protos/rawdata_tmp_backup__exclude","PathUserCache":"/root/.cache/protokitgo","PathWorking":"/home/user00/cc/cc-conf","PathWorkingMeta":"/home/user00/cc/cc-conf/meta.json","Pb2DbBuiltInEnable":false,"Pb2DbPackageRoot":"","Pb2DbVersion":"v1","PersistentWhiteList":["client/lang/","version_list/","server/version_android.release","server/version_ios.release","server/version_data.release","server/lighthouse.release","server/resource_versions.release"],"PmConfPath":"gen/rawdata/server","PmtApiToken":"c3p0zmycr83g00066h6g","PmtURL":"http://cheesecake.pmt.centurygame.io/","ProjectModule":"","ProjectName":"","ProtoEnableClone":false,"ProtoEnableEqual":false,"ProtoEnableGoPackage":false,"ProtoEnableValidate":true,"ProtoEqualFloatPrecision":"0.0000000000001","ProtoIncludeGoogle":"proto_google","ProtoRawDataPackage":"rawdata","RawDataParallel":64,"ResCompress":"","ResEncrypt":"","ResEncryptKey":"CGC","ReservedKeywords":[""],"ServerRawDataFilterClient":true,"SheetRowCommentPrefix":"#","StopWhenContinuousBlankLinesCount":4,"Storages":null,"StoragesData":"pE0PW9LqjklFrkjIb7Fivo7DoRmEgeL3dwRmOCGalciB9lUDwenGNMs9ethx9HbfJ6hhgIjPueCwuzu8co20Jw5qg02VnP6CD/HvnJgXKV8sB6wvudPaMuYsVvr4qNrPSNjzQ3/PkexKDk/DOOmBpXsT9bt6yGJ32P8MwMCXIzXaVpyWj1GfLlAPXNEsQ5UyYwnMO6oal0KE8kpFVHaarQmrrk6OJNYPxbC9oHcu4LL/vFWPJ1+WzxHISQoGVX6x6z13AFUTUcPRz7D3N7vq3LC96nORuySKKH9t2AAkpIwgdwCdYMjbCDQUoxEft9J9+rx1fbv8A1rI6Qh2tnNjqtwZNICa5gW78OcUkNTrHRMS+zSLOPPJpzR/CXU/iHFEh7nktekJRrhOVeSBwjlOaLKpxWiFQeLivK9eUWo4L4M1ZgJcgB5zcw==","SuffixRawDataPbClient":".bytes","SuffixRawDataPbServer":".pb","SuffixTagForRawDataProtoExclude":"_exclude","SuffixTagForRemoveCodeGenerated":["service.pb.go"],"SupportDataServer":false,"SupportGmtFields":true,"SupportMigration":false,"TagColName":"_tags_","Tags":[],"TitleTagEndOfCol":"","TransDestDir":"gen/rawdata/client/lang","TypeAsJSString":[""],"UsingProtoMessageNameAsURI":true,"ValTagEndOfRow":"_end_row_","VersionProtokitgo":"","VersionSandwich":"v1.2.0","XdbPackageRoot":"","ZapLogBytesMode":"bytes","ZapLogMapKeyTypes":["int","int32","uint32","int64","uint64","string"]}
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/ActivityAwardConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/ActivityBuffConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/ActivityQuestConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/AvatarConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/AwardPoolConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/BettingConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/BingoBoardConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/BingoConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/BingoDefineConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/BingoDropConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/BingoGraphConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/BingoPromotionConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/BingoPromotionV2Conf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/BingoStageConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/BonusByRankingConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/BoxSkinConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/CandyMartConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/CandyMartDefConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/CandyMartJackpotConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/CandyMartPromotionConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/CandyMartPromotionV2Conf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/CandyMartStageConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/CardAceMachineConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/CardActivityConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/CardBigSeasonConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/CardConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/CardDeckConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/CardPackConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/CardPackLinkConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/CardPackPoolConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/CardPlusConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/CardSeasonConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/CardSeasonGroupConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/CardShinyShowConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/CardStageConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/CashBackAwardConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/CashBackConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/ChallengeActivityConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/ChaseConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/ChasePointAwardConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/ClubBuffConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/ClubMailAwardConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/ClubMailAwardWeightConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/ClubPointConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/ClubSpinConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/CoinKingdomConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/CoinKingdomDefConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/CoinKingdomPromotionConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/CoinKingdomStageConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/CoinValueBonusConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/CollectionConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/ConponActivityConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/ConponChooseConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/ConponConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/DailyActivityAwardConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/DailyBonusAwardConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/DailyBonusConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/DailyBonusSevenConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/DailyBonusThirtyConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/DailyMissionChooseConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/DoubleWinAgainConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/EndLessRichesGoupConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/EndLessRichesLevelGroupConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/EndlessRiches2Conf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/EndlessRiches2GroupConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/EndlessRichesAwardConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/EndlessRichesConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/EventConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/EventParamConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/FeatureConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/GameLegendConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/GameServerBackOfficeConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/GameServerCacheConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/GameServerConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/GameServerDBConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/GameServerGMTConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/GameServerLighthouseConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/GameServerPlatformConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/GameServerPostOfficeConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/GameServerRTMConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/GameServerSisyphusConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/GoldenWeekConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/HeadOrTailConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/Hero1SkillDiceHitWeightConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/Hero1SkillEffectConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/Hero1SkillMultipleWeightConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/HeroAwardConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/HeroConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/HeroItemEffectConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/HeroLevelConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/HugeWinAgainConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/JackpotConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/JourneyConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/JourneyDefineConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/JourneyPathConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/JourneyPointConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/JourneyPromotionConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/JourneyPromotionv2Conf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/KittyConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/KittyDefineConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/KittyPathConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/KittyPointConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/KittyPromotionConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/KittyPromotionV2Conf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/LevelSprintConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/LevelSprintTabConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/LevelingConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/ListDataConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/LobbyBonusByLevelConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/LobbyProNewConditionConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/LobbyProNormalConditionConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/LobbyProNormalGroupConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/LobbyPromotionTimeConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/LobbySectionConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/LobbyWheelConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/LookupConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/LuckyCardAwardConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/LuckyCardConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/LuckyPotDrawConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/LuckySevenMissConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/LuckySevenMultipleConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/MagicWeekConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/MagicWeekDropConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/MagicWeekGroupConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/MagicWeekPromotionConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/MailClassConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/MailModConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/MailSourceConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/MailSubClassConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/MapDataConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/MissionActivityConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/MissionAwardConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/MissionDifficConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/MissionLevelConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/MissionModConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/MissionPayConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/MultiplierConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/MultiverseChapterConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/MultiverseConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/MultiverseDefineConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/MultiverseNodeConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/MultiverseReelConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/NewPlayerEconConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/NorMissionNewConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/NorMissionNorConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/NorMissionPosConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/NorMissionWeekAwardConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/NorMissionWeekPointConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/OneTwoPromotionConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/OnlineActivityListConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/PanelsConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/PayGiftConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/PayGiftGroupConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/PayPokerGradeConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/PayPokerGroupConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/PayTableConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/PayWheelGradeConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/PayWheelGroupConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/PiggyCardConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/PiggyPayConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/PiggyPayModConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/PiggyRateConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/PlayerFilterConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/PlayerGuideConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/PokerCardConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/PokerConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/PokerConfigConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/PokerJackpotConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/PokerOrderConfConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/PokerOrderMissConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/PokerOrderWeightConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/PokerPremiumConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/PositionLocksConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/PrizeCatcherAwardConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/PrizeCatcherMissConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/PrizeCatcherMissV2Conf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/PromoteConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/QuestConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/QuestLevelModConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/RSPattenConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/RanBoxCoinWeightConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/RanBoxGemWeightConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/RanBoxHeroActiveWeightConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/RanBoxHeroXPWeightConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/ReelStripConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/RoyalPassAwardConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/RoyalPassConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/RoyalPassGroupConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/RoyalPassSeasonConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/RoyalPassWheelConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/SaleBuffChooseConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/SaleBuffConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/SaleBuffGroupConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/SegmentsConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/ShopAwardConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/ShopBoosterConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/ShopCoinPromotionConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/ShopConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/ShopGiftConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/ShopLevelValueConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/ShopShowCoinConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/ShopShowGemConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/ShopShowHeroConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/ShopShowHeroItemActiveConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/ShopShowHeroItemXpConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/SlotsConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/SpinMaxBonusConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/SpinMaxCardConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/SpinMaxConditionConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/SpinMaxConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/SpinMaxGroupConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/SpinMaxPanelConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/SpinMaxParamConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/StarRoadBuyConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/StarRoadConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/StarRoadGroupConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/StarRoadPointAwardConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/StoreBonusByLevelConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/SupMissionNewConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/SupMissionNorConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/SupMissionWeekFinishConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/SuperCrownSprintConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/TaskConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/TastyAgainWeightConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/TastyBonusConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/TastyCardConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/TastyGroupConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/TastyParamConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/TastyPiggyAgainWeightConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/TastyPiggyConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/TastyPiggyGroupConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/TastyPiggyParamConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/ThemeTagsConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/ThemeUnLockConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/ThreeChooseOneConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/ThreeChooseOneRepeatConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/ThreeChooseOneV2Conf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/TreasureRoomConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/TreasureRoomDayConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/TreasureRoomItemConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/VipBuffConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/VipConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/WhiteListConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/WhiteVersionConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/WildWheelConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/WinLineConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/WinTypeConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/gmt_service_mapper.release
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/lighthouse.release
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/version_android.release
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/version_data.release
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_backend/version_ios.release
+🍺 upload to etcd success
+[0;32m数值导入到rpc etcd，节点path：/pk7016_dev_bandit[0m
+[0;32mLoad config into ETCD from dir: /home/user00/cc/bandit-conf to etcd path: /pk7016_dev_bandit[0m
+[0;36mprotokitgo release etcd --log_level "0" --endpoint "10.0.84.16:2379" --key_prefix "/pk7016_dev_bandit" --config setting.yaml[0m
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m load config file [36mconfigs=[0m["setting.yaml"]
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m Parse Default From Tag:default
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m load file: setting.yaml
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m Changelog: https://zhongtai.s3.amazonaws.com/software/protokitgo/release.html
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m version: 2.4.1-d889704-version/2.4-20220121111016
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m current setting [36msetting=[0m{"ActorTellResponseType":"netutils.NormalAck","ArgsProtokitgo":"","BasePackagePath":"gitlab.funplus.io/fruities/bandit-conf/gen/golang","BlobFormat":"","CSBaseNamespace":"gen","CSRawDataNamespace":"gen.rawdata","Charset":"utf8mb4","CheckRawData":false,"CheckRawDataInterval":60,"Collate":"utf8mb4_general_ci","CompositeKeyUsingAlphabetOrder":false,"ConfName":"bandit-conf","CreateGoMod":true,"DirAsset":"asset","DirDbGen":"db","DirDbStates":[""],"DirDynamicService":"dynamic_service","DirGen":"gen","DirGenRawData":"rawdata","DirMeta":"meta","DirMigrationGen":"migration","DirProto":"protos","DirRawData":"excel","DirRawDataClient":"client","DirRawDataServer":"server","DirXdbGen":"xdb","EnableDescription":true,"EnableGenRawDataCSV":false,"EnableMonitor":true,"EnableQueue":true,"EnableXdb":false,"EnableZapLogMarshal":true,"EtcdLoadFilter":[".pb",".release"],"FileNameGrpcCsharpGen":"grpc_csharp_plugin","FileNameMeta":"meta.json","FileNamePb2db":"pb2db","FileNameProtoc":"protoc","FileNameProtocGenGo":"protoc-gen-go","FileNameSchema":"protoc-gen-jsonschema","GenCsharpGrpcCode":true,"GenGRPCServerHandler":false,"GenGlobalMessageRegistry":true,"GenJsCode":true,"GenLuaCode":true,"GenLuaCodeService":false,"GenNetutils":false,"GenPythonCode":false,"GenSubMessageRegistry":false,"GenVueCode":true,"GmtFieldType":"","GolangRelative":true,"GoogleDriveCouldUseExcel":false,"GoogleDriveFolderID":"1wTTgWex0Do6tStUXD6PgrHZk-hYXG9wj","GoogleDriveIgnoreChildFolder":false,"GoogleDriveListCorrectRevision":true,"HasActorSystem":false,"InitActorRpcService":false,"InitHttpService":true,"InitRpcService":true,"InitTcpService":true,"InlineProtoDir":["inline"],"MarkerWithProtokitgoVersion":false,"MigrationDbHost":"127.0.0.1","MigrationDbName":"example","MigrationDbPassword":"","MigrationDbPort":3306,"MigrationDbUser":"root","NamePatternActorClient":"ActorClient%s","NamePatternActorServerHandlerMethod":"%s","NamePatternRpcClient":"RpcClient%s","NamePatternServerHandler":"ServerHandler%s","NamePatternSingleConfPackage":"%s","OssListURL":"","PathAsset":"/home/user00/cc/bandit-conf/asset","PathBinGrpcCsharpGen":"/opt/protokitgo/bin/linux/grpc_csharp_plugin","PathBinPb2db":"/opt/protokitgo/bin/linux/pb2db","PathBinProtoc":"/opt/protokitgo/bin/linux/protoc","PathBinProtocGenGo":"/opt/protokitgo/bin/linux/protoc-gen-go","PathBinSchema":"/opt/protokitgo/bin/linux/protoc-gen-jsonschema","PathDbStateCodes":["/home/user00/cc/bandit-conf/gen/golang"],"PathDbStateProtos":["/home/user00/cc/bandit-conf/protos"],"PathGen":"/home/user00/cc/bandit-conf/gen","PathGenCodeCs":"/home/user00/cc/bandit-conf/gen/csharp","PathGenCodeGolang":"/home/user00/cc/bandit-conf/gen/golang","PathGenCodeJs":"/home/user00/cc/bandit-conf/gen/js","PathGenCodeLua":"/home/user00/cc/bandit-conf/gen/lua","PathGenCodePython":"/home/user00/cc/bandit-conf/gen/python","PathGenCodeRpc":"/home/user00/cc/bandit-conf/gen/csharp/grpc","PathGenDb":"/home/user00/cc/bandit-conf/gen/golang/db","PathGenMeta":"/home/user00/cc/bandit-conf/gen/meta","PathGenMigration":"/home/user00/cc/bandit-conf/gen/meta/migration","PathGenPersistents":["/home/user00/cc/bandit-conf/gen/rawdata/client/lang","/home/user00/cc/bandit-conf/gen/rawdata/version_list","/home/user00/cc/bandit-conf/gen/rawdata/server/version_android.release","/home/user00/cc/bandit-conf/gen/rawdata/server/version_ios.release","/home/user00/cc/bandit-conf/gen/rawdata/server/version_data.release","/home/user00/cc/bandit-conf/gen/rawdata/server/lighthouse.release","/home/user00/cc/bandit-conf/gen/rawdata/server/resource_versions.release"],"PathGenRawData":"/home/user00/cc/bandit-conf/gen/rawdata","PathGenRawDataClient":"/home/user00/cc/bandit-conf/gen/rawdata/client","PathGenRawDataServer":"/home/user00/cc/bandit-conf/gen/rawdata/server","PathInlineProto":["/home/user00/cc/bandit-conf/protos/inline"],"PathProto":"/home/user00/cc/bandit-conf/protos","PathProtoImportDir":["/home/user00/cc/bandit-conf/protos","protos","/opt/protokitgo/sdk/proto_google","/tmp/netutils320714767"],"PathProtoKit":"/opt/protokitgo/","PathProtoKitSDK":"/opt/protokitgo/sdk","PathProtoKitSDKJsFramework":"/opt/protokitgo/sdk/js/framework","PathProtoKitSDKLuaFramework":"/opt/protokitgo/sdk/lua/framework","PathProtoNetUtils":"/tmp/netutils320714767","PathRawData":"/home/user00/cc/bandit-conf/excel","PathRawDataCSV":"/home/user00/cc/bandit-conf/gen/rawdata/csv","PathRawDataLinkTo":"","PathRawDataProto":"/home/user00/cc/bandit-conf/protos/rawdatabandit","PathRawDataProtoExclude":"/home/user00/cc/bandit-conf/protos/rawdatabandit_exclude","PathTmpBackupRawDataProto":"/home/user00/cc/bandit-conf/protos/rawdatabandit_tmp_backup__exclude","PathUserCache":"/root/.cache/protokitgo","PathWorking":"/home/user00/cc/bandit-conf","PathWorkingMeta":"/home/user00/cc/bandit-conf/meta.json","Pb2DbBuiltInEnable":false,"Pb2DbPackageRoot":"","Pb2DbVersion":"v1","PersistentWhiteList":["client/lang/","version_list/","server/version_android.release","server/version_ios.release","server/version_data.release","server/lighthouse.release","server/resource_versions.release"],"PmConfPath":"gen/rawdata/server","PmtApiToken":"c3p0zmycr83g00066h6g","PmtURL":"http://cheesecake.pmt.centurygame.io/","ProjectModule":"gitlab.funplus.io/fruities/bandit","ProjectName":"bandit-server","ProtoEnableClone":false,"ProtoEnableEqual":false,"ProtoEnableGoPackage":false,"ProtoEnableValidate":true,"ProtoEqualFloatPrecision":"0.0000000000001","ProtoIncludeGoogle":"proto_google","ProtoRawDataPackage":"rawdatabandit","RawDataParallel":64,"ResCompress":"","ResEncrypt":"","ResEncryptKey":"CGC","ReservedKeywords":[""],"ServerRawDataFilterClient":true,"SheetRowCommentPrefix":"#","StopWhenContinuousBlankLinesCount":4,"Storages":null,"StoragesData":"pE0PW9LqjklFrkjIb7Fivo7DoRmEgeL3dwRmOCGalciB9lUDwenGNMs9ethx9HbfJ6hhgIjPueCwuzu8co20Jw5qg02VnP6CD/HvnJgXKV8sB6wvudPaMuYsVvr4qNrPSNjzQ3/PkexKDk/DOOmBpXsT9bt6yGJ32P8MwMCXIzXaVpyWj1GfLlAPXNEsQ5UyYwnMO6oal0KE8kpFVHaarQmrrk6OJNYPxbC9oHcu4LL/vFWPJ1+WzxHISQoGVX6x6z13AFUTUcPRz7D3N7vq3LC96nORuySKKH9t2AAkpIwgdwCdYMjbCDQUoxEft9J9+rx1fbv8A1rI6Qh2tnNjqtwZNICa5gW78OcUkNTrHRMS+zSLOPPJpzR/CXU/iHFEh7nktekJRrhOVeSBwjlOaLKpxWiFQeLivK9eUWo4L4M1ZgJcgB5zcw==","SuffixRawDataPbClient":".bytes","SuffixRawDataPbServer":".pb","SuffixTagForRawDataProtoExclude":"_exclude","SuffixTagForRemoveCodeGenerated":["service.pb.go"],"SupportDataServer":false,"SupportGmtFields":true,"SupportMigration":false,"TagColName":"_tags_","Tags":[],"TitleTagEndOfCol":"","TransDestDir":"gen/rawdata/client/lang","TypeAsJSString":[""],"UsingProtoMessageNameAsURI":true,"ValTagEndOfRow":"_END_ROW_","VersionProtokitgo":"","VersionSandwich":"v1.2.0","XdbPackageRoot":"","ZapLogBytesMode":"bytes","ZapLogMapKeyTypes":["int","int32","uint32","int64","uint64","string"]}
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_bandit/CollectionConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_bandit/FeatureConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_bandit/JackpotConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_bandit/ListConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_bandit/MultiplierConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_bandit/PanelsConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_bandit/PayTableConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_bandit/ReelStripConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_bandit/SlotsConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_bandit/TestConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_bandit/ThemeUnLockConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_bandit/WeightConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_bandit/WinLineConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_bandit/WinTypeConf.pb
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_bandit/gmt_service_mapper.release
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_bandit/lighthouse.release
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_bandit/version_android.release
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_bandit/version_data.release
+[90m2023-03-30T18:40:40+08:00[0m [33mDBG[0m upload key: /pk7016_dev_bandit/version_ios.release
+🍺 upload to etcd success
+[0;32m###############################基础服务##############################[0m
+[0;32m>>>>>>>>>>>>>当前目录: /home/user00/cc/cc-slots-land/batch[0m
+[0;32mLaunch a whole env for development.[0m
+[0;35m              ARCH:[0m linux
+[0;35m          LOCAL_IP:[0m 10.0.84.16
+[0;35m               APP:[0m pk7016
+[0;32m           APP_DIR:[0m /home/user00/cc/cc-slots-land/stage/app=pk7016/app
+[0;32m       Fluentd-DIR:[0m /home/user00/cc/cc-slots-land/batch/pk7016/fluentd
+[0;32m         Mongo-DIR:[0m /home/user00/cc/cc-slots-land/batch/pk7016/mongo
+[0;32m         Redis-DIR:[0m /home/user00/cc/cc-slots-land/batch/pk7016/redis
+[0;32m       PM_CONF_DIR:[0m /home/user00/cc/cc-conf/gen/rawdata/server
+[0;35m  BACKEND_CODE_DIR:[0m /home/user00/cc/cc-server
+[0;35m  BACKEND_CONF_DIR:[0m /home/user00/cc/cc-conf
+[1;33m   BANDIT_CODE_DIR:[0m /home/user00/cc/bandit-server
+[1;33m   BANDIT_CONF_DIR:[0m /home/user00/cc/bandit-conf
+[0;35m   BACKEND_PM_PATH:[0m /pk7016_dev_backend
+[1;33m    BANDIT_PM_PATH:[0m /pk7016_dev_bandit
+[0;35m           Network:[0m pk7016
+[0;35m    ETCD_ENDPOINTS:[0m 10.0.84.16:2379
+[0;35m         REDIS_URI:[0m pk7016-redis:6379
+[0;35m Backend-Container:[0m pk7016-backend
+[1;33m  BANDIT-Container:[0m pk7016-rpc
+[0;32m Fluentd-Container:[0m pk7016-fluentd
+[0;32m   Mongo-Container:[0m pk7016-mongo
+[0;32m   Redis-Container:[0m pk7016-redis
+[0;32msetup network[0m
+[0;36mnetwork id: 42a40faee8f5[0m
+[0;32msetup fluentd[0m
+451697fd502692e3091ffa1e3b2ec9a7c2b9ae923547e543ee2d15255015f7dc
+[0;32msetup mongo[0m
+[0;36muse /home/user00/cc/cc-slots-land/batch/pk7016/mongo as container data dir[0m
+669462c5f53b1942fc8007f079d28e9439522ec29d959e444b73a5a2cce0cd8b
+[0;32msetup redis[0m
+[0;36muse /home/user00/cc/cc-slots-land/batch/pk7016/redis as container data dir[0m
+07e65b503ce761fb00ed04ab6702dc3a46516018036b3fc658bfd419675c2d4c
+[0;36mGenerating app config.ini...[0m
+[0;32mgenerating dev config[0m
+[0;32mgenerating prod config[0m
+[0;36mDone[0m
+CONTAINER ID   IMAGE                COMMAND                  CREATED         STATUS                  PORTS                     NAMES
+07e65b503ce7   redis:5.0.9          "docker-entrypoint.s…"   1 second ago    Up Less than a second   0.0.0.0:6102->6379/tcp    pk7016-redis
+669462c5f53b   mongo:4.2.5          "docker-entrypoint.s…"   2 seconds ago   Up 1 second             0.0.0.0:9102->27017/tcp   pk7016-mongo
+451697fd5026   fluentd:v1.9.1-1.0   "tini -- /bin/entryp…"   3 seconds ago   Up 2 seconds            5140/tcp, 24224/tcp       pk7016-fluentd
+[0;32m###############################RPC服务##############################[0m
+[0;35m              ARCH:[0m linux
+[0;35m          LOCAL_IP:[0m 10.0.84.16
+[0;35m               APP:[0m pk7016
+[0;32m           APP_DIR:[0m /home/user00/cc/cc-slots-land/stage/app=pk7016/app
+[0;32m       Fluentd-DIR:[0m /home/user00/cc/cc-slots-land/batch/pk7016/fluentd
+[0;32m         Mongo-DIR:[0m /home/user00/cc/cc-slots-land/batch/pk7016/mongo
+[0;32m         Redis-DIR:[0m /home/user00/cc/cc-slots-land/batch/pk7016/redis
+[0;32m       PM_CONF_DIR:[0m /home/user00/cc/cc-conf/gen/rawdata/server
+[0;35m  BACKEND_CODE_DIR:[0m /home/user00/cc/cc-server
+[0;35m  BACKEND_CONF_DIR:[0m /home/user00/cc/cc-conf
+[1;33m   BANDIT_CODE_DIR:[0m /home/user00/cc/bandit-server
+[1;33m   BANDIT_CONF_DIR:[0m /home/user00/cc/bandit-conf
+[0;35m   BACKEND_PM_PATH:[0m /pk7016_dev_backend
+[1;33m    BANDIT_PM_PATH:[0m /pk7016_dev_bandit
+[0;35m           Network:[0m pk7016
+[0;35m    ETCD_ENDPOINTS:[0m 10.0.84.16:2379
+[0;35m         REDIS_URI:[0m pk7016-redis:6379
+[0;35m Backend-Container:[0m pk7016-backend
+[1;33m  BANDIT-Container:[0m pk7016-rpc
+[0;32m Fluentd-Container:[0m pk7016-fluentd
+[0;32m   Mongo-Container:[0m pk7016-mongo
+[0;32m   Redis-Container:[0m pk7016-redis
+[1;33m            DATE:[0m 2023-03-30T18:40:43+0800
+[1;33m   BUILD COMMAND:[0m cd bandit-server/cmd/server && go build -ldflags '-X main.buildTime=2023-03-30T18:40:43+0800 -X main.buildCodeVer=develop:fd84c07 -X main.buildConfVer=v1.1.16'
+[1;33m           IMAGE:[0m slots/backend-builder:latest
+[1;33m       CONTAINER:[0m rpc-backend-builder
+[1;33m          GO_DIR:[0m /home/user00/cc/cc-slots-land/go
+[1;33m        CODE_DIR:[0m /home/user00/cc/bandit-server develop:fd84c07
+[1;33m        CONF_DIR:[0m /home/user00/cc/bandit-conf v1.1.16
+[1;33m       BUILD_DIR:[0m /slots
+[1;33m  BUILD_CONF_DIR:[0m /cc-conf
+[1;33m     CONFIG_FILE:[0m pk7016/config.ini
+[1;33mCONFIG_FILE_PROD:[0m pk7016/config.ini
+[0;32mMOUNT_CONF_LOADER => /home/user00/cc/bandit-conf/gen/golang/conf:/slots/server/pkg/gen/golang/conf[0m
+[0;32m MOUNT_CONF_MODEL => /home/user00/cc/bandit-conf/gen/golang/rawdata:/cc-conf/gen/golang/rawdata[0m
+[0;36mdocker run -it   --name "rpc-backend-builder"   --hostname "rpc-backend-builder"   -v "/home/user00/cc/cc-slots-land/go":/go   -v "/home/user00/cc/bandit-server":"/slots/bandit-server"   -v "/home/user00/cc/bandit-conf":"/slots/bandit-conf"   -v "/home/user00/cc/bandit-conf/gen/golang/conf:/slots/server/pkg/gen/golang/conf"   -v "/home/user00/cc/bandit-conf/gen/golang/rawdata:/cc-conf/gen/golang/rawdata"    "slots/backend-builder:latest"   sh -c "cd bandit-server/cmd/server && go build -ldflags '-X main.buildTime=2023-03-30T18:40:43+0800 -X main.buildCodeVer=develop:fd84c07 -X main.buildConfVer=v1.1.16'"[0m
+[0;32mreset app dir: /home/user00/cc/cc-slots-land/stage/app=pk7016/app[0m
+[0;32mcopy compiled binary to app dir...[0m
+[0;36mdocker container cp "rpc-backend-builder:/slots/bandit-server/cmd/server/server" "/home/user00/cc/cc-slots-land/stage/app=pk7016/app/bandit-server"[0m
+[0;32mcopy theme collector data to app dir...[0m
+[0;36mdocker container cp "rpc-backend-builder:/slots/bandit-server/themes/data" "/home/user00/cc/cc-slots-land/stage/app=pk7016/app/data"[0m
+[0;32mremove container: rpc-backend-builder[0m
+[0;36mreclaim resources: rpc-backend-builder 9c2ca0af667d[0m
+9c2ca0af667d
+9c2ca0af667d
+[0;36mRPC_APP: pk7016-rpc[0m
+[0;36mIMAGE: plutus:pk7016-rpc[0m
+[0;32m/home/user00/cc/cc-slots-land/stage[0m
+Sending build context to Docker daemon  557.1kBSending build context to Docker daemon  7.242MBSending build context to Docker daemon  13.93MBSending build context to Docker daemon  20.61MBSending build context to Docker daemon  28.97MBSending build context to Docker daemon  35.65MBSending build context to Docker daemon  41.78MBSending build context to Docker daemon  49.58MBSending build context to Docker daemon  55.71MBSending build context to Docker daemon  61.83MBSending build context to Docker daemon  69.07MBSending build context to Docker daemon  77.43MBSending build context to Docker daemon  85.23MBSending build context to Docker daemon  93.03MBSending build context to Docker daemon  99.71MBSending build context to Docker daemon    107MBSending build context to Docker daemon  114.8MBSending build context to Docker daemon  121.4MBSending build context to Docker daemon  128.1MBSending build context to Docker daemon  134.3MBSending build context to Docker daemon  140.4MBSending build context to Docker daemon  146.5MBSending build context to Docker daemon  154.3MBSending build context to Docker daemon  159.3MBSending build context to Docker daemon  166.6MBSending build context to Docker daemon  172.7MBSending build context to Docker daemon  178.8MBSending build context to Docker daemon  183.3MBSending build context to Docker daemon  189.4MBSending build context to Docker daemon  196.6MBSending build context to Docker daemon  203.9MBSending build context to Docker daemon  210.6MBSending build context to Docker daemon  217.8MBSending build context to Docker daemon  223.4MBSending build context to Docker daemon  231.7MBSending build context to Docker daemon  240.1MBSending build context to Docker daemon  247.9MBSending build context to Docker daemon  255.7MBSending build context to Docker daemon    264MBSending build context to Docker daemon  271.8MBSending build context to Docker daemon    278MBSending build context to Docker daemon  282.4MBSending build context to Docker daemon    288MBSending build context to Docker daemon  294.7MBSending build context to Docker daemon  296.1MB
+Step 1/6 : FROM alpine:3.14
+ ---> dd53f409bf0b
+Step 2/6 : RUN apk update 	&& apk add tzdata     && cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime     && echo "Asia/Shanghai" >  /etc/timezone 	&& echo 'alias l="ls -ltA"' >> ~/.bashrc
+ ---> Using cache
+ ---> 5ad6219d23d9
+Step 3/6 : ARG app
+ ---> Using cache
+ ---> 6128053649fb
+Step 4/6 : ADD $app/app/ /slots
+ ---> 8e7254f88b55
+Step 5/6 : WORKDIR /slots
+ ---> Running in 3bf0191c12bc
+Removing intermediate container 3bf0191c12bc
+ ---> fed5b01e4511
+Step 6/6 : ENTRYPOINT ["/slots/bandit-server"]
+ ---> Running in a620b2941c4c
+Removing intermediate container a620b2941c4c
+ ---> 6ad1db78e3a5
+Successfully built 6ad1db78e3a5
+Successfully tagged plutus:pk7016-rpc
+[0;32mgc: app=pk7016/app/rpc[0m
+/home/user00/cc/cc-slots-land/batch
+[0;35m              ARCH:[0m linux
+[0;35m          LOCAL_IP:[0m 10.0.84.16
+[0;35m               APP:[0m pk7016
+[0;32m           APP_DIR:[0m /home/user00/cc/cc-slots-land/stage/app=pk7016/app
+[0;32m       Fluentd-DIR:[0m /home/user00/cc/cc-slots-land/batch/pk7016/fluentd
+[0;32m         Mongo-DIR:[0m /home/user00/cc/cc-slots-land/batch/pk7016/mongo
+[0;32m         Redis-DIR:[0m /home/user00/cc/cc-slots-land/batch/pk7016/redis
+[0;32m       PM_CONF_DIR:[0m /home/user00/cc/cc-conf/gen/rawdata/server
+[0;35m  BACKEND_CODE_DIR:[0m /home/user00/cc/cc-server
+[0;35m  BACKEND_CONF_DIR:[0m /home/user00/cc/cc-conf
+[1;33m   BANDIT_CODE_DIR:[0m /home/user00/cc/bandit-server
+[1;33m   BANDIT_CONF_DIR:[0m /home/user00/cc/bandit-conf
+[0;35m   BACKEND_PM_PATH:[0m /pk7016_dev_backend
+[1;33m    BANDIT_PM_PATH:[0m /pk7016_dev_bandit
+[0;35m           Network:[0m pk7016
+[0;35m    ETCD_ENDPOINTS:[0m 10.0.84.16:2379
+[0;35m         REDIS_URI:[0m pk7016-redis:6379
+[0;35m Backend-Container:[0m pk7016-backend
+[1;33m  BANDIT-Container:[0m pk7016-rpc
+[0;32m Fluentd-Container:[0m pk7016-fluentd
+[0;32m   Mongo-Container:[0m pk7016-mongo
+[0;32m   Redis-Container:[0m pk7016-redis
+
+[0;32mstart pk7016-rpc[0m
+[0;36m  docker run -d     -e app=pk7016.dev     -e etcd_endpoints=10.0.84.16:2379     -e sys_env_name=pk7016     -e sys_stage=dev_bandit     -e hostname=10.0.84.16     -e TZ=Asia/Shanghai     -e log_server_host=pk7016-fluentd     -e log_server_port=24224     -e redis_uri=pk7016-redis:6379     -e redis_passwd=     -e redis_db=0     -p 7116:8087     -v /home/user00/cc/bandit-server/configs:/slots/configs/     -e panel_storage=/slots/data/gen/rawdata/panel_storage     --network pk7016     --name pk7016-rpc     plutus:pk7016-rpc[0m
+62a5c05ae42564ba7c718d6e082edade9c0d468064424840ec877b50c67a49c4
+2023-03-30 18:41:43.388822 I | maxprocs: Leaving GOMAXPROCS=8: CPU quota undefined
+/slots <nil>
+configs/toml/dev.toml
+configs {"RedisName":"","RedisEnableMonitor":true,"RedisAddrs":["127.0.0.1:6379"],"RedisDB":0,"RedisUsername":"","RedisPassword":"","RedisMaxRetries":3,"RedisMinRetryBackoff":8000000,"RedisMaxRetryBackoff":512000000,"RedisConnDialTimeout":5000000000,"RedisSocketReadTimeout":3000000000,"RedisSocketWriteTimeout":3000000000,"RedisConnPoolSize":0,"RedisMinIdleConns":0,"RedisConnMaxAge":0,"RedisConnPoolTimeout":0,"RedisIdleConnTimeout":300000000000,"RedisIdleConnCheckFrequency":60000000000,"RedisCluster":false,"RedisClusterReadOnly":false,"RedisClusterRouteRandomly":false,"RedisClusterRouteByLatency":false,"RedisMasterName":"","KeyTokenInHeader":"Authorization","AuthSchema":"Bearer","SigningKeys":["e!L7pH4y","aQSdp5x*","J@I1R\u0026Op"],"TokenExpiration":604800000000000,"ServerName":"bandit-server","ApiToken":"c1c61sff2hn00006gg2g","PassportUrl":"http://passport-dev-cn.ifunplus.cn:8000/server_api.php","PmConfPath":"/pkjy_dev","AutoConfFiles":"","DbAgentType":"mysql","MysqlPassword":"","MysqlHost":"127.0.0.1","DataServerHost":"127.0.0.1","MysqlUser":"root","MysqlDbName":"bandit-server","DbProxyEndpoints":null,"DbMaxOpenConns":20,"DbTimeout":3000000000,"DbMaxIdleConns":20,"MysqlPort":3306,"DataServerPort":3308,"EtcdEndpoint":["10.0.84.74:2379"],"MicroEtcdEndpoint":["127.0.0.1:2379"],"SiidUrl":"http://127.0.0.1:16000/v1/siid","IdTryTimes":3,"UseSiid":false,"TcpPort":8087,"TcpSendChanSize":1024,"OpenTcpGate":false,"HttpPort":8088,"HttpRateLimit":0,"OpenHttpGate":false,"PipelineEnable":false,"PipelineCacheExpiration":300000000000,"MonitorPort":9168,"PrometheusPort":9158,"ActorPort":9088,"RpcPort":8089,"Development":true,"OpenEtcd":false,"UseMysql":false,"UseRedis":false}
+2023-03-30T18:41:43.393+0800	[35mdebug[0m	logbus/basic_logger.go:69	monitor	{"tags": ["monitor"], "log_xid": "cgimeps28454casf1vb0", "server_id": "cgimeps28454casf1v90", "server_ip": "192.168.144.5", "server_birth": 1680172903, "host_name": "62a5c05ae425", "prometheus [http] listening on": ":9158", "path": "/metrics"}
+2023-03-30T18:41:43.394+0800	[34minfo[0m	logbus/logger.go:103	server	{"tags": ["logbus"], "log_xid": "cgimeps28454casf1vc0", "server_birth": 1680172903, "host_name": "62a5c05ae425", "server_tag": "bandit", "server_id": "655f3bd7-8706-41ad-8fc4-856f0391b707", "server_ip": "192.168.144.5", "era": "2023-03-30T18:41:43+08:00", "code": " develop:fd84c07", "conf": "v1.1.16", "NumCPU": 8, "GOMAXPROCS": 8}
+2023-03-30T18:41:43.412+0800	[34minfo[0m	sjaeger/log.go:19	server	{"tags": ["logbus"], "log_xid": "cgimeps28454casf1vd0", "server_birth": 1680172903, "host_name": "62a5c05ae425", "server_tag": "bandit", "server_id": "655f3bd7-8706-41ad-8fc4-856f0391b707", "server_ip": "192.168.144.5", "era": "2023-03-30T18:41:43+08:00", "code": " develop:fd84c07", "conf": "v1.1.16", "glog-msg": "[sandwich jaeger] Initializing logging reporter\n"}
+2023-03-30T18:41:43.414+0800	[33mwarn[0m	slog/slog.go:53	server	{"tags": ["logbus"], "log_xid": "cgimeps28454casf1ve0", "server_birth": 1680172903, "host_name": "62a5c05ae425", "server_tag": "bandit", "server_id": "655f3bd7-8706-41ad-8fc4-856f0391b707", "server_ip": "192.168.144.5", "era": "2023-03-30T18:41:43+08:00", "code": " develop:fd84c07", "conf": "v1.1.16", "glog-msg": "[sandwich] [deprecated] should use WithAdapter to initialize pmconf package."}
+2023-03-30T18:41:43.416+0800	[33mwarn[0m	slog/slog.go:53	server	{"tags": ["logbus"], "log_xid": "cgimeps28454casf1vf0", "server_birth": 1680172903, "host_name": "62a5c05ae425", "server_tag": "bandit", "server_id": "655f3bd7-8706-41ad-8fc4-856f0391b707", "server_ip": "192.168.144.5", "era": "2023-03-30T18:41:43+08:00", "code": " develop:fd84c07", "conf": "v1.1.16", "glog-msg": "[sandwich] [deprecated] PmConfPath changed due to sys_env_name and sys_stage, should use sandwich_conf_env", "sysConfEnvStaging": "pk7016_dev_bandit", "pm_conf_path": "/pk7016_dev_bandit"}
+PmConfPath = /pk7016_dev_bandit/, ETCD endpoints = [10.0.84.16:2379]
+etcd_endpoints = [10.0.84.16:2379]
+2023-03-30 18:41:43.388822 I | maxprocs: Leaving GOMAXPROCS=8: CPU quota undefined
+[0;32m###############################后端服务##############################[0m
+Fetching origin
+cleanStr=nothing to commit, working directory clean
+[1;33m         PreBranch:[0m feature/card_new_season_pr1
+[1;33m      TargetBranch:[0m feature/card_new_season_pr1
+[1;33m           IsClean:[0m true
+[1;33m      HasUntracked:[0m false
+[1;33m  NeedSwitchBranch:[0m false
+Already up-to-date.
+[0;35m              ARCH:[0m linux
+[0;35m          LOCAL_IP:[0m 10.0.84.16
+[0;35m               APP:[0m pk7016
+[0;32m           APP_DIR:[0m /home/user00/cc/cc-slots-land/stage/app=pk7016/app
+[0;32m       Fluentd-DIR:[0m /home/user00/cc/cc-slots-land/batch/pk7016/fluentd
+[0;32m         Mongo-DIR:[0m /home/user00/cc/cc-slots-land/batch/pk7016/mongo
+[0;32m         Redis-DIR:[0m /home/user00/cc/cc-slots-land/batch/pk7016/redis
+[0;32m       PM_CONF_DIR:[0m /home/user00/cc/cc-conf/gen/rawdata/server
+[0;35m  BACKEND_CODE_DIR:[0m /home/user00/cc/cc-server
+[0;35m  BACKEND_CONF_DIR:[0m /home/user00/cc/cc-conf
+[1;33m   BANDIT_CODE_DIR:[0m /home/user00/cc/bandit-server
+[1;33m   BANDIT_CONF_DIR:[0m /home/user00/cc/bandit-conf
+[0;35m   BACKEND_PM_PATH:[0m /pk7016_dev_backend
+[1;33m    BANDIT_PM_PATH:[0m /pk7016_dev_bandit
+[0;35m           Network:[0m pk7016
+[0;35m    ETCD_ENDPOINTS:[0m 10.0.84.16:2379
+[0;35m         REDIS_URI:[0m pk7016-redis:6379
+[0;35m Backend-Container:[0m pk7016-backend
+[1;33m  BANDIT-Container:[0m pk7016-rpc
+[0;32m Fluentd-Container:[0m pk7016-fluentd
+[0;32m   Mongo-Container:[0m pk7016-mongo
+[0;32m   Redis-Container:[0m pk7016-redis
+[1;33m    BUILD TARGET:[0m game
+[1;33m   BUILD COMMAND:[0m cd proto && make server -B && cd .. && server/output/build-server.sh docker
+[1;33m           IMAGE:[0m slots/backend-builder:latest
+[1;33m       CONTAINER:[0m backend-builder
+[1;33m          GO_DIR:[0m /home/user00/cc/cc-slots-land/go
+[1;33m        CODE_DIR:[0m /home/user00/cc/cc-server
+[1;33m        CONF_DIR:[0m /home/user00/cc/cc-conf
+[1;33m       BUILD_DIR:[0m /slots
+[1;33m  BUILD_CONF_DIR:[0m /cc-conf
+[1;33m     CONFIG_FILE:[0m pk7016/config.ini
+[1;33mCONFIG_FILE_PROD:[0m pk7016/config.ini
+[0;32mMOUNT_CONF_LOADER => /home/user00/cc/cc-conf/gen/golang/conf:/slots/server/pkg/gen/golang/conf[0m
+[0;32m MOUNT_CONF_MODEL => /home/user00/cc/cc-conf/gen/golang/rawdata:/cc-conf/gen/golang/rawdata[0m
+[0;36mdocker run -it   --name "backend-builder"   --hostname "backend-builder"   -v "/home/user00/cc/cc-slots-land/go":/go   -v "/home/user00/cc/cc-server":"/slots"   -v "/home/user00/cc/cc-conf":"/cc-conf"   -v "/home/user00/cc/cc-conf/gen/golang/conf:/slots/server/pkg/gen/golang/conf"   -v "/home/user00/cc/cc-conf/gen/golang/rawdata:/cc-conf/gen/golang/rawdata"    "slots/backend-builder:latest"   sh -c "cd proto && make server -B && cd .. && server/output/build-server.sh docker"[0m
+rm ../server/pb/*.pb.go 2>/dev/null || :
+protoc --go_out=../server/pb *.proto
+[0;32mbuilding "plutus-server"[0m
+[0;33mLDFLAGS[0m = [0;36m-X 'plutus/core.BuildGoVersion=go1.17.12 linux/amd64' -X 'plutus/core.BuildTime=2023-03-30T18:41:48+0800' -X 'plutus/core.BuildType=docker' -X 'plutus/core.BuildHost=backend-builder' -X 'plutus/core.BuildGit=feature/card_new_season_pr1:a790021fc-dirty' -X 'plutus/core.BuildConf=v0.0.74-0.20230330092605-362044d2ab86'[0m
+[0;33mTARGET[0m = [0;36m/slots/server/cmd/main/plutus-server-next[0m
+[0;31mgo: downloading gitlab.funplus.io/cheesecake/cc-conf v0.0.74-0.20230330092605-362044d2ab86[0m
+[0;32mreset app dir: /home/user00/cc/cc-slots-land/stage/app=pk7016/app[0m
+[0;32mcopy compiled binary to app dir...[0m
+[0;32mcopy server config: pk7016/config.ini /home/user00/cc/cc-slots-land/stage/app=pk7016/app/config.ini[0m
+[0;32mremove container: backend-builder[0m
+[0;36mreclaim resources: backend-builder 73131566ef74[0m
+73131566ef74
+73131566ef74
+[0;32m/home/user00/cc/cc-slots-land/stage[0m
+Sending build context to Docker daemon  557.1kBSending build context to Docker daemon  6.685MBSending build context to Docker daemon  13.37MBSending build context to Docker daemon  21.17MBSending build context to Docker daemon  28.41MBSending build context to Docker daemon  37.32MBSending build context to Docker daemon  45.12MBSending build context to Docker daemon  53.48MBSending build context to Docker daemon  61.28MBSending build context to Docker daemon   67.4MBSending build context to Docker daemon  74.65MBSending build context to Docker daemon     83MBSending build context to Docker daemon  91.36MBSending build context to Docker daemon   98.6MBSending build context to Docker daemon    107MBSending build context to Docker daemon  114.8MBSending build context to Docker daemon  123.7MBSending build context to Docker daemon  131.5MBSending build context to Docker daemon  137.6MBSending build context to Docker daemon  145.9MBSending build context to Docker daemon  154.9MBSending build context to Docker daemon  163.2MBSending build context to Docker daemon  171.6MBSending build context to Docker daemon  179.4MBSending build context to Docker daemon  186.6MBSending build context to Docker daemon  193.3MBSending build context to Docker daemon  201.1MBSending build context to Docker daemon  208.9MBSending build context to Docker daemon  217.3MBSending build context to Docker daemon  222.3MBSending build context to Docker daemon  230.1MBSending build context to Docker daemon  237.9MBSending build context to Docker daemon  245.7MBSending build context to Docker daemon  254.6MBSending build context to Docker daemon  262.9MBSending build context to Docker daemon  271.8MBSending build context to Docker daemon  280.2MBSending build context to Docker daemon  288.6MBSending build context to Docker daemon  296.9MBSending build context to Docker daemon  305.8MBSending build context to Docker daemon  307.1MB
+Step 1/5 : FROM alpine:3.12.0
+ ---> a24bb4013296
+Step 2/5 : ARG app
+ ---> Using cache
+ ---> 00422b32391e
+Step 3/5 : ADD $app/app/ /slots
+ ---> 77331e5f353c
+Step 4/5 : WORKDIR /slots
+ ---> Running in 1bc38a54e493
+Removing intermediate container 1bc38a54e493
+ ---> c0be877cc875
+Step 5/5 : ENTRYPOINT ["/slots/plutus-server"]
+ ---> Running in 106b25b52ca3
+Removing intermediate container 106b25b52ca3
+ ---> 092764d3ba8c
+Successfully built 092764d3ba8c
+Successfully tagged plutus:pk7016
+[0;32mgc: app=pk7016/app/backend[0m
+/home/user00/cc/cc-slots-land/batch
+[0;35m              ARCH:[0m linux
+[0;35m          LOCAL_IP:[0m 10.0.84.16
+[0;35m               APP:[0m pk7016
+[0;32m           APP_DIR:[0m /home/user00/cc/cc-slots-land/stage/app=pk7016/app
+[0;32m       Fluentd-DIR:[0m /home/user00/cc/cc-slots-land/batch/pk7016/fluentd
+[0;32m         Mongo-DIR:[0m /home/user00/cc/cc-slots-land/batch/pk7016/mongo
+[0;32m         Redis-DIR:[0m /home/user00/cc/cc-slots-land/batch/pk7016/redis
+[0;32m       PM_CONF_DIR:[0m /home/user00/cc/cc-conf/gen/rawdata/server
+[0;35m  BACKEND_CODE_DIR:[0m /home/user00/cc/cc-server
+[0;35m  BACKEND_CONF_DIR:[0m /home/user00/cc/cc-conf
+[1;33m   BANDIT_CODE_DIR:[0m /home/user00/cc/bandit-server
+[1;33m   BANDIT_CONF_DIR:[0m /home/user00/cc/bandit-conf
+[0;35m   BACKEND_PM_PATH:[0m /pk7016_dev_backend
+[1;33m    BANDIT_PM_PATH:[0m /pk7016_dev_bandit
+[0;35m           Network:[0m pk7016
+[0;35m    ETCD_ENDPOINTS:[0m 10.0.84.16:2379
+[0;35m         REDIS_URI:[0m pk7016-redis:6379
+[0;35m Backend-Container:[0m pk7016-backend
+[1;33m  BANDIT-Container:[0m pk7016-rpc
+[0;32m Fluentd-Container:[0m pk7016-fluentd
+[0;32m   Mongo-Container:[0m pk7016-mongo
+[0;32m   Redis-Container:[0m pk7016-redis
+
+[0;32mstart pk7016-backend[0m
+[0;36m  docker run -d     -e app=pk7016.dev     -e etcd_endpoints=10.0.84.16:2379     -e sys_env_name=pk7016     -e sys_stage=dev_backend     -e hostname=10.0.84.16     -e port=7206 	--env-file .env     -p 7206:9000 -p 7306:9168     --network pk7016     --name pk7016-backend     plutus:pk7016[0m
+0a104cc1a16beea8c7e98326181fc56a904493b7099cbe3488e4c673fb7eeb76
+[0;32mwaiting for pk7016-backend...[0m
+[0;32m=====> try 0 times[0m
+curl: (56) Recv failure: Connection reset by peer
+[0;32m=====> try 1 times[0m
+400 Bad Request2023-03-30 10:44:34.033030 I | maxprocs: Leaving GOMAXPROCS=8: CPU quota undefined
+{"log_level":"warn","date":"2023-03-30T10:44:34.033Z","dd_meta_channel":"server","tags":["logbus"],"log_xid":"cgimg4k28451nlprlho0","server_id":"cgimg4c28451nlprlhm0","server_ip":"192.168.144.6","server_birth":1680173073,"host_name":"0a104cc1a16b","glog-msg":"[sandwich] [deprecated] should use WithAdapter to initialize pmconf package."}
+{"log_level":"warn","date":"2023-03-30T10:44:34.044Z","dd_meta_channel":"server","tags":["logbus"],"log_xid":"cgimg4k28451nlprlhog","server_id":"cgimg4c28451nlprlhm0","server_ip":"192.168.144.6","server_birth":1680173073,"host_name":"0a104cc1a16b","glog-msg":"[sandwich] [deprecated] PmConfPath changed due to sys_env_name and sys_stage, should use sandwich_conf_env","sysConfEnvStaging":"pk7016_dev_backend","pm_conf_path":"/pk7016_dev_backend"}
+{
+	"logger": {
+		"timelocation": {},
+		"host": "pk7016-fluentd",
+		"type": "logbus",
+		"serverbirth": "2023-03-30T06:44:35-04:00",
+		"port": 24224,
+		"withcaller": false
+	},
+	"timelocation": {},
+	"gmt": {
+		"listen": "0.0.0.0:9000",
+		"secret": "xkcs;wjngSDGJL;KADlkafas"
+	},
+	"httplistenaddr": "0.0.0.0:9000",
+	"serverbirth": "2023-03-30T06:44:35-04:00",
+	"serveropen": "2021-01-01T00:00:00Z",
+	"lighthouse": {
+		"token": "c3p0zmycr83g00066h6g"
+	},
+	"app": "pk7016.dev",
+	"funplus": {
+		"url": "https://passport-sandbox-checksession.centurygame.com/server_api.php",
+		"paysecret": "o+gt#+v)@-0\u002609my@e0@1c9v\u0026629i02t(kd9ry_sw\u0026j*oi*l4)",
+		"serverpayid": "not-support",
+		"expire": 3600
+	},
+	"bi": {
+		"host": "",
+		"mark": "178_pk7016",
+		"port": 24224
+	},
+	"sisyphus": {
+		"listen": "0.0.0.0:9000",
+		"collection": "idGen",
+		"timeout": 10000000000,
+		"section": 0
+	},
+	"postoffice": {
+		"listen": "0.0.0.0:9000",
+		"serviceurl": "http://pk7016-postOffice:9000",
+		"router": "/push",
+		"reqpushurl": "",
+		"appkey": "ca176bf86c3300375acebc07ff6684b0",
+		"interval": 10,
+		"timeout": 30000000000,
+		"appid": 20106,
+		"workercount": 20
+	},
+	"redis": {
+		"uri": "pk7016-redis:6379",
+		"pwd": "",
+		"db": 0,
+		"timeout": 5000000000,
+		"usecluster": false
+	},
+	"rtm": {
+		"servergateurl": "",
+		"secretkey": "",
+		"connecttimeout": 0,
+		"questtimeout": 0,
+		"adminuid": 0,
+		"projectid": 0,
+		"autoreconnect": false,
+		"enable": false
+	},
+	"mongo": {
+		"uri": "mongodb://root:passwd@pk7016-mongo:27017/?authSource=admin",
+		"db": "plutus",
+		"connecttimeout": 2000000000,
+		"questtimeout": 10000000000,
+		"deferduration": 60000000000,
+		"lifetime": 3600000000000
+	},
+	"inbox": {
+		"timeout": 10000000000
+	},
+	"dev": {
+		"mode": true,
+		"usegops": false,
+		"richnewplayer": false
+	},
+	"gateway": {
+		"useentitycache": false
+	},
+	"canonical": false
+}
+2023-03-30T10:44:35.581Z	[34minfo[0m	buslogger/logger.go:121	server	{"tags": ["logbus"], "log_xid": "cgimg4s28451nlprlhp0", "server_ip": "192.168.144.6", "host_name": "0a104cc1a16b", "server_id": "85e1d59b-c755-4581-8d23-1569c7b8f79f", "server_birth": 1680173075, "role": "bootstrap", "msg": "TimeFake: add: 15378004, now: 2023-09-24 06:24:39.5809991 -0400 EDT"}
+2023-03-30T10:44:35.673Z	[34minfo[0m	sandwich@v1.2.85/endpoint.go:269	server	{"tags": ["logbus"], "log_xid": "cgimg4s28451nlprlhqg", "server_ip": "192.168.144.6", "host_name": "0a104cc1a16b", "server_id": "85e1d59b-c755-4581-8d23-1569c7b8f79f", "server_birth": 1680173075, "glog-msg": "[sandwich] sandwich endpoint update summary", "registry_path": "/pk7016.dev/sandwich/service/slot/", "entries": ["cgimer428454casf216g_192.168.144.5:8087"], "added": ["cgimer428454casf216g_192.168.144.5:8087"], "keys_removed": [], "keys_now": ["cgimer428454casf216g"], "keys_old": []}
+2023-03-30T10:44:42.308Z	[34minfo[0m	buslogger/logger.go:101	server	{"tags": ["logbus"], "log_xid": "cgimg6k28451nlprlhrg", "server_ip": "192.168.144.6", "host_name": "0a104cc1a16b", "server_id": "85e1d59b-c755-4581-8d23-1569c7b8f79f", "server_birth": 1680173075, "role": "server", "msg": "game server start..."}
+2023-03-30T10:44:42.574Z	[35mdebug[0m	ark@v1.2.2/ark.go:394	server	{"tags": ["logbus"], "log_xid": "cgimg6k28451nlprlhsg", "server_ip": "192.168.144.6", "host_name": "0a104cc1a16b", "server_id": "85e1d59b-c755-4581-8d23-1569c7b8f79f", "server_birth": 1680173075, "glog-msg": "[ark]Listening and serving HTTP on listener 0.0.0.0:9000"}
+
+[0;32mpk7016-backend ready[0m
+[1;33mversion:[0m [0;32m{"Git":"feature/card_new_season_pr1:a790021fc-dirty", "BuildTime":"2023-03-30T18:41:48+0800", "BuildHost":"backend-builder", "Type":"docker", "Go":"go1.17.12 linux/amd64", "Conf":"v0.0.74-0.20230330092605-362044d2ab86", "Branch":""}[0m
+CONTAINER ID   IMAGE           COMMAND                  CREATED          STATUS         PORTS                                            NAMES
+0a104cc1a16b   plutus:pk7016   "/slots/plutus-server"   10 seconds ago   Up 8 seconds   0.0.0.0:7206->9000/tcp, 0.0.0.0:7306->9168/tcp   pk7016-backend
+/home/user00/cc/cc-server
+[0;32m###############################启动完毕##############################[0m
+CONTAINER ID   IMAGE                               COMMAND                  CREATED             STATUS             PORTS                                              NAMES
+0a104cc1a16b   plutus:pk7016                       "/slots/plutus-server"   10 seconds ago      Up 9 seconds       0.0.0.0:7206->9000/tcp, 0.0.0.0:7306->9168/tcp     pk7016-backend
+62a5c05ae425   plutus:pk7016-rpc                   "/slots/bandit-server"   3 minutes ago       Up 2 minutes       0.0.0.0:7116->8087/tcp                             pk7016-rpc
+07e65b503ce7   redis:5.0.9                         "docker-entrypoint.s…"   4 minutes ago       Up 3 minutes       0.0.0.0:6102->6379/tcp                             pk7016-redis
+669462c5f53b   mongo:4.2.5                         "docker-entrypoint.s…"   4 minutes ago       Up 4 minutes       0.0.0.0:9102->27017/tcp                            pk7016-mongo
+451697fd5026   fluentd:v1.9.1-1.0                  "tini -- /bin/entryp…"   4 minutes ago       Up 4 minutes       5140/tcp, 24224/tcp                                pk7016-fluentd
+fb67bf74e078   plutus:pktest-rpc                   "/slots/bandit-server"   50 minutes ago      Up 50 minutes                                                         pktest-rpc
+8e8e315c015d   plutus:pk7012                       "/slots/plutus-server"   About an hour ago   Up About an hour   0.0.0.0:7202->9000/tcp, 0.0.0.0:7302->9168/tcp     pk7012-backend
+2b689a2f4f17   plutus:pk7012-rpc                   "/slots/bandit-server"   About an hour ago   Up About an hour   0.0.0.0:7112->8087/tcp                             pk7012-rpc
+a9bcb1776f66   redis:5.0.9                         "docker-entrypoint.s…"   About an hour ago   Up About an hour   0.0.0.0:6103->6379/tcp                             pk7012-redis
+49f353442c57   mongo:4.2.5                         "docker-entrypoint.s…"   About an hour ago   Up About an hour   0.0.0.0:9103->27017/tcp                            pk7012-mongo
+4b93bebd9151   fluentd:v1.9.1-1.0                  "tini -- /bin/entryp…"   About an hour ago   Up About an hour   5140/tcp, 24224/tcp                                pk7012-fluentd
+6888e6edf1b7   plutus:pk7017                       "/slots/plutus-server"   3 hours ago         Up 3 hours         0.0.0.0:7207->9000/tcp, 0.0.0.0:7307->9168/tcp     pk7017-backend
+f1d3aeddfc77   plutus:pk7009                       "/slots/plutus-server"   4 hours ago         Up 4 hours         0.0.0.0:7009->9000/tcp, 0.0.0.0:7109->9168/tcp     pk7009-backend
+e6e49f3ba413   plutus:pk7009-rpc                   "/slots/bandit-server"   4 hours ago         Up 4 hours         0.0.0.0:7019->8087/tcp                             pk7009-rpc
+30b5f7869e4a   redis:5.0.9                         "docker-entrypoint.s…"   4 hours ago         Up 4 hours         0.0.0.0:6116->6379/tcp                             pk7009-redis
+980c4b2ef44a   mongo:4.2.5                         "docker-entrypoint.s…"   4 hours ago         Up 4 hours         0.0.0.0:9116->27017/tcp                            pk7009-mongo
+6ccafb3bbefc   fluentd:v1.9.1-1.0                  "tini -- /bin/entryp…"   4 hours ago         Up 4 hours         5140/tcp, 24224/tcp                                pk7009-fluentd
+1bcb649cceae   plutus:pk7003                       "/slots/plutus-server"   5 hours ago         Up 5 hours         0.0.0.0:7003->9000/tcp, 0.0.0.0:7103->9168/tcp     pk7003-backend
+2f3421c162bd   plutus:pk7003-rpc                   "/slots/bandit-server"   5 hours ago         Up 5 hours         0.0.0.0:7013->8087/tcp                             pk7003-rpc
+cd4d6d31fb2a   redis:5.0.9                         "docker-entrypoint.s…"   5 hours ago         Up 5 hours         0.0.0.0:6111->6379/tcp                             pk7003-redis
+de4c17374611   mongo:4.2.5                         "docker-entrypoint.s…"   5 hours ago         Up 5 hours         0.0.0.0:9111->27017/tcp                            pk7003-mongo
+3767768cad4c   fluentd:v1.9.1-1.0                  "tini -- /bin/entryp…"   5 hours ago         Up 5 hours         5140/tcp, 24224/tcp                                pk7003-fluentd
+9ed686566562   plutus:pk7011                       "/slots/plutus-server"   5 hours ago         Up 5 hours         0.0.0.0:7201->9000/tcp, 0.0.0.0:7301->9168/tcp     pk7011-backend
+6d423f1d31a2   plutus:pk7011-rpc                   "/slots/bandit-server"   5 hours ago         Up 5 hours         0.0.0.0:7111->8087/tcp                             pk7011-rpc
+54efc7634a27   redis:5.0.9                         "docker-entrypoint.s…"   5 hours ago         Up 5 hours         0.0.0.0:6107->6379/tcp                             pk7011-redis
+a869df52a532   mongo:4.2.5                         "docker-entrypoint.s…"   5 hours ago         Up 5 hours         0.0.0.0:9107->27017/tcp                            pk7011-mongo
+dc7fd7383c42   fluentd:v1.9.1-1.0                  "tini -- /bin/entryp…"   5 hours ago         Up 5 hours         5140/tcp, 24224/tcp                                pk7011-fluentd
+c6597b9f0203   plutus:pk7018                       "/slots/plutus-server"   6 hours ago         Up 6 hours         0.0.0.0:7208->9000/tcp, 0.0.0.0:7308->9168/tcp     pk7018-backend
+10281ebf8266   plutus:pk7020                       "/slots/plutus-server"   9 hours ago         Up 9 hours         0.0.0.0:7210->9000/tcp, 0.0.0.0:7310->9168/tcp     pk7020-backend
+165712afdde9   plutus:pk7020-rpc                   "/slots/bandit-server"   9 hours ago         Up 9 hours         0.0.0.0:7120->8087/tcp                             pk7020-rpc
+f0c988dcbd22   redis:5.0.9                         "docker-entrypoint.s…"   9 hours ago         Up 9 hours         0.0.0.0:6104->6379/tcp                             pk7020-redis
+208ad38bb28f   mongo:4.2.5                         "docker-entrypoint.s…"   9 hours ago         Up 9 hours         0.0.0.0:9104->27017/tcp                            pk7020-mongo
+da4ef0f97c73   fluentd:v1.9.1-1.0                  "tini -- /bin/entryp…"   9 hours ago         Up 9 hours         5140/tcp, 24224/tcp                                pk7020-fluentd
+5391bbbe279c   plutus:pk7013                       "/slots/plutus-server"   22 hours ago        Up 22 hours        0.0.0.0:7203->9000/tcp, 0.0.0.0:7303->9168/tcp     pk7013-backend
+777c394e0317   plutus:pk7013-rpc                   "/slots/bandit-server"   22 hours ago        Up 22 hours        0.0.0.0:7113->8087/tcp                             pk7013-rpc
+25518a9fc746   redis:5.0.9                         "docker-entrypoint.s…"   22 hours ago        Up 22 hours        0.0.0.0:6117->6379/tcp                             pk7013-redis
+157bf0a9bf73   mongo:4.2.5                         "docker-entrypoint.s…"   22 hours ago        Up 22 hours        0.0.0.0:9117->27017/tcp                            pk7013-mongo
+afe3a02168bd   fluentd:v1.9.1-1.0                  "tini -- /bin/entryp…"   22 hours ago        Up 22 hours        5140/tcp, 24224/tcp                                pk7013-fluentd
+d9f62b10eb4f   plutus:pktest                       "/slots/plutus-server"   24 hours ago        Up 24 hours        0.0.0.0:6666->9000/tcp, 0.0.0.0:6766->9168/tcp     pktest-backend
+8a737324a24d   redis:5.0.9                         "docker-entrypoint.s…"   24 hours ago        Up 24 hours        0.0.0.0:6100->6379/tcp                             pktest-redis
+400c616c32c6   mongo:4.2.5                         "docker-entrypoint.s…"   24 hours ago        Up 24 hours        0.0.0.0:9100->27017/tcp                            pktest-mongo
+b6bf331c062c   fluentd:v1.9.1-1.0                  "tini -- /bin/entryp…"   24 hours ago        Up 24 hours        5140/tcp, 24224/tcp                                pktest-fluentd
+3a1dc3578dcb   plutus:pk7001                       "/slots/plutus-server"   25 hours ago        Up 25 hours        0.0.0.0:7001->9000/tcp, 0.0.0.0:7101->9168/tcp     pk7001-backend
+7b7ad41daa22   plutus:pk7001-rpc                   "/slots/bandit-server"   25 hours ago        Up 25 hours        0.0.0.0:7011->8087/tcp                             pk7001-rpc
+a3816ccd5d0f   redis:5.0.9                         "docker-entrypoint.s…"   25 hours ago        Up 25 hours        0.0.0.0:6105->6379/tcp                             pk7001-redis
+ad347525adba   mongo:4.2.5                         "docker-entrypoint.s…"   25 hours ago        Up 25 hours        0.0.0.0:9105->27017/tcp                            pk7001-mongo
+65d435c68625   fluentd:v1.9.1-1.0                  "tini -- /bin/entryp…"   25 hours ago        Up 25 hours        5140/tcp, 24224/tcp                                pk7001-fluentd
+e4d79f01da91   plutus:pkreview                     "/slots/plutus-server"   25 hours ago        Up 25 hours        0.0.0.0:4444->9000/tcp, 0.0.0.0:4544->9168/tcp     pkreview-backend
+cf8d89664a1c   plutus:pkreview-rpc                 "/slots/bandit-server"   25 hours ago        Up 25 hours        0.0.0.0:4454->8087/tcp                             pkreview-rpc
+5fe2cc2f1066   redis:5.0.9                         "docker-entrypoint.s…"   25 hours ago        Up 25 hours        0.0.0.0:6109->6379/tcp                             pkreview-redis
+a28ff32ab5d2   mongo:4.2.5                         "docker-entrypoint.s…"   25 hours ago        Up 25 hours        0.0.0.0:9109->27017/tcp                            pkreview-mongo
+cc41ff65ba04   fluentd:v1.9.1-1.0                  "tini -- /bin/entryp…"   25 hours ago        Up 25 hours        5140/tcp, 24224/tcp                                pkreview-fluentd
+fae90933e9e6   plutus:pkjy                         "/slots/plutus-server"   26 hours ago        Up 26 hours        0.0.0.0:5555->9000/tcp, 0.0.0.0:5655->9168/tcp     pkjy-backend
+1db229f7d9c0   plutus:pk7014-rpc                   "/slots/bandit-server"   2 days ago          Up 2 days                                                             pk7014-rpc
+a20e4b786641   plutus:pk7014                       "/slots/plutus-server"   2 days ago          Up 2 days          0.0.0.0:7204->9000/tcp, 0.0.0.0:7304->9168/tcp     pk7014-backend
+c9da0c137826   redis:5.0.9                         "docker-entrypoint.s…"   2 days ago          Up 2 days          0.0.0.0:6118->6379/tcp                             pk7014-redis
+f4ec4f01000f   mongo:4.2.5                         "docker-entrypoint.s…"   2 days ago          Up 2 days          0.0.0.0:9118->27017/tcp                            pk7014-mongo
+7ee25b71a31d   fluentd:v1.9.1-1.0                  "tini -- /bin/entryp…"   2 days ago          Up 2 days          5140/tcp, 24224/tcp                                pk7014-fluentd
+21a9d95cf367   plutus:pkcp                         "/slots/plutus-server"   2 days ago          Up 2 days          0.0.0.0:9999->9000/tcp, 0.0.0.0:10099->9168/tcp    pkcp-backend
+493c824810e4   plutus:pk7018-rpc                   "/slots/bandit-server"   2 days ago          Up 2 days          0.0.0.0:7118->8087/tcp                             pk7018-rpc
+337a4a2c06d7   redis:5.0.9                         "docker-entrypoint.s…"   2 days ago          Up 2 days          0.0.0.0:6113->6379/tcp                             pk7018-redis
+a9a0f8477a56   mongo:4.2.5                         "docker-entrypoint.s…"   2 days ago          Up 2 days          0.0.0.0:9113->27017/tcp                            pk7018-mongo
+a7b4eadb3907   fluentd:v1.9.1-1.0                  "tini -- /bin/entryp…"   2 days ago          Up 2 days          5140/tcp, 24224/tcp                                pk7018-fluentd
+b01c295da361   plutus:pk7006                       "/slots/plutus-server"   2 days ago          Up 2 days          0.0.0.0:7006->9000/tcp, 0.0.0.0:7106->9168/tcp     pk7006-backend
+9f828bad419b   plutus:pk7006-rpc                   "/slots/bandit-server"   2 days ago          Up 2 days          0.0.0.0:7016->8087/tcp                             pk7006-rpc
+8d8d99636936   redis:5.0.9                         "docker-entrypoint.s…"   2 days ago          Up 2 days          0.0.0.0:6108->6379/tcp                             pk7006-redis
+c11eaf8877ef   mongo:4.2.5                         "docker-entrypoint.s…"   2 days ago          Up 2 days          0.0.0.0:9108->27017/tcp                            pk7006-mongo
+92fb3bf94ec7   fluentd:v1.9.1-1.0                  "tini -- /bin/entryp…"   2 days ago          Up 2 days          5140/tcp, 24224/tcp                                pk7006-fluentd
+cfa9ccb3434b   plutus:pkcp-rpc                     "/slots/bandit-server"   2 days ago          Up 2 days          0.0.0.0:10009->8087/tcp                            pkcp-rpc
+0397001972a4   redis:5.0.9                         "docker-entrypoint.s…"   2 days ago          Up 2 days          0.0.0.0:6110->6379/tcp                             pkcp-redis
+85ebacbb99c1   mongo:4.2.5                         "docker-entrypoint.s…"   2 days ago          Up 2 days          0.0.0.0:9110->27017/tcp                            pkcp-mongo
+233b36d9bd9d   fluentd:v1.9.1-1.0                  "tini -- /bin/entryp…"   2 days ago          Up 2 days          5140/tcp, 24224/tcp                                pkcp-fluentd
+691cf8465454   plutus:pk7008-rpc                   "/slots/bandit-server"   3 days ago          Up 3 days                                                             pk7008-rpc
+08e4cb81a921   plutus:pkzxj                        "/slots/plutus-server"   6 days ago          Up 6 days          0.0.0.0:8888->9000/tcp, 0.0.0.0:8988->9168/tcp     pkzxj-backend
+2c401184d09b   plutus:pk7017-rpc                   "/slots/bandit-server"   6 days ago          Up 6 days          0.0.0.0:7117->8087/tcp                             pk7017-rpc
+49fef6e6245a   redis:5.0.9                         "docker-entrypoint.s…"   6 days ago          Up 6 days          0.0.0.0:6101->6379/tcp                             pk7017-redis
+a8264f3babee   mongo:4.2.5                         "docker-entrypoint.s…"   6 days ago          Up 6 days          0.0.0.0:9101->27017/tcp                            pk7017-mongo
+8ca199746e63   fluentd:v1.9.1-1.0                  "tini -- /bin/entryp…"   6 days ago          Up 6 days          5140/tcp, 24224/tcp                                pk7017-fluentd
+d0ea6a196437   plutus:pkzxj-rpc                    "/slots/bandit-server"   6 days ago          Up 6 days          0.0.0.0:8898->8087/tcp                             pkzxj-rpc
+0cf016c41614   redis:5.0.9                         "docker-entrypoint.s…"   6 days ago          Up 6 days          0.0.0.0:6114->6379/tcp                             pkzxj-redis
+51574c27b4b9   mongo:4.2.5                         "docker-entrypoint.s…"   6 days ago          Up 6 days          0.0.0.0:9114->27017/tcp                            pkzxj-mongo
+4dbff0e06c9b   fluentd:v1.9.1-1.0                  "tini -- /bin/entryp…"   6 days ago          Up 6 days          5140/tcp, 24224/tcp                                pkzxj-fluentd
+5db23f5de0ec   plutus:pkjy-rpc                     "/slots/bandit-server"   8 days ago          Up 8 days                                                             pkjy-rpc
+67b0aa66a491   plutus:pk7008                       "/slots/plutus-server"   9 days ago          Up 9 days          0.0.0.0:7008->9000/tcp, 0.0.0.0:7108->9168/tcp     pk7008-backend
+51864ec69a76   redis:5.0.9                         "docker-entrypoint.s…"   9 days ago          Up 9 days          0.0.0.0:6112->6379/tcp                             pk7008-redis
+3c3a6e721412   mongo:4.2.5                         "docker-entrypoint.s…"   9 days ago          Up 9 days          0.0.0.0:9112->27017/tcp                            pk7008-mongo
+9112b531307c   fluentd:v1.9.1-1.0                  "tini -- /bin/entryp…"   9 days ago          Up 9 days          5140/tcp, 24224/tcp                                pk7008-fluentd
+fb393b521435   plutus:pk7019                       "/slots/plutus-server"   13 days ago         Up 13 days         0.0.0.0:7209->9000/tcp, 0.0.0.0:7309->9168/tcp     pk7019-backend
+b7456453314c   plutus:pk7019-rpc                   "/slots/bandit-server"   13 days ago         Up 13 days         0.0.0.0:7119->8087/tcp                             pk7019-rpc
+a1692df2dfc3   redis:5.0.9                         "docker-entrypoint.s…"   13 days ago         Up 13 days         0.0.0.0:6115->6379/tcp                             pk7019-redis
+125ddfa20a41   mongo:4.2.5                         "docker-entrypoint.s…"   13 days ago         Up 13 days         0.0.0.0:9115->27017/tcp                            pk7019-mongo
+942b265956d5   fluentd:v1.9.1-1.0                  "tini -- /bin/entryp…"   13 days ago         Up 13 days         5140/tcp, 24224/tcp                                pk7019-fluentd
+e41a6913dd5b   redis:5.0.9                         "docker-entrypoint.s…"   2 weeks ago         Up 2 weeks         0.0.0.0:6106->6379/tcp                             pkjy-redis
+b9303edbc005   mongo:4.2.5                         "docker-entrypoint.s…"   2 weeks ago         Up 2 weeks         0.0.0.0:9106->27017/tcp                            pkjy-mongo
+749fa0ddaff4   fluentd:v1.9.1-1.0                  "tini -- /bin/entryp…"   2 weeks ago         Up 2 weeks         5140/tcp, 24224/tcp                                pkjy-fluentd
+fc960886de76   amir20/dozzle:latest                "/dozzle"                2 weeks ago         Up 2 weeks         0.0.0.0:8899->8080/tcp                             dozzle
+036a711c96f7   openjdk:11                          "/log-viewer/logview…"   2 weeks ago         Up 2 weeks         0.0.0.0:8111->8111/tcp                             log-viewer
+41b9052b078d   jenkins/jenkins                     "/usr/bin/tini -- /u…"   2 weeks ago         Up 2 weeks         0.0.0.0:50000->50000/tcp, 0.0.0.0:8083->8080/tcp   jenkins-jenkins
+3ad9ad6e9a7c   docker:dind                         "dockerd-entrypoint.…"   2 weeks ago         Up 2 weeks         2375/tcp, 0.0.0.0:2376->2376/tcp                   jenkins-docker
+cb5484d87817   intranet_app_manager-master_mysql   "docker-entrypoint.s…"   4 months ago        Up 2 weeks         0.0.0.0:3306->3306/tcp, 33060/tcp                  web-mysql
+[0;32m###############################容器清理##############################[0m
+Deleted Images:
+deleted: sha256:b0d5e1d2a0dd62229377fecfcc1671c4b6ca78778004688ab28e437a76cb150e
+deleted: sha256:03f118b56e56efb78d758216f3b9c6abb050bcf81a52169b67ca817b9032a0af
+deleted: sha256:9cbec4824c1e7daf505e46c343ca9de56558cd6b71c6e3f9021b186441253fba
+deleted: sha256:4a9853e074e0228d6b06cf0acb2c7bf6085029a9162b5762c4b994bb775ce992
+deleted: sha256:34f80859f72b6f7940a66406418c4041c983b947b89a7af59de650c9c21ee2ad
+deleted: sha256:8ca000b4cfb1d822abb65e5f1add7fe420cfcef317ab1ca2007084bfb311d00a
+deleted: sha256:7bca5ed0b79bab15e0bb2df3c5fa31cdaac260ac1cc0a63bfd283d18dfd443ac
+deleted: sha256:2337c03c2ac652ac63df9eb7fa6cd7846bcb894b0c92da2a68e0dd433b549aac
+deleted: sha256:33c8bc5a0c55d392beb4f49c3a37fe5f1bfebd676b07d7ca6c16c4d839d0d2b4
+deleted: sha256:84ead52b2b4653f417f01258ee60e31dacc1d7eda63e4b54fa44d9310941d62a
+deleted: sha256:5039499554907755b792a2fea8ad29434595c2bc16d000a69a5389f03ddf58a0
+deleted: sha256:504d20de4622c59ca6823facf7349977c042589f11cfaf90c6f8f910870c8283
+
+Total reclaimed space: 236.1MB
+Total reclaimed space: 0B
+[0;32m###############################清理完毕##############################[0m
+CONTAINER ID   IMAGE                               COMMAND                  CREATED             STATUS             PORTS                                              NAMES
+0a104cc1a16b   plutus:pk7016                       "/slots/plutus-server"   12 seconds ago      Up 10 seconds      0.0.0.0:7206->9000/tcp, 0.0.0.0:7306->9168/tcp     pk7016-backend
+62a5c05ae425   plutus:pk7016-rpc                   "/slots/bandit-server"   3 minutes ago       Up 3 minutes       0.0.0.0:7116->8087/tcp                             pk7016-rpc
+07e65b503ce7   redis:5.0.9                         "docker-entrypoint.s…"   4 minutes ago       Up 4 minutes       0.0.0.0:6102->6379/tcp                             pk7016-redis
+669462c5f53b   mongo:4.2.5                         "docker-entrypoint.s…"   4 minutes ago       Up 4 minutes       0.0.0.0:9102->27017/tcp                            pk7016-mongo
+451697fd5026   fluentd:v1.9.1-1.0                  "tini -- /bin/entryp…"   4 minutes ago       Up 4 minutes       5140/tcp, 24224/tcp                                pk7016-fluentd
+fb67bf74e078   plutus:pktest-rpc                   "/slots/bandit-server"   50 minutes ago      Up 50 minutes                                                         pktest-rpc
+8e8e315c015d   plutus:pk7012                       "/slots/plutus-server"   About an hour ago   Up About an hour   0.0.0.0:7202->9000/tcp, 0.0.0.0:7302->9168/tcp     pk7012-backend
+2b689a2f4f17   plutus:pk7012-rpc                   "/slots/bandit-server"   About an hour ago   Up About an hour   0.0.0.0:7112->8087/tcp                             pk7012-rpc
+a9bcb1776f66   redis:5.0.9                         "docker-entrypoint.s…"   About an hour ago   Up About an hour   0.0.0.0:6103->6379/tcp                             pk7012-redis
+49f353442c57   mongo:4.2.5                         "docker-entrypoint.s…"   About an hour ago   Up About an hour   0.0.0.0:9103->27017/tcp                            pk7012-mongo
+4b93bebd9151   fluentd:v1.9.1-1.0                  "tini -- /bin/entryp…"   About an hour ago   Up About an hour   5140/tcp, 24224/tcp                                pk7012-fluentd
+6888e6edf1b7   plutus:pk7017                       "/slots/plutus-server"   3 hours ago         Up 3 hours         0.0.0.0:7207->9000/tcp, 0.0.0.0:7307->9168/tcp     pk7017-backend
+f1d3aeddfc77   plutus:pk7009                       "/slots/plutus-server"   4 hours ago         Up 4 hours         0.0.0.0:7009->9000/tcp, 0.0.0.0:7109->9168/tcp     pk7009-backend
+e6e49f3ba413   plutus:pk7009-rpc                   "/slots/bandit-server"   4 hours ago         Up 4 hours         0.0.0.0:7019->8087/tcp                             pk7009-rpc
+30b5f7869e4a   redis:5.0.9                         "docker-entrypoint.s…"   4 hours ago         Up 4 hours         0.0.0.0:6116->6379/tcp                             pk7009-redis
+980c4b2ef44a   mongo:4.2.5                         "docker-entrypoint.s…"   4 hours ago         Up 4 hours         0.0.0.0:9116->27017/tcp                            pk7009-mongo
+6ccafb3bbefc   fluentd:v1.9.1-1.0                  "tini -- /bin/entryp…"   4 hours ago         Up 4 hours         5140/tcp, 24224/tcp                                pk7009-fluentd
+1bcb649cceae   plutus:pk7003                       "/slots/plutus-server"   5 hours ago         Up 5 hours         0.0.0.0:7003->9000/tcp, 0.0.0.0:7103->9168/tcp     pk7003-backend
+2f3421c162bd   plutus:pk7003-rpc                   "/slots/bandit-server"   5 hours ago         Up 5 hours         0.0.0.0:7013->8087/tcp                             pk7003-rpc
+cd4d6d31fb2a   redis:5.0.9                         "docker-entrypoint.s…"   5 hours ago         Up 5 hours         0.0.0.0:6111->6379/tcp                             pk7003-redis
+de4c17374611   mongo:4.2.5                         "docker-entrypoint.s…"   5 hours ago         Up 5 hours         0.0.0.0:9111->27017/tcp                            pk7003-mongo
+3767768cad4c   fluentd:v1.9.1-1.0                  "tini -- /bin/entryp…"   5 hours ago         Up 5 hours         5140/tcp, 24224/tcp                                pk7003-fluentd
+9ed686566562   plutus:pk7011                       "/slots/plutus-server"   5 hours ago         Up 5 hours         0.0.0.0:7201->9000/tcp, 0.0.0.0:7301->9168/tcp     pk7011-backend
+6d423f1d31a2   plutus:pk7011-rpc                   "/slots/bandit-server"   5 hours ago         Up 5 hours         0.0.0.0:7111->8087/tcp                             pk7011-rpc
+54efc7634a27   redis:5.0.9                         "docker-entrypoint.s…"   5 hours ago         Up 5 hours         0.0.0.0:6107->6379/tcp                             pk7011-redis
+a869df52a532   mongo:4.2.5                         "docker-entrypoint.s…"   5 hours ago         Up 5 hours         0.0.0.0:9107->27017/tcp                            pk7011-mongo
+dc7fd7383c42   fluentd:v1.9.1-1.0                  "tini -- /bin/entryp…"   5 hours ago         Up 5 hours         5140/tcp, 24224/tcp                                pk7011-fluentd
+c6597b9f0203   plutus:pk7018                       "/slots/plutus-server"   6 hours ago         Up 6 hours         0.0.0.0:7208->9000/tcp, 0.0.0.0:7308->9168/tcp     pk7018-backend
+10281ebf8266   plutus:pk7020                       "/slots/plutus-server"   9 hours ago         Up 9 hours         0.0.0.0:7210->9000/tcp, 0.0.0.0:7310->9168/tcp     pk7020-backend
+165712afdde9   plutus:pk7020-rpc                   "/slots/bandit-server"   9 hours ago         Up 9 hours         0.0.0.0:7120->8087/tcp                             pk7020-rpc
+f0c988dcbd22   redis:5.0.9                         "docker-entrypoint.s…"   9 hours ago         Up 9 hours         0.0.0.0:6104->6379/tcp                             pk7020-redis
+208ad38bb28f   mongo:4.2.5                         "docker-entrypoint.s…"   9 hours ago         Up 9 hours         0.0.0.0:9104->27017/tcp                            pk7020-mongo
+da4ef0f97c73   fluentd:v1.9.1-1.0                  "tini -- /bin/entryp…"   9 hours ago         Up 9 hours         5140/tcp, 24224/tcp                                pk7020-fluentd
+5391bbbe279c   plutus:pk7013                       "/slots/plutus-server"   22 hours ago        Up 22 hours        0.0.0.0:7203->9000/tcp, 0.0.0.0:7303->9168/tcp     pk7013-backend
+777c394e0317   plutus:pk7013-rpc                   "/slots/bandit-server"   22 hours ago        Up 22 hours        0.0.0.0:7113->8087/tcp                             pk7013-rpc
+25518a9fc746   redis:5.0.9                         "docker-entrypoint.s…"   22 hours ago        Up 22 hours        0.0.0.0:6117->6379/tcp                             pk7013-redis
+157bf0a9bf73   mongo:4.2.5                         "docker-entrypoint.s…"   22 hours ago        Up 22 hours        0.0.0.0:9117->27017/tcp                            pk7013-mongo
+afe3a02168bd   fluentd:v1.9.1-1.0                  "tini -- /bin/entryp…"   22 hours ago        Up 22 hours        5140/tcp, 24224/tcp                                pk7013-fluentd
+d9f62b10eb4f   plutus:pktest                       "/slots/plutus-server"   24 hours ago        Up 24 hours        0.0.0.0:6666->9000/tcp, 0.0.0.0:6766->9168/tcp     pktest-backend
+8a737324a24d   redis:5.0.9                         "docker-entrypoint.s…"   24 hours ago        Up 24 hours        0.0.0.0:6100->6379/tcp                             pktest-redis
+400c616c32c6   mongo:4.2.5                         "docker-entrypoint.s…"   24 hours ago        Up 24 hours        0.0.0.0:9100->27017/tcp                            pktest-mongo
+b6bf331c062c   fluentd:v1.9.1-1.0                  "tini -- /bin/entryp…"   24 hours ago        Up 24 hours        5140/tcp, 24224/tcp                                pktest-fluentd
+3a1dc3578dcb   plutus:pk7001                       "/slots/plutus-server"   25 hours ago        Up 25 hours        0.0.0.0:7001->9000/tcp, 0.0.0.0:7101->9168/tcp     pk7001-backend
+7b7ad41daa22   plutus:pk7001-rpc                   "/slots/bandit-server"   25 hours ago        Up 25 hours        0.0.0.0:7011->8087/tcp                             pk7001-rpc
+a3816ccd5d0f   redis:5.0.9                         "docker-entrypoint.s…"   25 hours ago        Up 25 hours        0.0.0.0:6105->6379/tcp                             pk7001-redis
+ad347525adba   mongo:4.2.5                         "docker-entrypoint.s…"   25 hours ago        Up 25 hours        0.0.0.0:9105->27017/tcp                            pk7001-mongo
+65d435c68625   fluentd:v1.9.1-1.0                  "tini -- /bin/entryp…"   25 hours ago        Up 25 hours        5140/tcp, 24224/tcp                                pk7001-fluentd
+e4d79f01da91   plutus:pkreview                     "/slots/plutus-server"   25 hours ago        Up 25 hours        0.0.0.0:4444->9000/tcp, 0.0.0.0:4544->9168/tcp     pkreview-backend
+cf8d89664a1c   plutus:pkreview-rpc                 "/slots/bandit-server"   25 hours ago        Up 25 hours        0.0.0.0:4454->8087/tcp                             pkreview-rpc
+5fe2cc2f1066   redis:5.0.9                         "docker-entrypoint.s…"   25 hours ago        Up 25 hours        0.0.0.0:6109->6379/tcp                             pkreview-redis
+a28ff32ab5d2   mongo:4.2.5                         "docker-entrypoint.s…"   25 hours ago        Up 25 hours        0.0.0.0:9109->27017/tcp                            pkreview-mongo
+cc41ff65ba04   fluentd:v1.9.1-1.0                  "tini -- /bin/entryp…"   25 hours ago        Up 25 hours        5140/tcp, 24224/tcp                                pkreview-fluentd
+fae90933e9e6   plutus:pkjy                         "/slots/plutus-server"   26 hours ago        Up 26 hours        0.0.0.0:5555->9000/tcp, 0.0.0.0:5655->9168/tcp     pkjy-backend
+1db229f7d9c0   plutus:pk7014-rpc                   "/slots/bandit-server"   2 days ago          Up 2 days                                                             pk7014-rpc
+a20e4b786641   plutus:pk7014                       "/slots/plutus-server"   2 days ago          Up 2 days          0.0.0.0:7204->9000/tcp, 0.0.0.0:7304->9168/tcp     pk7014-backend
+c9da0c137826   redis:5.0.9                         "docker-entrypoint.s…"   2 days ago          Up 2 days          0.0.0.0:6118->6379/tcp                             pk7014-redis
+f4ec4f01000f   mongo:4.2.5                         "docker-entrypoint.s…"   2 days ago          Up 2 days          0.0.0.0:9118->27017/tcp                            pk7014-mongo
+7ee25b71a31d   fluentd:v1.9.1-1.0                  "tini -- /bin/entryp…"   2 days ago          Up 2 days          5140/tcp, 24224/tcp                                pk7014-fluentd
+21a9d95cf367   plutus:pkcp                         "/slots/plutus-server"   2 days ago          Up 2 days          0.0.0.0:9999->9000/tcp, 0.0.0.0:10099->9168/tcp    pkcp-backend
+493c824810e4   plutus:pk7018-rpc                   "/slots/bandit-server"   2 days ago          Up 2 days          0.0.0.0:7118->8087/tcp                             pk7018-rpc
+337a4a2c06d7   redis:5.0.9                         "docker-entrypoint.s…"   2 days ago          Up 2 days          0.0.0.0:6113->6379/tcp                             pk7018-redis
+a9a0f8477a56   mongo:4.2.5                         "docker-entrypoint.s…"   2 days ago          Up 2 days          0.0.0.0:9113->27017/tcp                            pk7018-mongo
+a7b4eadb3907   fluentd:v1.9.1-1.0                  "tini -- /bin/entryp…"   2 days ago          Up 2 days          5140/tcp, 24224/tcp                                pk7018-fluentd
+b01c295da361   plutus:pk7006                       "/slots/plutus-server"   2 days ago          Up 2 days          0.0.0.0:7006->9000/tcp, 0.0.0.0:7106->9168/tcp     pk7006-backend
+9f828bad419b   plutus:pk7006-rpc                   "/slots/bandit-server"   2 days ago          Up 2 days          0.0.0.0:7016->8087/tcp                             pk7006-rpc
+8d8d99636936   redis:5.0.9                         "docker-entrypoint.s…"   2 days ago          Up 2 days          0.0.0.0:6108->6379/tcp                             pk7006-redis
+c11eaf8877ef   mongo:4.2.5                         "docker-entrypoint.s…"   2 days ago          Up 2 days          0.0.0.0:9108->27017/tcp                            pk7006-mongo
+92fb3bf94ec7   fluentd:v1.9.1-1.0                  "tini -- /bin/entryp…"   2 days ago          Up 2 days          5140/tcp, 24224/tcp                                pk7006-fluentd
+cfa9ccb3434b   plutus:pkcp-rpc                     "/slots/bandit-server"   2 days ago          Up 2 days          0.0.0.0:10009->8087/tcp                            pkcp-rpc
+0397001972a4   redis:5.0.9                         "docker-entrypoint.s…"   2 days ago          Up 2 days          0.0.0.0:6110->6379/tcp                             pkcp-redis
+85ebacbb99c1   mongo:4.2.5                         "docker-entrypoint.s…"   2 days ago          Up 2 days          0.0.0.0:9110->27017/tcp                            pkcp-mongo
+233b36d9bd9d   fluentd:v1.9.1-1.0                  "tini -- /bin/entryp…"   2 days ago          Up 2 days          5140/tcp, 24224/tcp                                pkcp-fluentd
+691cf8465454   plutus:pk7008-rpc                   "/slots/bandit-server"   3 days ago          Up 3 days                                                             pk7008-rpc
+08e4cb81a921   plutus:pkzxj                        "/slots/plutus-server"   6 days ago          Up 6 days          0.0.0.0:8888->9000/tcp, 0.0.0.0:8988->9168/tcp     pkzxj-backend
+2c401184d09b   plutus:pk7017-rpc                   "/slots/bandit-server"   6 days ago          Up 6 days          0.0.0.0:7117->8087/tcp                             pk7017-rpc
+49fef6e6245a   redis:5.0.9                         "docker-entrypoint.s…"   6 days ago          Up 6 days          0.0.0.0:6101->6379/tcp                             pk7017-redis
+a8264f3babee   mongo:4.2.5                         "docker-entrypoint.s…"   6 days ago          Up 6 days          0.0.0.0:9101->27017/tcp                            pk7017-mongo
+8ca199746e63   fluentd:v1.9.1-1.0                  "tini -- /bin/entryp…"   6 days ago          Up 6 days          5140/tcp, 24224/tcp                                pk7017-fluentd
+d0ea6a196437   plutus:pkzxj-rpc                    "/slots/bandit-server"   6 days ago          Up 6 days          0.0.0.0:8898->8087/tcp                             pkzxj-rpc
+0cf016c41614   redis:5.0.9                         "docker-entrypoint.s…"   6 days ago          Up 6 days          0.0.0.0:6114->6379/tcp                             pkzxj-redis
+51574c27b4b9   mongo:4.2.5                         "docker-entrypoint.s…"   6 days ago          Up 6 days          0.0.0.0:9114->27017/tcp                            pkzxj-mongo
+4dbff0e06c9b   fluentd:v1.9.1-1.0                  "tini -- /bin/entryp…"   6 days ago          Up 6 days          5140/tcp, 24224/tcp                                pkzxj-fluentd
+5db23f5de0ec   plutus:pkjy-rpc                     "/slots/bandit-server"   8 days ago          Up 8 days                                                             pkjy-rpc
+67b0aa66a491   plutus:pk7008                       "/slots/plutus-server"   9 days ago          Up 9 days          0.0.0.0:7008->9000/tcp, 0.0.0.0:7108->9168/tcp     pk7008-backend
+51864ec69a76   redis:5.0.9                         "docker-entrypoint.s…"   9 days ago          Up 9 days          0.0.0.0:6112->6379/tcp                             pk7008-redis
+3c3a6e721412   mongo:4.2.5                         "docker-entrypoint.s…"   9 days ago          Up 9 days          0.0.0.0:9112->27017/tcp                            pk7008-mongo
+9112b531307c   fluentd:v1.9.1-1.0                  "tini -- /bin/entryp…"   9 days ago          Up 9 days          5140/tcp, 24224/tcp                                pk7008-fluentd
+fb393b521435   plutus:pk7019                       "/slots/plutus-server"   13 days ago         Up 13 days         0.0.0.0:7209->9000/tcp, 0.0.0.0:7309->9168/tcp     pk7019-backend
+b7456453314c   plutus:pk7019-rpc                   "/slots/bandit-server"   13 days ago         Up 13 days         0.0.0.0:7119->8087/tcp                             pk7019-rpc
+a1692df2dfc3   redis:5.0.9                         "docker-entrypoint.s…"   13 days ago         Up 13 days         0.0.0.0:6115->6379/tcp                             pk7019-redis
+125ddfa20a41   mongo:4.2.5                         "docker-entrypoint.s…"   13 days ago         Up 13 days         0.0.0.0:9115->27017/tcp                            pk7019-mongo
+942b265956d5   fluentd:v1.9.1-1.0                  "tini -- /bin/entryp…"   13 days ago         Up 13 days         5140/tcp, 24224/tcp                                pk7019-fluentd
+e41a6913dd5b   redis:5.0.9                         "docker-entrypoint.s…"   2 weeks ago         Up 2 weeks         0.0.0.0:6106->6379/tcp                             pkjy-redis
+b9303edbc005   mongo:4.2.5                         "docker-entrypoint.s…"   2 weeks ago         Up 2 weeks         0.0.0.0:9106->27017/tcp                            pkjy-mongo
+749fa0ddaff4   fluentd:v1.9.1-1.0                  "tini -- /bin/entryp…"   2 weeks ago         Up 2 weeks         5140/tcp, 24224/tcp                                pkjy-fluentd
+fc960886de76   amir20/dozzle:latest                "/dozzle"                2 weeks ago         Up 2 weeks         0.0.0.0:8899->8080/tcp                             dozzle
+036a711c96f7   openjdk:11                          "/log-viewer/logview…"   2 weeks ago         Up 2 weeks         0.0.0.0:8111->8111/tcp                             log-viewer
+41b9052b078d   jenkins/jenkins                     "/usr/bin/tini -- /u…"   2 weeks ago         Up 2 weeks         0.0.0.0:50000->50000/tcp, 0.0.0.0:8083->8080/tcp   jenkins-jenkins
+3ad9ad6e9a7c   docker:dind                         "dockerd-entrypoint.…"   2 weeks ago         Up 2 weeks         2375/tcp, 0.0.0.0:2376->2376/tcp                   jenkins-docker
+cb5484d87817   intranet_app_manager-master_mysql   "docker-entrypoint.s…"   4 months ago        Up 2 weeks         0.0.0.0:3306->3306/tcp, 33060/tcp                  web-mysql
+[0;36m请检查以上容器信息是否完整[0m
+[0;32m###############################启动完成##############################[0m
+释放脚本锁
+1700
+trimAct [10007] from pk7016
+trimAct [10034] from pk7016
+trimAct [10040] from pk7016
+trimAct [10062] from pk7016
+trimAct [10026] from pk7016
+trimAct [10035] from pk7016
+trimAct [10004] from pk7016
+trimAct [10010] from pk7016
+trimAct [10067] from pk7016
+trimAct [10011] from pk7016
+trimAct [10024] from pk7016
+trimAct [10032] from pk7016
+trimAct [10029] from pk7016
+trimAct [10064] from pk7016
+trimAct [10031] from pk7016
+trimAct [10037] from pk7016
+trimAct [10051] from pk7016
+trimAct [10058] from pk7016
+trimAct [10022] from pk7016
+trimAct [10012] from pk7016
+trimAct [10056] from pk7016
+trimAct [10068] from pk7016
+trimAct [10038] from pk7016
+trimAct [10063] from pk7016
+trimAct [10002] from pk7016
+trimAct [10033] from pk7016
+trimAct [10005] from pk7016
+trimAct [10021] from pk7016
+trimAct [10059] from pk7016
+trimAct [10066] from pk7016
+trimAct [10039] from pk7016
+trimAct [10065] from pk7016
+trimAct [10013] from pk7016
+trimAct [10048] from pk7016
+trimAct [10020] from pk7016
+trimAct [10047] from pk7016
+trimAct [10053] from pk7016
+trimAct [10006] from pk7016
+trimAct [10046] from pk7016
+trimAct [10050] from pk7016
+trimAct [10045] from pk7016
+trimAct [10028] from pk7016
+trimAct [10043] from pk7016
+trimAct [10018] from pk7016
+trimAct [10061] from pk7016
+trimAct [10042] from pk7016
+trimAct [10049] from pk7016
+trimAct [10023] from pk7016
+trimAct [10036] from pk7016
+trimAct [10041] from pk7016
+trimAct [10044] from pk7016
+trimAct [10054] from pk7016
+trimAct [10069] from pk7016
+trimAct [10008] from pk7016
+trimAct [10027] from pk7016
+trimAct [10030] from pk7016
+trimAct [10019] from pk7016
+trimAct [10060] from pk7016
+trimAct [10052] from pk7016
+trimAct [10055] from pk7016
+trimAct [10025] from pk7016
+trimAct [10003] from pk7016
+trimAct [10009] from pk7016
+trimAct [10057] from pk7016
+
+[SSH] completed
+[SSH] exit-status: 0
+
+[SSH] executing post build script:
+server_name="pk7016"
+BUILD_URL="http://10.0.84.16:8083/job/%E6%9C%8D%E5%8A%A1%E5%99%A8%20-%20%E5%AE%8C%E6%95%B4%E6%9B%B4%E6%96%B0%E6%9C%8D%E5%8A%A1%E5%99%A8(%E5%8C%85%E5%90%AB%E6%89%80%E6%9C%89%E9%85%8D%E8%A1%A8%E6%95%B0%E6%8D%AE)/1845/"
+
+#!/bin/bash -e
+source /root/jenkins/jk_func.sh
+~/jenkins/analyze_log/analyze_err -url ${BUILD_URL} || { echo "任务执行失败"; exit 1; }
+sleep 5
+check_whole_server $server_name
+
+pk7016-backend Check
+pk7016-rpc Check
+pk7016-redis Check
+pk7016-mongo Check
+pk7016-fluentd Check
+
+[SSH] completed
+[SSH] exit-status: 0
+
+Finished: SUCCESS

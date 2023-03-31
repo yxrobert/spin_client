@@ -1,0 +1,143 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<project>
+  <actions/>
+  <description>单独更新Game服务器</description>
+  <keepDependencies>false</keepDependencies>
+  <properties>
+    <io.jenkins.plugins.DingTalkJobProperty plugin="dingding-notifications@2.6.2">
+      <notifierConfigs>
+        <io.jenkins.plugins.DingTalkNotifierConfig>
+          <checked>true</checked>
+          <robotId>111</robotId>
+          <robotName>Jenkins</robotName>
+          <atAll>false</atAll>
+          <atMobile></atMobile>
+          <content></content>
+          <noticeOccasions>
+            <string>ABORTED</string>
+            <string>FAILURE</string>
+            <string>UNSTABLE</string>
+          </noticeOccasions>
+        </io.jenkins.plugins.DingTalkNotifierConfig>
+      </notifierConfigs>
+    </io.jenkins.plugins.DingTalkJobProperty>
+    <jenkins.advancedqueue.jobinclusion.strategy.JobInclusionJobProperty plugin="PrioritySorter@4.1.0">
+      <useJobGroup>true</useJobGroup>
+      <jobGroupName>服务器</jobGroupName>
+    </jenkins.advancedqueue.jobinclusion.strategy.JobInclusionJobProperty>
+    <jenkins.model.BuildDiscarderProperty>
+      <strategy class="hudson.tasks.LogRotator">
+        <daysToKeep>7</daysToKeep>
+        <numToKeep>20</numToKeep>
+        <artifactDaysToKeep>7</artifactDaysToKeep>
+        <artifactNumToKeep>10</artifactNumToKeep>
+      </strategy>
+    </jenkins.model.BuildDiscarderProperty>
+    <hudson.model.ParametersDefinitionProperty>
+      <parameterDefinitions>
+        <com.cwctravel.hudson.plugins.extended__choice__parameter.ExtendedChoiceParameterDefinition plugin="extended-choice-parameter@359.v35dcfdd0c20d">
+          <name>server_name</name>
+          <description>指定更新服务器</description>
+          <quoteValue>false</quoteValue>
+          <saveJSONParameterToFile>false</saveJSONParameterToFile>
+          <visibleItemCount>29</visibleItemCount>
+          <type>PT_RADIO</type>
+          <propertyFile>/var/jenkins_home/server.list</propertyFile>
+          <propertyKey>SL</propertyKey>
+          <multiSelectDelimiter>,</multiSelectDelimiter>
+          <descriptionPropertyFile>/var/jenkins_home/server.list</descriptionPropertyFile>
+          <descriptionPropertyKey>SLDesc</descriptionPropertyKey>
+          <projectName>服务器 - 更新GameServer与配置</projectName>
+        </com.cwctravel.hudson.plugins.extended__choice__parameter.ExtendedChoiceParameterDefinition>
+        <org.biouno.unochoice.ChoiceParameter plugin="uno-choice@2.6.4">
+          <name>variable_args</name>
+          <description>环境变量(无需求者无视之)</description>
+          <randomName>choice-parameter-2678845888481717</randomName>
+          <visibleItemCount>1</visibleItemCount>
+          <script class="org.biouno.unochoice.model.GroovyScript">
+            <secureScript plugin="script-security@1229.v4880b_b_e905a_6">
+              <script>return [
+&quot;disable_rtp_limit:selected&quot;,
+&quot;sandwich_slog_disable&quot;,
+&quot;jp_silent&quot;
+]</script>
+              <sandbox>false</sandbox>
+            </secureScript>
+            <secureFallbackScript plugin="script-security@1229.v4880b_b_e905a_6">
+              <script></script>
+              <sandbox>true</sandbox>
+            </secureFallbackScript>
+          </script>
+          <projectName>服务器 - 更新GameServer与配置</projectName>
+          <projectFullName>服务器 - 更新GameServer与配置</projectFullName>
+          <choiceType>PT_CHECKBOX</choiceType>
+          <filterable>false</filterable>
+          <filterLength>1</filterLength>
+        </org.biouno.unochoice.ChoiceParameter>
+      </parameterDefinitions>
+    </hudson.model.ParametersDefinitionProperty>
+  </properties>
+  <scm class="hudson.scm.NullSCM"/>
+  <canRoam>true</canRoam>
+  <disabled>false</disabled>
+  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+  <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <triggers/>
+  <concurrentBuild>false</concurrentBuild>
+  <builders/>
+  <publishers/>
+  <buildWrappers>
+    <hudson.plugins.ansicolor.AnsiColorBuildWrapper plugin="ansicolor@1.0.2">
+      <colorMapName>xterm</colorMapName>
+    </hudson.plugins.ansicolor.AnsiColorBuildWrapper>
+    <org.jvnet.hudson.plugins.SSHBuildWrapper plugin="ssh@2.6.1">
+      <siteName>root@10.0.84.16:22</siteName>
+      <preScript>#!/bin/bash
+source /root/jenkins/jk_func.sh
+
+if [ -z &quot;$server_name&quot; ]; then
+    echo &quot;Error: 没有选择服务器!&quot;
+    exit 1
+fi
+
+# conf
+conf_br=$(yaml $conf_file &quot;[&apos;$server_name&apos;][&apos;cc-conf&apos;]&quot;)
+cd /home/user00/cc/cc-slots-land/cc-dev &amp;&amp; ./auto_upload_config.sh ${server_name} ${conf_br}
+~/jenkins/etcdfilter -svr $server_name
+
+file_lock
+echo ${server_name}
+check_env_args ${server_name}
+echo ${variable_args}
+
+yaml $conf_file &quot;[&apos;$server_name&apos;]&quot;
+branch_name=$(yaml $conf_file &quot;[&apos;$server_name&apos;][&apos;game&apos;]&quot;)
+server_port=$(yaml $conf_file &quot;[&apos;$server_name&apos;][&apos;port&apos;]&quot;)
+echo ${branch_name}
+
+# run
+cd /mnt/slots/cc-server
+git cd $branch_name
+check_last_cmd $branch_name
+git pull
+check_last_cmd pull
+cd /mnt/slots/cc-slots-land/batch
+set_env_args ${variable_args}
+./compile.sh $server_name &amp;&amp; ./build_image.sh $server_name &amp;&amp; ./run_image.sh $server_name $server_port
+clear_env_args
+
+file_unlock
+
+
+
+</preScript>
+      <postScript>#!/bin/bash -e
+source /root/jenkins/jk_func.sh
+~/jenkins/analyze_log/analyze_err -url ${BUILD_URL}  || { echo &quot;任务执行失败&quot;; exit 1; }
+sleep 5
+check_whole_server $server_name
+</postScript>
+      <hideCommand>false</hideCommand>
+    </org.jvnet.hudson.plugins.SSHBuildWrapper>
+  </buildWrappers>
+</project>

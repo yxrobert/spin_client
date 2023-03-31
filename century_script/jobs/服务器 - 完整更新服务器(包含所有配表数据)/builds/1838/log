@@ -1,0 +1,55 @@
+Started by user [8mha:////4NL15lwhNok46o8LpNIYOqAIaurwr6Vm2yW5YSW4R5+wAAAAlh+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyWEgYu/dLi1CL9ovz8EgDKVWzSvwAAAA==[0mroot
+Running as SYSTEM
+[EnvInject] - Loading node environment variables.
+Building in workspace /var/jenkins_home/workspace/服务器 - 完整更新服务器(包含所有配表数据)
+[8mha:////4EZe3NZjEv+Mr3CbbZMxjJxnMF7apENOSd0x3+Mu6FIuAAAAqx+LCAAAAAAAAP9b85aBtbiIQSujNKU4P0+vIKc0PTOvWC8xrzgzOT8nv0gvMbkkEyjhCKb88ktSdwVsu2efuqidiYHRh4EDIu2ZUsIg5JOVWJaon5OYl64fXFKUmZduXVHEIAU1ODk/rzg/J1XPGUKDDGKAAEYmBoaKghIGlUTTVANTA4NEXSMzA0NdE6OUZN3EFEsDXUvTVCMLQ2OLJEsLYwCSDMQJrwAAAA==[0m[SSH] executing pre build script:
+PATH="/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+server_name="pk7020"
+variable_args="disable_rtp_limit"
+
+#!/bin/bash -e
+source /root/jenkins/jk_func.sh
+export PATH=/opt/protokitgo:/root/bin/jq:$PATH
+
+if [ -z "$server_name" ]; then
+    echo "Error: 没有选择服务器!"
+    exit 1
+fi
+
+cd /home/user00/cc/cc-slots-land/cc-dev && ./update_server_env.sh $server_name $variable_args
+~/jenkins/etcdfilter -svr $server_name
+
+
+{'bandit': 'develop', 'game': 'develop', 'cc-conf': 'deploy-cc-conf', 'desc': 'pk7020', 'rpc_port': 7120, 'bandit-conf': 'deploy-bandit-conf', 'port': 7210}
+脚本运行中，请稍后执行！
+13379
+
+[SSH] completed
+[SSH] exit-status: 0
+
+[SSH] executing post build script:
+server_name="pk7020"
+BUILD_URL="http://10.0.84.16:8083/job/%E6%9C%8D%E5%8A%A1%E5%99%A8%20-%20%E5%AE%8C%E6%95%B4%E6%9B%B4%E6%96%B0%E6%9C%8D%E5%8A%A1%E5%99%A8(%E5%8C%85%E5%90%AB%E6%89%80%E6%9C%89%E9%85%8D%E8%A1%A8%E6%95%B0%E6%8D%AE)/1838/"
+
+#!/bin/bash -e
+source /root/jenkins/jk_func.sh
+~/jenkins/analyze_log/analyze_err -url ${BUILD_URL} || { echo "任务执行失败"; exit 1; }
+sleep 5
+check_whole_server $server_name
+
+任务错误报告: http://10.0.84.16:8083/job/服务器 - 完整更新服务器(包含所有配表数据)/1838/
+路径: /var/lib/docker/volumes/jenkins-data/_data/jobs/服务器 - 完整更新服务器(包含所有配表数据)/builds/1838/log
+
+问题 : [有其他人正在执行任务, 或者上一次的任务未能正确执行]
+解决方法 : [使用{分支 - 尝试解决重启失败}, 解决问题后, 重新执行]
+错误内容 : [
+		{'bandit': 'develop', 'game': 'develop', 'cc-conf': 'deploy-cc-conf', 'desc': 'pk7020', 'rpc_port': 7120, 'bandit-conf': 'deploy-bandit-conf', 'port': 7210}
+		脚本运行中，请稍后执行！
+]
+
+任务执行失败
+
+[SSH] completed
+[SSH] exit-status: 1
+
+Finished: FAILURE

@@ -1,0 +1,34 @@
+Started by user [8mha:////4EMLFGo1cbX52SBvs1p2et/5kY7Vnw2frQZEz5oZgYkjAAAAmR+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAz2EgZe/dLi1CL9wtK8nPy8dAAf7K2GwgAAAA==[0mqunlong
+Running as SYSTEM
+[EnvInject] - Loading node environment variables.
+Building in workspace /var/jenkins_home/workspace/数据 - Disconnect
+[8mha:////4HUDpYu8Ssh19SwydhPrLu9qRUY/bu8MwFkLGD6Z8MojAAAAqx+LCAAAAAAAAP9b85aBtbiIQSujNKU4P0+vIKc0PTOvWC8xrzgzOT8nv0gvMbkkEyjhCKb88ktSdwVsu2efuqidiYHRh4EDIu2ZUsIg5JOVWJaon5OYl64fXFKUmZduXVHEIAU1ODk/rzg/J1XPGUKDDGKAAEYmBoaKghIGFWML09TkVPNUXWNzI0NdkxRLS90kc0ND3TQzc2OjxCTzJAPjFADSj5mFrwAAAA==[0m[SSH] executing pre build script:
+PATH="/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+server_name="pkreview"
+account="56263912"
+
+echo $server_name
+#!/bin/bash -e
+
+export PATH=/usr/bin/curl:$PATH
+function mg_port() {
+    docker ps -a | grep ${1}-mongo | awk -F '->' '{print $1}' | awk -F ':' '{print $3}'
+}
+
+port=$(mg_port ${server_name})
+echo $port
+
+cd ~/jenkins/script/python/ && python mongo_del_user.py ${port} ${account}
+pkreview
+9110
+('check', '56263912')
+('uid', 100000000003570L)
+('delete', '56263912')
+
+[SSH] completed
+[SSH] exit-status: 0
+
+[SSH] executing post build script:
+
+
+Finished: SUCCESS

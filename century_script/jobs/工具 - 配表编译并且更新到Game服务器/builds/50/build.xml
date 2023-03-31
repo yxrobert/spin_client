@@ -1,0 +1,62 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<com.tikal.jenkins.plugins.multijob.MultiJobBuild plugin="jenkins-multijob-plugin@623.v03401733c9a_9">
+  <actions>
+    <hudson.model.ParametersAction>
+      <safeParameters class="sorted-set"/>
+      <parameters>
+        <com.cwctravel.hudson.plugins.extended__choice__parameter.ExtendedChoiceParameterValue plugin="extended-choice-parameter@346.vd87693c5a_86c">
+          <name>conf_name</name>
+          <value>LevelSprint</value>
+        </com.cwctravel.hudson.plugins.extended__choice__parameter.ExtendedChoiceParameterValue>
+        <com.cwctravel.hudson.plugins.extended__choice__parameter.ExtendedChoiceParameterValue plugin="extended-choice-parameter@346.vd87693c5a_86c">
+          <name>server_name</name>
+          <value>pkcp,pk7010</value>
+        </com.cwctravel.hudson.plugins.extended__choice__parameter.ExtendedChoiceParameterValue>
+      </parameters>
+      <parameterDefinitionNames>
+        <string>conf_name</string>
+        <string>server_name</string>
+      </parameterDefinitionNames>
+    </hudson.model.ParametersAction>
+    <hudson.model.CauseAction>
+      <causeBag class="linked-hash-map">
+        <entry>
+          <hudson.model.Cause_-UserIdCause>
+            <userId>root</userId>
+          </hudson.model.Cause_-UserIdCause>
+          <int>1</int>
+        </entry>
+      </causeBag>
+    </hudson.model.CauseAction>
+    <org.jenkinsci.plugins.envinject.EnvInjectPluginAction plugin="envinject@2.881.v37c62073ff97"/>
+    <org.jenkinsci.plugins.envinject.EnvInjectBuilderContributionAction plugin="envinject@2.881.v37c62073ff97"/>
+    <org.jenkinsci.plugins.envinject.EnvInjectBuilderContributionAction plugin="envinject@2.881.v37c62073ff97"/>
+    <jenkins.model.InterruptedBuildAction>
+      <causes>
+        <jenkins.model.CauseOfInterruption_-UserInterruption>
+          <user>root</user>
+        </jenkins.model.CauseOfInterruption_-UserInterruption>
+      </causes>
+    </jenkins.model.InterruptedBuildAction>
+  </actions>
+  <queueId>2167</queueId>
+  <timestamp>1666324586852</timestamp>
+  <startTime>1666324586857</startTime>
+  <result>ABORTED</result>
+  <duration>54357</duration>
+  <charset>UTF-8</charset>
+  <keepLog>false</keepLog>
+  <builtOn></builtOn>
+  <workspace>/var/jenkins_home/workspace/配表 - 编译并且更新到Game服务器</workspace>
+  <hudsonVersion>2.346.1</hudsonVersion>
+  <scm class="hudson.scm.NullChangeLogParser"/>
+  <culprits class="java.util.Collections$UnmodifiableSet">
+    <c class="sorted-set"/>
+  </culprits>
+  <subBuilds class="java.util.concurrent.CopyOnWriteArrayList"/>
+  <changeSets>
+    <run class="com.tikal.jenkins.plugins.multijob.MultiJobBuild" reference="../.."/>
+    <build class="com.tikal.jenkins.plugins.multijob.MultiJobBuild" reference="../.."/>
+  </changeSets>
+  <subBuildsMap/>
+</com.tikal.jenkins.plugins.multijob.MultiJobBuild>

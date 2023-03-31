@@ -1,0 +1,28 @@
+Started by user [8mha:////4NL15lwhNok46o8LpNIYOqAIaurwr6Vm2yW5YSW4R5+wAAAAlh+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyWEgYu/dLi1CL9ovz8EgDKVWzSvwAAAA==[0mroot
+Running as SYSTEM
+[EnvInject] - Loading node environment variables.
+Building in workspace /var/jenkins_home/workspace/服务器 - 完整更新服务器(包含所有配表数据)
+[8mha:////4NiB90KIv6QfnvZpPf32AJgFImzucWDilKW3G7xxLGl0AAAAqx+LCAAAAAAAAP9b85aBtbiIQSujNKU4P0+vIKc0PTOvWC8xrzgzOT8nv0gvMbkkEyjhCKb88ktSdwVsu2efuqidiYHRh4EDIu2ZUsIg5JOVWJaon5OYl64fXFKUmZduXVHEIAU1ODk/rzg/J1XPGUKDDGKAAEYmBoaKghIGFaO05JREk9QU3cSkpCRdExNDc93ENHMzXQMLI0MDC0sTUzMjMwBuQgKxrwAAAA==[0m[SSH] executing pre build script:
+PATH="/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+server_name=""
+variable_args="disable_rtp_limit"
+
+#!/bin/bash -e
+source /root/jenkins/jk_func.sh
+export PATH=/opt/protokitgo:/root/bin/jq:$PATH
+
+if [ -z "$server_name" ]; then
+    echo "Error: 没有选择服务器!"
+    exit 1
+fi
+
+cd /home/user00/cc/cc-slots-land/cc-dev && ./update_server_env.sh $server_name $variable_args
+~/jenkins/etcdfilter -svr $server_name
+
+
+Error: 没有选择服务器!
+
+[SSH] completed
+[SSH] exit-status: 1
+
+Finished: FAILURE

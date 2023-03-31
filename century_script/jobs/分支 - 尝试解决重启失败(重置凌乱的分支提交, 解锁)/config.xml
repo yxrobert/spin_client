@@ -1,0 +1,96 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<project>
+  <actions/>
+  <description>可用于服务器Game和RPC的更新失败&#xd;
+&lt;li&gt;&#xd;
+如tell me who you are, pull 失败&#xd;
+&lt;/li&gt;&#xd;
+&lt;li&gt;&#xd;
+以及无人值守情况下, 强行解锁执行脚本&#xd;
+&lt;/li&gt;&#xd;
+&lt;li&gt;&#xd;
+强行重置代码需要些许时间&#xd;
+&lt;/li&gt;&#xd;
+&lt;li&gt;&#xd;
+等此任务执行完毕后,在做其他操作&#xd;
+&lt;/li&gt;</description>
+  <keepDependencies>false</keepDependencies>
+  <properties>
+    <io.jenkins.plugins.DingTalkJobProperty plugin="dingding-notifications@2.6.2">
+      <notifierConfigs>
+        <io.jenkins.plugins.DingTalkNotifierConfig>
+          <checked>true</checked>
+          <robotId>111</robotId>
+          <robotName>Jenkins</robotName>
+          <atAll>false</atAll>
+          <atMobile></atMobile>
+          <content></content>
+          <noticeOccasions>
+            <string>ABORTED</string>
+            <string>FAILURE</string>
+            <string>UNSTABLE</string>
+          </noticeOccasions>
+        </io.jenkins.plugins.DingTalkNotifierConfig>
+      </notifierConfigs>
+    </io.jenkins.plugins.DingTalkJobProperty>
+    <jenkins.advancedqueue.jobinclusion.strategy.JobInclusionJobProperty plugin="PrioritySorter@4.1.0">
+      <useJobGroup>true</useJobGroup>
+      <jobGroupName>分支</jobGroupName>
+    </jenkins.advancedqueue.jobinclusion.strategy.JobInclusionJobProperty>
+    <jenkins.model.BuildDiscarderProperty>
+      <strategy class="hudson.tasks.LogRotator">
+        <daysToKeep>7</daysToKeep>
+        <numToKeep>10</numToKeep>
+        <artifactDaysToKeep>7</artifactDaysToKeep>
+        <artifactNumToKeep>10</artifactNumToKeep>
+      </strategy>
+    </jenkins.model.BuildDiscarderProperty>
+  </properties>
+  <scm class="hudson.scm.NullSCM"/>
+  <canRoam>true</canRoam>
+  <disabled>false</disabled>
+  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+  <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <triggers/>
+  <concurrentBuild>false</concurrentBuild>
+  <builders/>
+  <publishers/>
+  <buildWrappers>
+    <hudson.plugins.ansicolor.AnsiColorBuildWrapper plugin="ansicolor@1.0.2">
+      <colorMapName>xterm</colorMapName>
+    </hudson.plugins.ansicolor.AnsiColorBuildWrapper>
+    <org.jvnet.hudson.plugins.SSHBuildWrapper plugin="ssh@2.6.1">
+      <siteName>root@10.0.84.16:22</siteName>
+      <preScript>#!/bin/bash
+
+lock_file=/home/user00/cc/cc-slots-land/cc-dev/dev-develop.lock
+
+reset_branch() {
+    git fetch origin
+    git reset --hard develop
+    git reset --hard origin/master
+    git pull
+    git status
+}
+
+
+cd /mnt/slots/cc-server
+reset_branch
+
+cd /mnt/slots/bandit-server
+reset_branch
+
+cd /home/user00/cc/cc-conf
+reset_branch
+
+if [[ -f &quot;${lock_file}&quot; ]]; then
+  rm -rf ${lock_file}
+  echo &quot;释放脚本锁&quot;
+else
+  echo &quot;释放脚本锁(锁文件不存在)&quot;
+fi</preScript>
+      <postScript></postScript>
+      <hideCommand>false</hideCommand>
+    </org.jvnet.hudson.plugins.SSHBuildWrapper>
+  </buildWrappers>
+</project>

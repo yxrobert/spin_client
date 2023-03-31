@@ -1,0 +1,88 @@
+Started by user [8mha:////4EMLFGo1cbX52SBvs1p2et/5kY7Vnw2frQZEz5oZgYkjAAAAmR+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAz2EgZe/dLi1CL9wtK8nPy8dAAf7K2GwgAAAA==[0mqunlong
+Running as SYSTEM
+[EnvInject] - Loading node environment variables.
+Building in workspace /var/jenkins_home/workspace/分支 - 更改服务器分支配置
+[8mha:////4ETqkTovOsTNWM4cEoUU4TAGLTLoAerZBNVJppRnIGfiAAAAqx+LCAAAAAAAAP9b85aBtbiIQSujNKU4P0+vIKc0PTOvWC8xrzgzOT8nv0gvMbkkEyjhCKb88ktSdwVsu2efuqidiYHRh4EDIu2ZUsIg5JOVWJaon5OYl64fXFKUmZduXVHEIAU1ODk/rzg/J1XPGUKDDGKAAEYmBoaKghIGFdNUS3OLpCRTXcMUI0tdEwNDQ12LRMskXQvDZEOjRHMDU+NUcwBAD59GrwAAAA==[0m[SSH] executing pre build script:
+GAME_BR="pre/v0.13.7"
+GAME_CONF="pre/v0.13.7"
+server_name="pk7013"
+BANDIT_BR="pre/v0.13.7"
+BANDIT_CONF="pre/v0.13.7"
+
+#!/bin/bash
+
+source /root/jenkins/jk_func.sh
+
+if [ -z "$server_name" ]; then
+    echo "Error: 没有选择服务器!"
+    exit 1
+fi
+
+file_lock
+LINE_NO=$(grep -n "${server_name}:" $conf_file | awk -F ":" '{print $1}')
+echo $LINE_NO
+mod_branch $LINE_NO $GAME_BR $BANDIT_BR $GAME_CONF $BANDIT_CONF
+file_unlock
+脚本可执行
+163
+
+before setting
+pk7013:
+ port: 7203 
+ game: develop
+ bandit: develop
+ cc-conf: deploy-cc-conf
+ bandit-conf: deploy-bandit-conf
+释放脚本锁
+
+[SSH] completed
+[SSH] exit-status: 0
+
+[SSH] executing post build script:
+GAME_BR="pre/v0.13.7"
+GAME_CONF="pre/v0.13.7"
+server_name="pk7013"
+BANDIT_BR="pre/v0.13.7"
+BUILD_URL="http://10.0.84.16:8083/job/%E5%88%86%E6%94%AF%20-%20%E6%9B%B4%E6%94%B9%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%88%86%E6%94%AF%E9%85%8D%E7%BD%AE/466/"
+BANDIT_CONF="pre/v0.13.7"
+
+conf_file=~/jenkins/server_config.yaml
+cat $conf_file | grep $server_name -C 6
+
+cd /mnt/slots/bandit-server && git remote update
+cd /mnt/slots/cc-server && git remote update
+cd /var/lib/docker/volumes/jenkins-data/_data && python update_server_list.py
+
+curl 'https://oapi.dingtalk.com/robot/send?access_token=13aa551ba8a79265c4424316089cd31c4f479b0f685f3d5a503b0ab6a1a42ec7' -H 'Content-Type: application/json'  -d '{"msgtype": "text","text": {"content": "Jenkins-Server['"${server_name}"'] Change To Game['"${GAME_BR}"'] RPC['"${BANDIT_BR}"'] GAME_CONF['"${GAME_CONF}"'] BANDIT_CONF['"${BANDIT_CONF}"'] "}}'
+
+source /root/jenkins/jk_func.sh
+~/jenkins/analyze_log/analyze_err -url ${BUILD_URL}
+ bandit: develop
+ cc-conf: deploy-cc-conf
+ bandit-conf: deploy-bandit-conf
+ rpc_port: 7112
+ desc: tanghao/pk7012 
+
+pk7013:
+ port: 7203 
+ game: pre/v0.13.7
+ bandit: pre/v0.13.7
+ cc-conf: pre/v0.13.7
+ bandit-conf: pre/v0.13.7
+ rpc_port: 7113
+ desc: qunlong/pk7013 
+
+pk7014:
+ port: 7204 
+ game: feature/piggyPinata
+ bandit: feature/piggyPinata
+ cc-conf: deploy-cc-conf
+Fetching origin
+Fetching origin
+SL=pkzxj,pkyq,pktest,pkreview,pkjy,pkcp,pk7020,pk7019,pk7018,pk7017,pk7016,pk7015,pk7014,pk7013,pk7012,pk7011,pk7010,pk7009,pk7008,pk7007,pk7006,pk7005,pk7004,pk7003,pk7002,pk7001
+SLDesc=[ pkzxj ] game:[ develop ] bandit:[ develop ] port:[ 8888 ] cc-conf[ deploy-cc-conf ] bd-conf[ deploy-bandit-conf ],[ pkyq ] game:[ pre/v0.12.2 ] bandit:[ pre/v0.12.2 ] port:[ 3333 ] cc-conf[ pre/v0.12.2 ] bd-conf[ pre/v0.12.2 ],[ pktest ] game:[ develop ] bandit:[ develop ] port:[ 6666 ] cc-conf[ deploy-cc-conf ] bd-conf[ deploy-bandit-conf ],[ pkreview ] game:[ pre/v0.13.7 ] bandit:[ pre/v0.13.7 ] port:[ 4444 ] cc-conf[ pre/v0.13.7 ] bd-conf[ pre/v0.13.7 ],[ pkjy ] game:[ feature/disco-sp1 ] bandit:[ feature/disco-personal ] port:[ 5555 ] cc-conf[ deploy-cc-conf ] bd-conf[ deploy-bandit-conf ],[ pkcp ] game:[ feature/spin_max_bonus ] bandit:[ develop ] port:[ 9999 ] cc-conf[ deploy-cc-conf ] bd-conf[ deploy-bandit-conf ],[ pk7020 ] game:[ develop ] bandit:[ develop ] port:[ 7210 ] cc-conf[ deploy-cc-conf ] bd-conf[ deploy-bandit-conf ],[ pk7019 ] game:[ feature/new_quest ] bandit:[ develop ] port:[ 7209 ] cc-conf[ deploy-cc-conf ] bd-conf[ deploy-bandit-conf ],[ pk7018 ] game:[ feature/card_end_pr1 ] bandit:[ develop ] port:[ 7208 ] cc-conf[ deploy-cc-conf ] bd-conf[ deploy-bandit-conf ],[ pk7017 ] game:[ feature/journey_booster_pr6 ] bandit:[ develop ] port:[ 7207 ] cc-conf[ deploy-cc-conf ] bd-conf[ deploy-bandit-conf ],[ pk7016 ] game:[ develop ] bandit:[ develop ] port:[ 7206 ] cc-conf[ deploy-cc-conf ] bd-conf[ deploy-bandit-conf ],[ pk7015 ] game:[ develop ] bandit:[ develop ] port:[ 7205 ] cc-conf[ deploy-cc-conf ] bd-conf[ deploy-bandit-conf ],[ pk7014 ] game:[ feature/piggyPinata ] bandit:[ feature/piggyPinata ] port:[ 7204 ] cc-conf[ deploy-cc-conf ] bd-conf[ deploy-bandit-conf ],[ qunlong/pk7013 ] game:[ pre/v0.13.7 ] bandit:[ pre/v0.13.7 ] port:[ 7203 ] cc-conf[ pre/v0.13.7 ] bd-conf[ pre/v0.13.7 ],[ tanghao/pk7012 ] game:[ develop ] bandit:[ develop ] port:[ 7202 ] cc-conf[ deploy-cc-conf ] bd-conf[ deploy-bandit-conf ],[ yanqiao/pk7011 ] game:[ pre/v0.13.7 ] bandit:[ pre/v0.13.7 ] port:[ 7201 ] cc-conf[ pre/v0.13.7 ] bd-conf[ pre/v0.13.7 ],[ pk7010 ] game:[ feature/luckyCard ] bandit:[ develop ] port:[ 7100 ] cc-conf[ deploy-cc-conf ] bd-conf[ deploy-bandit-conf ],[ pk7009 ] game:[ bugfix/lobbyPromotin ] bandit:[ develop ] port:[ 7009 ] cc-conf[ deploy-cc-conf ] bd-conf[ deploy-bandit-conf ],[ pk7008 ] game:[ feature/goldenPharaoh_animation ] bandit:[ feature/goldenPharaoh ] port:[ 7008 ] cc-conf[ deploy-cc-conf ] bd-conf[ deploy-bandit-conf ],[ pk7007 ] game:[ feature/luckyCard ] bandit:[ develop ] port:[ 7007 ] cc-conf[ deploy-cc-conf ] bd-conf[ deploy-bandit-conf ],[ pk7006 ] game:[ develop ] bandit:[ develop ] port:[ 7006 ] cc-conf[ deploy-cc-conf ] bd-conf[ deploy-bandit-conf ],[ pk7005 ] game:[ feature/disco-personal ] bandit:[ feature/disco-personal ] port:[ 7005 ] cc-conf[ deploy-cc-conf ] bd-conf[ deploy-bandit-conf ],[ pk7004 ] game:[ feature/siberianWolf ] bandit:[ feature/siberianWolf ] port:[ 7004 ] cc-conf[ deploy-cc-conf ] bd-conf[ deploy-bandit-conf ],[ cehua/pk7003 ] game:[ develop ] bandit:[ develop ] port:[ 7003 ] cc-conf[ deploy-cc-conf ] bd-conf[ deploy-bandit-conf ],[ pk7002 ] game:[ feature/endless2 ] bandit:[ develop ] port:[ 7002 ] cc-conf[ deploy-cc-conf ] bd-conf[ deploy-bandit-conf ],[ pk7001 ] game:[ develop ] bandit:[ bugfix/lavaCash_polish ] port:[ 7001 ] cc-conf[ deploy-cc-conf ] bd-conf[ deploy-bandit-conf ]
+{"errcode":0,"errmsg":"ok"}
+[SSH] completed
+[SSH] exit-status: 0
+
+Finished: SUCCESS

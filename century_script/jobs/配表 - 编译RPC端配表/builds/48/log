@@ -1,0 +1,163 @@
+Started by user [8mha:////4NL15lwhNok46o8LpNIYOqAIaurwr6Vm2yW5YSW4R5+wAAAAlh+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyWEgYu/dLi1CL9ovz8EgDKVWzSvwAAAA==[0mroot
+Running as SYSTEM
+[EnvInject] - Loading node environment variables.
+Building in workspace /var/jenkins_home/workspace/配表 - 编译RPC端配表
+[8mha:////4DVhm/WH4xA21E+kfAIsOQoVcPjZa1RTm341NEyQPF0aAAAAqx+LCAAAAAAAAP9b85aBtbiIQSujNKU4P0+vIKc0PTOvWC8xrzgzOT8nv0gvMbkkEyjhCKb88ktSdwVsu2efuqidiYHRh4EDIu2ZUsIg5JOVWJaon5OYl64fXFKUmZduXVHEIAU1ODk/rzg/J1XPGUKDDGKAAEYmBoaKghIGFWPz5NRkE+NE3eQUQwtdEyNTY93EpOQkXcuUtLSkZEtTi+RkMwC0zSk7rwAAAA==[0m[SSH] executing pre build script:
+PATH="/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+conf_name="Slots"
+
+echo $conf_name
+
+#!/bin/bash -e
+
+export PATH=/opt/protokitgo:$PATH
+file_dir=/home/user00/jenkins/bandit-conf
+branch=deploy-bandit-conf
+
+clear_ignore() {
+    rm -rf ./gen/csharp
+    rm -rf ./gen/js
+    rm -rf ./gen/lua
+    rm -rf ./gen/rawdata/csv
+    rm -rf ./gen/rawdata/client
+}
+
+check_last_cmd() {
+    if [ $? -ne 0 ]; then
+        echo "failed "$1
+        exit 1
+    else
+        echo "succeed "$1
+    fi
+}
+
+r_str() {
+    python -c "print('$1'.replace(',', ' '))"
+}
+conf_name=$(r_str ${conf_name})
+echo $conf_name
+
+cd ${file_dir}
+git reset --hard origin/${branch}
+git pull --ff-only
+
+protokitgo drive sync ${conf_name} --config=${file_dir}/setting.yaml --log_color=false
+cd ${file_dir}
+
+protokitgo gen --config=${file_dir}/setting.yaml --log_color=false --branches=${branch}
+check_last_cmd gen_config
+cd ${file_dir}
+
+
+protokitgo release upload_conf --upload_dir=${file_dir}/gen/lua --upload_types=.bytes --config=${file_dir}/setting.yaml --log_color=false
+cd ${file_dir}
+clear_ignore
+
+# commit
+git add -A
+git commit -am "auto commit by jenkins ${BUILD_USER}"
+git push
+
+Slots
+Slots
+HEAD is now at d55790a auto commit by jenkins
+From gitlab.funplus.io:fruities/bandit-conf
+ * [new branch]      pre/v0.13.7 -> origin/pre/v0.13.7
+   19cecfb..d55790a  prod/v0.13.0 -> origin/prod/v0.13.0
+ * [new branch]      prod/v0.13.0-0220 -> origin/prod/v0.13.0-0220
+ * [new branch]      prod/v0.13.0-0224 -> origin/prod/v0.13.0-0224
+ * [new branch]      prod/v0.13.0-0303 -> origin/prod/v0.13.0-0303
+ * [new branch]      prod/v0.13.0-0310 -> origin/prod/v0.13.0-0310
+Already up-to-date.
+2023-03-28T14:33:22+08:00 INF [S] list drive dir id=1wTTgWex0Do6tStUXD6PgrHZk-hYXG9wj
+2023-03-28T14:33:23+08:00 INF [E] list drive dir cost=894.553212ms
+2023-03-28T14:33:23+08:00 INF [S] correct revision info
+2023-03-28T14:33:25+08:00 INF [S] correct revision info cost=2.917048258s
+2023-03-28T14:33:25+08:00 INF [S] sync drive dir files=["Slots"] id=1wTTgWex0Do6tStUXD6PgrHZk-hYXG9wj
+2023-03-28T14:33:28+08:00 INF download success attempt=0 id=1eyUIR3g7vqBr3TtkB-EUAH4xO-KoeSuaWHUqVPvOagA path=/home/user00/jenkins/bandit-conf/excel/Slots.xlsx
+2023-03-28T14:33:28+08:00 INF [E] sync drive dir cost=2.359726183s
+2023-03-28T14:33:28+08:00 INF keep gen dir, not found file=client/lang/
+2023-03-28T14:33:28+08:00 INF keep gen dir, not found file=server/resource_versions.release
+setting.PathGensetting.PathGensetting.PathGen  /home/user00/jenkins/bandit-conf/gen
+2023-03-28T14:33:28+08:00 INF remove dir dir=/home/user00/jenkins/bandit-conf/gen list=["/home/user00/jenkins/bandit-conf/gen/golang","/home/user00/jenkins/bandit-conf/gen/python","/home/user00/jenkins/bandit-conf/gen/rawdata"]
+2023-03-28T14:33:28+08:00 INF changing to working path path=/home/user00/jenkins/bandit-conf
+2023-03-28T14:33:30+08:00 INF rawdata:load all files cost=1.722897231s path=/home/user00/jenkins/bandit-conf/excel
+2023-03-28T14:33:30+08:00 INF [S] rawdata: process all sheet(check valid & gen cell data interface)
+2023-03-28T14:33:30+08:00 INF [E] rawdata: process all sheet(check valid & gen cell data interface) cost=13.68562ms
+2023-03-28T14:33:30+08:00 INF [S] rawdata: raw data to proto schema and data for client
+2023-03-28T14:33:30+08:00 INF [E] rawdata: raw data to proto schema and data for client cost=138.847635ms
+2023-03-28T14:33:30+08:00 INF [S] rawdata: raw data to proto schema and data for server
+2023-03-28T14:33:30+08:00 INF [E] rawdata: raw data to proto schema and data for server cost=487.545884ms
+2023-03-28T14:33:30+08:00 INF sandwich version :v1.2.0, golib:false
+2023-03-28T14:33:31+08:00 INF [S] gen golang service path=/home/user00/jenkins/bandit-conf/gen/golang
+2023-03-28T14:33:31+08:00 INF remove file list=[] path=/home/user00/jenkins/bandit-conf/gen/golang
+2023-03-28T14:33:31+08:00 INF [E] gen golang service cost=101.087651ms
+2023-03-28T14:33:31+08:00 INF [S] gen lua code
+2023-03-28T14:33:31+08:00 INF [E] gen lua code cost=69.146206ms path=/home/user00/jenkins/bandit-conf/gen/lua
+2023-03-28T14:33:31+08:00 ERR util/os.go:113 > RunCommand with error cmd="/opt/protokitgo/bin/linux/protoc -I/home/user00/jenkins/bandit-conf/protos -Iprotos -I/opt/protokitgo/sdk/proto_google -I/tmp/netutils850359114 --js_out=import_style=commonjs,binary:/home/user00/jenkins/bandit-conf/gen/js /home/user00/jenkins/bandit-conf/protos/dbstate/theme.proto /home/user00/jenkins/bandit-conf/protos/msg/avgBet.proto /home/user00/jenkins/bandit-conf/protos/msg/award.proto /home/user00/jenkins/bandit-conf/protos/msg/enter.proto /home/user00/jenkins/bandit-conf/protos/msg/game.proto /home/user00/jenkins/bandit-conf/protos/msg/pick.proto /home/user00/jenkins/bandit-conf/protos/msg/puzzle.proto /home/user00/jenkins/bandit-conf/protos/msg/slots_coordinate.proto /home/user00/jenkins/bandit-conf/protos/msg/slots_feature_game.proto /home/user00/jenkins/bandit-conf/protos/msg/slots_jackpot.proto /home/user00/jenkins/bandit-conf/protos/msg/slots_stage.proto /home/user00/jenkins/bandit-conf/protos/msg/slots_temporary_reel.proto /home/user00/jenkins/bandit-conf/protos/msg/slots_theme.proto /home/user00/jenkins/bandit-conf/protos/msg/slots_theme_extra.proto /home/user00/jenkins/bandit-conf/protos/msg/slots_theme_status.proto /home/user00/jenkins/bandit-conf/protos/msg/slots_util.proto /home/user00/jenkins/bandit-conf/protos/msg/spin.proto /home/user00/jenkins/bandit-conf/protos/msg/themeStatus.proto /home/user00/jenkins/bandit-conf/protos/msg/theme_status_actor.proto /home/user00/jenkins/bandit-conf/protos/rawdatabandit/CollectionConf.proto /home/user00/jenkins/bandit-conf/protos/rawdatabandit/JackpotConf.proto /home/user00/jenkins/bandit-conf/protos/rawdatabandit/MultiplierConf.proto /home/user00/jenkins/bandit-conf/protos/rawdatabandit/PayTableConf.proto /home/user00/jenkins/bandit-conf/protos/rawdatabandit/ReelStripConf.proto /home/user00/jenkins/bandit-conf/protos/rawdatabandit/SlotsConf.proto /home/user00/jenkins/bandit-conf/protos/rawdatabandit/TestConf.proto /home/user00/jenkins/bandit-conf/protos/rawdatabandit/ThemeUnLockConf.proto /home/user00/jenkins/bandit-conf/protos/rawdatabandit/WeightConf.proto /home/user00/jenkins/bandit-conf/protos/rawdatabandit/WinLineConf.proto /home/user00/jenkins/bandit-conf/protos/rawdatabandit/WinTypeConf.proto /home/user00/jenkins/bandit-conf/protos/service/slot_service.proto /home/user00/jenkins/bandit-conf/protos/service/theme_status_service.proto /home/user00/jenkins/bandit-conf/protos/theme/gorilla/do.proto /tmp/netutils850359114/netutils/cmds.proto /tmp/netutils850359114/netutils/common.proto /tmp/netutils850359114/netutils/packet.proto" stderr="msg/game.proto:9:1: warning: Import msg/puzzle.proto is unused.\nmsg/game.proto:7:1: warning: Import msg/slots_stage.proto is unused.\nmsg/game.proto:8:1: warning: Import msg/slots_util.proto is unused.\nmsg/game.proto:6:1: warning: Import msg/themeStatus.proto is unused.\n"
+2023-03-28T14:33:31+08:00 INF [S] gen js code
+2023-03-28T14:33:31+08:00 INF [E] gen js code cost=254.215157ms path=/home/user00/jenkins/bandit-conf/gen/js
+2023-03-28T14:33:31+08:00 INF remove client raw data proto path=/home/user00/jenkins/bandit-conf/protos/rawdatabandit_exclude
+2023-03-28T14:33:31+08:00 INF [S] protocol schema 
+2023-03-28T14:33:32+08:00 ERR util/os.go:113 > RunCommand with error cmd="/opt/protokitgo/bin/linux/protoc -I/home/user00/jenkins/bandit-conf/protos -Iprotos -I/opt/protokitgo/sdk/proto_google -I/tmp/netutils850359114 --go_opt=paths=source_relative --plugin=protoc-gen-go=/opt/protokitgo/bin/linux/protoc-gen-go --go_out=/home/user00/jenkins/bandit-conf/gen/golang --csharp_out=/home/user00/jenkins/bandit-conf/gen/csharp --csharp_opt=base_namespace=gen --grpc_out=/home/user00/jenkins/bandit-conf/gen/csharp/grpc --plugin=protoc-gen-grpc=/opt/protokitgo/bin/linux/grpc_csharp_plugin /home/user00/jenkins/bandit-conf/protos/dbstate/theme.proto /home/user00/jenkins/bandit-conf/protos/msg/avgBet.proto /home/user00/jenkins/bandit-conf/protos/msg/award.proto /home/user00/jenkins/bandit-conf/protos/msg/enter.proto /home/user00/jenkins/bandit-conf/protos/msg/game.proto /home/user00/jenkins/bandit-conf/protos/msg/pick.proto /home/user00/jenkins/bandit-conf/protos/msg/puzzle.proto /home/user00/jenkins/bandit-conf/protos/msg/slots_coordinate.proto /home/user00/jenkins/bandit-conf/protos/msg/slots_feature_game.proto /home/user00/jenkins/bandit-conf/protos/msg/slots_jackpot.proto /home/user00/jenkins/bandit-conf/protos/msg/slots_stage.proto /home/user00/jenkins/bandit-conf/protos/msg/slots_temporary_reel.proto /home/user00/jenkins/bandit-conf/protos/msg/slots_theme.proto /home/user00/jenkins/bandit-conf/protos/msg/slots_theme_extra.proto /home/user00/jenkins/bandit-conf/protos/msg/slots_theme_status.proto /home/user00/jenkins/bandit-conf/protos/msg/slots_util.proto /home/user00/jenkins/bandit-conf/protos/msg/spin.proto /home/user00/jenkins/bandit-conf/protos/msg/themeStatus.proto /home/user00/jenkins/bandit-conf/protos/msg/theme_status_actor.proto /home/user00/jenkins/bandit-conf/protos/service/slot_service.proto /home/user00/jenkins/bandit-conf/protos/service/theme_status_service.proto /home/user00/jenkins/bandit-conf/protos/theme/gorilla/do.proto /tmp/netutils850359114/netutils/cmds.proto /tmp/netutils850359114/netutils/common.proto /tmp/netutils850359114/netutils/packet.proto" stderr="msg/game.proto:9:1: warning: Import msg/puzzle.proto is unused.\nmsg/game.proto:7:1: warning: Import msg/slots_stage.proto is unused.\nmsg/game.proto:8:1: warning: Import msg/slots_util.proto is unused.\nmsg/game.proto:6:1: warning: Import msg/themeStatus.proto is unused.\n"
+2023-03-28T14:33:32+08:00 INF remove file list=["/home/user00/jenkins/bandit-conf/gen/golang/service/slot_service.pb.go","/home/user00/jenkins/bandit-conf/gen/golang/service/theme_status_service.pb.go"] path=/home/user00/jenkins/bandit-conf/gen/golang
+2023-03-28T14:33:32+08:00 INF remove file list=[] path=/home/user00/jenkins/bandit-conf/gen/csharp
+2023-03-28T14:33:32+08:00 INF [E] protocol schema  cost=483.83004ms
+2023-03-28T14:33:32+08:00 INF [S] hack golang EnumNumber path=/home/user00/jenkins/bandit-conf/gen/golang
+2023-03-28T14:33:32+08:00 INF [E] hack golang EnumNumber cost=81.798165ms path=/home/user00/jenkins/bandit-conf/gen/golang
+2023-03-28T14:33:32+08:00 INF [S] hack golang validator path=/home/user00/jenkins/bandit-conf/gen/golang
+2023-03-28T14:33:32+08:00 INF [E] hack golang validator cost=62.481642ms path=/home/user00/jenkins/bandit-conf/gen/golang
+succeed gen_config
+2023-03-28T14:33:32+08:00 INF http://cheesecake.pmt.centurygame.io/gmt_api/api/oss/setting
+2023-03-28T14:33:32+08:00 INF [S] rawdata: upload data endpoint= name=S3
+2023-03-28T14:33:33+08:00 INF File upgrade_package/data/conf/rawdata/WeightConf.bytes#11867#3004c97599278d0807c2552389120a2d hasn't been changed (copy on remote storage has the same md5-hash in ETag)
+2023-03-28T14:33:33+08:00 INF uploading upgrade_package/data/conf/rawdata/SlotsConf.bytes#2724#1b0b4bc602c899a14aefe5dab7ae4ced ...
+2023-03-28T14:33:33+08:00 INF File upgrade_package/data/conf/rawdata/MultiplierConf.bytes#18#aabb650eb3899a412825745a78af4d35 hasn't been changed (copy on remote storage has the same md5-hash in ETag)
+2023-03-28T14:33:33+08:00 INF File upgrade_package/data/conf/rawdata/ThemeUnLockConf.bytes#40#6242bcf431700d05a156171769e1c51c hasn't been changed (copy on remote storage has the same md5-hash in ETag)
+2023-03-28T14:33:33+08:00 INF File upgrade_package/data/conf/rawdata/CollectionConf.bytes#0#d41d8cd98f00b204e9800998ecf8427e hasn't been changed (copy on remote storage has the same md5-hash in ETag)
+2023-03-28T14:33:33+08:00 INF File upgrade_package/data/conf/rawdata/WinTypeConf.bytes#90#2dd784cc9e35a5200250addac5ff6655 hasn't been changed (copy on remote storage has the same md5-hash in ETag)
+2023-03-28T14:33:33+08:00 INF File upgrade_package/data/conf/rawdata/WinLineConf.bytes#5987#e476a59239065e03cfe2e73ed925395a hasn't been changed (copy on remote storage has the same md5-hash in ETag)
+2023-03-28T14:33:33+08:00 INF uploading upgrade_package/data/conf/rawdata/JackpotConf.bytes#8774#e3c54f2fb61691fb7fc90ee7e50f8207 ...
+2023-03-28T14:33:33+08:00 INF File upgrade_package/data/conf/rawdata/ReelStripConf.bytes#29593#0fb972efcfb9f8288048642c5f62b9b8 hasn't been changed (copy on remote storage has the same md5-hash in ETag)
+2023-03-28T14:33:33+08:00 INF uploading upgrade_package/version_list/res_data.json#e80e14885e3836dc629da4b582b2c515 ...
+2023-03-28T14:33:33+08:00 INF File upgrade_package/data/conf/rawdata/TestConf.bytes#166#50b1b32dd85bc6e60d0fbd077bc0cec6 hasn't been changed (copy on remote storage has the same md5-hash in ETag)
+2023-03-28T14:33:33+08:00 INF uploading upgrade_package/data/conf/rawdata/PayTableConf.bytes#8630#03656943833664a63f5721c465abb4d2 ...
+2023-03-28T14:33:33+08:00 INF [S] rawdata: upload data cost=946.125143ms
+🍺 upload conf success: src:/home/user00/jenkins/bandit-conf/gen/lua dst_dir: dst_dsn: types:[.bytes] crypto: compress: no_len:false no_md5:false
+[deploy-bandit-conf 986cfa8] auto commit by jenkins
+ 12 files changed, 1153 insertions(+), 66 deletions(-)
+ rewrite excel/Slots.xlsx (60%)
+warning: push.default is unset; its implicit value is changing in
+Git 2.0 from 'matching' to 'simple'. To squelch this message
+and maintain the current behavior after the default changes, use:
+
+  git config --global push.default matching
+
+To squelch this message and adopt the new behavior now, use:
+
+  git config --global push.default simple
+
+See 'git help config' and search for 'push.default' for further information.
+(the 'simple' mode was introduced in Git 1.7.11. Use the similar mode
+'current' instead of 'simple' if you sometimes use older versions of Git)
+
+Counting objects: 37, done.
+Delta compression using up to 8 threads.
+Compressing objects:   5% (1/17)   Compressing objects:  11% (2/17)   Compressing objects:  17% (3/17)   Compressing objects:  23% (4/17)   Compressing objects:  29% (5/17)   Compressing objects:  35% (6/17)   Compressing objects:  41% (7/17)   Compressing objects:  47% (8/17)   Compressing objects:  52% (9/17)   Compressing objects:  58% (10/17)   Compressing objects:  64% (11/17)   Compressing objects:  70% (12/17)   Compressing objects:  76% (13/17)   Compressing objects:  82% (14/17)   Compressing objects:  88% (15/17)   Compressing objects:  94% (16/17)   Compressing objects: 100% (17/17)   Compressing objects: 100% (17/17), done.
+Writing objects:   5% (1/19)   Writing objects:  10% (2/19)   Writing objects:  15% (3/19)   Writing objects:  21% (4/19)   Writing objects:  26% (5/19)   Writing objects:  31% (6/19)   Writing objects:  36% (7/19)   Writing objects:  42% (8/19)   Writing objects:  47% (9/19)   Writing objects:  52% (10/19)   Writing objects:  57% (11/19)   Writing objects:  63% (12/19)   Writing objects:  68% (13/19)   Writing objects:  73% (14/19)   Writing objects:  78% (15/19)   Writing objects:  84% (16/19)   Writing objects:  89% (17/19)   Writing objects:  94% (18/19)   Writing objects: 100% (19/19)   Writing objects: 100% (19/19), 85.88 KiB | 0 bytes/s, done.
+Total 19 (delta 13), reused 0 (delta 0)
+To git@gitlab.funplus.io:fruities/bandit-conf.git
+   d55790a..986cfa8  deploy-bandit-conf -> deploy-bandit-conf
+
+[SSH] completed
+[SSH] exit-status: 0
+
+[SSH] executing post build script:
+
+#cd /var/lib/docker/volumes/jenkins-data/_data
+#python update_conf_list.py
+
+[SSH] completed
+[SSH] exit-status: 0
+
+Finished: SUCCESS

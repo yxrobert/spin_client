@@ -1,0 +1,378 @@
+Started by upstream project "[8mha:////4PHKa1DZSJXWSY/bUVaVqjOo30NFriCGoy8dnEpEEQV5AAAA9h+LCAAAAAAAAP9djUtOwzAURR9BsAAkJogJgzukbqs2tYU6iIP5SC0TVhColbYYO0pcBKtAYhswYREshz3gOCPyJMvHV9fnff3SQVPT2Xq3apwdPDrbOKMHS7fS5uat0rXZ2Kc75zV1s5cQvdZ02uv/q6bzz+/5R/WTUHJLh0bb0q8XtL+rjaejxbZ4KZgpbMnufb2x5UXQnfR0eXf391YBjj29s617YFBTyBmyaQs88nh4Hg6UaN/8EoojGyHjUDPIHCKNyRXEKH4WkCGZQHKICVQKISE7SCGH0csDXBfPOqZ5lIY0a70BhAh29gdPmFzORAEAAA==[0m工具 - 配表编译并且更新到Game服务器" build number [8mha:////4DTot8h+LgnSbX5vfD3VFilZv6ZA8heUhbyG8WBS0Q5DAAAA9h+LCAAAAAAAAP9djU1OwzAQRodUcACWiA2LWVI3VevaqrqIgylIbTecIG2t9MfYkeMiuEavARsOwXG4A46zIiNZfv70+c3XL1zWDu52p21tTX9jTW216i/tVumnj0o5vTfHlfUK2rlIAN4d3Hb6/6p09vk9O1c/CSTPcKWVKf1uAb2T0x6uF4firSC6MCV58W5vymnQ3XR0eXt391YBeh7O5GDXBOUYxQSzcQMs8nBwHw5K3rzZA0qGWYoZQzlBkSOnMXlEnsbPHEVIRigY8hFKilygaIGiGEQvCzAvXlVM8ygNadZ4A3Ae7IQO0z90UCecRwEAAA==[0m621
+originally caused by:
+ Started by user [8mha:////4NL15lwhNok46o8LpNIYOqAIaurwr6Vm2yW5YSW4R5+wAAAAlh+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyWEgYu/dLi1CL9ovz8EgDKVWzSvwAAAA==[0mroot
+Running as SYSTEM
+[EnvInject] - Loading node environment variables.
+Building in workspace /var/jenkins_home/workspace/工具 - 更新Game服务器配表数据
+[8mha:////4GcY4nG4m1DbVwPIPtYDvuvWAKyisRZJ43xcNB8AiPINAAAAqx+LCAAAAAAAAP9b85aBtbiIQSujNKU4P0+vIKc0PTOvWC8xrzgzOT8nv0gvMbkkEyjhCKb88ktSdwVsu2efuqidiYHRh4EDIu2ZUsIg5JOVWJaon5OYl64fXFKUmZduXVHEIAU1ODk/rzg/J1XPGUKDDGKAAEYmBoaKghIGlaRUEwuLpDRD3URLC1NdkzTzJN0kA4NUXdMUSzMjM9PUJMNUAwAc4P02rwAAAA==[0m[SSH] executing pre build script:
+PATH="/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+server_name="pk7018"
+
+echo $server_name
+
+#!/bin/bash -e
+
+export PATH=/opt/protokitgo:$PATH
+
+if [ -z "$server_name" ]; then
+    echo "Error: 没有选择服务器!"
+    exit 1
+fi
+
+run() {
+    python -c '''import os
+l = '\"$1\"'.split(",")
+for n in l:
+    cmd = "./auto_upload_config.sh " + n + " deploy-cc-conf"
+    print(cmd)
+    os.system(cmd)
+'''
+}
+
+cd /home/user00/cc/cc-slots-land/cc-dev
+run ${server_name}
+
+~/jenkins/etcdfilter -svr $server_name
+
+
+pk7018
+./auto_upload_config.sh pk7018 deploy-cc-conf
+[0;32m脚本可执行[0m
+[0;32m###############################部署信息##############################[0m
+[0;36m            backend分支: pk7018[0m
+[0;36m            backend分支: deploy-cc-conf[0m
+[0;32m###############################代码检查##############################[0m
+[0;32m>>>>>>>>>>>>>当前目录: /home/user00/cc/cc-conf[0m
+[0;32m目标分支: deploy-cc-conf[0m
+[0;32m当前所在分支：[0m
+deploy-cc-conf
+[0;32mfetch all：[0m
+Fetching origin
+[0;32mcheckout branch：deploy-cc-conf[0m
+Already on 'deploy-cc-conf'
+[0;32mpull branch：deploy-cc-conf[0m
+[0;32m###############################etcd数据##############################[0m
+[0;32m数值导入到etcd，节点path：/pk7018_dev_backend[0m
+[0;32mLoad config into ETCD from dir: /home/user00/cc/cc-conf to etcd path: /pk7018_dev_backend[0m
+[0;36mprotokitgo release etcd --log_level "0" --endpoint "10.0.84.16:2379" --key_prefix "/pk7018_dev_backend" --config setting.yaml[0m
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m load config file [36mconfigs=[0m["setting.yaml"]
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m Parse Default From Tag:default
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m load file: setting.yaml
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m Changelog: https://zhongtai.s3.amazonaws.com/software/protokitgo/release.html
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m version: 2.4.1-d889704-version/2.4-20220121111016
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m current setting [36msetting=[0m{"ActorTellResponseType":"netutils.NormalAck","ArgsProtokitgo":"","BasePackagePath":"gitlab.funplus.io/cheesecake/cc-conf/gen/golang","BlobFormat":"","CSBaseNamespace":"","CSRawDataNamespace":"gen.rawdata","Charset":"utf8mb4","CheckRawData":false,"CheckRawDataInterval":60,"Collate":"utf8mb4_general_ci","CompositeKeyUsingAlphabetOrder":false,"ConfName":"","CreateGoMod":true,"DirAsset":"asset","DirDbGen":"db","DirDbStates":["dbstate"],"DirDynamicService":"dynamic_service","DirGen":"gen","DirGenRawData":"rawdata","DirMeta":"meta","DirMigrationGen":"migration","DirProto":"protos","DirRawData":"excel","DirRawDataClient":"client","DirRawDataServer":"server","DirXdbGen":"xdb","EnableDescription":true,"EnableGenRawDataCSV":true,"EnableMonitor":true,"EnableQueue":true,"EnableXdb":false,"EnableZapLogMarshal":true,"EtcdLoadFilter":[".pb",".release"],"FileNameGrpcCsharpGen":"grpc_csharp_plugin","FileNameMeta":"meta.json","FileNamePb2db":"pb2db","FileNameProtoc":"protoc","FileNameProtocGenGo":"protoc-gen-go","FileNameSchema":"protoc-gen-jsonschema","GenCsharpGrpcCode":true,"GenGRPCServerHandler":false,"GenGlobalMessageRegistry":true,"GenJsCode":true,"GenLuaCode":true,"GenLuaCodeService":false,"GenNetutils":false,"GenPythonCode":false,"GenSubMessageRegistry":false,"GenVueCode":true,"GmtFieldType":"","GolangRelative":true,"GoogleDriveCouldUseExcel":false,"GoogleDriveFolderID":"1lmj4ISc6k8-h42NqTqe_Sf0nGzLhs9Zk","GoogleDriveIgnoreChildFolder":false,"GoogleDriveListCorrectRevision":true,"HasActorSystem":false,"InitActorRpcService":false,"InitHttpService":true,"InitRpcService":true,"InitTcpService":true,"InlineProtoDir":["inline"],"MarkerWithProtokitgoVersion":false,"MigrationDbHost":"127.0.0.1","MigrationDbName":"example","MigrationDbPassword":"","MigrationDbPort":3306,"MigrationDbUser":"root","NamePatternActorClient":"ActorClient%s","NamePatternActorServerHandlerMethod":"%s","NamePatternRpcClient":"RpcClient%s","NamePatternServerHandler":"ServerHandler%s","NamePatternSingleConfPackage":"%s","OssListURL":"","PathAsset":"/home/user00/cc/cc-conf/asset","PathBinGrpcCsharpGen":"/opt/protokitgo/bin/linux/grpc_csharp_plugin","PathBinPb2db":"/opt/protokitgo/bin/linux/pb2db","PathBinProtoc":"/opt/protokitgo/bin/linux/protoc","PathBinProtocGenGo":"/opt/protokitgo/bin/linux/protoc-gen-go","PathBinSchema":"/opt/protokitgo/bin/linux/protoc-gen-jsonschema","PathDbStateCodes":["/home/user00/cc/cc-conf/gen/golang/dbstate"],"PathDbStateProtos":["/home/user00/cc/cc-conf/protos/dbstate"],"PathGen":"/home/user00/cc/cc-conf/gen","PathGenCodeCs":"/home/user00/cc/cc-conf/gen/csharp","PathGenCodeGolang":"/home/user00/cc/cc-conf/gen/golang","PathGenCodeJs":"/home/user00/cc/cc-conf/gen/js","PathGenCodeLua":"/home/user00/cc/cc-conf/gen/lua","PathGenCodePython":"/home/user00/cc/cc-conf/gen/python","PathGenCodeRpc":"/home/user00/cc/cc-conf/gen/csharp/grpc","PathGenDb":"/home/user00/cc/cc-conf/gen/golang/db","PathGenMeta":"/home/user00/cc/cc-conf/gen/meta","PathGenMigration":"/home/user00/cc/cc-conf/gen/meta/migration","PathGenPersistents":["/home/user00/cc/cc-conf/gen/rawdata/client/lang","/home/user00/cc/cc-conf/gen/rawdata/version_list","/home/user00/cc/cc-conf/gen/rawdata/server/version_android.release","/home/user00/cc/cc-conf/gen/rawdata/server/version_ios.release","/home/user00/cc/cc-conf/gen/rawdata/server/version_data.release","/home/user00/cc/cc-conf/gen/rawdata/server/lighthouse.release","/home/user00/cc/cc-conf/gen/rawdata/server/resource_versions.release"],"PathGenRawData":"/home/user00/cc/cc-conf/gen/rawdata","PathGenRawDataClient":"/home/user00/cc/cc-conf/gen/rawdata/client","PathGenRawDataServer":"/home/user00/cc/cc-conf/gen/rawdata/server","PathInlineProto":["/home/user00/cc/cc-conf/protos/inline"],"PathProto":"/home/user00/cc/cc-conf/protos","PathProtoImportDir":["/home/user00/cc/cc-conf/protos","protos","/opt/protokitgo/sdk/proto_google","/tmp/netutils570054618"],"PathProtoKit":"/opt/protokitgo/","PathProtoKitSDK":"/opt/protokitgo/sdk","PathProtoKitSDKJsFramework":"/opt/protokitgo/sdk/js/framework","PathProtoKitSDKLuaFramework":"/opt/protokitgo/sdk/lua/framework","PathProtoNetUtils":"/tmp/netutils570054618","PathRawData":"/home/user00/cc/cc-conf/excel","PathRawDataCSV":"/home/user00/cc/cc-conf/gen/rawdata/csv","PathRawDataLinkTo":"","PathRawDataProto":"/home/user00/cc/cc-conf/protos/rawdata","PathRawDataProtoExclude":"/home/user00/cc/cc-conf/protos/rawdata_exclude","PathTmpBackupRawDataProto":"/home/user00/cc/cc-conf/protos/rawdata_tmp_backup__exclude","PathUserCache":"/root/.cache/protokitgo","PathWorking":"/home/user00/cc/cc-conf","PathWorkingMeta":"/home/user00/cc/cc-conf/meta.json","Pb2DbBuiltInEnable":false,"Pb2DbPackageRoot":"","Pb2DbVersion":"v1","PersistentWhiteList":["client/lang/","version_list/","server/version_android.release","server/version_ios.release","server/version_data.release","server/lighthouse.release","server/resource_versions.release"],"PmConfPath":"gen/rawdata/server","PmtApiToken":"c3p0zmycr83g00066h6g","PmtURL":"http://cheesecake.pmt.centurygame.io/","ProjectModule":"","ProjectName":"","ProtoEnableClone":false,"ProtoEnableEqual":false,"ProtoEnableGoPackage":false,"ProtoEnableValidate":true,"ProtoEqualFloatPrecision":"0.0000000000001","ProtoIncludeGoogle":"proto_google","ProtoRawDataPackage":"rawdata","RawDataParallel":64,"ResCompress":"","ResEncrypt":"","ResEncryptKey":"CGC","ReservedKeywords":[""],"ServerRawDataFilterClient":true,"SheetRowCommentPrefix":"#","StopWhenContinuousBlankLinesCount":4,"Storages":null,"StoragesData":"pE0PW9LqjklFrkjIb7Fivo7DoRmEgeL3dwRmOCGalciB9lUDwenGNMs9ethx9HbfJ6hhgIjPueCwuzu8co20Jw5qg02VnP6CD/HvnJgXKV8sB6wvudPaMuYsVvr4qNrPSNjzQ3/PkexKDk/DOOmBpXsT9bt6yGJ32P8MwMCXIzXaVpyWj1GfLlAPXNEsQ5UyYwnMO6oal0KE8kpFVHaarQmrrk6OJNYPxbC9oHcu4LL/vFWPJ1+WzxHISQoGVX6x6z13AFUTUcPRz7D3N7vq3LC96nORuySKKH9t2AAkpIwgdwCdYMjbCDQUoxEft9J9+rx1fbv8A1rI6Qh2tnNjqtwZNICa5gW78OcUkNTrHRMS+zSLOPPJpzR/CXU/iHFEh7nktekJRrhOVeSBwjlOaLKpxWiFQeLivK9eUWo4L4M1ZgJcgB5zcw==","SuffixRawDataPbClient":".bytes","SuffixRawDataPbServer":".pb","SuffixTagForRawDataProtoExclude":"_exclude","SuffixTagForRemoveCodeGenerated":["service.pb.go"],"SupportDataServer":false,"SupportGmtFields":true,"SupportMigration":false,"TagColName":"_tags_","Tags":[],"TitleTagEndOfCol":"","TransDestDir":"gen/rawdata/client/lang","TypeAsJSString":[""],"UsingProtoMessageNameAsURI":true,"ValTagEndOfRow":"_end_row_","VersionProtokitgo":"","VersionSandwich":"v1.2.0","XdbPackageRoot":"","ZapLogBytesMode":"bytes","ZapLogMapKeyTypes":["int","int32","uint32","int64","uint64","string"]}
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/ActivityAwardConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/ActivityBuffConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/ActivityQuestConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/AvatarConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/AwardPoolConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/BettingConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/BingoBoardConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/BingoConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/BingoDefineConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/BingoDropConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/BingoGraphConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/BingoPromotionConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/BingoPromotionV2Conf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/BingoStageConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/BonusByRankingConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/BoxSkinConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/CandyMartConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/CandyMartDefConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/CandyMartJackpotConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/CandyMartPromotionConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/CandyMartPromotionV2Conf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/CandyMartStageConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/CardAceMachineConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/CardActivityConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/CardBigSeasonConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/CardConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/CardDeckConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/CardPackConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/CardPackLinkConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/CardPackPoolConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/CardPlusConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/CardSeasonConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/CardSeasonGroupConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/CardShinyShowConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/CardStageConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/CashBackAwardConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/CashBackConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/ChallengeActivityConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/ChaseConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/ChasePointAwardConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/ClubBuffConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/ClubMailAwardConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/ClubMailAwardWeightConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/ClubPointConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/ClubSpinConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/CoinKingdomConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/CoinKingdomDefConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/CoinKingdomPromotionConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/CoinKingdomStageConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/CoinValueBonusConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/CollectionConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/ConponActivityConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/ConponChooseConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/ConponConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/DailyActivityAwardConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/DailyBonusAwardConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/DailyBonusConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/DailyBonusSevenConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/DailyBonusThirtyConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/DailyMissionChooseConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/DoubleWinAgainConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/EndLessRichesGoupConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/EndLessRichesLevelGroupConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/EndlessRiches2Conf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/EndlessRiches2GroupConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/EndlessRichesAwardConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/EndlessRichesConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/EventConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/EventParamConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/FeatureConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/GameLegendConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/GameServerBackOfficeConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/GameServerCacheConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/GameServerConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/GameServerDBConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/GameServerGMTConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/GameServerLighthouseConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/GameServerPlatformConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/GameServerPostOfficeConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/GameServerRTMConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/GameServerSisyphusConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/GoldenWeekConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/HeadOrTailConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/Hero1SkillDiceHitWeightConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/Hero1SkillEffectConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/Hero1SkillMultipleWeightConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/HeroAwardConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/HeroConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/HeroItemEffectConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/HeroLevelConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/HugeWinAgainConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/JackpotConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/JourneyConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/JourneyDefineConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/JourneyPathConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/JourneyPointConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/JourneyPromotionConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/JourneyPromotionv2Conf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/KittyConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/KittyDefineConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/KittyPathConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/KittyPointConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/KittyPromotionConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/KittyPromotionV2Conf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/LevelSprintConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/LevelSprintTabConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/LevelingConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/ListDataConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/LobbyBonusByLevelConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/LobbyProNewConditionConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/LobbyProNormalConditionConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/LobbyProNormalGroupConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/LobbyPromotionTimeConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/LobbySectionConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/LobbyWheelConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/LookupConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/LuckyCardAwardConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/LuckyCardConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/LuckyPotDrawConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/LuckySevenMissConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/LuckySevenMultipleConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/MagicWeekConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/MagicWeekDropConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/MagicWeekGroupConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/MagicWeekPromotionConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/MailClassConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/MailModConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/MailSourceConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/MailSubClassConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/MapDataConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/MissionActivityConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/MissionAwardConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/MissionDifficConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/MissionLevelConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/MissionModConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/MissionPayConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/MultiplierConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/MultiverseChapterConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/MultiverseConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/MultiverseDefineConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/MultiverseNodeConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/MultiverseReelConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/NewPlayerEconConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/NorMissionNewConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/NorMissionNorConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/NorMissionPosConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/NorMissionWeekAwardConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/NorMissionWeekPointConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/OneTwoPromotionConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/OnlineActivityListConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/PanelsConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/PayGiftConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/PayGiftGroupConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/PayPokerGradeConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/PayPokerGroupConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/PayTableConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/PayWheelGradeConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/PayWheelGroupConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/PiggyCardConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/PiggyPayConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/PiggyPayModConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/PiggyRateConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/PlayerFilterConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/PlayerGuideConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/PokerCardConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/PokerConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/PokerConfigConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/PokerJackpotConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/PokerOrderConfConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/PokerOrderMissConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/PokerOrderWeightConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/PokerPremiumConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/PositionLocksConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/PrizeCatcherAwardConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/PrizeCatcherMissConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/PrizeCatcherMissV2Conf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/PromoteConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/QuestConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/QuestLevelModConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/RSPattenConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/RanBoxCoinWeightConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/RanBoxGemWeightConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/RanBoxHeroActiveWeightConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/RanBoxHeroXPWeightConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/ReelStripConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/RoyalPassAwardConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/RoyalPassConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/RoyalPassGroupConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/RoyalPassSeasonConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/RoyalPassWheelConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/SaleBuffChooseConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/SaleBuffConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/SaleBuffGroupConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/SegmentsConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/ShopAwardConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/ShopBoosterConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/ShopCoinPromotionConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/ShopConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/ShopGiftConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/ShopLevelValueConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/ShopShowCoinConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/ShopShowGemConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/ShopShowHeroConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/ShopShowHeroItemActiveConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/ShopShowHeroItemXpConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/SlotsConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/SpinMaxBonusConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/SpinMaxCardConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/SpinMaxConditionConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/SpinMaxConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/SpinMaxGroupConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/SpinMaxPanelConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/SpinMaxParamConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/StarRoadBuyConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/StarRoadConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/StarRoadGroupConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/StarRoadPointAwardConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/StoreBonusByLevelConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/SupMissionNewConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/SupMissionNorConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/SupMissionWeekFinishConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/SuperCrownSprintConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/TaskConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/TastyAgainWeightConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/TastyBonusConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/TastyCardConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/TastyGroupConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/TastyParamConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/TastyPiggyAgainWeightConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/TastyPiggyConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/TastyPiggyGroupConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/TastyPiggyParamConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/ThemeTagsConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/ThemeUnLockConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/ThreeChooseOneConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/ThreeChooseOneRepeatConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/ThreeChooseOneV2Conf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/TreasureRoomConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/TreasureRoomDayConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/TreasureRoomItemConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/VipBuffConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/VipConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/WhiteListConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/WhiteVersionConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/WildWheelConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/WinLineConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/WinTypeConf.pb
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/gmt_service_mapper.release
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/lighthouse.release
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/version_android.release
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/version_data.release
+[90m2023-03-30T16:16:36+08:00[0m [33mDBG[0m upload key: /pk7018_dev_backend/version_ios.release
+🍺 upload to etcd success
+[0;32m释放脚本锁[0m
+1649
+trimAct [5037] from pk7018
+trimAct [5005] from pk7018
+trimAct [5006] from pk7018
+trimAct [5025] from pk7018
+trimAct [5068] from pk7018
+trimAct [5010] from pk7018
+trimAct [5028] from pk7018
+trimAct [5008] from pk7018
+trimAct [5038] from pk7018
+trimAct [5066] from pk7018
+trimAct [5033] from pk7018
+trimAct [5036] from pk7018
+trimAct [5040] from pk7018
+trimAct [5042] from pk7018
+trimAct [5013] from pk7018
+trimAct [5043] from pk7018
+trimAct [5065] from pk7018
+trimAct [5011] from pk7018
+trimAct [5030] from pk7018
+trimAct [5021] from pk7018
+trimAct [5023] from pk7018
+trimAct [5035] from pk7018
+trimAct [5047] from pk7018
+trimAct [5067] from pk7018
+trimAct [5007] from pk7018
+trimAct [5017] from pk7018
+trimAct [5018] from pk7018
+trimAct [5001] from pk7018
+trimAct [5045] from pk7018
+trimAct [5019] from pk7018
+trimAct [5004] from pk7018
+trimAct [5026] from pk7018
+trimAct [5044] from pk7018
+trimAct [5012] from pk7018
+trimAct [5024] from pk7018
+trimAct [5002] from pk7018
+trimAct [5048] from pk7018
+trimAct [5020] from pk7018
+trimAct [5029] from pk7018
+trimAct [5034] from pk7018
+trimAct [5014] from pk7018
+trimAct [5016] from pk7018
+trimAct [5022] from pk7018
+trimAct [5027] from pk7018
+trimAct [5041] from pk7018
+trimAct [5003] from pk7018
+trimAct [5032] from pk7018
+trimAct [5039] from pk7018
+trimAct [5015] from pk7018
+trimAct [5046] from pk7018
+trimAct [5009] from pk7018
+trimAct [5031] from pk7018
+
+[SSH] completed
+[SSH] exit-status: 0
+
+[SSH] executing post build script:
+
+
+Finished: SUCCESS

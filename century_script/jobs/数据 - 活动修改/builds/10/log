@@ -1,0 +1,166 @@
+Started by user [8mha:////4NL15lwhNok46o8LpNIYOqAIaurwr6Vm2yW5YSW4R5+wAAAAlh+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyWEgYu/dLi1CL9ovz8EgDKVWzSvwAAAA==[0mroot
+Running as SYSTEM
+[EnvInject] - Loading node environment variables.
+Building in workspace /var/jenkins_home/workspace/数据 - 活动修改
+[8mha:////4CS5Xap9qdZLnAYTVJtVaYGYJh7L0lNcDyGC4eYWJzHZAAAAqx+LCAAAAAAAAP9b85aBtbiIQSujNKU4P0+vIKc0PTOvWC8xrzgzOT8nv0gvMbkkEyjhCKb88ktSdwVsu2efuqidiYHRh4EDIu2ZUsIg5JOVWJaon5OYl64fXFKUmZduXVHEIAU1ODk/rzg/J1XPGUKDDGKAAEYmBoaKghIGlVTTREujRENz3ZQUS1NdE/OUVF3LJMs0XaPE1ERjY0MDY1MjAwCkF6ZErwAAAA==[0m[SSH] executing pre build script:
+PATH="/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+fields="loops,22,progress,64332"
+server_name="pktest"
+act_id="61"
+uid="100000000009440"
+account="htx1"
+
+echo $server_name
+#!/bin/bash -e
+
+export PATH=/usr/bin/curl:$PATH
+function mg_port() {
+    docker ps -a | grep ${1}-mongo | awk -F '->' '{print $1}' | awk -F ':' '{print $3}'
+}
+
+port=$(mg_port ${server_name})
+echo $port
+
+cd ~/jenkins/script/python/ && python mongo_mod_activity.py ${port} ${account} ${act_id} ${uid} ${fields}
+pktest
+9101
+{'loops': '22', 'progress': '64332'}
+('uid', '100000000009440')
+('mod', u'loops', u'0')
+('mod', u'progress', u'64332')
+{u'_id': ObjectId('63bfb9af2e80e7fe259de8fa'),
+ u'payload': {u'activity': {u'61': {u'content': {u'data': {u'basebet': 321000000.0,
+                                                           u'board': {u'ballbox': [63,
+                                                                                   67,
+                                                                                   58,
+                                                                                   40,
+                                                                                   41,
+                                                                                   14,
+                                                                                   44,
+                                                                                   29,
+                                                                                   74],
+                                                                      u'card': [[4,
+                                                                                 17,
+                                                                                 33,
+                                                                                 52,
+                                                                                 67],
+                                                                                [8,
+                                                                                 22,
+                                                                                 34,
+                                                                                 54,
+                                                                                 68],
+                                                                                [9,
+                                                                                 23,
+                                                                                 0,
+                                                                                 57,
+                                                                                 69],
+                                                                                [14,
+                                                                                 26,
+                                                                                 40,
+                                                                                 58,
+                                                                                 73],
+                                                                                [15,
+                                                                                 30,
+                                                                                 45,
+                                                                                 60,
+                                                                                 74]],
+                                                                      u'dropbox': 4227330,
+                                                                      u'hit': 0,
+                                                                      u'popqueue': [{u'addprogress': 0,
+                                                                                     u'afterprogress': 0,
+                                                                                     u'iscarddone': False,
+                                                                                     u'ishitboard': False,
+                                                                                     u'ishitbox': False,
+                                                                                     u'value': 12},
+                                                                                    {u'addprogress': 0,
+                                                                                     u'afterprogress': 0,
+                                                                                     u'iscarddone': False,
+                                                                                     u'ishitboard': False,
+                                                                                     u'ishitbox': False,
+                                                                                     u'value': 13},
+                                                                                    {u'addprogress': 0,
+                                                                                     u'afterprogress': 0,
+                                                                                     u'iscarddone': False,
+                                                                                     u'ishitboard': False,
+                                                                                     u'ishitbox': False,
+                                                                                     u'value': 66},
+                                                                                    {u'addprogress': 5,
+                                                                                     u'afterprogress': 5,
+                                                                                     u'iscarddone': False,
+                                                                                     u'ishitboard': True,
+                                                                                     u'ishitbox': False,
+                                                                                     u'value': 15},
+                                                                                    {u'addprogress': 0,
+                                                                                     u'afterprogress': 5,
+                                                                                     u'iscarddone': False,
+                                                                                     u'ishitboard': False,
+                                                                                     u'ishitbox': False,
+                                                                                     u'value': 2},
+                                                                                    {u'addprogress': 0,
+                                                                                     u'afterprogress': 5,
+                                                                                     u'iscarddone': False,
+                                                                                     u'ishitboard': False,
+                                                                                     u'ishitbox': False,
+                                                                                     u'value': 10},
+                                                                                    {u'addprogress': 0,
+                                                                                     u'afterprogress': 5,
+                                                                                     u'iscarddone': False,
+                                                                                     u'ishitboard': False,
+                                                                                     u'ishitbox': False,
+                                                                                     u'value': 55},
+                                                                                    {u'addprogress': 0,
+                                                                                     u'afterprogress': 5,
+                                                                                     u'iscarddone': False,
+                                                                                     u'ishitboard': False,
+                                                                                     u'ishitbox': False,
+                                                                                     u'value': 39},
+                                                                                    {u'addprogress': 5,
+                                                                                     u'afterprogress': 10,
+                                                                                     u'iscarddone': False,
+                                                                                     u'ishitboard': True,
+                                                                                     u'ishitbox': False,
+                                                                                     u'value': 4},
+                                                                                    {u'addprogress': 0,
+                                                                                     u'afterprogress': 10,
+                                                                                     u'iscarddone': False,
+                                                                                     u'ishitboard': False,
+                                                                                     u'ishitbox': False,
+                                                                                     u'value': 32}],
+                                                                      u'rules': [31,
+                                                                                 992,
+                                                                                 27648,
+                                                                                 1015808,
+                                                                                 32505856,
+                                                                                 1082401,
+                                                                                 2164802,
+                                                                                 4325508,
+                                                                                 8659208,
+                                                                                 17318416,
+                                                                                 1114384,
+                                                                                 17039425,
+                                                                                 17825809]},
+                                                           u'boardidx': 0,
+                                                           u'buytimes': 0L,
+                                                           u'data': {u'buffstorage': None},
+                                                           u'drop': {u'droptimes': 0,
+                                                                     u'timestamp': 1687233600L},
+                                                           u'entry': 3,
+                                                           u'externalreward': {u'freshtime': 1687161602L,
+                                                                               u'htimes': 0,
+                                                                               u'mtimes': [1,
+                                                                                           1,
+                                                                                           1],
+                                                                               u'stimes': 0},
+                                                           u'loops': u'22',
+                                                           u'p': 0.0,
+                                                           u'pgroup': 4,
+                                                           u'progress': u'64332',
+                                                           u'stageidx': 0}}}}}}
+
+[SSH] completed
+[SSH] exit-status: 0
+
+[SSH] executing post build script:
+
+
+Finished: SUCCESS

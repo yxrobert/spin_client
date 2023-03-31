@@ -1,0 +1,67 @@
+Started by user [8mha:////4NL15lwhNok46o8LpNIYOqAIaurwr6Vm2yW5YSW4R5+wAAAAlh+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyWEgYu/dLi1CL9ovz8EgDKVWzSvwAAAA==[0mroot
+Running as SYSTEM
+[EnvInject] - Loading node environment variables.
+Building in workspace /var/jenkins_home/workspace/服务器 - 更新GameServer与配置
+[8mha:////4FShyd0qnQCBu2/yuZtcbqgAM94UfngGFXbPmzB+jMMMAAAAqx+LCAAAAAAAAP9b85aBtbiIQSujNKU4P0+vIKc0PTOvWC8xrzgzOT8nv0gvMbkkEyjhCKb88ktSdwVsu2efuqidiYHRh4EDIu2ZUsIg5JOVWJaon5OYl64fXFKUmZduXVHEIAU1ODk/rzg/J1XPGUKDDGKAAEYmBoaKghIGlWRjMyNji2RT3WQDs0RdE0OjVN1EA2NDXWMDc+PUZEMD0xQDAwDpkH6prwAAAA==[0m[SSH] executing pre build script:
+server_name="pkyq"
+variable_args="disable_rtp_limit"
+
+#!/bin/bash
+source /root/jenkins/jk_func.sh
+
+if [ -z "$server_name" ]; then
+    echo "Error: 没有选择服务器!"
+    exit 1
+fi
+
+# conf
+cd /home/user00/cc/cc-slots-land/cc-dev
+conf_br=$(yaml $conf_file "['$server_name']['cc-conf']")
+./auto_upload_config.sh ${server_name} ${conf_br}
+
+file_lock
+echo ${server_name}
+check_env_args ${server_name}
+echo ${variable_args}
+
+yaml $conf_file "['$server_name']"
+branch_name=$(yaml $conf_file "['$server_name']['game']")
+server_port=$(yaml $conf_file "['$server_name']['port']")
+echo ${branch_name}
+
+# run
+cd /mnt/slots/cc-server
+git cd $branch_name
+check_last_cmd $branch_name
+git pull
+check_last_cmd pull
+cd /mnt/slots/cc-slots-land/batch
+set_env_args ${variable_args}
+./compile.sh $server_name && ./build_image.sh $server_name && ./run_image.sh $server_name $server_port
+clear_env_args
+
+file_unlock
+
+
+
+
+[0;32m脚本可执行[0m
+[0;32m###############################部署信息##############################[0m
+[0;36m            backend分支: pkyq[0m
+[0;36m            backend分支: pre/v0.12.2[0m
+[0;32m###############################代码检查##############################[0m
+[0;32m>>>>>>>>>>>>>当前目录: /home/user00/cc/cc-conf[0m
+[0;32m目标分支: pre/v0.12.2[0m
+[0;32m当前所在分支：[0m
+deploy-cc-conf
+[0;32mfetch all：[0m
+Fetching origin
+[0;32mcheckout branch：pre/v0.12.2[0m
+Switched to branch 'pre/v0.12.2'
+[0;32mpull branch：pre/v0.12.2[0m
+脚本运行中，请稍后执行！
+
+[SSH] completed
+[SSH] exit-status: 1
+
+Finished: FAILURE

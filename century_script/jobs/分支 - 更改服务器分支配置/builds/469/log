@@ -1,0 +1,91 @@
+Started by user [8mha:////4NDsrKcvzKEwx78TQoodpBD5k0Gccn69rcsu8AZWvHqlAAAAmB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAz2EgZe/dLi1CL9EqAZGYn5AEyG3xfCAAAA[0mtanghao
+Running as SYSTEM
+[EnvInject] - Loading node environment variables.
+Building in workspace /var/jenkins_home/workspace/分支 - 更改服务器分支配置
+[8mha:////4Cf82/yCpU1sVXngt1E+wcNCQuON8iePI7tvz+BljqypAAAAqx+LCAAAAAAAAP9b85aBtbiIQSujNKU4P0+vIKc0PTOvWC8xrzgzOT8nv0gvMbkkEyjhCKb88ktSdwVsu2efuqidiYHRh4EDIu2ZUsIg5JOVWJaon5OYl64fXFKUmZduXVHEIAU1ODk/rzg/J1XPGUKDDGKAAEYmBoaKghIGFVNjCwsLkzRL3URzozRdEyNzQ90kIxMzXQNjA0uDxBQTI6MkcwBDDamerwAAAA==[0m[SSH] executing pre build script:
+GAME_BR="develop"
+GAME_CONF="deploy-cc-conf"
+server_name="pk7020"
+BANDIT_BR="develop"
+BANDIT_CONF="deploy-bandit-conf"
+
+#!/bin/bash
+
+source /root/jenkins/jk_func.sh
+
+if [ -z "$server_name" ]; then
+    echo "Error: 没有选择服务器!"
+    exit 1
+fi
+
+file_lock
+LINE_NO=$(grep -n "${server_name}:" $conf_file | awk -F ":" '{print $1}')
+echo $LINE_NO
+mod_branch $LINE_NO $GAME_BR $BANDIT_BR $GAME_CONF $BANDIT_CONF
+file_unlock
+脚本可执行
+226
+
+before setting
+pk7020:
+ port: 7210 
+ game: develop
+ bandit: develop
+ cc-conf: deploy-cc-conf
+ bandit-conf: deploy-bandit-conf
+释放脚本锁
+
+[SSH] completed
+[SSH] exit-status: 0
+
+[SSH] executing post build script:
+GAME_BR="develop"
+GAME_CONF="deploy-cc-conf"
+server_name="pk7020"
+BANDIT_BR="develop"
+BUILD_URL="http://10.0.84.16:8083/job/%E5%88%86%E6%94%AF%20-%20%E6%9B%B4%E6%94%B9%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%88%86%E6%94%AF%E9%85%8D%E7%BD%AE/469/"
+BANDIT_CONF="deploy-bandit-conf"
+
+conf_file=~/jenkins/server_config.yaml
+cat $conf_file | grep $server_name -C 6
+
+cd /mnt/slots/bandit-server && git remote update
+cd /mnt/slots/cc-server && git remote update
+cd /var/lib/docker/volumes/jenkins-data/_data && python update_server_list.py
+
+curl 'https://oapi.dingtalk.com/robot/send?access_token=13aa551ba8a79265c4424316089cd31c4f479b0f685f3d5a503b0ab6a1a42ec7' -H 'Content-Type: application/json'  -d '{"msgtype": "text","text": {"content": "Jenkins-Server['"${server_name}"'] Change To Game['"${GAME_BR}"'] RPC['"${BANDIT_BR}"'] GAME_CONF['"${GAME_CONF}"'] BANDIT_CONF['"${BANDIT_CONF}"'] "}}'
+
+source /root/jenkins/jk_func.sh
+~/jenkins/analyze_log/analyze_err -url ${BUILD_URL}
+ bandit: develop
+ cc-conf: deploy-cc-conf
+ bandit-conf: deploy-bandit-conf
+ rpc_port: 7119
+ desc: pk7019 
+
+pk7020:
+ port: 7210 
+ game: develop
+ bandit: develop
+ cc-conf: deploy-cc-conf
+ bandit-conf: deploy-bandit-conf
+ rpc_port: 7120
+ desc: pk7020 
+
+
+Fetching origin
+Fetching origin
+remote: Enumerating objects: 23, done.[K
+remote: Counting objects:   4% (1/23)[Kremote: Counting objects:   8% (2/23)[Kremote: Counting objects:  13% (3/23)[Kremote: Counting objects:  17% (4/23)[Kremote: Counting objects:  21% (5/23)[Kremote: Counting objects:  26% (6/23)[Kremote: Counting objects:  30% (7/23)[Kremote: Counting objects:  34% (8/23)[Kremote: Counting objects:  39% (9/23)[Kremote: Counting objects:  43% (10/23)[Kremote: Counting objects:  47% (11/23)[Kremote: Counting objects:  52% (12/23)[Kremote: Counting objects:  56% (13/23)[Kremote: Counting objects:  60% (14/23)[Kremote: Counting objects:  65% (15/23)[Kremote: Counting objects:  69% (16/23)[Kremote: Counting objects:  73% (17/23)[Kremote: Counting objects:  78% (18/23)[Kremote: Counting objects:  82% (19/23)[Kremote: Counting objects:  86% (20/23)[Kremote: Counting objects:  91% (21/23)[Kremote: Counting objects:  95% (22/23)[Kremote: Counting objects: 100% (23/23)[Kremote: Counting objects: 100% (23/23), done.[K
+remote: Compressing objects:   5% (1/20)[Kremote: Compressing objects:  10% (2/20)[Kremote: Compressing objects:  15% (3/20)[Kremote: Compressing objects:  20% (4/20)[Kremote: Compressing objects:  25% (5/20)[Kremote: Compressing objects:  30% (6/20)[Kremote: Compressing objects:  35% (7/20)[Kremote: Compressing objects:  40% (8/20)[Kremote: Compressing objects:  45% (9/20)[Kremote: Compressing objects:  50% (10/20)[Kremote: Compressing objects:  55% (11/20)[Kremote: Compressing objects:  60% (12/20)[Kremote: Compressing objects:  65% (13/20)[Kremote: Compressing objects:  70% (14/20)[Kremote: Compressing objects:  75% (15/20)[Kremote: Compressing objects:  80% (16/20)[Kremote: Compressing objects:  85% (17/20)[Kremote: Compressing objects:  90% (18/20)[Kremote: Compressing objects:  95% (19/20)[Kremote: Compressing objects: 100% (20/20)[Kremote: Compressing objects: 100% (20/20), done.[K
+Unpacking objects:   4% (1/23)   Unpacking objects:   8% (2/23)   remote: Total 23 (delta 5), reused 7 (delta 3), pack-reused 0[K
+Unpacking objects:  13% (3/23)   Unpacking objects:  17% (4/23)   Unpacking objects:  21% (5/23)   Unpacking objects:  26% (6/23)   Unpacking objects:  30% (7/23)   Unpacking objects:  34% (8/23)   Unpacking objects:  39% (9/23)   Unpacking objects:  43% (10/23)   Unpacking objects:  47% (11/23)   Unpacking objects:  52% (12/23)   Unpacking objects:  56% (13/23)   Unpacking objects:  60% (14/23)   Unpacking objects:  65% (15/23)   Unpacking objects:  69% (16/23)   Unpacking objects:  73% (17/23)   Unpacking objects:  78% (18/23)   Unpacking objects:  82% (19/23)   Unpacking objects:  86% (20/23)   Unpacking objects:  91% (21/23)   Unpacking objects:  95% (22/23)   Unpacking objects: 100% (23/23)   Unpacking objects: 100% (23/23), done.
+From gitlab.funplus.io:cheesecake/cc-server
+   1ad6519..d916adb  bugfix/cashback -> origin/bugfix/cashback
+SL=pkzxj,pkyq,pktest,pkreview,pkjy,pkcp,pk7020,pk7019,pk7018,pk7017,pk7016,pk7015,pk7014,pk7013,pk7012,pk7011,pk7010,pk7009,pk7008,pk7007,pk7006,pk7005,pk7004,pk7003,pk7002,pk7001
+SLDesc=[ pkzxj ] game:[ develop ] bandit:[ develop ] port:[ 8888 ] cc-conf[ deploy-cc-conf ] bd-conf[ deploy-bandit-conf ],[ pkyq ] game:[ pre/v0.12.2 ] bandit:[ pre/v0.12.2 ] port:[ 3333 ] cc-conf[ pre/v0.12.2 ] bd-conf[ pre/v0.12.2 ],[ pktest ] game:[ develop ] bandit:[ develop ] port:[ 6666 ] cc-conf[ deploy-cc-conf ] bd-conf[ deploy-bandit-conf ],[ pkreview ] game:[ pre/v0.13.7 ] bandit:[ pre/v0.13.7 ] port:[ 4444 ] cc-conf[ pre/v0.13.7 ] bd-conf[ pre/v0.13.7 ],[ pkjy ] game:[ feature/disco-sp1 ] bandit:[ feature/disco-personal ] port:[ 5555 ] cc-conf[ deploy-cc-conf ] bd-conf[ deploy-bandit-conf ],[ pkcp ] game:[ feature/spin_max_bonus ] bandit:[ develop ] port:[ 9999 ] cc-conf[ deploy-cc-conf ] bd-conf[ deploy-bandit-conf ],[ pk7020 ] game:[ develop ] bandit:[ develop ] port:[ 7210 ] cc-conf[ deploy-cc-conf ] bd-conf[ deploy-bandit-conf ],[ pk7019 ] game:[ feature/new_quest ] bandit:[ develop ] port:[ 7209 ] cc-conf[ deploy-cc-conf ] bd-conf[ deploy-bandit-conf ],[ pk7018 ] game:[ feature/card_end_pr1 ] bandit:[ develop ] port:[ 7208 ] cc-conf[ deploy-cc-conf ] bd-conf[ deploy-bandit-conf ],[ pk7017 ] game:[ feature/journey_booster_pr6 ] bandit:[ develop ] port:[ 7207 ] cc-conf[ deploy-cc-conf ] bd-conf[ deploy-bandit-conf ],[ pk7016 ] game:[ develop ] bandit:[ develop ] port:[ 7206 ] cc-conf[ deploy-cc-conf ] bd-conf[ deploy-bandit-conf ],[ pk7015 ] game:[ develop ] bandit:[ develop ] port:[ 7205 ] cc-conf[ deploy-cc-conf ] bd-conf[ deploy-bandit-conf ],[ pk7014 ] game:[ feature/piggyPinata ] bandit:[ feature/piggyPinata ] port:[ 7204 ] cc-conf[ deploy-cc-conf ] bd-conf[ deploy-bandit-conf ],[ qunlong/pk7013 ] game:[ pre/v0.13.7 ] bandit:[ pre/v0.13.7 ] port:[ 7203 ] cc-conf[ pre/v0.13.7 ] bd-conf[ pre/v0.13.7 ],[ tanghao/pk7012 ] game:[ pre/v0.13.7 ] bandit:[ pre/v0.13.7 ] port:[ 7202 ] cc-conf[ pre/v0.13.7 ] bd-conf[ pre/v0.13.7 ],[ yanqiao/pk7011 ] game:[ pre/v0.13.7 ] bandit:[ pre/v0.13.7 ] port:[ 7201 ] cc-conf[ pre/v0.13.7 ] bd-conf[ pre/v0.13.7 ],[ pk7010 ] game:[ feature/luckyCard ] bandit:[ develop ] port:[ 7100 ] cc-conf[ deploy-cc-conf ] bd-conf[ deploy-bandit-conf ],[ pk7009 ] game:[ feature/tastyPiggy ] bandit:[ develop ] port:[ 7009 ] cc-conf[ deploy-cc-conf ] bd-conf[ deploy-bandit-conf ],[ pk7008 ] game:[ feature/goldenPharaoh_animation ] bandit:[ feature/goldenPharaoh ] port:[ 7008 ] cc-conf[ deploy-cc-conf ] bd-conf[ deploy-bandit-conf ],[ pk7007 ] game:[ feature/luckyCard ] bandit:[ develop ] port:[ 7007 ] cc-conf[ deploy-cc-conf ] bd-conf[ deploy-bandit-conf ],[ pk7006 ] game:[ develop ] bandit:[ develop ] port:[ 7006 ] cc-conf[ deploy-cc-conf ] bd-conf[ deploy-bandit-conf ],[ pk7005 ] game:[ feature/disco-personal ] bandit:[ feature/disco-personal ] port:[ 7005 ] cc-conf[ deploy-cc-conf ] bd-conf[ deploy-bandit-conf ],[ pk7004 ] game:[ feature/siberianWolf ] bandit:[ feature/siberianWolf ] port:[ 7004 ] cc-conf[ deploy-cc-conf ] bd-conf[ deploy-bandit-conf ],[ cehua/pk7003 ] game:[ develop ] bandit:[ develop ] port:[ 7003 ] cc-conf[ deploy-cc-conf ] bd-conf[ deploy-bandit-conf ],[ pk7002 ] game:[ feature/endless2 ] bandit:[ develop ] port:[ 7002 ] cc-conf[ deploy-cc-conf ] bd-conf[ deploy-bandit-conf ],[ pk7001 ] game:[ develop ] bandit:[ bugfix/lavaCash_polish ] port:[ 7001 ] cc-conf[ deploy-cc-conf ] bd-conf[ deploy-bandit-conf ]
+{"errcode":0,"errmsg":"ok"}
+[SSH] completed
+[SSH] exit-status: 0
+
+Finished: SUCCESS

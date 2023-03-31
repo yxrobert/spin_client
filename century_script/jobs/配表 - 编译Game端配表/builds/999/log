@@ -1,0 +1,80 @@
+Started by upstream project "[8mha:////4PHKa1DZSJXWSY/bUVaVqjOo30NFriCGoy8dnEpEEQV5AAAA9h+LCAAAAAAAAP9djUtOwzAURR9BsAAkJogJgzukbqs2tYU6iIP5SC0TVhColbYYO0pcBKtAYhswYREshz3gOCPyJMvHV9fnff3SQVPT2Xq3apwdPDrbOKMHS7fS5uat0rXZ2Kc75zV1s5cQvdZ02uv/q6bzz+/5R/WTUHJLh0bb0q8XtL+rjaejxbZ4KZgpbMnufb2x5UXQnfR0eXf391YBjj29s617YFBTyBmyaQs88nh4Hg6UaN/8EoojGyHjUDPIHCKNyRXEKH4WkCGZQHKICVQKISE7SCGH0csDXBfPOqZ5lIY0a70BhAh29gdPmFzORAEAAA==[0m工具 - 配表编译并且更新到Game服务器" build number [8mha:////4IxqYM7wCwTt33r5dkdSv28GhUglvXoV74jmTFkk1/P8AAAA9h+LCAAAAAAAAP9djU9OAjEUh59D5AAuDRsWbyllDJQ2hsV0rH8SdMMJBmgGsLaTTiF6Da6hGw7hcbyDnc7KeUnTr7/8+r3vX7isHQy3h01tzWhtTW21Gr3YjdJPn5VyemfeXq1X0M5FAvDhYNDp/6vS+dd5fqp+Ekieoa+VKf12Ab2D0x6uFvviWBBdmJIsvduZ8i7orju6vL27e6sAPQ8nsrcrgnKKYobZtAEW+XZ8Ew5K3rzZPUqGWYoZQzlDkSOnMXlAnsbPHEVIJigY8glKilygaIGiGEcvC/BYvKuY5lEa0qzxBuA82AlN6R8Ulm4pRwEAAA==[0m616
+originally caused by:
+ Started by user [8mha:////4NL15lwhNok46o8LpNIYOqAIaurwr6Vm2yW5YSW4R5+wAAAAlh+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyWEgYu/dLi1CL9ovz8EgDKVWzSvwAAAA==[0mroot
+Running as SYSTEM
+[EnvInject] - Loading node environment variables.
+Building in workspace /var/jenkins_home/workspace/配表 - 编译Game端配表
+[8mha:////4K/zC2y916J72RAFCG6Gx2wz07fTWeHi1XVqjwZrACOSAAAAqx+LCAAAAAAAAP9b85aBtbiIQSujNKU4P0+vIKc0PTOvWC8xrzgzOT8nv0gvMbkkEyjhCKb88ktSdwVsu2efuqidiYHRh4EDIu2ZUsIg5JOVWJaon5OYl64fXFKUmZduXVHEIAU1ODk/rzg/J1XPGUKDDGKAAEYmBoaKghIGFQNz48RkA8MU3WQjMzNdk1SzVF0LMwMjXRMTS1MTUxPLVDNTcwC0g5IPrwAAAA==[0m[SSH] executing pre build script:
+conf_name="Activity"
+
+#!/bin/bash -e
+source /root/jenkins/jk_func.sh
+
+file_dir=/mnt/slots/cc-conf
+file_lock || { echo "其他任务运行中，请稍后执行"; exit 1; }
+
+cd ${file_dir}
+git reset --hard origin/deploy-cc-conf
+git pull --ff-only
+
+arr=(`echo $conf_name | tr ',' ' '`)
+echo ${arr[@]}
+
+for el in ${arr[*]}
+do
+echo $el
+protokitgo drive sync ${el} --config=${file_dir}/setting.yaml --log_color=false
+cd ${file_dir}
+done
+
+protokitgo gen --config=${file_dir}/setting.yaml --log_color=false --branches=deploy-cc-conf
+check_last_cmd gen_config
+cd ${file_dir}
+protokitgo release upload_conf --upload_dir=${file_dir}/gen/lua --upload_types=.lua,.bytes --config=${file_dir}/setting.yaml --log_color=false
+cd ${file_dir}
+clear_ignore
+
+# commit
+git add -A
+git commit -am "auto commit by jenkins ${BUILD_USER}"
+git push
+
+file_unlock
+
+脚本可执行
+HEAD is now at 47eefae auto commit by jenkins
+remote: Enumerating objects: 19, done.[K
+remote: Counting objects:   5% (1/19)[Kremote: Counting objects:  10% (2/19)[Kremote: Counting objects:  15% (3/19)[Kremote: Counting objects:  21% (4/19)[Kremote: Counting objects:  26% (5/19)[Kremote: Counting objects:  31% (6/19)[Kremote: Counting objects:  36% (7/19)[Kremote: Counting objects:  42% (8/19)[Kremote: Counting objects:  47% (9/19)[Kremote: Counting objects:  52% (10/19)[Kremote: Counting objects:  57% (11/19)[Kremote: Counting objects:  63% (12/19)[Kremote: Counting objects:  68% (13/19)[Kremote: Counting objects:  73% (14/19)[Kremote: Counting objects:  78% (15/19)[Kremote: Counting objects:  84% (16/19)[Kremote: Counting objects:  89% (17/19)[Kremote: Counting objects:  94% (18/19)[Kremote: Counting objects: 100% (19/19)[Kremote: Counting objects: 100% (19/19), done.[K
+remote: Compressing objects:   5% (1/17)[Kremote: Compressing objects:  11% (2/17)[Kremote: Compressing objects:  17% (3/17)[Kremote: Compressing objects:  23% (4/17)[Kremote: Compressing objects:  29% (5/17)[Kremote: Compressing objects:  35% (6/17)[Kremote: Compressing objects:  41% (7/17)[Kremote: Compressing objects:  47% (8/17)[Kremote: Compressing objects:  52% (9/17)[Kremote: Compressing objects:  58% (10/17)[Kremote: Compressing objects:  64% (11/17)[Kremote: Compressing objects:  70% (12/17)[Kremote: Compressing objects:  76% (13/17)[Kremote: Compressing objects:  82% (14/17)[Kremote: Compressing objects:  88% (15/17)[Kremote: Compressing objects:  94% (16/17)[Kremote: Compressing objects: 100% (17/17)[Kremote: Compressing objects: 100% (17/17), done.[K
+Unpacking objects:   5% (1/19)   remote: Total 19 (delta 4), reused 0 (delta 0), pack-reused 0[K
+Unpacking objects:  10% (2/19)   Unpacking objects:  15% (3/19)   Unpacking objects:  21% (4/19)   Unpacking objects:  26% (5/19)   Unpacking objects:  31% (6/19)   Unpacking objects:  36% (7/19)   Unpacking objects:  42% (8/19)   Unpacking objects:  47% (9/19)   Unpacking objects:  52% (10/19)   Unpacking objects:  57% (11/19)   Unpacking objects:  63% (12/19)   Unpacking objects:  68% (13/19)   Unpacking objects:  73% (14/19)   Unpacking objects:  78% (15/19)   Unpacking objects:  84% (16/19)   Unpacking objects:  89% (17/19)   Unpacking objects:  94% (18/19)   Unpacking objects: 100% (19/19)   Unpacking objects: 100% (19/19), done.
+From gitlab.funplus.io:cheesecake/cc-conf
+ + ea9173e...8d189ab prod/v0.13.0 -> origin/prod/v0.13.0  (forced update)
+ * [new branch]      prod/v0.13.0-0317 -> origin/prod/v0.13.0-0317
+Already up-to-date.
+Activity
+Activity
+2023-03-30T11:30:32+08:00 INF [S] list drive dir id=1lmj4ISc6k8-h42NqTqe_Sf0nGzLhs9Zk
+2023-03-30T11:30:34+08:00 INF [E] list drive dir cost=1.518410467s
+2023-03-30T11:30:34+08:00 INF [S] correct revision info
+2023-03-30T11:30:37+08:00 INF [S] correct revision info cost=3.00130773s
+2023-03-30T11:30:37+08:00 INF [S] sync drive dir files=["Activity"] id=1lmj4ISc6k8-h42NqTqe_Sf0nGzLhs9Zk
+2023-03-30T11:30:37+08:00 INF download success attempt=0 id=1n3o5PTza30v40e2gHq37Oa_5rKYuueap6t7M4ENVaFo path=/mnt/slots/cc-conf/excel/Activity.xlsx
+2023-03-30T11:30:37+08:00 INF [E] sync drive dir cost=903.895946ms
+2023-03-30T11:30:38+08:00 INF keep gen dir, not found file=client/lang/
+2023-03-30T11:30:38+08:00 INF keep gen dir, not found file=server/resource_versions.release
+setting.PathGensetting.PathGensetting.PathGen  /mnt/slots/cc-conf/gen
+2023-03-30T11:30:38+08:00 INF remove dir dir=/mnt/slots/cc-conf/gen list=["/mnt/slots/cc-conf/gen/golang","/mnt/slots/cc-conf/gen/python","/mnt/slots/cc-conf/gen/rawdata"]
+2023-03-30T11:30:38+08:00 INF changing to working path path=/mnt/slots/cc-conf
+2023-03-30T11:30:42+08:00 INF rawdata:load all files cost=3.758898331s path=/mnt/slots/cc-conf/excel
+2023-03-30T11:30:42+08:00 INF [S] rawdata: process all sheet(check valid & gen cell data interface)
+2023-03-30T11:30:42+08:00 WRN sheet名字超长，可能会被截断, 最多支持31个字符 file=/mnt/slots/cc-conf/excel/Hero.xlsx sheet=Hero1SkillMultipleWeight@Design
+2023-03-30T11:30:42+08:00 INF [E] rawdata: process all sheet(check valid & gen cell data interface) cost=246.159985ms
+2023-03-30T11:30:42+08:00 INF [S] rawdata: raw data to proto schema and data for client
+2023-03-30T11:30:42+08:00 FTL export/rawdata.go:161 > processRawData for client error error="rawdata: rawdata.Compile sheet:sheet@Activity|OnlineActivityList@design with error:parse excel data with duplicate key: 2000 current row: 54 last row: 53 table sheet@Activity|OnlineActivityList@design" path=/mnt/slots/cc-conf/excel
+failed execute - gen_config
+
+[SSH] completed
+[SSH] exit-status: 1
+
+Finished: FAILURE

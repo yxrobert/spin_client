@@ -1,0 +1,40 @@
+Started by user [8mha:////4NL15lwhNok46o8LpNIYOqAIaurwr6Vm2yW5YSW4R5+wAAAAlh+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyWEgYu/dLi1CL9ovz8EgDKVWzSvwAAAA==[0mroot
+Running as SYSTEM
+[EnvInject] - Loading node environment variables.
+Building in workspace /var/jenkins_home/workspace/工具 - 修改服务器时间
+[8mha:////4KHltBn15AhTHA9Yyfw3s+dvOVRLiWlgDyZIrhw4cI3rAAAAqx+LCAAAAAAAAP9b85aBtbiIQSujNKU4P0+vIKc0PTOvWC8xrzgzOT8nv0gvMbkkEyjhCKb88ktSdwVsu2efuqidiYHRh4EDIu2ZUsIg5JOVWJaon5OYl64fXFKUmZduXVHEIAU1ODk/rzg/J1XPGUKDDGKAAEYmBoaKghIGFQtzE1PzRBMLXQuTVENdE+M0I91EC0tDXeMUI7M0y9RkCyMzSwAJ5J3nrwAAAA==[0m[SSH] executing pre build script:
+PATH="/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+force="1"
+server_name="pkyq"
+date_param="2022-11-23 05:49:25"
+
+echo $server_name
+
+#!/bin/bash -e
+
+export PATH=/usr/bin/curl:$PATH
+
+conf_file=~/jenkins/server_config.yaml
+yaml() {
+    python -c "import yaml;print(yaml.safe_load(open('$1'))$2)"
+}
+
+server_port=$(yaml $conf_file "['$server_name']['port']")
+echo $date_param
+ts=$(date -d "$date_param" +%s)
+echo $ts
+echo $force
+
+curl "localhost:$server_port/timestamp?timestamp=$ts&force=$force"
+pkyq
+2022-11-23 05:49:25
+1669153765
+1
+"timestamp[ before | after ] : [ 1669157549 ### 1669153765 ]"
+[SSH] completed
+[SSH] exit-status: 0
+
+[SSH] executing post build script:
+
+
+Finished: SUCCESS

@@ -1,0 +1,613 @@
+Started by user [8mha:////4NL15lwhNok46o8LpNIYOqAIaurwr6Vm2yW5YSW4R5+wAAAAlh+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyWEgYu/dLi1CL9ovz8EgDKVWzSvwAAAA==[0mroot
+Running as SYSTEM
+[EnvInject] - Loading node environment variables.
+Building in workspace /var/jenkins_home/workspace/服务器 - 更新GameServer与配置
+[8mha:////4LwB8k7yAxujunjzFtHK/tc9OVFZ3my0V0YAzNLE+ZKdAAAAqx+LCAAAAAAAAP9b85aBtbiIQSujNKU4P0+vIKc0PTOvWC8xrzgzOT8nv0gvMbkkEyjhCKb88ktSdwVsu2efuqidiYHRh4EDIu2ZUsIg5JOVWJaon5OYl64fXFKUmZduXVHEIAU1ODk/rzg/J1XPGUKDDGKAAEYmBoaKghIGFQvDJAMDA2MD3bRUy1Rdk+RUQ90k8yQDXcukNFND86TUVAvTNAAlote8rwAAAA==[0m[SSH] executing pre build script:
+server_name="pk7017"
+variable_args="disable_rtp_limit"
+
+#!/bin/bash
+source /root/jenkins/jk_func.sh
+
+if [ -z "$server_name" ]; then
+    echo "Error: 没有选择服务器!"
+    exit 1
+fi
+
+# conf
+conf_br=$(yaml $conf_file "['$server_name']['cc-conf']")
+cd /home/user00/cc/cc-slots-land/cc-dev && ./auto_upload_config.sh ${server_name} ${conf_br}
+~/jenkins/etcdfilter -svr $server_name
+
+file_lock
+echo ${server_name}
+check_env_args ${server_name}
+echo ${variable_args}
+
+yaml $conf_file "['$server_name']"
+branch_name=$(yaml $conf_file "['$server_name']['game']")
+server_port=$(yaml $conf_file "['$server_name']['port']")
+echo ${branch_name}
+
+# run
+cd /mnt/slots/cc-server
+git cd $branch_name
+check_last_cmd $branch_name
+git pull
+check_last_cmd pull
+cd /mnt/slots/cc-slots-land/batch
+set_env_args ${variable_args}
+./compile.sh $server_name && ./build_image.sh $server_name && ./run_image.sh $server_name $server_port
+clear_env_args
+
+file_unlock
+
+
+
+
+[0;32m脚本可执行[0m
+[0;32m###############################部署信息##############################[0m
+[0;36m            backend分支: pk7017[0m
+[0;36m            backend分支: deploy-cc-conf[0m
+[0;32m###############################代码检查##############################[0m
+[0;32m>>>>>>>>>>>>>当前目录: /home/user00/cc/cc-conf[0m
+[0;32m目标分支: deploy-cc-conf[0m
+[0;32m当前所在分支：[0m
+deploy-cc-conf
+[0;32mfetch all：[0m
+Fetching origin
+[0;32mcheckout branch：deploy-cc-conf[0m
+Already on 'deploy-cc-conf'
+[0;32mpull branch：deploy-cc-conf[0m
+[0;32m###############################etcd数据##############################[0m
+[0;32m数值导入到etcd，节点path：/pk7017_dev_backend[0m
+[0;32mLoad config into ETCD from dir: /home/user00/cc/cc-conf to etcd path: /pk7017_dev_backend[0m
+[0;36mprotokitgo release etcd --log_level "0" --endpoint "10.0.84.16:2379" --key_prefix "/pk7017_dev_backend" --config setting.yaml[0m
+[90m2023-03-30T14:22:16+08:00[0m [33mDBG[0m load config file [36mconfigs=[0m["setting.yaml"]
+[90m2023-03-30T14:22:16+08:00[0m [33mDBG[0m Parse Default From Tag:default
+[90m2023-03-30T14:22:16+08:00[0m [33mDBG[0m load file: setting.yaml
+[90m2023-03-30T14:22:16+08:00[0m [33mDBG[0m Changelog: https://zhongtai.s3.amazonaws.com/software/protokitgo/release.html
+[90m2023-03-30T14:22:16+08:00[0m [33mDBG[0m version: 2.4.1-d889704-version/2.4-20220121111016
+[90m2023-03-30T14:22:16+08:00[0m [33mDBG[0m current setting [36msetting=[0m{"ActorTellResponseType":"netutils.NormalAck","ArgsProtokitgo":"","BasePackagePath":"gitlab.funplus.io/cheesecake/cc-conf/gen/golang","BlobFormat":"","CSBaseNamespace":"","CSRawDataNamespace":"gen.rawdata","Charset":"utf8mb4","CheckRawData":false,"CheckRawDataInterval":60,"Collate":"utf8mb4_general_ci","CompositeKeyUsingAlphabetOrder":false,"ConfName":"","CreateGoMod":true,"DirAsset":"asset","DirDbGen":"db","DirDbStates":["dbstate"],"DirDynamicService":"dynamic_service","DirGen":"gen","DirGenRawData":"rawdata","DirMeta":"meta","DirMigrationGen":"migration","DirProto":"protos","DirRawData":"excel","DirRawDataClient":"client","DirRawDataServer":"server","DirXdbGen":"xdb","EnableDescription":true,"EnableGenRawDataCSV":true,"EnableMonitor":true,"EnableQueue":true,"EnableXdb":false,"EnableZapLogMarshal":true,"EtcdLoadFilter":[".pb",".release"],"FileNameGrpcCsharpGen":"grpc_csharp_plugin","FileNameMeta":"meta.json","FileNamePb2db":"pb2db","FileNameProtoc":"protoc","FileNameProtocGenGo":"protoc-gen-go","FileNameSchema":"protoc-gen-jsonschema","GenCsharpGrpcCode":true,"GenGRPCServerHandler":false,"GenGlobalMessageRegistry":true,"GenJsCode":true,"GenLuaCode":true,"GenLuaCodeService":false,"GenNetutils":false,"GenPythonCode":false,"GenSubMessageRegistry":false,"GenVueCode":true,"GmtFieldType":"","GolangRelative":true,"GoogleDriveCouldUseExcel":false,"GoogleDriveFolderID":"1lmj4ISc6k8-h42NqTqe_Sf0nGzLhs9Zk","GoogleDriveIgnoreChildFolder":false,"GoogleDriveListCorrectRevision":true,"HasActorSystem":false,"InitActorRpcService":false,"InitHttpService":true,"InitRpcService":true,"InitTcpService":true,"InlineProtoDir":["inline"],"MarkerWithProtokitgoVersion":false,"MigrationDbHost":"127.0.0.1","MigrationDbName":"example","MigrationDbPassword":"","MigrationDbPort":3306,"MigrationDbUser":"root","NamePatternActorClient":"ActorClient%s","NamePatternActorServerHandlerMethod":"%s","NamePatternRpcClient":"RpcClient%s","NamePatternServerHandler":"ServerHandler%s","NamePatternSingleConfPackage":"%s","OssListURL":"","PathAsset":"/home/user00/cc/cc-conf/asset","PathBinGrpcCsharpGen":"/opt/protokitgo/bin/linux/grpc_csharp_plugin","PathBinPb2db":"/opt/protokitgo/bin/linux/pb2db","PathBinProtoc":"/opt/protokitgo/bin/linux/protoc","PathBinProtocGenGo":"/opt/protokitgo/bin/linux/protoc-gen-go","PathBinSchema":"/opt/protokitgo/bin/linux/protoc-gen-jsonschema","PathDbStateCodes":["/home/user00/cc/cc-conf/gen/golang/dbstate"],"PathDbStateProtos":["/home/user00/cc/cc-conf/protos/dbstate"],"PathGen":"/home/user00/cc/cc-conf/gen","PathGenCodeCs":"/home/user00/cc/cc-conf/gen/csharp","PathGenCodeGolang":"/home/user00/cc/cc-conf/gen/golang","PathGenCodeJs":"/home/user00/cc/cc-conf/gen/js","PathGenCodeLua":"/home/user00/cc/cc-conf/gen/lua","PathGenCodePython":"/home/user00/cc/cc-conf/gen/python","PathGenCodeRpc":"/home/user00/cc/cc-conf/gen/csharp/grpc","PathGenDb":"/home/user00/cc/cc-conf/gen/golang/db","PathGenMeta":"/home/user00/cc/cc-conf/gen/meta","PathGenMigration":"/home/user00/cc/cc-conf/gen/meta/migration","PathGenPersistents":["/home/user00/cc/cc-conf/gen/rawdata/client/lang","/home/user00/cc/cc-conf/gen/rawdata/version_list","/home/user00/cc/cc-conf/gen/rawdata/server/version_android.release","/home/user00/cc/cc-conf/gen/rawdata/server/version_ios.release","/home/user00/cc/cc-conf/gen/rawdata/server/version_data.release","/home/user00/cc/cc-conf/gen/rawdata/server/lighthouse.release","/home/user00/cc/cc-conf/gen/rawdata/server/resource_versions.release"],"PathGenRawData":"/home/user00/cc/cc-conf/gen/rawdata","PathGenRawDataClient":"/home/user00/cc/cc-conf/gen/rawdata/client","PathGenRawDataServer":"/home/user00/cc/cc-conf/gen/rawdata/server","PathInlineProto":["/home/user00/cc/cc-conf/protos/inline"],"PathProto":"/home/user00/cc/cc-conf/protos","PathProtoImportDir":["/home/user00/cc/cc-conf/protos","protos","/opt/protokitgo/sdk/proto_google","/tmp/netutils677247008"],"PathProtoKit":"/opt/protokitgo/","PathProtoKitSDK":"/opt/protokitgo/sdk","PathProtoKitSDKJsFramework":"/opt/protokitgo/sdk/js/framework","PathProtoKitSDKLuaFramework":"/opt/protokitgo/sdk/lua/framework","PathProtoNetUtils":"/tmp/netutils677247008","PathRawData":"/home/user00/cc/cc-conf/excel","PathRawDataCSV":"/home/user00/cc/cc-conf/gen/rawdata/csv","PathRawDataLinkTo":"","PathRawDataProto":"/home/user00/cc/cc-conf/protos/rawdata","PathRawDataProtoExclude":"/home/user00/cc/cc-conf/protos/rawdata_exclude","PathTmpBackupRawDataProto":"/home/user00/cc/cc-conf/protos/rawdata_tmp_backup__exclude","PathUserCache":"/root/.cache/protokitgo","PathWorking":"/home/user00/cc/cc-conf","PathWorkingMeta":"/home/user00/cc/cc-conf/meta.json","Pb2DbBuiltInEnable":false,"Pb2DbPackageRoot":"","Pb2DbVersion":"v1","PersistentWhiteList":["client/lang/","version_list/","server/version_android.release","server/version_ios.release","server/version_data.release","server/lighthouse.release","server/resource_versions.release"],"PmConfPath":"gen/rawdata/server","PmtApiToken":"c3p0zmycr83g00066h6g","PmtURL":"http://cheesecake.pmt.centurygame.io/","ProjectModule":"","ProjectName":"","ProtoEnableClone":false,"ProtoEnableEqual":false,"ProtoEnableGoPackage":false,"ProtoEnableValidate":true,"ProtoEqualFloatPrecision":"0.0000000000001","ProtoIncludeGoogle":"proto_google","ProtoRawDataPackage":"rawdata","RawDataParallel":64,"ResCompress":"","ResEncrypt":"","ResEncryptKey":"CGC","ReservedKeywords":[""],"ServerRawDataFilterClient":true,"SheetRowCommentPrefix":"#","StopWhenContinuousBlankLinesCount":4,"Storages":null,"StoragesData":"pE0PW9LqjklFrkjIb7Fivo7DoRmEgeL3dwRmOCGalciB9lUDwenGNMs9ethx9HbfJ6hhgIjPueCwuzu8co20Jw5qg02VnP6CD/HvnJgXKV8sB6wvudPaMuYsVvr4qNrPSNjzQ3/PkexKDk/DOOmBpXsT9bt6yGJ32P8MwMCXIzXaVpyWj1GfLlAPXNEsQ5UyYwnMO6oal0KE8kpFVHaarQmrrk6OJNYPxbC9oHcu4LL/vFWPJ1+WzxHISQoGVX6x6z13AFUTUcPRz7D3N7vq3LC96nORuySKKH9t2AAkpIwgdwCdYMjbCDQUoxEft9J9+rx1fbv8A1rI6Qh2tnNjqtwZNICa5gW78OcUkNTrHRMS+zSLOPPJpzR/CXU/iHFEh7nktekJRrhOVeSBwjlOaLKpxWiFQeLivK9eUWo4L4M1ZgJcgB5zcw==","SuffixRawDataPbClient":".bytes","SuffixRawDataPbServer":".pb","SuffixTagForRawDataProtoExclude":"_exclude","SuffixTagForRemoveCodeGenerated":["service.pb.go"],"SupportDataServer":false,"SupportGmtFields":true,"SupportMigration":false,"TagColName":"_tags_","Tags":[],"TitleTagEndOfCol":"","TransDestDir":"gen/rawdata/client/lang","TypeAsJSString":[""],"UsingProtoMessageNameAsURI":true,"ValTagEndOfRow":"_end_row_","VersionProtokitgo":"","VersionSandwich":"v1.2.0","XdbPackageRoot":"","ZapLogBytesMode":"bytes","ZapLogMapKeyTypes":["int","int32","uint32","int64","uint64","string"]}
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/ActivityAwardConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/ActivityBuffConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/ActivityQuestConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/AvatarConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/AwardPoolConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/BettingConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/BingoBoardConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/BingoConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/BingoDefineConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/BingoDropConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/BingoGraphConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/BingoPromotionConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/BingoPromotionV2Conf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/BingoStageConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/BonusByRankingConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/BoxSkinConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/CandyMartConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/CandyMartDefConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/CandyMartJackpotConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/CandyMartPromotionConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/CandyMartPromotionV2Conf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/CandyMartStageConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/CardAceMachineConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/CardActivityConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/CardBigSeasonConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/CardConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/CardDeckConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/CardPackConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/CardPackLinkConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/CardPackPoolConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/CardPlusConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/CardSeasonConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/CardSeasonGroupConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/CardShinyShowConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/CardStageConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/CashBackAwardConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/CashBackConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/ChallengeActivityConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/ChaseConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/ChasePointAwardConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/ClubBuffConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/ClubMailAwardConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/ClubMailAwardWeightConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/ClubPointConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/ClubSpinConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/CoinKingdomConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/CoinKingdomDefConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/CoinKingdomPromotionConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/CoinKingdomStageConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/CoinValueBonusConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/CollectionConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/ConponActivityConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/ConponChooseConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/ConponConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/DailyActivityAwardConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/DailyBonusAwardConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/DailyBonusConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/DailyBonusSevenConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/DailyBonusThirtyConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/DailyMissionChooseConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/DoubleWinAgainConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/EndLessRichesGoupConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/EndLessRichesLevelGroupConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/EndlessRiches2Conf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/EndlessRiches2GroupConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/EndlessRichesAwardConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/EndlessRichesConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/EventConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/EventParamConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/FeatureConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/GameLegendConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/GameServerBackOfficeConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/GameServerCacheConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/GameServerConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/GameServerDBConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/GameServerGMTConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/GameServerLighthouseConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/GameServerPlatformConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/GameServerPostOfficeConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/GameServerRTMConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/GameServerSisyphusConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/GoldenWeekConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/HeadOrTailConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/Hero1SkillDiceHitWeightConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/Hero1SkillEffectConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/Hero1SkillMultipleWeightConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/HeroAwardConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/HeroConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/HeroItemEffectConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/HeroLevelConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/HugeWinAgainConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/JackpotConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/JourneyConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/JourneyDefineConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/JourneyPathConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/JourneyPointConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/JourneyPromotionConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/JourneyPromotionv2Conf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/KittyConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/KittyDefineConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/KittyPathConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/KittyPointConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/KittyPromotionConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/KittyPromotionV2Conf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/LevelSprintConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/LevelSprintTabConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/LevelingConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/ListDataConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/LobbyBonusByLevelConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/LobbyProNewConditionConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/LobbyProNormalConditionConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/LobbyProNormalGroupConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/LobbyPromotionTimeConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/LobbySectionConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/LobbyWheelConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/LookupConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/LuckyCardAwardConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/LuckyCardConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/LuckyPotDrawConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/LuckySevenMissConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/LuckySevenMultipleConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/MagicWeekConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/MagicWeekDropConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/MagicWeekGroupConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/MagicWeekPromotionConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/MailClassConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/MailModConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/MailSourceConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/MailSubClassConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/MapDataConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/MissionActivityConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/MissionAwardConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/MissionDifficConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/MissionLevelConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/MissionModConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/MissionPayConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/MultiplierConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/MultiverseChapterConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/MultiverseConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/MultiverseDefineConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/MultiverseNodeConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/MultiverseReelConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/NewPlayerEconConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/NorMissionNewConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/NorMissionNorConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/NorMissionPosConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/NorMissionWeekAwardConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/NorMissionWeekPointConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/OneTwoPromotionConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/OnlineActivityListConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/PanelsConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/PayGiftConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/PayGiftGroupConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/PayPokerGradeConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/PayPokerGroupConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/PayTableConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/PayWheelGradeConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/PayWheelGroupConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/PiggyCardConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/PiggyPayConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/PiggyPayModConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/PiggyRateConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/PlayerFilterConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/PlayerGuideConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/PokerCardConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/PokerConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/PokerConfigConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/PokerJackpotConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/PokerOrderConfConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/PokerOrderMissConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/PokerOrderWeightConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/PokerPremiumConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/PositionLocksConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/PrizeCatcherAwardConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/PrizeCatcherMissConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/PrizeCatcherMissV2Conf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/PromoteConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/QuestConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/QuestLevelModConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/RSPattenConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/RanBoxCoinWeightConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/RanBoxGemWeightConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/RanBoxHeroActiveWeightConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/RanBoxHeroXPWeightConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/ReelStripConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/RoyalPassAwardConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/RoyalPassConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/RoyalPassGroupConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/RoyalPassSeasonConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/RoyalPassWheelConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/SaleBuffChooseConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/SaleBuffConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/SaleBuffGroupConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/SegmentsConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/ShopAwardConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/ShopBoosterConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/ShopCoinPromotionConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/ShopConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/ShopGiftConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/ShopLevelValueConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/ShopShowCoinConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/ShopShowGemConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/ShopShowHeroConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/ShopShowHeroItemActiveConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/ShopShowHeroItemXpConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/SlotsConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/SpinMaxBonusConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/SpinMaxCardConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/SpinMaxConditionConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/SpinMaxConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/SpinMaxGroupConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/SpinMaxPanelConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/SpinMaxParamConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/StarRoadBuyConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/StarRoadConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/StarRoadGroupConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/StarRoadPointAwardConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/StoreBonusByLevelConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/SupMissionNewConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/SupMissionNorConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/SupMissionWeekFinishConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/SuperCrownSprintConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/TaskConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/TastyAgainWeightConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/TastyBonusConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/TastyCardConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/TastyGroupConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/TastyParamConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/TastyPiggyAgainWeightConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/TastyPiggyConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/TastyPiggyGroupConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/TastyPiggyParamConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/ThemeTagsConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/ThemeUnLockConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/ThreeChooseOneConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/ThreeChooseOneRepeatConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/ThreeChooseOneV2Conf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/TreasureRoomConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/TreasureRoomDayConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/TreasureRoomItemConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/VipBuffConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/VipConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/WhiteListConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/WhiteVersionConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/WildWheelConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/WinLineConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/WinTypeConf.pb
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/gmt_service_mapper.release
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/lighthouse.release
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/version_android.release
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/version_data.release
+[90m2023-03-30T14:22:17+08:00[0m [33mDBG[0m upload key: /pk7017_dev_backend/version_ios.release
+🍺 upload to etcd success
+[0;32m释放脚本锁[0m
+1649
+trimAct [5029] from pk7017
+trimAct [5058] from pk7017
+trimAct [5035] from pk7017
+trimAct [5040] from pk7017
+trimAct [5016] from pk7017
+trimAct [5043] from pk7017
+trimAct [5050] from pk7017
+trimAct [5033] from pk7017
+trimAct [5038] from pk7017
+trimAct [5044] from pk7017
+trimAct [5049] from pk7017
+trimAct [5065] from pk7017
+trimAct [5032] from pk7017
+trimAct [5057] from pk7017
+trimAct [5023] from pk7017
+trimAct [5034] from pk7017
+trimAct [5054] from pk7017
+trimAct [5067] from pk7017
+trimAct [5028] from pk7017
+trimAct [5047] from pk7017
+trimAct [5056] from pk7017
+trimAct [5059] from pk7017
+trimAct [5053] from pk7017
+trimAct [5046] from pk7017
+trimAct [5068] from pk7017
+trimAct [5015] from pk7017
+trimAct [5021] from pk7017
+trimAct [5041] from pk7017
+trimAct [5066] from pk7017
+trimAct [5036] from pk7017
+trimAct [5061] from pk7017
+trimAct [5030] from pk7017
+trimAct [5037] from pk7017
+trimAct [5013] from pk7017
+trimAct [5025] from pk7017
+trimAct [5027] from pk7017
+trimAct [5052] from pk7017
+trimAct [5014] from pk7017
+trimAct [5022] from pk7017
+trimAct [5031] from pk7017
+trimAct [5039] from pk7017
+trimAct [5042] from pk7017
+trimAct [5045] from pk7017
+trimAct [5051] from pk7017
+trimAct [5024] from pk7017
+trimAct [5048] from pk7017
+trimAct [5063] from pk7017
+trimAct [5026] from pk7017
+trimAct [5060] from pk7017
+trimAct [5062] from pk7017
+trimAct [5064] from pk7017
+trimAct [5055] from pk7017
+脚本可执行
+pk7017
+disable_rtp_limit
+{'bandit': 'develop', 'game': 'feature/journey_booster_pr6', 'cc-conf': 'deploy-cc-conf', 'desc': 'pk7017', 'rpc_port': 7117, 'bandit-conf': 'deploy-bandit-conf', 'port': 7207}
+feature/journey_booster_pr6
+Switched to branch 'feature/journey_booster_pr6'
+Already up-to-date.
+disable_rtp_limit
+disable_rtp_limit
+[0;35m              ARCH:[0m linux
+[0;35m          LOCAL_IP:[0m 10.0.84.16
+[0;35m               APP:[0m pk7017
+[0;32m           APP_DIR:[0m /home/user00/cc/cc-slots-land/stage/app=pk7017/app
+[0;32m       Fluentd-DIR:[0m /mnt/slots/cc-slots-land/batch/pk7017/fluentd
+[0;32m         Mongo-DIR:[0m /mnt/slots/cc-slots-land/batch/pk7017/mongo
+[0;32m         Redis-DIR:[0m /mnt/slots/cc-slots-land/batch/pk7017/redis
+[0;32m       PM_CONF_DIR:[0m /home/user00/cc/cc-conf/gen/rawdata/server
+[0;35m  BACKEND_CODE_DIR:[0m /home/user00/cc/cc-server
+[0;35m  BACKEND_CONF_DIR:[0m /home/user00/cc/cc-conf
+[1;33m   BANDIT_CODE_DIR:[0m /home/user00/cc/bandit-server
+[1;33m   BANDIT_CONF_DIR:[0m /home/user00/cc/bandit-conf
+[0;35m   BACKEND_PM_PATH:[0m /pk7017_dev_backend
+[1;33m    BANDIT_PM_PATH:[0m /pk7017_dev_bandit
+[0;35m           Network:[0m pk7017
+[0;35m    ETCD_ENDPOINTS:[0m 10.0.84.16:2379
+[0;35m         REDIS_URI:[0m pk7017-redis:6379
+[0;35m Backend-Container:[0m pk7017-backend
+[1;33m  BANDIT-Container:[0m pk7017-rpc
+[0;32m Fluentd-Container:[0m pk7017-fluentd
+[0;32m   Mongo-Container:[0m pk7017-mongo
+[0;32m   Redis-Container:[0m pk7017-redis
+[1;33m    BUILD TARGET:[0m game
+[1;33m   BUILD COMMAND:[0m cd proto && make server -B && cd .. && server/output/build-server.sh docker
+[1;33m           IMAGE:[0m slots/backend-builder:latest
+[1;33m       CONTAINER:[0m backend-builder
+[1;33m          GO_DIR:[0m /home/user00/cc/cc-slots-land/go
+[1;33m        CODE_DIR:[0m /home/user00/cc/cc-server
+[1;33m        CONF_DIR:[0m /home/user00/cc/cc-conf
+[1;33m       BUILD_DIR:[0m /slots
+[1;33m  BUILD_CONF_DIR:[0m /cc-conf
+[1;33m     CONFIG_FILE:[0m pk7017/config.ini
+[1;33mCONFIG_FILE_PROD:[0m pk7017/config.ini
+[0;32mMOUNT_CONF_LOADER => /home/user00/cc/cc-conf/gen/golang/conf:/slots/server/pkg/gen/golang/conf[0m
+[0;32m MOUNT_CONF_MODEL => /home/user00/cc/cc-conf/gen/golang/rawdata:/cc-conf/gen/golang/rawdata[0m
+[0;36mdocker run -it   --name "backend-builder"   --hostname "backend-builder"   -v "/home/user00/cc/cc-slots-land/go":/go   -v "/home/user00/cc/cc-server":"/slots"   -v "/home/user00/cc/cc-conf":"/cc-conf"   -v "/home/user00/cc/cc-conf/gen/golang/conf:/slots/server/pkg/gen/golang/conf"   -v "/home/user00/cc/cc-conf/gen/golang/rawdata:/cc-conf/gen/golang/rawdata"    "slots/backend-builder:latest"   sh -c "cd proto && make server -B && cd .. && server/output/build-server.sh docker"[0m
+rm ../server/pb/*.pb.go 2>/dev/null || :
+protoc --go_out=../server/pb *.proto
+[0;32mbuilding "plutus-server"[0m
+[0;33mLDFLAGS[0m = [0;36m-X 'plutus/core.BuildGoVersion=go1.17.12 linux/amd64' -X 'plutus/core.BuildTime=2023-03-30T14:22:21+0800' -X 'plutus/core.BuildType=docker' -X 'plutus/core.BuildHost=backend-builder' -X 'plutus/core.BuildGit=feature/journey_booster_pr6:25f87598f-dirty' -X 'plutus/core.BuildConf=v0.0.74-0.20230328070123-abaec494ee43'[0m
+[0;33mTARGET[0m = [0;36m/slots/server/cmd/main/plutus-server-next[0m
+[0;32mreset app dir: /home/user00/cc/cc-slots-land/stage/app=pk7017/app[0m
+[0;32mcopy compiled binary to app dir...[0m
+[0;32mcopy server config: pk7017/config.ini /home/user00/cc/cc-slots-land/stage/app=pk7017/app/config.ini[0m
+[0;32mremove container: backend-builder[0m
+[0;36mreclaim resources: backend-builder 62acb1a2e9c8[0m
+62acb1a2e9c8
+62acb1a2e9c8
+[0;32m/home/user00/cc/cc-slots-land/stage[0m
+Sending build context to Docker daemon  557.1kBSending build context to Docker daemon  8.356MBSending build context to Docker daemon  14.48MBSending build context to Docker daemon  21.17MBSending build context to Docker daemon  26.18MBSending build context to Docker daemon  32.31MBSending build context to Docker daemon  39.55MBSending build context to Docker daemon  46.79MBSending build context to Docker daemon  53.48MBSending build context to Docker daemon  57.38MBSending build context to Docker daemon  65.18MBSending build context to Docker daemon  73.53MBSending build context to Docker daemon  82.44MBSending build context to Docker daemon   90.8MBSending build context to Docker daemon  99.16MBSending build context to Docker daemon  108.1MBSending build context to Docker daemon  113.6MBSending build context to Docker daemon    122MBSending build context to Docker daemon  129.8MBSending build context to Docker daemon  134.8MBSending build context to Docker daemon  139.8MBSending build context to Docker daemon  146.5MBSending build context to Docker daemon  153.2MBSending build context to Docker daemon  160.4MBSending build context to Docker daemon  164.3MBSending build context to Docker daemon  168.8MBSending build context to Docker daemon  173.8MBSending build context to Docker daemon  179.4MBSending build context to Docker daemon  182.7MBSending build context to Docker daemon  186.6MBSending build context to Docker daemon  190.5MBSending build context to Docker daemon  197.8MBSending build context to Docker daemon  202.8MBSending build context to Docker daemon  208.9MBSending build context to Docker daemon  215.6MBSending build context to Docker daemon    220MBSending build context to Docker daemon  223.9MBSending build context to Docker daemon  227.3MBSending build context to Docker daemon  232.8MBSending build context to Docker daemon  238.4MBSending build context to Docker daemon  243.4MBSending build context to Docker daemon  249.6MBSending build context to Docker daemon  256.2MBSending build context to Docker daemon  261.8MBSending build context to Docker daemon  266.8MBSending build context to Docker daemon    273MBSending build context to Docker daemon  279.6MBSending build context to Docker daemon  286.9MBSending build context to Docker daemon  293.6MBSending build context to Docker daemon  300.8MBSending build context to Docker daemon  306.8MB
+Step 1/5 : FROM alpine:3.12.0
+ ---> a24bb4013296
+Step 2/5 : ARG app
+ ---> Using cache
+ ---> 00422b32391e
+Step 3/5 : ADD $app/app/ /slots
+ ---> 42f6c2cf2142
+Step 4/5 : WORKDIR /slots
+ ---> Running in 1ea914121328
+Removing intermediate container 1ea914121328
+ ---> b74526927974
+Step 5/5 : ENTRYPOINT ["/slots/plutus-server"]
+ ---> Running in a7011d44f06c
+Removing intermediate container a7011d44f06c
+ ---> 374e225ad1a0
+Successfully built 374e225ad1a0
+Successfully tagged plutus:pk7017
+[0;32mgc: app=pk7017/app/backend[0m
+/mnt/slots/cc-slots-land/batch
+[0;35m              ARCH:[0m linux
+[0;35m          LOCAL_IP:[0m 10.0.84.16
+[0;35m               APP:[0m pk7017
+[0;32m           APP_DIR:[0m /home/user00/cc/cc-slots-land/stage/app=pk7017/app
+[0;32m       Fluentd-DIR:[0m /mnt/slots/cc-slots-land/batch/pk7017/fluentd
+[0;32m         Mongo-DIR:[0m /mnt/slots/cc-slots-land/batch/pk7017/mongo
+[0;32m         Redis-DIR:[0m /mnt/slots/cc-slots-land/batch/pk7017/redis
+[0;32m       PM_CONF_DIR:[0m /home/user00/cc/cc-conf/gen/rawdata/server
+[0;35m  BACKEND_CODE_DIR:[0m /home/user00/cc/cc-server
+[0;35m  BACKEND_CONF_DIR:[0m /home/user00/cc/cc-conf
+[1;33m   BANDIT_CODE_DIR:[0m /home/user00/cc/bandit-server
+[1;33m   BANDIT_CONF_DIR:[0m /home/user00/cc/bandit-conf
+[0;35m   BACKEND_PM_PATH:[0m /pk7017_dev_backend
+[1;33m    BANDIT_PM_PATH:[0m /pk7017_dev_bandit
+[0;35m           Network:[0m pk7017
+[0;35m    ETCD_ENDPOINTS:[0m 10.0.84.16:2379
+[0;35m         REDIS_URI:[0m pk7017-redis:6379
+[0;35m Backend-Container:[0m pk7017-backend
+[1;33m  BANDIT-Container:[0m pk7017-rpc
+[0;32m Fluentd-Container:[0m pk7017-fluentd
+[0;32m   Mongo-Container:[0m pk7017-mongo
+[0;32m   Redis-Container:[0m pk7017-redis
+
+[0;32mstart pk7017-backend[0m
+[0;36m  docker run -d     -e app=pk7017.dev     -e etcd_endpoints=10.0.84.16:2379     -e sys_env_name=pk7017     -e sys_stage=dev_backend     -e hostname=10.0.84.16     -e port=7207 	--env-file .env     -p 7207:9000 -p 7307:9168     --network pk7017     --name pk7017-backend     plutus:pk7017[0m
+[0;36mreclaim resources: pk7017-backend 0bfec29e059e[0m
+0bfec29e059e
+0bfec29e059e
+013c9f43215b0e73693b6d7336be8512379c98d1471437d2a09e85ee4aabe6b1
+[0;32mwaiting for pk7017-backend...[0m
+[0;32m=====> try 0 times[0m
+curl: (56) Recv failure: Connection reset by peer
+[0;32m=====> try 1 times[0m
+400 Bad Request2023-03-30 06:24:56.731431 I | maxprocs: Leaving GOMAXPROCS=8: CPU quota undefined
+{"log_level":"warn","date":"2023-03-30T06:24:56.731Z","dd_meta_channel":"server","tags":["logbus"],"log_xid":"cgiime428457m7h2f1fg","server_id":"cgiime428457m7h2f1dg","server_ip":"192.168.128.6","server_birth":1680157496,"host_name":"013c9f43215b","glog-msg":"[sandwich] [deprecated] should use WithAdapter to initialize pmconf package."}
+{"log_level":"warn","date":"2023-03-30T06:24:56.752Z","dd_meta_channel":"server","tags":["logbus"],"log_xid":"cgiime428457m7h2f1g0","server_id":"cgiime428457m7h2f1dg","server_ip":"192.168.128.6","server_birth":1680157496,"host_name":"013c9f43215b","glog-msg":"[sandwich] [deprecated] PmConfPath changed due to sys_env_name and sys_stage, should use sandwich_conf_env","sysConfEnvStaging":"pk7017_dev_backend","pm_conf_path":"/pk7017_dev_backend"}
+{
+	"logger": {
+		"timelocation": {},
+		"host": "pk7017-fluentd",
+		"type": "logbus",
+		"serverbirth": "2023-03-30T02:24:57-04:00",
+		"port": 24224,
+		"withcaller": false
+	},
+	"timelocation": {},
+	"gmt": {
+		"listen": "0.0.0.0:9000",
+		"secret": "xkcs;wjngSDGJL;KADlkafas"
+	},
+	"httplistenaddr": "0.0.0.0:9000",
+	"serverbirth": "2023-03-30T02:24:57-04:00",
+	"serveropen": "2021-01-01T00:00:00Z",
+	"lighthouse": {
+		"token": "c3p0zmycr83g00066h6g"
+	},
+	"app": "pk7017.dev",
+	"funplus": {
+		"url": "https://passport-sandbox-checksession.centurygame.com/server_api.php",
+		"paysecret": "o+gt#+v)@-0\u002609my@e0@1c9v\u0026629i02t(kd9ry_sw\u0026j*oi*l4)",
+		"serverpayid": "not-support",
+		"expire": 3600
+	},
+	"bi": {
+		"host": "",
+		"mark": "178_pk7017",
+		"port": 24224
+	},
+	"sisyphus": {
+		"listen": "0.0.0.0:9000",
+		"collection": "idGen",
+		"timeout": 10000000000,
+		"section": 0
+	},
+	"postoffice": {
+		"listen": "0.0.0.0:9000",
+		"serviceurl": "http://pk7017-postOffice:9000",
+		"router": "/push",
+		"reqpushurl": "",
+		"appkey": "ca176bf86c3300375acebc07ff6684b0",
+		"interval": 10,
+		"timeout": 30000000000,
+		"appid": 20106,
+		"workercount": 20
+	},
+	"redis": {
+		"uri": "pk7017-redis:6379",
+		"pwd": "",
+		"db": 0,
+		"timeout": 5000000000,
+		"usecluster": false
+	},
+	"rtm": {
+		"servergateurl": "",
+		"secretkey": "",
+		"connecttimeout": 0,
+		"questtimeout": 0,
+		"adminuid": 0,
+		"projectid": 0,
+		"autoreconnect": false,
+		"enable": false
+	},
+	"mongo": {
+		"uri": "mongodb://root:passwd@pk7017-mongo:27017/?authSource=admin",
+		"db": "plutus",
+		"connecttimeout": 2000000000,
+		"questtimeout": 10000000000,
+		"deferduration": 60000000000,
+		"lifetime": 3600000000000
+	},
+	"inbox": {
+		"timeout": 10000000000
+	},
+	"dev": {
+		"mode": true,
+		"usegops": false,
+		"richnewplayer": false
+	},
+	"gateway": {
+		"useentitycache": false
+	},
+	"canonical": false
+}
+2023-03-30T06:24:58.347Z	[34minfo[0m	buslogger/logger.go:121	server	{"tags": ["logbus"], "log_xid": "cgiimek28457m7h2f1gg", "server_ip": "192.168.128.6", "host_name": "013c9f43215b", "server_id": "1485eea6-4053-4f74-bd35-ace82f3b5559", "server_birth": 1680157497, "role": "bootstrap", "msg": "TimeFake: add: 12289663, now: 2023-08-19 08:12:41.347229938 -0400 EDT"}
+2023-03-30T06:24:58.550Z	[34minfo[0m	sandwich@v1.2.85/endpoint.go:269	server	{"tags": ["logbus"], "log_xid": "cgiimek28457m7h2f1i0", "server_ip": "192.168.128.6", "host_name": "013c9f43215b", "server_id": "1485eea6-4053-4f74-bd35-ace82f3b5559", "server_birth": 1680157497, "glog-msg": "[sandwich] sandwich endpoint update summary", "registry_path": "/pk7017.dev/sandwich/service/slot/", "entries": ["cgehlgs28451fuos8of0_192.168.128.5:8087"], "added": ["cgehlgs28451fuos8of0_192.168.128.5:8087"], "keys_removed": [], "keys_now": ["cgehlgs28451fuos8of0"], "keys_old": []}
+2023-03-30T06:25:05.464Z	[34minfo[0m	buslogger/logger.go:101	server	{"tags": ["logbus"], "log_xid": "cgiimgc28457m7h2f1j0", "server_ip": "192.168.128.6", "host_name": "013c9f43215b", "server_id": "1485eea6-4053-4f74-bd35-ace82f3b5559", "server_birth": 1680157497, "role": "server", "msg": "game server start..."}
+2023-03-30T06:25:05.824Z	[35mdebug[0m	ark@v1.2.2/ark.go:394	server	{"tags": ["logbus"], "log_xid": "cgiimgc28457m7h2f1k0", "server_ip": "192.168.128.6", "host_name": "013c9f43215b", "server_id": "1485eea6-4053-4f74-bd35-ace82f3b5559", "server_birth": 1680157497, "glog-msg": "[ark]Listening and serving HTTP on listener 0.0.0.0:9000"}
+
+[0;32mpk7017-backend ready[0m
+[1;33mversion:[0m [0;32m{"Git":"feature/journey_booster_pr6:25f87598f-dirty","BuildTime":"2023-03-30T14:22:21+0800","BuildHost":"backend-builder","Type":"docker","Go":"go1.17.12 linux/amd64","Conf":"v0.0.74-0.20230328070123-abaec494ee43","Branch":""}[0m
+CONTAINER ID   IMAGE           COMMAND                  CREATED          STATUS         PORTS                                            NAMES
+013c9f43215b   plutus:pk7017   "/slots/plutus-server"   10 seconds ago   Up 9 seconds   0.0.0.0:7207->9000/tcp, 0.0.0.0:7307->9168/tcp   pk7017-backend
+释放脚本锁
+
+[SSH] completed
+[SSH] exit-status: 0
+
+[SSH] executing post build script:
+server_name="pk7017"
+BUILD_URL="http://10.0.84.16:8083/job/%E6%9C%8D%E5%8A%A1%E5%99%A8%20-%20%E6%9B%B4%E6%96%B0GameServer%E4%B8%8E%E9%85%8D%E7%BD%AE/18/"
+
+#!/bin/bash -e
+source /root/jenkins/jk_func.sh
+~/jenkins/analyze_log/analyze_err -url ${BUILD_URL}  || { echo "任务执行失败"; exit 1; }
+sleep 5
+check_whole_server $server_name
+
+pk7017-backend Check
+pk7017-rpc Check
+pk7017-redis Check
+pk7017-mongo Check
+pk7017-fluentd Check
+
+[SSH] completed
+[SSH] exit-status: 0
+
+Finished: SUCCESS

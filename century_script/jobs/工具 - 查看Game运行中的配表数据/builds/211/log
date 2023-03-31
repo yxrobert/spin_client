@@ -1,0 +1,56 @@
+Started by user [8mha:////4NL15lwhNok46o8LpNIYOqAIaurwr6Vm2yW5YSW4R5+wAAAAlh+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyWEgYu/dLi1CL9ovz8EgDKVWzSvwAAAA==[0mroot
+Running as SYSTEM
+[EnvInject] - Loading node environment variables.
+Building in workspace /var/jenkins_home/workspace/工具 - 查看Game运行中的配表数据
+[8mha:////4HozeYS6SoUTElX/BwON/Jz86B6DhNgonBhHwF1D5uTRAAAAqx+LCAAAAAAAAP9b85aBtbiIQSujNKU4P0+vIKc0PTOvWC8xrzgzOT8nv0gvMbkkEyjhCKb88ktSdwVsu2efuqidiYHRh4EDIu2ZUsIg5JOVWJaon5OYl64fXFKUmZduXVHEIAU1ODk/rzg/J1XPGUKDDGKAAEYmBoaKghIGFRMjU3Nzs5Q0XUtTUwtdk1TzNN3EJCMD3TSTZEtzy7REIzOTJAB0BQ1RrwAAAA==[0m[SSH] executing pre build script:
+server_name="pktest"
+conf_name="LobbySection"
+
+echo $server_name
+echo $conf_name
+
+#!/bin/bash -e
+
+cd /root/jenkins && ./etcdwatcher -svr $server_name -conf $conf_name
+
+pktest
+LobbySection
+600
+{"LobbySectionSlice":[{"section":"NEW1","themes":"Siberian Wolf0:1"},{"section":"HOT","themes":"Mighty Genie:1\nCentury Train:1\nWildWickedWitch:1\nCoin King:1"},{"section":"NEW","themes":"Siberian Wolf0:1\nLucky Pots 777:1\nGhost Blaster:1\nBuild Your Love:1"},{"section":"RECENT_PLAY","themes":"*:1\n*:1\n*:1\n*:1"},{"limitedTime":"2022-09-29T11:09:00+08:00","section":"BINGO","themes":"Nuggets Blast:1\nLegend of Cleo:1\nDragon Cubs:1\nPot O Luck:1\nGrand Rhino:1"},{"section":"COMMON","themes":"Mighty Genie:1\nCentury Train:1\nShiny Vegas:1\nForturn God:1\nBingo Moo:1\nWildWickedWitch:1\nBank Of Piggy:1\nGorilla:1\nIcy Princess:1\nFranken:1\nHook's Quest:1\nNuggets Blast:1\nWicked Fire:1\nLegend of Cleo:1\nPot O Luck:1\nDragon Cubs:1\nGrand Rhino:1\nCoin King:1\nSkunk Riches:1\nRising Lanterns:1\nZhao Cai Jin Bao:1\nZeus King of God:1\nQueen of Goldenland:1\nCheese Burglar:1\nMagic Destiny:1\nTiki Fever:1\nHallowin Hotel:1\nWild Circus:1\nMermaid Princess:1\nFire Blast:1\nWild Zorro:1\nSanta Respin:1\nCentury Train Luxury:1\nDouble Ingots:1\nSunny Birds:1\nBuild Your Love:1\nGhost Blaster:1\nLava Cash:1\nLucky Pots 777:1\nSiberian Wolf0:1\nPenguin's Hammer:1\nDisco Star:1\nGolden Pharaoh:1\nOinknado:1\nFlaming Phoenix:1"}]}
+{
+  "LobbySectionSlice": [
+    {
+      "section": "NEW1",
+      "themes": "Siberian Wolf0:1"
+    },
+    {
+      "section": "HOT",
+      "themes": "Mighty Genie:1\nCentury Train:1\nWildWickedWitch:1\nCoin King:1"
+    },
+    {
+      "section": "NEW",
+      "themes": "Siberian Wolf0:1\nLucky Pots 777:1\nGhost Blaster:1\nBuild Your Love:1"
+    },
+    {
+      "section": "RECENT_PLAY",
+      "themes": "*:1\n*:1\n*:1\n*:1"
+    },
+    {
+      "limitedTime": "2022-09-29T11:09:00+08:00",
+      "section": "BINGO",
+      "themes": "Nuggets Blast:1\nLegend of Cleo:1\nDragon Cubs:1\nPot O Luck:1\nGrand Rhino:1"
+    },
+    {
+      "section": "COMMON",
+      "themes": "Mighty Genie:1\nCentury Train:1\nShiny Vegas:1\nForturn God:1\nBingo Moo:1\nWildWickedWitch:1\nBank Of Piggy:1\nGorilla:1\nIcy Princess:1\nFranken:1\nHook's Quest:1\nNuggets Blast:1\nWicked Fire:1\nLegend of Cleo:1\nPot O Luck:1\nDragon Cubs:1\nGrand Rhino:1\nCoin King:1\nSkunk Riches:1\nRising Lanterns:1\nZhao Cai Jin Bao:1\nZeus King of God:1\nQueen of Goldenland:1\nCheese Burglar:1\nMagic Destiny:1\nTiki Fever:1\nHallowin Hotel:1\nWild Circus:1\nMermaid Princess:1\nFire Blast:1\nWild Zorro:1\nSanta Respin:1\nCentury Train Luxury:1\nDouble Ingots:1\nSunny Birds:1\nBuild Your Love:1\nGhost Blaster:1\nLava Cash:1\nLucky Pots 777:1\nSiberian Wolf0:1\nPenguin's Hammer:1\nDisco Star:1\nGolden Pharaoh:1\nOinknado:1\nFlaming Phoenix:1"
+    }
+  ]
+}
+
+[SSH] completed
+[SSH] exit-status: 0
+
+[SSH] executing post build script:
+
+
+Finished: SUCCESS

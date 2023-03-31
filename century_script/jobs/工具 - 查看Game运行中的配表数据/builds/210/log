@@ -1,0 +1,1266 @@
+Started by user [8mha:////4NL15lwhNok46o8LpNIYOqAIaurwr6Vm2yW5YSW4R5+wAAAAlh+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyWEgYu/dLi1CL9ovz8EgDKVWzSvwAAAA==[0mroot
+Running as SYSTEM
+[EnvInject] - Loading node environment variables.
+Building in workspace /var/jenkins_home/workspace/工具 - 查看Game运行中的配表数据
+[8mha:////4NXxgfu0OxZJhW0aYek+TZRpRhSIMLqlW3Jxg/BYie2yAAAAqx+LCAAAAAAAAP9b85aBtbiIQSujNKU4P0+vIKc0PTOvWC8xrzgzOT8nv0gvMbkkEyjhCKb88ktSdwVsu2efuqidiYHRh4EDIu2ZUsIg5JOVWJaon5OYl64fXFKUmZduXVHEIAU1ODk/rzg/J1XPGUKDDGKAAEYmBoaKghIGFXMjU2MzM/M0XcNki0RdkxTjVF2LpERD3aRkEwsj46RkIwtzIwBAmQXarwAAAA==[0m[SSH] executing pre build script:
+server_name="pkzxj"
+conf_name="DailyActivityAward"
+
+echo $server_name
+echo $conf_name
+
+#!/bin/bash -e
+
+cd /root/jenkins && ./etcdwatcher -svr $server_name -conf $conf_name
+
+pkzxj
+DailyActivityAward
+2804
+{"DailyActivityAwardMap":{"80001":{"id":80001,"reward":"[{\"itemId\":\"heroXpItem\",\"amount\":50000},{\"itemId\":\"luckySeven\",\"amount\":1440}]","type":"Fixed"},"80002":{"id":80002,"reward":"[{\"itemId\":\"heroActiveItem\",\"amount\":3},{\"itemId\":\"levelBlast\",\"amount\":720}]","type":"Fixed"},"80003":{"id":80003,"reward":"[{\"itemId\":\"wheel\",\"amount\":1},{\"itemId\":\"wheelBoom\",\"amount\":1440}]","type":"Fixed"},"80004":{"id":80004,"reward":"[{\"itemId\":\"poker\",\"amount\":1},{\"itemId\":\"gem\",\"amount\":300}]","type":"Fixed"},"80101":{"id":80101,"reward":"[{\"itemId\":\"halfTimeLobbyCoin\",\"amount\":1440}]","type":"Fixed"},"80102":{"id":80102,"reward":"[{\"itemId\":\"cardPack\",\"amount\":9}]","type":"CardBonus"},"80103":{"id":80103,"reward":"[{\"itemId\":\"bingoBall\",\"amount\":5}]","type":"Fixed"},"80104":{"id":80104,"reward":"[{\"itemId\":\"heroActiveItem\",\"amount\":2}]","type":"Fixed"},"80105":{"id":80105,"reward":"[{\"itemId\":\"card\",\"amount\":121}]","type":"CardBonus"},"80106":{"id":80106,"reward":"[{\"itemId\":\"legend10160\",\"amount\":720}]","type":"Fixed"},"80107":{"id":80107,"reward":"[{\"itemId\":\"levelBlast\",\"amount\":360}]","type":"Fixed"},"80108":{"id":80108,"reward":"[{\"itemId\":\"bingoBall\",\"amount\":15}]","type":"Fixed"},"80109":{"id":80109,"reward":"[{\"itemId\":\"cardPack\",\"amount\":16}]","type":"CardBonus"},"80110":{"id":80110,"reward":"[{\"itemId\":\"card\",\"amount\":122}]","type":"CardBonus"},"81001":{"id":81001,"reward":"[{\"itemId\":\"levelBlast\",\"amount\":120}]","type":"Fixed"},"81002":{"id":81002,"reward":"[{\"itemId\":\"wheelBoom\",\"amount\":720}]","type":"Fixed"},"81003":{"id":81003,"reward":"[{\"itemId\":\"wheel\",\"amount\":1}]","type":"Fixed"},"82001":{"id":82001,"reward":"[{\"itemId\":\"poker\",\"amount\":1}]","type":"Fixed"},"82002":{"id":82002,"reward":"[{\"itemId\":\"cardPack\",\"amount\":17}]","type":"CardBonus"},"82003":{"id":82003,"reward":"[{\"itemId\":\"cardPack\",\"amount\":18}]","type":"CardBonus"},"82004":{"id":82004,"reward":"[{\"itemId\":\"cardPack\",\"amount\":19}]","type":"CardBonus"},"83001":{"id":83001,"reward":"[{\"itemId\":\"coin\",\"amount\":1},{\"itemId\":\"heroXpItem\",\"amount\":5000}]","type":"Fixed"},"83002":{"id":83002,"reward":"[{\"itemId\":\"coin\",\"amount\":2},{\"itemId\":\"heroXpItem\",\"amount\":7500},{\"itemId\":\"heroActiveItem\",\"amount\":1}]","type":"Fixed"},"83003":{"id":83003,"reward":"[{\"itemId\":\"coin\",\"amount\":5},{\"itemId\":\"heroXpItem\",\"amount\":10000},{\"itemId\":\"gem\",\"amount\":100}]","type":"Fixed"},"83004":{"id":83004,"reward":"[{\"itemId\":\"coin\",\"amount\":2},{\"itemId\":\"heroXpItem\",\"amount\":10000}]","type":"Fixed"},"83005":{"id":83005,"reward":"[{\"itemId\":\"coin\",\"amount\":3},{\"itemId\":\"heroXpItem\",\"amount\":15000},{\"itemId\":\"heroActiveItem\",\"amount\":1}]","type":"Fixed"},"83006":{"id":83006,"reward":"[{\"itemId\":\"coin\",\"amount\":8},{\"itemId\":\"heroXpItem\",\"amount\":20000},{\"itemId\":\"gem\",\"amount\":150}]","type":"Fixed"},"83101":{"id":83101,"reward":"[{\"itemId\":\"card\",\"amount\":123}]","type":"CardBonus"},"83102":{"id":83102,"reward":"[{\"itemId\":\"card\",\"amount\":121}]","type":"CardBonus"},"83103":{"id":83103,"reward":"[{\"itemId\":\"cardPack\",\"amount\":18}]","type":"CardBonus"},"83104":{"id":83104,"reward":"[{\"itemId\":\"wheel\",\"amount\":1}]","type":"Fixed"},"84001":{"id":84001,"reward":"[{\"itemId\":\"cardPack\",\"amount\":21}]","type":"CardBonus"},"84101":{"id":84101,"reward":"[{\"itemId\":\"shop1000d1h\",\"amount\":1}]","type":"Fixed"},"84102":{"id":84102,"reward":"[{\"itemId\":\"shop500d1h\",\"amount\":1}]","type":"Fixed"},"84103":{"id":84103,"reward":"[{\"itemId\":\"shop400d1h\",\"amount\":1}]","type":"Fixed"},"84104":{"id":84104,"reward":"[{\"itemId\":\"shop300d1h\",\"amount\":1}]","type":"Fixed"},"84105":{"id":84105,"reward":"[{\"itemId\":\"shop200d1h\",\"amount\":1}]","type":"Fixed"},"84106":{"id":84106,"reward":"[{\"itemId\":\"shop180d1h\",\"amount\":1}]","type":"Fixed"},"84107":{"id":84107,"reward":"[{\"itemId\":\"shop150d1h\",\"amount\":1}]","type":"Fixed"},"84108":{"id":84108,"reward":"[{\"itemId\":\"shop120d1h\",\"amount\":1}]","type":"Fixed"},"84109":{"id":84109,"reward":"[{\"itemId\":\"shop100d1h\",\"amount\":1}]","type":"Fixed"},"84110":{"id":84110,"reward":"[{\"itemId\":\"piggy200d1h\",\"amount\":1}]","type":"Fixed"},"84111":{"id":84111,"reward":"[{\"itemId\":\"piggy180d1h\",\"amount\":1}]","type":"Fixed"},"84112":{"id":84112,"reward":"[{\"itemId\":\"piggy150d1h\",\"amount\":1}]","type":"Fixed"},"84113":{"id":84113,"reward":"[{\"itemId\":\"piggy120d1h\",\"amount\":1}]","type":"Fixed"},"84114":{"id":84114,"reward":"[{\"itemId\":\"piggy100d1h\",\"amount\":1}]","type":"Fixed"},"84115":{"id":84115,"reward":"[{\"itemId\":\"piggy80d1h\",\"amount\":1}]","type":"Fixed"},"84116":{"id":84116,"reward":"[{\"itemId\":\"piggy60d1h\",\"amount\":1}]","type":"Fixed"},"84117":{"id":84117,"reward":"[{\"itemId\":\"piggy50d1h\",\"amount\":1}]","type":"Fixed"},"84118":{"id":84118,"reward":"[{\"itemId\":\"piggy40d1h\",\"amount\":1}]","type":"Fixed"},"84201":{"id":84201,"reward":"[{\"itemId\":\"legend10160\",\"amount\":360}]","type":"Fixed"},"84202":{"id":84202,"reward":"[{\"itemId\":\"legend10160\",\"amount\":180}]","type":"Fixed"},"84203":{"id":84203,"reward":"[{\"itemId\":\"legend10160\",\"amount\":360}]","type":"Fixed"},"84204":{"id":84204,"reward":"[{\"itemId\":\"legend10230\",\"amount\":180}]","type":"Fixed"},"84205":{"id":84205,"reward":"[{\"itemId\":\"legend10230\",\"amount\":120}]","type":"Fixed"},"84206":{"id":84206,"reward":"[{\"itemId\":\"legend10230\",\"amount\":60}]","type":"Fixed"},"84207":{"id":84207,"reward":"[{\"itemId\":\"legendDiamond10400\",\"amount\":180}]","type":"Fixed"},"84208":{"id":84208,"reward":"[{\"itemId\":\"legendDiamond10400\",\"amount\":180}]","type":"Fixed"},"84209":{"id":84209,"reward":"[{\"itemId\":\"legend10400\",\"amount\":60}]","type":"Fixed"},"84210":{"id":84210,"reward":"[{\"itemId\":\"legend10400\",\"amount\":60}]","type":"Fixed"},"84211":{"id":84211,"reward":"[{\"itemId\":\"legend10290\",\"amount\":120}]","type":"Fixed"},"84212":{"id":84212,"reward":"[{\"itemId\":\"legend10290\",\"amount\":180}]","type":"Fixed"},"84213":{"id":84213,"reward":"[{\"itemId\":\"legend10290\",\"amount\":60}]","type":"Fixed"},"84301":{"id":84301,"reward":"[{\"itemId\":\"shopgem60d1h\",\"amount\":1}]","type":"Fixed"},"84302":{"id":84302,"reward":"[{\"itemId\":\"levelBlast\",\"amount\":180}]","type":"Fixed"},"84303":{"id":84303,"reward":"[{\"itemId\":\"shop120d1h\",\"amount\":1}]","type":"Fixed"},"84304":{"id":84304,"reward":"[{\"itemId\":\"wheelBoom\",\"amount\":360}]","type":"Fixed"},"84305":{"id":84305,"reward":"[{\"itemId\":\"piggy60d1h\",\"amount\":1}]","type":"Fixed"},"84306":{"id":84306,"reward":"[{\"itemId\":\"legend10160\",\"amount\":360}]","type":"Fixed"},"84401":{"id":84401,"reward":"[{\"itemId\":\"coin\",\"amount\":3}]","type":"OneDollar"},"84402":{"id":84402,"reward":"[{\"itemId\":\"coin\",\"amount\":4}]","type":"OneDollar"},"84403":{"id":84403,"reward":"[{\"itemId\":\"coin\",\"amount\":5}]","type":"OneDollar"},"84404":{"id":84404,"reward":"[{\"itemId\":\"coin\",\"amount\":6}]","type":"OneDollar"},"84405":{"id":84405,"reward":"[{\"itemId\":\"coin\",\"amount\":7}]","type":"OneDollar"},"84406":{"id":84406,"reward":"[{\"itemId\":\"coin\",\"amount\":8}]","type":"OneDollar"},"84407":{"id":84407,"reward":"[{\"itemId\":\"coin\",\"amount\":9}]","type":"OneDollar"},"84408":{"id":84408,"reward":"[{\"itemId\":\"coin\",\"amount\":10}]","type":"OneDollar"},"84409":{"id":84409,"reward":"[{\"itemId\":\"coin\",\"amount\":12}]","type":"OneDollar"},"84410":{"id":84410,"reward":"[{\"itemId\":\"coin\",\"amount\":13}]","type":"OneDollar"},"84411":{"id":84411,"reward":"[{\"itemId\":\"coin\",\"amount\":14}]","type":"OneDollar"},"84412":{"id":84412,"reward":"[{\"itemId\":\"coin\",\"amount\":17}]","type":"OneDollar"},"84413":{"id":84413,"reward":"[{\"itemId\":\"coin\",\"amount\":18}]","type":"OneDollar"},"84414":{"id":84414,"reward":"[{\"itemId\":\"coin\",\"amount\":20}]","type":"OneDollar"},"84415":{"id":84415,"reward":"[{\"itemId\":\"coin\",\"amount\":22}]","type":"OneDollar"},"84416":{"id":84416,"reward":"[{\"itemId\":\"coin\",\"amount\":25}]","type":"OneDollar"},"84417":{"id":84417,"reward":"[{\"itemId\":\"coin\",\"amount\":26}]","type":"OneDollar"},"84418":{"id":84418,"reward":"[{\"itemId\":\"coin\",\"amount\":30}]","type":"OneDollar"},"84419":{"id":84419,"reward":"[{\"itemId\":\"coin\",\"amount\":35}]","type":"OneDollar"},"84420":{"id":84420,"reward":"[{\"itemId\":\"coin\",\"amount\":45}]","type":"OneDollar"},"84421":{"id":84421,"reward":"[{\"itemId\":\"coin\",\"amount\":50}]","type":"OneDollar"},"84422":{"id":84422,"reward":"[{\"itemId\":\"coin\",\"amount\":60}]","type":"OneDollar"},"84423":{"id":84423,"reward":"[{\"itemId\":\"heroXpItem\",\"amount\":20000}]","type":"Fixed"},"84424":{"id":84424,"reward":"[{\"itemId\":\"heroXpItem\",\"amount\":30000}]","type":"Fixed"},"84425":{"id":84425,"reward":"[{\"itemId\":\"heroXpItem\",\"amount\":40000}]","type":"Fixed"},"84426":{"id":84426,"reward":"[{\"itemId\":\"heroXpItem\",\"amount\":50000}]","type":"Fixed"},"84427":{"id":84427,"reward":"[{\"itemId\":\"heroXpItem\",\"amount\":60000}]","type":"Fixed"},"84428":{"id":84428,"reward":"[{\"itemId\":\"heroXpItem\",\"amount\":80000}]","type":"Fixed"},"84429":{"id":84429,"reward":"[{\"itemId\":\"heroXpItem\",\"amount\":100000}]","type":"Fixed"},"84430":{"id":84430,"reward":"[{\"itemId\":\"heroXpItem\",\"amount\":140000}]","type":"Fixed"},"84431":{"id":84431,"reward":"[{\"itemId\":\"heroXpItem\",\"amount\":200000}]","type":"Fixed"},"84432":{"id":84432,"reward":"[{\"itemId\":\"heroXpItem\",\"amount\":240000}]","type":"Fixed"},"84433":{"id":84433,"reward":"[{\"itemId\":\"heroXpItem\",\"amount\":300000}]","type":"Fixed"},"84434":{"id":84434,"reward":"[{\"itemId\":\"heroXpItem\",\"amount\":400000}]","type":"Fixed"},"84435":{"id":84435,"reward":"[{\"itemId\":\"heroActiveItem\",\"amount\":2}]","type":"Fixed"},"84436":{"id":84436,"reward":"[{\"itemId\":\"wheel\",\"amount\":1}]","type":"Fixed"},"84437":{"id":84437,"reward":"[{\"itemId\":\"luckySeven\",\"amount\":720}]","type":"Fixed"},"84438":{"id":84438,"reward":"[{\"itemId\":\"cardPack\",\"amount\":8}]","type":"CardBonus"},"84439":{"id":84439,"reward":"[{\"itemId\":\"cardPack\",\"amount\":22}]","type":"CardBonus"},"84440":{"id":84440,"reward":"[{\"itemId\":\"legend10160\",\"amount\":720}]","type":"Fixed"},"84441":{"id":84441,"reward":"[{\"itemId\":\"coin\",\"amount\":14},{\"itemId\":\"heroXpItem\",\"amount\":2},{\"itemId\":\"heroActiveItem\",\"amount\":1}]","type":"RanBox"},"84442":{"id":84442,"reward":"[{\"itemId\":\"coin\",\"amount\":14},{\"itemId\":\"heroXpItem\",\"amount\":2},{\"itemId\":\"heroActiveItem\",\"amount\":1}]","type":"RanBox"},"84443":{"id":84443,"reward":"[{\"itemId\":\"coin\",\"amount\":1},{\"itemId\":\"heroXpItem\",\"amount\":3},{\"itemId\":\"heroActiveItem\",\"amount\":1}]","type":"RanBox"},"84444":{"id":84444,"reward":"[{\"itemId\":\"coin\",\"amount\":2},{\"itemId\":\"heroXpItem\",\"amount\":4},{\"itemId\":\"heroActiveItem\",\"amount\":1}]","type":"RanBox"},"84445":{"id":84445,"reward":"[{\"itemId\":\"coin\",\"amount\":3},{\"itemId\":\"heroXpItem\",\"amount\":5},{\"itemId\":\"heroActiveItem\",\"amount\":2}]","type":"RanBox"},"84446":{"id":84446,"reward":"[{\"itemId\":\"coin\",\"amount\":4},{\"itemId\":\"heroXpItem\",\"amount\":6},{\"itemId\":\"heroActiveItem\",\"amount\":2}]","type":"RanBox"},"84447":{"id":84447,"reward":"[{\"itemId\":\"coin\",\"amount\":5},{\"itemId\":\"heroXpItem\",\"amount\":7},{\"itemId\":\"heroActiveItem\",\"amount\":2}]","type":"RanBox"},"84448":{"id":84448,"reward":"[{\"itemId\":\"coin\",\"amount\":6},{\"itemId\":\"heroXpItem\",\"amount\":8},{\"itemId\":\"heroActiveItem\",\"amount\":3}]","type":"RanBox"},"84449":{"id":84449,"reward":"[{\"itemId\":\"coin\",\"amount\":7},{\"itemId\":\"heroXpItem\",\"amount\":9},{\"itemId\":\"heroActiveItem\",\"amount\":3}]","type":"RanBox"},"84450":{"id":84450,"reward":"[{\"itemId\":\"coin\",\"amount\":8},{\"itemId\":\"heroXpItem\",\"amount\":10},{\"itemId\":\"heroActiveItem\",\"amount\":4}]","type":"RanBox"},"84451":{"id":84451,"reward":"[{\"itemId\":\"coin\",\"amount\":9},{\"itemId\":\"heroXpItem\",\"amount\":11},{\"itemId\":\"heroActiveItem\",\"amount\":4}]","type":"RanBox"},"84452":{"id":84452,"reward":"[{\"itemId\":\"coin\",\"amount\":10},{\"itemId\":\"heroXpItem\",\"amount\":12},{\"itemId\":\"heroActiveItem\",\"amount\":5}]","type":"RanBox"},"84501":{"id":84501,"reward":"[{\"itemId\":\"shopgem50d1h\",\"amount\":2}]","type":"Fixed"},"84502":{"id":84502,"reward":"[{\"itemId\":\"shop100d1h\",\"amount\":2}]","type":"Fixed"},"84503":{"id":84503,"reward":"[{\"itemId\":\"piggy50d1h\",\"amount\":2}]","type":"Fixed"},"84601":{"id":84601,"reward":"[{\"itemId\":\"coin\",\"amount\":1}]","type":"CoinValueBonus"},"84602":{"id":84602,"reward":"[{\"itemId\":\"coin\",\"amount\":2}]","type":"CoinValueBonus"},"84603":{"id":84603,"reward":"[{\"itemId\":\"coin\",\"amount\":3}]","type":"CoinValueBonus"},"84604":{"id":84604,"reward":"[{\"itemId\":\"coin\",\"amount\":5}]","type":"CoinValueBonus"},"84605":{"id":84605,"reward":"[{\"itemId\":\"coin\",\"amount\":7}]","type":"CoinValueBonus"},"84606":{"id":84606,"reward":"[{\"itemId\":\"coin\",\"amount\":10}]","type":"CoinValueBonus"},"84607":{"id":84607,"reward":"[{\"itemId\":\"coin\",\"amount\":15}]","type":"CoinValueBonus"},"84608":{"id":84608,"reward":"[{\"itemId\":\"coin\",\"amount\":20}]","type":"CoinValueBonus"},"84609":{"id":84609,"reward":"[{\"itemId\":\"coin\",\"amount\":25}]","type":"CoinValueBonus"},"84610":{"id":84610,"reward":"[{\"itemId\":\"coin\",\"amount\":35}]","type":"CoinValueBonus"},"84611":{"id":84611,"reward":"[{\"itemId\":\"coin\",\"amount\":50}]","type":"CoinValueBonus"},"84612":{"id":84612,"reward":"[{\"itemId\":\"coin\",\"amount\":65}]","type":"CoinValueBonus"},"84613":{"id":84613,"reward":"[{\"itemId\":\"coin\",\"amount\":75}]","type":"CoinValueBonus"},"84614":{"id":84614,"reward":"[{\"itemId\":\"coin\",\"amount\":100}]","type":"CoinValueBonus"},"84615":{"id":84615,"reward":"[{\"itemId\":\"cardPack\",\"amount\":20}]","type":"CardBonus"},"84701":{"id":84701,"reward":"[{\"itemId\":\"coin\",\"amount\":1}]","type":"CoinValueBonus"},"84702":{"id":84702,"reward":"[{\"itemId\":\"coin\",\"amount\":2}]","type":"CoinValueBonus"},"84703":{"id":84703,"reward":"[{\"itemId\":\"coin\",\"amount\":3}]","type":"CoinValueBonus"},"84704":{"id":84704,"reward":"[{\"itemId\":\"coin\",\"amount\":4}]","type":"CoinValueBonus"},"84705":{"id":84705,"reward":"[{\"itemId\":\"coin\",\"amount\":5}]","type":"CoinValueBonus"},"84706":{"id":84706,"reward":"[{\"itemId\":\"coin\",\"amount\":7}]","type":"CoinValueBonus"},"84707":{"id":84707,"reward":"[{\"itemId\":\"coin\",\"amount\":8}]","type":"CoinValueBonus"},"84708":{"id":84708,"reward":"[{\"itemId\":\"coin\",\"amount\":9}]","type":"CoinValueBonus"},"84709":{"id":84709,"reward":"[{\"itemId\":\"coin\",\"amount\":10}]","type":"CoinValueBonus"},"84710":{"id":84710,"reward":"[{\"itemId\":\"coin\",\"amount\":12}]","type":"CoinValueBonus"},"84711":{"id":84711,"reward":"[{\"itemId\":\"coin\",\"amount\":14}]","type":"CoinValueBonus"},"84712":{"id":84712,"reward":"[{\"itemId\":\"coin\",\"amount\":15}]","type":"CoinValueBonus"},"84713":{"id":84713,"reward":"[{\"itemId\":\"coin\",\"amount\":16}]","type":"CoinValueBonus"},"84714":{"id":84714,"reward":"[{\"itemId\":\"coin\",\"amount\":18}]","type":"CoinValueBonus"},"84715":{"id":84715,"reward":"[{\"itemId\":\"coin\",\"amount\":20}]","type":"CoinValueBonus"},"84716":{"id":84716,"reward":"[{\"itemId\":\"coin\",\"amount\":22}]","type":"CoinValueBonus"},"84717":{"id":84717,"reward":"[{\"itemId\":\"coin\",\"amount\":25}]","type":"CoinValueBonus"},"84718":{"id":84718,"reward":"[{\"itemId\":\"coin\",\"amount\":26}]","type":"CoinValueBonus"},"84719":{"id":84719,"reward":"[{\"itemId\":\"coin\",\"amount\":28}]","type":"CoinValueBonus"},"84720":{"id":84720,"reward":"[{\"itemId\":\"coin\",\"amount\":32}]","type":"CoinValueBonus"},"84721":{"id":84721,"reward":"[{\"itemId\":\"coin\",\"amount\":34}]","type":"CoinValueBonus"},"84722":{"id":84722,"reward":"[{\"itemId\":\"coin\",\"amount\":35}]","type":"CoinValueBonus"},"84723":{"id":84723,"reward":"[{\"itemId\":\"coin\",\"amount\":40}]","type":"CoinValueBonus"},"84724":{"id":84724,"reward":"[{\"itemId\":\"coin\",\"amount\":42}]","type":"CoinValueBonus"},"84725":{"id":84725,"reward":"[{\"itemId\":\"coin\",\"amount\":50}]","type":"CoinValueBonus"},"84726":{"id":84726,"reward":"[{\"itemId\":\"coin\",\"amount\":65}]","type":"CoinValueBonus"},"84727":{"id":84727,"reward":"[{\"itemId\":\"levelBlast\",\"amount\":720}]","type":"Fixed"},"84728":{"id":84728,"reward":"[{\"itemId\":\"levelBlast\",\"amount\":1440}]","type":"Fixed"},"84729":{"id":84729,"reward":"[{\"itemId\":\"cardPack\",\"amount\":18}]","type":"CardBonus"},"84730":{"id":84730,"reward":"[{\"itemId\":\"cardPack\",\"amount\":16}]","type":"CardBonus"},"84731":{"id":84731,"reward":"[{\"itemId\":\"coin\",\"amount\":1},{\"itemId\":\"heroXpItem\",\"amount\":1},{\"itemId\":\"heroActiveItem\",\"amount\":1}]","type":"RanBox"},"84732":{"id":84732,"reward":"[{\"itemId\":\"coin\",\"amount\":1},{\"itemId\":\"heroXpItem\",\"amount\":2},{\"itemId\":\"heroActiveItem\",\"amount\":1}]","type":"RanBox"},"84733":{"id":84733,"reward":"[{\"itemId\":\"coin\",\"amount\":2},{\"itemId\":\"heroXpItem\",\"amount\":3},{\"itemId\":\"heroActiveItem\",\"amount\":1}]","type":"RanBox"},"84734":{"id":84734,"reward":"[{\"itemId\":\"coin\",\"amount\":2},{\"itemId\":\"heroXpItem\",\"amount\":4},{\"itemId\":\"heroActiveItem\",\"amount\":1}]","type":"RanBox"},"84735":{"id":84735,"reward":"[{\"itemId\":\"coin\",\"amount\":3},{\"itemId\":\"heroXpItem\",\"amount\":5},{\"itemId\":\"heroActiveItem\",\"amount\":2}]","type":"RanBox"},"84736":{"id":84736,"reward":"[{\"itemId\":\"coin\",\"amount\":4},{\"itemId\":\"heroXpItem\",\"amount\":6},{\"itemId\":\"heroActiveItem\",\"amount\":2}]","type":"RanBox"},"84737":{"id":84737,"reward":"[{\"itemId\":\"coin\",\"amount\":5},{\"itemId\":\"heroXpItem\",\"amount\":7},{\"itemId\":\"heroActiveItem\",\"amount\":2}]","type":"RanBox"},"84738":{"id":84738,"reward":"[{\"itemId\":\"coin\",\"amount\":6},{\"itemId\":\"heroXpItem\",\"amount\":8},{\"itemId\":\"heroActiveItem\",\"amount\":3}]","type":"RanBox"},"84739":{"id":84739,"reward":"[{\"itemId\":\"coin\",\"amount\":7},{\"itemId\":\"heroXpItem\",\"amount\":9},{\"itemId\":\"heroActiveItem\",\"amount\":3}]","type":"RanBox"},"84740":{"id":84740,"reward":"[{\"itemId\":\"coin\",\"amount\":8},{\"itemId\":\"heroXpItem\",\"amount\":10},{\"itemId\":\"heroActiveItem\",\"amount\":4}]","type":"RanBox"},"84741":{"id":84741,"reward":"[{\"itemId\":\"coin\",\"amount\":9},{\"itemId\":\"heroXpItem\",\"amount\":11},{\"itemId\":\"heroActiveItem\",\"amount\":4}]","type":"RanBox"},"84742":{"id":84742,"reward":"[{\"itemId\":\"coin\",\"amount\":10},{\"itemId\":\"heroXpItem\",\"amount\":12},{\"itemId\":\"heroActiveItem\",\"amount\":5}]","type":"RanBox"},"84743":{"id":84743,"reward":"[{\"itemId\":\"coin\",\"amount\":1},{\"itemId\":\"heroXpItem\",\"amount\":2},{\"itemId\":\"heroActiveItem\",\"amount\":1}]","type":"RanBox"},"84744":{"id":84744,"reward":"[{\"itemId\":\"coin\",\"amount\":2},{\"itemId\":\"heroXpItem\",\"amount\":3},{\"itemId\":\"heroActiveItem\",\"amount\":1}]","type":"RanBox"},"84745":{"id":84745,"reward":"[{\"itemId\":\"coin\",\"amount\":2},{\"itemId\":\"heroXpItem\",\"amount\":4},{\"itemId\":\"heroActiveItem\",\"amount\":1}]","type":"RanBox"},"84746":{"id":84746,"reward":"[{\"itemId\":\"coin\",\"amount\":3},{\"itemId\":\"heroXpItem\",\"amount\":5},{\"itemId\":\"heroActiveItem\",\"amount\":2}]","type":"RanBox"},"84747":{"id":84747,"reward":"[{\"itemId\":\"coin\",\"amount\":4},{\"itemId\":\"heroXpItem\",\"amount\":6},{\"itemId\":\"heroActiveItem\",\"amount\":2}]","type":"RanBox"},"84748":{"id":84748,"reward":"[{\"itemId\":\"coin\",\"amount\":5},{\"itemId\":\"heroXpItem\",\"amount\":7},{\"itemId\":\"heroActiveItem\",\"amount\":2}]","type":"RanBox"},"84749":{"id":84749,"reward":"[{\"itemId\":\"coin\",\"amount\":6},{\"itemId\":\"heroXpItem\",\"amount\":8},{\"itemId\":\"heroActiveItem\",\"amount\":3}]","type":"RanBox"},"84750":{"id":84750,"reward":"[{\"itemId\":\"coin\",\"amount\":7},{\"itemId\":\"heroXpItem\",\"amount\":9},{\"itemId\":\"heroActiveItem\",\"amount\":3}]","type":"RanBox"},"84751":{"id":84751,"reward":"[{\"itemId\":\"coin\",\"amount\":8},{\"itemId\":\"heroXpItem\",\"amount\":10},{\"itemId\":\"heroActiveItem\",\"amount\":4}]","type":"RanBox"},"84752":{"id":84752,"reward":"[{\"itemId\":\"coin\",\"amount\":9},{\"itemId\":\"heroXpItem\",\"amount\":11},{\"itemId\":\"heroActiveItem\",\"amount\":4}]","type":"RanBox"},"84753":{"id":84753,"reward":"[{\"itemId\":\"coin\",\"amount\":10},{\"itemId\":\"heroXpItem\",\"amount\":12},{\"itemId\":\"heroActiveItem\",\"amount\":5}]","type":"RanBox"},"84754":{"id":84754,"reward":"[{\"itemId\":\"coin\",\"amount\":11},{\"itemId\":\"heroXpItem\",\"amount\":13},{\"itemId\":\"heroActiveItem\",\"amount\":5}]","type":"RanBox"},"84755":{"id":84755,"reward":"[{\"itemId\":\"coin\",\"amount\":2},{\"itemId\":\"heroXpItem\",\"amount\":3},{\"itemId\":\"heroActiveItem\",\"amount\":1}]","type":"RanBox"},"84756":{"id":84756,"reward":"[{\"itemId\":\"coin\",\"amount\":2},{\"itemId\":\"heroXpItem\",\"amount\":4},{\"itemId\":\"heroActiveItem\",\"amount\":1}]","type":"RanBox"},"84757":{"id":84757,"reward":"[{\"itemId\":\"coin\",\"amount\":3},{\"itemId\":\"heroXpItem\",\"amount\":5},{\"itemId\":\"heroActiveItem\",\"amount\":2}]","type":"RanBox"},"84758":{"id":84758,"reward":"[{\"itemId\":\"coin\",\"amount\":4},{\"itemId\":\"heroXpItem\",\"amount\":6},{\"itemId\":\"heroActiveItem\",\"amount\":2}]","type":"RanBox"},"84759":{"id":84759,"reward":"[{\"itemId\":\"coin\",\"amount\":5},{\"itemId\":\"heroXpItem\",\"amount\":7},{\"itemId\":\"heroActiveItem\",\"amount\":2}]","type":"RanBox"},"84760":{"id":84760,"reward":"[{\"itemId\":\"coin\",\"amount\":6},{\"itemId\":\"heroXpItem\",\"amount\":8},{\"itemId\":\"heroActiveItem\",\"amount\":3}]","type":"RanBox"},"84761":{"id":84761,"reward":"[{\"itemId\":\"coin\",\"amount\":7},{\"itemId\":\"heroXpItem\",\"amount\":9},{\"itemId\":\"heroActiveItem\",\"amount\":3}]","type":"RanBox"},"84762":{"id":84762,"reward":"[{\"itemId\":\"coin\",\"amount\":8},{\"itemId\":\"heroXpItem\",\"amount\":10},{\"itemId\":\"heroActiveItem\",\"amount\":4}]","type":"RanBox"},"84763":{"id":84763,"reward":"[{\"itemId\":\"coin\",\"amount\":9},{\"itemId\":\"heroXpItem\",\"amount\":11},{\"itemId\":\"heroActiveItem\",\"amount\":4}]","type":"RanBox"},"84764":{"id":84764,"reward":"[{\"itemId\":\"coin\",\"amount\":10},{\"itemId\":\"heroXpItem\",\"amount\":12},{\"itemId\":\"heroActiveItem\",\"amount\":5}]","type":"RanBox"},"84765":{"id":84765,"reward":"[{\"itemId\":\"coin\",\"amount\":11},{\"itemId\":\"heroXpItem\",\"amount\":13},{\"itemId\":\"heroActiveItem\",\"amount\":5}]","type":"RanBox"},"84766":{"id":84766,"reward":"[{\"itemId\":\"coin\",\"amount\":12},{\"itemId\":\"heroXpItem\",\"amount\":14},{\"itemId\":\"heroActiveItem\",\"amount\":5}]","type":"RanBox"},"84901":{"id":84901,"reward":"[{\"itemId\":\"halfTimeLobbyCoin\",\"amount\":1440}]","type":"Fixed"},"84902":{"id":84902,"reward":"[{\"itemId\":\"piggy50d1h\",\"amount\":1}]","type":"Fixed"},"84903":{"id":84903,"reward":"[{\"itemId\":\"cardPack\",\"amount\":9}]","type":"CardBonus"},"84904":{"id":84904,"reward":"[{\"itemId\":\"legend10160\",\"amount\":360}]","type":"Fixed"},"84905":{"id":84905,"reward":"[{\"itemId\":\"cardPack\",\"amount\":22}]","type":"CardBonus"},"84906":{"id":84906,"reward":"[{\"itemId\":\"shop120d1h\",\"amount\":1}]","type":"Fixed"},"84907":{"id":84907,"reward":"[{\"itemId\":\"card\",\"amount\":121}]","type":"CardBonus"},"84908":{"id":84908,"reward":"[{\"itemId\":\"luckySeven\",\"amount\":720}]","type":"Fixed"},"84909":{"id":84909,"reward":"[{\"itemId\":\"wheel\",\"amount\":1}]","type":"Fixed"},"85001":{"id":85001,"reward":"[{\"itemId\":\"cashback2\",\"amount\":1}]","type":"Fixed"},"85002":{"id":85002,"reward":"[{\"itemId\":\"cashback3\",\"amount\":1}]","type":"Fixed"},"85003":{"id":85003,"reward":"[{\"itemId\":\"cashback6\",\"amount\":1}]","type":"Fixed"},"85004":{"id":85004,"reward":"[{\"itemId\":\"cashback9\",\"amount\":1}]","type":"Fixed"},"85005":{"id":85005,"reward":"[{\"itemId\":\"cashback12\",\"amount\":1}]","type":"Fixed"},"85101":{"id":85101,"reward":"[{\"itemId\":\"shopgem50d1h\",\"amount\":2},{\"itemId\":\"luckySeven\",\"amount\":720}]","type":"Fixed"},"85102":{"id":85102,"reward":"[{\"itemId\":\"shop100d1h\",\"amount\":2},{\"itemId\":\"levelBlast\",\"amount\":720}]","type":"Fixed"},"85103":{"id":85103,"reward":"[{\"itemId\":\"piggy50d1h\",\"amount\":2},{\"itemId\":\"wheel\",\"amount\":1}]","type":"Fixed"},"85104":{"id":85104,"reward":"[{\"itemId\":\"shopgem30d1h\",\"amount\":2}]","type":"Fixed"},"85105":{"id":85105,"reward":"[{\"itemId\":\"cardPack\",\"amount\":9}]","type":"CardBonus"},"85106":{"id":85106,"reward":"[{\"itemId\":\"shop60d1h\",\"amount\":2},{\"itemId\":\"levelBlast\",\"amount\":180}]","type":"Fixed"},"85107":{"id":85107,"reward":"[{\"itemId\":\"piggy30d1h\",\"amount\":2}]","type":"Fixed"},"85108":{"id":85108,"reward":"[{\"itemId\":\"cardPack\",\"amount\":16}]","type":"CardBonus"},"85109":{"id":85109,"reward":"[{\"itemId\":\"shopgem50d1h\",\"amount\":2},{\"itemId\":\"luckySeven\",\"amount\":720}]","type":"Fixed"},"85110":{"id":85110,"reward":"[{\"itemId\":\"shop100d1h\",\"amount\":2},{\"itemId\":\"wheelBoom\",\"amount\":720}]","type":"Fixed"},"85111":{"id":85111,"reward":"[{\"itemId\":\"piggy50d1h\",\"amount\":2},{\"itemId\":\"wheel\",\"amount\":1}]","type":"Fixed"},"85201":{"id":85201,"reward":"[{\"itemId\":\"cardPack\",\"amount\":18},{\"itemId\":\"bingoBall\",\"amount\":10},{\"itemId\":\"heroXpItem\",\"amount\":15000}]","type":"Fixed"},"85202":{"id":85202,"reward":"[{\"itemId\":\"cardPack\",\"amount\":21},{\"itemId\":\"bingoBall\",\"amount\":30},{\"itemId\":\"luckySeven\",\"amount\":1440}]","type":"Fixed"},"85301":{"id":85301,"reward":"[{\"itemId\":\"shop100d1h\",\"amount\":1}]","type":"Fixed"},"85302":{"id":85302,"reward":"[{\"itemId\":\"shop200d1h\",\"amount\":1}]","type":"Fixed"},"85303":{"id":85303,"reward":"[{\"itemId\":\"piggy50d1h\",\"amount\":1}]","type":"Fixed"},"85304":{"id":85304,"reward":"[{\"itemId\":\"cardPack\",\"amount\":19}]","type":"CardBonus"},"85305":{"id":85305,"reward":"[{\"itemId\":\"cardPack\",\"amount\":21}]","type":"CardBonus"},"85306":{"id":85306,"reward":"[{\"itemId\":\"cardPack\",\"amount\":22}]","type":"CardBonus"},"85401":{"id":85401,"reward":"[{\"itemId\":\"cardPack\",\"amount\":19}]","type":"CardBonus"},"85402":{"id":85402,"reward":"[{\"itemId\":\"cardPack\",\"amount\":22}]","type":"CardBonus"},"85403":{"id":85403,"reward":"[{\"itemId\":\"card\",\"amount\":122}]","type":"CardBonus"},"85501":{"id":85501,"reward":"[{\"itemId\":\"card\",\"amount\":121}]","type":"CardBonus"},"85502":{"id":85502,"reward":"[{\"itemId\":\"cardPack\",\"amount\":19}]","type":"CardBonus"},"85503":{"id":85503,"reward":"[{\"itemId\":\"cardPack\",\"amount\":18}]","type":"CardBonus"},"85504":{"id":85504,"reward":"[{\"itemId\":\"card\",\"amount\":122}]","type":"CardBonus"},"85505":{"id":85505,"reward":"[{\"itemId\":\"cardPack\",\"amount\":22}]","type":"CardBonus"},"85506":{"id":85506,"reward":"[{\"itemId\":\"cardPack\",\"amount\":21}]","type":"CardBonus"}}}
+{
+  "DailyActivityAwardMap": {
+    "80001": {
+      "id": 80001,
+      "reward": "[{\"itemId\":\"heroXpItem\",\"amount\":50000},{\"itemId\":\"luckySeven\",\"amount\":1440}]",
+      "type": "Fixed"
+    },
+    "80002": {
+      "id": 80002,
+      "reward": "[{\"itemId\":\"heroActiveItem\",\"amount\":3},{\"itemId\":\"levelBlast\",\"amount\":720}]",
+      "type": "Fixed"
+    },
+    "80003": {
+      "id": 80003,
+      "reward": "[{\"itemId\":\"wheel\",\"amount\":1},{\"itemId\":\"wheelBoom\",\"amount\":1440}]",
+      "type": "Fixed"
+    },
+    "80004": {
+      "id": 80004,
+      "reward": "[{\"itemId\":\"poker\",\"amount\":1},{\"itemId\":\"gem\",\"amount\":300}]",
+      "type": "Fixed"
+    },
+    "80101": {
+      "id": 80101,
+      "reward": "[{\"itemId\":\"halfTimeLobbyCoin\",\"amount\":1440}]",
+      "type": "Fixed"
+    },
+    "80102": {
+      "id": 80102,
+      "reward": "[{\"itemId\":\"cardPack\",\"amount\":9}]",
+      "type": "CardBonus"
+    },
+    "80103": {
+      "id": 80103,
+      "reward": "[{\"itemId\":\"bingoBall\",\"amount\":5}]",
+      "type": "Fixed"
+    },
+    "80104": {
+      "id": 80104,
+      "reward": "[{\"itemId\":\"heroActiveItem\",\"amount\":2}]",
+      "type": "Fixed"
+    },
+    "80105": {
+      "id": 80105,
+      "reward": "[{\"itemId\":\"card\",\"amount\":121}]",
+      "type": "CardBonus"
+    },
+    "80106": {
+      "id": 80106,
+      "reward": "[{\"itemId\":\"legend10160\",\"amount\":720}]",
+      "type": "Fixed"
+    },
+    "80107": {
+      "id": 80107,
+      "reward": "[{\"itemId\":\"levelBlast\",\"amount\":360}]",
+      "type": "Fixed"
+    },
+    "80108": {
+      "id": 80108,
+      "reward": "[{\"itemId\":\"bingoBall\",\"amount\":15}]",
+      "type": "Fixed"
+    },
+    "80109": {
+      "id": 80109,
+      "reward": "[{\"itemId\":\"cardPack\",\"amount\":16}]",
+      "type": "CardBonus"
+    },
+    "80110": {
+      "id": 80110,
+      "reward": "[{\"itemId\":\"card\",\"amount\":122}]",
+      "type": "CardBonus"
+    },
+    "81001": {
+      "id": 81001,
+      "reward": "[{\"itemId\":\"levelBlast\",\"amount\":120}]",
+      "type": "Fixed"
+    },
+    "81002": {
+      "id": 81002,
+      "reward": "[{\"itemId\":\"wheelBoom\",\"amount\":720}]",
+      "type": "Fixed"
+    },
+    "81003": {
+      "id": 81003,
+      "reward": "[{\"itemId\":\"wheel\",\"amount\":1}]",
+      "type": "Fixed"
+    },
+    "82001": {
+      "id": 82001,
+      "reward": "[{\"itemId\":\"poker\",\"amount\":1}]",
+      "type": "Fixed"
+    },
+    "82002": {
+      "id": 82002,
+      "reward": "[{\"itemId\":\"cardPack\",\"amount\":17}]",
+      "type": "CardBonus"
+    },
+    "82003": {
+      "id": 82003,
+      "reward": "[{\"itemId\":\"cardPack\",\"amount\":18}]",
+      "type": "CardBonus"
+    },
+    "82004": {
+      "id": 82004,
+      "reward": "[{\"itemId\":\"cardPack\",\"amount\":19}]",
+      "type": "CardBonus"
+    },
+    "83001": {
+      "id": 83001,
+      "reward": "[{\"itemId\":\"coin\",\"amount\":1},{\"itemId\":\"heroXpItem\",\"amount\":5000}]",
+      "type": "Fixed"
+    },
+    "83002": {
+      "id": 83002,
+      "reward": "[{\"itemId\":\"coin\",\"amount\":2},{\"itemId\":\"heroXpItem\",\"amount\":7500},{\"itemId\":\"heroActiveItem\",\"amount\":1}]",
+      "type": "Fixed"
+    },
+    "83003": {
+      "id": 83003,
+      "reward": "[{\"itemId\":\"coin\",\"amount\":5},{\"itemId\":\"heroXpItem\",\"amount\":10000},{\"itemId\":\"gem\",\"amount\":100}]",
+      "type": "Fixed"
+    },
+    "83004": {
+      "id": 83004,
+      "reward": "[{\"itemId\":\"coin\",\"amount\":2},{\"itemId\":\"heroXpItem\",\"amount\":10000}]",
+      "type": "Fixed"
+    },
+    "83005": {
+      "id": 83005,
+      "reward": "[{\"itemId\":\"coin\",\"amount\":3},{\"itemId\":\"heroXpItem\",\"amount\":15000},{\"itemId\":\"heroActiveItem\",\"amount\":1}]",
+      "type": "Fixed"
+    },
+    "83006": {
+      "id": 83006,
+      "reward": "[{\"itemId\":\"coin\",\"amount\":8},{\"itemId\":\"heroXpItem\",\"amount\":20000},{\"itemId\":\"gem\",\"amount\":150}]",
+      "type": "Fixed"
+    },
+    "83101": {
+      "id": 83101,
+      "reward": "[{\"itemId\":\"card\",\"amount\":123}]",
+      "type": "CardBonus"
+    },
+    "83102": {
+      "id": 83102,
+      "reward": "[{\"itemId\":\"card\",\"amount\":121}]",
+      "type": "CardBonus"
+    },
+    "83103": {
+      "id": 83103,
+      "reward": "[{\"itemId\":\"cardPack\",\"amount\":18}]",
+      "type": "CardBonus"
+    },
+    "83104": {
+      "id": 83104,
+      "reward": "[{\"itemId\":\"wheel\",\"amount\":1}]",
+      "type": "Fixed"
+    },
+    "84001": {
+      "id": 84001,
+      "reward": "[{\"itemId\":\"cardPack\",\"amount\":21}]",
+      "type": "CardBonus"
+    },
+    "84101": {
+      "id": 84101,
+      "reward": "[{\"itemId\":\"shop1000d1h\",\"amount\":1}]",
+      "type": "Fixed"
+    },
+    "84102": {
+      "id": 84102,
+      "reward": "[{\"itemId\":\"shop500d1h\",\"amount\":1}]",
+      "type": "Fixed"
+    },
+    "84103": {
+      "id": 84103,
+      "reward": "[{\"itemId\":\"shop400d1h\",\"amount\":1}]",
+      "type": "Fixed"
+    },
+    "84104": {
+      "id": 84104,
+      "reward": "[{\"itemId\":\"shop300d1h\",\"amount\":1}]",
+      "type": "Fixed"
+    },
+    "84105": {
+      "id": 84105,
+      "reward": "[{\"itemId\":\"shop200d1h\",\"amount\":1}]",
+      "type": "Fixed"
+    },
+    "84106": {
+      "id": 84106,
+      "reward": "[{\"itemId\":\"shop180d1h\",\"amount\":1}]",
+      "type": "Fixed"
+    },
+    "84107": {
+      "id": 84107,
+      "reward": "[{\"itemId\":\"shop150d1h\",\"amount\":1}]",
+      "type": "Fixed"
+    },
+    "84108": {
+      "id": 84108,
+      "reward": "[{\"itemId\":\"shop120d1h\",\"amount\":1}]",
+      "type": "Fixed"
+    },
+    "84109": {
+      "id": 84109,
+      "reward": "[{\"itemId\":\"shop100d1h\",\"amount\":1}]",
+      "type": "Fixed"
+    },
+    "84110": {
+      "id": 84110,
+      "reward": "[{\"itemId\":\"piggy200d1h\",\"amount\":1}]",
+      "type": "Fixed"
+    },
+    "84111": {
+      "id": 84111,
+      "reward": "[{\"itemId\":\"piggy180d1h\",\"amount\":1}]",
+      "type": "Fixed"
+    },
+    "84112": {
+      "id": 84112,
+      "reward": "[{\"itemId\":\"piggy150d1h\",\"amount\":1}]",
+      "type": "Fixed"
+    },
+    "84113": {
+      "id": 84113,
+      "reward": "[{\"itemId\":\"piggy120d1h\",\"amount\":1}]",
+      "type": "Fixed"
+    },
+    "84114": {
+      "id": 84114,
+      "reward": "[{\"itemId\":\"piggy100d1h\",\"amount\":1}]",
+      "type": "Fixed"
+    },
+    "84115": {
+      "id": 84115,
+      "reward": "[{\"itemId\":\"piggy80d1h\",\"amount\":1}]",
+      "type": "Fixed"
+    },
+    "84116": {
+      "id": 84116,
+      "reward": "[{\"itemId\":\"piggy60d1h\",\"amount\":1}]",
+      "type": "Fixed"
+    },
+    "84117": {
+      "id": 84117,
+      "reward": "[{\"itemId\":\"piggy50d1h\",\"amount\":1}]",
+      "type": "Fixed"
+    },
+    "84118": {
+      "id": 84118,
+      "reward": "[{\"itemId\":\"piggy40d1h\",\"amount\":1}]",
+      "type": "Fixed"
+    },
+    "84201": {
+      "id": 84201,
+      "reward": "[{\"itemId\":\"legend10160\",\"amount\":360}]",
+      "type": "Fixed"
+    },
+    "84202": {
+      "id": 84202,
+      "reward": "[{\"itemId\":\"legend10160\",\"amount\":180}]",
+      "type": "Fixed"
+    },
+    "84203": {
+      "id": 84203,
+      "reward": "[{\"itemId\":\"legend10160\",\"amount\":360}]",
+      "type": "Fixed"
+    },
+    "84204": {
+      "id": 84204,
+      "reward": "[{\"itemId\":\"legend10230\",\"amount\":180}]",
+      "type": "Fixed"
+    },
+    "84205": {
+      "id": 84205,
+      "reward": "[{\"itemId\":\"legend10230\",\"amount\":120}]",
+      "type": "Fixed"
+    },
+    "84206": {
+      "id": 84206,
+      "reward": "[{\"itemId\":\"legend10230\",\"amount\":60}]",
+      "type": "Fixed"
+    },
+    "84207": {
+      "id": 84207,
+      "reward": "[{\"itemId\":\"legendDiamond10400\",\"amount\":180}]",
+      "type": "Fixed"
+    },
+    "84208": {
+      "id": 84208,
+      "reward": "[{\"itemId\":\"legendDiamond10400\",\"amount\":180}]",
+      "type": "Fixed"
+    },
+    "84209": {
+      "id": 84209,
+      "reward": "[{\"itemId\":\"legend10400\",\"amount\":60}]",
+      "type": "Fixed"
+    },
+    "84210": {
+      "id": 84210,
+      "reward": "[{\"itemId\":\"legend10400\",\"amount\":60}]",
+      "type": "Fixed"
+    },
+    "84211": {
+      "id": 84211,
+      "reward": "[{\"itemId\":\"legend10290\",\"amount\":120}]",
+      "type": "Fixed"
+    },
+    "84212": {
+      "id": 84212,
+      "reward": "[{\"itemId\":\"legend10290\",\"amount\":180}]",
+      "type": "Fixed"
+    },
+    "84213": {
+      "id": 84213,
+      "reward": "[{\"itemId\":\"legend10290\",\"amount\":60}]",
+      "type": "Fixed"
+    },
+    "84301": {
+      "id": 84301,
+      "reward": "[{\"itemId\":\"shopgem60d1h\",\"amount\":1}]",
+      "type": "Fixed"
+    },
+    "84302": {
+      "id": 84302,
+      "reward": "[{\"itemId\":\"levelBlast\",\"amount\":180}]",
+      "type": "Fixed"
+    },
+    "84303": {
+      "id": 84303,
+      "reward": "[{\"itemId\":\"shop120d1h\",\"amount\":1}]",
+      "type": "Fixed"
+    },
+    "84304": {
+      "id": 84304,
+      "reward": "[{\"itemId\":\"wheelBoom\",\"amount\":360}]",
+      "type": "Fixed"
+    },
+    "84305": {
+      "id": 84305,
+      "reward": "[{\"itemId\":\"piggy60d1h\",\"amount\":1}]",
+      "type": "Fixed"
+    },
+    "84306": {
+      "id": 84306,
+      "reward": "[{\"itemId\":\"legend10160\",\"amount\":360}]",
+      "type": "Fixed"
+    },
+    "84401": {
+      "id": 84401,
+      "reward": "[{\"itemId\":\"coin\",\"amount\":3}]",
+      "type": "OneDollar"
+    },
+    "84402": {
+      "id": 84402,
+      "reward": "[{\"itemId\":\"coin\",\"amount\":4}]",
+      "type": "OneDollar"
+    },
+    "84403": {
+      "id": 84403,
+      "reward": "[{\"itemId\":\"coin\",\"amount\":5}]",
+      "type": "OneDollar"
+    },
+    "84404": {
+      "id": 84404,
+      "reward": "[{\"itemId\":\"coin\",\"amount\":6}]",
+      "type": "OneDollar"
+    },
+    "84405": {
+      "id": 84405,
+      "reward": "[{\"itemId\":\"coin\",\"amount\":7}]",
+      "type": "OneDollar"
+    },
+    "84406": {
+      "id": 84406,
+      "reward": "[{\"itemId\":\"coin\",\"amount\":8}]",
+      "type": "OneDollar"
+    },
+    "84407": {
+      "id": 84407,
+      "reward": "[{\"itemId\":\"coin\",\"amount\":9}]",
+      "type": "OneDollar"
+    },
+    "84408": {
+      "id": 84408,
+      "reward": "[{\"itemId\":\"coin\",\"amount\":10}]",
+      "type": "OneDollar"
+    },
+    "84409": {
+      "id": 84409,
+      "reward": "[{\"itemId\":\"coin\",\"amount\":12}]",
+      "type": "OneDollar"
+    },
+    "84410": {
+      "id": 84410,
+      "reward": "[{\"itemId\":\"coin\",\"amount\":13}]",
+      "type": "OneDollar"
+    },
+    "84411": {
+      "id": 84411,
+      "reward": "[{\"itemId\":\"coin\",\"amount\":14}]",
+      "type": "OneDollar"
+    },
+    "84412": {
+      "id": 84412,
+      "reward": "[{\"itemId\":\"coin\",\"amount\":17}]",
+      "type": "OneDollar"
+    },
+    "84413": {
+      "id": 84413,
+      "reward": "[{\"itemId\":\"coin\",\"amount\":18}]",
+      "type": "OneDollar"
+    },
+    "84414": {
+      "id": 84414,
+      "reward": "[{\"itemId\":\"coin\",\"amount\":20}]",
+      "type": "OneDollar"
+    },
+    "84415": {
+      "id": 84415,
+      "reward": "[{\"itemId\":\"coin\",\"amount\":22}]",
+      "type": "OneDollar"
+    },
+    "84416": {
+      "id": 84416,
+      "reward": "[{\"itemId\":\"coin\",\"amount\":25}]",
+      "type": "OneDollar"
+    },
+    "84417": {
+      "id": 84417,
+      "reward": "[{\"itemId\":\"coin\",\"amount\":26}]",
+      "type": "OneDollar"
+    },
+    "84418": {
+      "id": 84418,
+      "reward": "[{\"itemId\":\"coin\",\"amount\":30}]",
+      "type": "OneDollar"
+    },
+    "84419": {
+      "id": 84419,
+      "reward": "[{\"itemId\":\"coin\",\"amount\":35}]",
+      "type": "OneDollar"
+    },
+    "84420": {
+      "id": 84420,
+      "reward": "[{\"itemId\":\"coin\",\"amount\":45}]",
+      "type": "OneDollar"
+    },
+    "84421": {
+      "id": 84421,
+      "reward": "[{\"itemId\":\"coin\",\"amount\":50}]",
+      "type": "OneDollar"
+    },
+    "84422": {
+      "id": 84422,
+      "reward": "[{\"itemId\":\"coin\",\"amount\":60}]",
+      "type": "OneDollar"
+    },
+    "84423": {
+      "id": 84423,
+      "reward": "[{\"itemId\":\"heroXpItem\",\"amount\":20000}]",
+      "type": "Fixed"
+    },
+    "84424": {
+      "id": 84424,
+      "reward": "[{\"itemId\":\"heroXpItem\",\"amount\":30000}]",
+      "type": "Fixed"
+    },
+    "84425": {
+      "id": 84425,
+      "reward": "[{\"itemId\":\"heroXpItem\",\"amount\":40000}]",
+      "type": "Fixed"
+    },
+    "84426": {
+      "id": 84426,
+      "reward": "[{\"itemId\":\"heroXpItem\",\"amount\":50000}]",
+      "type": "Fixed"
+    },
+    "84427": {
+      "id": 84427,
+      "reward": "[{\"itemId\":\"heroXpItem\",\"amount\":60000}]",
+      "type": "Fixed"
+    },
+    "84428": {
+      "id": 84428,
+      "reward": "[{\"itemId\":\"heroXpItem\",\"amount\":80000}]",
+      "type": "Fixed"
+    },
+    "84429": {
+      "id": 84429,
+      "reward": "[{\"itemId\":\"heroXpItem\",\"amount\":100000}]",
+      "type": "Fixed"
+    },
+    "84430": {
+      "id": 84430,
+      "reward": "[{\"itemId\":\"heroXpItem\",\"amount\":140000}]",
+      "type": "Fixed"
+    },
+    "84431": {
+      "id": 84431,
+      "reward": "[{\"itemId\":\"heroXpItem\",\"amount\":200000}]",
+      "type": "Fixed"
+    },
+    "84432": {
+      "id": 84432,
+      "reward": "[{\"itemId\":\"heroXpItem\",\"amount\":240000}]",
+      "type": "Fixed"
+    },
+    "84433": {
+      "id": 84433,
+      "reward": "[{\"itemId\":\"heroXpItem\",\"amount\":300000}]",
+      "type": "Fixed"
+    },
+    "84434": {
+      "id": 84434,
+      "reward": "[{\"itemId\":\"heroXpItem\",\"amount\":400000}]",
+      "type": "Fixed"
+    },
+    "84435": {
+      "id": 84435,
+      "reward": "[{\"itemId\":\"heroActiveItem\",\"amount\":2}]",
+      "type": "Fixed"
+    },
+    "84436": {
+      "id": 84436,
+      "reward": "[{\"itemId\":\"wheel\",\"amount\":1}]",
+      "type": "Fixed"
+    },
+    "84437": {
+      "id": 84437,
+      "reward": "[{\"itemId\":\"luckySeven\",\"amount\":720}]",
+      "type": "Fixed"
+    },
+    "84438": {
+      "id": 84438,
+      "reward": "[{\"itemId\":\"cardPack\",\"amount\":8}]",
+      "type": "CardBonus"
+    },
+    "84439": {
+      "id": 84439,
+      "reward": "[{\"itemId\":\"cardPack\",\"amount\":22}]",
+      "type": "CardBonus"
+    },
+    "84440": {
+      "id": 84440,
+      "reward": "[{\"itemId\":\"legend10160\",\"amount\":720}]",
+      "type": "Fixed"
+    },
+    "84441": {
+      "id": 84441,
+      "reward": "[{\"itemId\":\"coin\",\"amount\":14},{\"itemId\":\"heroXpItem\",\"amount\":2},{\"itemId\":\"heroActiveItem\",\"amount\":1}]",
+      "type": "RanBox"
+    },
+    "84442": {
+      "id": 84442,
+      "reward": "[{\"itemId\":\"coin\",\"amount\":14},{\"itemId\":\"heroXpItem\",\"amount\":2},{\"itemId\":\"heroActiveItem\",\"amount\":1}]",
+      "type": "RanBox"
+    },
+    "84443": {
+      "id": 84443,
+      "reward": "[{\"itemId\":\"coin\",\"amount\":1},{\"itemId\":\"heroXpItem\",\"amount\":3},{\"itemId\":\"heroActiveItem\",\"amount\":1}]",
+      "type": "RanBox"
+    },
+    "84444": {
+      "id": 84444,
+      "reward": "[{\"itemId\":\"coin\",\"amount\":2},{\"itemId\":\"heroXpItem\",\"amount\":4},{\"itemId\":\"heroActiveItem\",\"amount\":1}]",
+      "type": "RanBox"
+    },
+    "84445": {
+      "id": 84445,
+      "reward": "[{\"itemId\":\"coin\",\"amount\":3},{\"itemId\":\"heroXpItem\",\"amount\":5},{\"itemId\":\"heroActiveItem\",\"amount\":2}]",
+      "type": "RanBox"
+    },
+    "84446": {
+      "id": 84446,
+      "reward": "[{\"itemId\":\"coin\",\"amount\":4},{\"itemId\":\"heroXpItem\",\"amount\":6},{\"itemId\":\"heroActiveItem\",\"amount\":2}]",
+      "type": "RanBox"
+    },
+    "84447": {
+      "id": 84447,
+      "reward": "[{\"itemId\":\"coin\",\"amount\":5},{\"itemId\":\"heroXpItem\",\"amount\":7},{\"itemId\":\"heroActiveItem\",\"amount\":2}]",
+      "type": "RanBox"
+    },
+    "84448": {
+      "id": 84448,
+      "reward": "[{\"itemId\":\"coin\",\"amount\":6},{\"itemId\":\"heroXpItem\",\"amount\":8},{\"itemId\":\"heroActiveItem\",\"amount\":3}]",
+      "type": "RanBox"
+    },
+    "84449": {
+      "id": 84449,
+      "reward": "[{\"itemId\":\"coin\",\"amount\":7},{\"itemId\":\"heroXpItem\",\"amount\":9},{\"itemId\":\"heroActiveItem\",\"amount\":3}]",
+      "type": "RanBox"
+    },
+    "84450": {
+      "id": 84450,
+      "reward": "[{\"itemId\":\"coin\",\"amount\":8},{\"itemId\":\"heroXpItem\",\"amount\":10},{\"itemId\":\"heroActiveItem\",\"amount\":4}]",
+      "type": "RanBox"
+    },
+    "84451": {
+      "id": 84451,
+      "reward": "[{\"itemId\":\"coin\",\"amount\":9},{\"itemId\":\"heroXpItem\",\"amount\":11},{\"itemId\":\"heroActiveItem\",\"amount\":4}]",
+      "type": "RanBox"
+    },
+    "84452": {
+      "id": 84452,
+      "reward": "[{\"itemId\":\"coin\",\"amount\":10},{\"itemId\":\"heroXpItem\",\"amount\":12},{\"itemId\":\"heroActiveItem\",\"amount\":5}]",
+      "type": "RanBox"
+    },
+    "84501": {
+      "id": 84501,
+      "reward": "[{\"itemId\":\"shopgem50d1h\",\"amount\":2}]",
+      "type": "Fixed"
+    },
+    "84502": {
+      "id": 84502,
+      "reward": "[{\"itemId\":\"shop100d1h\",\"amount\":2}]",
+      "type": "Fixed"
+    },
+    "84503": {
+      "id": 84503,
+      "reward": "[{\"itemId\":\"piggy50d1h\",\"amount\":2}]",
+      "type": "Fixed"
+    },
+    "84601": {
+      "id": 84601,
+      "reward": "[{\"itemId\":\"coin\",\"amount\":1}]",
+      "type": "CoinValueBonus"
+    },
+    "84602": {
+      "id": 84602,
+      "reward": "[{\"itemId\":\"coin\",\"amount\":2}]",
+      "type": "CoinValueBonus"
+    },
+    "84603": {
+      "id": 84603,
+      "reward": "[{\"itemId\":\"coin\",\"amount\":3}]",
+      "type": "CoinValueBonus"
+    },
+    "84604": {
+      "id": 84604,
+      "reward": "[{\"itemId\":\"coin\",\"amount\":5}]",
+      "type": "CoinValueBonus"
+    },
+    "84605": {
+      "id": 84605,
+      "reward": "[{\"itemId\":\"coin\",\"amount\":7}]",
+      "type": "CoinValueBonus"
+    },
+    "84606": {
+      "id": 84606,
+      "reward": "[{\"itemId\":\"coin\",\"amount\":10}]",
+      "type": "CoinValueBonus"
+    },
+    "84607": {
+      "id": 84607,
+      "reward": "[{\"itemId\":\"coin\",\"amount\":15}]",
+      "type": "CoinValueBonus"
+    },
+    "84608": {
+      "id": 84608,
+      "reward": "[{\"itemId\":\"coin\",\"amount\":20}]",
+      "type": "CoinValueBonus"
+    },
+    "84609": {
+      "id": 84609,
+      "reward": "[{\"itemId\":\"coin\",\"amount\":25}]",
+      "type": "CoinValueBonus"
+    },
+    "84610": {
+      "id": 84610,
+      "reward": "[{\"itemId\":\"coin\",\"amount\":35}]",
+      "type": "CoinValueBonus"
+    },
+    "84611": {
+      "id": 84611,
+      "reward": "[{\"itemId\":\"coin\",\"amount\":50}]",
+      "type": "CoinValueBonus"
+    },
+    "84612": {
+      "id": 84612,
+      "reward": "[{\"itemId\":\"coin\",\"amount\":65}]",
+      "type": "CoinValueBonus"
+    },
+    "84613": {
+      "id": 84613,
+      "reward": "[{\"itemId\":\"coin\",\"amount\":75}]",
+      "type": "CoinValueBonus"
+    },
+    "84614": {
+      "id": 84614,
+      "reward": "[{\"itemId\":\"coin\",\"amount\":100}]",
+      "type": "CoinValueBonus"
+    },
+    "84615": {
+      "id": 84615,
+      "reward": "[{\"itemId\":\"cardPack\",\"amount\":20}]",
+      "type": "CardBonus"
+    },
+    "84701": {
+      "id": 84701,
+      "reward": "[{\"itemId\":\"coin\",\"amount\":1}]",
+      "type": "CoinValueBonus"
+    },
+    "84702": {
+      "id": 84702,
+      "reward": "[{\"itemId\":\"coin\",\"amount\":2}]",
+      "type": "CoinValueBonus"
+    },
+    "84703": {
+      "id": 84703,
+      "reward": "[{\"itemId\":\"coin\",\"amount\":3}]",
+      "type": "CoinValueBonus"
+    },
+    "84704": {
+      "id": 84704,
+      "reward": "[{\"itemId\":\"coin\",\"amount\":4}]",
+      "type": "CoinValueBonus"
+    },
+    "84705": {
+      "id": 84705,
+      "reward": "[{\"itemId\":\"coin\",\"amount\":5}]",
+      "type": "CoinValueBonus"
+    },
+    "84706": {
+      "id": 84706,
+      "reward": "[{\"itemId\":\"coin\",\"amount\":7}]",
+      "type": "CoinValueBonus"
+    },
+    "84707": {
+      "id": 84707,
+      "reward": "[{\"itemId\":\"coin\",\"amount\":8}]",
+      "type": "CoinValueBonus"
+    },
+    "84708": {
+      "id": 84708,
+      "reward": "[{\"itemId\":\"coin\",\"amount\":9}]",
+      "type": "CoinValueBonus"
+    },
+    "84709": {
+      "id": 84709,
+      "reward": "[{\"itemId\":\"coin\",\"amount\":10}]",
+      "type": "CoinValueBonus"
+    },
+    "84710": {
+      "id": 84710,
+      "reward": "[{\"itemId\":\"coin\",\"amount\":12}]",
+      "type": "CoinValueBonus"
+    },
+    "84711": {
+      "id": 84711,
+      "reward": "[{\"itemId\":\"coin\",\"amount\":14}]",
+      "type": "CoinValueBonus"
+    },
+    "84712": {
+      "id": 84712,
+      "reward": "[{\"itemId\":\"coin\",\"amount\":15}]",
+      "type": "CoinValueBonus"
+    },
+    "84713": {
+      "id": 84713,
+      "reward": "[{\"itemId\":\"coin\",\"amount\":16}]",
+      "type": "CoinValueBonus"
+    },
+    "84714": {
+      "id": 84714,
+      "reward": "[{\"itemId\":\"coin\",\"amount\":18}]",
+      "type": "CoinValueBonus"
+    },
+    "84715": {
+      "id": 84715,
+      "reward": "[{\"itemId\":\"coin\",\"amount\":20}]",
+      "type": "CoinValueBonus"
+    },
+    "84716": {
+      "id": 84716,
+      "reward": "[{\"itemId\":\"coin\",\"amount\":22}]",
+      "type": "CoinValueBonus"
+    },
+    "84717": {
+      "id": 84717,
+      "reward": "[{\"itemId\":\"coin\",\"amount\":25}]",
+      "type": "CoinValueBonus"
+    },
+    "84718": {
+      "id": 84718,
+      "reward": "[{\"itemId\":\"coin\",\"amount\":26}]",
+      "type": "CoinValueBonus"
+    },
+    "84719": {
+      "id": 84719,
+      "reward": "[{\"itemId\":\"coin\",\"amount\":28}]",
+      "type": "CoinValueBonus"
+    },
+    "84720": {
+      "id": 84720,
+      "reward": "[{\"itemId\":\"coin\",\"amount\":32}]",
+      "type": "CoinValueBonus"
+    },
+    "84721": {
+      "id": 84721,
+      "reward": "[{\"itemId\":\"coin\",\"amount\":34}]",
+      "type": "CoinValueBonus"
+    },
+    "84722": {
+      "id": 84722,
+      "reward": "[{\"itemId\":\"coin\",\"amount\":35}]",
+      "type": "CoinValueBonus"
+    },
+    "84723": {
+      "id": 84723,
+      "reward": "[{\"itemId\":\"coin\",\"amount\":40}]",
+      "type": "CoinValueBonus"
+    },
+    "84724": {
+      "id": 84724,
+      "reward": "[{\"itemId\":\"coin\",\"amount\":42}]",
+      "type": "CoinValueBonus"
+    },
+    "84725": {
+      "id": 84725,
+      "reward": "[{\"itemId\":\"coin\",\"amount\":50}]",
+      "type": "CoinValueBonus"
+    },
+    "84726": {
+      "id": 84726,
+      "reward": "[{\"itemId\":\"coin\",\"amount\":65}]",
+      "type": "CoinValueBonus"
+    },
+    "84727": {
+      "id": 84727,
+      "reward": "[{\"itemId\":\"levelBlast\",\"amount\":720}]",
+      "type": "Fixed"
+    },
+    "84728": {
+      "id": 84728,
+      "reward": "[{\"itemId\":\"levelBlast\",\"amount\":1440}]",
+      "type": "Fixed"
+    },
+    "84729": {
+      "id": 84729,
+      "reward": "[{\"itemId\":\"cardPack\",\"amount\":18}]",
+      "type": "CardBonus"
+    },
+    "84730": {
+      "id": 84730,
+      "reward": "[{\"itemId\":\"cardPack\",\"amount\":16}]",
+      "type": "CardBonus"
+    },
+    "84731": {
+      "id": 84731,
+      "reward": "[{\"itemId\":\"coin\",\"amount\":1},{\"itemId\":\"heroXpItem\",\"amount\":1},{\"itemId\":\"heroActiveItem\",\"amount\":1}]",
+      "type": "RanBox"
+    },
+    "84732": {
+      "id": 84732,
+      "reward": "[{\"itemId\":\"coin\",\"amount\":1},{\"itemId\":\"heroXpItem\",\"amount\":2},{\"itemId\":\"heroActiveItem\",\"amount\":1}]",
+      "type": "RanBox"
+    },
+    "84733": {
+      "id": 84733,
+      "reward": "[{\"itemId\":\"coin\",\"amount\":2},{\"itemId\":\"heroXpItem\",\"amount\":3},{\"itemId\":\"heroActiveItem\",\"amount\":1}]",
+      "type": "RanBox"
+    },
+    "84734": {
+      "id": 84734,
+      "reward": "[{\"itemId\":\"coin\",\"amount\":2},{\"itemId\":\"heroXpItem\",\"amount\":4},{\"itemId\":\"heroActiveItem\",\"amount\":1}]",
+      "type": "RanBox"
+    },
+    "84735": {
+      "id": 84735,
+      "reward": "[{\"itemId\":\"coin\",\"amount\":3},{\"itemId\":\"heroXpItem\",\"amount\":5},{\"itemId\":\"heroActiveItem\",\"amount\":2}]",
+      "type": "RanBox"
+    },
+    "84736": {
+      "id": 84736,
+      "reward": "[{\"itemId\":\"coin\",\"amount\":4},{\"itemId\":\"heroXpItem\",\"amount\":6},{\"itemId\":\"heroActiveItem\",\"amount\":2}]",
+      "type": "RanBox"
+    },
+    "84737": {
+      "id": 84737,
+      "reward": "[{\"itemId\":\"coin\",\"amount\":5},{\"itemId\":\"heroXpItem\",\"amount\":7},{\"itemId\":\"heroActiveItem\",\"amount\":2}]",
+      "type": "RanBox"
+    },
+    "84738": {
+      "id": 84738,
+      "reward": "[{\"itemId\":\"coin\",\"amount\":6},{\"itemId\":\"heroXpItem\",\"amount\":8},{\"itemId\":\"heroActiveItem\",\"amount\":3}]",
+      "type": "RanBox"
+    },
+    "84739": {
+      "id": 84739,
+      "reward": "[{\"itemId\":\"coin\",\"amount\":7},{\"itemId\":\"heroXpItem\",\"amount\":9},{\"itemId\":\"heroActiveItem\",\"amount\":3}]",
+      "type": "RanBox"
+    },
+    "84740": {
+      "id": 84740,
+      "reward": "[{\"itemId\":\"coin\",\"amount\":8},{\"itemId\":\"heroXpItem\",\"amount\":10},{\"itemId\":\"heroActiveItem\",\"amount\":4}]",
+      "type": "RanBox"
+    },
+    "84741": {
+      "id": 84741,
+      "reward": "[{\"itemId\":\"coin\",\"amount\":9},{\"itemId\":\"heroXpItem\",\"amount\":11},{\"itemId\":\"heroActiveItem\",\"amount\":4}]",
+      "type": "RanBox"
+    },
+    "84742": {
+      "id": 84742,
+      "reward": "[{\"itemId\":\"coin\",\"amount\":10},{\"itemId\":\"heroXpItem\",\"amount\":12},{\"itemId\":\"heroActiveItem\",\"amount\":5}]",
+      "type": "RanBox"
+    },
+    "84743": {
+      "id": 84743,
+      "reward": "[{\"itemId\":\"coin\",\"amount\":1},{\"itemId\":\"heroXpItem\",\"amount\":2},{\"itemId\":\"heroActiveItem\",\"amount\":1}]",
+      "type": "RanBox"
+    },
+    "84744": {
+      "id": 84744,
+      "reward": "[{\"itemId\":\"coin\",\"amount\":2},{\"itemId\":\"heroXpItem\",\"amount\":3},{\"itemId\":\"heroActiveItem\",\"amount\":1}]",
+      "type": "RanBox"
+    },
+    "84745": {
+      "id": 84745,
+      "reward": "[{\"itemId\":\"coin\",\"amount\":2},{\"itemId\":\"heroXpItem\",\"amount\":4},{\"itemId\":\"heroActiveItem\",\"amount\":1}]",
+      "type": "RanBox"
+    },
+    "84746": {
+      "id": 84746,
+      "reward": "[{\"itemId\":\"coin\",\"amount\":3},{\"itemId\":\"heroXpItem\",\"amount\":5},{\"itemId\":\"heroActiveItem\",\"amount\":2}]",
+      "type": "RanBox"
+    },
+    "84747": {
+      "id": 84747,
+      "reward": "[{\"itemId\":\"coin\",\"amount\":4},{\"itemId\":\"heroXpItem\",\"amount\":6},{\"itemId\":\"heroActiveItem\",\"amount\":2}]",
+      "type": "RanBox"
+    },
+    "84748": {
+      "id": 84748,
+      "reward": "[{\"itemId\":\"coin\",\"amount\":5},{\"itemId\":\"heroXpItem\",\"amount\":7},{\"itemId\":\"heroActiveItem\",\"amount\":2}]",
+      "type": "RanBox"
+    },
+    "84749": {
+      "id": 84749,
+      "reward": "[{\"itemId\":\"coin\",\"amount\":6},{\"itemId\":\"heroXpItem\",\"amount\":8},{\"itemId\":\"heroActiveItem\",\"amount\":3}]",
+      "type": "RanBox"
+    },
+    "84750": {
+      "id": 84750,
+      "reward": "[{\"itemId\":\"coin\",\"amount\":7},{\"itemId\":\"heroXpItem\",\"amount\":9},{\"itemId\":\"heroActiveItem\",\"amount\":3}]",
+      "type": "RanBox"
+    },
+    "84751": {
+      "id": 84751,
+      "reward": "[{\"itemId\":\"coin\",\"amount\":8},{\"itemId\":\"heroXpItem\",\"amount\":10},{\"itemId\":\"heroActiveItem\",\"amount\":4}]",
+      "type": "RanBox"
+    },
+    "84752": {
+      "id": 84752,
+      "reward": "[{\"itemId\":\"coin\",\"amount\":9},{\"itemId\":\"heroXpItem\",\"amount\":11},{\"itemId\":\"heroActiveItem\",\"amount\":4}]",
+      "type": "RanBox"
+    },
+    "84753": {
+      "id": 84753,
+      "reward": "[{\"itemId\":\"coin\",\"amount\":10},{\"itemId\":\"heroXpItem\",\"amount\":12},{\"itemId\":\"heroActiveItem\",\"amount\":5}]",
+      "type": "RanBox"
+    },
+    "84754": {
+      "id": 84754,
+      "reward": "[{\"itemId\":\"coin\",\"amount\":11},{\"itemId\":\"heroXpItem\",\"amount\":13},{\"itemId\":\"heroActiveItem\",\"amount\":5}]",
+      "type": "RanBox"
+    },
+    "84755": {
+      "id": 84755,
+      "reward": "[{\"itemId\":\"coin\",\"amount\":2},{\"itemId\":\"heroXpItem\",\"amount\":3},{\"itemId\":\"heroActiveItem\",\"amount\":1}]",
+      "type": "RanBox"
+    },
+    "84756": {
+      "id": 84756,
+      "reward": "[{\"itemId\":\"coin\",\"amount\":2},{\"itemId\":\"heroXpItem\",\"amount\":4},{\"itemId\":\"heroActiveItem\",\"amount\":1}]",
+      "type": "RanBox"
+    },
+    "84757": {
+      "id": 84757,
+      "reward": "[{\"itemId\":\"coin\",\"amount\":3},{\"itemId\":\"heroXpItem\",\"amount\":5},{\"itemId\":\"heroActiveItem\",\"amount\":2}]",
+      "type": "RanBox"
+    },
+    "84758": {
+      "id": 84758,
+      "reward": "[{\"itemId\":\"coin\",\"amount\":4},{\"itemId\":\"heroXpItem\",\"amount\":6},{\"itemId\":\"heroActiveItem\",\"amount\":2}]",
+      "type": "RanBox"
+    },
+    "84759": {
+      "id": 84759,
+      "reward": "[{\"itemId\":\"coin\",\"amount\":5},{\"itemId\":\"heroXpItem\",\"amount\":7},{\"itemId\":\"heroActiveItem\",\"amount\":2}]",
+      "type": "RanBox"
+    },
+    "84760": {
+      "id": 84760,
+      "reward": "[{\"itemId\":\"coin\",\"amount\":6},{\"itemId\":\"heroXpItem\",\"amount\":8},{\"itemId\":\"heroActiveItem\",\"amount\":3}]",
+      "type": "RanBox"
+    },
+    "84761": {
+      "id": 84761,
+      "reward": "[{\"itemId\":\"coin\",\"amount\":7},{\"itemId\":\"heroXpItem\",\"amount\":9},{\"itemId\":\"heroActiveItem\",\"amount\":3}]",
+      "type": "RanBox"
+    },
+    "84762": {
+      "id": 84762,
+      "reward": "[{\"itemId\":\"coin\",\"amount\":8},{\"itemId\":\"heroXpItem\",\"amount\":10},{\"itemId\":\"heroActiveItem\",\"amount\":4}]",
+      "type": "RanBox"
+    },
+    "84763": {
+      "id": 84763,
+      "reward": "[{\"itemId\":\"coin\",\"amount\":9},{\"itemId\":\"heroXpItem\",\"amount\":11},{\"itemId\":\"heroActiveItem\",\"amount\":4}]",
+      "type": "RanBox"
+    },
+    "84764": {
+      "id": 84764,
+      "reward": "[{\"itemId\":\"coin\",\"amount\":10},{\"itemId\":\"heroXpItem\",\"amount\":12},{\"itemId\":\"heroActiveItem\",\"amount\":5}]",
+      "type": "RanBox"
+    },
+    "84765": {
+      "id": 84765,
+      "reward": "[{\"itemId\":\"coin\",\"amount\":11},{\"itemId\":\"heroXpItem\",\"amount\":13},{\"itemId\":\"heroActiveItem\",\"amount\":5}]",
+      "type": "RanBox"
+    },
+    "84766": {
+      "id": 84766,
+      "reward": "[{\"itemId\":\"coin\",\"amount\":12},{\"itemId\":\"heroXpItem\",\"amount\":14},{\"itemId\":\"heroActiveItem\",\"amount\":5}]",
+      "type": "RanBox"
+    },
+    "84901": {
+      "id": 84901,
+      "reward": "[{\"itemId\":\"halfTimeLobbyCoin\",\"amount\":1440}]",
+      "type": "Fixed"
+    },
+    "84902": {
+      "id": 84902,
+      "reward": "[{\"itemId\":\"piggy50d1h\",\"amount\":1}]",
+      "type": "Fixed"
+    },
+    "84903": {
+      "id": 84903,
+      "reward": "[{\"itemId\":\"cardPack\",\"amount\":9}]",
+      "type": "CardBonus"
+    },
+    "84904": {
+      "id": 84904,
+      "reward": "[{\"itemId\":\"legend10160\",\"amount\":360}]",
+      "type": "Fixed"
+    },
+    "84905": {
+      "id": 84905,
+      "reward": "[{\"itemId\":\"cardPack\",\"amount\":22}]",
+      "type": "CardBonus"
+    },
+    "84906": {
+      "id": 84906,
+      "reward": "[{\"itemId\":\"shop120d1h\",\"amount\":1}]",
+      "type": "Fixed"
+    },
+    "84907": {
+      "id": 84907,
+      "reward": "[{\"itemId\":\"card\",\"amount\":121}]",
+      "type": "CardBonus"
+    },
+    "84908": {
+      "id": 84908,
+      "reward": "[{\"itemId\":\"luckySeven\",\"amount\":720}]",
+      "type": "Fixed"
+    },
+    "84909": {
+      "id": 84909,
+      "reward": "[{\"itemId\":\"wheel\",\"amount\":1}]",
+      "type": "Fixed"
+    },
+    "85001": {
+      "id": 85001,
+      "reward": "[{\"itemId\":\"cashback2\",\"amount\":1}]",
+      "type": "Fixed"
+    },
+    "85002": {
+      "id": 85002,
+      "reward": "[{\"itemId\":\"cashback3\",\"amount\":1}]",
+      "type": "Fixed"
+    },
+    "85003": {
+      "id": 85003,
+      "reward": "[{\"itemId\":\"cashback6\",\"amount\":1}]",
+      "type": "Fixed"
+    },
+    "85004": {
+      "id": 85004,
+      "reward": "[{\"itemId\":\"cashback9\",\"amount\":1}]",
+      "type": "Fixed"
+    },
+    "85005": {
+      "id": 85005,
+      "reward": "[{\"itemId\":\"cashback12\",\"amount\":1}]",
+      "type": "Fixed"
+    },
+    "85101": {
+      "id": 85101,
+      "reward": "[{\"itemId\":\"shopgem50d1h\",\"amount\":2},{\"itemId\":\"luckySeven\",\"amount\":720}]",
+      "type": "Fixed"
+    },
+    "85102": {
+      "id": 85102,
+      "reward": "[{\"itemId\":\"shop100d1h\",\"amount\":2},{\"itemId\":\"levelBlast\",\"amount\":720}]",
+      "type": "Fixed"
+    },
+    "85103": {
+      "id": 85103,
+      "reward": "[{\"itemId\":\"piggy50d1h\",\"amount\":2},{\"itemId\":\"wheel\",\"amount\":1}]",
+      "type": "Fixed"
+    },
+    "85104": {
+      "id": 85104,
+      "reward": "[{\"itemId\":\"shopgem30d1h\",\"amount\":2}]",
+      "type": "Fixed"
+    },
+    "85105": {
+      "id": 85105,
+      "reward": "[{\"itemId\":\"cardPack\",\"amount\":9}]",
+      "type": "CardBonus"
+    },
+    "85106": {
+      "id": 85106,
+      "reward": "[{\"itemId\":\"shop60d1h\",\"amount\":2},{\"itemId\":\"levelBlast\",\"amount\":180}]",
+      "type": "Fixed"
+    },
+    "85107": {
+      "id": 85107,
+      "reward": "[{\"itemId\":\"piggy30d1h\",\"amount\":2}]",
+      "type": "Fixed"
+    },
+    "85108": {
+      "id": 85108,
+      "reward": "[{\"itemId\":\"cardPack\",\"amount\":16}]",
+      "type": "CardBonus"
+    },
+    "85109": {
+      "id": 85109,
+      "reward": "[{\"itemId\":\"shopgem50d1h\",\"amount\":2},{\"itemId\":\"luckySeven\",\"amount\":720}]",
+      "type": "Fixed"
+    },
+    "85110": {
+      "id": 85110,
+      "reward": "[{\"itemId\":\"shop100d1h\",\"amount\":2},{\"itemId\":\"wheelBoom\",\"amount\":720}]",
+      "type": "Fixed"
+    },
+    "85111": {
+      "id": 85111,
+      "reward": "[{\"itemId\":\"piggy50d1h\",\"amount\":2},{\"itemId\":\"wheel\",\"amount\":1}]",
+      "type": "Fixed"
+    },
+    "85201": {
+      "id": 85201,
+      "reward": "[{\"itemId\":\"cardPack\",\"amount\":18},{\"itemId\":\"bingoBall\",\"amount\":10},{\"itemId\":\"heroXpItem\",\"amount\":15000}]",
+      "type": "Fixed"
+    },
+    "85202": {
+      "id": 85202,
+      "reward": "[{\"itemId\":\"cardPack\",\"amount\":21},{\"itemId\":\"bingoBall\",\"amount\":30},{\"itemId\":\"luckySeven\",\"amount\":1440}]",
+      "type": "Fixed"
+    },
+    "85301": {
+      "id": 85301,
+      "reward": "[{\"itemId\":\"shop100d1h\",\"amount\":1}]",
+      "type": "Fixed"
+    },
+    "85302": {
+      "id": 85302,
+      "reward": "[{\"itemId\":\"shop200d1h\",\"amount\":1}]",
+      "type": "Fixed"
+    },
+    "85303": {
+      "id": 85303,
+      "reward": "[{\"itemId\":\"piggy50d1h\",\"amount\":1}]",
+      "type": "Fixed"
+    },
+    "85304": {
+      "id": 85304,
+      "reward": "[{\"itemId\":\"cardPack\",\"amount\":19}]",
+      "type": "CardBonus"
+    },
+    "85305": {
+      "id": 85305,
+      "reward": "[{\"itemId\":\"cardPack\",\"amount\":21}]",
+      "type": "CardBonus"
+    },
+    "85306": {
+      "id": 85306,
+      "reward": "[{\"itemId\":\"cardPack\",\"amount\":22}]",
+      "type": "CardBonus"
+    },
+    "85401": {
+      "id": 85401,
+      "reward": "[{\"itemId\":\"cardPack\",\"amount\":19}]",
+      "type": "CardBonus"
+    },
+    "85402": {
+      "id": 85402,
+      "reward": "[{\"itemId\":\"cardPack\",\"amount\":22}]",
+      "type": "CardBonus"
+    },
+    "85403": {
+      "id": 85403,
+      "reward": "[{\"itemId\":\"card\",\"amount\":122}]",
+      "type": "CardBonus"
+    },
+    "85501": {
+      "id": 85501,
+      "reward": "[{\"itemId\":\"card\",\"amount\":121}]",
+      "type": "CardBonus"
+    },
+    "85502": {
+      "id": 85502,
+      "reward": "[{\"itemId\":\"cardPack\",\"amount\":19}]",
+      "type": "CardBonus"
+    },
+    "85503": {
+      "id": 85503,
+      "reward": "[{\"itemId\":\"cardPack\",\"amount\":18}]",
+      "type": "CardBonus"
+    },
+    "85504": {
+      "id": 85504,
+      "reward": "[{\"itemId\":\"card\",\"amount\":122}]",
+      "type": "CardBonus"
+    },
+    "85505": {
+      "id": 85505,
+      "reward": "[{\"itemId\":\"cardPack\",\"amount\":22}]",
+      "type": "CardBonus"
+    },
+    "85506": {
+      "id": 85506,
+      "reward": "[{\"itemId\":\"cardPack\",\"amount\":21}]",
+      "type": "CardBonus"
+    }
+  }
+}
+
+[SSH] completed
+[SSH] exit-status: 0
+
+[SSH] executing post build script:
+
+
+Finished: SUCCESS

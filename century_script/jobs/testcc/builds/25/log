@@ -1,0 +1,225 @@
+Started by user [8mha:////4NL15lwhNok46o8LpNIYOqAIaurwr6Vm2yW5YSW4R5+wAAAAlh+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyWEgYu/dLi1CL9ovz8EgDKVWzSvwAAAA==[0mroot
+Running as SYSTEM
+[EnvInject] - Loading node environment variables.
+Building in workspace /var/jenkins_home/workspace/testcc
+[8mha:////4M8HpawmeaXTFxIpnlDivZAQHCiL3FbICHRC3fL+3TbTAAAAqx+LCAAAAAAAAP9b85aBtbiIQSujNKU4P0+vIKc0PTOvWC8xrzgzOT8nv0gvMbkkEyjhCKb88ktSdwVsu2efuqidiYHRh4EDIu2ZUsIg5JOVWJaon5OYl64fXFKUmZduXVHEIAU1ODk/rzg/J1XPGUKDDGKAAEYmBoaKghIGFcvUVPOUtMRE3dRkU3NdExODVN0ko2RL3UTzpERLU4NEM0szCwBAERybrwAAAA==[0m[SSH] executing pre build script:
+server_name="pkcp"
+variable_args="disable_rtp_limit"
+
+#!/bin/bash
+source /root/jenkins/jk_func.sh
+
+file_lock
+echo ${server_name}
+check_env_args ${server_name}
+echo ${variable_args}
+
+yaml $conf_file "['$server_name']"
+branch_name=$(yaml $conf_file "['$server_name']['game']")
+server_port=$(yaml $conf_file "['$server_name']['port']")
+echo ${branch_name}
+
+# run
+cd /mnt/slots/cc-server
+git cd $branch_name
+check_last_cmd $branch_name
+git pull
+check_last_cmd pull
+cd /mnt/slots/cc-slots-land/batch
+git checkout feature/jenkins
+
+set_env_args ${variable_args}
+./compile_gdb.sh $server_name && ./build_image_gdb.sh $server_name && ./run_image_gdb.sh $server_name $server_port
+check_last_cmd compile
+clear_env_args
+
+git checkout master
+
+file_unlock
+
+
+
+
+脚本可执行
+pkcp
+disable_rtp_limit
+{'bandit': 'develop', 'game': 'feature/gdb_develop', 'cc-conf': 'deploy-cc-conf', 'desc': 'pkcp', 'rpc_port': 10009, 'bandit-conf': 'deploy-bandit-conf', 'port': 9999}
+feature/gdb_develop
+Already on 'feature/gdb_develop'
+Already up-to-date.
+Already on 'feature/jenkins'
+disable_rtp_limit
+disable_rtp_limit
+[0;35m              ARCH:[0m linux
+[0;35m          LOCAL_IP:[0m 10.0.84.16
+[0;35m               APP:[0m pkcp
+[0;32m           APP_DIR:[0m /home/user00/cc/cc-slots-land/stage/app=pkcp/app
+[0;32m       Fluentd-DIR:[0m /mnt/slots/cc-slots-land/batch/pkcp/fluentd
+[0;32m         Mongo-DIR:[0m /mnt/slots/cc-slots-land/batch/pkcp/mongo
+[0;32m         Redis-DIR:[0m /mnt/slots/cc-slots-land/batch/pkcp/redis
+[0;32m       PM_CONF_DIR:[0m /home/user00/cc/cc-conf/gen/rawdata/server
+[0;35m  BACKEND_CODE_DIR:[0m /home/user00/cc/cc-server
+[0;35m  BACKEND_CONF_DIR:[0m /home/user00/cc/cc-conf
+[1;33m   BANDIT_CODE_DIR:[0m /home/user00/cc/bandit-server
+[1;33m   BANDIT_CONF_DIR:[0m /home/user00/cc/bandit-conf
+[0;35m   BACKEND_PM_PATH:[0m /pkcp_dev_backend
+[1;33m    BANDIT_PM_PATH:[0m /pkcp_dev_bandit
+[0;35m           Network:[0m pkcp
+[0;35m    ETCD_ENDPOINTS:[0m 10.0.84.16:2379
+[0;35m         REDIS_URI:[0m pkcp-redis:6379
+[0;35m Backend-Container:[0m pkcp-backend
+[1;33m  BANDIT-Container:[0m pkcp-rpc
+[0;32m Fluentd-Container:[0m pkcp-fluentd
+[0;32m   Mongo-Container:[0m pkcp-mongo
+[0;32m   Redis-Container:[0m pkcp-redis
+[1;33m    BUILD TARGET:[0m game
+[1;33m   BUILD COMMAND:[0m cd proto && make server -B && cd .. && server/output/build-server_gdb.sh docker
+[1;33m           IMAGE:[0m slots/backend-builder:latest
+[1;33m       CONTAINER:[0m backend-builder
+[1;33m          GO_DIR:[0m /home/user00/cc/cc-slots-land/go
+[1;33m        CODE_DIR:[0m /home/user00/cc/cc-server
+[1;33m        CONF_DIR:[0m /home/user00/cc/cc-conf
+[1;33m       BUILD_DIR:[0m /slots
+[1;33m  BUILD_CONF_DIR:[0m /cc-conf
+[1;33m     CONFIG_FILE:[0m pkcp/config.ini
+[1;33mCONFIG_FILE_PROD:[0m pkcp/config.ini
+[0;32mMOUNT_CONF_LOADER => /home/user00/cc/cc-conf/gen/golang/conf:/slots/server/pkg/gen/golang/conf[0m
+[0;32m MOUNT_CONF_MODEL => /home/user00/cc/cc-conf/gen/golang/rawdata:/cc-conf/gen/golang/rawdata[0m
+[0;36mdocker run -it   --name "backend-builder"   --hostname "backend-builder"   -v "/home/user00/cc/cc-slots-land/go":/go   -v "/home/user00/cc/cc-server":"/slots"   -v "/home/user00/cc/cc-conf":"/cc-conf"   -v "/home/user00/cc/cc-conf/gen/golang/conf:/slots/server/pkg/gen/golang/conf"   -v "/home/user00/cc/cc-conf/gen/golang/rawdata:/cc-conf/gen/golang/rawdata"    "slots/backend-builder:latest"   sh -c "cd proto && make server -B && cd .. && server/output/build-server_gdb.sh docker"[0m
+rm ../server/pb/*.pb.go 2>/dev/null || :
+protoc --go_out=../server/pb *.proto
+[0;32mbuilding "plutus-server"[0m
+[0;33mLDFLAGS[0m = [0;36m-X 'plutus/core.BuildGoVersion=go1.17.12 linux/amd64' -X 'plutus/core.BuildTime=2023-03-17T12:08:40+0800' -X 'plutus/core.BuildType=docker' -X 'plutus/core.BuildHost=backend-builder' -X 'plutus/core.BuildGit=feature/gdb_develop:b1525d6cc-dirty' -X 'plutus/core.BuildConf=v0.0.67'[0m
+[0;33mTARGET[0m = [0;36m/slots/server/cmd/main/plutus-server-next[0m
+[0;32mreset app dir: /home/user00/cc/cc-slots-land/stage/app=pkcp/app[0m
+[0;32mcopy compiled binary to app dir...[0m
+[0;32mcopy server config: pkcp/config.ini /home/user00/cc/cc-slots-land/stage/app=pkcp/app/config.ini[0m
+[0;32mremove container: backend-builder[0m
+[0;36mreclaim resources: backend-builder b0e88b8d3003[0m
+b0e88b8d3003
+b0e88b8d3003
+[0;32m/home/user00/cc/cc-slots-land/stage[0m
+Sending build context to Docker daemon  557.1kBSending build context to Docker daemon  8.913MBSending build context to Docker daemon  17.83MBSending build context to Docker daemon  26.74MBSending build context to Docker daemon  35.65MBSending build context to Docker daemon  44.56MBSending build context to Docker daemon  52.36MBSending build context to Docker daemon  61.28MBSending build context to Docker daemon  70.19MBSending build context to Docker daemon   79.1MBSending build context to Docker daemon   86.9MBSending build context to Docker daemon   94.7MBSending build context to Docker daemon  103.1MBSending build context to Docker daemon    112MBSending build context to Docker daemon  120.3MBSending build context to Docker daemon  128.7MBSending build context to Docker daemon  136.5MBSending build context to Docker daemon  143.7MBSending build context to Docker daemon  152.1MBSending build context to Docker daemon  160.4MBSending build context to Docker daemon  168.8MBSending build context to Docker daemon  177.7MBSending build context to Docker daemon  186.1MBSending build context to Docker daemon  194.4MBSending build context to Docker daemon  202.8MBSending build context to Docker daemon  211.1MBSending build context to Docker daemon  219.5MBSending build context to Docker daemon  227.8MBSending build context to Docker daemon  236.7MBSending build context to Docker daemon  245.7MBSending build context to Docker daemon  254.6MBSending build context to Docker daemon  262.9MBSending build context to Docker daemon  270.7MBSending build context to Docker daemon  279.1MBSending build context to Docker daemon    288MBSending build context to Docker daemon  288.4MB
+Step 1/7 : FROM golang:1.17-alpine
+ ---> 270c4f58750f
+Step 2/7 : RUN CGO_ENABLED=0 go install -ldflags "-s -w -extldflags '-static'" github.com/go-delve/delve/cmd/dlv@v1.7.3
+ ---> Using cache
+ ---> 2dc4cf277075
+Step 3/7 : RUN apk update 	&& apk add tzdata     && cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime     && echo "Asia/Shanghai" >  /etc/timezone 	&& echo 'alias l="ls -ltA"' >> ~/.bashrc
+ ---> Using cache
+ ---> a64005fcfe77
+Step 4/7 : ARG app
+ ---> Using cache
+ ---> 2345031c5cab
+Step 5/7 : ADD $app/app/ /slots
+ ---> 4ba4eea98951
+Step 6/7 : WORKDIR /slots
+ ---> Running in e47694626c7f
+Removing intermediate container e47694626c7f
+ ---> 9fded2540acf
+Step 7/7 : ENTRYPOINT ["/go/bin/dlv", "--listen=:4000", "--headless=true", "--log=true", "--accept-multiclient", "--api-version=2", "--check-go-version=false", "exec", "/slots/plutus-server"]
+ ---> Running in 278018e711a5
+Removing intermediate container 278018e711a5
+ ---> 1ef4005e6163
+Successfully built 1ef4005e6163
+Successfully tagged plutus:pkcp
+[0;32mgc: app=pkcp/app/backend[0m
+/mnt/slots/cc-slots-land/batch
+[0;35m              ARCH:[0m linux
+[0;35m          LOCAL_IP:[0m 10.0.84.16
+[0;35m               APP:[0m pkcp
+[0;32m           APP_DIR:[0m /home/user00/cc/cc-slots-land/stage/app=pkcp/app
+[0;32m       Fluentd-DIR:[0m /mnt/slots/cc-slots-land/batch/pkcp/fluentd
+[0;32m         Mongo-DIR:[0m /mnt/slots/cc-slots-land/batch/pkcp/mongo
+[0;32m         Redis-DIR:[0m /mnt/slots/cc-slots-land/batch/pkcp/redis
+[0;32m       PM_CONF_DIR:[0m /home/user00/cc/cc-conf/gen/rawdata/server
+[0;35m  BACKEND_CODE_DIR:[0m /home/user00/cc/cc-server
+[0;35m  BACKEND_CONF_DIR:[0m /home/user00/cc/cc-conf
+[1;33m   BANDIT_CODE_DIR:[0m /home/user00/cc/bandit-server
+[1;33m   BANDIT_CONF_DIR:[0m /home/user00/cc/bandit-conf
+[0;35m   BACKEND_PM_PATH:[0m /pkcp_dev_backend
+[1;33m    BANDIT_PM_PATH:[0m /pkcp_dev_bandit
+[0;35m           Network:[0m pkcp
+[0;35m    ETCD_ENDPOINTS:[0m 10.0.84.16:2379
+[0;35m         REDIS_URI:[0m pkcp-redis:6379
+[0;35m Backend-Container:[0m pkcp-backend
+[1;33m  BANDIT-Container:[0m pkcp-rpc
+[0;32m Fluentd-Container:[0m pkcp-fluentd
+[0;32m   Mongo-Container:[0m pkcp-mongo
+[0;32m   Redis-Container:[0m pkcp-redis
+
+[0;32mstart pkcp-backend[0m
+[0;36m  docker run -d     -e app=pkcp.dev     -e etcd_endpoints=10.0.84.16:2379     -e sys_env_name=pkcp     -e sys_stage=dev_backend     -e hostname=10.0.84.16     -e port=9999 	--env-file .env     -p 9999:9000 -p 10099:9168 -p 5998:4000     --network pkcp     --name pkcp-backend     plutus:pkcp[0m
+[0;36mreclaim resources: pkcp-backend a706234189bc[0m
+a706234189bc
+a706234189bc
+97f98551af65ae18bf8595e48b684b4a8f3421911a07f3b74e75789486659e37
+[0;32mwaiting for pkcp-backend...[0m
+[0;32m=====> try 0 times[0m
+curl: (7) Failed connect to 0.0.0.0:9999; Connection refused
+[0;32m=====> try 1 times[0m
+curl: (7) Failed connect to 0.0.0.0:9999; Connection refused
+[0;32m=====> try 2 times[0m
+curl: (7) Failed connect to 0.0.0.0:9999; Connection refused
+[0;32m=====> try 3 times[0m
+curl: (7) Failed connect to 0.0.0.0:9999; Connection refused
+[0;32m=====> try 4 times[0m
+curl: (7) Failed connect to 0.0.0.0:9999; Connection refused
+[0;32m=====> try 5 times[0m
+curl: (7) Failed connect to 0.0.0.0:9999; Connection refused
+[0;32m=====> try 6 times[0m
+curl: (7) Failed connect to 0.0.0.0:9999; Connection refused
+[0;32m=====> try 7 times[0m
+curl: (7) Failed connect to 0.0.0.0:9999; Connection refused
+[0;32m=====> try 8 times[0m
+curl: (7) Failed connect to 0.0.0.0:9999; Connection refused
+[0;32m=====> try 9 times[0m
+curl: (7) Failed connect to 0.0.0.0:9999; Connection refused
+API server listening at: [::]:4000
+2023-03-17T12:10:53+08:00 warning layer=rpc Listening for remote connections (connections are not authenticated nor encrypted)
+2023-03-17T12:10:53+08:00 info layer=debugger launching process with args: [/slots/plutus-server]
+could not launch process: fork/exec /slots/plutus-server: operation not permitted
+
+[0;32mpkcp-backend ready[0m
+[1;33mversion:[0m [0;32m[0m
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+Switched to branch 'master'
+释放脚本锁
+
+[SSH] completed
+[SSH] exit-status: 0
+
+[SSH] executing post build script:
+server_name="pkcp"
+BUILD_URL="http://10.0.84.16:8083/job/testcc/25/"
+
+check_container() {
+    exist=`docker inspect --format '{{.State.Running}}' $1`
+    if [[ $exist == `false` ]];then
+        echo $1" not OK"
+        curl 'https://oapi.dingtalk.com/robot/send?access_token=13aa551ba8a79265c4424316089cd31c4f479b0f685f3d5a503b0ab6a1a42ec7' -H 'Content-Type: application/json'  -d '{"msgtype": "link","link": {"messageUrl": "'"${BUILD_URL}"'/console","title": "Jenkins-Server['"${server_name}"']-Failed","text": "check log for more detail"}}'
+        exit 1
+    else
+        echo $1" Check"
+    fi
+}
+
+check_whole_server() {
+	check_container $1-backend
+	check_container $1-rpc
+	check_container $1-redis
+	check_container $1-mongo
+	check_container $1-fluentd
+}
+sleep 5
+check_whole_server $server_name
+pkcp-backend Check
+pkcp-rpc Check
+pkcp-redis Check
+pkcp-mongo Check
+pkcp-fluentd Check
+
+[SSH] completed
+[SSH] exit-status: 0
+
+Finished: SUCCESS

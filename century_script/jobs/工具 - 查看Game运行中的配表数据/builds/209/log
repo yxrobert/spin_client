@@ -1,0 +1,321 @@
+Started by user [8mha:////4NL15lwhNok46o8LpNIYOqAIaurwr6Vm2yW5YSW4R5+wAAAAlh+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyWEgYu/dLi1CL9ovz8EgDKVWzSvwAAAA==[0mroot
+Running as SYSTEM
+[EnvInject] - Loading node environment variables.
+Building in workspace /var/jenkins_home/workspace/工具 - 查看Game运行中的配表数据
+[8mha:////4HX/cPX3YMMg4EJewunLpH4iv6bw9Gc/e1dboTEp5313AAAAqx+LCAAAAAAAAP9b85aBtbiIQSujNKU4P0+vIKc0PTOvWC8xrzgzOT8nv0gvMbkkEyjhCKb88ktSdwVsu2efuqidiYHRh4EDIu2ZUsIg5JOVWJaon5OYl64fXFKUmZduXVHEIAU1ODk/rzg/J1XPGUKDDGKAAEYmBoaKghIGlRRzI9NEkyRL3aTEZFNdE9PUZN3EJNM0XQOTZGNLg9QUUyMDYwDlm42ErwAAAA==[0m[SSH] executing pre build script:
+server_name="pkreview"
+conf_name="ThemeTags"
+
+echo $server_name
+echo $conf_name
+
+#!/bin/bash -e
+
+cd /root/jenkins && ./etcdwatcher -svr $server_name -conf $conf_name
+
+pkreview
+ThemeTags
+949
+{"ThemeTagsMap":{"10010":{"id":10010,"maskTimeout":300,"name":"Icy Princess"},"10020":{"id":10020,"maskTimeout":300,"name":"Shiny Vegas"},"10030":{"id":10030,"bingo":true,"hot":true,"maskTimeout":300,"name":"Mighty Genie"},"10040":{"id":10040,"maskTimeout":300,"name":"Forturn God"},"10050":{"id":10050,"maskTimeout":300,"name":"Bingo Moo"},"10060":{"id":10060,"bingo":true,"hot":true,"maskTimeout":300,"name":"WildWickedWitch"},"10070":{"id":10070,"maskTimeout":300,"name":"Bank Of Piggy"},"10080":{"id":10080,"maskTimeout":300,"name":"Gorilla"},"10090":{"id":10090,"bingo":true,"hot":true,"maskTimeout":300,"name":"Century Train"},"10100":{"id":10100,"maskTimeout":300,"name":"Franken"},"10110":{"id":10110,"maskTimeout":300,"name":"Hook's Quest"},"10120":{"id":10120,"bingo":true,"maskTimeout":300,"name":"Nuggets Blast"},"10130":{"id":10130,"bingo":true,"maskTimeout":300,"name":"Wicked Fire"},"10140":{"id":10140,"bingo":true,"maskTimeout":300,"name":"Legend of Cleo"},"10150":{"id":10150,"bingo":true,"maskTimeout":300,"name":"Pot O Luck"},"10160":{"id":10160,"GL":true,"bingo":true,"maskTimeout":300,"name":"Dragon Cubs"},"10170":{"id":10170,"bingo":true,"maskTimeout":300,"name":"Grand Rhino"},"10180":{"id":10180,"bingo":true,"hot":true,"maskTimeout":300,"name":"Coin King"},"10190":{"id":10190,"bingo":true,"maskTimeout":300,"name":"Skunk Riches","puzzle":true},"10200":{"id":10200,"bingo":true,"hot":true,"maskTimeout":300,"name":"Rising Lanterns"},"10210":{"id":10210,"bingo":true,"hot":true,"maskTimeout":300,"name":"Zhao Cai Jin Bao"},"10220":{"id":10220,"bingo":true,"maskTimeout":300,"name":"Zeus King of God"},"10230":{"id":10230,"GL":true,"bingo":true,"maskTimeout":300,"name":"Queen of Goldenland"},"10240":{"id":10240,"bingo":true,"maskTimeout":300,"name":"Cheese Burglar"},"10250":{"id":10250,"bingo":true,"maskTimeout":300,"name":"Wild Circus"},"10260":{"id":10260,"bingo":true,"maskTimeout":300,"name":"Fire Blast"},"10270":{"id":10270,"bingo":true,"maskTimeout":300,"name":"Magic Destiny"},"10280":{"id":10280,"bingo":true,"maskTimeout":300,"name":"Sunny Birds"},"10290":{"id":10290,"GL":true,"bingo":true,"maskTimeout":300,"name":"Tiki Fever"},"10300":{"id":10300,"bingo":true,"maskTimeout":300,"name":"Mermaid Princess"},"10310":{"id":10310,"bingo":true,"maskTimeout":300,"name":"Wild Zorro","puzzle":true},"10320":{"id":10320,"bingo":true,"maskTimeout":300,"name":"Hallowin Hotel"},"10330":{"id":10330,"bingo":true,"maskTimeout":300,"name":"Ghost Blaster","new":true},"10340":{"id":10340,"bingo":true,"maskTimeout":300,"name":"Santa Respin"},"10350":{"id":10350,"bingo":true,"dev":true,"maskTimeout":300,"name":"Siberian Wolf0","new":true},"10351":{"id":10351,"bingo":true,"dev":true,"maskTimeout":300,"name":"Siberian Wolf1"},"10360":{"id":10360,"bingo":true,"maskTimeout":300,"name":"Century Train Luxury"},"10370":{"id":10370,"bingo":true,"dev":true,"maskTimeout":300,"name":"Disco Star"},"10380":{"id":10380,"bingo":true,"maskTimeout":300,"name":"Double Ingots"},"10390":{"id":10390,"bingo":true,"dev":true,"maskTimeout":300,"name":"Lava Cash"},"10400":{"id":10400,"GL":true,"bingo":true,"dev":true,"maskTimeout":300,"name":"Build Your Love","new":true},"10420":{"id":10420,"dev":true,"maskTimeout":300,"name":"Oinknado"},"10430":{"id":10430,"dev":true,"maskTimeout":300,"name":"Penguin's Hammer"},"10440":{"id":10440,"bingo":true,"dev":true,"maskTimeout":300,"name":"Lucky Pots 777","new":true},"10450":{"id":10450,"dev":true,"maskTimeout":300,"name":"Golden Pharaoh"},"10480":{"id":10480,"dev":true,"maskTimeout":300,"name":"Flaming Phoenix"}}}
+{
+  "ThemeTagsMap": {
+    "10010": {
+      "id": 10010,
+      "maskTimeout": 300,
+      "name": "Icy Princess"
+    },
+    "10020": {
+      "id": 10020,
+      "maskTimeout": 300,
+      "name": "Shiny Vegas"
+    },
+    "10030": {
+      "id": 10030,
+      "bingo": true,
+      "hot": true,
+      "maskTimeout": 300,
+      "name": "Mighty Genie"
+    },
+    "10040": {
+      "id": 10040,
+      "maskTimeout": 300,
+      "name": "Forturn God"
+    },
+    "10050": {
+      "id": 10050,
+      "maskTimeout": 300,
+      "name": "Bingo Moo"
+    },
+    "10060": {
+      "id": 10060,
+      "bingo": true,
+      "hot": true,
+      "maskTimeout": 300,
+      "name": "WildWickedWitch"
+    },
+    "10070": {
+      "id": 10070,
+      "maskTimeout": 300,
+      "name": "Bank Of Piggy"
+    },
+    "10080": {
+      "id": 10080,
+      "maskTimeout": 300,
+      "name": "Gorilla"
+    },
+    "10090": {
+      "id": 10090,
+      "bingo": true,
+      "hot": true,
+      "maskTimeout": 300,
+      "name": "Century Train"
+    },
+    "10100": {
+      "id": 10100,
+      "maskTimeout": 300,
+      "name": "Franken"
+    },
+    "10110": {
+      "id": 10110,
+      "maskTimeout": 300,
+      "name": "Hook's Quest"
+    },
+    "10120": {
+      "id": 10120,
+      "bingo": true,
+      "maskTimeout": 300,
+      "name": "Nuggets Blast"
+    },
+    "10130": {
+      "id": 10130,
+      "bingo": true,
+      "maskTimeout": 300,
+      "name": "Wicked Fire"
+    },
+    "10140": {
+      "id": 10140,
+      "bingo": true,
+      "maskTimeout": 300,
+      "name": "Legend of Cleo"
+    },
+    "10150": {
+      "id": 10150,
+      "bingo": true,
+      "maskTimeout": 300,
+      "name": "Pot O Luck"
+    },
+    "10160": {
+      "id": 10160,
+      "GL": true,
+      "bingo": true,
+      "maskTimeout": 300,
+      "name": "Dragon Cubs"
+    },
+    "10170": {
+      "id": 10170,
+      "bingo": true,
+      "maskTimeout": 300,
+      "name": "Grand Rhino"
+    },
+    "10180": {
+      "id": 10180,
+      "bingo": true,
+      "hot": true,
+      "maskTimeout": 300,
+      "name": "Coin King"
+    },
+    "10190": {
+      "id": 10190,
+      "bingo": true,
+      "maskTimeout": 300,
+      "name": "Skunk Riches",
+      "puzzle": true
+    },
+    "10200": {
+      "id": 10200,
+      "bingo": true,
+      "hot": true,
+      "maskTimeout": 300,
+      "name": "Rising Lanterns"
+    },
+    "10210": {
+      "id": 10210,
+      "bingo": true,
+      "hot": true,
+      "maskTimeout": 300,
+      "name": "Zhao Cai Jin Bao"
+    },
+    "10220": {
+      "id": 10220,
+      "bingo": true,
+      "maskTimeout": 300,
+      "name": "Zeus King of God"
+    },
+    "10230": {
+      "id": 10230,
+      "GL": true,
+      "bingo": true,
+      "maskTimeout": 300,
+      "name": "Queen of Goldenland"
+    },
+    "10240": {
+      "id": 10240,
+      "bingo": true,
+      "maskTimeout": 300,
+      "name": "Cheese Burglar"
+    },
+    "10250": {
+      "id": 10250,
+      "bingo": true,
+      "maskTimeout": 300,
+      "name": "Wild Circus"
+    },
+    "10260": {
+      "id": 10260,
+      "bingo": true,
+      "maskTimeout": 300,
+      "name": "Fire Blast"
+    },
+    "10270": {
+      "id": 10270,
+      "bingo": true,
+      "maskTimeout": 300,
+      "name": "Magic Destiny"
+    },
+    "10280": {
+      "id": 10280,
+      "bingo": true,
+      "maskTimeout": 300,
+      "name": "Sunny Birds"
+    },
+    "10290": {
+      "id": 10290,
+      "GL": true,
+      "bingo": true,
+      "maskTimeout": 300,
+      "name": "Tiki Fever"
+    },
+    "10300": {
+      "id": 10300,
+      "bingo": true,
+      "maskTimeout": 300,
+      "name": "Mermaid Princess"
+    },
+    "10310": {
+      "id": 10310,
+      "bingo": true,
+      "maskTimeout": 300,
+      "name": "Wild Zorro",
+      "puzzle": true
+    },
+    "10320": {
+      "id": 10320,
+      "bingo": true,
+      "maskTimeout": 300,
+      "name": "Hallowin Hotel"
+    },
+    "10330": {
+      "id": 10330,
+      "bingo": true,
+      "maskTimeout": 300,
+      "name": "Ghost Blaster",
+      "new": true
+    },
+    "10340": {
+      "id": 10340,
+      "bingo": true,
+      "maskTimeout": 300,
+      "name": "Santa Respin"
+    },
+    "10350": {
+      "id": 10350,
+      "bingo": true,
+      "dev": true,
+      "maskTimeout": 300,
+      "name": "Siberian Wolf0",
+      "new": true
+    },
+    "10351": {
+      "id": 10351,
+      "bingo": true,
+      "dev": true,
+      "maskTimeout": 300,
+      "name": "Siberian Wolf1"
+    },
+    "10360": {
+      "id": 10360,
+      "bingo": true,
+      "maskTimeout": 300,
+      "name": "Century Train Luxury"
+    },
+    "10370": {
+      "id": 10370,
+      "bingo": true,
+      "dev": true,
+      "maskTimeout": 300,
+      "name": "Disco Star"
+    },
+    "10380": {
+      "id": 10380,
+      "bingo": true,
+      "maskTimeout": 300,
+      "name": "Double Ingots"
+    },
+    "10390": {
+      "id": 10390,
+      "bingo": true,
+      "dev": true,
+      "maskTimeout": 300,
+      "name": "Lava Cash"
+    },
+    "10400": {
+      "id": 10400,
+      "GL": true,
+      "bingo": true,
+      "dev": true,
+      "maskTimeout": 300,
+      "name": "Build Your Love",
+      "new": true
+    },
+    "10420": {
+      "id": 10420,
+      "dev": true,
+      "maskTimeout": 300,
+      "name": "Oinknado"
+    },
+    "10430": {
+      "id": 10430,
+      "dev": true,
+      "maskTimeout": 300,
+      "name": "Penguin's Hammer"
+    },
+    "10440": {
+      "id": 10440,
+      "bingo": true,
+      "dev": true,
+      "maskTimeout": 300,
+      "name": "Lucky Pots 777",
+      "new": true
+    },
+    "10450": {
+      "id": 10450,
+      "dev": true,
+      "maskTimeout": 300,
+      "name": "Golden Pharaoh"
+    },
+    "10480": {
+      "id": 10480,
+      "dev": true,
+      "maskTimeout": 300,
+      "name": "Flaming Phoenix"
+    }
+  }
+}
+
+[SSH] completed
+[SSH] exit-status: 0
+
+[SSH] executing post build script:
+
+
+Finished: SUCCESS

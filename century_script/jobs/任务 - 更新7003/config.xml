@@ -1,0 +1,95 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<project>
+  <actions/>
+  <description>重启整个服务器 包括Game, RPC 配表</description>
+  <keepDependencies>false</keepDependencies>
+  <properties>
+    <io.jenkins.plugins.DingTalkJobProperty plugin="dingding-notifications@2.4.9">
+      <notifierConfigs>
+        <io.jenkins.plugins.DingTalkNotifierConfig>
+          <checked>true</checked>
+          <robotId>111</robotId>
+          <robotName>Jenkins</robotName>
+          <atAll>false</atAll>
+          <atMobile></atMobile>
+          <content></content>
+          <noticeOccasions>
+            <string>ABORTED</string>
+            <string>FAILURE</string>
+            <string>UNSTABLE</string>
+          </noticeOccasions>
+        </io.jenkins.plugins.DingTalkNotifierConfig>
+      </notifierConfigs>
+    </io.jenkins.plugins.DingTalkJobProperty>
+    <jenkins.advancedqueue.jobinclusion.strategy.JobInclusionJobProperty plugin="PrioritySorter@4.1.0">
+      <useJobGroup>true</useJobGroup>
+      <jobGroupName>服务器</jobGroupName>
+    </jenkins.advancedqueue.jobinclusion.strategy.JobInclusionJobProperty>
+    <jenkins.model.BuildDiscarderProperty>
+      <strategy class="hudson.tasks.LogRotator">
+        <daysToKeep>7</daysToKeep>
+        <numToKeep>20</numToKeep>
+        <artifactDaysToKeep>7</artifactDaysToKeep>
+        <artifactNumToKeep>10</artifactNumToKeep>
+      </strategy>
+    </jenkins.model.BuildDiscarderProperty>
+    <hudson.model.ParametersDefinitionProperty>
+      <parameterDefinitions>
+        <hudson.model.TextParameterDefinition>
+          <name>server_name</name>
+          <description>重启整个服务器 包括Game, RPC 配表</description>
+          <defaultValue>pk7003</defaultValue>
+          <trim>false</trim>
+        </hudson.model.TextParameterDefinition>
+      </parameterDefinitions>
+    </hudson.model.ParametersDefinitionProperty>
+  </properties>
+  <scm class="hudson.scm.NullSCM"/>
+  <canRoam>true</canRoam>
+  <disabled>false</disabled>
+  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+  <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <triggers>
+    <hudson.triggers.TimerTrigger>
+      <spec>30 0,5 * * 1-5
+</spec>
+    </hudson.triggers.TimerTrigger>
+  </triggers>
+  <concurrentBuild>false</concurrentBuild>
+  <builders/>
+  <publishers/>
+  <buildWrappers>
+    <hudson.plugins.ansicolor.AnsiColorBuildWrapper plugin="ansicolor@1.0.2">
+      <colorMapName>xterm</colorMapName>
+    </hudson.plugins.ansicolor.AnsiColorBuildWrapper>
+    <org.jvnet.hudson.plugins.SSHBuildWrapper plugin="ssh@2.6.1">
+      <siteName>root@10.0.84.16:22</siteName>
+      <preScript>#!/bin/bash
+
+export PATH=/opt/protokitgo:/root/bin/jq:$PATH
+
+cd /home/user00/cc/cc-slots-land/cc-dev &amp;&amp; ./update_server.sh pk7003</preScript>
+      <postScript>check_container() {
+    exist=`docker inspect --format &apos;{{.State.Running}}&apos; $1`
+    if [[ $exist == `false` ]];then
+        echo $1&quot; not OK&quot;
+        curl &apos;https://oapi.dingtalk.com/robot/send?access_token=13aa551ba8a79265c4424316089cd31c4f479b0f685f3d5a503b0ab6a1a42ec7&apos; -H &apos;Content-Type: application/json&apos;  -d &apos;{&quot;msgtype&quot;: &quot;link&quot;,&quot;link&quot;: {&quot;messageUrl&quot;: &quot;&apos;&quot;${BUILD_URL}&quot;&apos;/console&quot;,&quot;title&quot;: &quot;Jenkins-Server[&apos;&quot;${server_name}&quot;&apos;]-Failed&quot;,&quot;text&quot;: &quot;check log for more detail&quot;}}&apos;
+        exit 1
+    else
+        echo $1&quot; Check&quot;
+    fi
+}
+
+check_whole_server() {
+	check_container $1-backend
+	check_container $1-rpc
+	check_container $1-redis
+	check_container $1-mongo
+	check_container $1-fluentd
+}
+
+check_whole_server $server_name</postScript>
+      <hideCommand>false</hideCommand>
+    </org.jvnet.hudson.plugins.SSHBuildWrapper>
+  </buildWrappers>
+</project>

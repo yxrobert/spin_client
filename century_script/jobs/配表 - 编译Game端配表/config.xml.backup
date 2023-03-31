@@ -1,0 +1,228 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<project>
+  <actions/>
+  <description>自动重启Linux上指定的服务器&#xd;
+&lt;li&gt;&#xd;
+&lt;a href=&quot;https://docs.google.com/spreadsheets/d/1n3o5PTza30v40e2gHq37Oa_5rKYuueap6t7M4ENVaFo/edit#gid=0&quot;&gt;Activity&lt;/a&gt;&#xd;
+&lt;a href=&quot;https://docs.google.com/spreadsheets/d/1fLs0EnkgtI3n0oxZWUl1uMTXGFCiQNkH7gVZ3cRasRs/edit#gid=0&quot;&gt;Award&lt;/a&gt;&#xd;
+&lt;a href=&quot;https://docs.google.com/spreadsheets/d/1za1vX-VTVhzJyu7e66z_MZZm9Cg8hVUXD8nD7HuW4_0/edit#gid=0&quot;&gt;ActivityC&lt;/a&gt;&#xd;
+&lt;/li&gt;&#xd;
+&lt;li&gt;&#xd;
+&lt;a href=&quot;https://docs.google.com/spreadsheets/d/1mNYiTPPpAc1BAYwTAgiRRoAREja-SyMQsllQnZ76K60/edit#gid=0&quot;&gt;Bingo&lt;/a&gt;&#xd;
+&lt;a href=&quot;https://docs.google.com/spreadsheets/d/1yMTafyns9uVEiefzD_OrAI_8O0-UPOV0hYXhRWkTCIA/edit#gid=0&quot;&gt;BoxSkin&lt;/a&gt;&#xd;
+&lt;a href=&quot;https://docs.google.com/spreadsheets/d/1iLSmvQU1hoatY-RYsaldF4dOjbyx2IfMlpS6hKPj2vo/edit#gid=0&quot;&gt;BonusByRanking&lt;/a&gt;&#xd;
+&lt;/li&gt;&#xd;
+&lt;li&gt;&#xd;
+&lt;a href=&quot;https://docs.google.com/spreadsheets/d/1OtuD1fhYqFTlWErtwJBu1RJl109OwUaRIucrd-oreCI/edit#gid=0&quot;&gt;CoinKingdom&lt;/a&gt;&#xd;
+&lt;a href=&quot;https://docs.google.com/spreadsheets/d/1mLgZ5jcE8FQB430lpj2Ya9uHQPnMP7y70ZD67NBqYU8/edit#gid=0&quot;&gt;CandyMart&lt;/a&gt;&#xd;
+&lt;a href=&quot;https://docs.google.com/spreadsheets/d/1d6VhTVRXw6Xtj8rdh7QVjkq5uC1e32_ocKkkbcwFdOM/edit#gid=0&quot;&gt;Challenge&lt;/a&gt;&#xd;
+&lt;a href=&quot;https://docs.google.com/spreadsheets/d/1N3nIavY76QNVHrDNGHuIP17LvFWTHr18uRnKkoTsVTI/edit#gid=0&quot;&gt;Chase&lt;/a&gt;&#xd;
+&lt;a href=&quot;https://docs.google.com/spreadsheets/d/1OvfLnCbg7ssaOuKsxEidSZUmY3nLhR-h8vLu3N5m1Ro/edit#gid=0&quot;&gt;Card&lt;/a&gt;&#xd;
+&lt;a href=&quot;https://docs.google.com/spreadsheets/d/1E9sca3dgNQGDozfLqnFetRsFVs8u9Yh_Do3RNbDmCFY/edit#gid=0&quot;&gt;Conpon&lt;/a&gt;&#xd;
+&lt;a href=&quot;https://docs.google.com/spreadsheets/d/1rUVmSi5DsU0zXiCBpYBrTrbdPAI19sERkbiNEEiSejw/edit#gid=0&quot;&gt;Club&lt;/a&gt;&#xd;
+&lt;/li&gt;&#xd;
+&lt;li&gt;&#xd;
+&lt;a href=&quot;https://docs.google.com/spreadsheets/d/1aXZ5zavlCAuBMtYZ3g6RKW9cI_3E-2H-R30I8VQo2hM/edit#gid=0&quot;&gt;DoubleWinAgain&lt;/a&gt;&#xd;
+&lt;a href=&quot;https://docs.google.com/spreadsheets/d/1BXcrbcJmqZ3dYNr0QrvSlUaXt3H8RCoMs53UT4C2JKU/edit#gid=0&quot;&gt;DailyMission&lt;/a&gt;&#xd;
+&lt;a href=&quot;https://docs.google.com/spreadsheets/d/165qj424mc45rjn_4wAWapVoFa6U8LwFjdSM1NST27lw/edit#gid=0&quot;&gt;DailyBonus&lt;/a&gt;&#xd;
+&lt;/li&gt;&#xd;
+&lt;li&gt;&#xd;
+&lt;a href=&quot;https://docs.google.com/spreadsheets/d/1QxEIPbrg23GfhUvU0pe9s6KxoUEZkY850Rd_fUSwQdQ/edit#gid=0&quot;&gt;EventBus&lt;/a&gt;&#xd;
+&lt;a href=&quot;https://docs.google.com/spreadsheets/d/1x_uT_reBNz3CKUSIJ2vKtcaE2I-8N1PoKTGkTT5REow/edit#gid=0&quot;&gt;EndlessRiches&lt;/a&gt;&#xd;
+&lt;/li&gt;&#xd;
+&lt;li&gt;&#xd;
+&lt;a href=&quot;https://docs.google.com/spreadsheets/d/1swj2L5NFImimaJyqqDRYJH9UoF1Qi05de9GpQE6yTR8/edit#gid=0&quot;&gt;GameLegend&lt;/a&gt;&#xd;
+&lt;a href=&quot;https://docs.google.com/spreadsheets/d/1nrG1aVnrwjMnlhVYlS7xMNl5oVE7sUYlve9AZuwizMs/edit#gid=0&quot;&gt;GameServer@server&lt;/a&gt;&#xd;
+&lt;/li&gt;&#xd;
+&lt;li&gt;&#xd;
+&lt;a href=&quot;https://docs.google.com/spreadsheets/d/1-jE6oQ3uy52p4U_mjtisqI8-7ygfzNQQ2BUYCSPWRsI/edit#gid=0&quot;&gt;Hero&lt;/a&gt;&#xd;
+&lt;/li&gt;&#xd;
+&lt;li&gt;&#xd;
+&lt;a href=&quot;https://docs.google.com/spreadsheets/d/1z3-pxdYKnnZGLS_Yqrd-4nVEFShmBTxuTPBOst6FiQk/edit#gid=0&quot;&gt;Journey&lt;/a&gt;&#xd;
+&lt;/li&gt;&#xd;
+&lt;li&gt;&#xd;
+&lt;a href=&quot;https://docs.google.com/spreadsheets/d/1bKuFXfxH81FeIqNx6G8i96dUIZjrW3KRHBhKtCodlrI/edit#gid=0&quot;&gt;Kitty&lt;/a&gt;&#xd;
+&lt;/li&gt;&#xd;
+&lt;li&gt;&#xd;
+&lt;a href=&quot;https://docs.google.com/spreadsheets/d/1d-FYDT5AKPp6gWhZD6Rjx8D2aA6lZmF5Z1dIhW-5PZo/edit#gid=0&quot;&gt;Lobby&lt;/a&gt;&#xd;
+&lt;a href=&quot;https://docs.google.com/spreadsheets/d/1E5WcoCEkt0djoSD95EYP7mQRLgHu2vYwM0G3LvqS97w/edit#gid=0&quot;&gt;LuckySeven&lt;/a&gt;&#xd;
+&lt;a href=&quot;https://docs.google.com/spreadsheets/d/1uMOX-Yr1xAeAbbkTLCoeh_V0oPOho0xMFCZ2JI5siY8/edit#gid=0&quot;&gt;LevelSprint&lt;/a&gt;&#xd;
+&lt;a href=&quot;https://docs.google.com/spreadsheets/d/1rZ4cpSKr2V3Lvp2z6a5z-yZcdv72BbwqVaqbErYBH9M/edit#gid=0&quot;&gt;LobbyBonusByLevel&lt;/a&gt;&#xd;
+&lt;a href=&quot;https://docs.google.com/spreadsheets/d/1U0pW7x3bg7zYRTLYyxq0Dy8sBLQswNMenejc4XEzRpo/edit#gid=0&quot;&gt;LobbyWheel&lt;/a&gt;&#xd;
+&lt;a href=&quot;https://docs.google.com/spreadsheets/d/1wzzyNAPC3IEQZBRT3S7CbLLvrkXMgdENArc_E61RBJU/edit#gid=0&quot;&gt;Leveling&lt;/a&gt;&#xd;
+&lt;/li&gt;&#xd;
+&lt;li&gt;&#xd;
+&lt;a href=&quot;https://docs.google.com/spreadsheets/d/17EoUtxjDWoNVI4GZSl5AfNJ9cW3KTEA7r2khwpt7CnI/edit#gid=0&quot;&gt;MissionActivity&lt;/a&gt;&#xd;
+&lt;a href=&quot;https://docs.google.com/spreadsheets/d/10tU-8UKzj1TDPfoc3l4EBdprFk0atOIHreIbKOJjaxY/edit#gid=0&quot;&gt;Mail&lt;/a&gt;&#xd;
+&lt;a href=&quot;https://docs.google.com/spreadsheets/d/1GmpFy4jziWNqI4zVoc2gSl-Nzj9CVMdBETfWwuhQvSM/edit#gid=0&quot;&gt;MultiverseQuest&lt;/a&gt;&#xd;
+&lt;a href=&quot;https://docs.google.com/spreadsheets/d/1yXJTRJLf6Gp1_LtR797RsbsUURtsYyWByQYwwFPYPrE/edit#gid=0&quot;&gt;MagicWeek&lt;/a&gt;&#xd;
+&lt;/li&gt;&#xd;
+&lt;li&gt;&#xd;
+&lt;a href=&quot;https://docs.google.com/spreadsheets/d/1s3GhyD_8rZaUbrEAUxtBhVikLx9M7DNCOjrqRQiGz9E/edit#gid=0&quot;&gt;NewQuest&lt;/a&gt;&#xd;
+&lt;a href=&quot;https://docs.google.com/spreadsheets/d/17oH2tmP4rEeFnnLWr0goC9gPn28K0wOtr63b5DT0F-8/edit#gid=0&quot;&gt;NewPlayerEcon&lt;/a&gt;&#xd;
+&lt;/li&gt;&#xd;
+&lt;li&gt;&#xd;
+&lt;a href=&quot;https://docs.google.com/spreadsheets/d/1yWoEDKyY6Ll5xeHdr7qNIOPbIo3Wpfcrb0fyWQtc1TU/edit#gid=0&quot;&gt;PlayerGuide&lt;/a&gt;&#xd;
+&lt;a href=&quot;https://docs.google.com/spreadsheets/d/1v8y5009IT1UKdf8DTdkXd7SEv7UcJrZgNJ_AtMtLIPQ/edit#gid=0&quot;&gt;PlayerFilter&lt;/a&gt;&#xd;
+&lt;a href=&quot;https://docs.google.com/spreadsheets/d/1HMMSVMstXZ4IwDvuFHTX8c6kQzcGxQaKNyBANZziHJU/edit#gid=0&quot;&gt;Piggy&lt;/a&gt;&#xd;
+&lt;a href=&quot;https://docs.google.com/spreadsheets/d/1AYiZrAQgX-1h6kevVBj_1bSBkNMCxCt-vVlYaSrlccw/edit#gid=0&quot;&gt;Poker&lt;/a&gt;&#xd;
+&lt;/li&gt;&#xd;
+&lt;li&gt;&#xd;
+&lt;a href=&quot;https://docs.google.com/spreadsheets/d/1evMwO9wFXGUI93GXdj8FfBEzpZBr6SO7fOfbeSuBMg4/edit#gid=0&quot;&gt;RoyalPass&lt;/a&gt;&#xd;
+&lt;/li&gt;&#xd;
+&lt;li&gt;&#xd;
+&lt;a href=&quot;https://docs.google.com/spreadsheets/d/1En64QSAUYoH4XLjiTnaW_c1AWi9QgWIhRVNjbf183QU/edit#gid=0&quot;&gt;Shop&lt;/a&gt;&#xd;
+&lt;a href=&quot;https://docs.google.com/spreadsheets/d/1slL9OdTyk2AB9rsXpyRU6kIRUFmxImnHKUIhOqS1fmc/edit#gid=0&quot;&gt;Slots&lt;/a&gt;&#xd;
+&lt;a href=&quot;https://docs.google.com/spreadsheets/d/1MXD1_3hNgW2_NidJVYtF08sDvIwWZHuYsY_cs1AV4dA/edit#gid=0&quot;&gt;SpinMax&lt;/a&gt;&#xd;
+&lt;a href=&quot;https://docs.google.com/spreadsheets/d/1z8RGsrtBPdN4zaf8_U1ghqZYYJxLwu39qxa3Gjdo3qE/edit#gid=0&quot;&gt;StoreBonusByLevel&lt;/a&gt;&#xd;
+&lt;/li&gt;&#xd;
+&lt;li&gt;&#xd;
+&lt;a href=&quot;https://docs.google.com/spreadsheets/d/103zPCTJBhdxY7yjER_wpeRnvshny9mzCRbu4NBlZNHg/edit#gid=0&quot;&gt;TastyBonus&lt;/a&gt;&#xd;
+&lt;a href=&quot;https://docs.google.com/spreadsheets/d/13FhMYdGhxw2aaqk9SRc5wO56WNq27R8UQSm_Jqyq5Rc/edit#gid=0&quot;&gt;TreasureRoom&lt;/a&gt;&#xd;
+&lt;/li&gt;&#xd;
+&lt;li&gt;&#xd;
+&lt;a href=&quot;https://docs.google.com/spreadsheets/d/14lPhLIpCEa6umkOkfhRcSMH3PsSb9jl3Hfp9r1LT5Xk/edit#gid=0&quot;&gt;Vip&lt;/a&gt;&#xd;
+&lt;/li&gt;&#xd;
+&lt;li&gt;&#xd;
+&lt;a href=&quot;https://docs.google.com/spreadsheets/d/1rUgy7pd3ZsjU5M50C2IaFwrgh9jg-ff0WxG8Ga5naak/edit#gid=0&quot;&gt;WhiteListVersion&lt;/a&gt;&#xd;
+&lt;/li&gt;</description>
+  <keepDependencies>false</keepDependencies>
+  <properties>
+    <io.jenkins.plugins.DingTalkJobProperty plugin="dingding-notifications@2.4.11">
+      <notifierConfigs>
+        <io.jenkins.plugins.DingTalkNotifierConfig>
+          <checked>false</checked>
+          <robotId>111</robotId>
+          <robotName>Jenkins</robotName>
+          <atAll>false</atAll>
+          <atMobile></atMobile>
+          <content></content>
+          <noticeOccasions>
+            <string>SUCCESS</string>
+            <string>START</string>
+            <string>ABORTED</string>
+            <string>FAILURE</string>
+            <string>UNSTABLE</string>
+          </noticeOccasions>
+        </io.jenkins.plugins.DingTalkNotifierConfig>
+      </notifierConfigs>
+    </io.jenkins.plugins.DingTalkJobProperty>
+    <jenkins.advancedqueue.jobinclusion.strategy.JobInclusionJobProperty plugin="PrioritySorter@4.1.0">
+      <useJobGroup>true</useJobGroup>
+      <jobGroupName>配表</jobGroupName>
+    </jenkins.advancedqueue.jobinclusion.strategy.JobInclusionJobProperty>
+    <jenkins.model.BuildDiscarderProperty>
+      <strategy class="hudson.tasks.LogRotator">
+        <daysToKeep>7</daysToKeep>
+        <numToKeep>10</numToKeep>
+        <artifactDaysToKeep>7</artifactDaysToKeep>
+        <artifactNumToKeep>10</artifactNumToKeep>
+      </strategy>
+    </jenkins.model.BuildDiscarderProperty>
+    <hudson.model.ParametersDefinitionProperty>
+      <parameterDefinitions>
+        <com.cwctravel.hudson.plugins.extended__choice__parameter.ExtendedChoiceParameterDefinition plugin="extended-choice-parameter@359.v35dcfdd0c20d">
+          <name>conf_name</name>
+          <description>需要 [ 推送编译后的配表到服务器 ] 或者 [ 重启服务器 ] 才可生效</description>
+          <quoteValue>false</quoteValue>
+          <saveJSONParameterToFile>false</saveJSONParameterToFile>
+          <visibleItemCount>50</visibleItemCount>
+          <type>PT_CHECKBOX</type>
+          <propertyFile>/var/jenkins_home/config.list</propertyFile>
+          <propertyKey>CL</propertyKey>
+          <multiSelectDelimiter>,</multiSelectDelimiter>
+          <descriptionPropertyFile>/var/jenkins_home/config.list</descriptionPropertyFile>
+          <descriptionPropertyKey>CLDesc</descriptionPropertyKey>
+          <projectName>配表 - 编译Game端配表</projectName>
+        </com.cwctravel.hudson.plugins.extended__choice__parameter.ExtendedChoiceParameterDefinition>
+      </parameterDefinitions>
+    </hudson.model.ParametersDefinitionProperty>
+  </properties>
+  <scm class="hudson.scm.NullSCM"/>
+  <canRoam>true</canRoam>
+  <disabled>false</disabled>
+  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+  <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <triggers/>
+  <concurrentBuild>false</concurrentBuild>
+  <builders/>
+  <publishers/>
+  <buildWrappers>
+    <hudson.plugins.ansicolor.AnsiColorBuildWrapper plugin="ansicolor@1.0.2">
+      <colorMapName>xterm</colorMapName>
+    </hudson.plugins.ansicolor.AnsiColorBuildWrapper>
+    <org.jvnet.hudson.plugins.SSHBuildWrapper plugin="ssh@2.6.1">
+      <siteName>root@10.0.84.16:22</siteName>
+      <preScript>echo $conf_name
+
+#!/bin/bash -e
+
+export PATH=/opt/protokitgo:$PATH
+file_dir=/home/user00/jenkins/cc-conf
+lock_file=/home/user00/cc/cc-slots-land/cc-dev/dev-develop.lock
+
+if [[ ! -f &quot;${lock_file}&quot; ]]; then
+  echo 1 &gt; ${lock_file}
+  echo &quot;脚本可执行&quot;
+else
+  echo &quot;脚本运行中，请稍后执行！&quot;
+  exit
+fi
+
+check_last_cmd() {
+    if [ $? -ne 0 ]; then
+        echo &quot;failed &quot;$1
+        exit 1
+    else
+        echo &quot;succeed &quot;$1
+    fi
+}
+
+clear_ignore() {
+    rm -rf ./gen/csharp
+    rm -rf ./gen/js
+    rm -rf ./gen/lua
+    rm -rf ./gen/rawdata/csv
+    rm -rf ./gen/rawdata/client
+}
+
+cd ${file_dir}
+git reset --hard origin/deploy-cc-conf
+git pull --ff-only
+
+arr=(`echo $conf_name | tr &apos;,&apos; &apos; &apos;`)
+echo ${arr[@]}
+
+for el in ${arr[*]}
+do
+echo $el
+protokitgo drive sync ${el} --config=${file_dir}/setting.yaml --log_color=false
+cd ${file_dir}
+done
+
+protokitgo gen --config=${file_dir}/setting.yaml --log_color=false --branches=deploy-cc-conf
+check_last_cmd gen_config
+cd ${file_dir}
+protokitgo release upload_conf --upload_dir=${file_dir}/gen/lua --upload_types=.lua,.bytes --config=${file_dir}/setting.yaml --log_color=false
+cd ${file_dir}
+clear_ignore
+
+# commit
+git add -A
+git commit -am &quot;auto commit by jenkins ${BUILD_USER}&quot;
+git push
+
+if [[ -f &quot;${lock_file}&quot; ]]; then
+  rm -rf ${lock_file}
+  echo &quot;释放脚本锁&quot;
+else
+  echo &quot;释放脚本锁(锁文件不存在)&quot;
+fi
+</preScript>
+      <postScript>#cd /var/lib/docker/volumes/jenkins-data/_data
+#python update_conf_list.py</postScript>
+      <hideCommand>false</hideCommand>
+    </org.jvnet.hudson.plugins.SSHBuildWrapper>
+    <org.jenkinsci.plugins.builduser.BuildUser plugin="build-user-vars-plugin@1.9"/>
+  </buildWrappers>
+</project>
